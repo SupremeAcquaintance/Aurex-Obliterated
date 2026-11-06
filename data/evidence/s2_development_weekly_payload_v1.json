@@ -1,0 +1,2537 @@
+{
+  "schema_version": "aurex-s2-development-weekly-payload-v1",
+  "payload_id": "s2-development-weekly-payload-v1",
+  "acquired_at": "2026-08-28T12:59:48.834610Z",
+  "protocol_evidence_hash": "93d4280e7d852ce5e83b3c3215a67b48c906149e5041ccda08febaedd42131fb",
+  "query_sha256": "c3e66d902635c0e6aff1fc7b6626d5498df1f562574eba8babe3cfbf392a6d64",
+  "row_count": 280,
+  "rows": [
+    {
+      "week_start": "2017-08-19",
+      "decision_cutoff_at": "2017-08-26",
+      "earliest_execution_at": "2017-08-28",
+      "confirmed_block_count": 840,
+      "confirmed_non_coinbase_transaction_count": 1623474,
+      "confirmed_fee_satoshis": 243367040236,
+      "latest_sixth_confirmation_at": "2017-08-25T23:21:23Z"
+    },
+    {
+      "week_start": "2017-08-26",
+      "decision_cutoff_at": "2017-09-02",
+      "earliest_execution_at": "2017-09-04",
+      "confirmed_block_count": 1037,
+      "confirmed_non_coinbase_transaction_count": 1818236,
+      "confirmed_fee_satoshis": 279710486072,
+      "latest_sixth_confirmation_at": "2017-09-01T23:56:33Z"
+    },
+    {
+      "week_start": "2017-09-02",
+      "decision_cutoff_at": "2017-09-09",
+      "earliest_execution_at": "2017-09-11",
+      "confirmed_block_count": 1197,
+      "confirmed_non_coinbase_transaction_count": 1785220,
+      "confirmed_fee_satoshis": 188111525630,
+      "latest_sixth_confirmation_at": "2017-09-08T23:54:10Z"
+    },
+    {
+      "week_start": "2017-09-09",
+      "decision_cutoff_at": "2017-09-16",
+      "earliest_execution_at": "2017-09-18",
+      "confirmed_block_count": 1207,
+      "confirmed_non_coinbase_transaction_count": 1731003,
+      "confirmed_fee_satoshis": 105477629171,
+      "latest_sixth_confirmation_at": "2017-09-15T23:56:45Z"
+    },
+    {
+      "week_start": "2017-09-16",
+      "decision_cutoff_at": "2017-09-23",
+      "earliest_execution_at": "2017-09-25",
+      "confirmed_block_count": 1054,
+      "confirmed_non_coinbase_transaction_count": 1634540,
+      "confirmed_fee_satoshis": 95757774164,
+      "latest_sixth_confirmation_at": "2017-09-22T23:58:18Z"
+    },
+    {
+      "week_start": "2017-09-23",
+      "decision_cutoff_at": "2017-09-30",
+      "earliest_execution_at": "2017-10-02",
+      "confirmed_block_count": 1061,
+      "confirmed_non_coinbase_transaction_count": 1660279,
+      "confirmed_fee_satoshis": 87150136132,
+      "latest_sixth_confirmation_at": "2017-09-29T23:36:20Z"
+    },
+    {
+      "week_start": "2017-09-30",
+      "decision_cutoff_at": "2017-10-07",
+      "earliest_execution_at": "2017-10-09",
+      "confirmed_block_count": 1013,
+      "confirmed_non_coinbase_transaction_count": 1769291,
+      "confirmed_fee_satoshis": 99595540589,
+      "latest_sixth_confirmation_at": "2017-10-06T23:53:19Z"
+    },
+    {
+      "week_start": "2017-10-07",
+      "decision_cutoff_at": "2017-10-14",
+      "earliest_execution_at": "2017-10-16",
+      "confirmed_block_count": 1083,
+      "confirmed_non_coinbase_transaction_count": 1950807,
+      "confirmed_fee_satoshis": 112972514094,
+      "latest_sixth_confirmation_at": "2017-10-13T23:54:05Z"
+    },
+    {
+      "week_start": "2017-10-14",
+      "decision_cutoff_at": "2017-10-21",
+      "earliest_execution_at": "2017-10-23",
+      "confirmed_block_count": 1176,
+      "confirmed_non_coinbase_transaction_count": 2209389,
+      "confirmed_fee_satoshis": 133258797353,
+      "latest_sixth_confirmation_at": "2017-10-20T23:51:37Z"
+    },
+    {
+      "week_start": "2017-10-21",
+      "decision_cutoff_at": "2017-10-28",
+      "earliest_execution_at": "2017-10-30",
+      "confirmed_block_count": 1136,
+      "confirmed_non_coinbase_transaction_count": 2077128,
+      "confirmed_fee_satoshis": 111976080676,
+      "latest_sixth_confirmation_at": "2017-10-27T23:56:36Z"
+    },
+    {
+      "week_start": "2017-10-28",
+      "decision_cutoff_at": "2017-11-04",
+      "earliest_execution_at": "2017-11-06",
+      "confirmed_block_count": 943,
+      "confirmed_non_coinbase_transaction_count": 2090415,
+      "confirmed_fee_satoshis": 177932425989,
+      "latest_sixth_confirmation_at": "2017-11-03T23:49:38Z"
+    },
+    {
+      "week_start": "2017-11-04",
+      "decision_cutoff_at": "2017-11-11",
+      "earliest_execution_at": "2017-11-13",
+      "confirmed_block_count": 971,
+      "confirmed_non_coinbase_transaction_count": 2050899,
+      "confirmed_fee_satoshis": 192943235383,
+      "latest_sixth_confirmation_at": "2017-11-10T23:09:54Z"
+    },
+    {
+      "week_start": "2017-11-11",
+      "decision_cutoff_at": "2017-11-18",
+      "earliest_execution_at": "2017-11-20",
+      "confirmed_block_count": 893,
+      "confirmed_non_coinbase_transaction_count": 1890290,
+      "confirmed_fee_satoshis": 379270662999,
+      "latest_sixth_confirmation_at": "2017-11-17T23:51:43Z"
+    },
+    {
+      "week_start": "2017-11-18",
+      "decision_cutoff_at": "2017-11-25",
+      "earliest_execution_at": "2017-11-27",
+      "confirmed_block_count": 1092,
+      "confirmed_non_coinbase_transaction_count": 2196631,
+      "confirmed_fee_satoshis": 192255392094,
+      "latest_sixth_confirmation_at": "2017-11-24T23:49:16Z"
+    },
+    {
+      "week_start": "2017-11-25",
+      "decision_cutoff_at": "2017-12-02",
+      "earliest_execution_at": "2017-12-04",
+      "confirmed_block_count": 1152,
+      "confirmed_non_coinbase_transaction_count": 2592504,
+      "confirmed_fee_satoshis": 167169199204,
+      "latest_sixth_confirmation_at": "2017-12-01T23:58:26Z"
+    },
+    {
+      "week_start": "2017-12-02",
+      "decision_cutoff_at": "2017-12-09",
+      "earliest_execution_at": "2017-12-11",
+      "confirmed_block_count": 1186,
+      "confirmed_non_coinbase_transaction_count": 2671456,
+      "confirmed_fee_satoshis": 205916552778,
+      "latest_sixth_confirmation_at": "2017-12-08T23:55:00Z"
+    },
+    {
+      "week_start": "2017-12-09",
+      "decision_cutoff_at": "2017-12-16",
+      "earliest_execution_at": "2017-12-18",
+      "confirmed_block_count": 1199,
+      "confirmed_non_coinbase_transaction_count": 2790275,
+      "confirmed_fee_satoshis": 386436480755,
+      "latest_sixth_confirmation_at": "2017-12-15T23:51:31Z"
+    },
+    {
+      "week_start": "2017-12-16",
+      "decision_cutoff_at": "2017-12-23",
+      "earliest_execution_at": "2017-12-25",
+      "confirmed_block_count": 1095,
+      "confirmed_non_coinbase_transaction_count": 2594910,
+      "confirmed_fee_satoshis": 581286070187,
+      "latest_sixth_confirmation_at": "2017-12-22T23:50:23Z"
+    },
+    {
+      "week_start": "2017-12-23",
+      "decision_cutoff_at": "2017-12-30",
+      "earliest_execution_at": "2018-01-01",
+      "confirmed_block_count": 1032,
+      "confirmed_non_coinbase_transaction_count": 2012686,
+      "confirmed_fee_satoshis": 568090599786,
+      "latest_sixth_confirmation_at": "2017-12-29T23:37:58Z"
+    },
+    {
+      "week_start": "2017-12-30",
+      "decision_cutoff_at": "2018-01-06",
+      "earliest_execution_at": "2018-01-08",
+      "confirmed_block_count": 1099,
+      "confirmed_non_coinbase_transaction_count": 2365661,
+      "confirmed_fee_satoshis": 464098177113,
+      "latest_sixth_confirmation_at": "2018-01-05T23:59:39Z"
+    },
+    {
+      "week_start": "2018-01-06",
+      "decision_cutoff_at": "2018-01-13",
+      "earliest_execution_at": "2018-01-15",
+      "confirmed_block_count": 1191,
+      "confirmed_non_coinbase_transaction_count": 2405621,
+      "confirmed_fee_satoshis": 484082148968,
+      "latest_sixth_confirmation_at": "2018-01-12T23:59:21Z"
+    },
+    {
+      "week_start": "2018-01-13",
+      "decision_cutoff_at": "2018-01-20",
+      "earliest_execution_at": "2018-01-22",
+      "confirmed_block_count": 1112,
+      "confirmed_non_coinbase_transaction_count": 1935837,
+      "confirmed_fee_satoshis": 394392179907,
+      "latest_sixth_confirmation_at": "2018-01-19T23:59:02Z"
+    },
+    {
+      "week_start": "2018-01-20",
+      "decision_cutoff_at": "2018-01-27",
+      "earliest_execution_at": "2018-01-29",
+      "confirmed_block_count": 1192,
+      "confirmed_non_coinbase_transaction_count": 1671000,
+      "confirmed_fee_satoshis": 207998436092,
+      "latest_sixth_confirmation_at": "2018-01-26T23:57:40Z"
+    },
+    {
+      "week_start": "2018-01-27",
+      "decision_cutoff_at": "2018-02-03",
+      "earliest_execution_at": "2018-02-05",
+      "confirmed_block_count": 1069,
+      "confirmed_non_coinbase_transaction_count": 1561757,
+      "confirmed_fee_satoshis": 126948263417,
+      "latest_sixth_confirmation_at": "2018-02-02T23:57:33Z"
+    },
+    {
+      "week_start": "2018-02-03",
+      "decision_cutoff_at": "2018-02-10",
+      "earliest_execution_at": "2018-02-12",
+      "confirmed_block_count": 1092,
+      "confirmed_non_coinbase_transaction_count": 1386082,
+      "confirmed_fee_satoshis": 89172395962,
+      "latest_sixth_confirmation_at": "2018-02-09T23:55:14Z"
+    },
+    {
+      "week_start": "2018-02-10",
+      "decision_cutoff_at": "2018-02-17",
+      "earliest_execution_at": "2018-02-19",
+      "confirmed_block_count": 1085,
+      "confirmed_non_coinbase_transaction_count": 1274482,
+      "confirmed_fee_satoshis": 47424439243,
+      "latest_sixth_confirmation_at": "2018-02-16T23:47:49Z"
+    },
+    {
+      "week_start": "2018-02-17",
+      "decision_cutoff_at": "2018-02-24",
+      "earliest_execution_at": "2018-02-26",
+      "confirmed_block_count": 1074,
+      "confirmed_non_coinbase_transaction_count": 1283706,
+      "confirmed_fee_satoshis": 34721259380,
+      "latest_sixth_confirmation_at": "2018-02-23T23:49:32Z"
+    },
+    {
+      "week_start": "2018-02-24",
+      "decision_cutoff_at": "2018-03-03",
+      "earliest_execution_at": "2018-03-05",
+      "confirmed_block_count": 1087,
+      "confirmed_non_coinbase_transaction_count": 1317183,
+      "confirmed_fee_satoshis": 37882750668,
+      "latest_sixth_confirmation_at": "2018-03-02T23:54:04Z"
+    },
+    {
+      "week_start": "2018-03-03",
+      "decision_cutoff_at": "2018-03-10",
+      "earliest_execution_at": "2018-03-12",
+      "confirmed_block_count": 1092,
+      "confirmed_non_coinbase_transaction_count": 1343948,
+      "confirmed_fee_satoshis": 25748180782,
+      "latest_sixth_confirmation_at": "2018-03-09T23:46:52Z"
+    },
+    {
+      "week_start": "2018-03-10",
+      "decision_cutoff_at": "2018-03-17",
+      "earliest_execution_at": "2018-03-19",
+      "confirmed_block_count": 1050,
+      "confirmed_non_coinbase_transaction_count": 1270039,
+      "confirmed_fee_satoshis": 27680521811,
+      "latest_sixth_confirmation_at": "2018-03-16T23:45:30Z"
+    },
+    {
+      "week_start": "2018-03-17",
+      "decision_cutoff_at": "2018-03-24",
+      "earliest_execution_at": "2018-03-26",
+      "confirmed_block_count": 1004,
+      "confirmed_non_coinbase_transaction_count": 1259987,
+      "confirmed_fee_satoshis": 19356557688,
+      "latest_sixth_confirmation_at": "2018-03-23T23:57:43Z"
+    },
+    {
+      "week_start": "2018-03-24",
+      "decision_cutoff_at": "2018-03-31",
+      "earliest_execution_at": "2018-04-02",
+      "confirmed_block_count": 1036,
+      "confirmed_non_coinbase_transaction_count": 1213903,
+      "confirmed_fee_satoshis": 17254552721,
+      "latest_sixth_confirmation_at": "2018-03-30T23:48:19Z"
+    },
+    {
+      "week_start": "2018-03-31",
+      "decision_cutoff_at": "2018-04-07",
+      "earliest_execution_at": "2018-04-09",
+      "confirmed_block_count": 1044,
+      "confirmed_non_coinbase_transaction_count": 1184704,
+      "confirmed_fee_satoshis": 16813336498,
+      "latest_sixth_confirmation_at": "2018-04-06T23:54:49Z"
+    },
+    {
+      "week_start": "2018-04-07",
+      "decision_cutoff_at": "2018-04-14",
+      "earliest_execution_at": "2018-04-16",
+      "confirmed_block_count": 1126,
+      "confirmed_non_coinbase_transaction_count": 1262991,
+      "confirmed_fee_satoshis": 18798072531,
+      "latest_sixth_confirmation_at": "2018-04-13T23:49:43Z"
+    },
+    {
+      "week_start": "2018-04-14",
+      "decision_cutoff_at": "2018-04-21",
+      "earliest_execution_at": "2018-04-23",
+      "confirmed_block_count": 1072,
+      "confirmed_non_coinbase_transaction_count": 1341990,
+      "confirmed_fee_satoshis": 17922305923,
+      "latest_sixth_confirmation_at": "2018-04-20T23:58:29Z"
+    },
+    {
+      "week_start": "2018-04-21",
+      "decision_cutoff_at": "2018-04-28",
+      "earliest_execution_at": "2018-04-30",
+      "confirmed_block_count": 1031,
+      "confirmed_non_coinbase_transaction_count": 1479196,
+      "confirmed_fee_satoshis": 35820020976,
+      "latest_sixth_confirmation_at": "2018-04-27T23:58:26Z"
+    },
+    {
+      "week_start": "2018-04-28",
+      "decision_cutoff_at": "2018-05-05",
+      "earliest_execution_at": "2018-05-07",
+      "confirmed_block_count": 1022,
+      "confirmed_non_coinbase_transaction_count": 1445469,
+      "confirmed_fee_satoshis": 26131921038,
+      "latest_sixth_confirmation_at": "2018-05-04T23:41:04Z"
+    },
+    {
+      "week_start": "2018-05-05",
+      "decision_cutoff_at": "2018-05-12",
+      "earliest_execution_at": "2018-05-14",
+      "confirmed_block_count": 1022,
+      "confirmed_non_coinbase_transaction_count": 1416497,
+      "confirmed_fee_satoshis": 22844265945,
+      "latest_sixth_confirmation_at": "2018-05-11T23:57:54Z"
+    },
+    {
+      "week_start": "2018-05-12",
+      "decision_cutoff_at": "2018-05-19",
+      "earliest_execution_at": "2018-05-21",
+      "confirmed_block_count": 1044,
+      "confirmed_non_coinbase_transaction_count": 1374457,
+      "confirmed_fee_satoshis": 28094846437,
+      "latest_sixth_confirmation_at": "2018-05-18T23:46:34Z"
+    },
+    {
+      "week_start": "2018-05-19",
+      "decision_cutoff_at": "2018-05-26",
+      "earliest_execution_at": "2018-05-28",
+      "confirmed_block_count": 1081,
+      "confirmed_non_coinbase_transaction_count": 1358360,
+      "confirmed_fee_satoshis": 20468793470,
+      "latest_sixth_confirmation_at": "2018-05-25T23:47:46Z"
+    },
+    {
+      "week_start": "2018-05-26",
+      "decision_cutoff_at": "2018-06-02",
+      "earliest_execution_at": "2018-06-04",
+      "confirmed_block_count": 1125,
+      "confirmed_non_coinbase_transaction_count": 1308695,
+      "confirmed_fee_satoshis": 16402737012,
+      "latest_sixth_confirmation_at": "2018-06-01T23:58:05Z"
+    },
+    {
+      "week_start": "2018-06-02",
+      "decision_cutoff_at": "2018-06-09",
+      "earliest_execution_at": "2018-06-11",
+      "confirmed_block_count": 1102,
+      "confirmed_non_coinbase_transaction_count": 1369800,
+      "confirmed_fee_satoshis": 12849897854,
+      "latest_sixth_confirmation_at": "2018-06-08T23:56:03Z"
+    },
+    {
+      "week_start": "2018-06-09",
+      "decision_cutoff_at": "2018-06-16",
+      "earliest_execution_at": "2018-06-18",
+      "confirmed_block_count": 998,
+      "confirmed_non_coinbase_transaction_count": 1397918,
+      "confirmed_fee_satoshis": 16994224783,
+      "latest_sixth_confirmation_at": "2018-06-15T23:49:50Z"
+    },
+    {
+      "week_start": "2018-06-16",
+      "decision_cutoff_at": "2018-06-23",
+      "earliest_execution_at": "2018-06-25",
+      "confirmed_block_count": 1112,
+      "confirmed_non_coinbase_transaction_count": 1284257,
+      "confirmed_fee_satoshis": 48521382168,
+      "latest_sixth_confirmation_at": "2018-06-22T23:55:58Z"
+    },
+    {
+      "week_start": "2018-06-23",
+      "decision_cutoff_at": "2018-06-30",
+      "earliest_execution_at": "2018-07-02",
+      "confirmed_block_count": 1057,
+      "confirmed_non_coinbase_transaction_count": 1281437,
+      "confirmed_fee_satoshis": 21164139930,
+      "latest_sixth_confirmation_at": "2018-06-29T23:52:59Z"
+    },
+    {
+      "week_start": "2018-06-30",
+      "decision_cutoff_at": "2018-07-07",
+      "earliest_execution_at": "2018-07-09",
+      "confirmed_block_count": 970,
+      "confirmed_non_coinbase_transaction_count": 1353375,
+      "confirmed_fee_satoshis": 15430932909,
+      "latest_sixth_confirmation_at": "2018-07-06T23:41:07Z"
+    },
+    {
+      "week_start": "2018-07-07",
+      "decision_cutoff_at": "2018-07-14",
+      "earliest_execution_at": "2018-07-16",
+      "confirmed_block_count": 1012,
+      "confirmed_non_coinbase_transaction_count": 1354558,
+      "confirmed_fee_satoshis": 13305803881,
+      "latest_sixth_confirmation_at": "2018-07-13T23:49:06Z"
+    },
+    {
+      "week_start": "2018-07-14",
+      "decision_cutoff_at": "2018-07-21",
+      "earliest_execution_at": "2018-07-23",
+      "confirmed_block_count": 1038,
+      "confirmed_non_coinbase_transaction_count": 1458220,
+      "confirmed_fee_satoshis": 16185529891,
+      "latest_sixth_confirmation_at": "2018-07-20T23:51:39Z"
+    },
+    {
+      "week_start": "2018-07-21",
+      "decision_cutoff_at": "2018-07-28",
+      "earliest_execution_at": "2018-07-30",
+      "confirmed_block_count": 1147,
+      "confirmed_non_coinbase_transaction_count": 1545151,
+      "confirmed_fee_satoshis": 15900374846,
+      "latest_sixth_confirmation_at": "2018-07-27T23:51:32Z"
+    },
+    {
+      "week_start": "2018-07-28",
+      "decision_cutoff_at": "2018-08-04",
+      "earliest_execution_at": "2018-08-06",
+      "confirmed_block_count": 1059,
+      "confirmed_non_coinbase_transaction_count": 1517404,
+      "confirmed_fee_satoshis": 15169615507,
+      "latest_sixth_confirmation_at": "2018-08-03T23:46:08Z"
+    },
+    {
+      "week_start": "2018-08-04",
+      "decision_cutoff_at": "2018-08-11",
+      "earliest_execution_at": "2018-08-13",
+      "confirmed_block_count": 1094,
+      "confirmed_non_coinbase_transaction_count": 1488780,
+      "confirmed_fee_satoshis": 12848824377,
+      "latest_sixth_confirmation_at": "2018-08-10T23:59:11Z"
+    },
+    {
+      "week_start": "2018-08-11",
+      "decision_cutoff_at": "2018-08-18",
+      "earliest_execution_at": "2018-08-20",
+      "confirmed_block_count": 1076,
+      "confirmed_non_coinbase_transaction_count": 1528576,
+      "confirmed_fee_satoshis": 14487219552,
+      "latest_sixth_confirmation_at": "2018-08-17T23:58:33Z"
+    },
+    {
+      "week_start": "2018-08-18",
+      "decision_cutoff_at": "2018-08-25",
+      "earliest_execution_at": "2018-08-27",
+      "confirmed_block_count": 1052,
+      "confirmed_non_coinbase_transaction_count": 1453662,
+      "confirmed_fee_satoshis": 14977013317,
+      "latest_sixth_confirmation_at": "2018-08-24T23:24:32Z"
+    },
+    {
+      "week_start": "2018-08-25",
+      "decision_cutoff_at": "2018-09-01",
+      "earliest_execution_at": "2018-09-03",
+      "confirmed_block_count": 1088,
+      "confirmed_non_coinbase_transaction_count": 1529039,
+      "confirmed_fee_satoshis": 19925143901,
+      "latest_sixth_confirmation_at": "2018-08-31T23:59:46Z"
+    },
+    {
+      "week_start": "2018-09-01",
+      "decision_cutoff_at": "2018-09-08",
+      "earliest_execution_at": "2018-09-10",
+      "confirmed_block_count": 993,
+      "confirmed_non_coinbase_transaction_count": 1575104,
+      "confirmed_fee_satoshis": 16965592603,
+      "latest_sixth_confirmation_at": "2018-09-07T23:59:49Z"
+    },
+    {
+      "week_start": "2018-09-08",
+      "decision_cutoff_at": "2018-09-15",
+      "earliest_execution_at": "2018-09-17",
+      "confirmed_block_count": 1031,
+      "confirmed_non_coinbase_transaction_count": 1533402,
+      "confirmed_fee_satoshis": 14506724670,
+      "latest_sixth_confirmation_at": "2018-09-14T23:45:54Z"
+    },
+    {
+      "week_start": "2018-09-15",
+      "decision_cutoff_at": "2018-09-22",
+      "earliest_execution_at": "2018-09-24",
+      "confirmed_block_count": 1004,
+      "confirmed_non_coinbase_transaction_count": 1646536,
+      "confirmed_fee_satoshis": 12591101289,
+      "latest_sixth_confirmation_at": "2018-09-21T23:50:14Z"
+    },
+    {
+      "week_start": "2018-09-22",
+      "decision_cutoff_at": "2018-09-29",
+      "earliest_execution_at": "2018-10-01",
+      "confirmed_block_count": 1052,
+      "confirmed_non_coinbase_transaction_count": 1650884,
+      "confirmed_fee_satoshis": 14069210641,
+      "latest_sixth_confirmation_at": "2018-09-28T23:46:22Z"
+    },
+    {
+      "week_start": "2018-09-29",
+      "decision_cutoff_at": "2018-10-06",
+      "earliest_execution_at": "2018-10-08",
+      "confirmed_block_count": 1029,
+      "confirmed_non_coinbase_transaction_count": 1630665,
+      "confirmed_fee_satoshis": 14256674519,
+      "latest_sixth_confirmation_at": "2018-10-05T23:57:21Z"
+    },
+    {
+      "week_start": "2018-10-06",
+      "decision_cutoff_at": "2018-10-13",
+      "earliest_execution_at": "2018-10-15",
+      "confirmed_block_count": 961,
+      "confirmed_non_coinbase_transaction_count": 1656739,
+      "confirmed_fee_satoshis": 11580161192,
+      "latest_sixth_confirmation_at": "2018-10-12T23:58:55Z"
+    },
+    {
+      "week_start": "2018-10-13",
+      "decision_cutoff_at": "2018-10-20",
+      "earliest_execution_at": "2018-10-22",
+      "confirmed_block_count": 964,
+      "confirmed_non_coinbase_transaction_count": 1681955,
+      "confirmed_fee_satoshis": 12238086036,
+      "latest_sixth_confirmation_at": "2018-10-19T23:31:02Z"
+    },
+    {
+      "week_start": "2018-10-20",
+      "decision_cutoff_at": "2018-10-27",
+      "earliest_execution_at": "2018-10-29",
+      "confirmed_block_count": 977,
+      "confirmed_non_coinbase_transaction_count": 1702044,
+      "confirmed_fee_satoshis": 11208744947,
+      "latest_sixth_confirmation_at": "2018-10-26T23:51:03Z"
+    },
+    {
+      "week_start": "2018-10-27",
+      "decision_cutoff_at": "2018-11-03",
+      "earliest_execution_at": "2018-11-05",
+      "confirmed_block_count": 1030,
+      "confirmed_non_coinbase_transaction_count": 1856704,
+      "confirmed_fee_satoshis": 11982387845,
+      "latest_sixth_confirmation_at": "2018-11-02T23:43:02Z"
+    },
+    {
+      "week_start": "2018-11-03",
+      "decision_cutoff_at": "2018-11-10",
+      "earliest_execution_at": "2018-11-12",
+      "confirmed_block_count": 928,
+      "confirmed_non_coinbase_transaction_count": 1895739,
+      "confirmed_fee_satoshis": 12659193486,
+      "latest_sixth_confirmation_at": "2018-11-09T23:50:27Z"
+    },
+    {
+      "week_start": "2018-11-10",
+      "decision_cutoff_at": "2018-11-17",
+      "earliest_execution_at": "2018-11-19",
+      "confirmed_block_count": 919,
+      "confirmed_non_coinbase_transaction_count": 1933279,
+      "confirmed_fee_satoshis": 16843104381,
+      "latest_sixth_confirmation_at": "2018-11-16T23:56:19Z"
+    },
+    {
+      "week_start": "2018-11-17",
+      "decision_cutoff_at": "2018-11-24",
+      "earliest_execution_at": "2018-11-26",
+      "confirmed_block_count": 872,
+      "confirmed_non_coinbase_transaction_count": 1838867,
+      "confirmed_fee_satoshis": 27326982247,
+      "latest_sixth_confirmation_at": "2018-11-23T23:35:39Z"
+    },
+    {
+      "week_start": "2018-11-24",
+      "decision_cutoff_at": "2018-12-01",
+      "earliest_execution_at": "2018-12-03",
+      "confirmed_block_count": 830,
+      "confirmed_non_coinbase_transaction_count": 1753368,
+      "confirmed_fee_satoshis": 26196433485,
+      "latest_sixth_confirmation_at": "2018-11-30T23:56:38Z"
+    },
+    {
+      "week_start": "2018-12-01",
+      "decision_cutoff_at": "2018-12-08",
+      "earliest_execution_at": "2018-12-10",
+      "confirmed_block_count": 863,
+      "confirmed_non_coinbase_transaction_count": 1750728,
+      "confirmed_fee_satoshis": 20219215362,
+      "latest_sixth_confirmation_at": "2018-12-07T23:32:20Z"
+    },
+    {
+      "week_start": "2018-12-08",
+      "decision_cutoff_at": "2018-12-15",
+      "earliest_execution_at": "2018-12-17",
+      "confirmed_block_count": 895,
+      "confirmed_non_coinbase_transaction_count": 1771481,
+      "confirmed_fee_satoshis": 15177818394,
+      "latest_sixth_confirmation_at": "2018-12-14T23:32:59Z"
+    },
+    {
+      "week_start": "2018-12-15",
+      "decision_cutoff_at": "2018-12-22",
+      "earliest_execution_at": "2018-12-24",
+      "confirmed_block_count": 970,
+      "confirmed_non_coinbase_transaction_count": 1914023,
+      "confirmed_fee_satoshis": 17162671732,
+      "latest_sixth_confirmation_at": "2018-12-21T23:52:25Z"
+    },
+    {
+      "week_start": "2018-12-22",
+      "decision_cutoff_at": "2018-12-29",
+      "earliest_execution_at": "2018-12-31",
+      "confirmed_block_count": 1154,
+      "confirmed_non_coinbase_transaction_count": 1917750,
+      "confirmed_fee_satoshis": 12628296166,
+      "latest_sixth_confirmation_at": "2018-12-28T23:48:31Z"
+    },
+    {
+      "week_start": "2018-12-29",
+      "decision_cutoff_at": "2019-01-05",
+      "earliest_execution_at": "2019-01-07",
+      "confirmed_block_count": 1067,
+      "confirmed_non_coinbase_transaction_count": 1860396,
+      "confirmed_fee_satoshis": 11274698011,
+      "latest_sixth_confirmation_at": "2019-01-04T23:58:08Z"
+    },
+    {
+      "week_start": "2019-01-05",
+      "decision_cutoff_at": "2019-01-12",
+      "earliest_execution_at": "2019-01-14",
+      "confirmed_block_count": 1076,
+      "confirmed_non_coinbase_transaction_count": 2066374,
+      "confirmed_fee_satoshis": 14696616373,
+      "latest_sixth_confirmation_at": "2019-01-11T23:57:30Z"
+    },
+    {
+      "week_start": "2019-01-12",
+      "decision_cutoff_at": "2019-01-19",
+      "earliest_execution_at": "2019-01-21",
+      "confirmed_block_count": 948,
+      "confirmed_non_coinbase_transaction_count": 2082544,
+      "confirmed_fee_satoshis": 14144469108,
+      "latest_sixth_confirmation_at": "2019-01-18T23:50:42Z"
+    },
+    {
+      "week_start": "2019-01-19",
+      "decision_cutoff_at": "2019-01-26",
+      "earliest_execution_at": "2019-01-28",
+      "confirmed_block_count": 1010,
+      "confirmed_non_coinbase_transaction_count": 2081862,
+      "confirmed_fee_satoshis": 14288650739,
+      "latest_sixth_confirmation_at": "2019-01-25T23:59:50Z"
+    },
+    {
+      "week_start": "2019-01-26",
+      "decision_cutoff_at": "2019-02-02",
+      "earliest_execution_at": "2019-02-04",
+      "confirmed_block_count": 1021,
+      "confirmed_non_coinbase_transaction_count": 2199193,
+      "confirmed_fee_satoshis": 16548634600,
+      "latest_sixth_confirmation_at": "2019-02-01T23:59:45Z"
+    },
+    {
+      "week_start": "2019-02-02",
+      "decision_cutoff_at": "2019-02-09",
+      "earliest_execution_at": "2019-02-11",
+      "confirmed_block_count": 1071,
+      "confirmed_non_coinbase_transaction_count": 2331548,
+      "confirmed_fee_satoshis": 12644676107,
+      "latest_sixth_confirmation_at": "2019-02-08T23:58:55Z"
+    },
+    {
+      "week_start": "2019-02-09",
+      "decision_cutoff_at": "2019-02-16",
+      "earliest_execution_at": "2019-02-18",
+      "confirmed_block_count": 978,
+      "confirmed_non_coinbase_transaction_count": 2188400,
+      "confirmed_fee_satoshis": 17619125106,
+      "latest_sixth_confirmation_at": "2019-02-15T23:53:28Z"
+    },
+    {
+      "week_start": "2019-02-16",
+      "decision_cutoff_at": "2019-02-23",
+      "earliest_execution_at": "2019-02-25",
+      "confirmed_block_count": 1025,
+      "confirmed_non_coinbase_transaction_count": 2299344,
+      "confirmed_fee_satoshis": 21787812582,
+      "latest_sixth_confirmation_at": "2019-02-22T23:58:40Z"
+    },
+    {
+      "week_start": "2019-02-23",
+      "decision_cutoff_at": "2019-03-02",
+      "earliest_execution_at": "2019-03-04",
+      "confirmed_block_count": 1031,
+      "confirmed_non_coinbase_transaction_count": 2404641,
+      "confirmed_fee_satoshis": 22203724470,
+      "latest_sixth_confirmation_at": "2019-03-01T23:49:09Z"
+    },
+    {
+      "week_start": "2019-03-02",
+      "decision_cutoff_at": "2019-03-09",
+      "earliest_execution_at": "2019-03-11",
+      "confirmed_block_count": 974,
+      "confirmed_non_coinbase_transaction_count": 2118978,
+      "confirmed_fee_satoshis": 21489667996,
+      "latest_sixth_confirmation_at": "2019-03-08T23:56:45Z"
+    },
+    {
+      "week_start": "2019-03-09",
+      "decision_cutoff_at": "2019-03-16",
+      "earliest_execution_at": "2019-03-18",
+      "confirmed_block_count": 996,
+      "confirmed_non_coinbase_transaction_count": 1899091,
+      "confirmed_fee_satoshis": 20929110960,
+      "latest_sixth_confirmation_at": "2019-03-15T23:51:24Z"
+    },
+    {
+      "week_start": "2019-03-16",
+      "decision_cutoff_at": "2019-03-23",
+      "earliest_execution_at": "2019-03-25",
+      "confirmed_block_count": 1103,
+      "confirmed_non_coinbase_transaction_count": 1984454,
+      "confirmed_fee_satoshis": 17334277647,
+      "latest_sixth_confirmation_at": "2019-03-22T23:50:01Z"
+    },
+    {
+      "week_start": "2019-03-23",
+      "decision_cutoff_at": "2019-03-30",
+      "earliest_execution_at": "2019-04-01",
+      "confirmed_block_count": 1013,
+      "confirmed_non_coinbase_transaction_count": 2294318,
+      "confirmed_fee_satoshis": 25627114203,
+      "latest_sixth_confirmation_at": "2019-03-29T23:54:51Z"
+    },
+    {
+      "week_start": "2019-03-30",
+      "decision_cutoff_at": "2019-04-06",
+      "earliest_execution_at": "2019-04-08",
+      "confirmed_block_count": 1005,
+      "confirmed_non_coinbase_transaction_count": 2613451,
+      "confirmed_fee_satoshis": 68488614472,
+      "latest_sixth_confirmation_at": "2019-04-05T23:53:26Z"
+    },
+    {
+      "week_start": "2019-04-06",
+      "decision_cutoff_at": "2019-04-13",
+      "earliest_execution_at": "2019-04-15",
+      "confirmed_block_count": 1010,
+      "confirmed_non_coinbase_transaction_count": 2585876,
+      "confirmed_fee_satoshis": 73550063612,
+      "latest_sixth_confirmation_at": "2019-04-12T23:54:21Z"
+    },
+    {
+      "week_start": "2019-04-13",
+      "decision_cutoff_at": "2019-04-20",
+      "earliest_execution_at": "2019-04-22",
+      "confirmed_block_count": 980,
+      "confirmed_non_coinbase_transaction_count": 2523514,
+      "confirmed_fee_satoshis": 50601926013,
+      "latest_sixth_confirmation_at": "2019-04-19T23:51:49Z"
+    },
+    {
+      "week_start": "2019-04-20",
+      "decision_cutoff_at": "2019-04-27",
+      "earliest_execution_at": "2019-04-29",
+      "confirmed_block_count": 994,
+      "confirmed_non_coinbase_transaction_count": 2517521,
+      "confirmed_fee_satoshis": 58990027312,
+      "latest_sixth_confirmation_at": "2019-04-26T23:50:38Z"
+    },
+    {
+      "week_start": "2019-04-27",
+      "decision_cutoff_at": "2019-05-04",
+      "earliest_execution_at": "2019-05-06",
+      "confirmed_block_count": 1104,
+      "confirmed_non_coinbase_transaction_count": 2713925,
+      "confirmed_fee_satoshis": 46838252092,
+      "latest_sixth_confirmation_at": "2019-05-03T23:59:02Z"
+    },
+    {
+      "week_start": "2019-05-04",
+      "decision_cutoff_at": "2019-05-11",
+      "earliest_execution_at": "2019-05-13",
+      "confirmed_block_count": 960,
+      "confirmed_non_coinbase_transaction_count": 2453128,
+      "confirmed_fee_satoshis": 62936398893,
+      "latest_sixth_confirmation_at": "2019-05-10T23:56:08Z"
+    },
+    {
+      "week_start": "2019-05-11",
+      "decision_cutoff_at": "2019-05-18",
+      "earliest_execution_at": "2019-05-20",
+      "confirmed_block_count": 1047,
+      "confirmed_non_coinbase_transaction_count": 2531492,
+      "confirmed_fee_satoshis": 111432908342,
+      "latest_sixth_confirmation_at": "2019-05-17T23:59:03Z"
+    },
+    {
+      "week_start": "2019-05-18",
+      "decision_cutoff_at": "2019-05-25",
+      "earliest_execution_at": "2019-05-27",
+      "confirmed_block_count": 1102,
+      "confirmed_non_coinbase_transaction_count": 2611344,
+      "confirmed_fee_satoshis": 117817258448,
+      "latest_sixth_confirmation_at": "2019-05-24T23:58:06Z"
+    },
+    {
+      "week_start": "2019-05-25",
+      "decision_cutoff_at": "2019-06-01",
+      "earliest_execution_at": "2019-06-03",
+      "confirmed_block_count": 1081,
+      "confirmed_non_coinbase_transaction_count": 2567350,
+      "confirmed_fee_satoshis": 117754702752,
+      "latest_sixth_confirmation_at": "2019-05-31T23:50:48Z"
+    },
+    {
+      "week_start": "2019-06-01",
+      "decision_cutoff_at": "2019-06-08",
+      "earliest_execution_at": "2019-06-10",
+      "confirmed_block_count": 1024,
+      "confirmed_non_coinbase_transaction_count": 2381485,
+      "confirmed_fee_satoshis": 108196682609,
+      "latest_sixth_confirmation_at": "2019-06-07T23:44:45Z"
+    },
+    {
+      "week_start": "2019-06-08",
+      "decision_cutoff_at": "2019-06-15",
+      "earliest_execution_at": "2019-06-17",
+      "confirmed_block_count": 1016,
+      "confirmed_non_coinbase_transaction_count": 2336926,
+      "confirmed_fee_satoshis": 68294949682,
+      "latest_sixth_confirmation_at": "2019-06-14T23:47:20Z"
+    },
+    {
+      "week_start": "2019-06-15",
+      "decision_cutoff_at": "2019-06-22",
+      "earliest_execution_at": "2019-06-24",
+      "confirmed_block_count": 1020,
+      "confirmed_non_coinbase_transaction_count": 2394489,
+      "confirmed_fee_satoshis": 72806414709,
+      "latest_sixth_confirmation_at": "2019-06-21T23:56:59Z"
+    },
+    {
+      "week_start": "2019-06-22",
+      "decision_cutoff_at": "2019-06-29",
+      "earliest_execution_at": "2019-07-01",
+      "confirmed_block_count": 1109,
+      "confirmed_non_coinbase_transaction_count": 2635948,
+      "confirmed_fee_satoshis": 98836608466,
+      "latest_sixth_confirmation_at": "2019-06-28T23:53:39Z"
+    },
+    {
+      "week_start": "2019-06-29",
+      "decision_cutoff_at": "2019-07-06",
+      "earliest_execution_at": "2019-07-08",
+      "confirmed_block_count": 1149,
+      "confirmed_non_coinbase_transaction_count": 2539473,
+      "confirmed_fee_satoshis": 71268637275,
+      "latest_sixth_confirmation_at": "2019-07-05T23:58:30Z"
+    },
+    {
+      "week_start": "2019-07-06",
+      "decision_cutoff_at": "2019-07-13",
+      "earliest_execution_at": "2019-07-15",
+      "confirmed_block_count": 1079,
+      "confirmed_non_coinbase_transaction_count": 2391702,
+      "confirmed_fee_satoshis": 46545354111,
+      "latest_sixth_confirmation_at": "2019-07-12T23:57:46Z"
+    },
+    {
+      "week_start": "2019-07-13",
+      "decision_cutoff_at": "2019-07-20",
+      "earliest_execution_at": "2019-07-22",
+      "confirmed_block_count": 960,
+      "confirmed_non_coinbase_transaction_count": 2247035,
+      "confirmed_fee_satoshis": 41719094101,
+      "latest_sixth_confirmation_at": "2019-07-19T23:55:31Z"
+    },
+    {
+      "week_start": "2019-07-20",
+      "decision_cutoff_at": "2019-07-27",
+      "earliest_execution_at": "2019-07-29",
+      "confirmed_block_count": 1076,
+      "confirmed_non_coinbase_transaction_count": 2185899,
+      "confirmed_fee_satoshis": 34466025461,
+      "latest_sixth_confirmation_at": "2019-07-26T23:59:21Z"
+    },
+    {
+      "week_start": "2019-07-27",
+      "decision_cutoff_at": "2019-08-03",
+      "earliest_execution_at": "2019-08-05",
+      "confirmed_block_count": 1113,
+      "confirmed_non_coinbase_transaction_count": 2248856,
+      "confirmed_fee_satoshis": 30342240200,
+      "latest_sixth_confirmation_at": "2019-08-02T23:52:29Z"
+    },
+    {
+      "week_start": "2019-08-03",
+      "decision_cutoff_at": "2019-08-10",
+      "earliest_execution_at": "2019-08-12",
+      "confirmed_block_count": 1080,
+      "confirmed_non_coinbase_transaction_count": 2372624,
+      "confirmed_fee_satoshis": 34087152225,
+      "latest_sixth_confirmation_at": "2019-08-09T23:58:06Z"
+    },
+    {
+      "week_start": "2019-08-10",
+      "decision_cutoff_at": "2019-08-17",
+      "earliest_execution_at": "2019-08-19",
+      "confirmed_block_count": 1044,
+      "confirmed_non_coinbase_transaction_count": 2268992,
+      "confirmed_fee_satoshis": 35807289476,
+      "latest_sixth_confirmation_at": "2019-08-16T23:55:02Z"
+    },
+    {
+      "week_start": "2019-08-17",
+      "decision_cutoff_at": "2019-08-24",
+      "earliest_execution_at": "2019-08-26",
+      "confirmed_block_count": 994,
+      "confirmed_non_coinbase_transaction_count": 2181761,
+      "confirmed_fee_satoshis": 29929978527,
+      "latest_sixth_confirmation_at": "2019-08-23T23:56:16Z"
+    },
+    {
+      "week_start": "2019-08-24",
+      "decision_cutoff_at": "2019-08-31",
+      "earliest_execution_at": "2019-09-02",
+      "confirmed_block_count": 1057,
+      "confirmed_non_coinbase_transaction_count": 2259255,
+      "confirmed_fee_satoshis": 22025470766,
+      "latest_sixth_confirmation_at": "2019-08-30T23:53:10Z"
+    },
+    {
+      "week_start": "2019-08-31",
+      "decision_cutoff_at": "2019-09-07",
+      "earliest_execution_at": "2019-09-09",
+      "confirmed_block_count": 1075,
+      "confirmed_non_coinbase_transaction_count": 2352919,
+      "confirmed_fee_satoshis": 22217336007,
+      "latest_sixth_confirmation_at": "2019-09-06T23:57:14Z"
+    },
+    {
+      "week_start": "2019-09-07",
+      "decision_cutoff_at": "2019-09-14",
+      "earliest_execution_at": "2019-09-16",
+      "confirmed_block_count": 1141,
+      "confirmed_non_coinbase_transaction_count": 2227225,
+      "confirmed_fee_satoshis": 20932602702,
+      "latest_sixth_confirmation_at": "2019-09-13T23:59:55Z"
+    },
+    {
+      "week_start": "2019-09-14",
+      "decision_cutoff_at": "2019-09-21",
+      "earliest_execution_at": "2019-09-23",
+      "confirmed_block_count": 1080,
+      "confirmed_non_coinbase_transaction_count": 2296473,
+      "confirmed_fee_satoshis": 20493050264,
+      "latest_sixth_confirmation_at": "2019-09-20T23:46:38Z"
+    },
+    {
+      "week_start": "2019-09-21",
+      "decision_cutoff_at": "2019-09-28",
+      "earliest_execution_at": "2019-09-30",
+      "confirmed_block_count": 1056,
+      "confirmed_non_coinbase_transaction_count": 2288886,
+      "confirmed_fee_satoshis": 22304402055,
+      "latest_sixth_confirmation_at": "2019-09-27T23:54:04Z"
+    },
+    {
+      "week_start": "2019-09-28",
+      "decision_cutoff_at": "2019-10-05",
+      "earliest_execution_at": "2019-10-07",
+      "confirmed_block_count": 1004,
+      "confirmed_non_coinbase_transaction_count": 2230556,
+      "confirmed_fee_satoshis": 23597169678,
+      "latest_sixth_confirmation_at": "2019-10-04T23:32:20Z"
+    },
+    {
+      "week_start": "2019-10-05",
+      "decision_cutoff_at": "2019-10-12",
+      "earliest_execution_at": "2019-10-14",
+      "confirmed_block_count": 1074,
+      "confirmed_non_coinbase_transaction_count": 2255375,
+      "confirmed_fee_satoshis": 17892092231,
+      "latest_sixth_confirmation_at": "2019-10-11T23:59:35Z"
+    },
+    {
+      "week_start": "2019-10-12",
+      "decision_cutoff_at": "2019-10-19",
+      "earliest_execution_at": "2019-10-21",
+      "confirmed_block_count": 1010,
+      "confirmed_non_coinbase_transaction_count": 2224252,
+      "confirmed_fee_satoshis": 16564869912,
+      "latest_sixth_confirmation_at": "2019-10-18T23:33:03Z"
+    },
+    {
+      "week_start": "2019-10-19",
+      "decision_cutoff_at": "2019-10-26",
+      "earliest_execution_at": "2019-10-28",
+      "confirmed_block_count": 1049,
+      "confirmed_non_coinbase_transaction_count": 2256273,
+      "confirmed_fee_satoshis": 17197456216,
+      "latest_sixth_confirmation_at": "2019-10-25T23:53:06Z"
+    },
+    {
+      "week_start": "2019-10-26",
+      "decision_cutoff_at": "2019-11-02",
+      "earliest_execution_at": "2019-11-04",
+      "confirmed_block_count": 912,
+      "confirmed_non_coinbase_transaction_count": 2087497,
+      "confirmed_fee_satoshis": 26343447701,
+      "latest_sixth_confirmation_at": "2019-11-01T23:46:44Z"
+    },
+    {
+      "week_start": "2019-11-02",
+      "decision_cutoff_at": "2019-11-09",
+      "earliest_execution_at": "2019-11-11",
+      "confirmed_block_count": 937,
+      "confirmed_non_coinbase_transaction_count": 2156218,
+      "confirmed_fee_satoshis": 26273972867,
+      "latest_sixth_confirmation_at": "2019-11-08T23:47:16Z"
+    },
+    {
+      "week_start": "2019-11-09",
+      "decision_cutoff_at": "2019-11-16",
+      "earliest_execution_at": "2019-11-18",
+      "confirmed_block_count": 1052,
+      "confirmed_non_coinbase_transaction_count": 2211532,
+      "confirmed_fee_satoshis": 20410800183,
+      "latest_sixth_confirmation_at": "2019-11-15T23:54:17Z"
+    },
+    {
+      "week_start": "2019-11-16",
+      "decision_cutoff_at": "2019-11-23",
+      "earliest_execution_at": "2019-11-25",
+      "confirmed_block_count": 994,
+      "confirmed_non_coinbase_transaction_count": 2121487,
+      "confirmed_fee_satoshis": 20970882537,
+      "latest_sixth_confirmation_at": "2019-11-22T23:53:00Z"
+    },
+    {
+      "week_start": "2019-11-23",
+      "decision_cutoff_at": "2019-11-30",
+      "earliest_execution_at": "2019-12-02",
+      "confirmed_block_count": 983,
+      "confirmed_non_coinbase_transaction_count": 2095688,
+      "confirmed_fee_satoshis": 20197661663,
+      "latest_sixth_confirmation_at": "2019-11-29T23:55:18Z"
+    },
+    {
+      "week_start": "2019-11-30",
+      "decision_cutoff_at": "2019-12-07",
+      "earliest_execution_at": "2019-12-09",
+      "confirmed_block_count": 1019,
+      "confirmed_non_coinbase_transaction_count": 2154911,
+      "confirmed_fee_satoshis": 17775800265,
+      "latest_sixth_confirmation_at": "2019-12-06T23:56:24Z"
+    },
+    {
+      "week_start": "2019-12-07",
+      "decision_cutoff_at": "2019-12-14",
+      "earliest_execution_at": "2019-12-16",
+      "confirmed_block_count": 1010,
+      "confirmed_non_coinbase_transaction_count": 2113027,
+      "confirmed_fee_satoshis": 14681417778,
+      "latest_sixth_confirmation_at": "2019-12-13T23:53:40Z"
+    },
+    {
+      "week_start": "2019-12-14",
+      "decision_cutoff_at": "2019-12-21",
+      "earliest_execution_at": "2019-12-23",
+      "confirmed_block_count": 1014,
+      "confirmed_non_coinbase_transaction_count": 2151978,
+      "confirmed_fee_satoshis": 16154568224,
+      "latest_sixth_confirmation_at": "2019-12-20T23:57:33Z"
+    },
+    {
+      "week_start": "2019-12-21",
+      "decision_cutoff_at": "2019-12-28",
+      "earliest_execution_at": "2019-12-30",
+      "confirmed_block_count": 1047,
+      "confirmed_non_coinbase_transaction_count": 2038456,
+      "confirmed_fee_satoshis": 11458686465,
+      "latest_sixth_confirmation_at": "2019-12-27T23:56:41Z"
+    },
+    {
+      "week_start": "2019-12-28",
+      "decision_cutoff_at": "2020-01-04",
+      "earliest_execution_at": "2020-01-06",
+      "confirmed_block_count": 1093,
+      "confirmed_non_coinbase_transaction_count": 2053707,
+      "confirmed_fee_satoshis": 9713374378,
+      "latest_sixth_confirmation_at": "2020-01-03T23:59:37Z"
+    },
+    {
+      "week_start": "2020-01-04",
+      "decision_cutoff_at": "2020-01-11",
+      "earliest_execution_at": "2020-01-13",
+      "confirmed_block_count": 1084,
+      "confirmed_non_coinbase_transaction_count": 2173556,
+      "confirmed_fee_satoshis": 16267713484,
+      "latest_sixth_confirmation_at": "2020-01-10T23:50:30Z"
+    },
+    {
+      "week_start": "2020-01-11",
+      "decision_cutoff_at": "2020-01-18",
+      "earliest_execution_at": "2020-01-20",
+      "confirmed_block_count": 1065,
+      "confirmed_non_coinbase_transaction_count": 2198080,
+      "confirmed_fee_satoshis": 15566285178,
+      "latest_sixth_confirmation_at": "2020-01-17T23:52:29Z"
+    },
+    {
+      "week_start": "2020-01-18",
+      "decision_cutoff_at": "2020-01-25",
+      "earliest_execution_at": "2020-01-27",
+      "confirmed_block_count": 1048,
+      "confirmed_non_coinbase_transaction_count": 2153889,
+      "confirmed_fee_satoshis": 13073902007,
+      "latest_sixth_confirmation_at": "2020-01-24T23:58:36Z"
+    },
+    {
+      "week_start": "2020-01-25",
+      "decision_cutoff_at": "2020-02-01",
+      "earliest_execution_at": "2020-02-03",
+      "confirmed_block_count": 1032,
+      "confirmed_non_coinbase_transaction_count": 2154898,
+      "confirmed_fee_satoshis": 12649044463,
+      "latest_sixth_confirmation_at": "2020-01-31T23:50:47Z"
+    },
+    {
+      "week_start": "2020-02-01",
+      "decision_cutoff_at": "2020-02-08",
+      "earliest_execution_at": "2020-02-10",
+      "confirmed_block_count": 1001,
+      "confirmed_non_coinbase_transaction_count": 2238916,
+      "confirmed_fee_satoshis": 16268649295,
+      "latest_sixth_confirmation_at": "2020-02-07T23:43:47Z"
+    },
+    {
+      "week_start": "2020-02-08",
+      "decision_cutoff_at": "2020-02-15",
+      "earliest_execution_at": "2020-02-17",
+      "confirmed_block_count": 974,
+      "confirmed_non_coinbase_transaction_count": 2290461,
+      "confirmed_fee_satoshis": 20663993637,
+      "latest_sixth_confirmation_at": "2020-02-14T23:58:42Z"
+    },
+    {
+      "week_start": "2020-02-15",
+      "decision_cutoff_at": "2020-02-22",
+      "earliest_execution_at": "2020-02-24",
+      "confirmed_block_count": 1006,
+      "confirmed_non_coinbase_transaction_count": 2262301,
+      "confirmed_fee_satoshis": 18757834696,
+      "latest_sixth_confirmation_at": "2020-02-21T23:43:52Z"
+    },
+    {
+      "week_start": "2020-02-22",
+      "decision_cutoff_at": "2020-02-29",
+      "earliest_execution_at": "2020-03-02",
+      "confirmed_block_count": 1010,
+      "confirmed_non_coinbase_transaction_count": 2270079,
+      "confirmed_fee_satoshis": 16399403810,
+      "latest_sixth_confirmation_at": "2020-02-28T23:58:27Z"
+    },
+    {
+      "week_start": "2020-02-29",
+      "decision_cutoff_at": "2020-03-07",
+      "earliest_execution_at": "2020-03-09",
+      "confirmed_block_count": 1097,
+      "confirmed_non_coinbase_transaction_count": 2340812,
+      "confirmed_fee_satoshis": 15554486885,
+      "latest_sixth_confirmation_at": "2020-03-06T23:58:48Z"
+    },
+    {
+      "week_start": "2020-03-07",
+      "decision_cutoff_at": "2020-03-14",
+      "earliest_execution_at": "2020-03-16",
+      "confirmed_block_count": 986,
+      "confirmed_non_coinbase_transaction_count": 2190844,
+      "confirmed_fee_satoshis": 25775287217,
+      "latest_sixth_confirmation_at": "2020-03-13T23:41:47Z"
+    },
+    {
+      "week_start": "2020-03-14",
+      "decision_cutoff_at": "2020-03-21",
+      "earliest_execution_at": "2020-03-23",
+      "confirmed_block_count": 799,
+      "confirmed_non_coinbase_transaction_count": 1816720,
+      "confirmed_fee_satoshis": 42431980555,
+      "latest_sixth_confirmation_at": "2020-03-20T23:35:21Z"
+    },
+    {
+      "week_start": "2020-03-21",
+      "decision_cutoff_at": "2020-03-28",
+      "earliest_execution_at": "2020-03-30",
+      "confirmed_block_count": 896,
+      "confirmed_non_coinbase_transaction_count": 1768637,
+      "confirmed_fee_satoshis": 31724034350,
+      "latest_sixth_confirmation_at": "2020-03-27T23:59:44Z"
+    },
+    {
+      "week_start": "2020-03-28",
+      "decision_cutoff_at": "2020-04-04",
+      "earliest_execution_at": "2020-04-06",
+      "confirmed_block_count": 1024,
+      "confirmed_non_coinbase_transaction_count": 1883787,
+      "confirmed_fee_satoshis": 18167398664,
+      "latest_sixth_confirmation_at": "2020-04-03T23:58:32Z"
+    },
+    {
+      "week_start": "2020-04-04",
+      "decision_cutoff_at": "2020-04-11",
+      "earliest_execution_at": "2020-04-13",
+      "confirmed_block_count": 1083,
+      "confirmed_non_coinbase_transaction_count": 1944448,
+      "confirmed_fee_satoshis": 14323328026,
+      "latest_sixth_confirmation_at": "2020-04-10T23:51:42Z"
+    },
+    {
+      "week_start": "2020-04-11",
+      "decision_cutoff_at": "2020-04-18",
+      "earliest_execution_at": "2020-04-20",
+      "confirmed_block_count": 1095,
+      "confirmed_non_coinbase_transaction_count": 1967159,
+      "confirmed_fee_satoshis": 14555259557,
+      "latest_sixth_confirmation_at": "2020-04-17T23:59:35Z"
+    },
+    {
+      "week_start": "2020-04-18",
+      "decision_cutoff_at": "2020-04-25",
+      "earliest_execution_at": "2020-04-27",
+      "confirmed_block_count": 1031,
+      "confirmed_non_coinbase_transaction_count": 2073657,
+      "confirmed_fee_satoshis": 18237294839,
+      "latest_sixth_confirmation_at": "2020-04-24T23:47:01Z"
+    },
+    {
+      "week_start": "2020-04-25",
+      "decision_cutoff_at": "2020-05-02",
+      "earliest_execution_at": "2020-05-04",
+      "confirmed_block_count": 983,
+      "confirmed_non_coinbase_transaction_count": 2149400,
+      "confirmed_fee_satoshis": 37044156350,
+      "latest_sixth_confirmation_at": "2020-05-01T23:57:03Z"
+    },
+    {
+      "week_start": "2020-05-02",
+      "decision_cutoff_at": "2020-05-09",
+      "earliest_execution_at": "2020-05-11",
+      "confirmed_block_count": 1064,
+      "confirmed_non_coinbase_transaction_count": 2205968,
+      "confirmed_fee_satoshis": 52012063223,
+      "latest_sixth_confirmation_at": "2020-05-08T23:54:23Z"
+    },
+    {
+      "week_start": "2020-05-09",
+      "decision_cutoff_at": "2020-05-16",
+      "earliest_execution_at": "2020-05-18",
+      "confirmed_block_count": 961,
+      "confirmed_non_coinbase_transaction_count": 2109712,
+      "confirmed_fee_satoshis": 75933115011,
+      "latest_sixth_confirmation_at": "2020-05-15T23:55:14Z"
+    },
+    {
+      "week_start": "2020-05-16",
+      "decision_cutoff_at": "2020-05-23",
+      "earliest_execution_at": "2020-05-25",
+      "confirmed_block_count": 822,
+      "confirmed_non_coinbase_transaction_count": 1921240,
+      "confirmed_fee_satoshis": 109799782717,
+      "latest_sixth_confirmation_at": "2020-05-22T23:50:27Z"
+    },
+    {
+      "week_start": "2020-05-23",
+      "decision_cutoff_at": "2020-05-30",
+      "earliest_execution_at": "2020-06-01",
+      "confirmed_block_count": 874,
+      "confirmed_non_coinbase_transaction_count": 1902328,
+      "confirmed_fee_satoshis": 60809812623,
+      "latest_sixth_confirmation_at": "2020-05-29T23:55:57Z"
+    },
+    {
+      "week_start": "2020-05-30",
+      "decision_cutoff_at": "2020-06-06",
+      "earliest_execution_at": "2020-06-08",
+      "confirmed_block_count": 1032,
+      "confirmed_non_coinbase_transaction_count": 2101911,
+      "confirmed_fee_satoshis": 50582249777,
+      "latest_sixth_confirmation_at": "2020-06-05T23:47:34Z"
+    },
+    {
+      "week_start": "2020-06-06",
+      "decision_cutoff_at": "2020-06-13",
+      "earliest_execution_at": "2020-06-15",
+      "confirmed_block_count": 1183,
+      "confirmed_non_coinbase_transaction_count": 2150497,
+      "confirmed_fee_satoshis": 24153950024,
+      "latest_sixth_confirmation_at": "2020-06-12T23:56:56Z"
+    },
+    {
+      "week_start": "2020-06-13",
+      "decision_cutoff_at": "2020-06-20",
+      "earliest_execution_at": "2020-06-22",
+      "confirmed_block_count": 1014,
+      "confirmed_non_coinbase_transaction_count": 2135261,
+      "confirmed_fee_satoshis": 26253720881,
+      "latest_sixth_confirmation_at": "2020-06-19T23:42:20Z"
+    },
+    {
+      "week_start": "2020-06-20",
+      "decision_cutoff_at": "2020-06-27",
+      "earliest_execution_at": "2020-06-29",
+      "confirmed_block_count": 1022,
+      "confirmed_non_coinbase_transaction_count": 2143145,
+      "confirmed_fee_satoshis": 25240784544,
+      "latest_sixth_confirmation_at": "2020-06-26T23:57:53Z"
+    },
+    {
+      "week_start": "2020-06-27",
+      "decision_cutoff_at": "2020-07-04",
+      "earliest_execution_at": "2020-07-06",
+      "confirmed_block_count": 1063,
+      "confirmed_non_coinbase_transaction_count": 2201404,
+      "confirmed_fee_satoshis": 29164429801,
+      "latest_sixth_confirmation_at": "2020-07-03T23:48:50Z"
+    },
+    {
+      "week_start": "2020-07-04",
+      "decision_cutoff_at": "2020-07-11",
+      "earliest_execution_at": "2020-07-13",
+      "confirmed_block_count": 1105,
+      "confirmed_non_coinbase_transaction_count": 2291346,
+      "confirmed_fee_satoshis": 28463794309,
+      "latest_sixth_confirmation_at": "2020-07-10T23:54:23Z"
+    },
+    {
+      "week_start": "2020-07-11",
+      "decision_cutoff_at": "2020-07-18",
+      "earliest_execution_at": "2020-07-20",
+      "confirmed_block_count": 985,
+      "confirmed_non_coinbase_transaction_count": 2196829,
+      "confirmed_fee_satoshis": 37659658010,
+      "latest_sixth_confirmation_at": "2020-07-17T23:58:49Z"
+    },
+    {
+      "week_start": "2020-07-18",
+      "decision_cutoff_at": "2020-07-25",
+      "earliest_execution_at": "2020-07-27",
+      "confirmed_block_count": 962,
+      "confirmed_non_coinbase_transaction_count": 2272357,
+      "confirmed_fee_satoshis": 70344574980,
+      "latest_sixth_confirmation_at": "2020-07-24T23:57:16Z"
+    },
+    {
+      "week_start": "2020-07-25",
+      "decision_cutoff_at": "2020-08-01",
+      "earliest_execution_at": "2020-08-03",
+      "confirmed_block_count": 1024,
+      "confirmed_non_coinbase_transaction_count": 2292312,
+      "confirmed_fee_satoshis": 99771451130,
+      "latest_sixth_confirmation_at": "2020-07-31T23:45:55Z"
+    },
+    {
+      "week_start": "2020-08-01",
+      "decision_cutoff_at": "2020-08-08",
+      "earliest_execution_at": "2020-08-10",
+      "confirmed_block_count": 1016,
+      "confirmed_non_coinbase_transaction_count": 2206298,
+      "confirmed_fee_satoshis": 93979634823,
+      "latest_sixth_confirmation_at": "2020-08-07T23:51:50Z"
+    },
+    {
+      "week_start": "2020-08-08",
+      "decision_cutoff_at": "2020-08-15",
+      "earliest_execution_at": "2020-08-17",
+      "confirmed_block_count": 1054,
+      "confirmed_non_coinbase_transaction_count": 2235851,
+      "confirmed_fee_satoshis": 76533192351,
+      "latest_sixth_confirmation_at": "2020-08-14T23:54:39Z"
+    },
+    {
+      "week_start": "2020-08-15",
+      "decision_cutoff_at": "2020-08-22",
+      "earliest_execution_at": "2020-08-24",
+      "confirmed_block_count": 1006,
+      "confirmed_non_coinbase_transaction_count": 2206724,
+      "confirmed_fee_satoshis": 77758004149,
+      "latest_sixth_confirmation_at": "2020-08-21T23:32:28Z"
+    },
+    {
+      "week_start": "2020-08-22",
+      "decision_cutoff_at": "2020-08-29",
+      "earliest_execution_at": "2020-08-31",
+      "confirmed_block_count": 998,
+      "confirmed_non_coinbase_transaction_count": 2229024,
+      "confirmed_fee_satoshis": 65340359798,
+      "latest_sixth_confirmation_at": "2020-08-28T23:31:25Z"
+    },
+    {
+      "week_start": "2020-08-29",
+      "decision_cutoff_at": "2020-09-05",
+      "earliest_execution_at": "2020-09-07",
+      "confirmed_block_count": 979,
+      "confirmed_non_coinbase_transaction_count": 2151853,
+      "confirmed_fee_satoshis": 75689054207,
+      "latest_sixth_confirmation_at": "2020-09-04T23:55:53Z"
+    },
+    {
+      "week_start": "2020-09-05",
+      "decision_cutoff_at": "2020-09-12",
+      "earliest_execution_at": "2020-09-14",
+      "confirmed_block_count": 1060,
+      "confirmed_non_coinbase_transaction_count": 2201957,
+      "confirmed_fee_satoshis": 66280848167,
+      "latest_sixth_confirmation_at": "2020-09-11T23:49:35Z"
+    },
+    {
+      "week_start": "2020-09-12",
+      "decision_cutoff_at": "2020-09-19",
+      "earliest_execution_at": "2020-09-21",
+      "confirmed_block_count": 1156,
+      "confirmed_non_coinbase_transaction_count": 2248804,
+      "confirmed_fee_satoshis": 47643636359,
+      "latest_sixth_confirmation_at": "2020-09-18T23:45:26Z"
+    },
+    {
+      "week_start": "2020-09-19",
+      "decision_cutoff_at": "2020-09-26",
+      "earliest_execution_at": "2020-09-28",
+      "confirmed_block_count": 1007,
+      "confirmed_non_coinbase_transaction_count": 2172891,
+      "confirmed_fee_satoshis": 47003512693,
+      "latest_sixth_confirmation_at": "2020-09-25T23:55:47Z"
+    },
+    {
+      "week_start": "2020-09-26",
+      "decision_cutoff_at": "2020-10-03",
+      "earliest_execution_at": "2020-10-05",
+      "confirmed_block_count": 982,
+      "confirmed_non_coinbase_transaction_count": 2134320,
+      "confirmed_fee_satoshis": 53288065850,
+      "latest_sixth_confirmation_at": "2020-10-02T23:36:08Z"
+    },
+    {
+      "week_start": "2020-10-03",
+      "decision_cutoff_at": "2020-10-10",
+      "earliest_execution_at": "2020-10-12",
+      "confirmed_block_count": 1028,
+      "confirmed_non_coinbase_transaction_count": 2218064,
+      "confirmed_fee_satoshis": 66240637350,
+      "latest_sixth_confirmation_at": "2020-10-09T23:59:12Z"
+    },
+    {
+      "week_start": "2020-10-10",
+      "decision_cutoff_at": "2020-10-17",
+      "earliest_execution_at": "2020-10-19",
+      "confirmed_block_count": 1047,
+      "confirmed_non_coinbase_transaction_count": 2174133,
+      "confirmed_fee_satoshis": 49065602032,
+      "latest_sixth_confirmation_at": "2020-10-16T23:49:50Z"
+    },
+    {
+      "week_start": "2020-10-17",
+      "decision_cutoff_at": "2020-10-24",
+      "earliest_execution_at": "2020-10-26",
+      "confirmed_block_count": 938,
+      "confirmed_non_coinbase_transaction_count": 2100916,
+      "confirmed_fee_satoshis": 62278809120,
+      "latest_sixth_confirmation_at": "2020-10-23T23:59:37Z"
+    },
+    {
+      "week_start": "2020-10-24",
+      "decision_cutoff_at": "2020-10-31",
+      "earliest_execution_at": "2020-11-02",
+      "confirmed_block_count": 791,
+      "confirmed_non_coinbase_transaction_count": 1843245,
+      "confirmed_fee_satoshis": 119227291883,
+      "latest_sixth_confirmation_at": "2020-10-30T23:40:59Z"
+    },
+    {
+      "week_start": "2020-10-31",
+      "decision_cutoff_at": "2020-11-07",
+      "earliest_execution_at": "2020-11-09",
+      "confirmed_block_count": 926,
+      "confirmed_non_coinbase_transaction_count": 2074370,
+      "confirmed_fee_satoshis": 163895638025,
+      "latest_sixth_confirmation_at": "2020-11-06T23:51:47Z"
+    },
+    {
+      "week_start": "2020-11-07",
+      "decision_cutoff_at": "2020-11-14",
+      "earliest_execution_at": "2020-11-16",
+      "confirmed_block_count": 1056,
+      "confirmed_non_coinbase_transaction_count": 2076194,
+      "confirmed_fee_satoshis": 83510841877,
+      "latest_sixth_confirmation_at": "2020-11-13T23:52:20Z"
+    },
+    {
+      "week_start": "2020-11-14",
+      "decision_cutoff_at": "2020-11-21",
+      "earliest_execution_at": "2020-11-23",
+      "confirmed_block_count": 1077,
+      "confirmed_non_coinbase_transaction_count": 2194126,
+      "confirmed_fee_satoshis": 54238905412,
+      "latest_sixth_confirmation_at": "2020-11-20T23:59:51Z"
+    },
+    {
+      "week_start": "2020-11-21",
+      "decision_cutoff_at": "2020-11-28",
+      "earliest_execution_at": "2020-11-30",
+      "confirmed_block_count": 1079,
+      "confirmed_non_coinbase_transaction_count": 2207474,
+      "confirmed_fee_satoshis": 50668286367,
+      "latest_sixth_confirmation_at": "2020-11-27T23:42:55Z"
+    },
+    {
+      "week_start": "2020-11-28",
+      "decision_cutoff_at": "2020-12-05",
+      "earliest_execution_at": "2020-12-07",
+      "confirmed_block_count": 995,
+      "confirmed_non_coinbase_transaction_count": 2168556,
+      "confirmed_fee_satoshis": 69566000053,
+      "latest_sixth_confirmation_at": "2020-12-04T23:59:34Z"
+    },
+    {
+      "week_start": "2020-12-05",
+      "decision_cutoff_at": "2020-12-12",
+      "earliest_execution_at": "2020-12-14",
+      "confirmed_block_count": 975,
+      "confirmed_non_coinbase_transaction_count": 2096643,
+      "confirmed_fee_satoshis": 47085920129,
+      "latest_sixth_confirmation_at": "2020-12-11T23:48:54Z"
+    },
+    {
+      "week_start": "2020-12-12",
+      "decision_cutoff_at": "2020-12-19",
+      "earliest_execution_at": "2020-12-21",
+      "confirmed_block_count": 996,
+      "confirmed_non_coinbase_transaction_count": 2190744,
+      "confirmed_fee_satoshis": 65186897253,
+      "latest_sixth_confirmation_at": "2020-12-18T23:45:40Z"
+    },
+    {
+      "week_start": "2020-12-19",
+      "decision_cutoff_at": "2020-12-26",
+      "earliest_execution_at": "2020-12-28",
+      "confirmed_block_count": 1006,
+      "confirmed_non_coinbase_transaction_count": 2119651,
+      "confirmed_fee_satoshis": 80574819175,
+      "latest_sixth_confirmation_at": "2020-12-25T23:51:26Z"
+    },
+    {
+      "week_start": "2020-12-26",
+      "decision_cutoff_at": "2021-01-02",
+      "earliest_execution_at": "2021-01-04",
+      "confirmed_block_count": 1078,
+      "confirmed_non_coinbase_transaction_count": 2155964,
+      "confirmed_fee_satoshis": 63263400840,
+      "latest_sixth_confirmation_at": "2021-01-01T23:58:20Z"
+    },
+    {
+      "week_start": "2021-01-02",
+      "decision_cutoff_at": "2021-01-09",
+      "earliest_execution_at": "2021-01-11",
+      "confirmed_block_count": 1126,
+      "confirmed_non_coinbase_transaction_count": 2530435,
+      "confirmed_fee_satoshis": 76933160518,
+      "latest_sixth_confirmation_at": "2021-01-08T23:52:28Z"
+    },
+    {
+      "week_start": "2021-01-09",
+      "decision_cutoff_at": "2021-01-16",
+      "earliest_execution_at": "2021-01-18",
+      "confirmed_block_count": 1048,
+      "confirmed_non_coinbase_transaction_count": 2313558,
+      "confirmed_fee_satoshis": 92387813464,
+      "latest_sixth_confirmation_at": "2021-01-15T23:28:20Z"
+    },
+    {
+      "week_start": "2021-01-16",
+      "decision_cutoff_at": "2021-01-23",
+      "earliest_execution_at": "2021-01-25",
+      "confirmed_block_count": 979,
+      "confirmed_non_coinbase_transaction_count": 2134103,
+      "confirmed_fee_satoshis": 66008177520,
+      "latest_sixth_confirmation_at": "2021-01-22T22:56:20Z"
+    },
+    {
+      "week_start": "2021-01-23",
+      "decision_cutoff_at": "2021-01-30",
+      "earliest_execution_at": "2021-02-01",
+      "confirmed_block_count": 1029,
+      "confirmed_non_coinbase_transaction_count": 2180983,
+      "confirmed_fee_satoshis": 64543659428,
+      "latest_sixth_confirmation_at": "2021-01-29T23:58:20Z"
+    },
+    {
+      "week_start": "2021-01-30",
+      "decision_cutoff_at": "2021-02-06",
+      "earliest_execution_at": "2021-02-08",
+      "confirmed_block_count": 1025,
+      "confirmed_non_coinbase_transaction_count": 2307057,
+      "confirmed_fee_satoshis": 95675761415,
+      "latest_sixth_confirmation_at": "2021-02-05T23:40:45Z"
+    },
+    {
+      "week_start": "2021-02-06",
+      "decision_cutoff_at": "2021-02-13",
+      "earliest_execution_at": "2021-02-15",
+      "confirmed_block_count": 1028,
+      "confirmed_non_coinbase_transaction_count": 2287384,
+      "confirmed_fee_satoshis": 108061467263,
+      "latest_sixth_confirmation_at": "2021-02-12T23:54:17Z"
+    },
+    {
+      "week_start": "2021-02-13",
+      "decision_cutoff_at": "2021-02-20",
+      "earliest_execution_at": "2021-02-22",
+      "confirmed_block_count": 1000,
+      "confirmed_non_coinbase_transaction_count": 2200482,
+      "confirmed_fee_satoshis": 93468940057,
+      "latest_sixth_confirmation_at": "2021-02-19T23:55:53Z"
+    },
+    {
+      "week_start": "2021-02-20",
+      "decision_cutoff_at": "2021-02-27",
+      "earliest_execution_at": "2021-03-01",
+      "confirmed_block_count": 995,
+      "confirmed_non_coinbase_transaction_count": 2138351,
+      "confirmed_fee_satoshis": 106274521733,
+      "latest_sixth_confirmation_at": "2021-02-26T23:55:57Z"
+    },
+    {
+      "week_start": "2021-02-27",
+      "decision_cutoff_at": "2021-03-06",
+      "earliest_execution_at": "2021-03-08",
+      "confirmed_block_count": 984,
+      "confirmed_non_coinbase_transaction_count": 2117182,
+      "confirmed_fee_satoshis": 79719132984,
+      "latest_sixth_confirmation_at": "2021-03-05T23:57:25Z"
+    },
+    {
+      "week_start": "2021-03-06",
+      "decision_cutoff_at": "2021-03-13",
+      "earliest_execution_at": "2021-03-15",
+      "confirmed_block_count": 1018,
+      "confirmed_non_coinbase_transaction_count": 2085533,
+      "confirmed_fee_satoshis": 67888672541,
+      "latest_sixth_confirmation_at": "2021-03-12T23:22:38Z"
+    },
+    {
+      "week_start": "2021-03-13",
+      "decision_cutoff_at": "2021-03-20",
+      "earliest_execution_at": "2021-03-22",
+      "confirmed_block_count": 1027,
+      "confirmed_non_coinbase_transaction_count": 2128718,
+      "confirmed_fee_satoshis": 78393101425,
+      "latest_sixth_confirmation_at": "2021-03-19T23:59:26Z"
+    },
+    {
+      "week_start": "2021-03-20",
+      "decision_cutoff_at": "2021-03-27",
+      "earliest_execution_at": "2021-03-29",
+      "confirmed_block_count": 1058,
+      "confirmed_non_coinbase_transaction_count": 2035923,
+      "confirmed_fee_satoshis": 55638627843,
+      "latest_sixth_confirmation_at": "2021-03-26T23:53:49Z"
+    },
+    {
+      "week_start": "2021-03-27",
+      "decision_cutoff_at": "2021-04-03",
+      "earliest_execution_at": "2021-04-05",
+      "confirmed_block_count": 1051,
+      "confirmed_non_coinbase_transaction_count": 2098177,
+      "confirmed_fee_satoshis": 57958373297,
+      "latest_sixth_confirmation_at": "2021-04-02T23:50:22Z"
+    },
+    {
+      "week_start": "2021-04-03",
+      "decision_cutoff_at": "2021-04-10",
+      "earliest_execution_at": "2021-04-12",
+      "confirmed_block_count": 1014,
+      "confirmed_non_coinbase_transaction_count": 2037658,
+      "confirmed_fee_satoshis": 65820764249,
+      "latest_sixth_confirmation_at": "2021-04-09T23:54:15Z"
+    },
+    {
+      "week_start": "2021-04-10",
+      "decision_cutoff_at": "2021-04-17",
+      "earliest_execution_at": "2021-04-19",
+      "confirmed_block_count": 992,
+      "confirmed_non_coinbase_transaction_count": 2016180,
+      "confirmed_fee_satoshis": 76761594983,
+      "latest_sixth_confirmation_at": "2021-04-16T23:57:57Z"
+    },
+    {
+      "week_start": "2021-04-17",
+      "decision_cutoff_at": "2021-04-24",
+      "earliest_execution_at": "2021-04-26",
+      "confirmed_block_count": 813,
+      "confirmed_non_coinbase_transaction_count": 1739363,
+      "confirmed_fee_satoshis": 171265311586,
+      "latest_sixth_confirmation_at": "2021-04-23T23:59:43Z"
+    },
+    {
+      "week_start": "2021-04-24",
+      "decision_cutoff_at": "2021-05-01",
+      "earliest_execution_at": "2021-05-03",
+      "confirmed_block_count": 945,
+      "confirmed_non_coinbase_transaction_count": 1881045,
+      "confirmed_fee_satoshis": 103394298636,
+      "latest_sixth_confirmation_at": "2021-04-30T23:43:17Z"
+    },
+    {
+      "week_start": "2021-05-01",
+      "decision_cutoff_at": "2021-05-08",
+      "earliest_execution_at": "2021-05-10",
+      "confirmed_block_count": 1175,
+      "confirmed_non_coinbase_transaction_count": 2008623,
+      "confirmed_fee_satoshis": 70966998156,
+      "latest_sixth_confirmation_at": "2021-05-07T23:50:35Z"
+    },
+    {
+      "week_start": "2021-05-08",
+      "decision_cutoff_at": "2021-05-15",
+      "earliest_execution_at": "2021-05-17",
+      "confirmed_block_count": 1170,
+      "confirmed_non_coinbase_transaction_count": 1971229,
+      "confirmed_fee_satoshis": 56042952090,
+      "latest_sixth_confirmation_at": "2021-05-14T23:25:55Z"
+    },
+    {
+      "week_start": "2021-05-15",
+      "decision_cutoff_at": "2021-05-22",
+      "earliest_execution_at": "2021-05-24",
+      "confirmed_block_count": 817,
+      "confirmed_non_coinbase_transaction_count": 1626677,
+      "confirmed_fee_satoshis": 63710928294,
+      "latest_sixth_confirmation_at": "2021-05-21T23:34:07Z"
+    },
+    {
+      "week_start": "2021-05-22",
+      "decision_cutoff_at": "2021-05-29",
+      "earliest_execution_at": "2021-05-31",
+      "confirmed_block_count": 836,
+      "confirmed_non_coinbase_transaction_count": 1537387,
+      "confirmed_fee_satoshis": 57606880172,
+      "latest_sixth_confirmation_at": "2021-05-28T23:41:51Z"
+    },
+    {
+      "week_start": "2021-05-29",
+      "decision_cutoff_at": "2021-06-05",
+      "earliest_execution_at": "2021-06-07",
+      "confirmed_block_count": 981,
+      "confirmed_non_coinbase_transaction_count": 1572623,
+      "confirmed_fee_satoshis": 31888741099,
+      "latest_sixth_confirmation_at": "2021-06-04T23:59:05Z"
+    },
+    {
+      "week_start": "2021-06-05",
+      "decision_cutoff_at": "2021-06-12",
+      "earliest_execution_at": "2021-06-14",
+      "confirmed_block_count": 906,
+      "confirmed_non_coinbase_transaction_count": 1531076,
+      "confirmed_fee_satoshis": 23990401745,
+      "latest_sixth_confirmation_at": "2021-06-11T23:50:12Z"
+    },
+    {
+      "week_start": "2021-06-12",
+      "decision_cutoff_at": "2021-06-19",
+      "earliest_execution_at": "2021-06-21",
+      "confirmed_block_count": 901,
+      "confirmed_non_coinbase_transaction_count": 1593967,
+      "confirmed_fee_satoshis": 23489775097,
+      "latest_sixth_confirmation_at": "2021-06-18T23:14:59Z"
+    },
+    {
+      "week_start": "2021-06-19",
+      "decision_cutoff_at": "2021-06-26",
+      "earliest_execution_at": "2021-06-28",
+      "confirmed_block_count": 714,
+      "confirmed_non_coinbase_transaction_count": 1431414,
+      "confirmed_fee_satoshis": 28211630373,
+      "latest_sixth_confirmation_at": "2021-06-25T23:07:25Z"
+    },
+    {
+      "week_start": "2021-06-26",
+      "decision_cutoff_at": "2021-07-03",
+      "earliest_execution_at": "2021-07-05",
+      "confirmed_block_count": 593,
+      "confirmed_non_coinbase_transaction_count": 1354191,
+      "confirmed_fee_satoshis": 35359476144,
+      "latest_sixth_confirmation_at": "2021-07-02T23:48:47Z"
+    },
+    {
+      "week_start": "2021-07-03",
+      "decision_cutoff_at": "2021-07-10",
+      "earliest_execution_at": "2021-07-12",
+      "confirmed_block_count": 903,
+      "confirmed_non_coinbase_transaction_count": 1533647,
+      "confirmed_fee_satoshis": 29066527581,
+      "latest_sixth_confirmation_at": "2021-07-09T23:55:06Z"
+    },
+    {
+      "week_start": "2021-07-10",
+      "decision_cutoff_at": "2021-07-17",
+      "earliest_execution_at": "2021-07-19",
+      "confirmed_block_count": 990,
+      "confirmed_non_coinbase_transaction_count": 1486251,
+      "confirmed_fee_satoshis": 16295832370,
+      "latest_sixth_confirmation_at": "2021-07-16T23:48:40Z"
+    },
+    {
+      "week_start": "2021-07-17",
+      "decision_cutoff_at": "2021-07-24",
+      "earliest_execution_at": "2021-07-26",
+      "confirmed_block_count": 1006,
+      "confirmed_non_coinbase_transaction_count": 1482011,
+      "confirmed_fee_satoshis": 10862506464,
+      "latest_sixth_confirmation_at": "2021-07-23T23:57:50Z"
+    },
+    {
+      "week_start": "2021-07-24",
+      "decision_cutoff_at": "2021-07-31",
+      "earliest_execution_at": "2021-08-02",
+      "confirmed_block_count": 1104,
+      "confirmed_non_coinbase_transaction_count": 1644926,
+      "confirmed_fee_satoshis": 10122030317,
+      "latest_sixth_confirmation_at": "2021-07-30T23:57:14Z"
+    },
+    {
+      "week_start": "2021-07-31",
+      "decision_cutoff_at": "2021-08-07",
+      "earliest_execution_at": "2021-08-09",
+      "confirmed_block_count": 1073,
+      "confirmed_non_coinbase_transaction_count": 1617543,
+      "confirmed_fee_satoshis": 9108173804,
+      "latest_sixth_confirmation_at": "2021-08-06T23:56:47Z"
+    },
+    {
+      "week_start": "2021-08-07",
+      "decision_cutoff_at": "2021-08-14",
+      "earliest_execution_at": "2021-08-16",
+      "confirmed_block_count": 1076,
+      "confirmed_non_coinbase_transaction_count": 1682241,
+      "confirmed_fee_satoshis": 9713382551,
+      "latest_sixth_confirmation_at": "2021-08-13T23:54:04Z"
+    },
+    {
+      "week_start": "2021-08-14",
+      "decision_cutoff_at": "2021-08-21",
+      "earliest_execution_at": "2021-08-23",
+      "confirmed_block_count": 1122,
+      "confirmed_non_coinbase_transaction_count": 1672837,
+      "confirmed_fee_satoshis": 9614925397,
+      "latest_sixth_confirmation_at": "2021-08-20T23:58:52Z"
+    },
+    {
+      "week_start": "2021-08-21",
+      "decision_cutoff_at": "2021-08-28",
+      "earliest_execution_at": "2021-08-30",
+      "confirmed_block_count": 1131,
+      "confirmed_non_coinbase_transaction_count": 1714822,
+      "confirmed_fee_satoshis": 8843808751,
+      "latest_sixth_confirmation_at": "2021-08-27T23:59:38Z"
+    },
+    {
+      "week_start": "2021-08-28",
+      "decision_cutoff_at": "2021-09-04",
+      "earliest_execution_at": "2021-09-06",
+      "confirmed_block_count": 1004,
+      "confirmed_non_coinbase_transaction_count": 1773114,
+      "confirmed_fee_satoshis": 10114259172,
+      "latest_sixth_confirmation_at": "2021-09-03T23:58:06Z"
+    },
+    {
+      "week_start": "2021-09-04",
+      "decision_cutoff_at": "2021-09-11",
+      "earliest_execution_at": "2021-09-13",
+      "confirmed_block_count": 1053,
+      "confirmed_non_coinbase_transaction_count": 1769010,
+      "confirmed_fee_satoshis": 10051801555,
+      "latest_sixth_confirmation_at": "2021-09-10T23:01:25Z"
+    },
+    {
+      "week_start": "2021-09-11",
+      "decision_cutoff_at": "2021-09-18",
+      "earliest_execution_at": "2021-09-20",
+      "confirmed_block_count": 1041,
+      "confirmed_non_coinbase_transaction_count": 1737051,
+      "confirmed_fee_satoshis": 9802662837,
+      "latest_sixth_confirmation_at": "2021-09-17T23:58:00Z"
+    },
+    {
+      "week_start": "2021-09-18",
+      "decision_cutoff_at": "2021-09-25",
+      "earliest_execution_at": "2021-09-27",
+      "confirmed_block_count": 1043,
+      "confirmed_non_coinbase_transaction_count": 1758363,
+      "confirmed_fee_satoshis": 9217767212,
+      "latest_sixth_confirmation_at": "2021-09-24T23:59:13Z"
+    },
+    {
+      "week_start": "2021-09-25",
+      "decision_cutoff_at": "2021-10-02",
+      "earliest_execution_at": "2021-10-04",
+      "confirmed_block_count": 1025,
+      "confirmed_non_coinbase_transaction_count": 1723444,
+      "confirmed_fee_satoshis": 8471990242,
+      "latest_sixth_confirmation_at": "2021-10-01T23:52:45Z"
+    },
+    {
+      "week_start": "2021-10-02",
+      "decision_cutoff_at": "2021-10-09",
+      "earliest_execution_at": "2021-10-11",
+      "confirmed_block_count": 1044,
+      "confirmed_non_coinbase_transaction_count": 1917954,
+      "confirmed_fee_satoshis": 11467896268,
+      "latest_sixth_confirmation_at": "2021-10-08T23:52:30Z"
+    },
+    {
+      "week_start": "2021-10-09",
+      "decision_cutoff_at": "2021-10-16",
+      "earliest_execution_at": "2021-10-18",
+      "confirmed_block_count": 1030,
+      "confirmed_non_coinbase_transaction_count": 1866700,
+      "confirmed_fee_satoshis": 11959856719,
+      "latest_sixth_confirmation_at": "2021-10-15T23:45:32Z"
+    },
+    {
+      "week_start": "2021-10-16",
+      "decision_cutoff_at": "2021-10-23",
+      "earliest_execution_at": "2021-10-25",
+      "confirmed_block_count": 1045,
+      "confirmed_non_coinbase_transaction_count": 1976568,
+      "confirmed_fee_satoshis": 11272388292,
+      "latest_sixth_confirmation_at": "2021-10-22T23:57:08Z"
+    },
+    {
+      "week_start": "2021-10-23",
+      "decision_cutoff_at": "2021-10-30",
+      "earliest_execution_at": "2021-11-01",
+      "confirmed_block_count": 1105,
+      "confirmed_non_coinbase_transaction_count": 1900542,
+      "confirmed_fee_satoshis": 8875116357,
+      "latest_sixth_confirmation_at": "2021-10-29T23:41:11Z"
+    },
+    {
+      "week_start": "2021-10-30",
+      "decision_cutoff_at": "2021-11-06",
+      "earliest_execution_at": "2021-11-08",
+      "confirmed_block_count": 1053,
+      "confirmed_non_coinbase_transaction_count": 1913241,
+      "confirmed_fee_satoshis": 10159631915,
+      "latest_sixth_confirmation_at": "2021-11-05T23:50:43Z"
+    },
+    {
+      "week_start": "2021-11-06",
+      "decision_cutoff_at": "2021-11-13",
+      "earliest_execution_at": "2021-11-15",
+      "confirmed_block_count": 1037,
+      "confirmed_non_coinbase_transaction_count": 1951113,
+      "confirmed_fee_satoshis": 10826571585,
+      "latest_sixth_confirmation_at": "2021-11-12T23:36:33Z"
+    },
+    {
+      "week_start": "2021-11-13",
+      "decision_cutoff_at": "2021-11-20",
+      "earliest_execution_at": "2021-11-22",
+      "confirmed_block_count": 1035,
+      "confirmed_non_coinbase_transaction_count": 1905164,
+      "confirmed_fee_satoshis": 8284839387,
+      "latest_sixth_confirmation_at": "2021-11-19T23:55:40Z"
+    },
+    {
+      "week_start": "2021-11-20",
+      "decision_cutoff_at": "2021-11-27",
+      "earliest_execution_at": "2021-11-29",
+      "confirmed_block_count": 963,
+      "confirmed_non_coinbase_transaction_count": 1894961,
+      "confirmed_fee_satoshis": 8946286273,
+      "latest_sixth_confirmation_at": "2021-11-26T23:59:22Z"
+    },
+    {
+      "week_start": "2021-11-27",
+      "decision_cutoff_at": "2021-12-04",
+      "earliest_execution_at": "2021-12-06",
+      "confirmed_block_count": 1013,
+      "confirmed_non_coinbase_transaction_count": 1929091,
+      "confirmed_fee_satoshis": 9186862808,
+      "latest_sixth_confirmation_at": "2021-12-03T23:33:49Z"
+    },
+    {
+      "week_start": "2021-12-04",
+      "decision_cutoff_at": "2021-12-11",
+      "earliest_execution_at": "2021-12-13",
+      "confirmed_block_count": 1128,
+      "confirmed_non_coinbase_transaction_count": 1851615,
+      "confirmed_fee_satoshis": 9731957709,
+      "latest_sixth_confirmation_at": "2021-12-10T23:54:26Z"
+    },
+    {
+      "week_start": "2021-12-11",
+      "decision_cutoff_at": "2021-12-18",
+      "earliest_execution_at": "2021-12-20",
+      "confirmed_block_count": 979,
+      "confirmed_non_coinbase_transaction_count": 1782128,
+      "confirmed_fee_satoshis": 7348559872,
+      "latest_sixth_confirmation_at": "2021-12-17T23:37:41Z"
+    },
+    {
+      "week_start": "2021-12-18",
+      "decision_cutoff_at": "2021-12-25",
+      "earliest_execution_at": "2021-12-27",
+      "confirmed_block_count": 1027,
+      "confirmed_non_coinbase_transaction_count": 1850268,
+      "confirmed_fee_satoshis": 7223983250,
+      "latest_sixth_confirmation_at": "2021-12-24T23:50:25Z"
+    },
+    {
+      "week_start": "2021-12-25",
+      "decision_cutoff_at": "2022-01-01",
+      "earliest_execution_at": "2022-01-03",
+      "confirmed_block_count": 970,
+      "confirmed_non_coinbase_transaction_count": 1705938,
+      "confirmed_fee_satoshis": 9899114184,
+      "latest_sixth_confirmation_at": "2021-12-31T23:59:06Z"
+    },
+    {
+      "week_start": "2022-01-01",
+      "decision_cutoff_at": "2022-01-08",
+      "earliest_execution_at": "2022-01-10",
+      "confirmed_block_count": 1047,
+      "confirmed_non_coinbase_transaction_count": 1672314,
+      "confirmed_fee_satoshis": 8833674321,
+      "latest_sixth_confirmation_at": "2022-01-07T23:50:33Z"
+    },
+    {
+      "week_start": "2022-01-08",
+      "decision_cutoff_at": "2022-01-15",
+      "earliest_execution_at": "2022-01-17",
+      "confirmed_block_count": 1056,
+      "confirmed_non_coinbase_transaction_count": 1786470,
+      "confirmed_fee_satoshis": 7224244762,
+      "latest_sixth_confirmation_at": "2022-01-14T23:56:44Z"
+    },
+    {
+      "week_start": "2022-01-15",
+      "decision_cutoff_at": "2022-01-22",
+      "earliest_execution_at": "2022-01-24",
+      "confirmed_block_count": 1108,
+      "confirmed_non_coinbase_transaction_count": 1773319,
+      "confirmed_fee_satoshis": 6242660935,
+      "latest_sixth_confirmation_at": "2022-01-21T23:58:00Z"
+    },
+    {
+      "week_start": "2022-01-22",
+      "decision_cutoff_at": "2022-01-29",
+      "earliest_execution_at": "2022-01-31",
+      "confirmed_block_count": 986,
+      "confirmed_non_coinbase_transaction_count": 1759980,
+      "confirmed_fee_satoshis": 7695975862,
+      "latest_sixth_confirmation_at": "2022-01-28T23:48:27Z"
+    },
+    {
+      "week_start": "2022-01-29",
+      "decision_cutoff_at": "2022-02-05",
+      "earliest_execution_at": "2022-02-07",
+      "confirmed_block_count": 1016,
+      "confirmed_non_coinbase_transaction_count": 1750385,
+      "confirmed_fee_satoshis": 8658885361,
+      "latest_sixth_confirmation_at": "2022-02-04T23:54:58Z"
+    },
+    {
+      "week_start": "2022-02-05",
+      "decision_cutoff_at": "2022-02-12",
+      "earliest_execution_at": "2022-02-14",
+      "confirmed_block_count": 988,
+      "confirmed_non_coinbase_transaction_count": 1787489,
+      "confirmed_fee_satoshis": 10376521046,
+      "latest_sixth_confirmation_at": "2022-02-11T23:57:14Z"
+    },
+    {
+      "week_start": "2022-02-12",
+      "decision_cutoff_at": "2022-02-19",
+      "earliest_execution_at": "2022-02-21",
+      "confirmed_block_count": 1114,
+      "confirmed_non_coinbase_transaction_count": 1726138,
+      "confirmed_fee_satoshis": 7372295359,
+      "latest_sixth_confirmation_at": "2022-02-18T23:55:34Z"
+    },
+    {
+      "week_start": "2022-02-19",
+      "decision_cutoff_at": "2022-02-26",
+      "earliest_execution_at": "2022-02-28",
+      "confirmed_block_count": 978,
+      "confirmed_non_coinbase_transaction_count": 1668799,
+      "confirmed_fee_satoshis": 6067205340,
+      "latest_sixth_confirmation_at": "2022-02-25T23:57:15Z"
+    },
+    {
+      "week_start": "2022-02-26",
+      "decision_cutoff_at": "2022-03-05",
+      "earliest_execution_at": "2022-03-07",
+      "confirmed_block_count": 994,
+      "confirmed_non_coinbase_transaction_count": 1788416,
+      "confirmed_fee_satoshis": 10683480852,
+      "latest_sixth_confirmation_at": "2022-03-04T23:53:03Z"
+    },
+    {
+      "week_start": "2022-03-05",
+      "decision_cutoff_at": "2022-03-12",
+      "earliest_execution_at": "2022-03-14",
+      "confirmed_block_count": 965,
+      "confirmed_non_coinbase_transaction_count": 1719067,
+      "confirmed_fee_satoshis": 7607410576,
+      "latest_sixth_confirmation_at": "2022-03-11T23:56:04Z"
+    },
+    {
+      "week_start": "2022-03-12",
+      "decision_cutoff_at": "2022-03-19",
+      "earliest_execution_at": "2022-03-21",
+      "confirmed_block_count": 1050,
+      "confirmed_non_coinbase_transaction_count": 1759318,
+      "confirmed_fee_satoshis": 6564595029,
+      "latest_sixth_confirmation_at": "2022-03-18T23:53:39Z"
+    },
+    {
+      "week_start": "2022-03-19",
+      "decision_cutoff_at": "2022-03-26",
+      "earliest_execution_at": "2022-03-28",
+      "confirmed_block_count": 1049,
+      "confirmed_non_coinbase_transaction_count": 1786697,
+      "confirmed_fee_satoshis": 6972578126,
+      "latest_sixth_confirmation_at": "2022-03-25T23:53:08Z"
+    },
+    {
+      "week_start": "2022-03-26",
+      "decision_cutoff_at": "2022-04-02",
+      "earliest_execution_at": "2022-04-04",
+      "confirmed_block_count": 1010,
+      "confirmed_non_coinbase_transaction_count": 1849996,
+      "confirmed_fee_satoshis": 8277506079,
+      "latest_sixth_confirmation_at": "2022-04-01T23:51:10Z"
+    },
+    {
+      "week_start": "2022-04-02",
+      "decision_cutoff_at": "2022-04-09",
+      "earliest_execution_at": "2022-04-11",
+      "confirmed_block_count": 993,
+      "confirmed_non_coinbase_transaction_count": 1826704,
+      "confirmed_fee_satoshis": 7809169701,
+      "latest_sixth_confirmation_at": "2022-04-08T23:54:00Z"
+    },
+    {
+      "week_start": "2022-04-09",
+      "decision_cutoff_at": "2022-04-16",
+      "earliest_execution_at": "2022-04-18",
+      "confirmed_block_count": 1013,
+      "confirmed_non_coinbase_transaction_count": 1792734,
+      "confirmed_fee_satoshis": 6774058249,
+      "latest_sixth_confirmation_at": "2022-04-15T23:52:08Z"
+    },
+    {
+      "week_start": "2022-04-16",
+      "decision_cutoff_at": "2022-04-23",
+      "earliest_execution_at": "2022-04-25",
+      "confirmed_block_count": 1015,
+      "confirmed_non_coinbase_transaction_count": 1764693,
+      "confirmed_fee_satoshis": 5991560980,
+      "latest_sixth_confirmation_at": "2022-04-22T23:58:57Z"
+    },
+    {
+      "week_start": "2022-04-23",
+      "decision_cutoff_at": "2022-04-30",
+      "earliest_execution_at": "2022-05-02",
+      "confirmed_block_count": 1082,
+      "confirmed_non_coinbase_transaction_count": 1839635,
+      "confirmed_fee_satoshis": 7427442941,
+      "latest_sixth_confirmation_at": "2022-04-29T23:44:14Z"
+    },
+    {
+      "week_start": "2022-04-30",
+      "decision_cutoff_at": "2022-05-07",
+      "earliest_execution_at": "2022-05-09",
+      "confirmed_block_count": 1066,
+      "confirmed_non_coinbase_transaction_count": 1871734,
+      "confirmed_fee_satoshis": 9017204850,
+      "latest_sixth_confirmation_at": "2022-05-06T23:59:15Z"
+    },
+    {
+      "week_start": "2022-05-07",
+      "decision_cutoff_at": "2022-05-14",
+      "earliest_execution_at": "2022-05-16",
+      "confirmed_block_count": 1032,
+      "confirmed_non_coinbase_transaction_count": 1822743,
+      "confirmed_fee_satoshis": 14499225617,
+      "latest_sixth_confirmation_at": "2022-05-13T23:54:31Z"
+    },
+    {
+      "week_start": "2022-05-14",
+      "decision_cutoff_at": "2022-05-21",
+      "earliest_execution_at": "2022-05-23",
+      "confirmed_block_count": 952,
+      "confirmed_non_coinbase_transaction_count": 1856153,
+      "confirmed_fee_satoshis": 13214561052,
+      "latest_sixth_confirmation_at": "2022-05-20T23:55:27Z"
+    },
+    {
+      "week_start": "2022-05-21",
+      "decision_cutoff_at": "2022-05-28",
+      "earliest_execution_at": "2022-05-30",
+      "confirmed_block_count": 954,
+      "confirmed_non_coinbase_transaction_count": 1739868,
+      "confirmed_fee_satoshis": 10946079896,
+      "latest_sixth_confirmation_at": "2022-05-27T23:56:52Z"
+    },
+    {
+      "week_start": "2022-05-28",
+      "decision_cutoff_at": "2022-06-04",
+      "earliest_execution_at": "2022-06-06",
+      "confirmed_block_count": 995,
+      "confirmed_non_coinbase_transaction_count": 1772338,
+      "confirmed_fee_satoshis": 10473703009,
+      "latest_sixth_confirmation_at": "2022-06-03T23:59:34Z"
+    },
+    {
+      "week_start": "2022-06-04",
+      "decision_cutoff_at": "2022-06-11",
+      "earliest_execution_at": "2022-06-13",
+      "confirmed_block_count": 1062,
+      "confirmed_non_coinbase_transaction_count": 1722085,
+      "confirmed_fee_satoshis": 8032233045,
+      "latest_sixth_confirmation_at": "2022-06-10T23:55:29Z"
+    },
+    {
+      "week_start": "2022-06-11",
+      "decision_cutoff_at": "2022-06-18",
+      "earliest_execution_at": "2022-06-20",
+      "confirmed_block_count": 946,
+      "confirmed_non_coinbase_transaction_count": 1783016,
+      "confirmed_fee_satoshis": 14504859076,
+      "latest_sixth_confirmation_at": "2022-06-17T23:38:07Z"
+    },
+    {
+      "week_start": "2022-06-18",
+      "decision_cutoff_at": "2022-06-25",
+      "earliest_execution_at": "2022-06-27",
+      "confirmed_block_count": 975,
+      "confirmed_non_coinbase_transaction_count": 1687850,
+      "confirmed_fee_satoshis": 11229567244,
+      "latest_sixth_confirmation_at": "2022-06-24T23:56:38Z"
+    },
+    {
+      "week_start": "2022-06-25",
+      "decision_cutoff_at": "2022-07-02",
+      "earliest_execution_at": "2022-07-04",
+      "confirmed_block_count": 1021,
+      "confirmed_non_coinbase_transaction_count": 1724010,
+      "confirmed_fee_satoshis": 10134604415,
+      "latest_sixth_confirmation_at": "2022-07-01T23:33:26Z"
+    },
+    {
+      "week_start": "2022-07-02",
+      "decision_cutoff_at": "2022-07-09",
+      "earliest_execution_at": "2022-07-11",
+      "confirmed_block_count": 980,
+      "confirmed_non_coinbase_transaction_count": 1730933,
+      "confirmed_fee_satoshis": 12752166643,
+      "latest_sixth_confirmation_at": "2022-07-08T23:38:09Z"
+    },
+    {
+      "week_start": "2022-07-09",
+      "decision_cutoff_at": "2022-07-16",
+      "earliest_execution_at": "2022-07-18",
+      "confirmed_block_count": 931,
+      "confirmed_non_coinbase_transaction_count": 1686937,
+      "confirmed_fee_satoshis": 14062159072,
+      "latest_sixth_confirmation_at": "2022-07-15T23:50:04Z"
+    },
+    {
+      "week_start": "2022-07-16",
+      "decision_cutoff_at": "2022-07-23",
+      "earliest_execution_at": "2022-07-25",
+      "confirmed_block_count": 932,
+      "confirmed_non_coinbase_transaction_count": 1738185,
+      "confirmed_fee_satoshis": 15394660149,
+      "latest_sixth_confirmation_at": "2022-07-22T23:54:52Z"
+    },
+    {
+      "week_start": "2022-07-23",
+      "decision_cutoff_at": "2022-07-30",
+      "earliest_execution_at": "2022-08-01",
+      "confirmed_block_count": 1059,
+      "confirmed_non_coinbase_transaction_count": 1754930,
+      "confirmed_fee_satoshis": 9426616034,
+      "latest_sixth_confirmation_at": "2022-07-29T23:53:40Z"
+    },
+    {
+      "week_start": "2022-07-30",
+      "decision_cutoff_at": "2022-08-06",
+      "earliest_execution_at": "2022-08-08",
+      "confirmed_block_count": 993,
+      "confirmed_non_coinbase_transaction_count": 1772721,
+      "confirmed_fee_satoshis": 10464433600,
+      "latest_sixth_confirmation_at": "2022-08-05T23:47:08Z"
+    },
+    {
+      "week_start": "2022-08-06",
+      "decision_cutoff_at": "2022-08-13",
+      "earliest_execution_at": "2022-08-15",
+      "confirmed_block_count": 1043,
+      "confirmed_non_coinbase_transaction_count": 1762993,
+      "confirmed_fee_satoshis": 11775869911,
+      "latest_sixth_confirmation_at": "2022-08-12T23:53:53Z"
+    },
+    {
+      "week_start": "2022-08-13",
+      "decision_cutoff_at": "2022-08-20",
+      "earliest_execution_at": "2022-08-22",
+      "confirmed_block_count": 1010,
+      "confirmed_non_coinbase_transaction_count": 1771348,
+      "confirmed_fee_satoshis": 8543822948,
+      "latest_sixth_confirmation_at": "2022-08-19T23:59:28Z"
+    },
+    {
+      "week_start": "2022-08-20",
+      "decision_cutoff_at": "2022-08-27",
+      "earliest_execution_at": "2022-08-29",
+      "confirmed_block_count": 1087,
+      "confirmed_non_coinbase_transaction_count": 1708417,
+      "confirmed_fee_satoshis": 7077962818,
+      "latest_sixth_confirmation_at": "2022-08-26T23:49:37Z"
+    },
+    {
+      "week_start": "2022-08-27",
+      "decision_cutoff_at": "2022-09-03",
+      "earliest_execution_at": "2022-09-05",
+      "confirmed_block_count": 1032,
+      "confirmed_non_coinbase_transaction_count": 1724128,
+      "confirmed_fee_satoshis": 8432138452,
+      "latest_sixth_confirmation_at": "2022-09-02T23:57:03Z"
+    },
+    {
+      "week_start": "2022-09-03",
+      "decision_cutoff_at": "2022-09-10",
+      "earliest_execution_at": "2022-09-12",
+      "confirmed_block_count": 1024,
+      "confirmed_non_coinbase_transaction_count": 1769420,
+      "confirmed_fee_satoshis": 10135871141,
+      "latest_sixth_confirmation_at": "2022-09-09T23:46:26Z"
+    },
+    {
+      "week_start": "2022-09-10",
+      "decision_cutoff_at": "2022-09-17",
+      "earliest_execution_at": "2022-09-19",
+      "confirmed_block_count": 1026,
+      "confirmed_non_coinbase_transaction_count": 1786869,
+      "confirmed_fee_satoshis": 10347914636,
+      "latest_sixth_confirmation_at": "2022-09-16T23:56:27Z"
+    },
+    {
+      "week_start": "2022-09-17",
+      "decision_cutoff_at": "2022-09-24",
+      "earliest_execution_at": "2022-09-26",
+      "confirmed_block_count": 1004,
+      "confirmed_non_coinbase_transaction_count": 1760737,
+      "confirmed_fee_satoshis": 9908695981,
+      "latest_sixth_confirmation_at": "2022-09-23T23:59:46Z"
+    },
+    {
+      "week_start": "2022-09-24",
+      "decision_cutoff_at": "2022-10-01",
+      "earliest_execution_at": "2022-10-03",
+      "confirmed_block_count": 1028,
+      "confirmed_non_coinbase_transaction_count": 1778114,
+      "confirmed_fee_satoshis": 9804231517,
+      "latest_sixth_confirmation_at": "2022-09-30T23:52:48Z"
+    },
+    {
+      "week_start": "2022-10-01",
+      "decision_cutoff_at": "2022-10-08",
+      "earliest_execution_at": "2022-10-10",
+      "confirmed_block_count": 1154,
+      "confirmed_non_coinbase_transaction_count": 1816329,
+      "confirmed_fee_satoshis": 7288294922,
+      "latest_sixth_confirmation_at": "2022-10-07T23:57:36Z"
+    },
+    {
+      "week_start": "2022-10-08",
+      "decision_cutoff_at": "2022-10-15",
+      "earliest_execution_at": "2022-10-17",
+      "confirmed_block_count": 1088,
+      "confirmed_non_coinbase_transaction_count": 1787656,
+      "confirmed_fee_satoshis": 6823443133,
+      "latest_sixth_confirmation_at": "2022-10-14T23:50:11Z"
+    },
+    {
+      "week_start": "2022-10-15",
+      "decision_cutoff_at": "2022-10-22",
+      "earliest_execution_at": "2022-10-24",
+      "confirmed_block_count": 1034,
+      "confirmed_non_coinbase_transaction_count": 1753389,
+      "confirmed_fee_satoshis": 8803332499,
+      "latest_sixth_confirmation_at": "2022-10-21T23:55:11Z"
+    },
+    {
+      "week_start": "2022-10-22",
+      "decision_cutoff_at": "2022-10-29",
+      "earliest_execution_at": "2022-10-31",
+      "confirmed_block_count": 992,
+      "confirmed_non_coinbase_transaction_count": 1816630,
+      "confirmed_fee_satoshis": 10523064500,
+      "latest_sixth_confirmation_at": "2022-10-28T23:57:51Z"
+    },
+    {
+      "week_start": "2022-10-29",
+      "decision_cutoff_at": "2022-11-05",
+      "earliest_execution_at": "2022-11-07",
+      "confirmed_block_count": 1004,
+      "confirmed_non_coinbase_transaction_count": 1852792,
+      "confirmed_fee_satoshis": 11207412931,
+      "latest_sixth_confirmation_at": "2022-11-04T23:53:23Z"
+    },
+    {
+      "week_start": "2022-11-05",
+      "decision_cutoff_at": "2022-11-12",
+      "earliest_execution_at": "2022-11-14",
+      "confirmed_block_count": 1019,
+      "confirmed_non_coinbase_transaction_count": 1902207,
+      "confirmed_fee_satoshis": 13834775890,
+      "latest_sixth_confirmation_at": "2022-11-11T23:53:35Z"
+    },
+    {
+      "week_start": "2022-11-12",
+      "decision_cutoff_at": "2022-11-19",
+      "earliest_execution_at": "2022-11-21",
+      "confirmed_block_count": 995,
+      "confirmed_non_coinbase_transaction_count": 1781932,
+      "confirmed_fee_satoshis": 20413215397,
+      "latest_sixth_confirmation_at": "2022-11-18T23:57:21Z"
+    },
+    {
+      "week_start": "2022-11-19",
+      "decision_cutoff_at": "2022-11-26",
+      "earliest_execution_at": "2022-11-28",
+      "confirmed_block_count": 938,
+      "confirmed_non_coinbase_transaction_count": 1783906,
+      "confirmed_fee_satoshis": 18078592597,
+      "latest_sixth_confirmation_at": "2022-11-25T23:54:32Z"
+    },
+    {
+      "week_start": "2022-11-26",
+      "decision_cutoff_at": "2022-12-03",
+      "earliest_execution_at": "2022-12-05",
+      "confirmed_block_count": 925,
+      "confirmed_non_coinbase_transaction_count": 1797610,
+      "confirmed_fee_satoshis": 17076115579,
+      "latest_sixth_confirmation_at": "2022-12-02T23:25:55Z"
+    },
+    {
+      "week_start": "2022-12-03",
+      "decision_cutoff_at": "2022-12-10",
+      "earliest_execution_at": "2022-12-12",
+      "confirmed_block_count": 1037,
+      "confirmed_non_coinbase_transaction_count": 1795347,
+      "confirmed_fee_satoshis": 12999008811,
+      "latest_sixth_confirmation_at": "2022-12-09T23:42:57Z"
+    },
+    {
+      "week_start": "2022-12-10",
+      "decision_cutoff_at": "2022-12-17",
+      "earliest_execution_at": "2022-12-19",
+      "confirmed_block_count": 1020,
+      "confirmed_non_coinbase_transaction_count": 1799886,
+      "confirmed_fee_satoshis": 9694723982,
+      "latest_sixth_confirmation_at": "2022-12-16T23:58:28Z"
+    },
+    {
+      "week_start": "2022-12-17",
+      "decision_cutoff_at": "2022-12-24",
+      "earliest_execution_at": "2022-12-26",
+      "confirmed_block_count": 963,
+      "confirmed_non_coinbase_transaction_count": 1806208,
+      "confirmed_fee_satoshis": 11498836515,
+      "latest_sixth_confirmation_at": "2022-12-23T23:56:34Z"
+    },
+    {
+      "week_start": "2022-12-24",
+      "decision_cutoff_at": "2022-12-31",
+      "earliest_execution_at": "2023-01-02",
+      "confirmed_block_count": 935,
+      "confirmed_non_coinbase_transaction_count": 1704416,
+      "confirmed_fee_satoshis": 13546420204,
+      "latest_sixth_confirmation_at": "2022-12-30T23:47:15Z"
+    }
+  ],
+  "account_identifier_persisted": false,
+  "project_identifier_persisted": false,
+  "credential_or_token_persisted": false,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "payload_evidence_hash": "fc436388a09ad097829a2edcea4d2789403493a14425b35355a9a50a05eaf070"
+}

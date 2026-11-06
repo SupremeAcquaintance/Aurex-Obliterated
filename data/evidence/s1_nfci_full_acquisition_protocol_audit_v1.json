@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-s1-nfci-full-acquisition-protocol-audit-v1",
+  "audit_id": "s1-nfci-full-acquisition-protocol-audit-v1",
+  "audited_at": "2026-08-26T19:06:52.159454Z",
+  "protocol_file_sha256": "fde4d02aa0eae8f94c5dec222613df8cf9d4241e8cde3e6e3380e0c76b68b2f9",
+  "protocol_evidence_hash": "ccbff64f29ce5d85eb52dded23df1c393bb1a5ab4d5ce2c2874d8f284b87195e",
+  "builder_contract_hash": "a6ef60d3c29c2f04836eae40f617c96ef8c4b63f0a1aef49c27a0f617fbc4411",
+  "auditor_source_sha256": "28aa96e6fd96360a914ebb902da6d2dd699122b565e9c4f6c411970cb84de2ee",
+  "target_count": 281,
+  "first_vintage_date": "2017-08-17",
+  "last_vintage_date": "2022-12-29",
+  "reconstructed_exactly": true,
+  "network_requests_observed": 0,
+  "payload_bytes_observed": 0,
+  "btc_market_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "decision": "PASS_S1_NFCI_FULL_ACQUISITION_PROTOCOL_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_NFCI_DEVELOPMENT_ACQUISITION_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "3de2d5970b537a30eb3c5be1c39571b146bdac8116d2b6dc4be0ea20fff4d819"
+}

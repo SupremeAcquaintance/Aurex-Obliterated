@@ -1,0 +1,163 @@
+{
+  "schema_version": "aurex-s5-complete-release-remediation-result-v1",
+  "result_id": "s5-complete-release-remediation-result-v1",
+  "started_at": "2026-09-09T20:14:41.535981Z",
+  "completed_at": "2026-09-09T20:15:29.909685Z",
+  "elapsed_seconds": 48.373704,
+  "protocol_evidence_hash": "29ce6df924c56227d4cce6b764fa8f6b3aeaee81afb86e5c6a597cb070b205bd",
+  "protocol_audit_evidence_hash": "3994c6e02c28367c79627cca32a7f6e51cde4f924e902e82f8affd957e6df234",
+  "execution_contract_evidence_hash": "1484a05941216ebc5c5d022d800aff3d02fd55e3b319ed44bccd485d8a08d280",
+  "execution_contract_audit_evidence_hash": "80b29a31545d4203378fa0b86f89e79632872c340e260a07e0fa4970e144da4c",
+  "runner_contract_hash": "e4a056b7f39726fa991b97db169ce4ea06f83b0fcafa5b64107a4633db335904",
+  "original_repository_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "original_repository_unchanged": true,
+  "incomplete_repository_directory_sha256": "6e7cd0a147cb9ae26237fa1e4bac6b13c2c52295b264ed0f543d0d626b99e7e4",
+  "incomplete_repository_unchanged": true,
+  "destination_copy_completed": true,
+  "destination_prefetch_directory_sha256": "6e7cd0a147cb9ae26237fa1e4bac6b13c2c52295b264ed0f543d0d626b99e7e4",
+  "destination_final_directory_sha256": "d3e85e76ddf1c6bbb2e796530d9f3a2bb0c3bfbb7b95d65bd4c8dbed442c4214",
+  "destination_initial_byte_count": 77764811,
+  "destination_final_byte_count": 85844134,
+  "destination_growth_bytes": 8079323,
+  "transcript_paths": [
+    "data/evidence/s5_complete_release_tag_source_responses_v1/01_fetch_all_stable_tags.json",
+    "data/evidence/s5_complete_release_tag_source_responses_v1/02_verify_all_stable_tags.json"
+  ],
+  "transcript_file_sha256s": [
+    "10e41e55adcd631b1249386b1f8128032fe8df3275311eeac980f821753b452f",
+    "9aea0cc8fa07c547f2f5488f9b4646df432cc7281b162e7b1583cd7b06642613"
+  ],
+  "process_count": 2,
+  "local_process_count": 1,
+  "network_process_count": 1,
+  "complete_stable_tag_count": 132,
+  "complete_annotated_tag_count": 104,
+  "complete_lightweight_tag_count": 28,
+  "complete_tag_manifest_evidence_hash": "07d4b9d80266710faf9dcf578a6835c6d1c36727b362132b896c725811eea82c",
+  "verified_tag_count": 132,
+  "remote_ref_drift_count": 0,
+  "gate_results": [
+    {
+      "gate_id": "PRIOR_REMEDIATION_REJECTION_LINEAGE_IS_HASH_BOUND",
+      "status": "PASS",
+      "evidence": "ten sources matched"
+    },
+    {
+      "gate_id": "FOUR_PRIOR_PROCESS_TRANSCRIPTS_ARE_HASH_BOUND",
+      "status": "PASS",
+      "evidence": "four prior transcripts matched"
+    },
+    {
+      "gate_id": "FROZEN_DISCOVERY_CONTAINS_132_EXACT_STABLE_BASE_REFS",
+      "status": "PASS",
+      "evidence": "132 stable refs"
+    },
+    {
+      "gate_id": "ALL_104_ANNOTATED_STABLE_REFS_ARE_INCLUDED_REGARDLESS_OF_MASTER_ANCESTRY",
+      "status": "PASS",
+      "evidence": "104 annotated refs included"
+    },
+    {
+      "gate_id": "ALL_28_LIGHTWEIGHT_STABLE_REFS_REMAIN_CUTOFF_REACHABLE",
+      "status": "PASS",
+      "evidence": "28 lightweight refs retained"
+    },
+    {
+      "gate_id": "COMPLETE_132_TAG_OBJECT_AND_PEELED_IDENTITY_MANIFEST_IS_FROZEN",
+      "status": "PASS",
+      "evidence": "07d4b9d80266710faf9dcf578a6835c6d1c36727b362132b896c725811eea82c"
+    },
+    {
+      "gate_id": "ORIGINAL_AND_42_TAG_REPOSITORIES_REMAIN_IMMUTABLE",
+      "status": "PASS",
+      "evidence": "both hashes unchanged"
+    },
+    {
+      "gate_id": "NEW_COMPLETE_DESTINATION_AND_TRANSCRIPT_PATHS_ARE_REQUIRED",
+      "status": "PASS",
+      "evidence": "new destination and two transcripts created"
+    },
+    {
+      "gate_id": "OFFICIAL_BITCOIN_CORE_HTTPS_REMOTE_IS_EXACT",
+      "status": "PASS",
+      "evidence": "https://github.com/bitcoin/bitcoin.git"
+    },
+    {
+      "gate_id": "NO_NEW_REMOTE_DISCOVERY_IS_PERMITTED",
+      "status": "PASS",
+      "evidence": "zero discovery processes"
+    },
+    {
+      "gate_id": "ONE_EXACT_SORTED_132_REFSPEC_FETCH_PROCESS_ONLY",
+      "status": "PASS",
+      "evidence": "one network fetch"
+    },
+    {
+      "gate_id": "ONE_LOCAL_132_TAG_IDENTITY_VERIFICATION_PROCESS_ONLY",
+      "status": "PASS",
+      "evidence": "132 identities; zero drift"
+    },
+    {
+      "gate_id": "ANNOTATED_TAGGER_TIME_CUTOFF_IS_DEFERRED_TO_AMENDED_MEASUREMENT",
+      "status": "PASS",
+      "evidence": "no tagger-time filtering performed"
+    },
+    {
+      "gate_id": "LIGHTWEIGHT_COMMITTER_TIME_UNCERTAINTY_IS_PRESERVED",
+      "status": "PASS",
+      "evidence": "lightweight uncertainty preserved"
+    },
+    {
+      "gate_id": "ALL_PROCESS_TRANSCRIPTS_ARE_ATOMIC_AND_HASH_PRESERVED",
+      "status": "PASS",
+      "evidence": "two transcripts persisted"
+    },
+    {
+      "gate_id": "ANY_DRIFT_TIMEOUT_LIMIT_OR_COPY_MISMATCH_STOPS_THE_RUN",
+      "status": "PASS",
+      "evidence": "zero drift and all limits held"
+    },
+    {
+      "gate_id": "ZERO_MARKET_VALUES_RETURNS_PARAMETERS_CANDIDATES_SIGNALS_OR_ORDERS",
+      "status": "PASS",
+      "evidence": "zero market, strategy, signal, and order operations"
+    },
+    {
+      "gate_id": "PASS_AUTHORIZES_AMENDED_MEASUREMENT_PROTOCOL_ONLY",
+      "status": "PASS",
+      "evidence": "FREEZE_S5_AMENDED_MEASUREMENT_PROTOCOL_ONLY"
+    }
+  ],
+  "passed_gate_count": 18,
+  "failed_gate_count": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "parameters_defined": 0,
+  "candidates_created": 0,
+  "signals_created": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_COMPLETE_RELEASE_TAG_SOURCE_REMEDIATION",
+  "next_authorization": "FREEZE_S5_AMENDED_MEASUREMENT_PROTOCOL_ONLY",
+  "authorizes_amended_measurement_protocol": true,
+  "authorizes_market_values": false,
+  "authorizes_returns": false,
+  "authorizes_strategy_candidate": false,
+  "authorizes_signals": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "failure_type": null,
+  "failure_message": null,
+  "limitations": [
+    "A pass repairs release-tag source completeness only.",
+    "Annotated measurement-time filtering remains a later step.",
+    "Git tag signatures were not cryptographically verified.",
+    "No market value, return, strategy, signal, or order was created.",
+    "Prior repositories and evidence remain immutable.",
+    "Production and live trading remain prohibited.",
+    "Qualified strategies and real net profit remain zero.",
+    "The complete repository requires an independent result audit."
+  ],
+  "result_evidence_hash": "02d428c25aaa667c4c636dca1526ff6b7bf2d6d16cfeefc2f1e42c697805e2c2"
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "aurex-s1-source-transport-result-v2",
+  "result_id": "s1-source-transport-result-v2",
+  "completed_at": "2026-08-26T18:37:51.661648Z",
+  "amendment_path": "data/evidence/s1_source_transport_amendment_v2.json",
+  "amendment_file_sha256": "af3e638691b06412e14ae5f845252b264387da3e147eda47d32ed145c437ca5b",
+  "amendment_evidence_hash": "0bef139fb71fec027b1a985f6e1170ab150bbd12ca5c5530d187ad2596ee1f82",
+  "runner_source_sha256": "c023405ad937accea301307499df929babda0642a3866c1ed53d43532160dbfa",
+  "requests": [
+    {
+      "request_id": "01-alfred-nfci-series",
+      "method": "GET",
+      "url": "https://alfred.stlouisfed.org/series?seid=NFCI",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "role": "ALFRED_SERIES_PAGE"
+    },
+    {
+      "request_id": "02-nfci-vintage-2020",
+      "method": "GET",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI&vintage_date=2020-01-01",
+      "expected_final_host": "fred.stlouisfed.org",
+      "role": "NO_KEY_VINTAGE_CSV"
+    },
+    {
+      "request_id": "03-nfci-vintage-2021",
+      "method": "GET",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI&vintage_date=2021-01-01",
+      "expected_final_host": "fred.stlouisfed.org",
+      "role": "NO_KEY_VINTAGE_CSV"
+    },
+    {
+      "request_id": "04-structured-api-no-key",
+      "method": "GET",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NFCI&file_type=json&realtime_start=2020-01-01&realtime_end=2020-01-01",
+      "expected_final_host": "api.stlouisfed.org",
+      "role": "STRUCTURED_API_AUTH_CLASSIFICATION"
+    }
+  ],
+  "responses": [
+    {
+      "request_id": "01-alfred-nfci-series",
+      "attempted_at": "2026-08-26T18:37:43.626312Z",
+      "status_code": 200,
+      "final_url": "https://alfred.stlouisfed.org/series?seid=NFCI",
+      "final_host": "alfred.stlouisfed.org",
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "etag": null,
+      "last_modified": null,
+      "body_bytes_read": 0,
+      "outcome": "HTTP_RESPONSE",
+      "error_type": null,
+      "error_message": null,
+      "response_evidence_hash": "966894311c2f333c48fab0717dbf8952ac7b53a42ffab1886e39f6f0bf75058b"
+    },
+    {
+      "request_id": "02-nfci-vintage-2020",
+      "attempted_at": "2026-08-26T18:37:48.497941Z",
+      "status_code": 200,
+      "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI&vintage_date=2020-01-01",
+      "final_host": "fred.stlouisfed.org",
+      "content_type": "application/csv",
+      "content_length": 51425,
+      "etag": null,
+      "last_modified": null,
+      "body_bytes_read": 0,
+      "outcome": "HTTP_RESPONSE",
+      "error_type": null,
+      "error_message": null,
+      "response_evidence_hash": "cbfbf3d72824059ba8c3c49b7cc3b91739bb2ef89b6d1a8d842a60ddab01d354"
+    },
+    {
+      "request_id": "03-nfci-vintage-2021",
+      "attempted_at": "2026-08-26T18:37:49.729730Z",
+      "status_code": 200,
+      "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI&vintage_date=2021-01-01",
+      "final_host": "fred.stlouisfed.org",
+      "content_type": "application/csv",
+      "content_length": null,
+      "etag": null,
+      "last_modified": null,
+      "body_bytes_read": 0,
+      "outcome": "HTTP_RESPONSE",
+      "error_type": null,
+      "error_message": null,
+      "response_evidence_hash": "6e575a880a116d23c68541d8d0996957f9182cd2532bc8561c5cdef07b37c0bf"
+    },
+    {
+      "request_id": "04-structured-api-no-key",
+      "attempted_at": "2026-08-26T18:37:50.871552Z",
+      "status_code": 400,
+      "final_url": "https://api.stlouisfed.org/fred/series/observations?series_id=NFCI&file_type=json&realtime_start=2020-01-01&realtime_end=2020-01-01",
+      "final_host": "api.stlouisfed.org",
+      "content_type": "application/json; charset=UTF-8",
+      "content_length": 162,
+      "etag": null,
+      "last_modified": null,
+      "body_bytes_read": 0,
+      "outcome": "HTTP_RESPONSE",
+      "error_type": "HTTPError",
+      "error_message": "Bad Request",
+      "response_evidence_hash": "4eff34c8abc1ee0c21012847f3e900e74e3837e4e2137742023d6b88cb86f845"
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "ALFRED_SERIES_REACHABLE",
+      "status": "PASS",
+      "reason": "The official ALFRED NFCI series GET must open at HTTP 200."
+    },
+    {
+      "gate_id": "EXACT_GET_OPEN_AND_ZERO_READ_CALLS",
+      "status": "PASS",
+      "reason": "Four frozen GET opens must complete with zero application body bytes."
+    },
+    {
+      "gate_id": "NO_KEY_VINTAGE_ENDPOINTS_REACHABLE",
+      "status": "PASS",
+      "reason": "Both frozen no-key vintage CSV GETs must open at HTTP 200."
+    },
+    {
+      "gate_id": "OFFICIAL_FINAL_HOSTS_MATCH",
+      "status": "PASS",
+      "reason": "Every final host must match its frozen official host."
+    },
+    {
+      "gate_id": "STRUCTURED_API_AUTH_CLASSIFIED",
+      "status": "PASS",
+      "reason": "The no-key structured API must return a classifiable response."
+    },
+    {
+      "gate_id": "VINTAGE_CONTENT_TYPES_DOWNLOADABLE",
+      "status": "PASS",
+      "reason": "Both vintage endpoints must advertise downloadable content."
+    },
+    {
+      "gate_id": "ZERO_PAYLOAD_OUTCOME_AND_TRADING_AUTHORITY",
+      "status": "PASS",
+      "reason": "No response read, payload, market value, return, candidate, or order occurred."
+    }
+  ],
+  "request_count": 4,
+  "retry_count": 0,
+  "response_read_calls": 0,
+  "application_body_bytes_read": 0,
+  "persisted_payload_bytes": 0,
+  "market_numeric_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "decision": "PASS_S1_V2_NO_KEY_VINTAGE_TRANSPORT_AWAIT_RAW_PILOT_PROTOCOL",
+  "next_authorization": "AUTHORIZE_S1_RAW_NFCI_TWO_VINTAGE_PILOT_PROTOCOL_ONLY",
+  "authorizes_payload_acquisition": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_return_testing": false,
+  "authorizes_candidate": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "result_evidence_hash": "14b097c72afef189cdbccc9493618c5773e736a35b867615e60685dfa86b9532"
+}

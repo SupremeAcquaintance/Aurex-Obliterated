@@ -1,0 +1,17 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-successor-execution-contract-audit-v4",
+  "audited_at": "2026-08-12T08:42:27.920632Z",
+  "contract_file_sha256": "554bcc98af563d190dadbfb4f4e3605a4047a4a0f4ed08c68c6a389b28281b17",
+  "contract_evidence_hash": "6ec1920ccad7e481420996afde4308f1900b98e595c391eaad18b54f0b728d68",
+  "amendment_evidence_hash": "3e6f957427e77e42b8eb963bfd02ac02b319576c754579c5855520e267595e4f",
+  "runner_source_hash": "e043d0be9c67722560c05d2338d2f650176b95619655bf5207e3f25bd61ade30",
+  "auditor_contract_hash": "c9fb14d8c598599d46ed60bb31fd7637611bfc5b31ac1257661a6a778d061d95",
+  "seed_checkpoint_verified": true,
+  "bootstrap_partial_verified": true,
+  "resumable_transport_verified": true,
+  "no_outcome_boundary_verified": true,
+  "network_requests_made": 0,
+  "outcomes_accessed": 0,
+  "orders_submitted": 0,
+  "audit_evidence_hash": "f6586d1778cfdfa0eb9abaa94d64a89718ad598e9d1fb693ca1758d5f115ba0f"
+}

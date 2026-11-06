@@ -1,0 +1,156 @@
+{
+  "schema_version": "aurex-s3-cftc-source-feasibility-result-v1",
+  "result_id": "s3-cftc-source-feasibility-result-v1",
+  "generated_at": "2026-08-30T20:54:53.763866Z",
+  "protocol_file_sha256": "ad24ef243e544321ac5eee2e8dc253303ccc4db303cdda5fc33f8677b4b2da6d",
+  "protocol_evidence_hash": "1d9e2b672b754c3e6d7296fc3c75fd8d7ab4f49e445b06383ec4e1722271c15a",
+  "protocol_audit_file_sha256": "f0f697b97db05f944ad0013884c35f35ed117ecaff433873534bc6f384320cc7",
+  "protocol_audit_evidence_hash": "bbea600436e66ee35e809a323c0f83bdbdfe948e352c4f2f4fa1add03999d7c1",
+  "runner_contract_hash": "f13f2d6d530d9694562c9159687edabd0941add231c3b47ce3711987f0b180c3",
+  "metadata_attempts": [
+    {
+      "endpoint_id": "COT_FAQ",
+      "requested_at": "2026-08-30T20:54:53.065399Z",
+      "http_status": 0,
+      "response_bytes": 0,
+      "response_sha256": null,
+      "response_path": null,
+      "official_authority_matched": true,
+      "matched_text_tokens": [],
+      "request_succeeded": false,
+      "error_class": "NETWORK_ERROR",
+      "target_position_rows_parsed": 0,
+      "target_position_values_read": 0
+    },
+    {
+      "endpoint_id": "HISTORICAL_SPECIAL_ANNOUNCEMENTS",
+      "requested_at": "2026-08-30T20:54:53.606386Z",
+      "http_status": 0,
+      "response_bytes": 0,
+      "response_sha256": null,
+      "response_path": null,
+      "official_authority_matched": true,
+      "matched_text_tokens": [],
+      "request_succeeded": false,
+      "error_class": "NETWORK_ERROR",
+      "target_position_rows_parsed": 0,
+      "target_position_values_read": 0
+    },
+    {
+      "endpoint_id": "HISTORICAL_VIEWABLE_INDEX",
+      "requested_at": "2026-08-30T20:54:53.673655Z",
+      "http_status": 0,
+      "response_bytes": 0,
+      "response_sha256": null,
+      "response_path": null,
+      "official_authority_matched": true,
+      "matched_text_tokens": [],
+      "request_succeeded": false,
+      "error_class": "NETWORK_ERROR",
+      "target_position_rows_parsed": 0,
+      "target_position_values_read": 0
+    }
+  ],
+  "gate_results": [
+    {
+      "gate_id": "METADATA_ENDPOINTS_AVAILABLE",
+      "status": "FAIL",
+      "detail": "One or more bounded official metadata pages failed or changed."
+    },
+    {
+      "gate_id": "OFFICIAL_CFTC_AUTHORITY",
+      "status": "PASS",
+      "detail": "Every request remained on HTTPS CFTC authority."
+    },
+    {
+      "gate_id": "REPORT_DATE_DISTINCT_FROM_RELEASE_DATE",
+      "status": "FAIL",
+      "detail": "The required report-date versus release-date warning was unavailable."
+    },
+    {
+      "gate_id": "HISTORICAL_RELEASE_DATE_COVERAGE_2022_2024",
+      "status": "FAIL",
+      "detail": "No complete official 2022-2024 release-date list was proven."
+    },
+    {
+      "gate_id": "PER_REPORT_ACTUAL_RELEASE_TIMESTAMP_AVAILABLE",
+      "status": "FAIL",
+      "detail": "No per-report actual publication timestamp field or ledger was proven."
+    },
+    {
+      "gate_id": "DELAY_AND_BACKLOG_METADATA_AVAILABLE",
+      "status": "FAIL",
+      "detail": "Delay and backlog publication metadata were not reconstructable."
+    },
+    {
+      "gate_id": "REVISION_IDENTITY_LEDGER_COMPLETE",
+      "status": "FAIL",
+      "detail": "No exhaustive per-report correction and revision ledger was proven."
+    },
+    {
+      "gate_id": "ZERO_DOLLAR_PUBLIC_METADATA_ACCESS",
+      "status": "FAIL",
+      "detail": "Zero-dollar public metadata access was not established."
+    },
+    {
+      "gate_id": "REUSE_RIGHTS_EXPLICIT",
+      "status": "FAIL",
+      "detail": "The inspected pages did not explicitly establish required reuse rights."
+    },
+    {
+      "gate_id": "ZERO_TARGET_POSITION_OR_MARKET_VALUES_ACCESSED",
+      "status": "PASS",
+      "detail": "The run parsed zero target position rows and read zero target or market values."
+    }
+  ],
+  "passed_gate_count": 2,
+  "failed_gate_count": 8,
+  "metadata_request_count": 3,
+  "historical_release_date_list_available": false,
+  "per_report_actual_release_timestamp_available": false,
+  "delay_and_backlog_metadata_available": false,
+  "revision_identity_ledger_complete": false,
+  "zero_dollar_public_access_observed": false,
+  "reuse_rights_explicit": false,
+  "cftc_target_position_rows_parsed": 0,
+  "cftc_target_position_values_read": 0,
+  "btc_market_values_read": 0,
+  "payload_rows_acquired": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "blockers": [
+    "delay_and_backlog_metadata_available",
+    "historical_release_date_coverage_2022_2024",
+    "metadata_endpoints_available",
+    "per_report_actual_release_timestamp_available",
+    "report_date_distinct_from_release_date",
+    "reuse_rights_explicit",
+    "revision_identity_ledger_complete",
+    "zero_dollar_public_metadata_access"
+  ],
+  "decision": "STOP_S3_CFTC_POINT_IN_TIME_SOURCE_FEASIBILITY_FAILED_RETIRE_S3",
+  "next_authorization": "NONE_S3_CFTC_POINT_IN_TIME_SOURCE_FEASIBILITY_FAILED_RETIRE_S3",
+  "authorizes_position_payload": false,
+  "authorizes_market_values": false,
+  "authorizes_parameters": false,
+  "authorizes_returns": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "CFTC explicitly distinguishes report dates from release dates.",
+    "CFTC states that a complete historical release-date list is unavailable.",
+    "HTTP availability does not prove historical point-in-time identity.",
+    "No BTC market value, parameter, return, candidate, or order was created.",
+    "No CFTC target position row or value was parsed.",
+    "No complete per-report timestamp or revision ledger was proven.",
+    "S3 cannot be backtested causally under the frozen source requirements.",
+    "The metadata result establishes infeasibility, not profitability."
+  ],
+  "result_evidence_hash": "75700f67e97577d7680b97b6bedf28539c9815eb1bf424764d30094b73fe53d8"
+}

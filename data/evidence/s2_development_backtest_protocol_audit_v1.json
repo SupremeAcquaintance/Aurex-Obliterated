@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-s2-development-backtest-protocol-audit-v1",
+  "audit_id": "s2-development-backtest-protocol-audit-v1",
+  "audited_at": "2026-08-30T15:47:56.655156Z",
+  "protocol_file_sha256": "09fed047ba6a2a7e6234ea722e3315fbfeedb14d954383635566c6fb5ee5de50",
+  "protocol_evidence_hash": "c2f105dd9d350c0a45c2d00b29bf6e744b5dac75edb9bd8cc8aa3f7f1e8f8be8",
+  "builder_contract_hash": "77f0f6d3930398a59ed33a007f216824ba20ec3b2eca2084ba401897481d4501",
+  "preregistration_evidence_hash": "5d6cd308ad31cfc22588760c8890b97d49bcce95682bcb563397fe19acfa7a6c",
+  "measurement_result_evidence_hash": "8e4534468b2f471b56e4b7d3391a08f1299b6d0079c8fc4b3ae4880630977f3b",
+  "source_result_evidence_hash": "6ba8c88d62c92f36696032f4fbd7697cf43369e1ace4050cf109086dcd76f3cd",
+  "source_audit_evidence_hash": "8b2e6ec3aa26ea0e282051fd76a157550750c92c9d88fd1ba058e219c7d1db10",
+  "measurement_dataset_file_sha256": "513237db0a939170efb2113444fdd633a5c5dc1b397b8022b154020cfdf4b327",
+  "price_dataset_file_sha256": "6c9c09c8b6a4c484f64a366a8b66a1e939d198894117f9f91b01ea12024af156",
+  "auditor_contract_hash": "5894a0516165ea4f5330bebb9d096a0ef7641667aeb3a80ca0aacd6422959ceb",
+  "measurement_values_parsed": 0,
+  "price_values_parsed": 0,
+  "returns_calculated": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S2_DEVELOPMENT_BACKTEST_PROTOCOL_AUDIT",
+  "next_authorization": "AUTHORIZE_S2_DEVELOPMENT_BACKTEST_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "2f728ce14b96901460ce1097d6346c947febb1b8d8af97b355dd207a963bc965"
+}

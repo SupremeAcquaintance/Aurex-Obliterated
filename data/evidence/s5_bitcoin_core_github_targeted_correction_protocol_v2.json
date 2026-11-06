@@ -1,0 +1,111 @@
+{
+  "schema_version": "aurex-s5-targeted-correction-v2-remediation-protocol-v1",
+  "protocol_id": "s5-targeted-correction-v2-remediation-protocol-v1",
+  "frozen_at": "2026-09-04T14:55:37.335634Z",
+  "status": "FROZEN_REMEDIATION_ONLY_ZERO_V2_REQUESTS",
+  "builder_contract_hash": "b1e8144d4ce719697513ea55f4bb0d53fbd81917b4591ee06c0a1aca9469c164",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_execution_contract_audit_v1.json",
+      "file_sha256": "547c4f0d834a52b0540e098d46ebf4b153c1e980aef41665203d059893f538e9"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_execution_contract_v1.json",
+      "file_sha256": "d06d094c3dea221c4233c86d13603f10bbaa3fda273a652af9ee2d291f1824e8"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_audit_v1.json",
+      "file_sha256": "d7a72ec4fd8713d2eabf62324b5b599217d251bc61b24dab95bbd3750363988d"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_v1.json",
+      "file_sha256": "fc2fd558ecadd1264bc345be739869a3ecc2f277a776b9cb268da5a9733da0e6"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_result_v1.json",
+      "file_sha256": "8b27925f1fd9997067664d079af9218413d1f447cc73586045cea71562b37157"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_v1_failure_audit_v1.json",
+      "file_sha256": "b2161be10025d6009c9f30f9b932f693070513ef34cb531da0be90c2bccea03c"
+    },
+    {
+      "path": "data/evidence/s5_github_targeted_pull_responses_v1/failure_pull_000010.json",
+      "file_sha256": "5c40717467be1e1eac0d9ebf9a58fe98ba39b600152717a01e935e855821e8e1"
+    },
+    {
+      "path": "data/evidence/s5_github_targeted_pull_responses_v1/pull_000010.attempt.json",
+      "file_sha256": "76cd06d51ecf75bb79a4a0b9a1df770dcc140fb9f8db31e87242eea2917535b5"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "d7f0f1de4652e3d150d588f25892f981ac4a4dd74737388328d30223a34b4099",
+  "v1_protocol_evidence_hash": "c3861c112d41d233ac28f7751eab5fae347b075c9984d41792ee54495ce0df8f",
+  "v1_protocol_audit_evidence_hash": "b77bdc2fa9bff2a30bf4ddd9fd6423e98f73ca626325b067bb6b2af8405249bb",
+  "v1_execution_contract_evidence_hash": "b9e28bf45138dfeec22c954e616fdf1da0b626b6a0a40715a40ac1e8736078fe",
+  "v1_execution_contract_audit_evidence_hash": "e0de16bf7f19c69c429f1d254ec3281c4960404011ec36528692887acb778cd7",
+  "v1_result_evidence_hash": "60fd81a117139a228fbe6155983527b96c4ccafebbae43ed22c2672634581287",
+  "v1_failure_audit_evidence_hash": "14424d8068132bfeba12b203efaf919d607e506de3813c8ba12173ab31e2f255",
+  "target_manifest_evidence_hash": "05c335cafec64026bf2ef7a086eb069ad3cdce6782489309536d9934a71b1ea7",
+  "target_count": 194,
+  "v1_uncertain_attempt_target": 10,
+  "v1_uncertain_attempt_count": 1,
+  "v1_accepted_response_count": 0,
+  "v1_underlying_error_type": "TypeError",
+  "v1_context_manager_defect_verified": true,
+  "v1_attempt_retry_authority_superseded_only_for_pull_10": true,
+  "untouched_first_request_target_count": 193,
+  "v2_remedial_request_target_count": 1,
+  "maximum_v2_request_count": 194,
+  "maximum_cumulative_possible_request_count": 195,
+  "transport_response_lifecycle": "CLIENT_SEND_STREAM_TRUE_TRY_FINALLY_RESPONSE_CLOSE",
+  "direct_pull_endpoint_template": "https://api.github.com/repos/bitcoin/bitcoin/pulls/{pull_number}",
+  "acceptable_http_statuses": [
+    200,
+    404
+  ],
+  "raw_response_directory": "data/evidence/s5_github_targeted_pull_responses_v2",
+  "response_file_pattern": "pull_{pull_number:06d}.json",
+  "result_path": "data/evidence/s5_bitcoin_core_github_targeted_correction_result_v2.json",
+  "crash_marker_required_before_request": true,
+  "incomplete_v2_attempt_retry_forbidden": true,
+  "completed_v2_response_resume_permitted": true,
+  "credentials_permitted": false,
+  "authorization_header_permitted": false,
+  "environment_proxy_permitted": false,
+  "redirects_permitted": false,
+  "concurrency_permitted": false,
+  "mapping_rule_change_permitted": false,
+  "accepted_event_creation_permitted": false,
+  "market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "candidates_permitted": false,
+  "orders_permitted": false,
+  "maximum_local_git_process_count": 2,
+  "maximum_response_bytes_per_target": 2097152,
+  "maximum_total_response_bytes": 268435456,
+  "maximum_elapsed_seconds": 21600,
+  "v2_requests_executed_during_freeze": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "decision": "FREEZE_S5_TARGETED_CORRECTION_V2_REMEDIATION_PROTOCOL",
+  "next_authorization": "RUN_S5_GITHUB_TARGETED_COMPLETENESS_ACQUISITION_V2",
+  "limitations": [
+    "A v2 uncertain attempt cannot be retried under this protocol.",
+    "At most 195 targeted GET attempts can exist cumulatively across v1 and v2.",
+    "Corrected normalization requires a later frozen and audited protocol.",
+    "Current GitHub metadata may differ from metadata at the historical event time.",
+    "HTTP 200 and 404 remain the only acceptable response statuses.",
+    "No accepted event or causal timestamp can be created during v2 acquisition.",
+    "No mapping rule or completeness threshold can change during v2 acquisition.",
+    "No market value, return, parameter, candidate, signal, or order is authorized.",
+    "Source completeness, predictive edge, reliability, and profit remain unproven.",
+    "The other 193 targets have no prior targeted direct GET attempt.",
+    "The v1 pull-10 GET may have reached GitHub and is counted as uncertain.",
+    "The v1 result and raw failure artifacts remain immutable and binding.",
+    "The v2 response lifecycle must close the httpx response in a finally block.",
+    "V2 permits exactly one disclosed remedial GET for pull 10."
+  ],
+  "protocol_evidence_hash": "909ec95ced0781f29cfdf89f2d331c5a38c75c988e00081927fa6b36bca88312"
+}

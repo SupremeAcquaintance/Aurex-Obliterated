@@ -1,0 +1,436 @@
+{
+  "schema_version": "aurex-s4-spot-bitcoin-etp-charter-v1",
+  "charter_id": "s4-spot-bitcoin-etp-charter-v1",
+  "frozen_at": "2026-08-31T18:09:40.573564Z",
+  "status": "FROZEN_CHARTER_ONLY_NO_ETP_VALUES_OR_OUTCOMES",
+  "builder_contract_hash": "a09c368bc66f859d5e35535889c0ddbfda347d4af4c224b378e5c993694cacd7",
+  "predecessor_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_contract_v1.json",
+      "file_sha256": "f8bfcb9f321269433205c901f9d44506d6d12a681a07730b76f4ab2e221f8d68"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_audit_v25.json",
+      "file_sha256": "258116004a608a39f8a93ba634326a7bfba3ee29470e61dffa570659151a1e53"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_result_v25.json",
+      "file_sha256": "7e01cda1dba17e090472f028b260c3539aa001bf7cba4f9a32c63cc59bfa4a8d"
+    },
+    {
+      "path": "data/evidence/binance_spot_testnet_sandbox_profile_v1.json",
+      "file_sha256": "19e0f02caa92fe0bdde0b121491b63eb4b3d8d409212a367d3c0275245d6d9a1"
+    },
+    {
+      "path": "data/evidence/s1_successor_lineage_audit_v1.json",
+      "file_sha256": "905b3ba01a99c177c0ddfab55ac3d829f01b1b493a2528e2af193a3daa299160"
+    },
+    {
+      "path": "data/evidence/s1_successor_lineage_ledger_v1.json",
+      "file_sha256": "a67c90b56994d9076cbddc2f9f21aa1928c10fc01edf2c745198b1cae9f0d91f"
+    },
+    {
+      "path": "data/evidence/s2_development_backtest_result_audit_v1.json",
+      "file_sha256": "5912107c45782db56c79f61c0ee71a26e98d20ba10c69e7a16568fb680a151c3"
+    },
+    {
+      "path": "data/evidence/s2_development_backtest_result_v1.json",
+      "file_sha256": "63a1a7bcad56a6a7b8b0b9e8fc04d0bbdaa71b09b92faa4034c49c57a5c83d8a"
+    },
+    {
+      "path": "data/evidence/s2_onchain_settlement_charter_audit_v1.json",
+      "file_sha256": "f2a1d02a58504a5d087f60e6f83a6c04d0d9f2637fc5ac7e7fcdb89747cf5465"
+    },
+    {
+      "path": "data/evidence/s2_onchain_settlement_charter_v1.json",
+      "file_sha256": "c3ddfc3e985cf4737422f9ae452a4ad10499dc73f44c2be44e27176b9f086832"
+    },
+    {
+      "path": "data/evidence/s3_cftc_metadata_transport_amendment_audit_v2.json",
+      "file_sha256": "fe8e56ae2023e501ff7ee3a56659951a2e372767384244e6c28d6435ea3d5577"
+    },
+    {
+      "path": "data/evidence/s3_cftc_metadata_transport_amendment_v2.json",
+      "file_sha256": "aaaf003466448e643266634ec5592b164d58e402f405b5fd3e65d360b94e0391"
+    },
+    {
+      "path": "data/evidence/s3_cftc_metadata_transport_execution_receipt_audit_v2.json",
+      "file_sha256": "df4682b173ad9b00ee6be104dffc5bc4cd1a6c829b9d07e4be65f74841c772d0"
+    },
+    {
+      "path": "data/evidence/s3_cftc_metadata_transport_execution_receipt_v2.json",
+      "file_sha256": "9d46d319673f32a2ae2968b7149bd52cfde3613e645dada96c3433090065a2e3"
+    },
+    {
+      "path": "data/evidence/s3_cftc_positioning_charter_audit_v1.json",
+      "file_sha256": "c981002e57521fba7b04554c9d17586d23af1247b0a71617d318d7107ba60e9a"
+    },
+    {
+      "path": "data/evidence/s3_cftc_positioning_charter_v1.json",
+      "file_sha256": "f28766dc4ca19aeaff70b8b3126cbff445a198dbdbfff63889f269c3c2f6f1bf"
+    },
+    {
+      "path": "data/evidence/s3_cftc_source_feasibility_protocol_audit_v1.json",
+      "file_sha256": "f0f697b97db05f944ad0013884c35f35ed117ecaff433873534bc6f384320cc7"
+    },
+    {
+      "path": "data/evidence/s3_cftc_source_feasibility_protocol_v1.json",
+      "file_sha256": "ad24ef243e544321ac5eee2e8dc253303ccc4db303cdda5fc33f8677b4b2da6d"
+    },
+    {
+      "path": "data/evidence/s3_cftc_source_feasibility_result_v1.json",
+      "file_sha256": "f6e469a72869cb9019555d194fa62a5d1a62c2c9a47ab3c540f114d08cce33a9"
+    },
+    {
+      "path": "data/evidence/s3_cftc_source_transport_failure_audit_v1.json",
+      "file_sha256": "b4cf0eba9bbdb5f4e94484c363940d3139b897b644eea4262a7d27c366a39885"
+    }
+  ],
+  "research_sources": [
+    {
+      "source_id": "ARK-ARKB-OFFICIAL-DATA",
+      "title": "ARK 21Shares Bitcoin ETF official fund data",
+      "publisher": "ARK Invest",
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-31T18:09:40.573564Z",
+      "source_kind": "OFFICIAL_ISSUER_DATA",
+      "url": "https://www.ark-funds.com/funds/arkb",
+      "supported_claims": [
+        "Official issuer page exposes holdings downloads and fund metadata.",
+        "NAV is ordinarily calculated after the United States market close."
+      ],
+      "limitations": [
+        "Current page availability does not prove a complete historical archive.",
+        "Issuer as-of dates do not by themselves prove publication timestamps."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "ISHARES-IBIT-OFFICIAL-DATA",
+      "title": "iShares Bitcoin Trust ETF official fund and holdings data",
+      "publisher": "BlackRock iShares",
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-31T18:09:40.573564Z",
+      "source_kind": "OFFICIAL_ISSUER_DATA",
+      "url": "https://www.ishares.com/us/products/333011/ishares-bitcoin-trustIBIT",
+      "supported_claims": [
+        "Official issuer page exposes holdings and shares-outstanding fields.",
+        "Holdings downloads identify bitcoin quantity as an issuer data field."
+      ],
+      "limitations": [
+        "Visible date selectors do not prove complete daily historical coverage.",
+        "Investment-book holdings can differ from accounting-book holdings."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "SEC-2024-SPOT-BITCOIN-ETP-APPROVAL",
+      "title": "Order approving United States spot Bitcoin ETP listings",
+      "publisher": "United States Securities and Exchange Commission",
+      "publication_or_revision_date": "2024-01-10",
+      "accessed_at": "2026-08-31T18:09:40.573564Z",
+      "source_kind": "OFFICIAL_REGULATOR",
+      "url": "https://www.sec.gov/files/rules/sro/nysearca/2024/34-99306.pdf",
+      "supported_claims": [
+        "The SEC approved the listing and trading of multiple spot Bitcoin ETPs.",
+        "The approved 2024 structure used cash creations and redemptions."
+      ],
+      "limitations": [
+        "Regulatory approval does not prove investor demand or future returns."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "SEC-2025-CRYPTO-ETP-DISCLOSURE",
+      "title": "Crypto Asset Exchange-Traded Products disclosure statement",
+      "publisher": "United States Securities and Exchange Commission",
+      "publication_or_revision_date": "2025-07-01",
+      "accessed_at": "2026-08-31T18:09:40.573564Z",
+      "source_kind": "OFFICIAL_REGULATOR",
+      "url": "https://www.sec.gov/newsroom/speeches-statements/cf-crypto-asset-exchange-traded-products-070125",
+      "supported_claims": [
+        "Authorized participants facilitate creation and redemption units.",
+        "Crypto ETP trusts hold spot assets or derivative instruments."
+      ],
+      "limitations": [
+        "Disclosure guidance does not provide a daily cross-fund history."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "SEC-2025-IN-KIND-APPROVAL",
+      "title": "SEC permits in-kind creations and redemptions for crypto ETPs",
+      "publisher": "United States Securities and Exchange Commission",
+      "publication_or_revision_date": "2025-07-29",
+      "accessed_at": "2026-08-31T18:09:40.573564Z",
+      "source_kind": "OFFICIAL_REGULATOR",
+      "url": "https://www.sec.gov/newsroom/press-releases/2025-101-sec-permits-kind-creations-redemptions-crypto-etps",
+      "supported_claims": [
+        "The SEC permitted in-kind creation and redemption in July 2025.",
+        "This changed the earlier cash-only transmission regime."
+      ],
+      "limitations": [
+        "Approval date may differ from each trust's operational effective date."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "SEC-ARKB-IN-KIND-PROSPECTUS-SUPPLEMENT",
+      "title": "ARK 21Shares Bitcoin ETF in-kind prospectus supplement",
+      "publisher": "United States Securities and Exchange Commission EDGAR",
+      "publication_or_revision_date": "2025-07-30",
+      "accessed_at": "2026-08-31T18:09:40.573564Z",
+      "source_kind": "OFFICIAL_SEC_FILING",
+      "url": "https://www.sec.gov/Archives/edgar/data/1869699/000121390025069319/ea0250862-424b3_ark21shares.htm",
+      "supported_claims": [
+        "The trust disclosed in-kind as an alternative to cash processing.",
+        "Per-fund filings are required to establish operational regime dates."
+      ],
+      "limitations": [
+        "One trust's filing cannot establish the regime for every ETP."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "SEC-BITB-2025-ANNUAL-REPORT",
+      "title": "Bitwise Bitcoin ETF 2025 annual report",
+      "publisher": "United States Securities and Exchange Commission EDGAR",
+      "publication_or_revision_date": "2026-03-02",
+      "accessed_at": "2026-08-31T18:09:40.573564Z",
+      "source_kind": "OFFICIAL_SEC_FILING",
+      "url": "https://www.sec.gov/Archives/edgar/data/1763415/000119312526085335/bitb-20251231.htm",
+      "supported_claims": [
+        "The filing establishes trust identity, ticker, and first trading date.",
+        "Periodic filings can anchor audited fund lifecycle facts."
+      ],
+      "limitations": [
+        "Annual totals cannot replace daily point-in-time creation records."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "SEC-IBIT-2025-ANNUAL-REPORT",
+      "title": "iShares Bitcoin Trust ETF 2025 annual report",
+      "publisher": "United States Securities and Exchange Commission EDGAR",
+      "publication_or_revision_date": "2026-02-27",
+      "accessed_at": "2026-08-31T18:09:40.573564Z",
+      "source_kind": "OFFICIAL_SEC_FILING",
+      "url": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926006058/bit20251231_10k.htm",
+      "supported_claims": [
+        "The filing describes creations, redemptions, and trust operations.",
+        "The filing distinguishes cash and in-kind effects in the later regime."
+      ],
+      "limitations": [
+        "Annual disclosures are too coarse for a weekly causal signal."
+      ],
+      "does_not_prove_edge": true
+    }
+  ],
+  "operator_scope": {
+    "execution_environment": "BINANCE_SPOT_TESTNET",
+    "product": "SPOT",
+    "symbol": "BTCUSDT",
+    "direction": "LONG_OR_CASH",
+    "maximum_effective_leverage": "1",
+    "simulated_equity_usd": "100",
+    "maximum_per_trade_loss_usd": "0.5",
+    "maximum_daily_loss_usd": "1",
+    "maximum_total_loss_usd": "10",
+    "one_time_data_budget_usd": "0",
+    "monthly_data_budget_usd": "0",
+    "etp_trading_authority": false,
+    "production_authority": false,
+    "live_authority": false,
+    "real_capital": false
+  },
+  "mechanism_id": "S4-US-SPOT-BITCOIN-ETP-NET-CREATION-PRESSURE",
+  "mechanism_family": "REGULATED_US_SPOT_BITCOIN_ETP_PRIMARY_MARKET_CREATION_REDEMPTION",
+  "economic_actor": "AUTHORIZED_PARTICIPANTS_SPONSORS_AND_REGULATED_ETP_ALLOCATORS",
+  "ex_ante_hypothesis": "Persistent positive net primary-market creations across the complete universe of United States spot Bitcoin ETPs may represent regulated allocator demand and bitcoin inventory absorption that transfers to BTCUSDT Spot after every included issuer record is publicly available. Aurex may later evaluate one weekly long-or-cash candidate, but only after complete point-in-time issuer history and each fund's cash-versus-in-kind regime are proven; missing, late, revised, or narrow fund participation means cash, never short exposure.",
+  "ex_ante_direction": "POSITIVE_AGGREGATE_NET_CREATION_WITH_CROSS_FUND_BREADTH_LONG_ELSE_CASH",
+  "source_authorities": [
+    "UNITED_STATES_SEC",
+    "OFFICIAL_ETP_ISSUERS"
+  ],
+  "prospective_signal_frequency": "WEEKLY",
+  "universe_policy": "ALL_SEC_APPROVED_US_SPOT_BITCOIN_ETPS_FROM_EACH_FIRST_TRADING_DATE",
+  "prospective_measurement_families": [
+    "SHARES_OUTSTANDING_CHANGE",
+    "BITCOIN_PER_SHARE",
+    "ESTIMATED_NET_BITCOIN_CREATION_REDEMPTION",
+    "CROSS_FUND_NET_CREATION_BREADTH",
+    "CASH_VERSUS_IN_KIND_CREATION_REGIME"
+  ],
+  "cash_only_regime_start": "2024-01-11T00:00:00Z",
+  "sec_in_kind_authorization_date": "2025-07-29T00:00:00Z",
+  "per_fund_in_kind_effective_date_required": true,
+  "known_regulatory_regime_change_declared": true,
+  "causal_observation_policy": [
+    "INCLUDE_EVERY_SEC_APPROVED_US_SPOT_BITCOIN_ETP_FROM_FIRST_TRADING_DATE",
+    "USE_ONLY_OFFICIAL_ISSUER_OR_SEC_FILED_RECORDS_AVAILABLE_AT_DECISION_TIME",
+    "REQUIRE_ACTUAL_PUBLICATION_TIMESTAMP_OR_VERIFIABLE_AVAILABILITY_MARKER",
+    "AGGREGATE_ONLY_COMPLETE_BUSINESS_DAYS_THROUGH_THE_PRIOR_FRIDAY",
+    "EARLIEST_EXECUTION_IS_MONDAY_00_00_UTC_AFTER_A_24_HOUR_BUFFER",
+    "SEPARATE_CASH_ONLY_AND_PER_FUND_CASH_OR_IN_KIND_REGIMES",
+    "ADJUST_FOR_FEES_SPLITS_MERGERS_CLOSURES_AND_NON_CREATION_HOLDING_CHANGES",
+    "NEW_LAUNCHES_ENTER_PROSPECTIVELY_AND_CLOSED_FUNDS_REMAIN_IN_HISTORY",
+    "MISSING_LATE_REVISED_OR_AMBIGUOUS_FUND_RECORD_FORCES_CASH",
+    "HASH_ALL_METADATA_FILINGS_REQUESTS_RESPONSES_AND_FUTURE_PAYLOADS"
+  ],
+  "exact_source_requirements": [
+    "OFFICIAL_SEC_APPROVAL_AND_FILING_IDENTITY_FOR_COMPLETE_ETP_UNIVERSE",
+    "OFFICIAL_FIRST_TRADING_DATE_AND_TERMINATION_OR_REORGANIZATION_DATE",
+    "OFFICIAL_DAILY_SHARES_OUTSTANDING_HISTORY_FOR_EVERY_INCLUDED_FUND",
+    "OFFICIAL_DAILY_BITCOIN_HOLDINGS_OR_BITCOIN_PER_SHARE_HISTORY",
+    "ACTUAL_PUBLICATION_TIMESTAMP_OR_CAUSALLY_VERIFIABLE_AVAILABILITY_MARKER",
+    "PER_FUND_CASH_AND_IN_KIND_OPERATIONAL_EFFECTIVE_DATES",
+    "CREATION_BASKET_SIZE_AND_CORPORATE_ACTION_HISTORY",
+    "SPONSOR_FEE_AND_NON_CREATION_BITCOIN_DISPOSAL_RECONCILIATION",
+    "SURVIVORSHIP_SAFE_NEW_LAUNCH_CLOSURE_MERGER_AND_TICKER_HISTORY",
+    "IMMUTABLE_REQUEST_RESPONSE_FILING_AND_DOWNLOAD_HASHES",
+    "OFFICIAL_BINANCE_SPOT_BTCUSDT_EXECUTION_PRICES_WITH_CHECKSUMS",
+    "ZERO_DOLLAR_ACCESS_WITH_DOCUMENTED_REUSE_RIGHTS"
+  ],
+  "independence_exclusions": [
+    "NO_PRICE_MOMENTUM_TREND_PULLBACK_BREAKOUT_OR_MEAN_REVERSION_INPUT",
+    "NO_VOLATILITY_SCALING_PATH_QUALITY_OR_CROSS_SECTIONAL_RANKING_INPUT",
+    "NO_AGGRESSOR_FLOW_ORDER_BOOK_CLOCK_PHASE_OR_JAM_EXHAUSTION_INPUT",
+    "NO_FUNDING_BASIS_CARRY_PERPETUAL_FLOW_OR_CROSS_VENUE_INPUT",
+    "NO_NFCI_MONETARY_FINANCIAL_CONDITIONS_OR_OTHER_MACRO_INPUT",
+    "NO_BITCOIN_ONCHAIN_TRANSACTION_FEE_OR_SETTLEMENT_DEMAND_INPUT",
+    "NO_STABLECOIN_ISSUANCE_TRANSFER_OR_ONCHAIN_LIQUIDITY_INPUT",
+    "NO_VARIANCE_RISK_PREMIUM_OPTION_OR_DERIVATIVES_PRICING_INPUT",
+    "NO_CFTC_POSITION_OPEN_INTEREST_VOLUME_OR_FUTURES_RETURN_INPUT",
+    "NO_ETP_SECONDARY_MARKET_VOLUME_PREMIUM_DISCOUNT_OR_PRICE_SIGNAL_INPUT",
+    "NO_FUTURES_ETP_OPTIONS_SHORTING_BORROWING_OR_LEVERAGE",
+    "NO_REUSE_OF_S1_S2_S3_THRESHOLDS_DIAGNOSTICS_FAILURES_OR_OUTCOMES",
+    "NO_PARAMETER_SEARCH_ENSEMBLE_OR_POST_HOC_SIGNAL_REVERSAL"
+  ],
+  "feasibility_gates": [
+    "ALL_ELEVEN_PREDECESSOR_FAMILIES_BOUND_AND_NONREUSABLE",
+    "COMPLETE_SEC_APPROVED_US_SPOT_BITCOIN_ETP_UNIVERSE_IS_RECONSTRUCTABLE",
+    "EVERY_FUND_FIRST_TRADE_CLOSURE_MERGER_AND_TICKER_EVENT_IS_RECONSTRUCTABLE",
+    "OFFICIAL_DAILY_SHARES_OUTSTANDING_HISTORY_IS_COMPLETE_POINT_IN_TIME",
+    "OFFICIAL_DAILY_BITCOIN_HOLDINGS_OR_PER_SHARE_HISTORY_IS_COMPLETE",
+    "ACTUAL_PUBLICATION_TIMING_IS_CAUSALLY_RECONSTRUCTABLE_FOR_EVERY_RECORD",
+    "CASH_ONLY_AND_PER_FUND_IN_KIND_EFFECTIVE_DATES_ARE_RECONSTRUCTABLE",
+    "FEES_SPLITS_AND_NON_CREATION_HOLDING_CHANGES_ARE_DISTINGUISHABLE",
+    "SURVIVORSHIP_SAFE_CROSS_FUND_CALENDAR_AND_MISSINGNESS_ARE_IMPLEMENTABLE",
+    "WEEKLY_FRIDAY_CUTOFF_AND_MONDAY_EXECUTION_BUFFER_ARE_IMPLEMENTABLE",
+    "ZERO_DOLLAR_ACCESS_AND_REUSE_RIGHTS_ARE_DOCUMENTED_FOR_ALL_SOURCES",
+    "INCIDENTAL_SOURCE_NUMERIC_FIELD_EXPOSURE_IS_DECLARED_AND_NONQUALIFYING",
+    "ONE_SELECTABLE_MECHANISM_AND_ZERO_CHARTER_STAGE_PARAMETERS",
+    "FAILURE_OF_ANY_GATE_SELECTS_ZERO_AND_STOPS_S4_BEFORE_ETP_VALUES"
+  ],
+  "partitions": [
+    {
+      "role": "PRE_ETP_NOT_APPLICABLE",
+      "start": "2017-08-17T00:00:00Z",
+      "end": "2024-01-11T00:00:00Z",
+      "state": "NO_US_SPOT_BITCOIN_ETP_MECHANISM",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "CASH_ONLY_DEVELOPMENT",
+      "start": "2024-01-11T00:00:00Z",
+      "end": "2025-07-29T00:00:00Z",
+      "state": "OUTCOME_AWARE_NONQUALIFYING",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "MIXED_REGIME_OUTCOME_AWARE_SCREEN",
+      "start": "2025-07-29T00:00:00Z",
+      "end": "2026-11-07T00:00:00Z",
+      "state": "OUTCOME_AWARE_NONQUALIFYING",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "PROSPECTIVE_VALIDATION",
+      "start": "2026-11-07T00:00:00Z",
+      "end": "2027-05-07T00:00:00Z",
+      "state": "LOCKED_FUTURE",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "FUTURE_HOLDOUT",
+      "start": "2027-05-07T00:00:00Z",
+      "end": "2027-11-07T00:00:00Z",
+      "state": "LOCKED_FUTURE",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "FORWARD",
+      "start": "2027-11-07T00:00:00Z",
+      "end": null,
+      "state": "LOCKED_FUTURE",
+      "outcome_access_permitted": false
+    }
+  ],
+  "rejected_candidate_families": [
+    "MINER_INVENTORY_SELF_REPORTING_REJECTED_FOR_SPARSE_NONUNIFORM_TIMING",
+    "SEARCH_AND_SOCIAL_ATTENTION_REJECTED_FOR_REVISED_NORMALIZED_SOURCE",
+    "STABLECOIN_ISSUANCE_REJECTED_FOR_ONCHAIN_OVERLAP_AND_SOURCE_FRAGMENTATION"
+  ],
+  "proposal_budget": 1,
+  "selected_mechanism_count": 1,
+  "familywise_predecessor_count": 11,
+  "all_historical_etp_outcomes_declared_outcome_aware": true,
+  "historical_etp_results_cannot_qualify_s4": true,
+  "source_metadata_pages_inspected": [
+    "https://www.ark-funds.com/funds/arkb",
+    "https://www.ishares.com/us/products/333011/ishares-bitcoin-trustIBIT",
+    "https://www.sec.gov/files/rules/sro/nysearca/2024/34-99306.pdf",
+    "https://www.sec.gov/newsroom/speeches-statements/cf-crypto-asset-exchange-traded-products-070125",
+    "https://www.sec.gov/newsroom/press-releases/2025-101-sec-permits-kind-creations-redemptions-crypto-etps",
+    "https://www.sec.gov/Archives/edgar/data/1869699/000121390025069319/ea0250862-424b3_ark21shares.htm",
+    "https://www.sec.gov/Archives/edgar/data/1763415/000119312526085335/bitb-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1980994/000143774926006058/bit20251231_10k.htm"
+  ],
+  "incidental_source_numeric_fields_observed": [
+    "BITCOIN_QUANTITY_HELD",
+    "NET_ASSET_VALUE",
+    "SHARES_CREATED_OR_REDEEMED_ANNUAL_TOTAL",
+    "SHARES_OUTSTANDING"
+  ],
+  "etp_time_series_rows_parsed": 0,
+  "etp_numeric_payloads_acquired": 0,
+  "btc_market_numeric_fields_inspected": [],
+  "exact_parameters_defined": [],
+  "return_metrics_calculated": [],
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "decision": "FREEZE_S4_FOR_POINT_IN_TIME_SOURCE_FEASIBILITY_ONLY",
+  "next_authorization": "AUTHORIZE_S4_ETP_SOURCE_METADATA_AND_POINT_IN_TIME_FEASIBILITY_PROTOCOL_ONLY",
+  "authorizes_source_metadata_requests": true,
+  "authorizes_sec_filing_metadata_requests": true,
+  "authorizes_etp_numeric_value_access": false,
+  "authorizes_market_value_access": false,
+  "authorizes_payload_acquisition": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_return_testing": false,
+  "authorizes_historical_screen_access": false,
+  "authorizes_validation_access": false,
+  "authorizes_holdout_access": false,
+  "authorizes_pine_deployment": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "All available ETP and BTC history is outcome-aware and cannot qualify S4.",
+    "Annual SEC filings are authoritative but too coarse for weekly signals.",
+    "Bitcoin holdings can change because of sponsor fees or expenses, not only creations and redemptions.",
+    "Cash creations can cause open-market purchases while in-kind creations can transfer inventory, so transmission is regime-dependent.",
+    "Issuer pages may revise history or omit publication timestamps.",
+    "No ETP time-series row, downloadable numeric payload, or BTC return outcome was parsed or persisted by Aurex.",
+    "No ETP value, BTC market value, parameter, return, candidate, signal, paper order, Testnet strategy order, production action, live action, real capital, or profit is authorized.",
+    "Official search snippets exposed example issuer numeric fields; those fields and all historical periods are nonqualifying.",
+    "Prospective validation and holdout require twelve future months before live eligibility can be considered.",
+    "Shares outstanding can change for reasons requiring corporate-action and trust-operation reconciliation.",
+    "The short post-2024 history limits development and regime sample size.",
+    "This charter selects a source-feasibility hypothesis, not a strategy."
+  ],
+  "charter_evidence_hash": "8827763c7b1d71255ceff1859c0e69835403c7653ead6ad6f233edae5b9c08b4"
+}

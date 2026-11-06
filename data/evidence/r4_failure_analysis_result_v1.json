@@ -1,0 +1,780 @@
+{
+  "schema_version": "aurex-r4-failure-analysis-result-v1",
+  "generated_at": "2026-07-27T10:48:09.316716Z",
+  "status": "COMPLETE_DESCRIPTIVE_ANALYSIS",
+  "package_evidence_hash": "e15fdf4ee9618e1b8d5f1195aebcf3065f0c0f66fa36e788129091fa6b84e2b4",
+  "failure_protocol_evidence_hash": "3b0578e826a1c93929f7a2515a44169ad7a9b7c7887c23774078fc91dc3c714b",
+  "run_package_evidence_hash": "d7c734bd3f786da68c0567a2edfd8020b4ac477878e0f6f4e37fb13217bed240",
+  "result_ledger_evidence_hash": "797ea50d142bbd61f22e87ff9ddf72f30b12c70940d596d027e70660ee26e626",
+  "original_verdict": "RETIRE_R4_CANDIDATE",
+  "cost_attribution": {
+    "raw_price_pl": "-52.0182996116883376",
+    "commission": "14.54381299580447530656880",
+    "slippage": "7.27189349332733473120",
+    "modeled_costs": "21.81570648913181003776880",
+    "net_pl": "-73.83400610082014763776880",
+    "reconciliation_delta": "0E-23",
+    "reconciles": true,
+    "raw_profit_factor": "0.85299208718220210265491630524154560128327097165946",
+    "net_profit_factor": "0.79907381400099427184162898918243564040590006172326",
+    "raw_expectancy": "-0.46444910367578872857142857142857142857142857142857",
+    "net_expectancy": "-0.65923219732875131819436428571428571428571428571429",
+    "modeled_cost_per_trade": "0.19478309365296258962293571428571428571428571428571"
+  },
+  "quarterly_summary": [
+    {
+      "fold_id": "validation-fold-01-2025q1",
+      "net_pl": "-55.30576351404702320891700",
+      "profit_factor": "0.42150111580367515271370778853417734237010059299268",
+      "raw_price_pl": "-52.0050385079198340",
+      "completed_trades": 27,
+      "maximum_drawdown_percent": "12.083044276885413330406036221321535561246518480022",
+      "average_gross_exposure_percent": "14.694039802642282753972288787505418463529460422814",
+      "minimum_active_symbol_count_at_rebalance": 34
+    },
+    {
+      "fold_id": "validation-fold-02-2025q2",
+      "net_pl": "-47.61156559907889983136255",
+      "profit_factor": "0.56291487264987130970945765554655103661593450565917",
+      "raw_price_pl": "-41.5452891615380251",
+      "completed_trades": 32,
+      "maximum_drawdown_percent": "10.477484031828658208484289540097970886866960811078",
+      "average_gross_exposure_percent": "13.540906366813588704142416896711447512943714383410",
+      "minimum_active_symbol_count_at_rebalance": 34
+    },
+    {
+      "fold_id": "validation-fold-03-2025q3",
+      "net_pl": "57.28742837279822649651660",
+      "profit_factor": "1.3949243503459366057628310176941483619176262202827",
+      "raw_price_pl": "69.7288256300926332",
+      "completed_trades": 49,
+      "maximum_drawdown_percent": "8.1393712868424030213529114314883045863986041481327",
+      "average_gross_exposure_percent": "46.726215590929647218248165710367659834875724114423",
+      "minimum_active_symbol_count_at_rebalance": 33
+    },
+    {
+      "fold_id": "validation-fold-04-2025q4",
+      "net_pl": "-71.86253200138561737476655",
+      "profit_factor": "0E+23",
+      "raw_price_pl": "-68.5377370058488331",
+      "completed_trades": 14,
+      "maximum_drawdown_percent": "13.111405874091992285583732387792263276955785589366",
+      "average_gross_exposure_percent": "8.5368256456334400273795732318603209748990619248434",
+      "minimum_active_symbol_count_at_rebalance": 33
+    }
+  ],
+  "monthly_net_returns": {
+    "2025-01": "0.0425668864248189770502545",
+    "2025-02": "-0.0938766147412295932213806205",
+    "2025-03": "0",
+    "2025-04": "0",
+    "2025-05": "0.015897835244278598332064578",
+    "2025-06": "-0.0382966060788830407926990020",
+    "2025-07": "0.122804691477903514427207020",
+    "2025-08": "-0.0566746611496881731923137610",
+    "2025-09": "-0.0042340523493492241537219287",
+    "2025-10": "-0.0339925027897207865391454711",
+    "2025-11": "-0.0150756032514401479404500083",
+    "2025-12": "0"
+  },
+  "exit_reason_summary": [
+    {
+      "exit_reason": "END_OF_WINDOW",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0"
+    },
+    {
+      "exit_reason": "FIXED_STOP",
+      "trades": 68,
+      "raw_price_pl": "-335.7752216400827376",
+      "net_pl": "-347.79129538881781723496880",
+      "commission": "8.01077179502699310376880",
+      "slippage": "4.00530195370808653120"
+    },
+    {
+      "exit_reason": "MARKET_TERMINATION_WRITE_OFF",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0"
+    },
+    {
+      "exit_reason": "REBALANCE",
+      "trades": 44,
+      "raw_price_pl": "283.7569220283944",
+      "net_pl": "273.95728928799766959720",
+      "commission": "6.53304120077748220280",
+      "slippage": "3.26659153961924820"
+    }
+  ],
+  "holding_duration_summary": [
+    {
+      "bucket_id": "01_UP_TO_7_DAYS",
+      "trades": 42,
+      "average_hours": "69.238095238095238095238095238095238095238095238095",
+      "raw_price_pl": "-208.3532925852994361",
+      "net_pl": "-216.28478233610191009556805"
+    },
+    {
+      "bucket_id": "02_OVER_7_TO_14_DAYS",
+      "trades": 70,
+      "average_hours": "315.54285714285714285714285714285714285714285714286",
+      "raw_price_pl": "156.3349929736110985",
+      "net_pl": "142.45077623528176245779925"
+    },
+    {
+      "bucket_id": "03_OVER_14_DAYS",
+      "trades": 0,
+      "average_hours": "0",
+      "raw_price_pl": "0",
+      "net_pl": "0"
+    }
+  ],
+  "rebalance_cohorts": [
+    {
+      "entry_at": "2025-01-01T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "16.8993459351728416",
+      "net_pl": "16.09743961726579792402080",
+      "commission": "0.53460139538037325517920",
+      "slippage": "0.26730492252667042080"
+    },
+    {
+      "entry_at": "2025-01-15T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-7.6341950105823326",
+      "net_pl": "-8.59693882596051239226630",
+      "commission": "0.64183048261795495856630",
+      "slippage": "0.32091333276022483370"
+    },
+    {
+      "entry_at": "2025-01-29T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-35.2625181134839964",
+      "net_pl": "-36.04678801575671614739820",
+      "commission": "0.52285247860149874559820",
+      "slippage": "0.26141742367122100180"
+    },
+    {
+      "entry_at": "2025-02-12T00:00:00Z",
+      "trades": 6,
+      "raw_price_pl": "-26.0076713190263466",
+      "net_pl": "-26.75947628959559259327330",
+      "commission": "0.50120764832471716657330",
+      "slippage": "0.25059732224452882670"
+    },
+    {
+      "entry_at": "2025-05-07T00:00:00Z",
+      "trades": 4,
+      "raw_price_pl": "32.047649199426",
+      "net_pl": "30.9739515380234627130",
+      "commission": "0.7157930996601582870",
+      "slippage": "0.3579045617423790"
+    },
+    {
+      "entry_at": "2025-05-21T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-10.5746560601520960",
+      "net_pl": "-11.86938368985510193204800",
+      "commission": "0.86315351557801398004800",
+      "slippage": "0.43157411412499195200"
+    },
+    {
+      "entry_at": "2025-06-04T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-17.3885378378192455",
+      "net_pl": "-18.47734855328780354137275",
+      "commission": "0.72587670840201166412275",
+      "slippage": "0.36293400706654637725"
+    },
+    {
+      "entry_at": "2025-06-18T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-22.3179059100390155",
+      "net_pl": "-23.35061188553286199625775",
+      "commission": "0.68847436998021600400775",
+      "slippage": "0.34423160551363049225"
+    },
+    {
+      "entry_at": "2025-07-02T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "66.748177892186",
+      "net_pl": "65.1980043220387590930",
+      "commission": "1.0334379220685119070",
+      "slippage": "0.5167356480787290"
+    },
+    {
+      "entry_at": "2025-07-16T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "71.2991520719624983",
+      "net_pl": "68.95830126776431553379915",
+      "commission": "1.56055531960677651705085",
+      "slippage": "0.78029548459140624915"
+    },
+    {
+      "entry_at": "2025-07-30T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-33.1169754225493513",
+      "net_pl": "-34.66339710106342954772565",
+      "commission": "1.03095330517195592337565",
+      "slippage": "0.51546837334212232435"
+    },
+    {
+      "entry_at": "2025-08-13T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-26.1271386153596638",
+      "net_pl": "-28.00803306252806298413190",
+      "commission": "1.25393398596870201603190",
+      "slippage": "0.62696046119969716810"
+    },
+    {
+      "entry_at": "2025-08-27T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-20.4762752565608930",
+      "net_pl": "-21.56455758399541794094650",
+      "commission": "0.72552496433555938744650",
+      "slippage": "0.36275736309896555350"
+    },
+    {
+      "entry_at": "2025-09-10T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "22.4015376049687929",
+      "net_pl": "20.71641272506674819504645",
+      "commission": "1.12341285301176230850355",
+      "slippage": "0.56171202689028239645"
+    },
+    {
+      "entry_at": "2025-09-24T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-9.9407068889573244",
+      "net_pl": "-11.42616483084064989206220",
+      "commission": "0.99030695137336515426220",
+      "slippage": "0.49515099050996033780"
+    },
+    {
+      "entry_at": "2025-10-08T00:00:00Z",
+      "trades": 7,
+      "raw_price_pl": "-33.6562337160779167",
+      "net_pl": "-35.61402200730074936390835",
+      "commission": "1.30519780352084112225835",
+      "slippage": "0.65259048770199154165"
+    },
+    {
+      "entry_at": "2025-10-22T00:00:00Z",
+      "trades": 4,
+      "raw_price_pl": "-18.9113481647962886",
+      "net_pl": "-19.40139372526233276524430",
+      "commission": "0.32670019220205690954430",
+      "slippage": "0.16334536826398725570"
+    }
+  ],
+  "symbol_contribution": [
+    {
+      "symbol": "AAVEUSDT",
+      "trades": 9,
+      "raw_price_pl": "-22.6751239241546783",
+      "net_pl": "-23.96444144617870835988915",
+      "commission": "0.85954879387000739903915",
+      "slippage": "0.42976872815402266085",
+      "leave_one_market_out_net_pl": "-62.93097059018638668077520"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "trades": 4,
+      "raw_price_pl": "-1.5924781971711326",
+      "net_pl": "-2.29010246577834648666630",
+      "commission": "0.46508311115117545296630",
+      "slippage": "0.23254115745603843370",
+      "leave_one_market_out_net_pl": "-73.46057004320290991674320"
+    },
+    {
+      "symbol": "APEUSDT",
+      "trades": 3,
+      "raw_price_pl": "-1.6559328140130478",
+      "net_pl": "-2.22133217471756623482390",
+      "commission": "0.37693318312514795872390",
+      "slippage": "0.18846617757937047610",
+      "leave_one_market_out_net_pl": "-63.89405709228215640128190"
+    },
+    {
+      "symbol": "APTUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "trades": 4,
+      "raw_price_pl": "8.0201206697394414",
+      "net_pl": "7.28170238256036710762070",
+      "commission": "0.49227752143260457167930",
+      "slippage": "0.24614076574646972070",
+      "leave_one_market_out_net_pl": "-82.38116345637339120528225"
+    },
+    {
+      "symbol": "BCHUSDT",
+      "trades": 9,
+      "raw_price_pl": "18.1975793663160881",
+      "net_pl": "16.00134458228329712589405",
+      "commission": "1.46415348975863293005595",
+      "slippage": "0.73208129427415804405",
+      "leave_one_market_out_net_pl": "-105.77501341826044747266615"
+    },
+    {
+      "symbol": "BNBUSDT",
+      "trades": 6,
+      "raw_price_pl": "44.7391517928716256",
+      "net_pl": "42.45476858548781459741280",
+      "commission": "1.52291468173057518978720",
+      "slippage": "0.76146852565323581280",
+      "leave_one_market_out_net_pl": "-115.49175603223436582058495"
+    },
+    {
+      "symbol": "CFXUSDT",
+      "trades": 5,
+      "raw_price_pl": "-14.9308762344746168",
+      "net_pl": "-15.54901591346679411210840",
+      "commission": "0.41209560780749062050840",
+      "slippage": "0.20604407118468669160",
+      "leave_one_market_out_net_pl": "-62.47215452828329443520575"
+    },
+    {
+      "symbol": "CRVUSDT",
+      "trades": 7,
+      "raw_price_pl": "-20.7494587403276266",
+      "net_pl": "-21.51813184993521632391330",
+      "commission": "0.51245219798151653721330",
+      "slippage": "0.25622091162607318670",
+      "leave_one_market_out_net_pl": "-68.89720266866527392702345"
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "trades": 4,
+      "raw_price_pl": "-1.7201720665858967",
+      "net_pl": "-2.36581810342475384789835",
+      "commission": "0.43043097792124919624835",
+      "slippage": "0.21521505891760795165",
+      "leave_one_market_out_net_pl": "-72.99609307339789662443760"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "ETCUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "FETUSDT",
+      "trades": 3,
+      "raw_price_pl": "-5.8156650072814934",
+      "net_pl": "-6.16973668933183480064670",
+      "commission": "0.23604875731106214734670",
+      "slippage": "0.11802292473927925330",
+      "leave_one_market_out_net_pl": "-82.39086314301574345643325"
+    },
+    {
+      "symbol": "FILUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "GALAUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "GRTUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "ICPUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "INJUSDT",
+      "trades": 2,
+      "raw_price_pl": "8.5996391544228374",
+      "net_pl": "8.34231169892248035531870",
+      "commission": "0.17155020372704562598130",
+      "slippage": "0.08577725177331141870",
+      "leave_one_market_out_net_pl": "-75.84857777597242383463185"
+    },
+    {
+      "symbol": "LDOUSDT",
+      "trades": 6,
+      "raw_price_pl": "-19.2671596855437169",
+      "net_pl": "-20.04944533099938509650845",
+      "commission": "0.52152697483039305495845",
+      "slippage": "0.26075867062527514155",
+      "leave_one_market_out_net_pl": "-57.46891566668607569345220"
+    },
+    {
+      "symbol": "LINKUSDT",
+      "trades": 8,
+      "raw_price_pl": "-23.8487361793314845",
+      "net_pl": "-25.06069164718717693899225",
+      "commission": "0.80797428669315818124225",
+      "slippage": "0.40398118116253425775",
+      "leave_one_market_out_net_pl": "-57.40243541604669623604030"
+    },
+    {
+      "symbol": "LTCUSDT",
+      "trades": 5,
+      "raw_price_pl": "-17.6632489413454990",
+      "net_pl": "-18.59922872210495142424950",
+      "commission": "0.62398946438112517374950",
+      "slippage": "0.31199031637832725050",
+      "leave_one_market_out_net_pl": "-62.15842166351622098020455"
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "MKRUSDT",
+      "trades": 7,
+      "raw_price_pl": "-1.7446716279467258",
+      "net_pl": "-2.95793000077261968466290",
+      "commission": "0.80883920599586724756290",
+      "slippage": "0.40441916683002663710",
+      "leave_one_market_out_net_pl": "-77.39972826382146760443690"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "trades": 1,
+      "raw_price_pl": "-4.7278370285415342",
+      "net_pl": "-4.83944951802137616946710",
+      "commission": "0.07440911429273273656710",
+      "slippage": "0.03720337518710923290",
+      "leave_one_market_out_net_pl": "-68.99455658279877146830170"
+    },
+    {
+      "symbol": "OPUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "trades": 3,
+      "raw_price_pl": "-14.4239426531760988",
+      "net_pl": "-14.83975342115195123984940",
+      "commission": "0.27720958264101048924940",
+      "slippage": "0.13860118533484195060",
+      "leave_one_market_out_net_pl": "-74.06008684535327820551355"
+    },
+    {
+      "symbol": "SANDUSDT",
+      "trades": 3,
+      "raw_price_pl": "-8.4648455622893360",
+      "net_pl": "-8.78273809433522314066800",
+      "commission": "0.21192976550485180866800",
+      "slippage": "0.10596276654103533200",
+      "leave_one_market_out_net_pl": "-75.19597546085349275325540"
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "trades": 0,
+      "raw_price_pl": "0",
+      "net_pl": "0",
+      "commission": "0",
+      "slippage": "0",
+      "leave_one_market_out_net_pl": "-73.83400610082014763776880"
+    },
+    {
+      "symbol": "STXUSDT",
+      "trades": 2,
+      "raw_price_pl": "-9.6973354441508614",
+      "net_pl": "-9.94274491756165718333070",
+      "commission": "0.16360793182977121403070",
+      "slippage": "0.08180154158102456930",
+      "leave_one_market_out_net_pl": "-73.86237004337936337483990"
+    },
+    {
+      "symbol": "TRXUSDT",
+      "trades": 8,
+      "raw_price_pl": "34.0813164522781337",
+      "net_pl": "30.13963064234477463851685",
+      "commission": "2.62778485973616399463315",
+      "slippage": "1.31390095019719506685",
+      "leave_one_market_out_net_pl": "-107.29395113085871145163615"
+    },
+    {
+      "symbol": "UNIUSDT",
+      "trades": 6,
+      "raw_price_pl": "7.1762430939481608",
+      "net_pl": "6.19869286608508553288040",
+      "commission": "0.65169895586820118671960",
+      "slippage": "0.32585127199487408040",
+      "leave_one_market_out_net_pl": "-77.50719127625382906152610"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "trades": 7,
+      "raw_price_pl": "-3.8548660349308758",
+      "net_pl": "-5.10189656353640595173790",
+      "commission": "0.83135432821469258963790",
+      "slippage": "0.41567620039083756210",
+      "leave_one_market_out_net_pl": "-84.25094619086400734340885"
+    }
+  ],
+  "drawdown_episodes": [
+    {
+      "sequence": 1,
+      "started_at": "2025-01-01T08:00:00Z",
+      "trough_at": "2025-01-01T12:00:00Z",
+      "recovered_at": "2025-01-01T16:00:00Z",
+      "ended_at": "2025-01-01T16:00:00Z",
+      "recovered": true,
+      "duration_snapshots": 2,
+      "maximum_drawdown": "1.2869077160020000000",
+      "maximum_drawdown_percent": "0.12844762575239668821446999481061363396217900124549"
+    },
+    {
+      "sequence": 2,
+      "started_at": "2025-01-02T16:00:00Z",
+      "trough_at": "2025-01-02T16:00:00Z",
+      "recovered_at": "2025-01-03T04:00:00Z",
+      "ended_at": "2025-01-03T04:00:00Z",
+      "recovered": true,
+      "duration_snapshots": 3,
+      "maximum_drawdown": "2.9180289599260000000",
+      "maximum_drawdown_percent": "0.28331234239285350556103285023374960814654637491380"
+    },
+    {
+      "sequence": 3,
+      "started_at": "2025-01-03T08:00:00Z",
+      "trough_at": "2025-01-03T08:00:00Z",
+      "recovered_at": "2025-01-03T12:00:00Z",
+      "ended_at": "2025-01-03T12:00:00Z",
+      "recovered": true,
+      "duration_snapshots": 1,
+      "maximum_drawdown": "4.4919155833326000000",
+      "maximum_drawdown_percent": "0.43534895149159905637266206005250236736268303046242"
+    },
+    {
+      "sequence": 4,
+      "started_at": "2025-01-04T00:00:00Z",
+      "trough_at": "2025-01-05T12:00:00Z",
+      "recovered_at": "2025-01-06T04:00:00Z",
+      "ended_at": "2025-01-06T04:00:00Z",
+      "recovered": true,
+      "duration_snapshots": 13,
+      "maximum_drawdown": "7.5897516402050000000",
+      "maximum_drawdown_percent": "0.72174053266870564110125617706373833967940260616124"
+    },
+    {
+      "sequence": 5,
+      "started_at": "2025-01-06T08:00:00Z",
+      "trough_at": "2025-01-06T08:00:00Z",
+      "recovered_at": "2025-01-06T16:00:00Z",
+      "ended_at": "2025-01-06T16:00:00Z",
+      "recovered": true,
+      "duration_snapshots": 2,
+      "maximum_drawdown": "4.2347105983106000000",
+      "maximum_drawdown_percent": "0.40253680712765616951459812170981490938966573498997"
+    },
+    {
+      "sequence": 6,
+      "started_at": "2025-01-06T20:00:00Z",
+      "trough_at": "2025-01-13T12:00:00Z",
+      "recovered_at": "2025-01-16T16:00:00Z",
+      "ended_at": "2025-01-16T16:00:00Z",
+      "recovered": true,
+      "duration_snapshots": 59,
+      "maximum_drawdown": "62.19268401620886678069600",
+      "maximum_drawdown_percent": "5.8959386187327569992562219513028916744417379898132"
+    },
+    {
+      "sequence": 7,
+      "started_at": "2025-01-17T00:00:00Z",
+      "trough_at": "2025-01-17T00:00:00Z",
+      "recovered_at": "2025-01-17T08:00:00Z",
+      "ended_at": "2025-01-17T08:00:00Z",
+      "recovered": true,
+      "duration_snapshots": 2,
+      "maximum_drawdown": "11.39927927775400000000000",
+      "maximum_drawdown_percent": "1.0734628052061026061890017949871195816220651659164"
+    },
+    {
+      "sequence": 8,
+      "started_at": "2025-01-17T16:00:00Z",
+      "trough_at": "2025-01-17T16:00:00Z",
+      "recovered_at": "2025-01-17T20:00:00Z",
+      "ended_at": "2025-01-17T20:00:00Z",
+      "recovered": true,
+      "duration_snapshots": 1,
+      "maximum_drawdown": "2.63059388063400000000000",
+      "maximum_drawdown_percent": "0.24654540071536422519428348252459362798584551693999"
+    },
+    {
+      "sequence": 9,
+      "started_at": "2025-01-18T04:00:00Z",
+      "trough_at": "2025-06-22T20:00:00Z",
+      "recovered_at": "2025-07-28T00:00:00Z",
+      "ended_at": "2025-07-28T00:00:00Z",
+      "recovered": true,
+      "duration_snapshots": 1145,
+      "maximum_drawdown": "160.27202020768439263161630",
+      "maximum_drawdown_percent": "14.930840107747523224115030032760231425948842383500"
+    },
+    {
+      "sequence": 10,
+      "started_at": "2025-07-28T16:00:00Z",
+      "trough_at": "2025-11-04T08:00:00Z",
+      "recovered_at": null,
+      "ended_at": "2026-01-01T00:00:00Z",
+      "recovered": false,
+      "duration_snapshots": 939,
+      "maximum_drawdown": "152.79073540483841962497245",
+      "maximum_drawdown_percent": "14.160969689988974921795617134259377477694373232600"
+    }
+  ],
+  "availability_summary": {
+    "configured_terminal_markets": 2,
+    "observed_availability_events": 2,
+    "held_position_writeoffs": 0,
+    "writeoff_net_pl": "0",
+    "minimum_active_symbol_count_at_rebalance": 33,
+    "average_active_symbol_count_at_rebalance": "33.740740740740740740740740740740740740740740740741",
+    "availability_caused_base_loss": false
+  },
+  "positive_months": 3,
+  "flat_months": 3,
+  "negative_months": 6,
+  "failure_classification": "SIGNAL_NEGATIVE_BEFORE_MODELED_COSTS",
+  "integrity_checks": {
+    "all_35_symbol_rows_present": true,
+    "all_42_replay_artifacts_bound": true,
+    "all_four_quarter_rows_present": true,
+    "cost_reconciliation_exact": true,
+    "exit_reason_net_reconciles": true,
+    "frozen_verdict_preserved": true,
+    "lomo_rows_complete": true,
+    "result_metrics_match_trade_net": true,
+    "symbol_net_reconciles": true
+  },
+  "findings": [
+    {
+      "finding_id": "F-01-RAW-SIGNAL-EDGE",
+      "dimension": "GROSS_NET_COST_RECONCILIATION",
+      "observation": "Raw price P/L was -52.0182996116883376 with raw PF 0.85299208718220210265491630524154560128327097165946; the mechanism was negative before costs.",
+      "interpretation_limit": "Descriptive post-outcome evidence only; it cannot become a rule, parameter, candidate, or promotion claim."
+    },
+    {
+      "finding_id": "F-02-MODELED-COSTS",
+      "dimension": "GROSS_NET_COST_RECONCILIATION",
+      "observation": "Commission plus slippage was 21.81570648913181003776880; net P/L was -73.83400610082014763776880, and exact reconciliation was True.",
+      "interpretation_limit": "Descriptive post-outcome evidence only; it cannot become a rule, parameter, candidate, or promotion claim."
+    },
+    {
+      "finding_id": "F-03-TEMPORAL-STABILITY",
+      "dimension": "QUARTERLY_AND_MONTHLY_STABILITY",
+      "observation": "Only 1/4 quarters and 3/12 months were positive; 6 months were negative.",
+      "interpretation_limit": "Descriptive post-outcome evidence only; it cannot become a rule, parameter, candidate, or promotion claim."
+    },
+    {
+      "finding_id": "F-04-LOMO-ROBUSTNESS",
+      "dimension": "SYMBOL_CONTRIBUTION_AND_LEAVE_ONE_MARKET_OUT",
+      "observation": "Leave-one-market-out positive fraction was 0; no omission restored positive full-window net P/L.",
+      "interpretation_limit": "Descriptive post-outcome evidence only; it cannot become a rule, parameter, candidate, or promotion claim."
+    },
+    {
+      "finding_id": "F-05-CONCENTRATION",
+      "dimension": "SYMBOL_CONTRIBUTION_AND_LEAVE_ONE_MARKET_OUT",
+      "observation": "Single-symbol and top-five gross-profit fractions were 0.19658814832473958154492361953798474517041707005377 and 0.64317036763806809023306602614384227960179640912915; both frozen concentration gates passed.",
+      "interpretation_limit": "Descriptive post-outcome evidence only; it cannot become a rule, parameter, candidate, or promotion claim."
+    },
+    {
+      "finding_id": "F-06-AVAILABILITY",
+      "dimension": "ACTIVE_BREADTH_AND_MARKET_TERMINATION",
+      "observation": "Termination write-off P/L was 0, with minimum active breadth 33; availability did not cause the base loss.",
+      "interpretation_limit": "Descriptive post-outcome evidence only; it cannot become a rule, parameter, candidate, or promotion claim."
+    },
+    {
+      "finding_id": "F-07-DRAWDOWN-EXPOSURE",
+      "dimension": "DRAWDOWN_AND_GROSS_EXPOSURE",
+      "observation": "Maximum drawdown was 14.930840107747523224115030032760231425948842383500% and passed its frozen cap, but controlled drawdown does not establish positive expectancy.",
+      "interpretation_limit": "Descriptive post-outcome evidence only; it cannot become a rule, parameter, candidate, or promotion claim."
+    }
+  ],
+  "next_research_decision": "STOP_PATH_QUALITY_FAMILY_RETURN_TO_UNRELATED_MECHANISM_DISCOVERY",
+  "creates_candidate": false,
+  "changes_r4_verdict": false,
+  "opens_2026_or_forward_partition": false,
+  "permits_pine_parity_review": false,
+  "creates_paper_eligibility": false,
+  "creates_live_eligibility": false,
+  "result_evidence_hash": "b46b2181bf7b890f27a1ac43f6b6307bf095230cf4694c7231c5b8166bbaad4b"
+}

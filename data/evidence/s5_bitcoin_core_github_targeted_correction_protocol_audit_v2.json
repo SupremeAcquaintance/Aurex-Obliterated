@@ -1,0 +1,19 @@
+{
+  "schema_version": "aurex-s5-targeted-correction-v2-remediation-protocol-audit-v1",
+  "audit_id": "s5-targeted-correction-v2-remediation-protocol-audit-v1",
+  "audited_at": "2026-09-04T14:55:51.241694Z",
+  "protocol_file_sha256": "5e3f9e8b2d51163cdb8072062faaaf9994e560df4222e3e83f0e92eba6d3d8b4",
+  "protocol_evidence_hash": "909ec95ced0781f29cfdf89f2d331c5a38c75c988e00081927fa6b36bca88312",
+  "builder_contract_hash": "b1e8144d4ce719697513ea55f4bb0d53fbd81917b4591ee06c0a1aca9469c164",
+  "source_binding_manifest_evidence_hash": "d7f0f1de4652e3d150d588f25892f981ac4a4dd74737388328d30223a34b4099",
+  "target_manifest_evidence_hash": "05c335cafec64026bf2ef7a086eb069ad3cdce6782489309536d9934a71b1ea7",
+  "source_binding_count": 8,
+  "auditor_source_sha256": "5efcbef6723fcc1eca1672273f15af5db2ab0b6ee25819310387262af2d7b12e",
+  "v2_requests_executed": 0,
+  "market_values_read": 0,
+  "orders_submitted": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S5_TARGETED_CORRECTION_V2_PROTOCOL_AUDIT",
+  "next_authorization": "RUN_S5_GITHUB_TARGETED_COMPLETENESS_ACQUISITION_V2",
+  "audit_evidence_hash": "17d54c961c71d0df5c18ec26a2231a1e2cb27323b3e8367dc5f876db7e7c6eb2"
+}

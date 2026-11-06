@@ -1,0 +1,77 @@
+{
+  "schema_version": "aurex-q1-usdm-daily-cross-source-payload-protocol-v1",
+  "protocol_id": "q1-usdm-daily-cross-source-payload-v1",
+  "frozen_at": "2026-08-07T09:04:39.098082Z",
+  "status": "FROZEN_PRE_TWO_DAILY_PAYLOAD_GETS",
+  "census_result_file_sha256": "6c1f24cb0781c2b529618496c13801fb7624eaba291ce74ee76820aa1d69b654",
+  "census_result_evidence_hash": "488041793701639de79d7528aaae2f05b975668542f8a59b566e1cb025c6b727",
+  "census_audit_file_sha256": "af34d1d1e31acb71f4dd46c9cb61882429b41c3d99dd32b85add77d9a6fc28db",
+  "census_audit_evidence_hash": "c9e6170819e16f73b5eb77ae72c780c3bb2acfb188db5a8cf65ac5d59f1cc89a",
+  "builder_contract_hash": "c709d3f11b0565ef6b9523296d376a80b48e43ab8cee401e27b4a9d7423bcb0c",
+  "parent_overlap_event": {
+    "preceding_aggregate_trade_id": 22154875,
+    "current_aggregate_trade_id": 22154876,
+    "preceding_first_raw_trade_id": 30414701,
+    "preceding_last_raw_trade_id": 30414701,
+    "current_first_raw_trade_id": 30414701,
+    "current_last_raw_trade_id": 30414701,
+    "preceding_timestamp_ms": 1579076873303,
+    "current_timestamp_ms": 1579076873303,
+    "overlap_raw_trade_id_count": 1,
+    "first_overlapped_raw_trade_id": 30414701,
+    "last_overlapped_raw_trade_id": 30414701,
+    "utc_day": "2020-01-15"
+  },
+  "targets": [
+    {
+      "family": "aggTrades",
+      "utc_day": "2020-01-15",
+      "archive_url": "https://data.binance.vision/data/futures/um/daily/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-01-15.zip",
+      "published_archive_sha256": "db33bbd493ae7b9cb63458def8bb411d54cf93080e5fa1ce0a19e6b3f36ff1de",
+      "expected_column_count": 7,
+      "expected_member_name": "BTCUSDT-aggTrades-2020-01-15.csv"
+    },
+    {
+      "family": "trades",
+      "utc_day": "2020-01-15",
+      "archive_url": "https://data.binance.vision/data/futures/um/daily/trades/BTCUSDT/BTCUSDT-trades-2020-01-15.zip",
+      "published_archive_sha256": "2de17c79495e43ff4c4435f271c2ead39978bd90678f94330aa5a096583822fd",
+      "expected_column_count": 6,
+      "expected_member_name": "BTCUSDT-trades-2020-01-15.csv"
+    }
+  ],
+  "target_manifest_hash": "341b3cd60ceaaf9d3b560e3d2ab0a49d83907d2a756ae03b2040a41b4b624abb",
+  "maximum_attempts_per_archive": 3,
+  "maximum_payload_get_attempts": 6,
+  "request_timeout_seconds": 120,
+  "retry_backoff_seconds": [
+    1,
+    3
+  ],
+  "redirects_permitted": false,
+  "maximum_archive_bytes_each": 500000000,
+  "maximum_total_archive_bytes": 1000000000,
+  "maximum_member_uncompressed_bytes_each": 5000000000,
+  "maximum_zip_expansion_ratio": 100,
+  "price_or_quantity_parsing_permitted": false,
+  "return_calculation_permitted": false,
+  "validation_outcomes_permitted": false,
+  "holdout_access_permitted": false,
+  "candidate_creation_permitted": false,
+  "paper_operation_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "limitations": [
+    "A pass rejects aggTrades as the USD-M research source and authorizes only a raw-trades metadata census.",
+    "Cross-source adjudication cannot establish edge or profitability.",
+    "No candidate, Pine, paper, strategy-order, production, or live authority is created.",
+    "Only the two checksum-pinned USD-M daily archives may be downloaded.",
+    "Price, quantity, quote quantity, returns, and outcomes remain forbidden.",
+    "Real net profit remains zero dollars.",
+    "The daily aggregate event must exactly reproduce the monthly overlap.",
+    "The overlapped raw trade ID must occur exactly once in raw trades.",
+    "The upstream STOP and checksum-census artifacts remain immutable."
+  ],
+  "protocol_evidence_hash": "f6d0f34a02dfd03f4027c109ac1a89eda241721dd56d475f355c106d7faf6b15"
+}

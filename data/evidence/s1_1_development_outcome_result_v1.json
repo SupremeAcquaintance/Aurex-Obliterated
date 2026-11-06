@@ -1,0 +1,237 @@
+{
+  "schema_version": "aurex-s1-1-development-outcome-result-v1",
+  "result_id": "s1-1-development-outcome-result-v1",
+  "completed_at": "2026-08-27T06:30:42.429414Z",
+  "protocol_file_sha256": "5dfdfe36d53841b8f8b7f66710392eb12d675691c3e557c44b7a8c36c64c437d",
+  "protocol_evidence_hash": "412c8bc189ac723a3fa211b9a2ebf8b35dea8c1e6e94df33f183e07f7517c6da",
+  "execution_contract_file_sha256": "762623a3e40843d0226d26fe54058539b21bf529577b0b0a57227546be4a54d5",
+  "execution_contract_evidence_hash": "adcb48e8c808ab69f0354e171be6e58b44b11ed930ff7b807cc283d5c9900767",
+  "runner_contract_hash": "2d7cd8db9438870646d1df5ff0c1ca03782a8bf267ca4932bcd145e995f0a9bd",
+  "feature_dataset_file_sha256": "db93ee6954fee447cba66b3d873282da4d289f5ef6a63446d6ad036f787b24d6",
+  "price_dataset_file_sha256": "48302226780765f625c1f2241a73d09f07c75227515d8647cdb8ab9759e4fd57",
+  "outcome_ledger_path": "data/evidence/datasets/s1_1_development_outcome_ledger_v1.jsonl",
+  "outcome_ledger_file_sha256": "9828f806677c2b4e77a835de7fa66b40621a798762c84eb4db00b496e49e0926",
+  "outcome_ledger_bytes": 1657988,
+  "outcome_ledger_row_count": 1104,
+  "candidate_outcomes": [
+    {
+      "candidate_id": "S1-C1-CONSISTENT-EASING-PRIMARY",
+      "role": "PRIMARY_ELIGIBILITY",
+      "may_be_promoted": true,
+      "interval_count": 276,
+      "position_transition_count": 88,
+      "long_interval_count": 87,
+      "long_exposure_fraction": "0.315217391304347826086956521739130434782608695652173913043478",
+      "base_final_equity_usd": "107.695828820645849360490108587610589455394410935217072100856",
+      "base_net_total_return": "0.07695828820645849360490108587610589455394410935217072100856",
+      "base_profit_factor": "1.01395236831037631714932955595304247016237052952918400900494",
+      "base_maximum_drawdown": "0.663008741426633160528421368505154560650598786000697306393610",
+      "stress_final_equity_usd": "100.804890187023937464370255809489262193398815737690473479951",
+      "stress_net_total_return": "0.00804890187023937464370255809489262193398815737690473479951",
+      "stress_profit_factor": "1.00149539135281964322459054437252868515417194013259496234913",
+      "stress_maximum_drawdown": "0.669031509223915211907923915127431067414551187361060626612626",
+      "annual_base_returns": {
+        "2018": "-0.387724548828801871551695732922114114445114016329834127606831",
+        "2019": "0.09575316722005550713901627915480419543732909008985686733811",
+        "2020": "0.74602267977328751233314902858824487466581974517754894287721",
+        "2021": "-0.144721922255720768541608809010686420188305360055447784259964",
+        "2022": "-0.508135437067207258692683431323808351542878847182659061820990"
+      },
+      "positive_full_calendar_year_count": 2,
+      "stress_bootstrap_lower_mean_weekly_return": "-0.00483772889816540796331200158811596039371043299737925027962746",
+      "interval_manifest_evidence_hash": "b64ed3da3c6374d08d239cf03b8e7053981c6190e9d5d7054137a62392cced49",
+      "outcome_evidence_hash": "db68220eebcaabbced9b8b82c4fb7d46e1ab8146c9b2714c595137105f49f6d1"
+    },
+    {
+      "candidate_id": "S1-D1-ONE-VINTAGE-EASING",
+      "role": "DIAGNOSTIC_ONLY",
+      "may_be_promoted": false,
+      "interval_count": 276,
+      "position_transition_count": 122,
+      "long_interval_count": 129,
+      "long_exposure_fraction": "0.467391304347826086956521739130434782608695652173913043478261",
+      "base_final_equity_usd": "52.0183012975844875537494281838831308559199921394513020922435",
+      "base_net_total_return": "-0.479816987024155124462505718161168691440800078605486979077565",
+      "base_profit_factor": "0.931734902199011246977363981456591945181641260719233166827387",
+      "base_maximum_drawdown": "0.803030744893742463904401400301405135229369099747037027986246",
+      "stress_final_equity_usd": "47.4617306408927673622515186525944224832118782395883136716245",
+      "stress_net_total_return": "-0.525382693591072326377484813474055775167881217604116863283755",
+      "stress_profit_factor": "0.922794307854991670689152223689862992452279774223157020854731",
+      "stress_maximum_drawdown": "0.818700038033759818080932657929281095959096400990516707508841",
+      "annual_base_returns": {
+        "2018": "-0.635105843899230936338085934363227881746545602994191845522654",
+        "2019": "0.01686860129495067396474172971260245237836139998587269746760",
+        "2020": "1.68320149571785695675391637846400468499507762837083644641465",
+        "2021": "-0.508539963256417373171789322797849871571762713423810081355948",
+        "2022": "-0.582925638624815647056967099534243299769642390196806662133747"
+      },
+      "positive_full_calendar_year_count": 2,
+      "stress_bootstrap_lower_mean_weekly_return": null,
+      "interval_manifest_evidence_hash": "89602cb31c036ccbe16aa157a0a2f5fb9e2fb2a1a9170ca1ce0ad6167f46408f",
+      "outcome_evidence_hash": "ef76e5a59f22a78b9050bc0293cde3a38387e6152c84c3f0ac569a824a1d85f6"
+    },
+    {
+      "candidate_id": "S1-D2-FOUR-VINTAGE-EASING",
+      "role": "DIAGNOSTIC_ONLY",
+      "may_be_promoted": false,
+      "interval_count": 276,
+      "position_transition_count": 54,
+      "long_interval_count": 141,
+      "long_exposure_fraction": "0.510869565217391304347826086956521739130434782608695652173913",
+      "base_final_equity_usd": "238.599664860705210480896052505898071240949509246339633267888",
+      "base_net_total_return": "1.38599664860705210480896052505898071240949509246339633267888",
+      "base_profit_factor": "1.08699377919275185640084890933699916167316445283369114099366",
+      "base_maximum_drawdown": "0.740505589049785510406908264524517090346903377557449304884847",
+      "stress_final_equity_usd": "229.112012838186235808607770096799784937412818697302555718446",
+      "stress_net_total_return": "1.29112012838186235808607770096799784937412818697302555718446",
+      "stress_profit_factor": "1.08261538873854641098180361372949609824047718280384602644621",
+      "stress_maximum_drawdown": "0.743606692790830846810313366200462611143010998817830998660200",
+      "annual_base_returns": {
+        "2018": "-0.597828744644606739925895156433129999982536781646368551414835",
+        "2019": "0.28708979509479123109209091028818175096325816562868738681298",
+        "2020": "1.64937719327216439855029667677373616598274376560501573335258",
+        "2021": "0.45955492788182853065561707091415377017156344023783624229189",
+        "2022": "-0.619725054838055023391037873363603503378662670784774826226784"
+      },
+      "positive_full_calendar_year_count": 3,
+      "stress_bootstrap_lower_mean_weekly_return": null,
+      "interval_manifest_evidence_hash": "3805f445f12f85aea63994347a1dc1c9daad397c89bb1b662e4b4685ecdb7052",
+      "outcome_evidence_hash": "a457579fb2ab1451e30be10c3353a6d4484c8cc54099f095cbdc45f466a5d921"
+    },
+    {
+      "candidate_id": "S1-D3-LOOSE-AND-FOUR-VINTAGE-EASING",
+      "role": "DIAGNOSTIC_ONLY",
+      "may_be_promoted": false,
+      "interval_count": 276,
+      "position_transition_count": 54,
+      "long_interval_count": 141,
+      "long_exposure_fraction": "0.510869565217391304347826086956521739130434782608695652173913",
+      "base_final_equity_usd": "238.599664860705210480896052505898071240949509246339633267888",
+      "base_net_total_return": "1.38599664860705210480896052505898071240949509246339633267888",
+      "base_profit_factor": "1.08699377919275185640084890933699916167316445283369114099366",
+      "base_maximum_drawdown": "0.740505589049785510406908264524517090346903377557449304884847",
+      "stress_final_equity_usd": "229.112012838186235808607770096799784937412818697302555718446",
+      "stress_net_total_return": "1.29112012838186235808607770096799784937412818697302555718446",
+      "stress_profit_factor": "1.08261538873854641098180361372949609824047718280384602644621",
+      "stress_maximum_drawdown": "0.743606692790830846810313366200462611143010998817830998660200",
+      "annual_base_returns": {
+        "2018": "-0.597828744644606739925895156433129999982536781646368551414835",
+        "2019": "0.28708979509479123109209091028818175096325816562868738681298",
+        "2020": "1.64937719327216439855029667677373616598274376560501573335258",
+        "2021": "0.45955492788182853065561707091415377017156344023783624229189",
+        "2022": "-0.619725054838055023391037873363603503378662670784774826226784"
+      },
+      "positive_full_calendar_year_count": 3,
+      "stress_bootstrap_lower_mean_weekly_return": null,
+      "interval_manifest_evidence_hash": "2fb1883e97675d8058294903c9ca941e362d9b72efe708c30a3684770ff2674a",
+      "outcome_evidence_hash": "80019d5a75e8030f9e226a2234d5c0cb8a6e2c1dcf8c557e885d1d231d648990"
+    }
+  ],
+  "primary_gate_results": [
+    {
+      "gate_id": "EXACT_WEEKLY_INTERVAL_COUNT",
+      "operator": "EQ",
+      "threshold": "276",
+      "observed": "276",
+      "status": "PASS",
+      "reason": "Primary observed metric satisfies the frozen gate."
+    },
+    {
+      "gate_id": "MINIMUM_POSITION_TRANSITIONS",
+      "operator": "GE",
+      "threshold": "20",
+      "observed": "88",
+      "status": "PASS",
+      "reason": "Primary observed metric satisfies the frozen gate."
+    },
+    {
+      "gate_id": "MINIMUM_LONG_EXPOSURE_FRACTION",
+      "operator": "GE",
+      "threshold": "0.20",
+      "observed": "0.315217391304347826086956521739130434782608695652173913043478",
+      "status": "PASS",
+      "reason": "Primary observed metric satisfies the frozen gate."
+    },
+    {
+      "gate_id": "MAXIMUM_LONG_EXPOSURE_FRACTION",
+      "operator": "LE",
+      "threshold": "0.80",
+      "observed": "0.315217391304347826086956521739130434782608695652173913043478",
+      "status": "PASS",
+      "reason": "Primary observed metric satisfies the frozen gate."
+    },
+    {
+      "gate_id": "BASE_NET_TOTAL_RETURN_POSITIVE",
+      "operator": "GT",
+      "threshold": "0",
+      "observed": "0.07695828820645849360490108587610589455394410935217072100856",
+      "status": "PASS",
+      "reason": "Primary observed metric satisfies the frozen gate."
+    },
+    {
+      "gate_id": "STRESS_NET_TOTAL_RETURN_POSITIVE",
+      "operator": "GT",
+      "threshold": "0",
+      "observed": "0.00804890187023937464370255809489262193398815737690473479951",
+      "status": "PASS",
+      "reason": "Primary observed metric satisfies the frozen gate."
+    },
+    {
+      "gate_id": "BASE_PROFIT_FACTOR",
+      "operator": "GE",
+      "threshold": "1.10",
+      "observed": "1.01395236831037631714932955595304247016237052952918400900494",
+      "status": "FAIL",
+      "reason": "Primary observed metric fails the frozen gate."
+    },
+    {
+      "gate_id": "STRESS_PROFIT_FACTOR",
+      "operator": "GE",
+      "threshold": "1.00",
+      "observed": "1.00149539135281964322459054437252868515417194013259496234913",
+      "status": "PASS",
+      "reason": "Primary observed metric satisfies the frozen gate."
+    },
+    {
+      "gate_id": "BASE_MAXIMUM_DRAWDOWN",
+      "operator": "LE",
+      "threshold": "0.20",
+      "observed": "0.663008741426633160528421368505154560650598786000697306393610",
+      "status": "FAIL",
+      "reason": "Primary observed metric fails the frozen gate."
+    },
+    {
+      "gate_id": "STRESS_MAXIMUM_DRAWDOWN",
+      "operator": "LE",
+      "threshold": "0.22",
+      "observed": "0.669031509223915211907923915127431067414551187361060626612626",
+      "status": "FAIL",
+      "reason": "Primary observed metric fails the frozen gate."
+    },
+    {
+      "gate_id": "POSITIVE_FULL_CALENDAR_YEARS",
+      "operator": "GE",
+      "threshold": "3",
+      "observed": "2",
+      "status": "FAIL",
+      "reason": "Primary observed metric fails the frozen gate."
+    },
+    {
+      "gate_id": "STRESS_BOOTSTRAP_95PCT_LOWER_MEAN_WEEKLY_RETURN",
+      "operator": "GT",
+      "threshold": "0",
+      "observed": "-0.00483772889816540796331200158811596039371043299737925027962746",
+      "status": "FAIL",
+      "reason": "Primary observed metric fails the frozen gate."
+    }
+  ],
+  "passed_primary_gate_count": 7,
+  "failed_primary_gate_count": 5,
+  "diagnostic_promotion_count": 0,
+  "validation_values_read": 0,
+  "holdout_values_read": 0,
+  "orders_submitted": 0,
+  "decision": "STOP_S1_1_DEVELOPMENT_OUTCOME_FAILED",
+  "next_authorization": "NONE_S1_1_DEVELOPMENT_OUTCOME_FAILED",
+  "result_evidence_hash": "8d900beb2dcbfcb0d11fed1f8ee0a99ecfa812e03900dae21a886973f86cc317"
+}

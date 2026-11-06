@@ -1,0 +1,23 @@
+{
+  "bootstrap_bytes": 42991616,
+  "checkpoint_evidence_hash": "5b87c9e4210df20310fc34abfbcdf8993102d5d150a85ef07143b08355d8c062",
+  "checkpoint_file_sha256": "0131b23f3f2469b9dff3cf8453a6620a81ad800d29b3442163a89836c0b9a88b",
+  "execution_contract_evidence_hash": "402b83efbf928cce5bd8227c5ae723474a3fe58cdac97a3f1a280409bafb96b0",
+  "network_requests_made_by_recovery": 0,
+  "next_action": "RESUME_Q1_SUCCESSOR_V3_ACQUISITION",
+  "orders_submitted": 0,
+  "outcomes_accessed": 0,
+  "partial_bytes": 103245365,
+  "partial_file_sha256": "83b87dfe06351d5f7714af194695d35db982ada10d01affec0147061411585bf",
+  "protocol_evidence_hash": "a8ae24f8939aa88d3ea14aee5eb7b867b82bd50f9620183cb57a77c8466fca51",
+  "reconciled_payload_bytes": 60253749,
+  "recovered_at": "2026-08-10T22:38:19.525939+00:00",
+  "recovery_evidence_hash": "e56f2c0daab75a63be1cc568162f51093684253aae3240ebfdcc965baa22ef41",
+  "recovery_script_file_sha256": "9a26c8aca20b7d84f362a808b3e7fe37db1fee2f4cbf56f922a4e7e477e14fde",
+  "request_marker_file_sha256": "db182ad93e05290b5e0376adf5735a621d8ba178624985cc1e0716d20be72d9d",
+  "response_marker_file_sha256": "1829e7d89a96b41f4272db69947412aa0e8f7f73e9baf806af018823fd428222",
+  "runner_source_hash": "dbd9304fcab694e02a42cf8dc310730f0c191912fdfeee8e18444a561bfaf618",
+  "schema_version": "aurex-q1-periodic-flow-successor-interruption-recovery-v3",
+  "target_key": "2020-05|USD_M_PERPETUAL",
+  "transport_amendment_evidence_hash": "e32c9f0d6c74a1eefa9ba60f9c4cc836a30fff5540575972510446f2b39bf19d"
+}

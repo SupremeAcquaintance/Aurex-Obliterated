@@ -1,0 +1,24 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-paired-payload-pilot-audit-v1",
+  "audit_id": "q1-periodic-flow-paired-payload-pilot-audit-v1",
+  "audited_at": "2026-08-07T08:33:27.145421Z",
+  "result_path": "data/evidence/q1_periodic_flow_payload_pilot_result_v1.json",
+  "result_file_sha256": "69eb9b96467a82ac7f68c5fb022cab7cf2c715592d6e45fcfac359f4b0170630",
+  "result_evidence_hash": "131d3d3a8925982379cf4186257c2c41852de95c228c6dd97b1c4abe494e3565",
+  "protocol_evidence_hash": "f2a6df06336a96050421c449e48a9c8c06aef871b97e73c280a3309c90ca43cc",
+  "archive_file_sha256": {
+    "SPOT": "ea2f0aa850fb08b5c8124d2f8080c03689c30cdadf797363fc74b506b92a8d8b",
+    "USD_M_PERPETUAL": "d93f4201d012c74648d65727be0e17b2f7e38d2f6f9d8cb6817e8486b7ffe435"
+  },
+  "archive_file_bytes": {
+    "SPOT": 214923676,
+    "USD_M_PERPETUAL": 102586079
+  },
+  "archive_count": 2,
+  "structural_evidence_rebuilt": true,
+  "paired_clock_rebuilt": true,
+  "price_or_quantity_values_parsed": [],
+  "return_metrics_calculated": [],
+  "decision": "STOP_Q1_PAIRED_PAYLOAD_CAPABILITY_FAILED",
+  "audit_evidence_hash": "0e099618d30dec7db047f25a0c530b38c55c6a255d09cac39a831392e303746a"
+}

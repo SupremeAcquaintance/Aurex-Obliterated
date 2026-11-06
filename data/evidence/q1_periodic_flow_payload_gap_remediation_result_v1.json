@@ -1,0 +1,4105 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-usdm-gap-remediation-result-v1",
+  "result_id": "q1-periodic-flow-usdm-gap-remediation-result-v1",
+  "generated_at": "2026-08-07T08:44:54.092318Z",
+  "status": "COMPLETE_LOCAL_STRUCTURAL_GAP_DIAGNOSIS_NO_OUTCOMES",
+  "protocol_file_sha256": "3fe69a14ebb41dd5f79134cb98700be677147174a389cf393c0da5ac7b51bec1",
+  "protocol_evidence_hash": "3c69bde0263a3582cba8b3165c515837e0de979819c0537196d1301db1a324ad",
+  "runner_contract_hash": "ccc3390b853c1c38ce639f55d85945fc82a9cfcb21c4d9fd2d3c83be0eee6b1e",
+  "archive_sha256": "d93f4201d012c74648d65727be0e17b2f7e38d2f6f9d8cb6817e8486b7ffe435",
+  "row_count": 7436296,
+  "first_aggregate_trade_id": 18374167,
+  "last_aggregate_trade_id": 25810462,
+  "aggregate_trade_id_gap_count": 0,
+  "aggregate_trade_id_non_increasing_count": 0,
+  "first_raw_trade_id": 25247504,
+  "last_raw_trade_id": 35530560,
+  "raw_trade_span_invalid_count": 0,
+  "raw_trade_range_overlap_count": 1,
+  "gap_records": [
+    {
+      "preceding_aggregate_trade_id": 18545792,
+      "current_aggregate_trade_id": 18545793,
+      "preceding_last_raw_trade_id": 25487825,
+      "current_first_raw_trade_id": 25487827,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1577983638078
+    },
+    {
+      "preceding_aggregate_trade_id": 18545987,
+      "current_aggregate_trade_id": 18545988,
+      "preceding_last_raw_trade_id": 25488302,
+      "current_first_raw_trade_id": 25488304,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1577983639065
+    },
+    {
+      "preceding_aggregate_trade_id": 18546036,
+      "current_aggregate_trade_id": 18546037,
+      "preceding_last_raw_trade_id": 25488421,
+      "current_first_raw_trade_id": 25488425,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1577983639078
+    },
+    {
+      "preceding_aggregate_trade_id": 18546108,
+      "current_aggregate_trade_id": 18546109,
+      "preceding_last_raw_trade_id": 25488628,
+      "current_first_raw_trade_id": 25488632,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1577983639102
+    },
+    {
+      "preceding_aggregate_trade_id": 18558091,
+      "current_aggregate_trade_id": 18558092,
+      "preceding_last_raw_trade_id": 25506084,
+      "current_first_raw_trade_id": 25506087,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1577984468045
+    },
+    {
+      "preceding_aggregate_trade_id": 18558106,
+      "current_aggregate_trade_id": 18558107,
+      "preceding_last_raw_trade_id": 25506131,
+      "current_first_raw_trade_id": 25506139,
+      "skipped_raw_trade_id_count": 7,
+      "current_timestamp_ms": 1577984468099
+    },
+    {
+      "preceding_aggregate_trade_id": 18558266,
+      "current_aggregate_trade_id": 18558267,
+      "preceding_last_raw_trade_id": 25506413,
+      "current_first_raw_trade_id": 25506415,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1577984469067
+    },
+    {
+      "preceding_aggregate_trade_id": 18558267,
+      "current_aggregate_trade_id": 18558268,
+      "preceding_last_raw_trade_id": 25506415,
+      "current_first_raw_trade_id": 25506421,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1577984469068
+    },
+    {
+      "preceding_aggregate_trade_id": 18558268,
+      "current_aggregate_trade_id": 18558269,
+      "preceding_last_raw_trade_id": 25506421,
+      "current_first_raw_trade_id": 25506423,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1577984469068
+    },
+    {
+      "preceding_aggregate_trade_id": 18558322,
+      "current_aggregate_trade_id": 18558323,
+      "preceding_last_raw_trade_id": 25506513,
+      "current_first_raw_trade_id": 25506519,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1577984469089
+    },
+    {
+      "preceding_aggregate_trade_id": 18558323,
+      "current_aggregate_trade_id": 18558324,
+      "preceding_last_raw_trade_id": 25506519,
+      "current_first_raw_trade_id": 25506526,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1577984469090
+    },
+    {
+      "preceding_aggregate_trade_id": 18564233,
+      "current_aggregate_trade_id": 18564234,
+      "preceding_last_raw_trade_id": 25515401,
+      "current_first_raw_trade_id": 25515403,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1577984588095
+    },
+    {
+      "preceding_aggregate_trade_id": 18564403,
+      "current_aggregate_trade_id": 18564404,
+      "preceding_last_raw_trade_id": 25515638,
+      "current_first_raw_trade_id": 25515640,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1577984589096
+    },
+    {
+      "preceding_aggregate_trade_id": 18564404,
+      "current_aggregate_trade_id": 18564405,
+      "preceding_last_raw_trade_id": 25515641,
+      "current_first_raw_trade_id": 25515643,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1577984589100
+    },
+    {
+      "preceding_aggregate_trade_id": 18564412,
+      "current_aggregate_trade_id": 18564413,
+      "preceding_last_raw_trade_id": 25515664,
+      "current_first_raw_trade_id": 25515666,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1577984589114
+    },
+    {
+      "preceding_aggregate_trade_id": 18654707,
+      "current_aggregate_trade_id": 18654708,
+      "preceding_last_raw_trade_id": 25645819,
+      "current_first_raw_trade_id": 25645822,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026623080
+    },
+    {
+      "preceding_aggregate_trade_id": 18654816,
+      "current_aggregate_trade_id": 18654817,
+      "preceding_last_raw_trade_id": 25646007,
+      "current_first_raw_trade_id": 25646009,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026624050
+    },
+    {
+      "preceding_aggregate_trade_id": 18654829,
+      "current_aggregate_trade_id": 18654830,
+      "preceding_last_raw_trade_id": 25646027,
+      "current_first_raw_trade_id": 25646029,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026624078
+    },
+    {
+      "preceding_aggregate_trade_id": 18654998,
+      "current_aggregate_trade_id": 18654999,
+      "preceding_last_raw_trade_id": 25646324,
+      "current_first_raw_trade_id": 25646328,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1578026625054
+    },
+    {
+      "preceding_aggregate_trade_id": 18655005,
+      "current_aggregate_trade_id": 18655006,
+      "preceding_last_raw_trade_id": 25646347,
+      "current_first_raw_trade_id": 25646350,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026625076
+    },
+    {
+      "preceding_aggregate_trade_id": 18655006,
+      "current_aggregate_trade_id": 18655007,
+      "preceding_last_raw_trade_id": 25646350,
+      "current_first_raw_trade_id": 25646352,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026625077
+    },
+    {
+      "preceding_aggregate_trade_id": 18655007,
+      "current_aggregate_trade_id": 18655008,
+      "preceding_last_raw_trade_id": 25646352,
+      "current_first_raw_trade_id": 25646358,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1578026625126
+    },
+    {
+      "preceding_aggregate_trade_id": 18655169,
+      "current_aggregate_trade_id": 18655170,
+      "preceding_last_raw_trade_id": 25646633,
+      "current_first_raw_trade_id": 25646636,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026627051
+    },
+    {
+      "preceding_aggregate_trade_id": 18655176,
+      "current_aggregate_trade_id": 18655177,
+      "preceding_last_raw_trade_id": 25646643,
+      "current_first_raw_trade_id": 25646645,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026627064
+    },
+    {
+      "preceding_aggregate_trade_id": 18655348,
+      "current_aggregate_trade_id": 18655349,
+      "preceding_last_raw_trade_id": 25646945,
+      "current_first_raw_trade_id": 25646952,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1578026628053
+    },
+    {
+      "preceding_aggregate_trade_id": 18655354,
+      "current_aggregate_trade_id": 18655355,
+      "preceding_last_raw_trade_id": 25646962,
+      "current_first_raw_trade_id": 25646964,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026628062
+    },
+    {
+      "preceding_aggregate_trade_id": 18655356,
+      "current_aggregate_trade_id": 18655357,
+      "preceding_last_raw_trade_id": 25646969,
+      "current_first_raw_trade_id": 25646971,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026628081
+    },
+    {
+      "preceding_aggregate_trade_id": 18655441,
+      "current_aggregate_trade_id": 18655442,
+      "preceding_last_raw_trade_id": 25647093,
+      "current_first_raw_trade_id": 25647095,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026629044
+    },
+    {
+      "preceding_aggregate_trade_id": 18655445,
+      "current_aggregate_trade_id": 18655446,
+      "preceding_last_raw_trade_id": 25647103,
+      "current_first_raw_trade_id": 25647105,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026629050
+    },
+    {
+      "preceding_aggregate_trade_id": 18655448,
+      "current_aggregate_trade_id": 18655449,
+      "preceding_last_raw_trade_id": 25647107,
+      "current_first_raw_trade_id": 25647110,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026629057
+    },
+    {
+      "preceding_aggregate_trade_id": 18655461,
+      "current_aggregate_trade_id": 18655462,
+      "preceding_last_raw_trade_id": 25647127,
+      "current_first_raw_trade_id": 25647129,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026629069
+    },
+    {
+      "preceding_aggregate_trade_id": 18655468,
+      "current_aggregate_trade_id": 18655469,
+      "preceding_last_raw_trade_id": 25647138,
+      "current_first_raw_trade_id": 25647150,
+      "skipped_raw_trade_id_count": 11,
+      "current_timestamp_ms": 1578026629090
+    },
+    {
+      "preceding_aggregate_trade_id": 18655469,
+      "current_aggregate_trade_id": 18655470,
+      "preceding_last_raw_trade_id": 25647150,
+      "current_first_raw_trade_id": 25647153,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026629111
+    },
+    {
+      "preceding_aggregate_trade_id": 18655626,
+      "current_aggregate_trade_id": 18655627,
+      "preceding_last_raw_trade_id": 25647429,
+      "current_first_raw_trade_id": 25647431,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026630032
+    },
+    {
+      "preceding_aggregate_trade_id": 18655627,
+      "current_aggregate_trade_id": 18655628,
+      "preceding_last_raw_trade_id": 25647431,
+      "current_first_raw_trade_id": 25647435,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1578026630046
+    },
+    {
+      "preceding_aggregate_trade_id": 18655628,
+      "current_aggregate_trade_id": 18655629,
+      "preceding_last_raw_trade_id": 25647435,
+      "current_first_raw_trade_id": 25647438,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026630071
+    },
+    {
+      "preceding_aggregate_trade_id": 18656132,
+      "current_aggregate_trade_id": 18656133,
+      "preceding_last_raw_trade_id": 25648260,
+      "current_first_raw_trade_id": 25648268,
+      "skipped_raw_trade_id_count": 7,
+      "current_timestamp_ms": 1578026633074
+    },
+    {
+      "preceding_aggregate_trade_id": 18656271,
+      "current_aggregate_trade_id": 18656272,
+      "preceding_last_raw_trade_id": 25648474,
+      "current_first_raw_trade_id": 25648481,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1578026634082
+    },
+    {
+      "preceding_aggregate_trade_id": 18656366,
+      "current_aggregate_trade_id": 18656367,
+      "preceding_last_raw_trade_id": 25648626,
+      "current_first_raw_trade_id": 25648629,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026635032
+    },
+    {
+      "preceding_aggregate_trade_id": 18656379,
+      "current_aggregate_trade_id": 18656380,
+      "preceding_last_raw_trade_id": 25648652,
+      "current_first_raw_trade_id": 25648656,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1578026635060
+    },
+    {
+      "preceding_aggregate_trade_id": 18656473,
+      "current_aggregate_trade_id": 18656474,
+      "preceding_last_raw_trade_id": 25648796,
+      "current_first_raw_trade_id": 25648798,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026636031
+    },
+    {
+      "preceding_aggregate_trade_id": 18656478,
+      "current_aggregate_trade_id": 18656479,
+      "preceding_last_raw_trade_id": 25648802,
+      "current_first_raw_trade_id": 25648804,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026636051
+    },
+    {
+      "preceding_aggregate_trade_id": 18656479,
+      "current_aggregate_trade_id": 18656480,
+      "preceding_last_raw_trade_id": 25648804,
+      "current_first_raw_trade_id": 25648806,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026636053
+    },
+    {
+      "preceding_aggregate_trade_id": 18656480,
+      "current_aggregate_trade_id": 18656481,
+      "preceding_last_raw_trade_id": 25648806,
+      "current_first_raw_trade_id": 25648808,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026636066
+    },
+    {
+      "preceding_aggregate_trade_id": 18656596,
+      "current_aggregate_trade_id": 18656597,
+      "preceding_last_raw_trade_id": 25648971,
+      "current_first_raw_trade_id": 25648976,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1578026637043
+    },
+    {
+      "preceding_aggregate_trade_id": 18656597,
+      "current_aggregate_trade_id": 18656598,
+      "preceding_last_raw_trade_id": 25648976,
+      "current_first_raw_trade_id": 25648995,
+      "skipped_raw_trade_id_count": 18,
+      "current_timestamp_ms": 1578026637072
+    },
+    {
+      "preceding_aggregate_trade_id": 18656601,
+      "current_aggregate_trade_id": 18656602,
+      "preceding_last_raw_trade_id": 25648999,
+      "current_first_raw_trade_id": 25649003,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1578026637076
+    },
+    {
+      "preceding_aggregate_trade_id": 18656605,
+      "current_aggregate_trade_id": 18656606,
+      "preceding_last_raw_trade_id": 25649006,
+      "current_first_raw_trade_id": 25649009,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026637090
+    },
+    {
+      "preceding_aggregate_trade_id": 18656769,
+      "current_aggregate_trade_id": 18656770,
+      "preceding_last_raw_trade_id": 25649243,
+      "current_first_raw_trade_id": 25649245,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026639032
+    },
+    {
+      "preceding_aggregate_trade_id": 18656771,
+      "current_aggregate_trade_id": 18656772,
+      "preceding_last_raw_trade_id": 25649246,
+      "current_first_raw_trade_id": 25649251,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1578026639052
+    },
+    {
+      "preceding_aggregate_trade_id": 18656772,
+      "current_aggregate_trade_id": 18656773,
+      "preceding_last_raw_trade_id": 25649251,
+      "current_first_raw_trade_id": 25649254,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026639066
+    },
+    {
+      "preceding_aggregate_trade_id": 18656774,
+      "current_aggregate_trade_id": 18656775,
+      "preceding_last_raw_trade_id": 25649255,
+      "current_first_raw_trade_id": 25649263,
+      "skipped_raw_trade_id_count": 7,
+      "current_timestamp_ms": 1578026639175
+    },
+    {
+      "preceding_aggregate_trade_id": 18656843,
+      "current_aggregate_trade_id": 18656844,
+      "preceding_last_raw_trade_id": 25649355,
+      "current_first_raw_trade_id": 25649357,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026640056
+    },
+    {
+      "preceding_aggregate_trade_id": 18656992,
+      "current_aggregate_trade_id": 18656993,
+      "preceding_last_raw_trade_id": 25649586,
+      "current_first_raw_trade_id": 25649588,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026641758
+    },
+    {
+      "preceding_aggregate_trade_id": 18656996,
+      "current_aggregate_trade_id": 18656997,
+      "preceding_last_raw_trade_id": 25649592,
+      "current_first_raw_trade_id": 25649594,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578026641768
+    },
+    {
+      "preceding_aggregate_trade_id": 18657006,
+      "current_aggregate_trade_id": 18657007,
+      "preceding_last_raw_trade_id": 25649617,
+      "current_first_raw_trade_id": 25649625,
+      "skipped_raw_trade_id_count": 7,
+      "current_timestamp_ms": 1578026642079
+    },
+    {
+      "preceding_aggregate_trade_id": 18657120,
+      "current_aggregate_trade_id": 18657121,
+      "preceding_last_raw_trade_id": 25649797,
+      "current_first_raw_trade_id": 25649800,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578026644058
+    },
+    {
+      "preceding_aggregate_trade_id": 19378712,
+      "current_aggregate_trade_id": 19378713,
+      "preceding_last_raw_trade_id": 26666494,
+      "current_first_raw_trade_id": 26666496,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578349694135
+    },
+    {
+      "preceding_aggregate_trade_id": 19378717,
+      "current_aggregate_trade_id": 19378718,
+      "preceding_last_raw_trade_id": 26666501,
+      "current_first_raw_trade_id": 26666503,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578349695141
+    },
+    {
+      "preceding_aggregate_trade_id": 19669994,
+      "current_aggregate_trade_id": 19669995,
+      "preceding_last_raw_trade_id": 27076442,
+      "current_first_raw_trade_id": 27076444,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578421696084
+    },
+    {
+      "preceding_aggregate_trade_id": 19670452,
+      "current_aggregate_trade_id": 19670453,
+      "preceding_last_raw_trade_id": 27077157,
+      "current_first_raw_trade_id": 27077159,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578421698076
+    },
+    {
+      "preceding_aggregate_trade_id": 19670459,
+      "current_aggregate_trade_id": 19670460,
+      "preceding_last_raw_trade_id": 27077169,
+      "current_first_raw_trade_id": 27077182,
+      "skipped_raw_trade_id_count": 12,
+      "current_timestamp_ms": 1578421698084
+    },
+    {
+      "preceding_aggregate_trade_id": 19670461,
+      "current_aggregate_trade_id": 19670462,
+      "preceding_last_raw_trade_id": 27077183,
+      "current_first_raw_trade_id": 27077219,
+      "skipped_raw_trade_id_count": 35,
+      "current_timestamp_ms": 1578421698097
+    },
+    {
+      "preceding_aggregate_trade_id": 19670464,
+      "current_aggregate_trade_id": 19670465,
+      "preceding_last_raw_trade_id": 27077221,
+      "current_first_raw_trade_id": 27077238,
+      "skipped_raw_trade_id_count": 16,
+      "current_timestamp_ms": 1578421698106
+    },
+    {
+      "preceding_aggregate_trade_id": 19670933,
+      "current_aggregate_trade_id": 19670934,
+      "preceding_last_raw_trade_id": 27077907,
+      "current_first_raw_trade_id": 27077909,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578421703089
+    },
+    {
+      "preceding_aggregate_trade_id": 19676191,
+      "current_aggregate_trade_id": 19676192,
+      "preceding_last_raw_trade_id": 27085277,
+      "current_first_raw_trade_id": 27085281,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1578421815047
+    },
+    {
+      "preceding_aggregate_trade_id": 19676196,
+      "current_aggregate_trade_id": 19676197,
+      "preceding_last_raw_trade_id": 27085287,
+      "current_first_raw_trade_id": 27085290,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578421815065
+    },
+    {
+      "preceding_aggregate_trade_id": 19676197,
+      "current_aggregate_trade_id": 19676198,
+      "preceding_last_raw_trade_id": 27085290,
+      "current_first_raw_trade_id": 27085296,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1578421815095
+    },
+    {
+      "preceding_aggregate_trade_id": 19676198,
+      "current_aggregate_trade_id": 19676199,
+      "preceding_last_raw_trade_id": 27085296,
+      "current_first_raw_trade_id": 27085298,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578421815100
+    },
+    {
+      "preceding_aggregate_trade_id": 19676260,
+      "current_aggregate_trade_id": 19676261,
+      "preceding_last_raw_trade_id": 27085387,
+      "current_first_raw_trade_id": 27085390,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578421816116
+    },
+    {
+      "preceding_aggregate_trade_id": 19955815,
+      "current_aggregate_trade_id": 19955816,
+      "preceding_last_raw_trade_id": 27475763,
+      "current_first_raw_trade_id": 27475765,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578468987116
+    },
+    {
+      "preceding_aggregate_trade_id": 20026951,
+      "current_aggregate_trade_id": 20026952,
+      "preceding_last_raw_trade_id": 27570670,
+      "current_first_raw_trade_id": 27570672,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578490334068
+    },
+    {
+      "preceding_aggregate_trade_id": 20026953,
+      "current_aggregate_trade_id": 20026954,
+      "preceding_last_raw_trade_id": 27570673,
+      "current_first_raw_trade_id": 27570675,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578490334102
+    },
+    {
+      "preceding_aggregate_trade_id": 20027063,
+      "current_aggregate_trade_id": 20027064,
+      "preceding_last_raw_trade_id": 27570877,
+      "current_first_raw_trade_id": 27570879,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578490335052
+    },
+    {
+      "preceding_aggregate_trade_id": 20027066,
+      "current_aggregate_trade_id": 20027067,
+      "preceding_last_raw_trade_id": 27570886,
+      "current_first_raw_trade_id": 27570888,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578490335071
+    },
+    {
+      "preceding_aggregate_trade_id": 20027170,
+      "current_aggregate_trade_id": 20027171,
+      "preceding_last_raw_trade_id": 27571036,
+      "current_first_raw_trade_id": 27571041,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1578490336096
+    },
+    {
+      "preceding_aggregate_trade_id": 20050631,
+      "current_aggregate_trade_id": 20050632,
+      "preceding_last_raw_trade_id": 27604744,
+      "current_first_raw_trade_id": 27604748,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1578492670059
+    },
+    {
+      "preceding_aggregate_trade_id": 20050635,
+      "current_aggregate_trade_id": 20050636,
+      "preceding_last_raw_trade_id": 27604751,
+      "current_first_raw_trade_id": 27604754,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578492670073
+    },
+    {
+      "preceding_aggregate_trade_id": 20050639,
+      "current_aggregate_trade_id": 20050640,
+      "preceding_last_raw_trade_id": 27604757,
+      "current_first_raw_trade_id": 27604759,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578492670089
+    },
+    {
+      "preceding_aggregate_trade_id": 20050728,
+      "current_aggregate_trade_id": 20050729,
+      "preceding_last_raw_trade_id": 27604903,
+      "current_first_raw_trade_id": 27604905,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578492671054
+    },
+    {
+      "preceding_aggregate_trade_id": 20050732,
+      "current_aggregate_trade_id": 20050733,
+      "preceding_last_raw_trade_id": 27604921,
+      "current_first_raw_trade_id": 27604923,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578492671076
+    },
+    {
+      "preceding_aggregate_trade_id": 20050733,
+      "current_aggregate_trade_id": 20050734,
+      "preceding_last_raw_trade_id": 27604925,
+      "current_first_raw_trade_id": 27604927,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578492671085
+    },
+    {
+      "preceding_aggregate_trade_id": 20107248,
+      "current_aggregate_trade_id": 20107249,
+      "preceding_last_raw_trade_id": 27682363,
+      "current_first_raw_trade_id": 27682365,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578501002041
+    },
+    {
+      "preceding_aggregate_trade_id": 20107249,
+      "current_aggregate_trade_id": 20107250,
+      "preceding_last_raw_trade_id": 27682365,
+      "current_first_raw_trade_id": 27682367,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578501002093
+    },
+    {
+      "preceding_aggregate_trade_id": 20678470,
+      "current_aggregate_trade_id": 20678471,
+      "preceding_last_raw_trade_id": 28461638,
+      "current_first_raw_trade_id": 28461640,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578660459073
+    },
+    {
+      "preceding_aggregate_trade_id": 20766495,
+      "current_aggregate_trade_id": 20766496,
+      "preceding_last_raw_trade_id": 28580543,
+      "current_first_raw_trade_id": 28580545,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578672062119
+    },
+    {
+      "preceding_aggregate_trade_id": 21542104,
+      "current_aggregate_trade_id": 21542105,
+      "preceding_last_raw_trade_id": 29609264,
+      "current_first_raw_trade_id": 29609266,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578962420140
+    },
+    {
+      "preceding_aggregate_trade_id": 21542108,
+      "current_aggregate_trade_id": 21542109,
+      "preceding_last_raw_trade_id": 29609269,
+      "current_first_raw_trade_id": 29609271,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578962420141
+    },
+    {
+      "preceding_aggregate_trade_id": 21542429,
+      "current_aggregate_trade_id": 21542430,
+      "preceding_last_raw_trade_id": 29609751,
+      "current_first_raw_trade_id": 29609756,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1578962425098
+    },
+    {
+      "preceding_aggregate_trade_id": 21542433,
+      "current_aggregate_trade_id": 21542434,
+      "preceding_last_raw_trade_id": 29609760,
+      "current_first_raw_trade_id": 29609762,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578962425105
+    },
+    {
+      "preceding_aggregate_trade_id": 21542594,
+      "current_aggregate_trade_id": 21542595,
+      "preceding_last_raw_trade_id": 29609979,
+      "current_first_raw_trade_id": 29609981,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578962428118
+    },
+    {
+      "preceding_aggregate_trade_id": 21542735,
+      "current_aggregate_trade_id": 21542736,
+      "preceding_last_raw_trade_id": 29610171,
+      "current_first_raw_trade_id": 29610173,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578962430084
+    },
+    {
+      "preceding_aggregate_trade_id": 21542737,
+      "current_aggregate_trade_id": 21542738,
+      "preceding_last_raw_trade_id": 29610174,
+      "current_first_raw_trade_id": 29610177,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578962430109
+    },
+    {
+      "preceding_aggregate_trade_id": 21542831,
+      "current_aggregate_trade_id": 21542832,
+      "preceding_last_raw_trade_id": 29610293,
+      "current_first_raw_trade_id": 29610296,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578962431139
+    },
+    {
+      "preceding_aggregate_trade_id": 21583125,
+      "current_aggregate_trade_id": 21583126,
+      "preceding_last_raw_trade_id": 29663822,
+      "current_first_raw_trade_id": 29663824,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578965748078
+    },
+    {
+      "preceding_aggregate_trade_id": 21583195,
+      "current_aggregate_trade_id": 21583196,
+      "preceding_last_raw_trade_id": 29663930,
+      "current_first_raw_trade_id": 29663932,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578965749069
+    },
+    {
+      "preceding_aggregate_trade_id": 21583261,
+      "current_aggregate_trade_id": 21583262,
+      "preceding_last_raw_trade_id": 29664012,
+      "current_first_raw_trade_id": 29664014,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578965750069
+    },
+    {
+      "preceding_aggregate_trade_id": 21583266,
+      "current_aggregate_trade_id": 21583267,
+      "preceding_last_raw_trade_id": 29664020,
+      "current_first_raw_trade_id": 29664022,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578965750229
+    },
+    {
+      "preceding_aggregate_trade_id": 21585540,
+      "current_aggregate_trade_id": 21585541,
+      "preceding_last_raw_trade_id": 29667643,
+      "current_first_raw_trade_id": 29667645,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578965822070
+    },
+    {
+      "preceding_aggregate_trade_id": 21585686,
+      "current_aggregate_trade_id": 21585687,
+      "preceding_last_raw_trade_id": 29667895,
+      "current_first_raw_trade_id": 29667897,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578965823050
+    },
+    {
+      "preceding_aggregate_trade_id": 21585688,
+      "current_aggregate_trade_id": 21585689,
+      "preceding_last_raw_trade_id": 29667898,
+      "current_first_raw_trade_id": 29667901,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578965823059
+    },
+    {
+      "preceding_aggregate_trade_id": 21585692,
+      "current_aggregate_trade_id": 21585693,
+      "preceding_last_raw_trade_id": 29667904,
+      "current_first_raw_trade_id": 29667906,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578965823068
+    },
+    {
+      "preceding_aggregate_trade_id": 21585693,
+      "current_aggregate_trade_id": 21585694,
+      "preceding_last_raw_trade_id": 29667906,
+      "current_first_raw_trade_id": 29667910,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1578965823109
+    },
+    {
+      "preceding_aggregate_trade_id": 21585773,
+      "current_aggregate_trade_id": 21585774,
+      "preceding_last_raw_trade_id": 29668020,
+      "current_first_raw_trade_id": 29668022,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578965824073
+    },
+    {
+      "preceding_aggregate_trade_id": 21585839,
+      "current_aggregate_trade_id": 21585840,
+      "preceding_last_raw_trade_id": 29668110,
+      "current_first_raw_trade_id": 29668119,
+      "skipped_raw_trade_id_count": 8,
+      "current_timestamp_ms": 1578965825066
+    },
+    {
+      "preceding_aggregate_trade_id": 21585868,
+      "current_aggregate_trade_id": 21585869,
+      "preceding_last_raw_trade_id": 29668160,
+      "current_first_raw_trade_id": 29668163,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578965826057
+    },
+    {
+      "preceding_aggregate_trade_id": 21585870,
+      "current_aggregate_trade_id": 21585871,
+      "preceding_last_raw_trade_id": 29668167,
+      "current_first_raw_trade_id": 29668179,
+      "skipped_raw_trade_id_count": 11,
+      "current_timestamp_ms": 1578965826144
+    },
+    {
+      "preceding_aggregate_trade_id": 21585998,
+      "current_aggregate_trade_id": 21585999,
+      "preceding_last_raw_trade_id": 29668332,
+      "current_first_raw_trade_id": 29668334,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578965828106
+    },
+    {
+      "preceding_aggregate_trade_id": 21590366,
+      "current_aggregate_trade_id": 21590367,
+      "preceding_last_raw_trade_id": 29673958,
+      "current_first_raw_trade_id": 29673960,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578966060138
+    },
+    {
+      "preceding_aggregate_trade_id": 21593027,
+      "current_aggregate_trade_id": 21593028,
+      "preceding_last_raw_trade_id": 29677454,
+      "current_first_raw_trade_id": 29677456,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578966344135
+    },
+    {
+      "preceding_aggregate_trade_id": 21629538,
+      "current_aggregate_trade_id": 21629539,
+      "preceding_last_raw_trade_id": 29725135,
+      "current_first_raw_trade_id": 29725145,
+      "skipped_raw_trade_id_count": 9,
+      "current_timestamp_ms": 1578974512096
+    },
+    {
+      "preceding_aggregate_trade_id": 21629583,
+      "current_aggregate_trade_id": 21629584,
+      "preceding_last_raw_trade_id": 29725205,
+      "current_first_raw_trade_id": 29725207,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974513048
+    },
+    {
+      "preceding_aggregate_trade_id": 21629588,
+      "current_aggregate_trade_id": 21629589,
+      "preceding_last_raw_trade_id": 29725217,
+      "current_first_raw_trade_id": 29725222,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1578974513106
+    },
+    {
+      "preceding_aggregate_trade_id": 21631107,
+      "current_aggregate_trade_id": 21631108,
+      "preceding_last_raw_trade_id": 29727419,
+      "current_first_raw_trade_id": 29727421,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974561078
+    },
+    {
+      "preceding_aggregate_trade_id": 21631110,
+      "current_aggregate_trade_id": 21631111,
+      "preceding_last_raw_trade_id": 29727423,
+      "current_first_raw_trade_id": 29727426,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578974561090
+    },
+    {
+      "preceding_aggregate_trade_id": 21631119,
+      "current_aggregate_trade_id": 21631120,
+      "preceding_last_raw_trade_id": 29727434,
+      "current_first_raw_trade_id": 29727436,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974561098
+    },
+    {
+      "preceding_aggregate_trade_id": 21631120,
+      "current_aggregate_trade_id": 21631121,
+      "preceding_last_raw_trade_id": 29727440,
+      "current_first_raw_trade_id": 29727445,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1578974561201
+    },
+    {
+      "preceding_aggregate_trade_id": 21631172,
+      "current_aggregate_trade_id": 21631173,
+      "preceding_last_raw_trade_id": 29727507,
+      "current_first_raw_trade_id": 29727510,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578974562048
+    },
+    {
+      "preceding_aggregate_trade_id": 21631174,
+      "current_aggregate_trade_id": 21631175,
+      "preceding_last_raw_trade_id": 29727516,
+      "current_first_raw_trade_id": 29727520,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1578974562080
+    },
+    {
+      "preceding_aggregate_trade_id": 21631175,
+      "current_aggregate_trade_id": 21631176,
+      "preceding_last_raw_trade_id": 29727520,
+      "current_first_raw_trade_id": 29727534,
+      "skipped_raw_trade_id_count": 13,
+      "current_timestamp_ms": 1578974562164
+    },
+    {
+      "preceding_aggregate_trade_id": 21631254,
+      "current_aggregate_trade_id": 21631255,
+      "preceding_last_raw_trade_id": 29727650,
+      "current_first_raw_trade_id": 29727652,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974563091
+    },
+    {
+      "preceding_aggregate_trade_id": 21631288,
+      "current_aggregate_trade_id": 21631289,
+      "preceding_last_raw_trade_id": 29727703,
+      "current_first_raw_trade_id": 29727705,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974563111
+    },
+    {
+      "preceding_aggregate_trade_id": 21631319,
+      "current_aggregate_trade_id": 21631320,
+      "preceding_last_raw_trade_id": 29727752,
+      "current_first_raw_trade_id": 29727754,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974564185
+    },
+    {
+      "preceding_aggregate_trade_id": 21631367,
+      "current_aggregate_trade_id": 21631368,
+      "preceding_last_raw_trade_id": 29727818,
+      "current_first_raw_trade_id": 29727820,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974565081
+    },
+    {
+      "preceding_aggregate_trade_id": 21631474,
+      "current_aggregate_trade_id": 21631475,
+      "preceding_last_raw_trade_id": 29727977,
+      "current_first_raw_trade_id": 29727980,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578974566086
+    },
+    {
+      "preceding_aggregate_trade_id": 21631476,
+      "current_aggregate_trade_id": 21631477,
+      "preceding_last_raw_trade_id": 29727982,
+      "current_first_raw_trade_id": 29727984,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974566092
+    },
+    {
+      "preceding_aggregate_trade_id": 21631478,
+      "current_aggregate_trade_id": 21631479,
+      "preceding_last_raw_trade_id": 29727986,
+      "current_first_raw_trade_id": 29727988,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974566116
+    },
+    {
+      "preceding_aggregate_trade_id": 21631591,
+      "current_aggregate_trade_id": 21631592,
+      "preceding_last_raw_trade_id": 29728157,
+      "current_first_raw_trade_id": 29728159,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974567099
+    },
+    {
+      "preceding_aggregate_trade_id": 21631595,
+      "current_aggregate_trade_id": 21631596,
+      "preceding_last_raw_trade_id": 29728162,
+      "current_first_raw_trade_id": 29728164,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974567106
+    },
+    {
+      "preceding_aggregate_trade_id": 21631596,
+      "current_aggregate_trade_id": 21631597,
+      "preceding_last_raw_trade_id": 29728164,
+      "current_first_raw_trade_id": 29728173,
+      "skipped_raw_trade_id_count": 8,
+      "current_timestamp_ms": 1578974567126
+    },
+    {
+      "preceding_aggregate_trade_id": 21631603,
+      "current_aggregate_trade_id": 21631604,
+      "preceding_last_raw_trade_id": 29728182,
+      "current_first_raw_trade_id": 29728185,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578974567146
+    },
+    {
+      "preceding_aggregate_trade_id": 21631732,
+      "current_aggregate_trade_id": 21631733,
+      "preceding_last_raw_trade_id": 29728336,
+      "current_first_raw_trade_id": 29728340,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1578974568070
+    },
+    {
+      "preceding_aggregate_trade_id": 21631734,
+      "current_aggregate_trade_id": 21631735,
+      "preceding_last_raw_trade_id": 29728341,
+      "current_first_raw_trade_id": 29728344,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578974568082
+    },
+    {
+      "preceding_aggregate_trade_id": 21631736,
+      "current_aggregate_trade_id": 21631737,
+      "preceding_last_raw_trade_id": 29728345,
+      "current_first_raw_trade_id": 29728347,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974568089
+    },
+    {
+      "preceding_aggregate_trade_id": 21631744,
+      "current_aggregate_trade_id": 21631745,
+      "preceding_last_raw_trade_id": 29728364,
+      "current_first_raw_trade_id": 29728367,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578974568135
+    },
+    {
+      "preceding_aggregate_trade_id": 21631745,
+      "current_aggregate_trade_id": 21631746,
+      "preceding_last_raw_trade_id": 29728367,
+      "current_first_raw_trade_id": 29728369,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974568141
+    },
+    {
+      "preceding_aggregate_trade_id": 21631898,
+      "current_aggregate_trade_id": 21631899,
+      "preceding_last_raw_trade_id": 29728559,
+      "current_first_raw_trade_id": 29728561,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974570081
+    },
+    {
+      "preceding_aggregate_trade_id": 21631900,
+      "current_aggregate_trade_id": 21631901,
+      "preceding_last_raw_trade_id": 29728564,
+      "current_first_raw_trade_id": 29728567,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1578974570092
+    },
+    {
+      "preceding_aggregate_trade_id": 21631903,
+      "current_aggregate_trade_id": 21631904,
+      "preceding_last_raw_trade_id": 29728570,
+      "current_first_raw_trade_id": 29728572,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1578974570100
+    },
+    {
+      "preceding_aggregate_trade_id": 21631904,
+      "current_aggregate_trade_id": 21631905,
+      "preceding_last_raw_trade_id": 29728572,
+      "current_first_raw_trade_id": 29728577,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1578974570116
+    },
+    {
+      "preceding_aggregate_trade_id": 21725867,
+      "current_aggregate_trade_id": 21725868,
+      "preceding_last_raw_trade_id": 29853020,
+      "current_first_raw_trade_id": 29853022,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579005245117
+    },
+    {
+      "preceding_aggregate_trade_id": 21752196,
+      "current_aggregate_trade_id": 21752197,
+      "preceding_last_raw_trade_id": 29887937,
+      "current_first_raw_trade_id": 29887939,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579007668102
+    },
+    {
+      "preceding_aggregate_trade_id": 21789681,
+      "current_aggregate_trade_id": 21789682,
+      "preceding_last_raw_trade_id": 29937886,
+      "current_first_raw_trade_id": 29937888,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579012286120
+    },
+    {
+      "preceding_aggregate_trade_id": 21794023,
+      "current_aggregate_trade_id": 21794024,
+      "preceding_last_raw_trade_id": 29943798,
+      "current_first_raw_trade_id": 29943800,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579012471141
+    },
+    {
+      "preceding_aggregate_trade_id": 21828964,
+      "current_aggregate_trade_id": 21828965,
+      "preceding_last_raw_trade_id": 29989563,
+      "current_first_raw_trade_id": 29989565,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579017339135
+    },
+    {
+      "preceding_aggregate_trade_id": 21957109,
+      "current_aggregate_trade_id": 21957110,
+      "preceding_last_raw_trade_id": 30157810,
+      "current_first_raw_trade_id": 30157812,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579028285178
+    },
+    {
+      "preceding_aggregate_trade_id": 22018550,
+      "current_aggregate_trade_id": 22018551,
+      "preceding_last_raw_trade_id": 30235165,
+      "current_first_raw_trade_id": 30235167,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579044742124
+    },
+    {
+      "preceding_aggregate_trade_id": 22023198,
+      "current_aggregate_trade_id": 22023199,
+      "preceding_last_raw_trade_id": 30241064,
+      "current_first_raw_trade_id": 30241066,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579045184083
+    },
+    {
+      "preceding_aggregate_trade_id": 22126138,
+      "current_aggregate_trade_id": 22126139,
+      "preceding_last_raw_trade_id": 30375871,
+      "current_first_raw_trade_id": 30375873,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579064429077
+    },
+    {
+      "preceding_aggregate_trade_id": 22263565,
+      "current_aggregate_trade_id": 22263566,
+      "preceding_last_raw_trade_id": 30560932,
+      "current_first_raw_trade_id": 30560934,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579102957039
+    },
+    {
+      "preceding_aggregate_trade_id": 22270280,
+      "current_aggregate_trade_id": 22270281,
+      "preceding_last_raw_trade_id": 30569874,
+      "current_first_raw_trade_id": 30569876,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579104000938
+    },
+    {
+      "preceding_aggregate_trade_id": 22275744,
+      "current_aggregate_trade_id": 22275745,
+      "preceding_last_raw_trade_id": 30577642,
+      "current_first_raw_trade_id": 30577644,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579104353091
+    },
+    {
+      "preceding_aggregate_trade_id": 22293516,
+      "current_aggregate_trade_id": 22293517,
+      "preceding_last_raw_trade_id": 30600890,
+      "current_first_raw_trade_id": 30600892,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579107842853
+    },
+    {
+      "preceding_aggregate_trade_id": 22377109,
+      "current_aggregate_trade_id": 22377110,
+      "preceding_last_raw_trade_id": 30712903,
+      "current_first_raw_trade_id": 30712905,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579137629103
+    },
+    {
+      "preceding_aggregate_trade_id": 22378531,
+      "current_aggregate_trade_id": 22378532,
+      "preceding_last_raw_trade_id": 30715118,
+      "current_first_raw_trade_id": 30715120,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579137709274
+    },
+    {
+      "preceding_aggregate_trade_id": 22384047,
+      "current_aggregate_trade_id": 22384048,
+      "preceding_last_raw_trade_id": 30722577,
+      "current_first_raw_trade_id": 30722579,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579138449337
+    },
+    {
+      "preceding_aggregate_trade_id": 22384633,
+      "current_aggregate_trade_id": 22384634,
+      "preceding_last_raw_trade_id": 30723435,
+      "current_first_raw_trade_id": 30723437,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579138488111
+    },
+    {
+      "preceding_aggregate_trade_id": 22634972,
+      "current_aggregate_trade_id": 22634973,
+      "preceding_last_raw_trade_id": 31062312,
+      "current_first_raw_trade_id": 31062314,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579240858102
+    },
+    {
+      "preceding_aggregate_trade_id": 22635098,
+      "current_aggregate_trade_id": 22635099,
+      "preceding_last_raw_trade_id": 31062506,
+      "current_first_raw_trade_id": 31062510,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579240860170
+    },
+    {
+      "preceding_aggregate_trade_id": 22635254,
+      "current_aggregate_trade_id": 22635255,
+      "preceding_last_raw_trade_id": 31062750,
+      "current_first_raw_trade_id": 31062752,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579240863076
+    },
+    {
+      "preceding_aggregate_trade_id": 22635283,
+      "current_aggregate_trade_id": 22635284,
+      "preceding_last_raw_trade_id": 31062792,
+      "current_first_raw_trade_id": 31062794,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579240863087
+    },
+    {
+      "preceding_aggregate_trade_id": 22635293,
+      "current_aggregate_trade_id": 22635294,
+      "preceding_last_raw_trade_id": 31062815,
+      "current_first_raw_trade_id": 31062817,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579240863131
+    },
+    {
+      "preceding_aggregate_trade_id": 22635430,
+      "current_aggregate_trade_id": 22635431,
+      "preceding_last_raw_trade_id": 31062983,
+      "current_first_raw_trade_id": 31062987,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579240865121
+    },
+    {
+      "preceding_aggregate_trade_id": 22635674,
+      "current_aggregate_trade_id": 22635675,
+      "preceding_last_raw_trade_id": 31063354,
+      "current_first_raw_trade_id": 31063358,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579240867067
+    },
+    {
+      "preceding_aggregate_trade_id": 22635677,
+      "current_aggregate_trade_id": 22635678,
+      "preceding_last_raw_trade_id": 31063360,
+      "current_first_raw_trade_id": 31063362,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579240867082
+    },
+    {
+      "preceding_aggregate_trade_id": 22635681,
+      "current_aggregate_trade_id": 22635682,
+      "preceding_last_raw_trade_id": 31063367,
+      "current_first_raw_trade_id": 31063369,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579240867092
+    },
+    {
+      "preceding_aggregate_trade_id": 22635682,
+      "current_aggregate_trade_id": 22635683,
+      "preceding_last_raw_trade_id": 31063369,
+      "current_first_raw_trade_id": 31063371,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579240867099
+    },
+    {
+      "preceding_aggregate_trade_id": 22635686,
+      "current_aggregate_trade_id": 22635687,
+      "preceding_last_raw_trade_id": 31063374,
+      "current_first_raw_trade_id": 31063379,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1579240867116
+    },
+    {
+      "preceding_aggregate_trade_id": 22685486,
+      "current_aggregate_trade_id": 22685487,
+      "preceding_last_raw_trade_id": 31129334,
+      "current_first_raw_trade_id": 31129336,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579248857197
+    },
+    {
+      "preceding_aggregate_trade_id": 22734365,
+      "current_aggregate_trade_id": 22734366,
+      "preceding_last_raw_trade_id": 31194852,
+      "current_first_raw_trade_id": 31194854,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579258977138
+    },
+    {
+      "preceding_aggregate_trade_id": 22790024,
+      "current_aggregate_trade_id": 22790025,
+      "preceding_last_raw_trade_id": 31272529,
+      "current_first_raw_trade_id": 31272531,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579277037165
+    },
+    {
+      "preceding_aggregate_trade_id": 22795173,
+      "current_aggregate_trade_id": 22795174,
+      "preceding_last_raw_trade_id": 31279811,
+      "current_first_raw_trade_id": 31279813,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579278302188
+    },
+    {
+      "preceding_aggregate_trade_id": 22819919,
+      "current_aggregate_trade_id": 22819920,
+      "preceding_last_raw_trade_id": 31312995,
+      "current_first_raw_trade_id": 31312997,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579286799188
+    },
+    {
+      "preceding_aggregate_trade_id": 22869005,
+      "current_aggregate_trade_id": 22869006,
+      "preceding_last_raw_trade_id": 31378946,
+      "current_first_raw_trade_id": 31378948,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579307700201
+    },
+    {
+      "preceding_aggregate_trade_id": 23035571,
+      "current_aggregate_trade_id": 23035572,
+      "preceding_last_raw_trade_id": 31610461,
+      "current_first_raw_trade_id": 31610465,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579395686133
+    },
+    {
+      "preceding_aggregate_trade_id": 23135410,
+      "current_aggregate_trade_id": 23135411,
+      "preceding_last_raw_trade_id": 31746515,
+      "current_first_raw_trade_id": 31746517,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431665478
+    },
+    {
+      "preceding_aggregate_trade_id": 23135411,
+      "current_aggregate_trade_id": 23135412,
+      "preceding_last_raw_trade_id": 31746518,
+      "current_first_raw_trade_id": 31746521,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431665494
+    },
+    {
+      "preceding_aggregate_trade_id": 23135412,
+      "current_aggregate_trade_id": 23135413,
+      "preceding_last_raw_trade_id": 31746521,
+      "current_first_raw_trade_id": 31746523,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431665501
+    },
+    {
+      "preceding_aggregate_trade_id": 23135515,
+      "current_aggregate_trade_id": 23135516,
+      "preceding_last_raw_trade_id": 31746754,
+      "current_first_raw_trade_id": 31746756,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431666093
+    },
+    {
+      "preceding_aggregate_trade_id": 23135590,
+      "current_aggregate_trade_id": 23135591,
+      "preceding_last_raw_trade_id": 31746904,
+      "current_first_raw_trade_id": 31746907,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431666161
+    },
+    {
+      "preceding_aggregate_trade_id": 23135600,
+      "current_aggregate_trade_id": 23135601,
+      "preceding_last_raw_trade_id": 31746925,
+      "current_first_raw_trade_id": 31746933,
+      "skipped_raw_trade_id_count": 7,
+      "current_timestamp_ms": 1579431666172
+    },
+    {
+      "preceding_aggregate_trade_id": 23135808,
+      "current_aggregate_trade_id": 23135809,
+      "preceding_last_raw_trade_id": 31747243,
+      "current_first_raw_trade_id": 31747246,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431668107
+    },
+    {
+      "preceding_aggregate_trade_id": 23135819,
+      "current_aggregate_trade_id": 23135820,
+      "preceding_last_raw_trade_id": 31747289,
+      "current_first_raw_trade_id": 31747293,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431668170
+    },
+    {
+      "preceding_aggregate_trade_id": 23135911,
+      "current_aggregate_trade_id": 23135912,
+      "preceding_last_raw_trade_id": 31747437,
+      "current_first_raw_trade_id": 31747439,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431669073
+    },
+    {
+      "preceding_aggregate_trade_id": 23135912,
+      "current_aggregate_trade_id": 23135913,
+      "preceding_last_raw_trade_id": 31747439,
+      "current_first_raw_trade_id": 31747441,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431669079
+    },
+    {
+      "preceding_aggregate_trade_id": 23135925,
+      "current_aggregate_trade_id": 23135926,
+      "preceding_last_raw_trade_id": 31747484,
+      "current_first_raw_trade_id": 31747487,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431669129
+    },
+    {
+      "preceding_aggregate_trade_id": 23136030,
+      "current_aggregate_trade_id": 23136031,
+      "preceding_last_raw_trade_id": 31747651,
+      "current_first_raw_trade_id": 31747654,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431670163
+    },
+    {
+      "preceding_aggregate_trade_id": 23136035,
+      "current_aggregate_trade_id": 23136036,
+      "preceding_last_raw_trade_id": 31747662,
+      "current_first_raw_trade_id": 31747665,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431670192
+    },
+    {
+      "preceding_aggregate_trade_id": 23136037,
+      "current_aggregate_trade_id": 23136038,
+      "preceding_last_raw_trade_id": 31747670,
+      "current_first_raw_trade_id": 31747673,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431670210
+    },
+    {
+      "preceding_aggregate_trade_id": 23136038,
+      "current_aggregate_trade_id": 23136039,
+      "preceding_last_raw_trade_id": 31747673,
+      "current_first_raw_trade_id": 31747675,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431670211
+    },
+    {
+      "preceding_aggregate_trade_id": 23136042,
+      "current_aggregate_trade_id": 23136043,
+      "preceding_last_raw_trade_id": 31747680,
+      "current_first_raw_trade_id": 31747683,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431670263
+    },
+    {
+      "preceding_aggregate_trade_id": 23143448,
+      "current_aggregate_trade_id": 23143449,
+      "preceding_last_raw_trade_id": 31758164,
+      "current_first_raw_trade_id": 31758169,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1579431740111
+    },
+    {
+      "preceding_aggregate_trade_id": 23143449,
+      "current_aggregate_trade_id": 23143450,
+      "preceding_last_raw_trade_id": 31758170,
+      "current_first_raw_trade_id": 31758173,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431740125
+    },
+    {
+      "preceding_aggregate_trade_id": 23143450,
+      "current_aggregate_trade_id": 23143451,
+      "preceding_last_raw_trade_id": 31758173,
+      "current_first_raw_trade_id": 31758177,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431740131
+    },
+    {
+      "preceding_aggregate_trade_id": 23143453,
+      "current_aggregate_trade_id": 23143454,
+      "preceding_last_raw_trade_id": 31758179,
+      "current_first_raw_trade_id": 31758181,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431740145
+    },
+    {
+      "preceding_aggregate_trade_id": 23143458,
+      "current_aggregate_trade_id": 23143459,
+      "preceding_last_raw_trade_id": 31758185,
+      "current_first_raw_trade_id": 31758189,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431740161
+    },
+    {
+      "preceding_aggregate_trade_id": 23143460,
+      "current_aggregate_trade_id": 23143461,
+      "preceding_last_raw_trade_id": 31758193,
+      "current_first_raw_trade_id": 31758195,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431740170
+    },
+    {
+      "preceding_aggregate_trade_id": 23143640,
+      "current_aggregate_trade_id": 23143641,
+      "preceding_last_raw_trade_id": 31758434,
+      "current_first_raw_trade_id": 31758438,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431742097
+    },
+    {
+      "preceding_aggregate_trade_id": 23143642,
+      "current_aggregate_trade_id": 23143643,
+      "preceding_last_raw_trade_id": 31758440,
+      "current_first_raw_trade_id": 31758444,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431742130
+    },
+    {
+      "preceding_aggregate_trade_id": 23143643,
+      "current_aggregate_trade_id": 23143644,
+      "preceding_last_raw_trade_id": 31758447,
+      "current_first_raw_trade_id": 31758449,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431742142
+    },
+    {
+      "preceding_aggregate_trade_id": 23143699,
+      "current_aggregate_trade_id": 23143700,
+      "preceding_last_raw_trade_id": 31758557,
+      "current_first_raw_trade_id": 31758561,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431743093
+    },
+    {
+      "preceding_aggregate_trade_id": 23143722,
+      "current_aggregate_trade_id": 23143723,
+      "preceding_last_raw_trade_id": 31758587,
+      "current_first_raw_trade_id": 31758593,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1579431743114
+    },
+    {
+      "preceding_aggregate_trade_id": 23143727,
+      "current_aggregate_trade_id": 23143728,
+      "preceding_last_raw_trade_id": 31758600,
+      "current_first_raw_trade_id": 31758606,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1579431743188
+    },
+    {
+      "preceding_aggregate_trade_id": 23143804,
+      "current_aggregate_trade_id": 23143805,
+      "preceding_last_raw_trade_id": 31758718,
+      "current_first_raw_trade_id": 31758720,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431744100
+    },
+    {
+      "preceding_aggregate_trade_id": 23143816,
+      "current_aggregate_trade_id": 23143817,
+      "preceding_last_raw_trade_id": 31758736,
+      "current_first_raw_trade_id": 31758742,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1579431744125
+    },
+    {
+      "preceding_aggregate_trade_id": 23143820,
+      "current_aggregate_trade_id": 23143821,
+      "preceding_last_raw_trade_id": 31758746,
+      "current_first_raw_trade_id": 31758753,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1579431744151
+    },
+    {
+      "preceding_aggregate_trade_id": 23143895,
+      "current_aggregate_trade_id": 23143896,
+      "preceding_last_raw_trade_id": 31758877,
+      "current_first_raw_trade_id": 31758881,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431744170
+    },
+    {
+      "preceding_aggregate_trade_id": 23143896,
+      "current_aggregate_trade_id": 23143897,
+      "preceding_last_raw_trade_id": 31758881,
+      "current_first_raw_trade_id": 31758885,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431744182
+    },
+    {
+      "preceding_aggregate_trade_id": 23143968,
+      "current_aggregate_trade_id": 23143969,
+      "preceding_last_raw_trade_id": 31758993,
+      "current_first_raw_trade_id": 31758997,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431745114
+    },
+    {
+      "preceding_aggregate_trade_id": 23143975,
+      "current_aggregate_trade_id": 23143976,
+      "preceding_last_raw_trade_id": 31759004,
+      "current_first_raw_trade_id": 31759006,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431745133
+    },
+    {
+      "preceding_aggregate_trade_id": 23144117,
+      "current_aggregate_trade_id": 23144118,
+      "preceding_last_raw_trade_id": 31759274,
+      "current_first_raw_trade_id": 31759276,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431746128
+    },
+    {
+      "preceding_aggregate_trade_id": 23144179,
+      "current_aggregate_trade_id": 23144180,
+      "preceding_last_raw_trade_id": 31759361,
+      "current_first_raw_trade_id": 31759371,
+      "skipped_raw_trade_id_count": 9,
+      "current_timestamp_ms": 1579431747108
+    },
+    {
+      "preceding_aggregate_trade_id": 23144181,
+      "current_aggregate_trade_id": 23144182,
+      "preceding_last_raw_trade_id": 31759372,
+      "current_first_raw_trade_id": 31759384,
+      "skipped_raw_trade_id_count": 11,
+      "current_timestamp_ms": 1579431747152
+    },
+    {
+      "preceding_aggregate_trade_id": 23144182,
+      "current_aggregate_trade_id": 23144183,
+      "preceding_last_raw_trade_id": 31759384,
+      "current_first_raw_trade_id": 31759391,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1579431747157
+    },
+    {
+      "preceding_aggregate_trade_id": 23144186,
+      "current_aggregate_trade_id": 23144187,
+      "preceding_last_raw_trade_id": 31759394,
+      "current_first_raw_trade_id": 31759411,
+      "skipped_raw_trade_id_count": 16,
+      "current_timestamp_ms": 1579431747166
+    },
+    {
+      "preceding_aggregate_trade_id": 23144209,
+      "current_aggregate_trade_id": 23144210,
+      "preceding_last_raw_trade_id": 31759448,
+      "current_first_raw_trade_id": 31759451,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431747171
+    },
+    {
+      "preceding_aggregate_trade_id": 23144373,
+      "current_aggregate_trade_id": 23144374,
+      "preceding_last_raw_trade_id": 31759707,
+      "current_first_raw_trade_id": 31759711,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431748083
+    },
+    {
+      "preceding_aggregate_trade_id": 23144378,
+      "current_aggregate_trade_id": 23144379,
+      "preceding_last_raw_trade_id": 31759715,
+      "current_first_raw_trade_id": 31759719,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431748095
+    },
+    {
+      "preceding_aggregate_trade_id": 23144381,
+      "current_aggregate_trade_id": 23144382,
+      "preceding_last_raw_trade_id": 31759723,
+      "current_first_raw_trade_id": 31759728,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1579431748123
+    },
+    {
+      "preceding_aggregate_trade_id": 23144382,
+      "current_aggregate_trade_id": 23144383,
+      "preceding_last_raw_trade_id": 31759728,
+      "current_first_raw_trade_id": 31759737,
+      "skipped_raw_trade_id_count": 8,
+      "current_timestamp_ms": 1579431748157
+    },
+    {
+      "preceding_aggregate_trade_id": 23144383,
+      "current_aggregate_trade_id": 23144384,
+      "preceding_last_raw_trade_id": 31759737,
+      "current_first_raw_trade_id": 31759739,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431748208
+    },
+    {
+      "preceding_aggregate_trade_id": 23144478,
+      "current_aggregate_trade_id": 23144479,
+      "preceding_last_raw_trade_id": 31759854,
+      "current_first_raw_trade_id": 31759857,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431749104
+    },
+    {
+      "preceding_aggregate_trade_id": 23144480,
+      "current_aggregate_trade_id": 23144481,
+      "preceding_last_raw_trade_id": 31759860,
+      "current_first_raw_trade_id": 31759863,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431749114
+    },
+    {
+      "preceding_aggregate_trade_id": 23144482,
+      "current_aggregate_trade_id": 23144483,
+      "preceding_last_raw_trade_id": 31759864,
+      "current_first_raw_trade_id": 31759866,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431749131
+    },
+    {
+      "preceding_aggregate_trade_id": 23144489,
+      "current_aggregate_trade_id": 23144490,
+      "preceding_last_raw_trade_id": 31759876,
+      "current_first_raw_trade_id": 31759878,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431749143
+    },
+    {
+      "preceding_aggregate_trade_id": 23144574,
+      "current_aggregate_trade_id": 23144575,
+      "preceding_last_raw_trade_id": 31759993,
+      "current_first_raw_trade_id": 31760005,
+      "skipped_raw_trade_id_count": 11,
+      "current_timestamp_ms": 1579431750118
+    },
+    {
+      "preceding_aggregate_trade_id": 23144575,
+      "current_aggregate_trade_id": 23144576,
+      "preceding_last_raw_trade_id": 31760005,
+      "current_first_raw_trade_id": 31760014,
+      "skipped_raw_trade_id_count": 8,
+      "current_timestamp_ms": 1579431750139
+    },
+    {
+      "preceding_aggregate_trade_id": 23144576,
+      "current_aggregate_trade_id": 23144577,
+      "preceding_last_raw_trade_id": 31760014,
+      "current_first_raw_trade_id": 31760017,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431750149
+    },
+    {
+      "preceding_aggregate_trade_id": 23144579,
+      "current_aggregate_trade_id": 23144580,
+      "preceding_last_raw_trade_id": 31760021,
+      "current_first_raw_trade_id": 31760027,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1579431750168
+    },
+    {
+      "preceding_aggregate_trade_id": 23144581,
+      "current_aggregate_trade_id": 23144582,
+      "preceding_last_raw_trade_id": 31760028,
+      "current_first_raw_trade_id": 31760030,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431750175
+    },
+    {
+      "preceding_aggregate_trade_id": 23144886,
+      "current_aggregate_trade_id": 23144887,
+      "preceding_last_raw_trade_id": 31760469,
+      "current_first_raw_trade_id": 31760472,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431752153
+    },
+    {
+      "preceding_aggregate_trade_id": 23144887,
+      "current_aggregate_trade_id": 23144888,
+      "preceding_last_raw_trade_id": 31760473,
+      "current_first_raw_trade_id": 31760478,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1579431752154
+    },
+    {
+      "preceding_aggregate_trade_id": 23144888,
+      "current_aggregate_trade_id": 23144889,
+      "preceding_last_raw_trade_id": 31760478,
+      "current_first_raw_trade_id": 31760480,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431752156
+    },
+    {
+      "preceding_aggregate_trade_id": 23144889,
+      "current_aggregate_trade_id": 23144890,
+      "preceding_last_raw_trade_id": 31760481,
+      "current_first_raw_trade_id": 31760485,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431752158
+    },
+    {
+      "preceding_aggregate_trade_id": 23144891,
+      "current_aggregate_trade_id": 23144892,
+      "preceding_last_raw_trade_id": 31760488,
+      "current_first_raw_trade_id": 31760494,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1579431752172
+    },
+    {
+      "preceding_aggregate_trade_id": 23145117,
+      "current_aggregate_trade_id": 23145118,
+      "preceding_last_raw_trade_id": 31760786,
+      "current_first_raw_trade_id": 31760788,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431754134
+    },
+    {
+      "preceding_aggregate_trade_id": 23145492,
+      "current_aggregate_trade_id": 23145493,
+      "preceding_last_raw_trade_id": 31761303,
+      "current_first_raw_trade_id": 31761305,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431758143
+    },
+    {
+      "preceding_aggregate_trade_id": 23145493,
+      "current_aggregate_trade_id": 23145494,
+      "preceding_last_raw_trade_id": 31761305,
+      "current_first_raw_trade_id": 31761307,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431758144
+    },
+    {
+      "preceding_aggregate_trade_id": 23145496,
+      "current_aggregate_trade_id": 23145497,
+      "preceding_last_raw_trade_id": 31761309,
+      "current_first_raw_trade_id": 31761313,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431758147
+    },
+    {
+      "preceding_aggregate_trade_id": 23145497,
+      "current_aggregate_trade_id": 23145498,
+      "preceding_last_raw_trade_id": 31761313,
+      "current_first_raw_trade_id": 31761322,
+      "skipped_raw_trade_id_count": 8,
+      "current_timestamp_ms": 1579431758164
+    },
+    {
+      "preceding_aggregate_trade_id": 23145988,
+      "current_aggregate_trade_id": 23145989,
+      "preceding_last_raw_trade_id": 31761980,
+      "current_first_raw_trade_id": 31761982,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431764146
+    },
+    {
+      "preceding_aggregate_trade_id": 23145989,
+      "current_aggregate_trade_id": 23145990,
+      "preceding_last_raw_trade_id": 31761982,
+      "current_first_raw_trade_id": 31761984,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431764214
+    },
+    {
+      "preceding_aggregate_trade_id": 23147680,
+      "current_aggregate_trade_id": 23147681,
+      "preceding_last_raw_trade_id": 31764414,
+      "current_first_raw_trade_id": 31764416,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431780147
+    },
+    {
+      "preceding_aggregate_trade_id": 23147684,
+      "current_aggregate_trade_id": 23147685,
+      "preceding_last_raw_trade_id": 31764422,
+      "current_first_raw_trade_id": 31764424,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431780168
+    },
+    {
+      "preceding_aggregate_trade_id": 23148830,
+      "current_aggregate_trade_id": 23148831,
+      "preceding_last_raw_trade_id": 31765921,
+      "current_first_raw_trade_id": 31765923,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431792139
+    },
+    {
+      "preceding_aggregate_trade_id": 23152222,
+      "current_aggregate_trade_id": 23152223,
+      "preceding_last_raw_trade_id": 31770584,
+      "current_first_raw_trade_id": 31770586,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431826107
+    },
+    {
+      "preceding_aggregate_trade_id": 23152241,
+      "current_aggregate_trade_id": 23152242,
+      "preceding_last_raw_trade_id": 31770647,
+      "current_first_raw_trade_id": 31770650,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431826127
+    },
+    {
+      "preceding_aggregate_trade_id": 23152242,
+      "current_aggregate_trade_id": 23152243,
+      "preceding_last_raw_trade_id": 31770650,
+      "current_first_raw_trade_id": 31770664,
+      "skipped_raw_trade_id_count": 13,
+      "current_timestamp_ms": 1579431826149
+    },
+    {
+      "preceding_aggregate_trade_id": 23152244,
+      "current_aggregate_trade_id": 23152245,
+      "preceding_last_raw_trade_id": 31770669,
+      "current_first_raw_trade_id": 31770671,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431826164
+    },
+    {
+      "preceding_aggregate_trade_id": 23152245,
+      "current_aggregate_trade_id": 23152246,
+      "preceding_last_raw_trade_id": 31770671,
+      "current_first_raw_trade_id": 31770677,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1579431826171
+    },
+    {
+      "preceding_aggregate_trade_id": 23152409,
+      "current_aggregate_trade_id": 23152410,
+      "preceding_last_raw_trade_id": 31770925,
+      "current_first_raw_trade_id": 31770927,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431827130
+    },
+    {
+      "preceding_aggregate_trade_id": 23152410,
+      "current_aggregate_trade_id": 23152411,
+      "preceding_last_raw_trade_id": 31770931,
+      "current_first_raw_trade_id": 31770933,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431827132
+    },
+    {
+      "preceding_aggregate_trade_id": 23152533,
+      "current_aggregate_trade_id": 23152534,
+      "preceding_last_raw_trade_id": 31771118,
+      "current_first_raw_trade_id": 31771120,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431828082
+    },
+    {
+      "preceding_aggregate_trade_id": 23152534,
+      "current_aggregate_trade_id": 23152535,
+      "preceding_last_raw_trade_id": 31771120,
+      "current_first_raw_trade_id": 31771123,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431828097
+    },
+    {
+      "preceding_aggregate_trade_id": 23152539,
+      "current_aggregate_trade_id": 23152540,
+      "preceding_last_raw_trade_id": 31771135,
+      "current_first_raw_trade_id": 31771139,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579431828115
+    },
+    {
+      "preceding_aggregate_trade_id": 23152541,
+      "current_aggregate_trade_id": 23152542,
+      "preceding_last_raw_trade_id": 31771140,
+      "current_first_raw_trade_id": 31771142,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431828119
+    },
+    {
+      "preceding_aggregate_trade_id": 23152547,
+      "current_aggregate_trade_id": 23152548,
+      "preceding_last_raw_trade_id": 31771149,
+      "current_first_raw_trade_id": 31771152,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579431828124
+    },
+    {
+      "preceding_aggregate_trade_id": 23152548,
+      "current_aggregate_trade_id": 23152549,
+      "preceding_last_raw_trade_id": 31771152,
+      "current_first_raw_trade_id": 31771168,
+      "skipped_raw_trade_id_count": 15,
+      "current_timestamp_ms": 1579431828159
+    },
+    {
+      "preceding_aggregate_trade_id": 23152553,
+      "current_aggregate_trade_id": 23152554,
+      "preceding_last_raw_trade_id": 31771176,
+      "current_first_raw_trade_id": 31771182,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1579431828183
+    },
+    {
+      "preceding_aggregate_trade_id": 23152554,
+      "current_aggregate_trade_id": 23152555,
+      "preceding_last_raw_trade_id": 31771182,
+      "current_first_raw_trade_id": 31771189,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1579431828187
+    },
+    {
+      "preceding_aggregate_trade_id": 23152555,
+      "current_aggregate_trade_id": 23152556,
+      "preceding_last_raw_trade_id": 31771192,
+      "current_first_raw_trade_id": 31771201,
+      "skipped_raw_trade_id_count": 8,
+      "current_timestamp_ms": 1579431828195
+    },
+    {
+      "preceding_aggregate_trade_id": 23152683,
+      "current_aggregate_trade_id": 23152684,
+      "preceding_last_raw_trade_id": 31771373,
+      "current_first_raw_trade_id": 31771382,
+      "skipped_raw_trade_id_count": 8,
+      "current_timestamp_ms": 1579431829118
+    },
+    {
+      "preceding_aggregate_trade_id": 23152686,
+      "current_aggregate_trade_id": 23152687,
+      "preceding_last_raw_trade_id": 31771384,
+      "current_first_raw_trade_id": 31771386,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431829125
+    },
+    {
+      "preceding_aggregate_trade_id": 23152688,
+      "current_aggregate_trade_id": 23152689,
+      "preceding_last_raw_trade_id": 31771387,
+      "current_first_raw_trade_id": 31771400,
+      "skipped_raw_trade_id_count": 12,
+      "current_timestamp_ms": 1579431829187
+    },
+    {
+      "preceding_aggregate_trade_id": 23152698,
+      "current_aggregate_trade_id": 23152699,
+      "preceding_last_raw_trade_id": 31771410,
+      "current_first_raw_trade_id": 31771412,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431829235
+    },
+    {
+      "preceding_aggregate_trade_id": 23152800,
+      "current_aggregate_trade_id": 23152801,
+      "preceding_last_raw_trade_id": 31771552,
+      "current_first_raw_trade_id": 31771554,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431830121
+    },
+    {
+      "preceding_aggregate_trade_id": 23156418,
+      "current_aggregate_trade_id": 23156419,
+      "preceding_last_raw_trade_id": 31776195,
+      "current_first_raw_trade_id": 31776197,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431869068
+    },
+    {
+      "preceding_aggregate_trade_id": 23156427,
+      "current_aggregate_trade_id": 23156428,
+      "preceding_last_raw_trade_id": 31776207,
+      "current_first_raw_trade_id": 31776209,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579431869129
+    },
+    {
+      "preceding_aggregate_trade_id": 23236808,
+      "current_aggregate_trade_id": 23236809,
+      "preceding_last_raw_trade_id": 31888234,
+      "current_first_raw_trade_id": 31888236,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579440626200
+    },
+    {
+      "preceding_aggregate_trade_id": 23298783,
+      "current_aggregate_trade_id": 23298784,
+      "preceding_last_raw_trade_id": 31974143,
+      "current_first_raw_trade_id": 31974146,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472102288
+    },
+    {
+      "preceding_aggregate_trade_id": 23298860,
+      "current_aggregate_trade_id": 23298861,
+      "preceding_last_raw_trade_id": 31974274,
+      "current_first_raw_trade_id": 31974276,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472103090
+    },
+    {
+      "preceding_aggregate_trade_id": 23298861,
+      "current_aggregate_trade_id": 23298862,
+      "preceding_last_raw_trade_id": 31974278,
+      "current_first_raw_trade_id": 31974281,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472103107
+    },
+    {
+      "preceding_aggregate_trade_id": 23298868,
+      "current_aggregate_trade_id": 23298869,
+      "preceding_last_raw_trade_id": 31974294,
+      "current_first_raw_trade_id": 31974297,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472103147
+    },
+    {
+      "preceding_aggregate_trade_id": 23303861,
+      "current_aggregate_trade_id": 23303862,
+      "preceding_last_raw_trade_id": 31981482,
+      "current_first_raw_trade_id": 31981484,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472177081
+    },
+    {
+      "preceding_aggregate_trade_id": 23303866,
+      "current_aggregate_trade_id": 23303867,
+      "preceding_last_raw_trade_id": 31981488,
+      "current_first_raw_trade_id": 31981495,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1579472177108
+    },
+    {
+      "preceding_aggregate_trade_id": 23303867,
+      "current_aggregate_trade_id": 23303868,
+      "preceding_last_raw_trade_id": 31981495,
+      "current_first_raw_trade_id": 31981499,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579472177119
+    },
+    {
+      "preceding_aggregate_trade_id": 23303869,
+      "current_aggregate_trade_id": 23303870,
+      "preceding_last_raw_trade_id": 31981500,
+      "current_first_raw_trade_id": 31981503,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472177128
+    },
+    {
+      "preceding_aggregate_trade_id": 23303870,
+      "current_aggregate_trade_id": 23303871,
+      "preceding_last_raw_trade_id": 31981503,
+      "current_first_raw_trade_id": 31981506,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472177139
+    },
+    {
+      "preceding_aggregate_trade_id": 23303871,
+      "current_aggregate_trade_id": 23303872,
+      "preceding_last_raw_trade_id": 31981507,
+      "current_first_raw_trade_id": 31981512,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1579472177149
+    },
+    {
+      "preceding_aggregate_trade_id": 23303872,
+      "current_aggregate_trade_id": 23303873,
+      "preceding_last_raw_trade_id": 31981512,
+      "current_first_raw_trade_id": 31981516,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579472177162
+    },
+    {
+      "preceding_aggregate_trade_id": 23303874,
+      "current_aggregate_trade_id": 23303875,
+      "preceding_last_raw_trade_id": 31981517,
+      "current_first_raw_trade_id": 31981520,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472177170
+    },
+    {
+      "preceding_aggregate_trade_id": 23303988,
+      "current_aggregate_trade_id": 23303989,
+      "preceding_last_raw_trade_id": 31981684,
+      "current_first_raw_trade_id": 31981688,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579472178142
+    },
+    {
+      "preceding_aggregate_trade_id": 23303990,
+      "current_aggregate_trade_id": 23303991,
+      "preceding_last_raw_trade_id": 31981689,
+      "current_first_raw_trade_id": 31981691,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472178143
+    },
+    {
+      "preceding_aggregate_trade_id": 23304147,
+      "current_aggregate_trade_id": 23304148,
+      "preceding_last_raw_trade_id": 31981933,
+      "current_first_raw_trade_id": 31981935,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472180148
+    },
+    {
+      "preceding_aggregate_trade_id": 23304149,
+      "current_aggregate_trade_id": 23304150,
+      "preceding_last_raw_trade_id": 31981937,
+      "current_first_raw_trade_id": 31981940,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472180152
+    },
+    {
+      "preceding_aggregate_trade_id": 23304323,
+      "current_aggregate_trade_id": 23304324,
+      "preceding_last_raw_trade_id": 31982181,
+      "current_first_raw_trade_id": 31982183,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472182135
+    },
+    {
+      "preceding_aggregate_trade_id": 23304324,
+      "current_aggregate_trade_id": 23304325,
+      "preceding_last_raw_trade_id": 31982183,
+      "current_first_raw_trade_id": 31982187,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579472182144
+    },
+    {
+      "preceding_aggregate_trade_id": 23304325,
+      "current_aggregate_trade_id": 23304326,
+      "preceding_last_raw_trade_id": 31982187,
+      "current_first_raw_trade_id": 31982189,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472182148
+    },
+    {
+      "preceding_aggregate_trade_id": 23304401,
+      "current_aggregate_trade_id": 23304402,
+      "preceding_last_raw_trade_id": 31982288,
+      "current_first_raw_trade_id": 31982290,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472183092
+    },
+    {
+      "preceding_aggregate_trade_id": 23304403,
+      "current_aggregate_trade_id": 23304404,
+      "preceding_last_raw_trade_id": 31982291,
+      "current_first_raw_trade_id": 31982294,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472183099
+    },
+    {
+      "preceding_aggregate_trade_id": 23304404,
+      "current_aggregate_trade_id": 23304405,
+      "preceding_last_raw_trade_id": 31982294,
+      "current_first_raw_trade_id": 31982299,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1579472183120
+    },
+    {
+      "preceding_aggregate_trade_id": 23304405,
+      "current_aggregate_trade_id": 23304406,
+      "preceding_last_raw_trade_id": 31982300,
+      "current_first_raw_trade_id": 31982302,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472183129
+    },
+    {
+      "preceding_aggregate_trade_id": 23304412,
+      "current_aggregate_trade_id": 23304413,
+      "preceding_last_raw_trade_id": 31982308,
+      "current_first_raw_trade_id": 31982311,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472183138
+    },
+    {
+      "preceding_aggregate_trade_id": 23304413,
+      "current_aggregate_trade_id": 23304414,
+      "preceding_last_raw_trade_id": 31982312,
+      "current_first_raw_trade_id": 31982314,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472183143
+    },
+    {
+      "preceding_aggregate_trade_id": 23304414,
+      "current_aggregate_trade_id": 23304415,
+      "preceding_last_raw_trade_id": 31982314,
+      "current_first_raw_trade_id": 31982316,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472183147
+    },
+    {
+      "preceding_aggregate_trade_id": 23304415,
+      "current_aggregate_trade_id": 23304416,
+      "preceding_last_raw_trade_id": 31982316,
+      "current_first_raw_trade_id": 31982320,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579472183159
+    },
+    {
+      "preceding_aggregate_trade_id": 23304735,
+      "current_aggregate_trade_id": 23304736,
+      "preceding_last_raw_trade_id": 31982745,
+      "current_first_raw_trade_id": 31982747,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472187165
+    },
+    {
+      "preceding_aggregate_trade_id": 23304736,
+      "current_aggregate_trade_id": 23304737,
+      "preceding_last_raw_trade_id": 31982747,
+      "current_first_raw_trade_id": 31982749,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472187174
+    },
+    {
+      "preceding_aggregate_trade_id": 23304881,
+      "current_aggregate_trade_id": 23304882,
+      "preceding_last_raw_trade_id": 31982968,
+      "current_first_raw_trade_id": 31982973,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1579472188074
+    },
+    {
+      "preceding_aggregate_trade_id": 23304882,
+      "current_aggregate_trade_id": 23304883,
+      "preceding_last_raw_trade_id": 31982973,
+      "current_first_raw_trade_id": 31982975,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472188078
+    },
+    {
+      "preceding_aggregate_trade_id": 23304885,
+      "current_aggregate_trade_id": 23304886,
+      "preceding_last_raw_trade_id": 31982981,
+      "current_first_raw_trade_id": 31982983,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472188094
+    },
+    {
+      "preceding_aggregate_trade_id": 23304886,
+      "current_aggregate_trade_id": 23304887,
+      "preceding_last_raw_trade_id": 31982986,
+      "current_first_raw_trade_id": 31982992,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1579472188108
+    },
+    {
+      "preceding_aggregate_trade_id": 23304887,
+      "current_aggregate_trade_id": 23304888,
+      "preceding_last_raw_trade_id": 31982993,
+      "current_first_raw_trade_id": 31982997,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579472188113
+    },
+    {
+      "preceding_aggregate_trade_id": 23304889,
+      "current_aggregate_trade_id": 23304890,
+      "preceding_last_raw_trade_id": 31982999,
+      "current_first_raw_trade_id": 31983003,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579472188115
+    },
+    {
+      "preceding_aggregate_trade_id": 23304890,
+      "current_aggregate_trade_id": 23304891,
+      "preceding_last_raw_trade_id": 31983003,
+      "current_first_raw_trade_id": 31983005,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472188118
+    },
+    {
+      "preceding_aggregate_trade_id": 23304892,
+      "current_aggregate_trade_id": 23304893,
+      "preceding_last_raw_trade_id": 31983007,
+      "current_first_raw_trade_id": 31983024,
+      "skipped_raw_trade_id_count": 16,
+      "current_timestamp_ms": 1579472188156
+    },
+    {
+      "preceding_aggregate_trade_id": 23304893,
+      "current_aggregate_trade_id": 23304894,
+      "preceding_last_raw_trade_id": 31983024,
+      "current_first_raw_trade_id": 31983026,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472188157
+    },
+    {
+      "preceding_aggregate_trade_id": 23304895,
+      "current_aggregate_trade_id": 23304896,
+      "preceding_last_raw_trade_id": 31983027,
+      "current_first_raw_trade_id": 31983029,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472188160
+    },
+    {
+      "preceding_aggregate_trade_id": 23304902,
+      "current_aggregate_trade_id": 23304903,
+      "preceding_last_raw_trade_id": 31983037,
+      "current_first_raw_trade_id": 31983039,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472188166
+    },
+    {
+      "preceding_aggregate_trade_id": 23305224,
+      "current_aggregate_trade_id": 23305225,
+      "preceding_last_raw_trade_id": 31983503,
+      "current_first_raw_trade_id": 31983506,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472191096
+    },
+    {
+      "preceding_aggregate_trade_id": 23305225,
+      "current_aggregate_trade_id": 23305226,
+      "preceding_last_raw_trade_id": 31983506,
+      "current_first_raw_trade_id": 31983508,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472191104
+    },
+    {
+      "preceding_aggregate_trade_id": 23305229,
+      "current_aggregate_trade_id": 23305230,
+      "preceding_last_raw_trade_id": 31983514,
+      "current_first_raw_trade_id": 31983516,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472191118
+    },
+    {
+      "preceding_aggregate_trade_id": 23305230,
+      "current_aggregate_trade_id": 23305231,
+      "preceding_last_raw_trade_id": 31983518,
+      "current_first_raw_trade_id": 31983524,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1579472191140
+    },
+    {
+      "preceding_aggregate_trade_id": 23305235,
+      "current_aggregate_trade_id": 23305236,
+      "preceding_last_raw_trade_id": 31983528,
+      "current_first_raw_trade_id": 31983533,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1579472191142
+    },
+    {
+      "preceding_aggregate_trade_id": 23305238,
+      "current_aggregate_trade_id": 23305239,
+      "preceding_last_raw_trade_id": 31983536,
+      "current_first_raw_trade_id": 31983538,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472191148
+    },
+    {
+      "preceding_aggregate_trade_id": 23305240,
+      "current_aggregate_trade_id": 23305241,
+      "preceding_last_raw_trade_id": 31983539,
+      "current_first_raw_trade_id": 31983542,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472191158
+    },
+    {
+      "preceding_aggregate_trade_id": 23305323,
+      "current_aggregate_trade_id": 23305324,
+      "preceding_last_raw_trade_id": 31983652,
+      "current_first_raw_trade_id": 31983655,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472192085
+    },
+    {
+      "preceding_aggregate_trade_id": 23305324,
+      "current_aggregate_trade_id": 23305325,
+      "preceding_last_raw_trade_id": 31983656,
+      "current_first_raw_trade_id": 31983658,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579472192094
+    },
+    {
+      "preceding_aggregate_trade_id": 23305325,
+      "current_aggregate_trade_id": 23305326,
+      "preceding_last_raw_trade_id": 31983658,
+      "current_first_raw_trade_id": 31983666,
+      "skipped_raw_trade_id_count": 7,
+      "current_timestamp_ms": 1579472192113
+    },
+    {
+      "preceding_aggregate_trade_id": 23305326,
+      "current_aggregate_trade_id": 23305327,
+      "preceding_last_raw_trade_id": 31983666,
+      "current_first_raw_trade_id": 31983669,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472192118
+    },
+    {
+      "preceding_aggregate_trade_id": 23305327,
+      "current_aggregate_trade_id": 23305328,
+      "preceding_last_raw_trade_id": 31983669,
+      "current_first_raw_trade_id": 31983672,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579472192124
+    },
+    {
+      "preceding_aggregate_trade_id": 23305341,
+      "current_aggregate_trade_id": 23305342,
+      "preceding_last_raw_trade_id": 31983694,
+      "current_first_raw_trade_id": 31983715,
+      "skipped_raw_trade_id_count": 20,
+      "current_timestamp_ms": 1579472192192
+    },
+    {
+      "preceding_aggregate_trade_id": 23595545,
+      "current_aggregate_trade_id": 23595546,
+      "preceding_last_raw_trade_id": 32386532,
+      "current_first_raw_trade_id": 32386536,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579635703096
+    },
+    {
+      "preceding_aggregate_trade_id": 23595547,
+      "current_aggregate_trade_id": 23595548,
+      "preceding_last_raw_trade_id": 32386539,
+      "current_first_raw_trade_id": 32386541,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579635703110
+    },
+    {
+      "preceding_aggregate_trade_id": 23595600,
+      "current_aggregate_trade_id": 23595601,
+      "preceding_last_raw_trade_id": 32386700,
+      "current_first_raw_trade_id": 32386702,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579635703170
+    },
+    {
+      "preceding_aggregate_trade_id": 23595603,
+      "current_aggregate_trade_id": 23595604,
+      "preceding_last_raw_trade_id": 32386705,
+      "current_first_raw_trade_id": 32386709,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579635703233
+    },
+    {
+      "preceding_aggregate_trade_id": 23595736,
+      "current_aggregate_trade_id": 23595737,
+      "preceding_last_raw_trade_id": 32386894,
+      "current_first_raw_trade_id": 32386896,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579635704093
+    },
+    {
+      "preceding_aggregate_trade_id": 23595737,
+      "current_aggregate_trade_id": 23595738,
+      "preceding_last_raw_trade_id": 32386896,
+      "current_first_raw_trade_id": 32386903,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1579635704121
+    },
+    {
+      "preceding_aggregate_trade_id": 23595739,
+      "current_aggregate_trade_id": 23595740,
+      "preceding_last_raw_trade_id": 32386904,
+      "current_first_raw_trade_id": 32386907,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579635704133
+    },
+    {
+      "preceding_aggregate_trade_id": 23595744,
+      "current_aggregate_trade_id": 23595745,
+      "preceding_last_raw_trade_id": 32386911,
+      "current_first_raw_trade_id": 32386915,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579635704143
+    },
+    {
+      "preceding_aggregate_trade_id": 23595747,
+      "current_aggregate_trade_id": 23595748,
+      "preceding_last_raw_trade_id": 32386920,
+      "current_first_raw_trade_id": 32386922,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579635704166
+    },
+    {
+      "preceding_aggregate_trade_id": 23595749,
+      "current_aggregate_trade_id": 23595750,
+      "preceding_last_raw_trade_id": 32386923,
+      "current_first_raw_trade_id": 32386925,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579635704177
+    },
+    {
+      "preceding_aggregate_trade_id": 23595884,
+      "current_aggregate_trade_id": 23595885,
+      "preceding_last_raw_trade_id": 32387113,
+      "current_first_raw_trade_id": 32387115,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579635705145
+    },
+    {
+      "preceding_aggregate_trade_id": 23595898,
+      "current_aggregate_trade_id": 23595899,
+      "preceding_last_raw_trade_id": 32387134,
+      "current_first_raw_trade_id": 32387137,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579635705154
+    },
+    {
+      "preceding_aggregate_trade_id": 23595899,
+      "current_aggregate_trade_id": 23595900,
+      "preceding_last_raw_trade_id": 32387137,
+      "current_first_raw_trade_id": 32387140,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579635705160
+    },
+    {
+      "preceding_aggregate_trade_id": 23595901,
+      "current_aggregate_trade_id": 23595902,
+      "preceding_last_raw_trade_id": 32387141,
+      "current_first_raw_trade_id": 32387145,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579635705173
+    },
+    {
+      "preceding_aggregate_trade_id": 23595903,
+      "current_aggregate_trade_id": 23595904,
+      "preceding_last_raw_trade_id": 32387148,
+      "current_first_raw_trade_id": 32387150,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579635705182
+    },
+    {
+      "preceding_aggregate_trade_id": 23595905,
+      "current_aggregate_trade_id": 23595906,
+      "preceding_last_raw_trade_id": 32387151,
+      "current_first_raw_trade_id": 32387153,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579635705188
+    },
+    {
+      "preceding_aggregate_trade_id": 23675209,
+      "current_aggregate_trade_id": 23675210,
+      "preceding_last_raw_trade_id": 32494826,
+      "current_first_raw_trade_id": 32494828,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579665935260
+    },
+    {
+      "preceding_aggregate_trade_id": 23705104,
+      "current_aggregate_trade_id": 23705105,
+      "preceding_last_raw_trade_id": 32536637,
+      "current_first_raw_trade_id": 32536640,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579682201076
+    },
+    {
+      "preceding_aggregate_trade_id": 23705105,
+      "current_aggregate_trade_id": 23705106,
+      "preceding_last_raw_trade_id": 32536640,
+      "current_first_raw_trade_id": 32536642,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579682201078
+    },
+    {
+      "preceding_aggregate_trade_id": 23705114,
+      "current_aggregate_trade_id": 23705115,
+      "preceding_last_raw_trade_id": 32536654,
+      "current_first_raw_trade_id": 32536657,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579682201106
+    },
+    {
+      "preceding_aggregate_trade_id": 23705115,
+      "current_aggregate_trade_id": 23705116,
+      "preceding_last_raw_trade_id": 32536658,
+      "current_first_raw_trade_id": 32536661,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579682201137
+    },
+    {
+      "preceding_aggregate_trade_id": 23705117,
+      "current_aggregate_trade_id": 23705118,
+      "preceding_last_raw_trade_id": 32536662,
+      "current_first_raw_trade_id": 32536665,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579682201320
+    },
+    {
+      "preceding_aggregate_trade_id": 23705185,
+      "current_aggregate_trade_id": 23705186,
+      "preceding_last_raw_trade_id": 32536757,
+      "current_first_raw_trade_id": 32536759,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579682202137
+    },
+    {
+      "preceding_aggregate_trade_id": 23705186,
+      "current_aggregate_trade_id": 23705187,
+      "preceding_last_raw_trade_id": 32536759,
+      "current_first_raw_trade_id": 32536762,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1579682202149
+    },
+    {
+      "preceding_aggregate_trade_id": 23705196,
+      "current_aggregate_trade_id": 23705197,
+      "preceding_last_raw_trade_id": 32536775,
+      "current_first_raw_trade_id": 32536777,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579682202202
+    },
+    {
+      "preceding_aggregate_trade_id": 23922036,
+      "current_aggregate_trade_id": 23922037,
+      "preceding_last_raw_trade_id": 32840969,
+      "current_first_raw_trade_id": 32840971,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579781582342
+    },
+    {
+      "preceding_aggregate_trade_id": 23922104,
+      "current_aggregate_trade_id": 23922105,
+      "preceding_last_raw_trade_id": 32841076,
+      "current_first_raw_trade_id": 32841078,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579781583155
+    },
+    {
+      "preceding_aggregate_trade_id": 23922111,
+      "current_aggregate_trade_id": 23922112,
+      "preceding_last_raw_trade_id": 32841084,
+      "current_first_raw_trade_id": 32841088,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1579781583179
+    },
+    {
+      "preceding_aggregate_trade_id": 23922119,
+      "current_aggregate_trade_id": 23922120,
+      "preceding_last_raw_trade_id": 32841097,
+      "current_first_raw_trade_id": 32841099,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579781583198
+    },
+    {
+      "preceding_aggregate_trade_id": 23922120,
+      "current_aggregate_trade_id": 23922121,
+      "preceding_last_raw_trade_id": 32841099,
+      "current_first_raw_trade_id": 32841101,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579781583216
+    },
+    {
+      "preceding_aggregate_trade_id": 23922219,
+      "current_aggregate_trade_id": 23922220,
+      "preceding_last_raw_trade_id": 32841222,
+      "current_first_raw_trade_id": 32841224,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579781584137
+    },
+    {
+      "preceding_aggregate_trade_id": 23946169,
+      "current_aggregate_trade_id": 23946170,
+      "preceding_last_raw_trade_id": 32876580,
+      "current_first_raw_trade_id": 32876582,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579787809218
+    },
+    {
+      "preceding_aggregate_trade_id": 24044746,
+      "current_aggregate_trade_id": 24044747,
+      "preceding_last_raw_trade_id": 33020163,
+      "current_first_raw_trade_id": 33020165,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1579834526131
+    },
+    {
+      "preceding_aggregate_trade_id": 24640792,
+      "current_aggregate_trade_id": 24640793,
+      "preceding_last_raw_trade_id": 33869214,
+      "current_first_raw_trade_id": 33869216,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580128287168
+    },
+    {
+      "preceding_aggregate_trade_id": 24795648,
+      "current_aggregate_trade_id": 24795649,
+      "preceding_last_raw_trade_id": 34090093,
+      "current_first_raw_trade_id": 34090095,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580171928125
+    },
+    {
+      "preceding_aggregate_trade_id": 24795649,
+      "current_aggregate_trade_id": 24795650,
+      "preceding_last_raw_trade_id": 34090095,
+      "current_first_raw_trade_id": 34090097,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580171928132
+    },
+    {
+      "preceding_aggregate_trade_id": 24795650,
+      "current_aggregate_trade_id": 24795651,
+      "preceding_last_raw_trade_id": 34090097,
+      "current_first_raw_trade_id": 34090099,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580171928137
+    },
+    {
+      "preceding_aggregate_trade_id": 24795654,
+      "current_aggregate_trade_id": 24795655,
+      "preceding_last_raw_trade_id": 34090112,
+      "current_first_raw_trade_id": 34090114,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580171928222
+    },
+    {
+      "preceding_aggregate_trade_id": 24795760,
+      "current_aggregate_trade_id": 24795761,
+      "preceding_last_raw_trade_id": 34090248,
+      "current_first_raw_trade_id": 34090254,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1580171929087
+    },
+    {
+      "preceding_aggregate_trade_id": 24795763,
+      "current_aggregate_trade_id": 24795764,
+      "preceding_last_raw_trade_id": 34090256,
+      "current_first_raw_trade_id": 34090258,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580171929105
+    },
+    {
+      "preceding_aggregate_trade_id": 24795764,
+      "current_aggregate_trade_id": 24795765,
+      "preceding_last_raw_trade_id": 34090258,
+      "current_first_raw_trade_id": 34090261,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580171929139
+    },
+    {
+      "preceding_aggregate_trade_id": 24900624,
+      "current_aggregate_trade_id": 24900625,
+      "preceding_last_raw_trade_id": 34243886,
+      "current_first_raw_trade_id": 34243888,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580206642101
+    },
+    {
+      "preceding_aggregate_trade_id": 24939690,
+      "current_aggregate_trade_id": 24939691,
+      "preceding_last_raw_trade_id": 34300999,
+      "current_first_raw_trade_id": 34301001,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580220678124
+    },
+    {
+      "preceding_aggregate_trade_id": 25067909,
+      "current_aggregate_trade_id": 25067910,
+      "preceding_last_raw_trade_id": 34484551,
+      "current_first_raw_trade_id": 34484553,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254505075
+    },
+    {
+      "preceding_aggregate_trade_id": 25067910,
+      "current_aggregate_trade_id": 25067911,
+      "preceding_last_raw_trade_id": 34484553,
+      "current_first_raw_trade_id": 34484555,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254505094
+    },
+    {
+      "preceding_aggregate_trade_id": 25068064,
+      "current_aggregate_trade_id": 25068065,
+      "preceding_last_raw_trade_id": 34484796,
+      "current_first_raw_trade_id": 34484801,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254507135
+    },
+    {
+      "preceding_aggregate_trade_id": 25068346,
+      "current_aggregate_trade_id": 25068347,
+      "preceding_last_raw_trade_id": 34485261,
+      "current_first_raw_trade_id": 34485263,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254510071
+    },
+    {
+      "preceding_aggregate_trade_id": 25068349,
+      "current_aggregate_trade_id": 25068350,
+      "preceding_last_raw_trade_id": 34485266,
+      "current_first_raw_trade_id": 34485269,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254510155
+    },
+    {
+      "preceding_aggregate_trade_id": 25068454,
+      "current_aggregate_trade_id": 25068455,
+      "preceding_last_raw_trade_id": 34485435,
+      "current_first_raw_trade_id": 34485437,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254511069
+    },
+    {
+      "preceding_aggregate_trade_id": 25068455,
+      "current_aggregate_trade_id": 25068456,
+      "preceding_last_raw_trade_id": 34485437,
+      "current_first_raw_trade_id": 34485442,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254511097
+    },
+    {
+      "preceding_aggregate_trade_id": 25068477,
+      "current_aggregate_trade_id": 25068478,
+      "preceding_last_raw_trade_id": 34485479,
+      "current_first_raw_trade_id": 34485481,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254511117
+    },
+    {
+      "preceding_aggregate_trade_id": 25068478,
+      "current_aggregate_trade_id": 25068479,
+      "preceding_last_raw_trade_id": 34485482,
+      "current_first_raw_trade_id": 34485484,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254511150
+    },
+    {
+      "preceding_aggregate_trade_id": 25068572,
+      "current_aggregate_trade_id": 25068573,
+      "preceding_last_raw_trade_id": 34485620,
+      "current_first_raw_trade_id": 34485622,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254512081
+    },
+    {
+      "preceding_aggregate_trade_id": 25068574,
+      "current_aggregate_trade_id": 25068575,
+      "preceding_last_raw_trade_id": 34485626,
+      "current_first_raw_trade_id": 34485628,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254512161
+    },
+    {
+      "preceding_aggregate_trade_id": 25068724,
+      "current_aggregate_trade_id": 25068725,
+      "preceding_last_raw_trade_id": 34485954,
+      "current_first_raw_trade_id": 34485956,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254513107
+    },
+    {
+      "preceding_aggregate_trade_id": 25068973,
+      "current_aggregate_trade_id": 25068974,
+      "preceding_last_raw_trade_id": 34486541,
+      "current_first_raw_trade_id": 34486545,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254514090
+    },
+    {
+      "preceding_aggregate_trade_id": 25068974,
+      "current_aggregate_trade_id": 25068975,
+      "preceding_last_raw_trade_id": 34486545,
+      "current_first_raw_trade_id": 34486550,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254514104
+    },
+    {
+      "preceding_aggregate_trade_id": 25068975,
+      "current_aggregate_trade_id": 25068976,
+      "preceding_last_raw_trade_id": 34486558,
+      "current_first_raw_trade_id": 34486561,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254514119
+    },
+    {
+      "preceding_aggregate_trade_id": 25070225,
+      "current_aggregate_trade_id": 25070226,
+      "preceding_last_raw_trade_id": 34488464,
+      "current_first_raw_trade_id": 34488469,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254525080
+    },
+    {
+      "preceding_aggregate_trade_id": 25070227,
+      "current_aggregate_trade_id": 25070228,
+      "preceding_last_raw_trade_id": 34488470,
+      "current_first_raw_trade_id": 34488475,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254525098
+    },
+    {
+      "preceding_aggregate_trade_id": 25070228,
+      "current_aggregate_trade_id": 25070229,
+      "preceding_last_raw_trade_id": 34488475,
+      "current_first_raw_trade_id": 34488483,
+      "skipped_raw_trade_id_count": 7,
+      "current_timestamp_ms": 1580254525121
+    },
+    {
+      "preceding_aggregate_trade_id": 25070234,
+      "current_aggregate_trade_id": 25070235,
+      "preceding_last_raw_trade_id": 34488488,
+      "current_first_raw_trade_id": 34488496,
+      "skipped_raw_trade_id_count": 7,
+      "current_timestamp_ms": 1580254525138
+    },
+    {
+      "preceding_aggregate_trade_id": 25070241,
+      "current_aggregate_trade_id": 25070242,
+      "preceding_last_raw_trade_id": 34488506,
+      "current_first_raw_trade_id": 34488519,
+      "skipped_raw_trade_id_count": 12,
+      "current_timestamp_ms": 1580254525183
+    },
+    {
+      "preceding_aggregate_trade_id": 25070245,
+      "current_aggregate_trade_id": 25070246,
+      "preceding_last_raw_trade_id": 34488522,
+      "current_first_raw_trade_id": 34488525,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254525184
+    },
+    {
+      "preceding_aggregate_trade_id": 25070445,
+      "current_aggregate_trade_id": 25070446,
+      "preceding_last_raw_trade_id": 34488815,
+      "current_first_raw_trade_id": 34488818,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254526132
+    },
+    {
+      "preceding_aggregate_trade_id": 25070450,
+      "current_aggregate_trade_id": 25070451,
+      "preceding_last_raw_trade_id": 34488824,
+      "current_first_raw_trade_id": 34488826,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254526161
+    },
+    {
+      "preceding_aggregate_trade_id": 25070463,
+      "current_aggregate_trade_id": 25070464,
+      "preceding_last_raw_trade_id": 34488842,
+      "current_first_raw_trade_id": 34488844,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254526199
+    },
+    {
+      "preceding_aggregate_trade_id": 25070745,
+      "current_aggregate_trade_id": 25070746,
+      "preceding_last_raw_trade_id": 34489252,
+      "current_first_raw_trade_id": 34489254,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254528141
+    },
+    {
+      "preceding_aggregate_trade_id": 25070751,
+      "current_aggregate_trade_id": 25070752,
+      "preceding_last_raw_trade_id": 34489271,
+      "current_first_raw_trade_id": 34489273,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254528174
+    },
+    {
+      "preceding_aggregate_trade_id": 25070753,
+      "current_aggregate_trade_id": 25070754,
+      "preceding_last_raw_trade_id": 34489276,
+      "current_first_raw_trade_id": 34489280,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254528188
+    },
+    {
+      "preceding_aggregate_trade_id": 25071076,
+      "current_aggregate_trade_id": 25071077,
+      "preceding_last_raw_trade_id": 34489735,
+      "current_first_raw_trade_id": 34489737,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254531068
+    },
+    {
+      "preceding_aggregate_trade_id": 25071077,
+      "current_aggregate_trade_id": 25071078,
+      "preceding_last_raw_trade_id": 34489737,
+      "current_first_raw_trade_id": 34489739,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254531070
+    },
+    {
+      "preceding_aggregate_trade_id": 25071078,
+      "current_aggregate_trade_id": 25071079,
+      "preceding_last_raw_trade_id": 34489739,
+      "current_first_raw_trade_id": 34489742,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254531080
+    },
+    {
+      "preceding_aggregate_trade_id": 25071084,
+      "current_aggregate_trade_id": 25071085,
+      "preceding_last_raw_trade_id": 34489748,
+      "current_first_raw_trade_id": 34489751,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254531091
+    },
+    {
+      "preceding_aggregate_trade_id": 25071086,
+      "current_aggregate_trade_id": 25071087,
+      "preceding_last_raw_trade_id": 34489752,
+      "current_first_raw_trade_id": 34489756,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254531105
+    },
+    {
+      "preceding_aggregate_trade_id": 25071087,
+      "current_aggregate_trade_id": 25071088,
+      "preceding_last_raw_trade_id": 34489758,
+      "current_first_raw_trade_id": 34489760,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254531106
+    },
+    {
+      "preceding_aggregate_trade_id": 25071088,
+      "current_aggregate_trade_id": 25071089,
+      "preceding_last_raw_trade_id": 34489760,
+      "current_first_raw_trade_id": 34489764,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254531135
+    },
+    {
+      "preceding_aggregate_trade_id": 25071089,
+      "current_aggregate_trade_id": 25071090,
+      "preceding_last_raw_trade_id": 34489764,
+      "current_first_raw_trade_id": 34489766,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254531141
+    },
+    {
+      "preceding_aggregate_trade_id": 25071164,
+      "current_aggregate_trade_id": 25071165,
+      "preceding_last_raw_trade_id": 34489894,
+      "current_first_raw_trade_id": 34489896,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254532077
+    },
+    {
+      "preceding_aggregate_trade_id": 25071165,
+      "current_aggregate_trade_id": 25071166,
+      "preceding_last_raw_trade_id": 34489906,
+      "current_first_raw_trade_id": 34489927,
+      "skipped_raw_trade_id_count": 20,
+      "current_timestamp_ms": 1580254532130
+    },
+    {
+      "preceding_aggregate_trade_id": 25071166,
+      "current_aggregate_trade_id": 25071167,
+      "preceding_last_raw_trade_id": 34489927,
+      "current_first_raw_trade_id": 34489936,
+      "skipped_raw_trade_id_count": 8,
+      "current_timestamp_ms": 1580254532149
+    },
+    {
+      "preceding_aggregate_trade_id": 25071167,
+      "current_aggregate_trade_id": 25071168,
+      "preceding_last_raw_trade_id": 34489936,
+      "current_first_raw_trade_id": 34489941,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254532201
+    },
+    {
+      "preceding_aggregate_trade_id": 25071368,
+      "current_aggregate_trade_id": 25071369,
+      "preceding_last_raw_trade_id": 34490245,
+      "current_first_raw_trade_id": 34490255,
+      "skipped_raw_trade_id_count": 9,
+      "current_timestamp_ms": 1580254534108
+    },
+    {
+      "preceding_aggregate_trade_id": 25071370,
+      "current_aggregate_trade_id": 25071371,
+      "preceding_last_raw_trade_id": 34490258,
+      "current_first_raw_trade_id": 34490264,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1580254534133
+    },
+    {
+      "preceding_aggregate_trade_id": 25072025,
+      "current_aggregate_trade_id": 25072026,
+      "preceding_last_raw_trade_id": 34491194,
+      "current_first_raw_trade_id": 34491197,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254542168
+    },
+    {
+      "preceding_aggregate_trade_id": 25072759,
+      "current_aggregate_trade_id": 25072760,
+      "preceding_last_raw_trade_id": 34492200,
+      "current_first_raw_trade_id": 34492202,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254549150
+    },
+    {
+      "preceding_aggregate_trade_id": 25072762,
+      "current_aggregate_trade_id": 25072763,
+      "preceding_last_raw_trade_id": 34492204,
+      "current_first_raw_trade_id": 34492207,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254549162
+    },
+    {
+      "preceding_aggregate_trade_id": 25072763,
+      "current_aggregate_trade_id": 25072764,
+      "preceding_last_raw_trade_id": 34492207,
+      "current_first_raw_trade_id": 34492211,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254549174
+    },
+    {
+      "preceding_aggregate_trade_id": 25072772,
+      "current_aggregate_trade_id": 25072773,
+      "preceding_last_raw_trade_id": 34492220,
+      "current_first_raw_trade_id": 34492229,
+      "skipped_raw_trade_id_count": 8,
+      "current_timestamp_ms": 1580254549234
+    },
+    {
+      "preceding_aggregate_trade_id": 25073542,
+      "current_aggregate_trade_id": 25073543,
+      "preceding_last_raw_trade_id": 34493368,
+      "current_first_raw_trade_id": 34493370,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254562641
+    },
+    {
+      "preceding_aggregate_trade_id": 25073674,
+      "current_aggregate_trade_id": 25073675,
+      "preceding_last_raw_trade_id": 34493593,
+      "current_first_raw_trade_id": 34493595,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254565143
+    },
+    {
+      "preceding_aggregate_trade_id": 25073738,
+      "current_aggregate_trade_id": 25073739,
+      "preceding_last_raw_trade_id": 34493689,
+      "current_first_raw_trade_id": 34493691,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254566156
+    },
+    {
+      "preceding_aggregate_trade_id": 25073739,
+      "current_aggregate_trade_id": 25073740,
+      "preceding_last_raw_trade_id": 34493691,
+      "current_first_raw_trade_id": 34493694,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254566176
+    },
+    {
+      "preceding_aggregate_trade_id": 25073740,
+      "current_aggregate_trade_id": 25073741,
+      "preceding_last_raw_trade_id": 34493694,
+      "current_first_raw_trade_id": 34493699,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254566216
+    },
+    {
+      "preceding_aggregate_trade_id": 25073795,
+      "current_aggregate_trade_id": 25073796,
+      "preceding_last_raw_trade_id": 34493775,
+      "current_first_raw_trade_id": 34493777,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254567116
+    },
+    {
+      "preceding_aggregate_trade_id": 25073798,
+      "current_aggregate_trade_id": 25073799,
+      "preceding_last_raw_trade_id": 34493779,
+      "current_first_raw_trade_id": 34493781,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254567120
+    },
+    {
+      "preceding_aggregate_trade_id": 25073804,
+      "current_aggregate_trade_id": 25073805,
+      "preceding_last_raw_trade_id": 34493793,
+      "current_first_raw_trade_id": 34493795,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254567168
+    },
+    {
+      "preceding_aggregate_trade_id": 25073882,
+      "current_aggregate_trade_id": 25073883,
+      "preceding_last_raw_trade_id": 34493924,
+      "current_first_raw_trade_id": 34493928,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254568133
+    },
+    {
+      "preceding_aggregate_trade_id": 25073949,
+      "current_aggregate_trade_id": 25073950,
+      "preceding_last_raw_trade_id": 34494015,
+      "current_first_raw_trade_id": 34494017,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254569212
+    },
+    {
+      "preceding_aggregate_trade_id": 25074025,
+      "current_aggregate_trade_id": 25074026,
+      "preceding_last_raw_trade_id": 34494145,
+      "current_first_raw_trade_id": 34494149,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254570084
+    },
+    {
+      "preceding_aggregate_trade_id": 25074026,
+      "current_aggregate_trade_id": 25074027,
+      "preceding_last_raw_trade_id": 34494149,
+      "current_first_raw_trade_id": 34494154,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254570098
+    },
+    {
+      "preceding_aggregate_trade_id": 25074027,
+      "current_aggregate_trade_id": 25074028,
+      "preceding_last_raw_trade_id": 34494154,
+      "current_first_raw_trade_id": 34494157,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254570112
+    },
+    {
+      "preceding_aggregate_trade_id": 25074040,
+      "current_aggregate_trade_id": 25074041,
+      "preceding_last_raw_trade_id": 34494174,
+      "current_first_raw_trade_id": 34494179,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254570138
+    },
+    {
+      "preceding_aggregate_trade_id": 25074041,
+      "current_aggregate_trade_id": 25074042,
+      "preceding_last_raw_trade_id": 34494179,
+      "current_first_raw_trade_id": 34494201,
+      "skipped_raw_trade_id_count": 21,
+      "current_timestamp_ms": 1580254570165
+    },
+    {
+      "preceding_aggregate_trade_id": 25074651,
+      "current_aggregate_trade_id": 25074652,
+      "preceding_last_raw_trade_id": 34495212,
+      "current_first_raw_trade_id": 34495218,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1580254581145
+    },
+    {
+      "preceding_aggregate_trade_id": 25074653,
+      "current_aggregate_trade_id": 25074654,
+      "preceding_last_raw_trade_id": 34495219,
+      "current_first_raw_trade_id": 34495221,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254581163
+    },
+    {
+      "preceding_aggregate_trade_id": 25074713,
+      "current_aggregate_trade_id": 25074714,
+      "preceding_last_raw_trade_id": 34495314,
+      "current_first_raw_trade_id": 34495319,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254582163
+    },
+    {
+      "preceding_aggregate_trade_id": 25074715,
+      "current_aggregate_trade_id": 25074716,
+      "preceding_last_raw_trade_id": 34495320,
+      "current_first_raw_trade_id": 34495323,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254582173
+    },
+    {
+      "preceding_aggregate_trade_id": 25074716,
+      "current_aggregate_trade_id": 25074717,
+      "preceding_last_raw_trade_id": 34495325,
+      "current_first_raw_trade_id": 34495327,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254582181
+    },
+    {
+      "preceding_aggregate_trade_id": 25074717,
+      "current_aggregate_trade_id": 25074718,
+      "preceding_last_raw_trade_id": 34495329,
+      "current_first_raw_trade_id": 34495332,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254582209
+    },
+    {
+      "preceding_aggregate_trade_id": 25075162,
+      "current_aggregate_trade_id": 25075163,
+      "preceding_last_raw_trade_id": 34496096,
+      "current_first_raw_trade_id": 34496100,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254592131
+    },
+    {
+      "preceding_aggregate_trade_id": 25075206,
+      "current_aggregate_trade_id": 25075207,
+      "preceding_last_raw_trade_id": 34496154,
+      "current_first_raw_trade_id": 34496156,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254593098
+    },
+    {
+      "preceding_aggregate_trade_id": 25075614,
+      "current_aggregate_trade_id": 25075615,
+      "preceding_last_raw_trade_id": 34496800,
+      "current_first_raw_trade_id": 34496802,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254597168
+    },
+    {
+      "preceding_aggregate_trade_id": 25075615,
+      "current_aggregate_trade_id": 25075616,
+      "preceding_last_raw_trade_id": 34496802,
+      "current_first_raw_trade_id": 34496804,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254597175
+    },
+    {
+      "preceding_aggregate_trade_id": 25075683,
+      "current_aggregate_trade_id": 25075684,
+      "preceding_last_raw_trade_id": 34496911,
+      "current_first_raw_trade_id": 34496922,
+      "skipped_raw_trade_id_count": 10,
+      "current_timestamp_ms": 1580254598113
+    },
+    {
+      "preceding_aggregate_trade_id": 25075684,
+      "current_aggregate_trade_id": 25075685,
+      "preceding_last_raw_trade_id": 34496922,
+      "current_first_raw_trade_id": 34496929,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1580254598130
+    },
+    {
+      "preceding_aggregate_trade_id": 25075685,
+      "current_aggregate_trade_id": 25075686,
+      "preceding_last_raw_trade_id": 34496929,
+      "current_first_raw_trade_id": 34496932,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254598134
+    },
+    {
+      "preceding_aggregate_trade_id": 25075688,
+      "current_aggregate_trade_id": 25075689,
+      "preceding_last_raw_trade_id": 34496934,
+      "current_first_raw_trade_id": 34496940,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1580254598145
+    },
+    {
+      "preceding_aggregate_trade_id": 25075703,
+      "current_aggregate_trade_id": 25075704,
+      "preceding_last_raw_trade_id": 34496956,
+      "current_first_raw_trade_id": 34496970,
+      "skipped_raw_trade_id_count": 13,
+      "current_timestamp_ms": 1580254598182
+    },
+    {
+      "preceding_aggregate_trade_id": 25075715,
+      "current_aggregate_trade_id": 25075716,
+      "preceding_last_raw_trade_id": 34497004,
+      "current_first_raw_trade_id": 34497008,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254599213
+    },
+    {
+      "preceding_aggregate_trade_id": 25075763,
+      "current_aggregate_trade_id": 25075764,
+      "preceding_last_raw_trade_id": 34497092,
+      "current_first_raw_trade_id": 34497094,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254600038
+    },
+    {
+      "preceding_aggregate_trade_id": 25075896,
+      "current_aggregate_trade_id": 25075897,
+      "preceding_last_raw_trade_id": 34497341,
+      "current_first_raw_trade_id": 34497343,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254602227
+    },
+    {
+      "preceding_aggregate_trade_id": 25075934,
+      "current_aggregate_trade_id": 25075935,
+      "preceding_last_raw_trade_id": 34497418,
+      "current_first_raw_trade_id": 34497422,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254603179
+    },
+    {
+      "preceding_aggregate_trade_id": 25075935,
+      "current_aggregate_trade_id": 25075936,
+      "preceding_last_raw_trade_id": 34497425,
+      "current_first_raw_trade_id": 34497428,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254603233
+    },
+    {
+      "preceding_aggregate_trade_id": 25076100,
+      "current_aggregate_trade_id": 25076101,
+      "preceding_last_raw_trade_id": 34497662,
+      "current_first_raw_trade_id": 34497664,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254606167
+    },
+    {
+      "preceding_aggregate_trade_id": 25076101,
+      "current_aggregate_trade_id": 25076102,
+      "preceding_last_raw_trade_id": 34497664,
+      "current_first_raw_trade_id": 34497666,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254606173
+    },
+    {
+      "preceding_aggregate_trade_id": 25076313,
+      "current_aggregate_trade_id": 25076314,
+      "preceding_last_raw_trade_id": 34497999,
+      "current_first_raw_trade_id": 34498012,
+      "skipped_raw_trade_id_count": 12,
+      "current_timestamp_ms": 1580254610217
+    },
+    {
+      "preceding_aggregate_trade_id": 25076420,
+      "current_aggregate_trade_id": 25076421,
+      "preceding_last_raw_trade_id": 34498168,
+      "current_first_raw_trade_id": 34498171,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254613098
+    },
+    {
+      "preceding_aggregate_trade_id": 25076469,
+      "current_aggregate_trade_id": 25076470,
+      "preceding_last_raw_trade_id": 34498325,
+      "current_first_raw_trade_id": 34498332,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1580254613157
+    },
+    {
+      "preceding_aggregate_trade_id": 25076471,
+      "current_aggregate_trade_id": 25076472,
+      "preceding_last_raw_trade_id": 34498333,
+      "current_first_raw_trade_id": 34498335,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254613163
+    },
+    {
+      "preceding_aggregate_trade_id": 25076472,
+      "current_aggregate_trade_id": 25076473,
+      "preceding_last_raw_trade_id": 34498335,
+      "current_first_raw_trade_id": 34498337,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254613168
+    },
+    {
+      "preceding_aggregate_trade_id": 25076473,
+      "current_aggregate_trade_id": 25076474,
+      "preceding_last_raw_trade_id": 34498337,
+      "current_first_raw_trade_id": 34498342,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254613232
+    },
+    {
+      "preceding_aggregate_trade_id": 25076697,
+      "current_aggregate_trade_id": 25076698,
+      "preceding_last_raw_trade_id": 34498674,
+      "current_first_raw_trade_id": 34498676,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254618145
+    },
+    {
+      "preceding_aggregate_trade_id": 25076777,
+      "current_aggregate_trade_id": 25076778,
+      "preceding_last_raw_trade_id": 34498811,
+      "current_first_raw_trade_id": 34498813,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254620159
+    },
+    {
+      "preceding_aggregate_trade_id": 25076929,
+      "current_aggregate_trade_id": 25076930,
+      "preceding_last_raw_trade_id": 34499035,
+      "current_first_raw_trade_id": 34499039,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254622608
+    },
+    {
+      "preceding_aggregate_trade_id": 25076930,
+      "current_aggregate_trade_id": 25076931,
+      "preceding_last_raw_trade_id": 34499039,
+      "current_first_raw_trade_id": 34499042,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254622633
+    },
+    {
+      "preceding_aggregate_trade_id": 25076964,
+      "current_aggregate_trade_id": 25076965,
+      "preceding_last_raw_trade_id": 34499083,
+      "current_first_raw_trade_id": 34499085,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254623076
+    },
+    {
+      "preceding_aggregate_trade_id": 25076972,
+      "current_aggregate_trade_id": 25076973,
+      "preceding_last_raw_trade_id": 34499094,
+      "current_first_raw_trade_id": 34499096,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254623079
+    },
+    {
+      "preceding_aggregate_trade_id": 25077011,
+      "current_aggregate_trade_id": 25077012,
+      "preceding_last_raw_trade_id": 34499147,
+      "current_first_raw_trade_id": 34499154,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1580254623128
+    },
+    {
+      "preceding_aggregate_trade_id": 25077012,
+      "current_aggregate_trade_id": 25077013,
+      "preceding_last_raw_trade_id": 34499154,
+      "current_first_raw_trade_id": 34499156,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254623154
+    },
+    {
+      "preceding_aggregate_trade_id": 25077061,
+      "current_aggregate_trade_id": 25077062,
+      "preceding_last_raw_trade_id": 34499222,
+      "current_first_raw_trade_id": 34499229,
+      "skipped_raw_trade_id_count": 6,
+      "current_timestamp_ms": 1580254624186
+    },
+    {
+      "preceding_aggregate_trade_id": 25077065,
+      "current_aggregate_trade_id": 25077066,
+      "preceding_last_raw_trade_id": 34499233,
+      "current_first_raw_trade_id": 34499235,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254624202
+    },
+    {
+      "preceding_aggregate_trade_id": 25077122,
+      "current_aggregate_trade_id": 25077123,
+      "preceding_last_raw_trade_id": 34499323,
+      "current_first_raw_trade_id": 34499326,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254625083
+    },
+    {
+      "preceding_aggregate_trade_id": 25077127,
+      "current_aggregate_trade_id": 25077128,
+      "preceding_last_raw_trade_id": 34499330,
+      "current_first_raw_trade_id": 34499335,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254625138
+    },
+    {
+      "preceding_aggregate_trade_id": 25077129,
+      "current_aggregate_trade_id": 25077130,
+      "preceding_last_raw_trade_id": 34499336,
+      "current_first_raw_trade_id": 34499339,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254625167
+    },
+    {
+      "preceding_aggregate_trade_id": 25077374,
+      "current_aggregate_trade_id": 25077375,
+      "preceding_last_raw_trade_id": 34499712,
+      "current_first_raw_trade_id": 34499717,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580254628145
+    },
+    {
+      "preceding_aggregate_trade_id": 25077522,
+      "current_aggregate_trade_id": 25077523,
+      "preceding_last_raw_trade_id": 34499930,
+      "current_first_raw_trade_id": 34499932,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254629092
+    },
+    {
+      "preceding_aggregate_trade_id": 25077682,
+      "current_aggregate_trade_id": 25077683,
+      "preceding_last_raw_trade_id": 34500148,
+      "current_first_raw_trade_id": 34500154,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1580254631159
+    },
+    {
+      "preceding_aggregate_trade_id": 25077683,
+      "current_aggregate_trade_id": 25077684,
+      "preceding_last_raw_trade_id": 34500154,
+      "current_first_raw_trade_id": 34500162,
+      "skipped_raw_trade_id_count": 7,
+      "current_timestamp_ms": 1580254631187
+    },
+    {
+      "preceding_aggregate_trade_id": 25077685,
+      "current_aggregate_trade_id": 25077686,
+      "preceding_last_raw_trade_id": 34500163,
+      "current_first_raw_trade_id": 34500165,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254631229
+    },
+    {
+      "preceding_aggregate_trade_id": 25077721,
+      "current_aggregate_trade_id": 25077722,
+      "preceding_last_raw_trade_id": 34500209,
+      "current_first_raw_trade_id": 34500212,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254632098
+    },
+    {
+      "preceding_aggregate_trade_id": 25077723,
+      "current_aggregate_trade_id": 25077724,
+      "preceding_last_raw_trade_id": 34500213,
+      "current_first_raw_trade_id": 34500216,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254632113
+    },
+    {
+      "preceding_aggregate_trade_id": 25077724,
+      "current_aggregate_trade_id": 25077725,
+      "preceding_last_raw_trade_id": 34500216,
+      "current_first_raw_trade_id": 34500220,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580254632125
+    },
+    {
+      "preceding_aggregate_trade_id": 25077725,
+      "current_aggregate_trade_id": 25077726,
+      "preceding_last_raw_trade_id": 34500220,
+      "current_first_raw_trade_id": 34500223,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580254632161
+    },
+    {
+      "preceding_aggregate_trade_id": 25081779,
+      "current_aggregate_trade_id": 25081780,
+      "preceding_last_raw_trade_id": 34506019,
+      "current_first_raw_trade_id": 34506021,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580254711133
+    },
+    {
+      "preceding_aggregate_trade_id": 25082436,
+      "current_aggregate_trade_id": 25082437,
+      "preceding_last_raw_trade_id": 34507099,
+      "current_first_raw_trade_id": 34507105,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1580254731168
+    },
+    {
+      "preceding_aggregate_trade_id": 25090037,
+      "current_aggregate_trade_id": 25090038,
+      "preceding_last_raw_trade_id": 34517976,
+      "current_first_raw_trade_id": 34517978,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255135197
+    },
+    {
+      "preceding_aggregate_trade_id": 25090039,
+      "current_aggregate_trade_id": 25090040,
+      "preceding_last_raw_trade_id": 34517979,
+      "current_first_raw_trade_id": 34517981,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255135324
+    },
+    {
+      "preceding_aggregate_trade_id": 25090052,
+      "current_aggregate_trade_id": 25090053,
+      "preceding_last_raw_trade_id": 34518005,
+      "current_first_raw_trade_id": 34518009,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580255136117
+    },
+    {
+      "preceding_aggregate_trade_id": 25090053,
+      "current_aggregate_trade_id": 25090054,
+      "preceding_last_raw_trade_id": 34518009,
+      "current_first_raw_trade_id": 34518011,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255136162
+    },
+    {
+      "preceding_aggregate_trade_id": 25090124,
+      "current_aggregate_trade_id": 25090125,
+      "preceding_last_raw_trade_id": 34518115,
+      "current_first_raw_trade_id": 34518117,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255139164
+    },
+    {
+      "preceding_aggregate_trade_id": 25090227,
+      "current_aggregate_trade_id": 25090228,
+      "preceding_last_raw_trade_id": 34518358,
+      "current_first_raw_trade_id": 34518360,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255145076
+    },
+    {
+      "preceding_aggregate_trade_id": 25090232,
+      "current_aggregate_trade_id": 25090233,
+      "preceding_last_raw_trade_id": 34518365,
+      "current_first_raw_trade_id": 34518368,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580255145157
+    },
+    {
+      "preceding_aggregate_trade_id": 25090282,
+      "current_aggregate_trade_id": 25090283,
+      "preceding_last_raw_trade_id": 34518461,
+      "current_first_raw_trade_id": 34518466,
+      "skipped_raw_trade_id_count": 4,
+      "current_timestamp_ms": 1580255146141
+    },
+    {
+      "preceding_aggregate_trade_id": 25090516,
+      "current_aggregate_trade_id": 25090517,
+      "preceding_last_raw_trade_id": 34518800,
+      "current_first_raw_trade_id": 34518803,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580255159200
+    },
+    {
+      "preceding_aggregate_trade_id": 25090668,
+      "current_aggregate_trade_id": 25090669,
+      "preceding_last_raw_trade_id": 34519030,
+      "current_first_raw_trade_id": 34519032,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255168104
+    },
+    {
+      "preceding_aggregate_trade_id": 25090727,
+      "current_aggregate_trade_id": 25090728,
+      "preceding_last_raw_trade_id": 34519111,
+      "current_first_raw_trade_id": 34519115,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580255170093
+    },
+    {
+      "preceding_aggregate_trade_id": 25090728,
+      "current_aggregate_trade_id": 25090729,
+      "preceding_last_raw_trade_id": 34519115,
+      "current_first_raw_trade_id": 34519118,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580255170336
+    },
+    {
+      "preceding_aggregate_trade_id": 25090761,
+      "current_aggregate_trade_id": 25090762,
+      "preceding_last_raw_trade_id": 34519202,
+      "current_first_raw_trade_id": 34519204,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255171186
+    },
+    {
+      "preceding_aggregate_trade_id": 25096962,
+      "current_aggregate_trade_id": 25096963,
+      "preceding_last_raw_trade_id": 34528413,
+      "current_first_raw_trade_id": 34528415,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255792111
+    },
+    {
+      "preceding_aggregate_trade_id": 25097003,
+      "current_aggregate_trade_id": 25097004,
+      "preceding_last_raw_trade_id": 34528483,
+      "current_first_raw_trade_id": 34528486,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580255794088
+    },
+    {
+      "preceding_aggregate_trade_id": 25097009,
+      "current_aggregate_trade_id": 25097010,
+      "preceding_last_raw_trade_id": 34528492,
+      "current_first_raw_trade_id": 34528495,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580255794105
+    },
+    {
+      "preceding_aggregate_trade_id": 25097011,
+      "current_aggregate_trade_id": 25097012,
+      "preceding_last_raw_trade_id": 34528502,
+      "current_first_raw_trade_id": 34528504,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255794117
+    },
+    {
+      "preceding_aggregate_trade_id": 25097022,
+      "current_aggregate_trade_id": 25097023,
+      "preceding_last_raw_trade_id": 34528519,
+      "current_first_raw_trade_id": 34528522,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580255794154
+    },
+    {
+      "preceding_aggregate_trade_id": 25097081,
+      "current_aggregate_trade_id": 25097082,
+      "preceding_last_raw_trade_id": 34528660,
+      "current_first_raw_trade_id": 34528662,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255795149
+    },
+    {
+      "preceding_aggregate_trade_id": 25097110,
+      "current_aggregate_trade_id": 25097111,
+      "preceding_last_raw_trade_id": 34528701,
+      "current_first_raw_trade_id": 34528707,
+      "skipped_raw_trade_id_count": 5,
+      "current_timestamp_ms": 1580255796156
+    },
+    {
+      "preceding_aggregate_trade_id": 25097111,
+      "current_aggregate_trade_id": 25097112,
+      "preceding_last_raw_trade_id": 34528709,
+      "current_first_raw_trade_id": 34528713,
+      "skipped_raw_trade_id_count": 3,
+      "current_timestamp_ms": 1580255796197
+    },
+    {
+      "preceding_aggregate_trade_id": 25097112,
+      "current_aggregate_trade_id": 25097113,
+      "preceding_last_raw_trade_id": 34528715,
+      "current_first_raw_trade_id": 34528717,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255796208
+    },
+    {
+      "preceding_aggregate_trade_id": 25097171,
+      "current_aggregate_trade_id": 25097172,
+      "preceding_last_raw_trade_id": 34528808,
+      "current_first_raw_trade_id": 34528810,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580255797221
+    },
+    {
+      "preceding_aggregate_trade_id": 25489100,
+      "current_aggregate_trade_id": 25489101,
+      "preceding_last_raw_trade_id": 35074965,
+      "current_first_raw_trade_id": 35074968,
+      "skipped_raw_trade_id_count": 2,
+      "current_timestamp_ms": 1580401804581
+    },
+    {
+      "preceding_aggregate_trade_id": 25489101,
+      "current_aggregate_trade_id": 25489102,
+      "preceding_last_raw_trade_id": 35074972,
+      "current_first_raw_trade_id": 35074974,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580401804626
+    },
+    {
+      "preceding_aggregate_trade_id": 25489380,
+      "current_aggregate_trade_id": 25489381,
+      "preceding_last_raw_trade_id": 35075335,
+      "current_first_raw_trade_id": 35075337,
+      "skipped_raw_trade_id_count": 1,
+      "current_timestamp_ms": 1580401806598
+    }
+  ],
+  "gap_manifest_hash": "5ba50a98f66bfb1f0e557d7b4e91ba5355329b1acad59b0eb61f2202e40ff568",
+  "gap_event_count": 504,
+  "total_skipped_raw_trade_ids": 1374,
+  "maximum_single_gap_skipped_raw_ids": 35,
+  "raw_trade_id_span": 10283057,
+  "skipped_raw_trade_id_fraction": "0.0001336178531345299359908245184",
+  "gap_size_buckets": {
+    "1": 252,
+    "2_TO_10": 232,
+    "11_TO_100": 20,
+    "101_TO_1000": 0,
+    "OVER_1000": 0
+  },
+  "first_timestamp_ms": 1577836801481,
+  "last_timestamp_ms": 1580515199286,
+  "timestamp_regression_count": 0,
+  "unique_minute_count": 44640,
+  "minute_coverage_fraction": "1",
+  "source_semantic_interpretation": "FORWARD_RAW_ID_GAPS_COMPATIBLE_WITH_DOCUMENTED_EXCLUDED_NON_MARKET_TRADES",
+  "interpretation_is_inference_not_trade_classification": true,
+  "decision": "STOP_Q1_USDM_SOURCE_SEMANTICS_UNRESOLVED",
+  "next_authorization": "NONE_USDM_GAP_REMEDIATION_FAILED",
+  "authorizes_separate_full_development_acquisition_protocol": false,
+  "network_requests_made": 0,
+  "price_or_quantity_values_parsed": [],
+  "features_calculated": [],
+  "parameters_defined": [],
+  "return_metrics_calculated": [],
+  "validation_outcomes_accessed": false,
+  "holdout_accessed": false,
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "authorizes_pine_deployment": false,
+  "authorizes_paper_operation": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "A pass authorizes only a separate full-development acquisition protocol.",
+    "Aggregate IDs, raw ranges, timestamps, gap magnitude, and clock coverage were inspected.",
+    "No network request, feature, parameter, signal, candidate, return, or trade was created.",
+    "Pine, paper, testnet strategy-order, production, and live authority remain false.",
+    "Price and quantity values were neither parsed nor persisted.",
+    "Real net profit remains zero dollars.",
+    "The forward raw-ID gaps are compatible with documented exclusions but are not individually classified.",
+    "The original paired payload pilot remains an immutable STOP result.",
+    "This source-semantic result cannot establish edge, reliability, or profitability.",
+    "Validation, future holdout, and forward outcomes remain inaccessible."
+  ],
+  "result_evidence_hash": "dea09a8f545b8c1885ac1e1c8f5a6d370ab719559c801b16fb12c4f5d49685a3"
+}

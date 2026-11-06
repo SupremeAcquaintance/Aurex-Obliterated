@@ -1,0 +1,21 @@
+{
+  "schema_version": "aurex-s5-github-bulk-monotonic-terminal-audit-v4",
+  "audit_id": "s5-github-bulk-monotonic-terminal-audit-v4",
+  "audited_at": "2026-09-03T14:15:23.205967Z",
+  "amendment_path": "data/evidence/s5_bitcoin_core_github_bulk_monotonic_terminal_amendment_v4.json",
+  "amendment_file_sha256": "dccd37d724ad5de7c9620dda4977199ed7c4ff94b9069a992dbc9404b40e31b9",
+  "amendment_evidence_hash": "db23014df1fedcc4562e2ef927da4a77ee08402830c6461f60d3ce004825e187",
+  "terminal_drift_audit_evidence_hash": "6ad04a3458c8fe972a0f13d89c3b75c4e546b5b95e3edb260faf75dd1012391d",
+  "builder_contract_hash": "ef90d579900168c8f4c202b1592a82e1efb65da3681feeecfc6737204ee0a3a4",
+  "auditor_contract_hash": "54b83d3c558f2041eae40c35ef48e57037fb4b391db6827d9b1bdf58df4b06da",
+  "reconstructed_exactly": true,
+  "candidate_page_reverified": true,
+  "additional_network_requests_observed": 0,
+  "metadata_records_newly_acquired": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "next_authorization": "RUN_S5_GITHUB_METADATA_BULK_ACQUISITION_V4_ONCE_RESUMABLE",
+  "decision": "PASS_S5_GITHUB_BULK_MONOTONIC_TERMINAL_AUDIT_V4",
+  "audit_evidence_hash": "ed9fe2a2cf7398d8c1110a6a92dd0092b4b667928f34f5eaa62ce10070bbed6b"
+}

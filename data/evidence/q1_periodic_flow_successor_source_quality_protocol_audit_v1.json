@@ -1,0 +1,14 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-successor-source-quality-protocol-audit-v1",
+  "audited_at": "2026-08-10T17:39:56.524439Z",
+  "protocol_file_sha256": "a2484ec97751c3388f7b63dd78d665e50c8431e4524b4edf8466a3ef16b83e71",
+  "protocol_evidence_hash": "12d7399a423449fd4788b5e216035ea6ed2d6d992a164b041cd07cf542aba1e1",
+  "parent_terminal_audit_evidence_hash": "55f6c5770ec8a20bcbff6de2cbafbac9a0a6ba4e667f851e7347eebfcc9b8311",
+  "auditor_contract_hash": "8f67ce65c88797130e9380567793db23f829d1cbb6efa8282cb817fe628eff9d",
+  "lineage_reconstructed": true,
+  "source_sufficiency_gates_frozen": true,
+  "network_requests_made": 0,
+  "outcomes_accessed": 0,
+  "orders_submitted": 0,
+  "audit_evidence_hash": "54ed1c84a4d49a4577f88460789380b28eaccdba369607bdcc4d1dbd31dbbc58"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-s5-github-bulk-protocol-audit-v1",
+  "audit_id": "s5-github-bulk-protocol-audit-v1",
+  "audited_at": "2026-09-02T21:43:43.731585Z",
+  "protocol_path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_v1.json",
+  "protocol_file_sha256": "2a3c084d57223628228e895f584bc4cb0f7bdf85e52155c4257b9c6a22e79330",
+  "protocol_evidence_hash": "ee1564712af978eddd0081fe7ede7fb19dd275fc2f04e7a19306160f8b3174f5",
+  "builder_contract_hash": "f958c8ceb1f2a794774179349bb4d73c021004ec6cf0858900525819fd32e3f6",
+  "auditor_contract_hash": "4620e25a12d938d61e74dd8880d2889b32ac77689a8f416c7df75e5119360795",
+  "reconstructed_exactly": true,
+  "source_binding_count": 4,
+  "request_attempts_observed": 0,
+  "metadata_records_observed": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "next_authorization": "RUN_S5_GITHUB_METADATA_BULK_ACQUISITION_ONCE_RESUMABLE",
+  "decision": "PASS_S5_GITHUB_BULK_PROTOCOL_AUDIT",
+  "audit_evidence_hash": "0643d3dceb5e4bc763fc3f5c551d8bfa3576f5cecac415cda91fbba4f64f4b55"
+}

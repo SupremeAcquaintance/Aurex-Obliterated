@@ -1,0 +1,79 @@
+{
+  "schema_version": "aurex-s5-complete-release-remediation-result-audit-v1",
+  "audit_id": "s5-complete-release-remediation-result-audit-v1",
+  "audited_at": "2026-09-25T22:10:35.809775Z",
+  "result_path": "data/evidence/s5_complete_release_tag_source_remediation_result_v1.json",
+  "result_file_sha256": "16ab0c70fc8506db983bb734b278d3e94585400c256535848bebbb44202cae19",
+  "result_evidence_hash": "02d428c25aaa667c4c636dca1526ff6b7bf2d6d16cfeefc2f1e42c697805e2c2",
+  "protocol_evidence_hash": "29ce6df924c56227d4cce6b764fa8f6b3aeaee81afb86e5c6a597cb070b205bd",
+  "protocol_audit_evidence_hash": "3994c6e02c28367c79627cca32a7f6e51cde4f924e902e82f8affd957e6df234",
+  "execution_contract_evidence_hash": "1484a05941216ebc5c5d022d800aff3d02fd55e3b319ed44bccd485d8a08d280",
+  "execution_contract_audit_evidence_hash": "80b29a31545d4203378fa0b86f89e79632872c340e260a07e0fa4970e144da4c",
+  "runner_contract_hash": "e4a056b7f39726fa991b97db169ce4ea06f83b0fcafa5b64107a4633db335904",
+  "auditor_implementation_bindings": [
+    {
+      "path": "scripts/audit_s5_complete_release_tag_source_remediation_result.py",
+      "file_sha256": "382a9f419eb2d772451eb6d708280f0d82262668450dd17acac807cc2d3c8878"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_complete_release_tag_source_remediation_result_audit.py",
+      "file_sha256": "c4b58de0df337ca0e4fad8c02b32d7ba894b9198fd777eafd6b3aed234ea3dad"
+    }
+  ],
+  "auditor_contract_hash": "8eb29976612d9de915540af0999a5d62530abefe3062e6baf3f4ac44e5abfee6",
+  "transcript_paths": [
+    "data/evidence/s5_complete_release_tag_source_responses_v1/01_fetch_all_stable_tags.json",
+    "data/evidence/s5_complete_release_tag_source_responses_v1/02_verify_all_stable_tags.json"
+  ],
+  "transcript_file_sha256s": [
+    "10e41e55adcd631b1249386b1f8128032fe8df3275311eeac980f821753b452f",
+    "9aea0cc8fa07c547f2f5488f9b4646df432cc7281b162e7b1583cd7b06642613"
+  ],
+  "transcript_evidence_hashes": [
+    "373360d00c8bdf4bb265adc6dab3bee64ed1152ae0a9a0b35936674e8dcbd4db",
+    "0e2c5ecf718b75e7630f34ce0385371915a8ec30a8e4552ecd0dd2bd459a1a10"
+  ],
+  "transcript_models_reverified": true,
+  "transcript_commands_reverified": true,
+  "stored_process_count": 2,
+  "stored_network_process_count": 1,
+  "stored_local_process_count": 1,
+  "complete_stable_tag_count": 132,
+  "complete_annotated_tag_count": 104,
+  "complete_lightweight_tag_count": 28,
+  "complete_tag_manifest_evidence_hash": "07d4b9d80266710faf9dcf578a6835c6d1c36727b362132b896c725811eea82c",
+  "verified_tag_count": 132,
+  "tag_identity_drift_count": 0,
+  "original_repository_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "original_repository_manifest_reverified": true,
+  "incomplete_repository_directory_sha256": "6e7cd0a147cb9ae26237fa1e4bac6b13c2c52295b264ed0f543d0d626b99e7e4",
+  "incomplete_repository_manifest_reverified": true,
+  "complete_repository_directory_sha256": "d3e85e76ddf1c6bbb2e796530d9f3a2bb0c3bfbb7b95d65bd4c8dbed442c4214",
+  "complete_repository_manifest_reverified": true,
+  "nominal_result_pass_upheld": true,
+  "release_tag_source_complete_for_amended_measurement": true,
+  "event_time_filtering_executed": false,
+  "git_processes_executed_during_audit": 0,
+  "network_requests_executed_during_audit": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "parameters_defined": 0,
+  "candidates_created": 0,
+  "signals_created": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_COMPLETE_RELEASE_TAG_SOURCE_REMEDIATION_RESULT_AUDIT",
+  "next_authorization": "FREEZE_S5_AMENDED_MEASUREMENT_PROTOCOL_ONLY",
+  "limitations": [
+    "A separate amended measurement protocol is still required.",
+    "All 132 fetched tag identities match the frozen discovery snapshot.",
+    "Annotated tagger timestamps have not yet been measured or filtered.",
+    "Git tag signatures have not been cryptographically verified.",
+    "Lightweight tags retain historical creation-time uncertainty.",
+    "No Git process or network request was executed during this audit.",
+    "No market value, return, strategy, signal, or order was created.",
+    "Prior repositories, transcripts, results, and audits remain immutable.",
+    "Production and live trading remain prohibited.",
+    "Qualified strategies and real net profit remain zero."
+  ],
+  "audit_evidence_hash": "f224e7b99256ac04b0ffd8762076cd75f528e7cb88dd402371a2e126ab128e6c"
+}

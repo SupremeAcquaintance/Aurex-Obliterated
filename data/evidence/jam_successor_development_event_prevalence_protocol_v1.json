@@ -1,0 +1,146 @@
+{
+  "schema_version": "aurex-jam-successor-development-event-prevalence-protocol-v1",
+  "protocol_id": "jam-successor-development-event-prevalence-protocol-v1",
+  "frozen_at": "2026-08-05T08:08:25.582658Z",
+  "status": "FROZEN_DEVELOPMENT_PREVALENCE_ONLY_NO_OUTCOMES",
+  "authorization_record": "USER_CONFIRMED_PROCEED_WITH_FROZEN_DEVELOPMENT_EVENT_PREVALENCE_STAGE",
+  "authorization_scope": "AUTHORIZE_JAM_SUCCESSOR_DEVELOPMENT_EVENT_PREVALENCE_NO_OUTCOMES",
+  "parent_event_protocol_path": "data/evidence/jam_successor_event_outcome_protocol_v1.json",
+  "parent_event_protocol_file_sha256": "6eaf28df7810a9ebb93a048ded432c27d9d7791fdca6210d84d752e89a1f5081",
+  "parent_event_protocol_evidence_hash": "33323ff5864c9dfdeed1b5ddd5dc237ac5a7b7d23d1a1ac484abf75e02ded8db",
+  "parent_event_audit_path": "data/evidence/jam_successor_event_outcome_protocol_audit_v1.json",
+  "parent_event_audit_file_sha256": "24f292d0441dcaf2128530b51d84cfd535f960430bb8df01c7641c64c75e0281",
+  "parent_event_audit_evidence_hash": "b2236b02b9e3bbbf495bf66f9d862f446a29ae4bf3a9422d495bd8f0501f80e4",
+  "feature_rows_path": "data/evidence/jam_successor_development_feature_rows_v1.parquet",
+  "feature_rows_file_sha256": "fbb6ee42fca63ea6fe38db093c6c5c5484d2c6997d658d616f09f6fd4c2a0dfa",
+  "feature_rows_schema_hash": "15995c028cfb437bea77990389eee4e036f9493b106270476ad1ce07cfcc037b",
+  "feature_rows_bytes": 129887758,
+  "calendar_row_count": 1052640,
+  "ready_row_count": 1046202,
+  "event_id": "J2-P01-SELL-FLOW-EXHAUSTION-RECLAIM-EVENT-V1",
+  "event_conditions": [
+    {
+      "condition_id": "EXTREME_AGGRESSIVE_SELL_FLOW",
+      "feature_id": "shock_sell_flow_robust_z_5m",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "source_quantile": "0.95",
+      "frozen_threshold": "4.625575808694040576",
+      "mechanism_role": "Require an unusually intense taker-sell shock relative to its causal baseline."
+    },
+    {
+      "condition_id": "SELL_SIDE_DOMINANCE",
+      "feature_id": "shock_sell_share_5m",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "source_quantile": "0.5",
+      "frozen_threshold": "0.495418809496035904",
+      "mechanism_role": "Require taker sellers to contribute at least the frozen median share of shock quote flow."
+    },
+    {
+      "condition_id": "NEGATIVE_SHOCK_PRICE_IMPACT",
+      "feature_id": "shock_price_impact_bps_5m",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "source_quantile": "0.25",
+      "frozen_threshold": "-8.269710038582845440",
+      "mechanism_role": "Require the shock to have produced negative causal price impact."
+    },
+    {
+      "condition_id": "CONFIRMATION_FLOW_DECAY",
+      "feature_id": "sell_flow_decay_ratio_3m_vs_5m",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "source_quantile": "0.5",
+      "frozen_threshold": "0.938264464494273536",
+      "mechanism_role": "Require confirmation sell flow to decay relative to shock flow."
+    },
+    {
+      "condition_id": "CAUSAL_PRICE_RECLAIM",
+      "feature_id": "reclaim_bps_vs_pre_shock_vwap",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "source_quantile": "0.5",
+      "frozen_threshold": "0.389389126850270272",
+      "mechanism_role": "Require the confirmation close to reclaim the pre-shock VWAP."
+    }
+  ],
+  "minimum_event_separation_minutes": 60,
+  "suppression_resets_between_months": false,
+  "suppression_resets_between_years": false,
+  "suppression_resets_at_evidence_partition": true,
+  "prevalence_gates": [
+    {
+      "gate_id": "RAW_EVENT_COUNT_AT_LEAST_1000",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "1000",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "NONOVERLAPPING_EVENT_COUNT_AT_LEAST_240",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "240",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "AT_LEAST_20_MONTHS_HAVE_5_EVENTS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "20",
+      "units": "MONTH_COUNT"
+    },
+    {
+      "gate_id": "EVERY_QUARTER_HAS_AT_LEAST_15_EVENTS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "15",
+      "units": "COUNT_PER_QUARTER"
+    },
+    {
+      "gate_id": "LARGEST_MONTH_EVENT_SHARE_AT_MOST_0_10",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "threshold": "0.10",
+      "units": "RATIO"
+    },
+    {
+      "gate_id": "LARGEST_DAY_EVENT_SHARE_AT_MOST_0_02",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "threshold": "0.02",
+      "units": "RATIO"
+    },
+    {
+      "gate_id": "ALL_ACCEPTED_EVENTS_HAVE_READY_FEATURES",
+      "comparison": "EQUAL",
+      "threshold": "0",
+      "units": "INVALID_EVENT_COUNT"
+    }
+  ],
+  "event_ledger_path": "data/evidence/jam_successor_development_event_ledger_v1.jsonl",
+  "event_ledger_scope": "ALL_RAW_EVENTS_WITH_ACCEPTED_OR_SUPPRESSED_STATUS",
+  "builder_contract_hash": "44937ddbc794abff611c2389b69c4f77065c3b7a0475fb3a36812360607fca50",
+  "network_access_permitted": false,
+  "development_feature_access_permitted": true,
+  "validation_2021_access_permitted": false,
+  "holdout_2022_access_permitted": false,
+  "future_price_access_permitted": false,
+  "future_label_calculation_permitted": false,
+  "return_calculation_permitted": false,
+  "matched_control_construction_permitted": false,
+  "backtest_permitted": false,
+  "strategy_creation_permitted": false,
+  "signal_creation_permitted": false,
+  "candidate_creation_permitted": false,
+  "paper_eligibility_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "limitations": [
+    "A failed prevalence gate retires the event definition; thresholds cannot be relaxed or replaced.",
+    "A passing prevalence result grants no outcome, strategy, signal, paper, Testnet-order, production, or live authority.",
+    "Accepted events must be separated by at least sixty complete minutes.",
+    "All five conditions and all seven prevalence gates are inherited unchanged from the frozen parent protocol.",
+    "Every raw event is retained in a deterministic ledger with accepted or suppressed status.",
+    "Exact Pine parity remains unavailable because the event depends on aggregate-trade aggressor identity.",
+    "No aggregate-trade row, future price, future label, return, path, or matched-control outcome may be opened.",
+    "Only counts, rates, calendar buckets, concentration, and gate decisions may be calculated.",
+    "Outcome calculation requires the separately recorded next authorization and the unchanged protocol lineage.",
+    "Suppression is chronological across the complete development partition and does not reset by month or year.",
+    "The sealed 2021 validation and 2022 holdout partitions remain closed.",
+    "This protocol permits only event-predicate evaluation on the frozen 2019-2020 causal feature rows.",
+    "This stage produces no economic evidence and real net profit remains zero."
+  ],
+  "protocol_evidence_hash": "e43339f5186b5702c6db0d316b236415c5bb02f0bc2cb18d9188f5122adbe0cd"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "aurex-s1-nfci-feature-result-audit-v1",
+  "audit_id": "s1-nfci-feature-result-audit-v1",
+  "audited_at": "2026-08-26T20:19:35.642143Z",
+  "result_file_sha256": "2f7488e224195a92558d00b6830f75172f54f2798d9d3a3a501e17407452c77d",
+  "result_evidence_hash": "a59707114ec19c2576e72071fcba5ad7fa36e5232629a40fe1e9704f122f7664",
+  "feature_dataset_file_sha256": "db93ee6954fee447cba66b3d873282da4d289f5ef6a63446d6ad036f787b24d6",
+  "runner_contract_hash": "3b85b9bc81fa47f6e0aa5745128f2d4ef3d2a1bde35c30283da00eb3e345515a",
+  "auditor_source_sha256": "a36d0b8541b70834d6f5516f934daedc03085ed92e2d1e4d1d8f8b23aaff32cb",
+  "input_row_count": 281,
+  "input_row_manifest_evidence_hash": "ec984b29fb4b179c744bb265eb282f603d1a29911f3198776e1bb01f64ffd82f",
+  "feature_row_count": 277,
+  "feature_row_manifest_evidence_hash": "9f7b76b2d8371f319dd63ddaaf6f2d4dd856f166e52e5ac4902f6e9089cb519f",
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_NFCI_FEATURE_RESULT_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_NFCI_DEVELOPMENT_STRATEGY_PREREGISTRATION_PROTOCOL_ONLY",
+  "audit_evidence_hash": "da54d8a9ee1097994b1b3fc6edc81f844abcb7f9f046426c1f0a51732a0cc1f3"
+}

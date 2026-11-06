@@ -1,0 +1,668 @@
+{
+  "schema_version": "aurex-v2-positive-funding-spot-perp-carry-protocol-v1",
+  "protocol_id": "v2-p01-positive-funding-spot-perp-carry-v1",
+  "protocol_version": "1.0.0",
+  "frozen_at": "2026-07-28T08:42:28.430638Z",
+  "status": "FROZEN_PRE_FULL_PAYLOAD_AND_PRE_RETURN",
+  "selected_proposal_id": "P01_POSITIVE_FUNDING_SPOT_PERP_CARRY",
+  "hypothesis": "When USD-M perpetual traders repeatedly pay materially positive funding, a base-quantity-matched long spot and short perpetual position should harvest that transfer while removing most directional beta. The fixed 30% trailing annualized entry hurdle and 10% exit hurdle create cost hysteresis; profitability must survive conservative execution, fees, margin treatment, concentration controls, and double-cost stress.",
+  "falsification_claim": "The mechanism is rejected if its one frozen parameter set fails any required development gate, including net profitability, profit factor, drawdown, temporal robustness, double-cost profitability, funding receipts exceeding execution costs, concentration, hedge integrity, reconciliation, liquidation, ADL, or rollback safety. No threshold change, symbol substitution, or rescue variant is allowed after returns.",
+  "theory_screen_evidence_hash": "ec03d31db661a36b1def820711b20134d416ec2d390a49cdbafaf19f27758dea",
+  "metadata_source_contract_evidence_hash": "0908d86a2ea55d26d86d44607f6e462de4cbcad1baf22fea4824bd15db1b4d13",
+  "metadata_source_audit_result_evidence_hash": "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7",
+  "source_census_contract_evidence_hash": "7502a7eb6a54089d90bfc40889390f8c6ac18bbe55d18ef4122421e7fa18e0dc",
+  "source_census_result_evidence_hash": "ce5d60e3338903bcb8a3783bd4b41fa63bec518c3041b213c9529bd6458d652e",
+  "pilot_protocol_evidence_hash": "aa88b2ff6add0637b889da27b784cd1a26b1addc4590832c9c51e973e2aaebc5",
+  "pilot_result_evidence_hash": "95e9aaaf1b05b01372ddcdc3f19fff6612f6a7f5ae4e1ca4b99b0eb6e7947874",
+  "derivatives_foundation_result_evidence_hash": "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8",
+  "contamination_ledger_evidence_hash": "9f7face6a22a51b2a0b20d653561396fb6415f532ad0fecd883b3c6e6c132207",
+  "builder_contract_hash": "461a5d3878f2ba1adc78d7a009e2353cc6bd8b1259c5e9557e34353ebcc310af",
+  "venue": "BINANCE",
+  "market_type": "SPOT_AND_USD_M_PERPETUAL",
+  "quote_and_collateral_asset": "USDT",
+  "source_timeframe": "1m_AND_EXACT_FUNDING_EVENTS",
+  "development_start": "2023-01-01T00:00:00Z",
+  "development_end": "2025-01-01T00:00:00Z",
+  "forbidden_partitions": [
+    "2025_VALIDATION",
+    "2026_HOLDOUT",
+    "FORWARD"
+  ],
+  "acquisition": {
+    "complete_source_symbols": [
+      "AAVEUSDT",
+      "ADAUSDT",
+      "APEUSDT",
+      "APTUSDT",
+      "ATOMUSDT",
+      "AVAXUSDT",
+      "BCHUSDT",
+      "BNBUSDT",
+      "CRVUSDT",
+      "DOGEUSDT",
+      "DOTUSDT",
+      "DYDXUSDT",
+      "ETCUSDT",
+      "FETUSDT",
+      "FILUSDT",
+      "FTMUSDT",
+      "GALAUSDT",
+      "GRTUSDT",
+      "ICPUSDT",
+      "INJUSDT",
+      "LDOUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "MKRUSDT",
+      "NEARUSDT",
+      "OPUSDT",
+      "RUNEUSDT",
+      "SANDUSDT",
+      "TRXUSDT",
+      "UNIUSDT",
+      "XRPUSDT"
+    ],
+    "excluded_incomplete_symbols": [
+      "CFXUSDT",
+      "LUNCUSDT",
+      "SHIBUSDT",
+      "STXUSDT"
+    ],
+    "months": [
+      "2023-01",
+      "2023-02",
+      "2023-03",
+      "2023-04",
+      "2023-05",
+      "2023-06",
+      "2023-07",
+      "2023-08",
+      "2023-09",
+      "2023-10",
+      "2023-11",
+      "2023-12",
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12"
+    ],
+    "family_ids": [
+      "spot_klines_1m",
+      "um_contract_klines_1m",
+      "um_funding_rate_events",
+      "um_index_price_klines_1m",
+      "um_mark_price_klines_1m",
+      "um_premium_index_klines_1m"
+    ],
+    "source_target_count": 4464,
+    "source_target_manifest_hash": "1c65d91ded1e93dd154b4c0832ef0ee3ac8921f5642e4c47300b9f7dcd679916",
+    "pilot_targets_reused_after_reverification": 54,
+    "maximum_new_archive_downloads": 4410,
+    "storage_root_relative_path": "v2_p01_full_development_bundle_v1",
+    "maximum_concurrency": 4,
+    "request_timeout_seconds": 60,
+    "maximum_retries": 2,
+    "retry_backoff_seconds": [
+      2,
+      5
+    ],
+    "maximum_single_archive_compressed_bytes": 536870912,
+    "maximum_total_compressed_bytes": 17179869184,
+    "maximum_single_archive_uncompressed_bytes": 2147483648,
+    "maximum_total_uncompressed_bytes": 68719476736,
+    "maximum_zip_expansion_ratio": 100,
+    "minimum_free_disk_bytes_before_download": 68719476736,
+    "minimum_free_disk_bytes_after_processing": 21474836480,
+    "checksum_refresh_before_every_archive_get": true,
+    "refreshed_checksum_must_equal_census_checksum": true,
+    "archive_hash_must_equal_refreshed_checksum": true,
+    "transactional_part_files_required": true,
+    "raw_archives_and_checksums_preserved": true,
+    "extracted_csv_members_persisted": false,
+    "current_metadata_urls": [
+      "https://api.binance.com/api/v3/exchangeInfo",
+      "https://fapi.binance.com/fapi/v1/exchangeInfo"
+    ],
+    "maximum_current_metadata_requests": 2,
+    "current_metadata_credentials_permitted": false,
+    "normalized_fields": [
+      "funding_interval_hours",
+      "funding_rate",
+      "funding_timestamp",
+      "index_close",
+      "mark_close",
+      "mark_high",
+      "mark_low",
+      "open_timestamp",
+      "perpetual_close",
+      "perpetual_high",
+      "perpetual_low",
+      "perpetual_open",
+      "perpetual_quote_volume",
+      "premium_index_close",
+      "spot_close",
+      "spot_high",
+      "spot_low",
+      "spot_open",
+      "spot_quote_volume",
+      "symbol"
+    ],
+    "current_filter_fields": [
+      "contract_status",
+      "contract_type",
+      "futures_max_market_quantity",
+      "futures_min_notional",
+      "futures_min_quantity",
+      "futures_quantity_step",
+      "futures_tick_size",
+      "spot_max_market_quantity",
+      "spot_min_notional",
+      "spot_min_quantity",
+      "spot_quantity_step",
+      "spot_status",
+      "spot_tick_size"
+    ],
+    "unknown_schema_action": "STOP_WITHOUT_PARTIAL_AUTHORITATIVE_RESULT",
+    "resource_breach_action": "STOP_WITHOUT_PARTIAL_AUTHORITATIVE_RESULT",
+    "acquisition_pass_required_before_return_calculation": true
+  },
+  "metadata_treatment": {
+    "direct_historical_requirement_ids": [
+      "HISTORICAL_SETTLED_FUNDING_AND_INTERVALS",
+      "HISTORICAL_SPOT_PERPETUAL_MARK_INDEX_PREMIUM_SERIES"
+    ],
+    "conservative_override_requirement_ids": [
+      "HISTORICAL_ACCOUNT_FEE_TIER",
+      "HISTORICAL_COLLATERAL_LIQUIDATION_AND_ADL_RULES",
+      "HISTORICAL_FUTURES_ORDER_FILTERS",
+      "HISTORICAL_LEVERAGE_AND_MAINTENANCE_BRACKETS",
+      "HISTORICAL_SPOT_ORDER_FILTERS"
+    ],
+    "no_override_requirement_ids": [
+      "HISTORICAL_FUTURES_CONTRACT_LIFECYCLE"
+    ],
+    "current_spot_and_futures_filters_are_proxies_only": true,
+    "current_filters_cannot_prove_historical_executability": true,
+    "fee_tier_is_fixed_conservative_override": true,
+    "margin_and_liquidation_are_fixed_conservative_overrides": true,
+    "lifecycle_continuity_must_pass_without_override": true,
+    "missing_current_filter_action": "EXCLUDE_SYMBOL_BEFORE_ANY_RETURN_CALCULATION",
+    "lifecycle_gap_action": "EXCLUDE_SYMBOL_BEFORE_ANY_RETURN_CALCULATION",
+    "minimum_symbols_after_metadata_and_continuity_gates": 20,
+    "minimum_symbol_breach_action": "STOP_P01_WITHOUT_RETURN_CALCULATION",
+    "research_only_noneligibility_limitation_retained": true
+  },
+  "transformations": {
+    "timestamp_storage": "UTC_INTEGER_MILLISECONDS",
+    "numeric_storage": "DECIMAL_FROM_SOURCE_TEXT_NO_BINARY_FLOAT",
+    "price_family_join": "EXACT_SYMBOL_AND_ONE_MINUTE_OPEN_TIMESTAMP_INNER_JOIN",
+    "required_synchronized_price_families": 5,
+    "duplicate_timestamps_allowed": false,
+    "non_finite_values_allowed": false,
+    "rows_outside_target_month_allowed": false,
+    "synthetic_or_forward_filled_rows_allowed": false,
+    "exact_one_minute_grid_required": true,
+    "funding_event_join": "SETTLEMENT_TIMESTAMP_WITH_FIRST_ACTIONABLE_MINUTE_STRICTLY_AFTER_EVENT",
+    "funding_cashflow_formula": "NEGATIVE_SIGNED_PERP_BASE_QUANTITY_TIMES_MARK_PRICE_TIMES_FUNDING_RATE",
+    "funding_interval_source": "ARCHIVED_FUNDING_INTERVAL_HOURS",
+    "normalized_manifest_required": true,
+    "normalized_manifest_hash_algorithm": "SHA256"
+  },
+  "signal": {
+    "signal_id": "positive_funding_persistence_apr_v1",
+    "funding_event_lookback": 3,
+    "annualization_formula": "MEAN_OF_EACH_RATE_TIMES_8760_DIVIDED_BY_ITS_INTERVAL_HOURS",
+    "every_lookback_rate_must_be_strictly_positive": true,
+    "entry_minimum_trailing_annualized_funding": "0.30",
+    "exit_maximum_trailing_annualized_funding": "0.10",
+    "entry_minimum_prior_closed_minute_mark_spot_premium": "0",
+    "ranking_rule": "HIGHEST_TRAILING_ANNUALIZED_FUNDING_THEN_SYMBOL_ASCENDING",
+    "decision_information": "ONLY_SETTLED_FUNDING_AND_CLOSED_PRICE_MINUTES_AVAILABLE_BEFORE_DECISION",
+    "entry_action_time": "NEXT_COMPLETE_ONE_MINUTE_OPEN_AFTER_SIGNAL",
+    "exit_rules": [
+      "DATA_OR_LIFECYCLE_INTEGRITY_BREACH",
+      "FORCED_END_OF_DEVELOPMENT_WINDOW",
+      "NONPOSITIVE_LATEST_SETTLED_FUNDING",
+      "RISK_KILL_SWITCH",
+      "TRAILING_ANNUALIZED_FUNDING_AT_OR_BELOW_0.10"
+    ],
+    "parameter_search_allowed": false
+  },
+  "portfolio": {
+    "initial_capital_usdt": "10000",
+    "pair_notional_usdt": "1000",
+    "pair_notional_compounding_allowed": false,
+    "maximum_concurrent_pairs": 5,
+    "spot_leg": "LONG_SPOT",
+    "perpetual_leg": "SHORT_USD_M_PERPETUAL",
+    "target_base_quantity_rule": "COMMON_FILTERED_BASE_QUANTITY_FROM_1000_USDT_PAIR_NOTIONAL",
+    "maximum_total_spot_notional_usdt": "5000",
+    "maximum_total_perpetual_notional_usdt": "5000",
+    "maximum_paired_gross_exposure_percent": "100",
+    "minimum_unallocated_cash_reserve_percent": "25",
+    "rotation_before_exit_allowed": false,
+    "pyramiding_allowed": false,
+    "directional_unhedged_positions_allowed": false,
+    "maximum_absolute_base_quantity_hedge_deviation_fraction": "0.005"
+  },
+  "execution": {
+    "entry_price_sources": "NEXT_MINUTE_SPOT_AND_PERPETUAL_OPEN",
+    "exit_price_sources": "NEXT_MINUTE_SPOT_AND_PERPETUAL_OPEN_OR_FINAL_SYNCHRONIZED_CLOSE",
+    "maximum_signal_age_minutes": 2,
+    "stale_signal_action": "SKIP_ENTRY",
+    "current_spot_and_futures_filters_both_applied": true,
+    "quantity_rounding": "FLOOR_TO_COARSER_CURRENT_SPOT_OR_FUTURES_STEP",
+    "maximum_quote_volume_participation_fraction_per_leg": "0.01",
+    "minimum_common_fill_fraction_of_target": "0.90",
+    "insufficient_common_capacity_action": "SKIP_ENTRY",
+    "paired_fill_rule": "COMMON_BASE_QUANTITY_CAPPED_BY_BOTH_LEG_CAPACITIES",
+    "one_leg_failure_action": "ROLL_BACK_FILLED_LEG_AT_NEXT_MINUTE_WITH_FULL_COST",
+    "rollback_failure_action": "KILL_SWITCH_FLATTEN_ALL_AND_FAIL_STUDY",
+    "reconciliation_frequency": "EVERY_MINUTE_AND_AFTER_EVERY_FILL_FUNDING_OR_EXIT",
+    "unmatched_exposure_tolerance_minutes": 1
+  },
+  "costs": {
+    "spot_commission_fraction_per_side": "0.0010",
+    "perpetual_commission_fraction_per_side": "0.0005",
+    "spot_adverse_execution_fraction_per_side": "0.0005",
+    "perpetual_adverse_execution_fraction_per_side": "0.0005",
+    "adverse_execution_includes_spread_and_slippage": true,
+    "funding_rate": "ARCHIVED_SIGNED_SETTLED_RATE",
+    "spot_borrow_cost_fraction": "0",
+    "maker_rebate_fraction": "0",
+    "liquidation_fee_fraction": "0.02",
+    "stress_multipliers": [
+      "0",
+      "1",
+      "1.5",
+      "2"
+    ],
+    "cost_stress_scales_funding_cashflows": false
+  },
+  "margin": {
+    "margin_mode": "ISOLATED_RESEARCH_OVERRIDE",
+    "initial_leverage": "2",
+    "initial_margin_fraction": "0.50",
+    "maintenance_margin_fraction": "0.05",
+    "maintenance_margin_is_conservative_nonhistorical_override": true,
+    "collateral_asset": "USDT_ONLY",
+    "cross_collateral_allowed": false,
+    "collateral_interest_modeled": false,
+    "liquidation_check_frequency": "EVERY_ONE_MINUTE_BAR",
+    "short_liquidation_mark": "MINUTE_MARK_HIGH",
+    "liquidation_action": "CHARGE_FEE_FLATTEN_PAIR_RECORD_FAILURE",
+    "adl_action": "FLATTEN_PAIR_RECORD_FAILURE_AND_TRIGGER_KILL_SWITCH",
+    "zero_liquidation_required": true,
+    "zero_adl_required": true
+  },
+  "folds": [
+    {
+      "fold_id": "fold-01-2023q1",
+      "evaluation_start": "2023-01-01T00:00:00Z",
+      "evaluation_end": "2023-04-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-02-2023q2",
+      "evaluation_start": "2023-04-01T00:00:00Z",
+      "evaluation_end": "2023-07-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-03-2023q3",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2023-10-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-04-2023q4",
+      "evaluation_start": "2023-10-01T00:00:00Z",
+      "evaluation_end": "2024-01-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-05-2024q1",
+      "evaluation_start": "2024-01-01T00:00:00Z",
+      "evaluation_end": "2024-04-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-06-2024q2",
+      "evaluation_start": "2024-04-01T00:00:00Z",
+      "evaluation_end": "2024-07-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-07-2024q3",
+      "evaluation_start": "2024-07-01T00:00:00Z",
+      "evaluation_end": "2024-10-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-08-2024q4",
+      "evaluation_start": "2024-10-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "run_matrix": [
+    {
+      "run_id": "primary-base-cost",
+      "run_kind": "PRIMARY",
+      "cost_multiplier": "1",
+      "excluded_symbol": null,
+      "selectable": true
+    },
+    {
+      "run_id": "diagnostic-zero-cost",
+      "run_kind": "COST_DIAGNOSTIC",
+      "cost_multiplier": "0",
+      "excluded_symbol": null,
+      "selectable": false
+    },
+    {
+      "run_id": "diagnostic-1p5-cost",
+      "run_kind": "COST_DIAGNOSTIC",
+      "cost_multiplier": "1.5",
+      "excluded_symbol": null,
+      "selectable": false
+    },
+    {
+      "run_id": "diagnostic-double-cost",
+      "run_kind": "COST_DIAGNOSTIC",
+      "cost_multiplier": "2",
+      "excluded_symbol": null,
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-aaveusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "AAVEUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-adausdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "ADAUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-apeusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "APEUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-aptusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "APTUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-atomusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "ATOMUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-avaxusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "AVAXUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-bchusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "BCHUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-bnbusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "BNBUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-crvusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "CRVUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-dogeusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "DOGEUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-dotusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "DOTUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-dydxusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "DYDXUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-etcusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "ETCUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-fetusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "FETUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-filusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "FILUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-ftmusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "FTMUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-galausdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "GALAUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-grtusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "GRTUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-icpusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "ICPUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-injusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "INJUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-ldousdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "LDOUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-linkusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "LINKUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-ltcusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "LTCUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-mkrusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "MKRUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-nearusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "NEARUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-opusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "OPUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-runeusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "RUNEUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-sandusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "SANDUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-trxusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "TRXUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-uniusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "UNIUSDT",
+      "selectable": false
+    },
+    {
+      "run_id": "leave-one-out-xrpusdt",
+      "run_kind": "LEAVE_ONE_SYMBOL_OUT",
+      "cost_multiplier": "1",
+      "excluded_symbol": "XRPUSDT",
+      "selectable": false
+    }
+  ],
+  "gates": {
+    "primary_net_pl_strictly_positive": true,
+    "minimum_primary_profit_factor": "1.20",
+    "maximum_primary_drawdown_percent": "10",
+    "minimum_completed_paired_trades": 100,
+    "minimum_positive_quarterly_folds": 6,
+    "total_quarterly_folds": 8,
+    "double_cost_net_pl_strictly_positive": true,
+    "gross_funding_receipts_must_exceed_execution_costs": true,
+    "minimum_leave_one_symbol_out_positive_fraction": "0.80",
+    "maximum_single_symbol_gross_profit_fraction": "0.25",
+    "maximum_top_five_gross_profit_fraction": "0.60",
+    "maximum_hedge_deviation_fraction": "0.005",
+    "maximum_liquidation_events": 0,
+    "maximum_adl_events": 0,
+    "maximum_unreconciled_events": 0,
+    "maximum_rollback_failures": 0,
+    "all_gates_required": true
+  },
+  "selection_control": {
+    "theory_proposal_count": 3,
+    "selected_mechanism_count": 1,
+    "selectable_parameter_sets": 1,
+    "adaptive_parameter_selection": false,
+    "rescue_variants_allowed": false,
+    "multiplicity_treatment": "ONE_SELECTABLE_PRIMARY_WITH_PREDECLARED_NONSELCTABLE_DIAGNOSTICS",
+    "development_pass_creates_eligible_strategy": false,
+    "development_pass_action": "FREEZE_SEPARATE_2025_VALIDATION_PROTOCOL",
+    "any_gate_failure_action": "STOP_P01_POSITIVE_FUNDING_SPOT_PERP_CARRY"
+  },
+  "required_diagnostics": [
+    "adl_events",
+    "basis_pnl",
+    "cost_decomposition",
+    "cost_stress",
+    "daily_equity_and_drawdown",
+    "entry_signal_funding_apr",
+    "funding_cashflows",
+    "hedge_deviation",
+    "leave_one_symbol_out",
+    "liquidation_events",
+    "margin_utilization",
+    "monthly_net_returns",
+    "partial_fill_and_rollback_events",
+    "quarterly_fold_results",
+    "reconciliation_failures",
+    "skipped_entry_reasons",
+    "symbol_gross_profit_concentration"
+  ],
+  "outcome_fields_inspected": [],
+  "preexisting_result_artifacts": [],
+  "authorizes_exact_full_archive_download": true,
+  "authorizes_two_public_metadata_snapshots": true,
+  "authorizes_market_data_normalization": true,
+  "return_calculation_permitted_before_acquisition_pass": false,
+  "authorizes_development_return_after_acquisition_pass": true,
+  "creates_candidate": false,
+  "permits_validation": false,
+  "permits_holdout_or_forward": false,
+  "permits_pine": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "limitations": [
+    "A development pass permits only a separately frozen 2025 validation protocol and creates no Pine, paper, sandbox, or live eligibility.",
+    "Complete archives and strict timestamp continuity cannot prove every historical listing, suspension, or venue-operability state.",
+    "Historical account fee tiers are unavailable; fixed taker fees are research overrides and cannot prove realized account costs.",
+    "Historical leverage, maintenance margin, collateral, liquidation, and ADL rules are unavailable and use explicit adverse overrides.",
+    "Historical spot and futures order filters are unavailable; current public exchangeInfo snapshots are applied only as conservative proxies.",
+    "One-minute OHLCV has no order book; adverse execution and volume participation are modeled proxies rather than fill evidence.",
+    "The 2026 holdout, forward evidence, production credentials, and real capital remain sealed and outside this protocol."
+  ],
+  "protocol_evidence_hash": "c6a66a622b80c33490af6baed6c4bcace0f31bbba57d9e760485825bf0ae6829"
+}

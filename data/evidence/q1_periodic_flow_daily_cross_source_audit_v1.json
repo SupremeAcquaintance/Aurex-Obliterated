@@ -1,0 +1,16 @@
+{
+  "schema_version": "aurex-q1-usdm-daily-cross-source-payload-audit-v1",
+  "audit_id": "q1-usdm-daily-cross-source-payload-audit-v1",
+  "audited_at": "2026-08-07T09:06:39.776323Z",
+  "result_file_sha256": "0e294e37bf97c325329925b915f7e6a20267e51d4aa5694a31eb9f6ee2619eef",
+  "result_evidence_hash": "b7332d7eeb2b298f2db897939f6abc7ea29f6c2a658640c84814c5e401a6c7d4",
+  "protocol_evidence_hash": "f6d0f34a02dfd03f4027c109ac1a89eda241721dd56d475f355c106d7faf6b15",
+  "archive_file_sha256": {
+    "aggTrades": "db33bbd493ae7b9cb63458def8bb411d54cf93080e5fa1ce0a19e6b3f36ff1de",
+    "trades": "2de17c79495e43ff4c4435f271c2ead39978bd90678f94330aa5a096583822fd"
+  },
+  "reconstructed_exactly": true,
+  "price_or_quantity_values_parsed": [],
+  "decision": "PERMIT_Q1_USDM_RAW_TRADES_METADATA_CENSUS_PROTOCOL",
+  "audit_evidence_hash": "998a0f38e432a4cca41709006b821a3af9808c631f6ad95e6f64702929bd3c98"
+}

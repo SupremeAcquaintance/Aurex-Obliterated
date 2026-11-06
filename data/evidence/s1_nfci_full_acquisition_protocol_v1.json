@@ -1,0 +1,2618 @@
+{
+  "schema_version": "aurex-s1-nfci-full-acquisition-protocol-v1",
+  "protocol_id": "s1-nfci-full-acquisition-protocol-v1",
+  "frozen_at": "2026-08-26T19:06:43.310529Z",
+  "builder_contract_hash": "a6ef60d3c29c2f04836eae40f617c96ef8c4b63f0a1aef49c27a0f617fbc4411",
+  "recovery_protocol_file_sha256": "17d2109ca4839b7bbde3b269f33f24f23e6ba13b99faf1cf50b868f30ae22e40",
+  "recovery_protocol_evidence_hash": "d60d13bbc46a93d02edd7951172e612dd04e655cde026a4be00e800e5f1bd312",
+  "recovery_result_file_sha256": "1f027d3bffbbd3ee88f4d757bf307ddbcc7565d7e5f5a2a8b4adca81b6297a48",
+  "recovery_result_evidence_hash": "274e9981103b3e31aea001e543f62d29d0d6941a1529b00cb5b037a854c75472",
+  "recovery_audit_file_sha256": "568a48fd0e0f716a43352e21ccc5589406c398c938fd47b088def60423fd1dff",
+  "recovery_audit_evidence_hash": "f658ef8639cd5ad17216389687301addf737bcfa480b6064298f5b5036905f56",
+  "recovery_decision": "PASS_S1_ALFRED_POINT_IN_TIME_SOURCE_RECOVERY",
+  "recovery_next_authorization": "AUTHORIZE_S1_FULL_NFCI_VINTAGE_ACQUISITION_PROTOCOL_ONLY",
+  "acquisition_scope": "DEVELOPMENT_MACRO_SOURCE_ONLY",
+  "schedule_rule": "EVERY_THURSDAY_AS_OF_AFTER_PRIOR_WEDNESDAY_NFCI_RELEASE",
+  "development_start": "2017-08-17",
+  "development_end_exclusive": "2023-01-01",
+  "first_vintage_date": "2017-08-17",
+  "last_vintage_date": "2022-12-29",
+  "interval_days": 7,
+  "targets": [
+    {
+      "sequence": 1,
+      "target_id": "001-nfci-vintage-2017-08-17",
+      "vintage_date": "2017-08-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-08-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20170817",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-08-17.csv"
+    },
+    {
+      "sequence": 2,
+      "target_id": "002-nfci-vintage-2017-08-24",
+      "vintage_date": "2017-08-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-08-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20170824",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-08-24.csv"
+    },
+    {
+      "sequence": 3,
+      "target_id": "003-nfci-vintage-2017-08-31",
+      "vintage_date": "2017-08-31",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-08-31",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20170831",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-08-31.csv"
+    },
+    {
+      "sequence": 4,
+      "target_id": "004-nfci-vintage-2017-09-07",
+      "vintage_date": "2017-09-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-09-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20170907",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-09-07.csv"
+    },
+    {
+      "sequence": 5,
+      "target_id": "005-nfci-vintage-2017-09-14",
+      "vintage_date": "2017-09-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-09-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20170914",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-09-14.csv"
+    },
+    {
+      "sequence": 6,
+      "target_id": "006-nfci-vintage-2017-09-21",
+      "vintage_date": "2017-09-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-09-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20170921",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-09-21.csv"
+    },
+    {
+      "sequence": 7,
+      "target_id": "007-nfci-vintage-2017-09-28",
+      "vintage_date": "2017-09-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-09-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20170928",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-09-28.csv"
+    },
+    {
+      "sequence": 8,
+      "target_id": "008-nfci-vintage-2017-10-05",
+      "vintage_date": "2017-10-05",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-10-05",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171005",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-10-05.csv"
+    },
+    {
+      "sequence": 9,
+      "target_id": "009-nfci-vintage-2017-10-12",
+      "vintage_date": "2017-10-12",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-10-12",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171012",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-10-12.csv"
+    },
+    {
+      "sequence": 10,
+      "target_id": "010-nfci-vintage-2017-10-19",
+      "vintage_date": "2017-10-19",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-10-19",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171019",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-10-19.csv"
+    },
+    {
+      "sequence": 11,
+      "target_id": "011-nfci-vintage-2017-10-26",
+      "vintage_date": "2017-10-26",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-10-26",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171026",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-10-26.csv"
+    },
+    {
+      "sequence": 12,
+      "target_id": "012-nfci-vintage-2017-11-02",
+      "vintage_date": "2017-11-02",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-11-02",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171102",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-11-02.csv"
+    },
+    {
+      "sequence": 13,
+      "target_id": "013-nfci-vintage-2017-11-09",
+      "vintage_date": "2017-11-09",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-11-09",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171109",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-11-09.csv"
+    },
+    {
+      "sequence": 14,
+      "target_id": "014-nfci-vintage-2017-11-16",
+      "vintage_date": "2017-11-16",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-11-16",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171116",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-11-16.csv"
+    },
+    {
+      "sequence": 15,
+      "target_id": "015-nfci-vintage-2017-11-23",
+      "vintage_date": "2017-11-23",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-11-23",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171123",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-11-23.csv"
+    },
+    {
+      "sequence": 16,
+      "target_id": "016-nfci-vintage-2017-11-30",
+      "vintage_date": "2017-11-30",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-11-30",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171130",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-11-30.csv"
+    },
+    {
+      "sequence": 17,
+      "target_id": "017-nfci-vintage-2017-12-07",
+      "vintage_date": "2017-12-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-12-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171207",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-12-07.csv"
+    },
+    {
+      "sequence": 18,
+      "target_id": "018-nfci-vintage-2017-12-14",
+      "vintage_date": "2017-12-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-12-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171214",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-12-14.csv"
+    },
+    {
+      "sequence": 19,
+      "target_id": "019-nfci-vintage-2017-12-21",
+      "vintage_date": "2017-12-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-12-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171221",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-12-21.csv"
+    },
+    {
+      "sequence": 20,
+      "target_id": "020-nfci-vintage-2017-12-28",
+      "vintage_date": "2017-12-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2017-12-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20171228",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2017-12-28.csv"
+    },
+    {
+      "sequence": 21,
+      "target_id": "021-nfci-vintage-2018-01-04",
+      "vintage_date": "2018-01-04",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-01-04",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180104",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-01-04.csv"
+    },
+    {
+      "sequence": 22,
+      "target_id": "022-nfci-vintage-2018-01-11",
+      "vintage_date": "2018-01-11",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-01-11",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180111",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-01-11.csv"
+    },
+    {
+      "sequence": 23,
+      "target_id": "023-nfci-vintage-2018-01-18",
+      "vintage_date": "2018-01-18",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-01-18",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180118",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-01-18.csv"
+    },
+    {
+      "sequence": 24,
+      "target_id": "024-nfci-vintage-2018-01-25",
+      "vintage_date": "2018-01-25",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-01-25",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180125",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-01-25.csv"
+    },
+    {
+      "sequence": 25,
+      "target_id": "025-nfci-vintage-2018-02-01",
+      "vintage_date": "2018-02-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-02-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180201",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-02-01.csv"
+    },
+    {
+      "sequence": 26,
+      "target_id": "026-nfci-vintage-2018-02-08",
+      "vintage_date": "2018-02-08",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-02-08",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180208",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-02-08.csv"
+    },
+    {
+      "sequence": 27,
+      "target_id": "027-nfci-vintage-2018-02-15",
+      "vintage_date": "2018-02-15",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-02-15",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180215",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-02-15.csv"
+    },
+    {
+      "sequence": 28,
+      "target_id": "028-nfci-vintage-2018-02-22",
+      "vintage_date": "2018-02-22",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-02-22",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180222",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-02-22.csv"
+    },
+    {
+      "sequence": 29,
+      "target_id": "029-nfci-vintage-2018-03-01",
+      "vintage_date": "2018-03-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-03-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180301",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-03-01.csv"
+    },
+    {
+      "sequence": 30,
+      "target_id": "030-nfci-vintage-2018-03-08",
+      "vintage_date": "2018-03-08",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-03-08",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180308",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-03-08.csv"
+    },
+    {
+      "sequence": 31,
+      "target_id": "031-nfci-vintage-2018-03-15",
+      "vintage_date": "2018-03-15",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-03-15",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180315",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-03-15.csv"
+    },
+    {
+      "sequence": 32,
+      "target_id": "032-nfci-vintage-2018-03-22",
+      "vintage_date": "2018-03-22",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-03-22",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180322",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-03-22.csv"
+    },
+    {
+      "sequence": 33,
+      "target_id": "033-nfci-vintage-2018-03-29",
+      "vintage_date": "2018-03-29",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-03-29",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180329",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-03-29.csv"
+    },
+    {
+      "sequence": 34,
+      "target_id": "034-nfci-vintage-2018-04-05",
+      "vintage_date": "2018-04-05",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-04-05",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180405",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-04-05.csv"
+    },
+    {
+      "sequence": 35,
+      "target_id": "035-nfci-vintage-2018-04-12",
+      "vintage_date": "2018-04-12",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-04-12",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180412",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-04-12.csv"
+    },
+    {
+      "sequence": 36,
+      "target_id": "036-nfci-vintage-2018-04-19",
+      "vintage_date": "2018-04-19",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-04-19",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180419",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-04-19.csv"
+    },
+    {
+      "sequence": 37,
+      "target_id": "037-nfci-vintage-2018-04-26",
+      "vintage_date": "2018-04-26",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-04-26",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180426",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-04-26.csv"
+    },
+    {
+      "sequence": 38,
+      "target_id": "038-nfci-vintage-2018-05-03",
+      "vintage_date": "2018-05-03",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-05-03",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180503",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-05-03.csv"
+    },
+    {
+      "sequence": 39,
+      "target_id": "039-nfci-vintage-2018-05-10",
+      "vintage_date": "2018-05-10",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-05-10",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180510",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-05-10.csv"
+    },
+    {
+      "sequence": 40,
+      "target_id": "040-nfci-vintage-2018-05-17",
+      "vintage_date": "2018-05-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-05-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180517",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-05-17.csv"
+    },
+    {
+      "sequence": 41,
+      "target_id": "041-nfci-vintage-2018-05-24",
+      "vintage_date": "2018-05-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-05-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180524",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-05-24.csv"
+    },
+    {
+      "sequence": 42,
+      "target_id": "042-nfci-vintage-2018-05-31",
+      "vintage_date": "2018-05-31",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-05-31",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180531",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-05-31.csv"
+    },
+    {
+      "sequence": 43,
+      "target_id": "043-nfci-vintage-2018-06-07",
+      "vintage_date": "2018-06-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-06-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180607",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-06-07.csv"
+    },
+    {
+      "sequence": 44,
+      "target_id": "044-nfci-vintage-2018-06-14",
+      "vintage_date": "2018-06-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-06-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180614",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-06-14.csv"
+    },
+    {
+      "sequence": 45,
+      "target_id": "045-nfci-vintage-2018-06-21",
+      "vintage_date": "2018-06-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-06-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180621",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-06-21.csv"
+    },
+    {
+      "sequence": 46,
+      "target_id": "046-nfci-vintage-2018-06-28",
+      "vintage_date": "2018-06-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-06-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180628",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-06-28.csv"
+    },
+    {
+      "sequence": 47,
+      "target_id": "047-nfci-vintage-2018-07-05",
+      "vintage_date": "2018-07-05",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-07-05",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180705",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-07-05.csv"
+    },
+    {
+      "sequence": 48,
+      "target_id": "048-nfci-vintage-2018-07-12",
+      "vintage_date": "2018-07-12",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-07-12",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180712",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-07-12.csv"
+    },
+    {
+      "sequence": 49,
+      "target_id": "049-nfci-vintage-2018-07-19",
+      "vintage_date": "2018-07-19",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-07-19",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180719",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-07-19.csv"
+    },
+    {
+      "sequence": 50,
+      "target_id": "050-nfci-vintage-2018-07-26",
+      "vintage_date": "2018-07-26",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-07-26",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180726",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-07-26.csv"
+    },
+    {
+      "sequence": 51,
+      "target_id": "051-nfci-vintage-2018-08-02",
+      "vintage_date": "2018-08-02",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-08-02",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180802",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-08-02.csv"
+    },
+    {
+      "sequence": 52,
+      "target_id": "052-nfci-vintage-2018-08-09",
+      "vintage_date": "2018-08-09",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-08-09",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180809",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-08-09.csv"
+    },
+    {
+      "sequence": 53,
+      "target_id": "053-nfci-vintage-2018-08-16",
+      "vintage_date": "2018-08-16",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-08-16",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180816",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-08-16.csv"
+    },
+    {
+      "sequence": 54,
+      "target_id": "054-nfci-vintage-2018-08-23",
+      "vintage_date": "2018-08-23",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-08-23",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180823",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-08-23.csv"
+    },
+    {
+      "sequence": 55,
+      "target_id": "055-nfci-vintage-2018-08-30",
+      "vintage_date": "2018-08-30",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-08-30",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180830",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-08-30.csv"
+    },
+    {
+      "sequence": 56,
+      "target_id": "056-nfci-vintage-2018-09-06",
+      "vintage_date": "2018-09-06",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-09-06",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180906",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-09-06.csv"
+    },
+    {
+      "sequence": 57,
+      "target_id": "057-nfci-vintage-2018-09-13",
+      "vintage_date": "2018-09-13",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-09-13",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180913",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-09-13.csv"
+    },
+    {
+      "sequence": 58,
+      "target_id": "058-nfci-vintage-2018-09-20",
+      "vintage_date": "2018-09-20",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-09-20",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180920",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-09-20.csv"
+    },
+    {
+      "sequence": 59,
+      "target_id": "059-nfci-vintage-2018-09-27",
+      "vintage_date": "2018-09-27",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-09-27",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20180927",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-09-27.csv"
+    },
+    {
+      "sequence": 60,
+      "target_id": "060-nfci-vintage-2018-10-04",
+      "vintage_date": "2018-10-04",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-10-04",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181004",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-10-04.csv"
+    },
+    {
+      "sequence": 61,
+      "target_id": "061-nfci-vintage-2018-10-11",
+      "vintage_date": "2018-10-11",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-10-11",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181011",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-10-11.csv"
+    },
+    {
+      "sequence": 62,
+      "target_id": "062-nfci-vintage-2018-10-18",
+      "vintage_date": "2018-10-18",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-10-18",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181018",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-10-18.csv"
+    },
+    {
+      "sequence": 63,
+      "target_id": "063-nfci-vintage-2018-10-25",
+      "vintage_date": "2018-10-25",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-10-25",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181025",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-10-25.csv"
+    },
+    {
+      "sequence": 64,
+      "target_id": "064-nfci-vintage-2018-11-01",
+      "vintage_date": "2018-11-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-11-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181101",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-11-01.csv"
+    },
+    {
+      "sequence": 65,
+      "target_id": "065-nfci-vintage-2018-11-08",
+      "vintage_date": "2018-11-08",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-11-08",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181108",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-11-08.csv"
+    },
+    {
+      "sequence": 66,
+      "target_id": "066-nfci-vintage-2018-11-15",
+      "vintage_date": "2018-11-15",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-11-15",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181115",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-11-15.csv"
+    },
+    {
+      "sequence": 67,
+      "target_id": "067-nfci-vintage-2018-11-22",
+      "vintage_date": "2018-11-22",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-11-22",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181122",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-11-22.csv"
+    },
+    {
+      "sequence": 68,
+      "target_id": "068-nfci-vintage-2018-11-29",
+      "vintage_date": "2018-11-29",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-11-29",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181129",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-11-29.csv"
+    },
+    {
+      "sequence": 69,
+      "target_id": "069-nfci-vintage-2018-12-06",
+      "vintage_date": "2018-12-06",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-12-06",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181206",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-12-06.csv"
+    },
+    {
+      "sequence": 70,
+      "target_id": "070-nfci-vintage-2018-12-13",
+      "vintage_date": "2018-12-13",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-12-13",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181213",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-12-13.csv"
+    },
+    {
+      "sequence": 71,
+      "target_id": "071-nfci-vintage-2018-12-20",
+      "vintage_date": "2018-12-20",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-12-20",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181220",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-12-20.csv"
+    },
+    {
+      "sequence": 72,
+      "target_id": "072-nfci-vintage-2018-12-27",
+      "vintage_date": "2018-12-27",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2018-12-27",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20181227",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2018-12-27.csv"
+    },
+    {
+      "sequence": 73,
+      "target_id": "073-nfci-vintage-2019-01-03",
+      "vintage_date": "2019-01-03",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-01-03",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190103",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-01-03.csv"
+    },
+    {
+      "sequence": 74,
+      "target_id": "074-nfci-vintage-2019-01-10",
+      "vintage_date": "2019-01-10",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-01-10",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190110",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-01-10.csv"
+    },
+    {
+      "sequence": 75,
+      "target_id": "075-nfci-vintage-2019-01-17",
+      "vintage_date": "2019-01-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-01-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190117",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-01-17.csv"
+    },
+    {
+      "sequence": 76,
+      "target_id": "076-nfci-vintage-2019-01-24",
+      "vintage_date": "2019-01-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-01-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190124",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-01-24.csv"
+    },
+    {
+      "sequence": 77,
+      "target_id": "077-nfci-vintage-2019-01-31",
+      "vintage_date": "2019-01-31",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-01-31",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190131",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-01-31.csv"
+    },
+    {
+      "sequence": 78,
+      "target_id": "078-nfci-vintage-2019-02-07",
+      "vintage_date": "2019-02-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-02-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190207",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-02-07.csv"
+    },
+    {
+      "sequence": 79,
+      "target_id": "079-nfci-vintage-2019-02-14",
+      "vintage_date": "2019-02-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-02-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190214",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-02-14.csv"
+    },
+    {
+      "sequence": 80,
+      "target_id": "080-nfci-vintage-2019-02-21",
+      "vintage_date": "2019-02-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-02-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190221",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-02-21.csv"
+    },
+    {
+      "sequence": 81,
+      "target_id": "081-nfci-vintage-2019-02-28",
+      "vintage_date": "2019-02-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-02-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190228",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-02-28.csv"
+    },
+    {
+      "sequence": 82,
+      "target_id": "082-nfci-vintage-2019-03-07",
+      "vintage_date": "2019-03-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-03-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190307",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-03-07.csv"
+    },
+    {
+      "sequence": 83,
+      "target_id": "083-nfci-vintage-2019-03-14",
+      "vintage_date": "2019-03-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-03-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190314",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-03-14.csv"
+    },
+    {
+      "sequence": 84,
+      "target_id": "084-nfci-vintage-2019-03-21",
+      "vintage_date": "2019-03-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-03-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190321",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-03-21.csv"
+    },
+    {
+      "sequence": 85,
+      "target_id": "085-nfci-vintage-2019-03-28",
+      "vintage_date": "2019-03-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-03-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190328",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-03-28.csv"
+    },
+    {
+      "sequence": 86,
+      "target_id": "086-nfci-vintage-2019-04-04",
+      "vintage_date": "2019-04-04",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-04-04",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190404",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-04-04.csv"
+    },
+    {
+      "sequence": 87,
+      "target_id": "087-nfci-vintage-2019-04-11",
+      "vintage_date": "2019-04-11",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-04-11",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190411",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-04-11.csv"
+    },
+    {
+      "sequence": 88,
+      "target_id": "088-nfci-vintage-2019-04-18",
+      "vintage_date": "2019-04-18",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-04-18",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190418",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-04-18.csv"
+    },
+    {
+      "sequence": 89,
+      "target_id": "089-nfci-vintage-2019-04-25",
+      "vintage_date": "2019-04-25",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-04-25",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190425",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-04-25.csv"
+    },
+    {
+      "sequence": 90,
+      "target_id": "090-nfci-vintage-2019-05-02",
+      "vintage_date": "2019-05-02",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-05-02",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190502",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-05-02.csv"
+    },
+    {
+      "sequence": 91,
+      "target_id": "091-nfci-vintage-2019-05-09",
+      "vintage_date": "2019-05-09",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-05-09",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190509",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-05-09.csv"
+    },
+    {
+      "sequence": 92,
+      "target_id": "092-nfci-vintage-2019-05-16",
+      "vintage_date": "2019-05-16",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-05-16",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190516",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-05-16.csv"
+    },
+    {
+      "sequence": 93,
+      "target_id": "093-nfci-vintage-2019-05-23",
+      "vintage_date": "2019-05-23",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-05-23",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190523",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-05-23.csv"
+    },
+    {
+      "sequence": 94,
+      "target_id": "094-nfci-vintage-2019-05-30",
+      "vintage_date": "2019-05-30",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-05-30",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190530",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-05-30.csv"
+    },
+    {
+      "sequence": 95,
+      "target_id": "095-nfci-vintage-2019-06-06",
+      "vintage_date": "2019-06-06",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-06-06",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190606",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-06-06.csv"
+    },
+    {
+      "sequence": 96,
+      "target_id": "096-nfci-vintage-2019-06-13",
+      "vintage_date": "2019-06-13",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-06-13",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190613",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-06-13.csv"
+    },
+    {
+      "sequence": 97,
+      "target_id": "097-nfci-vintage-2019-06-20",
+      "vintage_date": "2019-06-20",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-06-20",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190620",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-06-20.csv"
+    },
+    {
+      "sequence": 98,
+      "target_id": "098-nfci-vintage-2019-06-27",
+      "vintage_date": "2019-06-27",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-06-27",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190627",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-06-27.csv"
+    },
+    {
+      "sequence": 99,
+      "target_id": "099-nfci-vintage-2019-07-04",
+      "vintage_date": "2019-07-04",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-07-04",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190704",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-07-04.csv"
+    },
+    {
+      "sequence": 100,
+      "target_id": "100-nfci-vintage-2019-07-11",
+      "vintage_date": "2019-07-11",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-07-11",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190711",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-07-11.csv"
+    },
+    {
+      "sequence": 101,
+      "target_id": "101-nfci-vintage-2019-07-18",
+      "vintage_date": "2019-07-18",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-07-18",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190718",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-07-18.csv"
+    },
+    {
+      "sequence": 102,
+      "target_id": "102-nfci-vintage-2019-07-25",
+      "vintage_date": "2019-07-25",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-07-25",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190725",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-07-25.csv"
+    },
+    {
+      "sequence": 103,
+      "target_id": "103-nfci-vintage-2019-08-01",
+      "vintage_date": "2019-08-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-08-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190801",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-08-01.csv"
+    },
+    {
+      "sequence": 104,
+      "target_id": "104-nfci-vintage-2019-08-08",
+      "vintage_date": "2019-08-08",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-08-08",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190808",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-08-08.csv"
+    },
+    {
+      "sequence": 105,
+      "target_id": "105-nfci-vintage-2019-08-15",
+      "vintage_date": "2019-08-15",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-08-15",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190815",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-08-15.csv"
+    },
+    {
+      "sequence": 106,
+      "target_id": "106-nfci-vintage-2019-08-22",
+      "vintage_date": "2019-08-22",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-08-22",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190822",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-08-22.csv"
+    },
+    {
+      "sequence": 107,
+      "target_id": "107-nfci-vintage-2019-08-29",
+      "vintage_date": "2019-08-29",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-08-29",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190829",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-08-29.csv"
+    },
+    {
+      "sequence": 108,
+      "target_id": "108-nfci-vintage-2019-09-05",
+      "vintage_date": "2019-09-05",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-09-05",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190905",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-09-05.csv"
+    },
+    {
+      "sequence": 109,
+      "target_id": "109-nfci-vintage-2019-09-12",
+      "vintage_date": "2019-09-12",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-09-12",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190912",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-09-12.csv"
+    },
+    {
+      "sequence": 110,
+      "target_id": "110-nfci-vintage-2019-09-19",
+      "vintage_date": "2019-09-19",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-09-19",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190919",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-09-19.csv"
+    },
+    {
+      "sequence": 111,
+      "target_id": "111-nfci-vintage-2019-09-26",
+      "vintage_date": "2019-09-26",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-09-26",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20190926",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-09-26.csv"
+    },
+    {
+      "sequence": 112,
+      "target_id": "112-nfci-vintage-2019-10-03",
+      "vintage_date": "2019-10-03",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-10-03",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191003",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-10-03.csv"
+    },
+    {
+      "sequence": 113,
+      "target_id": "113-nfci-vintage-2019-10-10",
+      "vintage_date": "2019-10-10",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-10-10",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191010",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-10-10.csv"
+    },
+    {
+      "sequence": 114,
+      "target_id": "114-nfci-vintage-2019-10-17",
+      "vintage_date": "2019-10-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-10-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191017",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-10-17.csv"
+    },
+    {
+      "sequence": 115,
+      "target_id": "115-nfci-vintage-2019-10-24",
+      "vintage_date": "2019-10-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-10-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191024",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-10-24.csv"
+    },
+    {
+      "sequence": 116,
+      "target_id": "116-nfci-vintage-2019-10-31",
+      "vintage_date": "2019-10-31",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-10-31",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191031",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-10-31.csv"
+    },
+    {
+      "sequence": 117,
+      "target_id": "117-nfci-vintage-2019-11-07",
+      "vintage_date": "2019-11-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-11-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191107",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-11-07.csv"
+    },
+    {
+      "sequence": 118,
+      "target_id": "118-nfci-vintage-2019-11-14",
+      "vintage_date": "2019-11-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-11-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191114",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-11-14.csv"
+    },
+    {
+      "sequence": 119,
+      "target_id": "119-nfci-vintage-2019-11-21",
+      "vintage_date": "2019-11-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-11-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191121",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-11-21.csv"
+    },
+    {
+      "sequence": 120,
+      "target_id": "120-nfci-vintage-2019-11-28",
+      "vintage_date": "2019-11-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-11-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191128",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-11-28.csv"
+    },
+    {
+      "sequence": 121,
+      "target_id": "121-nfci-vintage-2019-12-05",
+      "vintage_date": "2019-12-05",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-12-05",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191205",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-12-05.csv"
+    },
+    {
+      "sequence": 122,
+      "target_id": "122-nfci-vintage-2019-12-12",
+      "vintage_date": "2019-12-12",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-12-12",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191212",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-12-12.csv"
+    },
+    {
+      "sequence": 123,
+      "target_id": "123-nfci-vintage-2019-12-19",
+      "vintage_date": "2019-12-19",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-12-19",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191219",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-12-19.csv"
+    },
+    {
+      "sequence": 124,
+      "target_id": "124-nfci-vintage-2019-12-26",
+      "vintage_date": "2019-12-26",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2019-12-26",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20191226",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2019-12-26.csv"
+    },
+    {
+      "sequence": 125,
+      "target_id": "125-nfci-vintage-2020-01-02",
+      "vintage_date": "2020-01-02",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-01-02",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200102",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-01-02.csv"
+    },
+    {
+      "sequence": 126,
+      "target_id": "126-nfci-vintage-2020-01-09",
+      "vintage_date": "2020-01-09",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-01-09",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200109",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-01-09.csv"
+    },
+    {
+      "sequence": 127,
+      "target_id": "127-nfci-vintage-2020-01-16",
+      "vintage_date": "2020-01-16",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-01-16",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200116",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-01-16.csv"
+    },
+    {
+      "sequence": 128,
+      "target_id": "128-nfci-vintage-2020-01-23",
+      "vintage_date": "2020-01-23",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-01-23",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200123",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-01-23.csv"
+    },
+    {
+      "sequence": 129,
+      "target_id": "129-nfci-vintage-2020-01-30",
+      "vintage_date": "2020-01-30",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-01-30",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200130",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-01-30.csv"
+    },
+    {
+      "sequence": 130,
+      "target_id": "130-nfci-vintage-2020-02-06",
+      "vintage_date": "2020-02-06",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-02-06",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200206",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-02-06.csv"
+    },
+    {
+      "sequence": 131,
+      "target_id": "131-nfci-vintage-2020-02-13",
+      "vintage_date": "2020-02-13",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-02-13",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200213",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-02-13.csv"
+    },
+    {
+      "sequence": 132,
+      "target_id": "132-nfci-vintage-2020-02-20",
+      "vintage_date": "2020-02-20",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-02-20",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200220",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-02-20.csv"
+    },
+    {
+      "sequence": 133,
+      "target_id": "133-nfci-vintage-2020-02-27",
+      "vintage_date": "2020-02-27",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-02-27",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200227",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-02-27.csv"
+    },
+    {
+      "sequence": 134,
+      "target_id": "134-nfci-vintage-2020-03-05",
+      "vintage_date": "2020-03-05",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-03-05",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200305",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-03-05.csv"
+    },
+    {
+      "sequence": 135,
+      "target_id": "135-nfci-vintage-2020-03-12",
+      "vintage_date": "2020-03-12",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-03-12",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200312",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-03-12.csv"
+    },
+    {
+      "sequence": 136,
+      "target_id": "136-nfci-vintage-2020-03-19",
+      "vintage_date": "2020-03-19",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-03-19",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200319",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-03-19.csv"
+    },
+    {
+      "sequence": 137,
+      "target_id": "137-nfci-vintage-2020-03-26",
+      "vintage_date": "2020-03-26",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-03-26",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200326",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-03-26.csv"
+    },
+    {
+      "sequence": 138,
+      "target_id": "138-nfci-vintage-2020-04-02",
+      "vintage_date": "2020-04-02",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-04-02",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200402",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-04-02.csv"
+    },
+    {
+      "sequence": 139,
+      "target_id": "139-nfci-vintage-2020-04-09",
+      "vintage_date": "2020-04-09",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-04-09",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200409",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-04-09.csv"
+    },
+    {
+      "sequence": 140,
+      "target_id": "140-nfci-vintage-2020-04-16",
+      "vintage_date": "2020-04-16",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-04-16",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200416",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-04-16.csv"
+    },
+    {
+      "sequence": 141,
+      "target_id": "141-nfci-vintage-2020-04-23",
+      "vintage_date": "2020-04-23",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-04-23",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200423",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-04-23.csv"
+    },
+    {
+      "sequence": 142,
+      "target_id": "142-nfci-vintage-2020-04-30",
+      "vintage_date": "2020-04-30",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-04-30",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200430",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-04-30.csv"
+    },
+    {
+      "sequence": 143,
+      "target_id": "143-nfci-vintage-2020-05-07",
+      "vintage_date": "2020-05-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-05-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200507",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-05-07.csv"
+    },
+    {
+      "sequence": 144,
+      "target_id": "144-nfci-vintage-2020-05-14",
+      "vintage_date": "2020-05-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-05-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200514",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-05-14.csv"
+    },
+    {
+      "sequence": 145,
+      "target_id": "145-nfci-vintage-2020-05-21",
+      "vintage_date": "2020-05-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-05-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200521",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-05-21.csv"
+    },
+    {
+      "sequence": 146,
+      "target_id": "146-nfci-vintage-2020-05-28",
+      "vintage_date": "2020-05-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-05-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200528",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-05-28.csv"
+    },
+    {
+      "sequence": 147,
+      "target_id": "147-nfci-vintage-2020-06-04",
+      "vintage_date": "2020-06-04",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-06-04",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200604",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-06-04.csv"
+    },
+    {
+      "sequence": 148,
+      "target_id": "148-nfci-vintage-2020-06-11",
+      "vintage_date": "2020-06-11",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-06-11",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200611",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-06-11.csv"
+    },
+    {
+      "sequence": 149,
+      "target_id": "149-nfci-vintage-2020-06-18",
+      "vintage_date": "2020-06-18",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-06-18",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200618",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-06-18.csv"
+    },
+    {
+      "sequence": 150,
+      "target_id": "150-nfci-vintage-2020-06-25",
+      "vintage_date": "2020-06-25",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-06-25",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200625",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-06-25.csv"
+    },
+    {
+      "sequence": 151,
+      "target_id": "151-nfci-vintage-2020-07-02",
+      "vintage_date": "2020-07-02",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-07-02",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200702",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-07-02.csv"
+    },
+    {
+      "sequence": 152,
+      "target_id": "152-nfci-vintage-2020-07-09",
+      "vintage_date": "2020-07-09",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-07-09",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200709",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-07-09.csv"
+    },
+    {
+      "sequence": 153,
+      "target_id": "153-nfci-vintage-2020-07-16",
+      "vintage_date": "2020-07-16",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-07-16",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200716",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-07-16.csv"
+    },
+    {
+      "sequence": 154,
+      "target_id": "154-nfci-vintage-2020-07-23",
+      "vintage_date": "2020-07-23",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-07-23",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200723",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-07-23.csv"
+    },
+    {
+      "sequence": 155,
+      "target_id": "155-nfci-vintage-2020-07-30",
+      "vintage_date": "2020-07-30",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-07-30",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200730",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-07-30.csv"
+    },
+    {
+      "sequence": 156,
+      "target_id": "156-nfci-vintage-2020-08-06",
+      "vintage_date": "2020-08-06",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-08-06",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200806",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-08-06.csv"
+    },
+    {
+      "sequence": 157,
+      "target_id": "157-nfci-vintage-2020-08-13",
+      "vintage_date": "2020-08-13",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-08-13",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200813",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-08-13.csv"
+    },
+    {
+      "sequence": 158,
+      "target_id": "158-nfci-vintage-2020-08-20",
+      "vintage_date": "2020-08-20",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-08-20",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200820",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-08-20.csv"
+    },
+    {
+      "sequence": 159,
+      "target_id": "159-nfci-vintage-2020-08-27",
+      "vintage_date": "2020-08-27",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-08-27",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200827",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-08-27.csv"
+    },
+    {
+      "sequence": 160,
+      "target_id": "160-nfci-vintage-2020-09-03",
+      "vintage_date": "2020-09-03",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-09-03",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200903",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-09-03.csv"
+    },
+    {
+      "sequence": 161,
+      "target_id": "161-nfci-vintage-2020-09-10",
+      "vintage_date": "2020-09-10",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-09-10",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200910",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-09-10.csv"
+    },
+    {
+      "sequence": 162,
+      "target_id": "162-nfci-vintage-2020-09-17",
+      "vintage_date": "2020-09-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-09-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200917",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-09-17.csv"
+    },
+    {
+      "sequence": 163,
+      "target_id": "163-nfci-vintage-2020-09-24",
+      "vintage_date": "2020-09-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-09-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200924",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-09-24.csv"
+    },
+    {
+      "sequence": 164,
+      "target_id": "164-nfci-vintage-2020-10-01",
+      "vintage_date": "2020-10-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-10-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201001",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-10-01.csv"
+    },
+    {
+      "sequence": 165,
+      "target_id": "165-nfci-vintage-2020-10-08",
+      "vintage_date": "2020-10-08",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-10-08",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201008",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-10-08.csv"
+    },
+    {
+      "sequence": 166,
+      "target_id": "166-nfci-vintage-2020-10-15",
+      "vintage_date": "2020-10-15",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-10-15",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201015",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-10-15.csv"
+    },
+    {
+      "sequence": 167,
+      "target_id": "167-nfci-vintage-2020-10-22",
+      "vintage_date": "2020-10-22",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-10-22",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201022",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-10-22.csv"
+    },
+    {
+      "sequence": 168,
+      "target_id": "168-nfci-vintage-2020-10-29",
+      "vintage_date": "2020-10-29",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-10-29",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201029",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-10-29.csv"
+    },
+    {
+      "sequence": 169,
+      "target_id": "169-nfci-vintage-2020-11-05",
+      "vintage_date": "2020-11-05",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-11-05",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201105",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-11-05.csv"
+    },
+    {
+      "sequence": 170,
+      "target_id": "170-nfci-vintage-2020-11-12",
+      "vintage_date": "2020-11-12",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-11-12",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201112",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-11-12.csv"
+    },
+    {
+      "sequence": 171,
+      "target_id": "171-nfci-vintage-2020-11-19",
+      "vintage_date": "2020-11-19",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-11-19",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201119",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-11-19.csv"
+    },
+    {
+      "sequence": 172,
+      "target_id": "172-nfci-vintage-2020-11-26",
+      "vintage_date": "2020-11-26",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-11-26",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201126",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-11-26.csv"
+    },
+    {
+      "sequence": 173,
+      "target_id": "173-nfci-vintage-2020-12-03",
+      "vintage_date": "2020-12-03",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-12-03",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201203",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-12-03.csv"
+    },
+    {
+      "sequence": 174,
+      "target_id": "174-nfci-vintage-2020-12-10",
+      "vintage_date": "2020-12-10",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-12-10",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201210",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-12-10.csv"
+    },
+    {
+      "sequence": 175,
+      "target_id": "175-nfci-vintage-2020-12-17",
+      "vintage_date": "2020-12-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-12-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201217",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-12-17.csv"
+    },
+    {
+      "sequence": 176,
+      "target_id": "176-nfci-vintage-2020-12-24",
+      "vintage_date": "2020-12-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-12-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201224",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-12-24.csv"
+    },
+    {
+      "sequence": 177,
+      "target_id": "177-nfci-vintage-2020-12-31",
+      "vintage_date": "2020-12-31",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-12-31",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20201231",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2020-12-31.csv"
+    },
+    {
+      "sequence": 178,
+      "target_id": "178-nfci-vintage-2021-01-07",
+      "vintage_date": "2021-01-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-01-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210107",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-01-07.csv"
+    },
+    {
+      "sequence": 179,
+      "target_id": "179-nfci-vintage-2021-01-14",
+      "vintage_date": "2021-01-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-01-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210114",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-01-14.csv"
+    },
+    {
+      "sequence": 180,
+      "target_id": "180-nfci-vintage-2021-01-21",
+      "vintage_date": "2021-01-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-01-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210121",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-01-21.csv"
+    },
+    {
+      "sequence": 181,
+      "target_id": "181-nfci-vintage-2021-01-28",
+      "vintage_date": "2021-01-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-01-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210128",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-01-28.csv"
+    },
+    {
+      "sequence": 182,
+      "target_id": "182-nfci-vintage-2021-02-04",
+      "vintage_date": "2021-02-04",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-02-04",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210204",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-02-04.csv"
+    },
+    {
+      "sequence": 183,
+      "target_id": "183-nfci-vintage-2021-02-11",
+      "vintage_date": "2021-02-11",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-02-11",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210211",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-02-11.csv"
+    },
+    {
+      "sequence": 184,
+      "target_id": "184-nfci-vintage-2021-02-18",
+      "vintage_date": "2021-02-18",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-02-18",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210218",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-02-18.csv"
+    },
+    {
+      "sequence": 185,
+      "target_id": "185-nfci-vintage-2021-02-25",
+      "vintage_date": "2021-02-25",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-02-25",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210225",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-02-25.csv"
+    },
+    {
+      "sequence": 186,
+      "target_id": "186-nfci-vintage-2021-03-04",
+      "vintage_date": "2021-03-04",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-03-04",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210304",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-03-04.csv"
+    },
+    {
+      "sequence": 187,
+      "target_id": "187-nfci-vintage-2021-03-11",
+      "vintage_date": "2021-03-11",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-03-11",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210311",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-03-11.csv"
+    },
+    {
+      "sequence": 188,
+      "target_id": "188-nfci-vintage-2021-03-18",
+      "vintage_date": "2021-03-18",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-03-18",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210318",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-03-18.csv"
+    },
+    {
+      "sequence": 189,
+      "target_id": "189-nfci-vintage-2021-03-25",
+      "vintage_date": "2021-03-25",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-03-25",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210325",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-03-25.csv"
+    },
+    {
+      "sequence": 190,
+      "target_id": "190-nfci-vintage-2021-04-01",
+      "vintage_date": "2021-04-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-04-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210401",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-04-01.csv"
+    },
+    {
+      "sequence": 191,
+      "target_id": "191-nfci-vintage-2021-04-08",
+      "vintage_date": "2021-04-08",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-04-08",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210408",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-04-08.csv"
+    },
+    {
+      "sequence": 192,
+      "target_id": "192-nfci-vintage-2021-04-15",
+      "vintage_date": "2021-04-15",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-04-15",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210415",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-04-15.csv"
+    },
+    {
+      "sequence": 193,
+      "target_id": "193-nfci-vintage-2021-04-22",
+      "vintage_date": "2021-04-22",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-04-22",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210422",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-04-22.csv"
+    },
+    {
+      "sequence": 194,
+      "target_id": "194-nfci-vintage-2021-04-29",
+      "vintage_date": "2021-04-29",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-04-29",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210429",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-04-29.csv"
+    },
+    {
+      "sequence": 195,
+      "target_id": "195-nfci-vintage-2021-05-06",
+      "vintage_date": "2021-05-06",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-05-06",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210506",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-05-06.csv"
+    },
+    {
+      "sequence": 196,
+      "target_id": "196-nfci-vintage-2021-05-13",
+      "vintage_date": "2021-05-13",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-05-13",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210513",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-05-13.csv"
+    },
+    {
+      "sequence": 197,
+      "target_id": "197-nfci-vintage-2021-05-20",
+      "vintage_date": "2021-05-20",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-05-20",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210520",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-05-20.csv"
+    },
+    {
+      "sequence": 198,
+      "target_id": "198-nfci-vintage-2021-05-27",
+      "vintage_date": "2021-05-27",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-05-27",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210527",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-05-27.csv"
+    },
+    {
+      "sequence": 199,
+      "target_id": "199-nfci-vintage-2021-06-03",
+      "vintage_date": "2021-06-03",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-06-03",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210603",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-06-03.csv"
+    },
+    {
+      "sequence": 200,
+      "target_id": "200-nfci-vintage-2021-06-10",
+      "vintage_date": "2021-06-10",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-06-10",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210610",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-06-10.csv"
+    },
+    {
+      "sequence": 201,
+      "target_id": "201-nfci-vintage-2021-06-17",
+      "vintage_date": "2021-06-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-06-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210617",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-06-17.csv"
+    },
+    {
+      "sequence": 202,
+      "target_id": "202-nfci-vintage-2021-06-24",
+      "vintage_date": "2021-06-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-06-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210624",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-06-24.csv"
+    },
+    {
+      "sequence": 203,
+      "target_id": "203-nfci-vintage-2021-07-01",
+      "vintage_date": "2021-07-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-07-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210701",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-07-01.csv"
+    },
+    {
+      "sequence": 204,
+      "target_id": "204-nfci-vintage-2021-07-08",
+      "vintage_date": "2021-07-08",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-07-08",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210708",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-07-08.csv"
+    },
+    {
+      "sequence": 205,
+      "target_id": "205-nfci-vintage-2021-07-15",
+      "vintage_date": "2021-07-15",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-07-15",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210715",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-07-15.csv"
+    },
+    {
+      "sequence": 206,
+      "target_id": "206-nfci-vintage-2021-07-22",
+      "vintage_date": "2021-07-22",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-07-22",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210722",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-07-22.csv"
+    },
+    {
+      "sequence": 207,
+      "target_id": "207-nfci-vintage-2021-07-29",
+      "vintage_date": "2021-07-29",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-07-29",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210729",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-07-29.csv"
+    },
+    {
+      "sequence": 208,
+      "target_id": "208-nfci-vintage-2021-08-05",
+      "vintage_date": "2021-08-05",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-08-05",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210805",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-08-05.csv"
+    },
+    {
+      "sequence": 209,
+      "target_id": "209-nfci-vintage-2021-08-12",
+      "vintage_date": "2021-08-12",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-08-12",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210812",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-08-12.csv"
+    },
+    {
+      "sequence": 210,
+      "target_id": "210-nfci-vintage-2021-08-19",
+      "vintage_date": "2021-08-19",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-08-19",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210819",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-08-19.csv"
+    },
+    {
+      "sequence": 211,
+      "target_id": "211-nfci-vintage-2021-08-26",
+      "vintage_date": "2021-08-26",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-08-26",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210826",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-08-26.csv"
+    },
+    {
+      "sequence": 212,
+      "target_id": "212-nfci-vintage-2021-09-02",
+      "vintage_date": "2021-09-02",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-09-02",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210902",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-09-02.csv"
+    },
+    {
+      "sequence": 213,
+      "target_id": "213-nfci-vintage-2021-09-09",
+      "vintage_date": "2021-09-09",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-09-09",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210909",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-09-09.csv"
+    },
+    {
+      "sequence": 214,
+      "target_id": "214-nfci-vintage-2021-09-16",
+      "vintage_date": "2021-09-16",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-09-16",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210916",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-09-16.csv"
+    },
+    {
+      "sequence": 215,
+      "target_id": "215-nfci-vintage-2021-09-23",
+      "vintage_date": "2021-09-23",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-09-23",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210923",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-09-23.csv"
+    },
+    {
+      "sequence": 216,
+      "target_id": "216-nfci-vintage-2021-09-30",
+      "vintage_date": "2021-09-30",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-09-30",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210930",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-09-30.csv"
+    },
+    {
+      "sequence": 217,
+      "target_id": "217-nfci-vintage-2021-10-07",
+      "vintage_date": "2021-10-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-10-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211007",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-10-07.csv"
+    },
+    {
+      "sequence": 218,
+      "target_id": "218-nfci-vintage-2021-10-14",
+      "vintage_date": "2021-10-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-10-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211014",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-10-14.csv"
+    },
+    {
+      "sequence": 219,
+      "target_id": "219-nfci-vintage-2021-10-21",
+      "vintage_date": "2021-10-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-10-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211021",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-10-21.csv"
+    },
+    {
+      "sequence": 220,
+      "target_id": "220-nfci-vintage-2021-10-28",
+      "vintage_date": "2021-10-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-10-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211028",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-10-28.csv"
+    },
+    {
+      "sequence": 221,
+      "target_id": "221-nfci-vintage-2021-11-04",
+      "vintage_date": "2021-11-04",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-11-04",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211104",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-11-04.csv"
+    },
+    {
+      "sequence": 222,
+      "target_id": "222-nfci-vintage-2021-11-11",
+      "vintage_date": "2021-11-11",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-11-11",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211111",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-11-11.csv"
+    },
+    {
+      "sequence": 223,
+      "target_id": "223-nfci-vintage-2021-11-18",
+      "vintage_date": "2021-11-18",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-11-18",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211118",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-11-18.csv"
+    },
+    {
+      "sequence": 224,
+      "target_id": "224-nfci-vintage-2021-11-25",
+      "vintage_date": "2021-11-25",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-11-25",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211125",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-11-25.csv"
+    },
+    {
+      "sequence": 225,
+      "target_id": "225-nfci-vintage-2021-12-02",
+      "vintage_date": "2021-12-02",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-12-02",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211202",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-12-02.csv"
+    },
+    {
+      "sequence": 226,
+      "target_id": "226-nfci-vintage-2021-12-09",
+      "vintage_date": "2021-12-09",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-12-09",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211209",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-12-09.csv"
+    },
+    {
+      "sequence": 227,
+      "target_id": "227-nfci-vintage-2021-12-16",
+      "vintage_date": "2021-12-16",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-12-16",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211216",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-12-16.csv"
+    },
+    {
+      "sequence": 228,
+      "target_id": "228-nfci-vintage-2021-12-23",
+      "vintage_date": "2021-12-23",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-12-23",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211223",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-12-23.csv"
+    },
+    {
+      "sequence": 229,
+      "target_id": "229-nfci-vintage-2021-12-30",
+      "vintage_date": "2021-12-30",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-12-30",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20211230",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2021-12-30.csv"
+    },
+    {
+      "sequence": 230,
+      "target_id": "230-nfci-vintage-2022-01-06",
+      "vintage_date": "2022-01-06",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-01-06",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220106",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-01-06.csv"
+    },
+    {
+      "sequence": 231,
+      "target_id": "231-nfci-vintage-2022-01-13",
+      "vintage_date": "2022-01-13",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-01-13",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220113",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-01-13.csv"
+    },
+    {
+      "sequence": 232,
+      "target_id": "232-nfci-vintage-2022-01-20",
+      "vintage_date": "2022-01-20",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-01-20",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220120",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-01-20.csv"
+    },
+    {
+      "sequence": 233,
+      "target_id": "233-nfci-vintage-2022-01-27",
+      "vintage_date": "2022-01-27",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-01-27",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220127",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-01-27.csv"
+    },
+    {
+      "sequence": 234,
+      "target_id": "234-nfci-vintage-2022-02-03",
+      "vintage_date": "2022-02-03",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-02-03",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220203",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-02-03.csv"
+    },
+    {
+      "sequence": 235,
+      "target_id": "235-nfci-vintage-2022-02-10",
+      "vintage_date": "2022-02-10",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-02-10",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220210",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-02-10.csv"
+    },
+    {
+      "sequence": 236,
+      "target_id": "236-nfci-vintage-2022-02-17",
+      "vintage_date": "2022-02-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-02-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220217",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-02-17.csv"
+    },
+    {
+      "sequence": 237,
+      "target_id": "237-nfci-vintage-2022-02-24",
+      "vintage_date": "2022-02-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-02-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220224",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-02-24.csv"
+    },
+    {
+      "sequence": 238,
+      "target_id": "238-nfci-vintage-2022-03-03",
+      "vintage_date": "2022-03-03",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-03-03",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220303",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-03-03.csv"
+    },
+    {
+      "sequence": 239,
+      "target_id": "239-nfci-vintage-2022-03-10",
+      "vintage_date": "2022-03-10",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-03-10",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220310",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-03-10.csv"
+    },
+    {
+      "sequence": 240,
+      "target_id": "240-nfci-vintage-2022-03-17",
+      "vintage_date": "2022-03-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-03-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220317",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-03-17.csv"
+    },
+    {
+      "sequence": 241,
+      "target_id": "241-nfci-vintage-2022-03-24",
+      "vintage_date": "2022-03-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-03-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220324",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-03-24.csv"
+    },
+    {
+      "sequence": 242,
+      "target_id": "242-nfci-vintage-2022-03-31",
+      "vintage_date": "2022-03-31",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-03-31",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220331",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-03-31.csv"
+    },
+    {
+      "sequence": 243,
+      "target_id": "243-nfci-vintage-2022-04-07",
+      "vintage_date": "2022-04-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-04-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220407",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-04-07.csv"
+    },
+    {
+      "sequence": 244,
+      "target_id": "244-nfci-vintage-2022-04-14",
+      "vintage_date": "2022-04-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-04-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220414",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-04-14.csv"
+    },
+    {
+      "sequence": 245,
+      "target_id": "245-nfci-vintage-2022-04-21",
+      "vintage_date": "2022-04-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-04-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220421",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-04-21.csv"
+    },
+    {
+      "sequence": 246,
+      "target_id": "246-nfci-vintage-2022-04-28",
+      "vintage_date": "2022-04-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-04-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220428",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-04-28.csv"
+    },
+    {
+      "sequence": 247,
+      "target_id": "247-nfci-vintage-2022-05-05",
+      "vintage_date": "2022-05-05",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-05-05",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220505",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-05-05.csv"
+    },
+    {
+      "sequence": 248,
+      "target_id": "248-nfci-vintage-2022-05-12",
+      "vintage_date": "2022-05-12",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-05-12",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220512",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-05-12.csv"
+    },
+    {
+      "sequence": 249,
+      "target_id": "249-nfci-vintage-2022-05-19",
+      "vintage_date": "2022-05-19",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-05-19",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220519",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-05-19.csv"
+    },
+    {
+      "sequence": 250,
+      "target_id": "250-nfci-vintage-2022-05-26",
+      "vintage_date": "2022-05-26",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-05-26",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220526",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-05-26.csv"
+    },
+    {
+      "sequence": 251,
+      "target_id": "251-nfci-vintage-2022-06-02",
+      "vintage_date": "2022-06-02",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-06-02",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220602",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-06-02.csv"
+    },
+    {
+      "sequence": 252,
+      "target_id": "252-nfci-vintage-2022-06-09",
+      "vintage_date": "2022-06-09",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-06-09",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220609",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-06-09.csv"
+    },
+    {
+      "sequence": 253,
+      "target_id": "253-nfci-vintage-2022-06-16",
+      "vintage_date": "2022-06-16",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-06-16",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220616",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-06-16.csv"
+    },
+    {
+      "sequence": 254,
+      "target_id": "254-nfci-vintage-2022-06-23",
+      "vintage_date": "2022-06-23",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-06-23",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220623",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-06-23.csv"
+    },
+    {
+      "sequence": 255,
+      "target_id": "255-nfci-vintage-2022-06-30",
+      "vintage_date": "2022-06-30",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-06-30",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220630",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-06-30.csv"
+    },
+    {
+      "sequence": 256,
+      "target_id": "256-nfci-vintage-2022-07-07",
+      "vintage_date": "2022-07-07",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-07-07",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220707",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-07-07.csv"
+    },
+    {
+      "sequence": 257,
+      "target_id": "257-nfci-vintage-2022-07-14",
+      "vintage_date": "2022-07-14",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-07-14",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220714",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-07-14.csv"
+    },
+    {
+      "sequence": 258,
+      "target_id": "258-nfci-vintage-2022-07-21",
+      "vintage_date": "2022-07-21",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-07-21",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220721",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-07-21.csv"
+    },
+    {
+      "sequence": 259,
+      "target_id": "259-nfci-vintage-2022-07-28",
+      "vintage_date": "2022-07-28",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-07-28",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220728",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-07-28.csv"
+    },
+    {
+      "sequence": 260,
+      "target_id": "260-nfci-vintage-2022-08-04",
+      "vintage_date": "2022-08-04",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-08-04",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220804",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-08-04.csv"
+    },
+    {
+      "sequence": 261,
+      "target_id": "261-nfci-vintage-2022-08-11",
+      "vintage_date": "2022-08-11",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-08-11",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220811",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-08-11.csv"
+    },
+    {
+      "sequence": 262,
+      "target_id": "262-nfci-vintage-2022-08-18",
+      "vintage_date": "2022-08-18",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-08-18",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220818",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-08-18.csv"
+    },
+    {
+      "sequence": 263,
+      "target_id": "263-nfci-vintage-2022-08-25",
+      "vintage_date": "2022-08-25",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-08-25",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220825",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-08-25.csv"
+    },
+    {
+      "sequence": 264,
+      "target_id": "264-nfci-vintage-2022-09-01",
+      "vintage_date": "2022-09-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-09-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220901",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-09-01.csv"
+    },
+    {
+      "sequence": 265,
+      "target_id": "265-nfci-vintage-2022-09-08",
+      "vintage_date": "2022-09-08",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-09-08",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220908",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-09-08.csv"
+    },
+    {
+      "sequence": 266,
+      "target_id": "266-nfci-vintage-2022-09-15",
+      "vintage_date": "2022-09-15",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-09-15",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220915",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-09-15.csv"
+    },
+    {
+      "sequence": 267,
+      "target_id": "267-nfci-vintage-2022-09-22",
+      "vintage_date": "2022-09-22",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-09-22",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220922",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-09-22.csv"
+    },
+    {
+      "sequence": 268,
+      "target_id": "268-nfci-vintage-2022-09-29",
+      "vintage_date": "2022-09-29",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-09-29",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20220929",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-09-29.csv"
+    },
+    {
+      "sequence": 269,
+      "target_id": "269-nfci-vintage-2022-10-06",
+      "vintage_date": "2022-10-06",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-10-06",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221006",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-10-06.csv"
+    },
+    {
+      "sequence": 270,
+      "target_id": "270-nfci-vintage-2022-10-13",
+      "vintage_date": "2022-10-13",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-10-13",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221013",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-10-13.csv"
+    },
+    {
+      "sequence": 271,
+      "target_id": "271-nfci-vintage-2022-10-20",
+      "vintage_date": "2022-10-20",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-10-20",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221020",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-10-20.csv"
+    },
+    {
+      "sequence": 272,
+      "target_id": "272-nfci-vintage-2022-10-27",
+      "vintage_date": "2022-10-27",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-10-27",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221027",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-10-27.csv"
+    },
+    {
+      "sequence": 273,
+      "target_id": "273-nfci-vintage-2022-11-03",
+      "vintage_date": "2022-11-03",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-11-03",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221103",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-11-03.csv"
+    },
+    {
+      "sequence": 274,
+      "target_id": "274-nfci-vintage-2022-11-10",
+      "vintage_date": "2022-11-10",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-11-10",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221110",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-11-10.csv"
+    },
+    {
+      "sequence": 275,
+      "target_id": "275-nfci-vintage-2022-11-17",
+      "vintage_date": "2022-11-17",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-11-17",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221117",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-11-17.csv"
+    },
+    {
+      "sequence": 276,
+      "target_id": "276-nfci-vintage-2022-11-24",
+      "vintage_date": "2022-11-24",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-11-24",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221124",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-11-24.csv"
+    },
+    {
+      "sequence": 277,
+      "target_id": "277-nfci-vintage-2022-12-01",
+      "vintage_date": "2022-12-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-12-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221201",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-12-01.csv"
+    },
+    {
+      "sequence": 278,
+      "target_id": "278-nfci-vintage-2022-12-08",
+      "vintage_date": "2022-12-08",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-12-08",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221208",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-12-08.csv"
+    },
+    {
+      "sequence": 279,
+      "target_id": "279-nfci-vintage-2022-12-15",
+      "vintage_date": "2022-12-15",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-12-15",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221215",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-12-15.csv"
+    },
+    {
+      "sequence": 280,
+      "target_id": "280-nfci-vintage-2022-12-22",
+      "vintage_date": "2022-12-22",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-12-22",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221222",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-12-22.csv"
+    },
+    {
+      "sequence": 281,
+      "target_id": "281-nfci-vintage-2022-12-29",
+      "vintage_date": "2022-12-29",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2022-12-29",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20221229",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_full_acquisition_v1/nfci_vintage_2022-12-29.csv"
+    }
+  ],
+  "target_count": 281,
+  "maximum_attempts_per_target": 3,
+  "maximum_get_attempts": 843,
+  "maximum_payload_bytes_per_target": 200000,
+  "maximum_total_payload_bytes": 56200000,
+  "minimum_free_disk_bytes": 250000000,
+  "connect_timeout_seconds": 60,
+  "chunk_size_bytes": 65536,
+  "polite_delay_milliseconds": 250,
+  "transient_http_statuses": [
+    408,
+    425,
+    429,
+    500,
+    502,
+    503,
+    504
+  ],
+  "retryable_errors": [
+    "ConnectionError",
+    "TimeoutError",
+    "URLError"
+  ],
+  "expected_observation_column": "observation_date",
+  "earliest_required_observation_date": "2017-08-17",
+  "maximum_release_lag_days": 21,
+  "minimum_valid_rows_per_target": 100,
+  "quality_gates": [
+    "ALL_281_THURSDAY_TARGETS_CLASSIFIED",
+    "EVERY_COMPLETE_FILE_WITHIN_BYTE_CAP_AND_HASHED",
+    "EXACT_VINTAGE_SUFFIXED_HEADER_PER_TARGET",
+    "STRICTLY_INCREASING_UNIQUE_OBSERVATION_DATES_PER_TARGET",
+    "NO_POST_VINTAGE_OBSERVATION_PER_TARGET",
+    "DEVELOPMENT_START_COVERED_PER_TARGET",
+    "LATEST_OBSERVATION_WITHIN_21_DAYS_OF_VINTAGE_PER_TARGET",
+    "AT_LEAST_260_DISTINCT_POINT_IN_TIME_PAYLOAD_HASHES",
+    "REQUEST_AND_RESPONSE_MARKERS_RECONCILE_EXACTLY",
+    "ZERO_BTC_MARKET_VALUES_RETURNS_CANDIDATES_AND_ORDERS"
+  ],
+  "requires_pre_attempt_marker": true,
+  "requires_post_attempt_marker": true,
+  "requires_atomic_raw_rename": true,
+  "requires_per_target_checkpoint": true,
+  "permits_exact_hash_local_reuse": true,
+  "permits_partial_file_reuse": false,
+  "permits_redirects": false,
+  "macro_numeric_fields_authorized": [
+    "NFCI"
+  ],
+  "btc_market_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "authorizes_protocol_only": true,
+  "authorizes_network_acquisition_now": false,
+  "authorizes_runner_implementation": true,
+  "authorizes_parameter_definition": false,
+  "authorizes_btc_market_value_access": false,
+  "authorizes_return_testing": false,
+  "authorizes_validation_access": false,
+  "authorizes_holdout_access": false,
+  "authorizes_candidate": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "next_authorization": "AUTHORIZE_S1_NFCI_DEVELOPMENT_ACQUISITION_RUNNER_IMPLEMENTATION_ONLY",
+  "protocol_evidence_hash": "ccbff64f29ce5d85eb52dded23df1c393bb1a5ab4d5ce2c2874d8f284b87195e"
+}

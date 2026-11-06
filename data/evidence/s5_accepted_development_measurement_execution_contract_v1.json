@@ -1,0 +1,97 @@
+{
+  "schema_version": "aurex-s5-accepted-development-measurement-execution-contract-v1",
+  "contract_id": "s5-accepted-development-measurement-execution-contract-v1",
+  "frozen_at": "2026-09-08T20:26:01.571070Z",
+  "status": "FROZEN_EXECUTION_CONTRACT_ZERO_MEASUREMENTS",
+  "builder_contract_hash": "12ecf52e94401047294d002f8b2214e49e87abf8dc3d32b6d77680bdf87307d5",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_protocol_audit_v1.json",
+      "file_sha256": "ff271ecfc84c79365dd5a37414c8255fde9d2860483860318bbad54ab8a6d6e1"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_protocol_v1.json",
+      "file_sha256": "4556e84ddc6174d3e9ab08c233147767b735eb63d46c9320f08c1727c231b7f6"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "42e32e4ed5f7e11d7f982df85ff119564fe2c766928902dfeb9ad858f3e33a63",
+  "implementation_bindings": [
+    {
+      "path": "scripts/run_s5_accepted_development_measurements.py",
+      "file_sha256": "9ac3387143c0e8fc04574c2d3460915fac0cd177d75181a97fcc84b1d54936ff"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_accepted_development_measurement_execution.py",
+      "file_sha256": "cc0c8ed74c2696b4947ce15ecbc8fb2ed8db115d3930f40447b8fcc52823a1f0"
+    }
+  ],
+  "implementation_binding_manifest_evidence_hash": "cafc4eb11f7ff7b7c91d77cdb4d798599350734764c5e11d90768f7da0d37e5c",
+  "runner_contract_hash": "cafc4eb11f7ff7b7c91d77cdb4d798599350734764c5e11d90768f7da0d37e5c",
+  "protocol_evidence_hash": "0d4f9dbc73675a0e625971a9a53181bcd4a2b707ebe02f01a28edfc4c65478d0",
+  "protocol_audit_evidence_hash": "0b6ad1358d206822ab530447bc184dfb98ecd12d209e8cd8c2f3675f17c70064",
+  "git_environment": [
+    "GIT_CONFIG_NOSYSTEM=1",
+    "GIT_CONFIG_GLOBAL=OS_DEVNULL",
+    "GIT_NO_LAZY_FETCH=1",
+    "GIT_OPTIONAL_LOCKS=0",
+    "LANG=C",
+    "LC_ALL=C",
+    "TZ=UTC"
+  ],
+  "first_parent_diff_command": [
+    "git",
+    "-C",
+    "{history_dataset_path}",
+    "--no-pager",
+    "log",
+    "--first-parent",
+    "--reverse",
+    "--format=%x1e%H%x00",
+    "--name-only",
+    "-z",
+    "--no-renames",
+    "--diff-merges=first-parent",
+    "{source_cutoff_commit}"
+  ],
+  "reachable_commit_command": [
+    "git",
+    "-C",
+    "{history_dataset_path}",
+    "rev-list",
+    "--topo-order",
+    "{source_cutoff_commit}"
+  ],
+  "tag_inventory_command": [
+    "git",
+    "-C",
+    "{history_dataset_path}",
+    "for-each-ref",
+    "--format=%(refname)%00%(objecttype)%00%(objectname)%00%(*objectname)%00%(taggerdate:iso-strict)%00%(creatordate:iso-strict)%00%(contents:signature)%00%1e",
+    "refs/tags"
+  ],
+  "expected_git_process_count": 3,
+  "maximum_git_process_count": 4,
+  "maximum_process_seconds": 600,
+  "maximum_total_seconds": 1800,
+  "maximum_single_stdout_bytes": 536870912,
+  "expected_input_row_count": 57592,
+  "expected_output_row_count": 212,
+  "result_path": "data/evidence/s5_accepted_development_measurement_result_v1.json",
+  "output_path": "data/evidence/s5_accepted_development_monthly_measurements_v1.jsonl",
+  "partial_file_suffix": ".part",
+  "authorizes_single_local_measurement_run": true,
+  "shell_execution_permitted": false,
+  "network_access_permitted": false,
+  "repository_fetch_permitted": false,
+  "repository_mutation_permitted": false,
+  "market_values_permitted": false,
+  "returns_permitted": false,
+  "strategy_parameters_permitted": false,
+  "candidates_permitted": false,
+  "signals_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "contract_evidence_hash": "da08133f957e4129421e5e708b93c87212d4273b3da8bdc1daed5b62e86a0154"
+}

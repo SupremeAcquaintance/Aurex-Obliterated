@@ -1,0 +1,206 @@
+{
+  "schema_version": "aurex-s5-github-normalization-result-v1",
+  "result_id": "s5-github-normalization-result-v1",
+  "completed_at": "2026-09-03T16:16:46.287853Z",
+  "protocol_evidence_hash": "2e634950d959e05bc3e5baf98bbc2f6dd3ead779a7c4406150d267a7d3099dfb",
+  "protocol_audit_evidence_hash": "7149bfb6d20948c1bd4b765ca4268e2ebcc0c4e0446e8a6ce2e9454b2745db9f",
+  "execution_contract_file_sha256": "2dc4910b7c2aecd3ff1e9b4d8902e33b2e2ee68db377e966a780cc9e9791c0e9",
+  "execution_contract_evidence_hash": "e08683548312d70eb3070bfe17b6e3550781e2014af0882c1c9f700231500875",
+  "execution_contract_audit_evidence_hash": "d833a1c6fba4bf9e399edc8ac67184822f53da087e4a99722b651216784913d8",
+  "runner_contract_hash": "e5142c46f96a353df636917bcae76bab0d85ec80f6a8bbefbf07e3752f402f7d",
+  "history_dataset_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "source_cutoff_commit": "dc0395c5858a1d55239b82a834e5075cf2069219",
+  "bulk_page_manifest_evidence_hash": "2c180185cb390c1436dfb0af81ed03c0a30d3126f058980be61b330ddd7f36db",
+  "source_page_files_opened": 245,
+  "response_bodies_decoded": 245,
+  "local_git_process_count": 1,
+  "raw_record_count": 24407,
+  "cohort_record_count": 24398,
+  "post_cutoff_record_count": 9,
+  "normalized_pull_count": 24398,
+  "accepted_github_pull_count": 16279,
+  "first_parent_commit_count": 17543,
+  "root_commit_count": 1,
+  "single_parent_commit_count": 821,
+  "merge_commit_count": 16721,
+  "octopus_merge_commit_count": 0,
+  "recognized_pull_merge_count": 7961,
+  "recognized_exact_mapping_count": 7878,
+  "recovered_head_sha_mapping_count": 8289,
+  "total_exact_mapping_count": 16167,
+  "unresolved_git_merge_count": 554,
+  "unmatched_accepted_github_pull_count": 112,
+  "ambiguous_git_merge_count": 1,
+  "duplicate_mapped_pull_count": 0,
+  "accepted_unknown_actor_count": 0,
+  "accepted_bot_actor_count": 0,
+  "distinct_known_accepted_actor_id_count": 1033,
+  "pull_dataset_path": null,
+  "pull_dataset_file_sha256": null,
+  "pull_dataset_bytes": 0,
+  "pull_dataset_row_manifest_evidence_hash": null,
+  "mapping_dataset_path": null,
+  "mapping_dataset_file_sha256": null,
+  "mapping_dataset_bytes": 0,
+  "mapping_dataset_row_manifest_evidence_hash": null,
+  "unresolved_dataset_path": null,
+  "unresolved_dataset_file_sha256": null,
+  "unresolved_dataset_bytes": 0,
+  "unresolved_dataset_row_manifest_evidence_hash": null,
+  "diagnostics": [
+    "recognized PR 22349 is absent or not accepted",
+    "recognized PR 18568 is absent or not accepted",
+    "recognized PR 21329 is absent or not accepted",
+    "recognized PR 20354 is absent or not accepted",
+    "recognized PR 22469 is absent or not accepted",
+    "recognized PR 22597 is absent or not accepted",
+    "recognized PR 22619 is absent or not accepted",
+    "recognized PR 20233 is absent or not accepted",
+    "recognized PR 22684 is absent or not accepted",
+    "recognized PR 22627 is absent or not accepted",
+    "recognized PR 22688 is absent or not accepted",
+    "recognized PR 22952 is absent or not accepted",
+    "recognized PR 22994 is absent or not accepted",
+    "recognized PR 22995 is absent or not accepted",
+    "recognized PR 22226 is absent or not accepted",
+    "recognized PR 22987 is absent or not accepted",
+    "recognized PR 23097 is absent or not accepted",
+    "recognized PR 23115 is absent or not accepted",
+    "recognized PR 23064 is absent or not accepted",
+    "recognized PR 23123 is absent or not accepted",
+    "recognized PR 23147 is absent or not accepted",
+    "recognized PR 22340 is absent or not accepted",
+    "recognized PR 23409 is absent or not accepted",
+    "recognized PR 23466 is absent or not accepted",
+    "recognized PR 23371 is absent or not accepted"
+  ],
+  "gate_results": [
+    {
+      "gate_id": "FROZEN_S5_LINEAGE_AND_READINESS_V34_BOUND",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "GITHUB_PAGE_MANIFEST_AND_GIT_DATASET_IDENTITIES_REHASHED",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "EXACT_245_PAGE_24407_RAW_24398_COHORT_9_POST_CUTOFF_ACCOUNTING",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "EVERY_PAGE_ENVELOPE_AND_RESPONSE_BODY_RECONSTRUCTS_EXACTLY",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "COHORT_PULL_NUMBERS_AND_NODE_IDS_ARE_UNIQUE",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "POST_CUTOFF_RECORDS_ARE_PRESERVED_BUT_EXCLUDED",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "NORMALIZED_PULL_SCHEMA_AND_SERIALIZATION_ARE_EXACT",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "ONE_LOCAL_FIRST_PARENT_PARENTS_COMMAND_ONLY",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "GIT_TOPOLOGY_RECONCILES_TO_FROZEN_CENSUS",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "ALL_7961_CENSUS_RECOGNIZED_PULL_IDS_EXIST_IN_COHORT",
+      "status": "FAIL",
+      "evidence": "Frozen condition did not reconstruct; S5 stops."
+    },
+    {
+      "gate_id": "ALL_CENSUS_RECOGNIZED_PULL_IDS_MATCH_SECOND_PARENT_HEAD_SHA",
+      "status": "FAIL",
+      "evidence": "Frozen condition did not reconstruct; S5 stops."
+    },
+    {
+      "gate_id": "EVERY_IN_CUTOFF_MASTER_MERGED_PULL_MAPS_TO_ONE_GIT_MERGE",
+      "status": "FAIL",
+      "evidence": "Frozen condition did not reconstruct; S5 stops."
+    },
+    {
+      "gate_id": "GIT_MERGE_TO_PULL_MAPPINGS_ARE_ONE_TO_ONE_AND_UNAMBIGUOUS",
+      "status": "FAIL",
+      "evidence": "Frozen condition did not reconstruct; S5 stops."
+    },
+    {
+      "gate_id": "UNRESOLVED_GIT_MERGES_ARE_PRESERVED_AND_NEVER_GUESSED",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "ACTOR_IDENTITY_UNCERTAINTY_AND_BOT_CLASSIFICATION_ARE_EXPLICIT",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "ALL_OUTPUT_DATASETS_RECONSTRUCT_BYTE_FOR_BYTE",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    },
+    {
+      "gate_id": "ZERO_MARKET_VALUES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS",
+      "status": "PASS",
+      "evidence": "Frozen condition reconstructed exactly."
+    }
+  ],
+  "passed_gate_count": 13,
+  "failed_gate_count": 4,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "source_completeness_conclusion": "FAIL_MEASURABLE_COMPLETENESS",
+  "predictive_edge_conclusion": "NOT_EVALUATED",
+  "decision": "STOP_S5_GITHUB_NORMALIZATION_OR_COMPLETENESS_FAILED",
+  "next_authorization": "FREEZE_S5_GITHUB_NORMALIZATION_FAILURE_ADJUDICATION_ONLY",
+  "authorizes_measurement_protocol_design": false,
+  "authorizes_market_values": false,
+  "authorizes_parameters": false,
+  "authorizes_returns": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "failure_type": "ValueError",
+  "failure_message": "Failed frozen gates: ('ALL_7961_CENSUS_RECOGNIZED_PULL_IDS_EXIST_IN_COHORT', 'ALL_CENSUS_RECOGNIZED_PULL_IDS_MATCH_SECOND_PARENT_HEAD_SHA', 'EVERY_IN_CUTOFF_MASTER_MERGED_PULL_MAPS_TO_ONE_GIT_MERGE', 'GIT_MERGE_TO_PULL_MAPPINGS_ARE_ONE_TO_ONE_AND_UNAMBIGUOUS')",
+  "limitations": [
+    "A GitHub user ID is the primary account key but does not prove one unique human contributor.",
+    "A complete match of recognized Git references is a sentinel, not proof against unknown deleted records.",
+    "All result datasets must be independently reconstructed byte for byte before measurement is authorized.",
+    "Bots are classified only from public user type or the exact login suffix rule.",
+    "Distinct GitHub user IDs are not alias-merged and can overstate human breadth.",
+    "Git author, committer, and timestamp headers remain prohibited in this stage.",
+    "GitHub merged_at is an event-time proxy and not an archived ingestion timestamp.",
+    "GitHub's current list endpoint cannot prove that every deleted historical record is preserved.",
+    "Mutable post-event GitHub fields can reflect state observed after the historical event.",
+    "No BTC market value, return, candidate, paper trade, Testnet strategy order, or live order is permitted.",
+    "No development feature, threshold, lookback, signal, or strategy is defined here.",
+    "Passing this stage establishes a reproducible accepted-event dataset, not predictive usefulness.",
+    "Shared, renamed, deleted, automated, or organizational accounts can understate or distort human breadth.",
+    "Source failure stops S5 pending a separately frozen correction; it cannot be relaxed after inspection.",
+    "This protocol freezes source normalization and measurable completeness gates only.",
+    "Unrecognized Git merges can be branch or legacy integration events and are never guessed to be pull requests."
+  ],
+  "result_evidence_hash": "02f461aeb23e00479a9044e7017daa4eaa569f296cd69d8fdbc7dd7e6e6c3a89"
+}

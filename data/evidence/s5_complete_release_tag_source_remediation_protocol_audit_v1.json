@@ -1,0 +1,36 @@
+{
+  "schema_version": "aurex-s5-complete-release-tag-source-remediation-protocol-audit-v1",
+  "audit_id": "s5-complete-release-tag-source-remediation-protocol-audit-v1",
+  "audited_at": "2026-09-09T19:38:53.668694Z",
+  "protocol_file_sha256": "7ef761ebce8453932e7f2a927645e12221c983fa253add56674bcc992b16f6c3",
+  "protocol_evidence_hash": "29ce6df924c56227d4cce6b764fa8f6b3aeaee81afb86e5c6a597cb070b205bd",
+  "builder_contract_hash": "373c27b5200971970c1a992a768380e467abbd5f34590fa7cbbef21fb2eacfe1",
+  "auditor_implementation_bindings": [
+    {
+      "path": "scripts/audit_s5_complete_release_tag_source_remediation_protocol.py",
+      "file_sha256": "6b34d82a892a3e35ffbab8570243a133ce118da09832ed03122174f7a935aa2a"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_complete_release_tag_source_remediation.py",
+      "file_sha256": "ec2b370ebfd2104944ddacf8836001e746500b99dd9abaa1fd458b30e71bd81a"
+    }
+  ],
+  "auditor_contract_hash": "7aec47cff42462f487b93cab4499849ef4ccfec1a513bb20e33aba894188101d",
+  "source_binding_manifest_evidence_hash": "7bffd053ba5cb254f70128ba5954d806c6f9b4733fe15868b9829a5a949159ed",
+  "prior_result_audit_evidence_hash": "9395958f1ce5ee00a07c2605fd7447a390f42b551175a325949ff8a17019a005",
+  "source_binding_count": 10,
+  "complete_stable_tag_count": 132,
+  "complete_tag_manifest_evidence_hash": "07d4b9d80266710faf9dcf578a6835c6d1c36727b362132b896c725811eea82c",
+  "protocol_reconstructed_exactly": true,
+  "git_processes_executed": 0,
+  "repository_copies_executed": 0,
+  "network_requests_executed": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "signals_created": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_COMPLETE_RELEASE_TAG_SOURCE_REMEDIATION_PROTOCOL_AUDIT",
+  "next_authorization": "AUTHORIZE_S5_COMPLETE_RELEASE_TAG_SOURCE_REMEDIATION_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "3994c6e02c28367c79627cca32a7f6e51cde4f924e902e82f8affd957e6df234"
+}

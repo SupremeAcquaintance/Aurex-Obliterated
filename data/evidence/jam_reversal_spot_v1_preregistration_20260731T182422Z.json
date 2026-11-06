@@ -1,0 +1,16 @@
+{
+  "candidate": "jam_reversal_spot_v1",
+  "commit_verified": true,
+  "commit_verified_at": "2026-07-31T18:24:22.290849Z",
+  "outcome_existed_before_registration": false,
+  "outcome_fields_inspected": [],
+  "pine_source_sha256": "7aa2aaa04e17ccbad70adba9279b4e5eb3057393b5e74f0a7db4cc5dd39d7270",
+  "protocol_hash": "219d6d069e678f23d3dc49588bc21a5eda9c21970ef83f5fdcb7610d1083bbda",
+  "protocol_id": "f788795a-ac75-4763-93c2-75a031ee2c70",
+  "registered_at": "2026-07-31T18:24:22.241923Z",
+  "reused_existing": false,
+  "schema_version": "aurex-jam-reversal-spot-preregistration-receipt-v1",
+  "strategy_version": "1.0.1",
+  "supersedes_unrun_protocol_id": "920b1cbf-0990-4cd6-b835-445e1c7ab2d8",
+  "walk_forward_plan_hash": "8ed49714b300c9ec077b0203f154cfb629ce986b3e0acba5ad5ceef30c6be054"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-s5-github-preflight-interpreter-amendment-audit-v2",
+  "audit_id": "s5-github-preflight-interpreter-amendment-audit-v2",
+  "audited_at": "2026-09-02T15:55:23.439618Z",
+  "amendment_path": "data/evidence/s5_bitcoin_core_github_preflight_interpreter_amendment_v2.json",
+  "amendment_file_sha256": "e4ac18d95f215a94dfcd6fb52615888581a225733c18e8a905de2e9ef4d50263",
+  "amendment_evidence_hash": "49d5be7ee08ea89e83295cb206f0992681e2d6d559c497b9a34554fea377b3db",
+  "builder_contract_hash": "e6ecc9441ee15eb3c175f6344a66fe966d4078a3652f0c962f8d6b0a56ce1f01",
+  "auditor_contract_hash": "6cfc76818d698680f36aa89093973ecbb172f385abb223ef16e6b9bc66146b90",
+  "reconstructed_exactly": true,
+  "failure_audit_evidence_hash": "ffaf4571bafcdac3d4771e59a8a8905178a7e16cf0863b7199dbc7de805bb093",
+  "additional_network_requests_observed": 0,
+  "metadata_records_newly_acquired": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "next_authorization": "RUN_S5_GITHUB_PREFLIGHT_LOCAL_REVALIDATION_V2_ONCE",
+  "decision": "PASS_S5_GITHUB_PREFLIGHT_INTERPRETER_AMENDMENT_AUDIT_V2",
+  "audit_evidence_hash": "50b935b96fb20db2a3f92060a3f739bdf14bcbe11c0e3f314088b841dcdc5224"
+}

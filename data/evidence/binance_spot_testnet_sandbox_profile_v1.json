@@ -1,0 +1,137 @@
+{
+  "schema_version": "aurex-binance-spot-testnet-profile-v1",
+  "profile_id": "binance-spot-testnet-sandbox-profile-v1",
+  "profile_version": "1.0.0",
+  "frozen_at": "2026-07-30T13:05:10.727526Z",
+  "status": "FROZEN_SANDBOX_CAPABILITY_NO_CREDENTIALS",
+  "post_v4_capability_review_evidence_hash": "01fbf52bdc75f03dac21a26c4fdd642c6671d408464ac52da5ff3b3ac3bbabc6",
+  "post_v4_capability_review_builder_hash": "9ceff1b8a719134558fa0348b94b04a3143cbd316f1feb8f29231520b80ff165",
+  "builder_contract_hash": "9ec1583cedf441b6b34b720bc44c7b31cf39a8f521afe824ce8f15429c982319",
+  "operator_input": {
+    "schema_version": "aurex-binance-spot-testnet-input-v1",
+    "attested_at": "2026-07-30T13:04:10.973618Z",
+    "operator_identifier": "aurex_operator_primary",
+    "attestation_statement": "I_ATTEST_BINANCE_SPOT_TESTNET_ACCESS_IS_AUTHENTICATED_AND_NO_CREDENTIALS_ARE_INCLUDED",
+    "jurisdiction": "Zimbabwe",
+    "sandbox_venue": "Binance Spot Test Network",
+    "sandbox_environment": "TESTNET",
+    "account_identifier_alias": "aurex_binance_spot_testnet",
+    "authentication_method": "GITHUB_OAUTH",
+    "testnet_access_status": "AUTHENTICATED",
+    "api_credential_path_status": "DOCUMENTED_AVAILABLE_NOT_TESTED",
+    "testnet_rest_base_url": "https://testnet.binance.vision/api",
+    "testnet_ws_api_url": "wss://ws-api.testnet.binance.vision/ws-api/v3",
+    "testnet_stream_url": "wss://stream.testnet.binance.vision/ws",
+    "permitted_product_scope": "SPOT_ONLY",
+    "permitted_symbols": [
+      "BTCUSDT"
+    ],
+    "maximum_effective_leverage": "1",
+    "simulated_starting_equity": "1E+2",
+    "equity_currency": "USD",
+    "maximum_total_loss": "1E+1",
+    "maximum_daily_loss": "1",
+    "maximum_per_trade_loss": "0.5",
+    "one_time_data_budget": "0",
+    "monthly_data_budget": "0",
+    "data_budget_currency": "USD",
+    "paid_data_permitted": false,
+    "testnet_funds_are_virtual_acknowledged": true,
+    "testnet_monthly_reset_behavior_acknowledged": true,
+    "testnet_performance_is_not_edge_evidence_acknowledged": true,
+    "production_account_verified": false,
+    "production_api_authorized": false,
+    "real_capital_authorized": false,
+    "live_trading_authorized": false,
+    "testnet_documentation_reference": "https://testnet.binance.vision/",
+    "api_documentation_reference": "https://developers.binance.com/en/docs/products/spot/rest-api",
+    "fee_schedule_reference": "https://www.binance.com/en/fee/trading",
+    "access_attestation_reference": "operator-attestation:chat-confirmed-testnet-authenticated-2026-07-30",
+    "risk_attestation_reference": "operator-attestation:100-usd-simulated-risk-boundary-2026-07-30",
+    "data_budget_attestation_reference": "operator-attestation:zero-usd-initial-data-budget-2026-07-30",
+    "credentials_stored_or_embedded": false
+  },
+  "operator_input_evidence_hash": "9029b0197f4792ed5bff2911e3573bdd008f65061c6632f10e13505d76314985",
+  "maximum_total_loss_ratio": "0.1",
+  "maximum_daily_loss_ratio": "0.01",
+  "maximum_per_trade_loss_ratio": "0.005",
+  "gate_results": [
+    {
+      "gate_id": "TESTNET_AUTHENTICATED_ACCESS_ATTESTED",
+      "status": "PASS",
+      "reason": "The operator attests to GitHub-authenticated Binance Spot Testnet access."
+    },
+    {
+      "gate_id": "TESTNET_API_CREDENTIAL_PATH_DOCUMENTED",
+      "status": "PASS",
+      "reason": "The official Testnet API credential path is documented without storing a key."
+    },
+    {
+      "gate_id": "SANDBOX_ENVIRONMENT_AND_ENDPOINTS_BOUND",
+      "status": "PASS",
+      "reason": "The sandbox environment is bound to the exact official Binance Spot Testnet endpoints."
+    },
+    {
+      "gate_id": "SPOT_SYMBOL_AND_LEVERAGE_SCOPE_SAFE",
+      "status": "PASS",
+      "reason": "The initial sandbox scope is BTCUSDT Spot only with effective leverage capped at 1x."
+    },
+    {
+      "gate_id": "SIMULATED_RISK_LIMITS_PROTECTIVE",
+      "status": "PASS",
+      "reason": "Simulated loss limits are ordered and remain within 0.5 percent per trade, 1 percent daily, and 10 percent total."
+    },
+    {
+      "gate_id": "TESTNET_LIMITATIONS_ACKNOWLEDGED",
+      "status": "PASS",
+      "reason": "Virtual funds, periodic resets, and the absence of profit evidence are explicitly acknowledged."
+    },
+    {
+      "gate_id": "DATA_BUDGET_EXPLICIT",
+      "status": "PASS",
+      "reason": "The paid-data decision and one-time/monthly budget are explicit."
+    },
+    {
+      "gate_id": "NO_CREDENTIALS_OR_ACCOUNT_IDENTIFIERS",
+      "status": "PASS",
+      "reason": "The sandbox input stores no API key, secret, production account identifier, or credential."
+    },
+    {
+      "gate_id": "NO_PRODUCTION_OR_REAL_CAPITAL_AUTHORITY",
+      "status": "PASS",
+      "reason": "Production accounts, production APIs, live trading, and real capital remain explicitly unauthorized."
+    }
+  ],
+  "failed_gate_ids": [],
+  "decision": "AUTHORIZE_SANDBOX_ADAPTER_IMPLEMENTATION_AND_SUCCESSOR_CHARTER_DESIGN_ONLY",
+  "sandbox_adapter_implementation_authorized": true,
+  "successor_charter_design_authorized": true,
+  "testnet_network_requests_authorized": true,
+  "testnet_virtual_order_entry_authorized": true,
+  "sandbox_qualified": false,
+  "creates_sandbox_qualification": false,
+  "successor_alpha_discovery_authorized": false,
+  "real_market_data_import_authorized": false,
+  "parameter_definition_authorized": false,
+  "return_testing_authorized": false,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "production_account_authorized": false,
+  "production_api_authorized": false,
+  "creates_live_eligibility": false,
+  "real_capital_authorized": false,
+  "stores_credentials": false,
+  "limitations": [
+    "A passing profile authorizes sandbox adapter implementation, official Testnet requests, virtual orders, and successor charter design only.",
+    "A passing profile does not qualify the adapter, create a candidate, accept a backtest, authorize paper trading, or authorize live trading.",
+    "Binance may reset Spot Testnet state periodically without advance notice; Aurex must preserve its own immutable request and reconciliation evidence.",
+    "GitHub authentication to Spot Testnet does not establish Binance production account access, venue authorization, or Zimbabwe legal compliance.",
+    "No API key, secret, GitHub identity, production account identifier, or credential may be stored in the input or frozen profile.",
+    "Production qualification, real capital, micro-live trading, and the first settled 100 USD milestone remain deferred and explicitly unauthorized.",
+    "Real market performance must use independently audited production market data and Aurex evidence gates, never Testnet profit or fill quality.",
+    "Testnet funds, orders, fills, balances, and profit or loss are virtual and cannot prove a real strategy edge.",
+    "The simulated 100 USD equity and loss limits are test controls, not real capital deployment or a promise of profit.",
+    "This profile records a Binance Spot Testnet capability boundary, not a production Binance account or identity verification."
+  ],
+  "profile_evidence_hash": "adc95174c169f2f1b76ac2d53770ee13b5049850f1bcabb2cbc7d4a461e55b69"
+}

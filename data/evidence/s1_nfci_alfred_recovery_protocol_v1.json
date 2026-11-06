@@ -1,0 +1,75 @@
+{
+  "schema_version": "aurex-s1-nfci-alfred-recovery-protocol-v1",
+  "protocol_id": "s1-nfci-alfred-recovery-protocol-v1",
+  "frozen_at": "2026-08-26T18:57:22.062988Z",
+  "builder_contract_hash": "4b794719134998bb5d8c05f0eb985b20dfc06e77230ca2357bfbf86693d69491",
+  "failed_pilot_protocol_file_sha256": "ffc928f7c61ade13c6626c4b6dcdbbb46bdc4d69351a17eb1f8ab7bad9c56889",
+  "failed_pilot_protocol_evidence_hash": "18ece31c0279273fa6913f5c99b0f564eaa3f8be7c1b5619bcfc6488cea9d992",
+  "failed_pilot_result_file_sha256": "493152a841427ee0a33624d04f2af133e436e5ea3ce2d7989270011ef1f6d206",
+  "failed_pilot_result_evidence_hash": "e3249edba089c7a8ebe76ced03958ade36625d4bc759783b305e19b0f731e209",
+  "failed_pilot_audit_file_sha256": "601bee07aff915e428c2cc039523d68a2032b383bc04290dc21c7c6240b4e96e",
+  "failed_pilot_audit_evidence_hash": "39994116cfcd85e4e049509fce104a56d9b5e7dc9c164070548d32ba1effdb11",
+  "failed_pilot_decision": "STOP_S1_NFCI_POINT_IN_TIME_RAW_PILOT_FAILED",
+  "failure_classification": "FREDGRAPH_IGNORED_VINTAGE_DATE_AND_RETURNED_IDENTICAL_CURRENT_DATA",
+  "remediation_scope": "REPLACE_FREDGRAPH_CURRENT_TRANSPORT_WITH_ALFREDGRAPH_VINTAGE_TRANSPORT_ONLY",
+  "source_documentation_urls": [
+    "https://alfred.stlouisfed.org/series/downloaddata?seid=NFCI",
+    "https://alfred.stlouisfed.org/help/downloaddata",
+    "https://fred.stlouisfed.org/docs/api/fred/fred_vs_alfred.html"
+  ],
+  "targets": [
+    {
+      "target_id": "01-nfci-vintage-2020",
+      "vintage_date": "2020-01-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-01-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20200101",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_alfred_recovery_v1/nfci_vintage_2020-01-01.csv"
+    },
+    {
+      "target_id": "02-nfci-vintage-2021",
+      "vintage_date": "2021-01-01",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-01-01",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "expected_value_column": "NFCI_20210101",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_alfred_recovery_v1/nfci_vintage_2021-01-01.csv"
+    }
+  ],
+  "request_budget": 2,
+  "retry_budget": 0,
+  "maximum_payload_bytes_per_target": 1000000,
+  "maximum_total_payload_bytes": 2000000,
+  "connect_timeout_seconds": 60,
+  "chunk_size_bytes": 65536,
+  "earliest_required_observation_date": "2017-08-17",
+  "maximum_release_lag_days": 21,
+  "minimum_valid_rows_per_target": 100,
+  "feasibility_gates": [
+    "EXACTLY_TWO_FROZEN_ALFRED_GETS_WITHIN_BYTE_BUDGET",
+    "BOTH_ALFRED_SNAPSHOTS_COMPLETE_AND_HASHED",
+    "OFFICIAL_ALFRED_FINAL_HOSTS_AND_CSV_CONTENT_TYPES_MATCH",
+    "VINTAGE_SUFFIXED_CSV_HEADERS_AND_VALID_DECIMAL_ROWS",
+    "STRICTLY_INCREASING_UNIQUE_OBSERVATION_DATES",
+    "NO_OBSERVATION_AFTER_REQUESTED_VINTAGE",
+    "EACH_SNAPSHOT_COVERS_DEVELOPMENT_START_AND_IS_RECENT_TO_VINTAGE",
+    "DISTINCT_SNAPSHOTS_WITH_LATER_VINTAGE_EXTENSION",
+    "OVERLAP_CONTAINS_AT_LEAST_ONE_POINT_IN_TIME_REVISION",
+    "ZERO_BTC_MARKET_VALUES_RETURNS_CANDIDATES_AND_ORDERS"
+  ],
+  "macro_numeric_fields_inspected": [
+    "NFCI"
+  ],
+  "btc_market_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "authorizes_exactly_two_payload_gets": true,
+  "authorizes_raw_payload_persistence": true,
+  "authorizes_parameter_definition": false,
+  "authorizes_btc_market_value_access": false,
+  "authorizes_return_testing": false,
+  "authorizes_candidate": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "protocol_evidence_hash": "d60d13bbc46a93d02edd7951172e612dd04e655cde026a4be00e800e5f1bd312"
+}

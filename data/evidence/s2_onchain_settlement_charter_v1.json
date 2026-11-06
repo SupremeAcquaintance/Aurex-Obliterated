@@ -1,0 +1,306 @@
+{
+  "schema_version": "aurex-s2-onchain-settlement-charter-v1",
+  "charter_id": "s2-onchain-settlement-charter-v1",
+  "frozen_at": "2026-08-27T07:21:41.442995Z",
+  "status": "FROZEN_CHARTER_ONLY_NO_OUTCOMES",
+  "builder_contract_hash": "e6467e39a8b7c1d664e9090a6e8cd19279fb598275e52fe2575b7ae1d7663ff3",
+  "predecessor_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_contract_v1.json",
+      "file_sha256": "f8bfcb9f321269433205c901f9d44506d6d12a681a07730b76f4ab2e221f8d68"
+    },
+    {
+      "path": "data/evidence/binance_spot_testnet_sandbox_profile_v1.json",
+      "file_sha256": "19e0f02caa92fe0bdde0b121491b63eb4b3d8d409212a367d3c0275245d6d9a1"
+    },
+    {
+      "path": "data/evidence/s1_1_development_outcome_audit_v1.json",
+      "file_sha256": "096b26533f59f10618396b39bf6f0cf186ef21b72f1ce0c238c5bdae5694126f"
+    },
+    {
+      "path": "data/evidence/s1_1_development_outcome_result_v1.json",
+      "file_sha256": "db84eeeb70417e6062118437787fbd11ee14b70595ea46a475ab575a1ce21477"
+    },
+    {
+      "path": "data/evidence/s1_post_failure_analysis_audit_v1.json",
+      "file_sha256": "0bac8c7242090a5c8438a14a00801cd52f4482043a87f9b995f8a22364be2e17"
+    },
+    {
+      "path": "data/evidence/s1_post_failure_analysis_result_v1.json",
+      "file_sha256": "dcaee0d9434bde0dc727a8ed31a3710d800712ec3908b38944004f073c299f1e"
+    },
+    {
+      "path": "data/evidence/s1_successor_lineage_audit_v1.json",
+      "file_sha256": "905b3ba01a99c177c0ddfab55ac3d829f01b1b493a2528e2af193a3daa299160"
+    },
+    {
+      "path": "data/evidence/s1_successor_lineage_ledger_v1.json",
+      "file_sha256": "a67c90b56994d9076cbddc2f9f21aa1928c10fc01edf2c745198b1cae9f0d91f"
+    }
+  ],
+  "research_sources": [
+    {
+      "source_id": "BLOCKCHAIN-ETL-BITCOIN-SCHEMA",
+      "title": "Bitcoin ETL",
+      "authors_or_publisher": [
+        "Blockchain ETL"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-27T07:21:41.442995Z",
+      "source_kind": "OFFICIAL_SOURCE_CODE",
+      "url": "https://github.com/blockchain-etl/bitcoin-etl",
+      "supported_claims": [
+        "The open-source ETL publishes block and transaction schemas used by the public dataset.",
+        "The repository is MIT licensed and documents Bitcoin BigQuery availability."
+      ],
+      "limitations": [
+        "Parser availability does not establish dataset completeness, query affordability, or predictive value."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "BLOCKCHAIN-ETL-PUBLIC-DATASETS",
+      "title": "Public Blockchain Datasets",
+      "authors_or_publisher": [
+        "Blockchain ETL"
+      ],
+      "publication_or_revision_date": "2024-06-26",
+      "accessed_at": "2026-08-27T07:21:41.442995Z",
+      "source_kind": "OFFICIAL_SOURCE_CODE",
+      "url": "https://github.com/blockchain-etl/public-datasets",
+      "supported_claims": [
+        "Bitcoin is listed as a BigQuery public blockchain dataset with a documented update lag."
+      ],
+      "limitations": [
+        "The listed lag and availability can change and require fresh metadata verification."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "COIN-METRICS-COMMUNITY-LICENSE",
+      "title": "Coin Metrics API Conventions",
+      "authors_or_publisher": [
+        "Coin Metrics"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-27T07:21:41.442995Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://gitbook-docs.coinmetrics.io/access-our-data/api",
+      "supported_claims": [
+        "Community API access requires no key and is rate limited.",
+        "Community data is offered for non-commercial use."
+      ],
+      "limitations": [
+        "A non-commercial license is incompatible with treating the free feed as an authorized live-trading input without separate permission."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "GOOGLE-BIGQUERY-PUBLIC-DATA",
+      "title": "BigQuery public datasets",
+      "authors_or_publisher": [
+        "Google Cloud"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-27T07:21:41.442995Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://docs.cloud.google.com/bigquery/public-data",
+      "supported_claims": [
+        "Google hosts public datasets while users pay query-processing costs.",
+        "The first one terabyte of query processing per month is free subject to pricing terms."
+      ],
+      "limitations": [
+        "Access requires a Google Cloud project and cost controls; the free tier is not an unlimited guarantee."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "GOOGLE-BITCOIN-BIGQUERY",
+      "title": "Bitcoin in BigQuery: blockchain analytics on public data",
+      "authors_or_publisher": [
+        "Google Cloud"
+      ],
+      "publication_or_revision_date": "2018-02-08",
+      "accessed_at": "2026-08-27T07:21:41.442995Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://cloud.google.com/blog/topics/public-datasets/bitcoin-in-bigquery-blockchain-analytics-on-public-data",
+      "supported_claims": [
+        "The public Bitcoin dataset exposes historical blockchain records for SQL analysis."
+      ],
+      "limitations": [
+        "An announcement and example queries do not prove current completeness or economical query plans."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "KAPAR-OLMO-2018",
+      "title": "Bitcoin returns and transaction activity",
+      "authors_or_publisher": [
+        "Burcu Kapar",
+        "Jose Olmo"
+      ],
+      "publication_or_revision_date": "2018-06-01",
+      "accessed_at": "2026-08-27T07:21:41.442995Z",
+      "source_kind": "PEER_REVIEWED_ARTICLE",
+      "url": "https://doi.org/10.1016/j.econlet.2018.03.021",
+      "supported_claims": [
+        "The paper examines bidirectional links between Bitcoin returns and transaction activity."
+      ],
+      "limitations": [
+        "Return shocks contributed more to transaction activity than the reverse, and the paper does not establish a deployable after-cost rule."
+      ],
+      "does_not_prove_edge": true
+    }
+  ],
+  "operator_scope": {
+    "execution_environment": "BINANCE_SPOT_TESTNET",
+    "product": "SPOT",
+    "symbol": "BTCUSDT",
+    "direction": "LONG_OR_CASH",
+    "maximum_effective_leverage": "1",
+    "simulated_equity_usd": "100",
+    "maximum_per_trade_loss_usd": "0.5",
+    "maximum_daily_loss_usd": "1",
+    "maximum_total_loss_usd": "10",
+    "one_time_data_budget_usd": "0",
+    "monthly_data_budget_usd": "0",
+    "production_authority": false,
+    "live_authority": false,
+    "real_capital": false
+  },
+  "mechanism_id": "S2-BTC-SETTLEMENT-DEMAND-BREADTH-SPOT",
+  "mechanism_family": "BITCOIN_ONCHAIN_SETTLEMENT_DEMAND_BREADTH",
+  "economic_actor": "BITCOIN_USERS_PAYING_FOR_CONFIRMED_ONCHAIN_SETTLEMENT",
+  "ex_ante_hypothesis": "A persistent, jointly broadening level of confirmed non-coinbase Bitcoin settlement activity and user-paid transaction fees may represent network demand that is economically distinct from exchange price, candle, funding, volatility, and order-flow signals. Aurex will eventually test one weekly BTCUSDT Spot long-or-cash formulation; disagreement or weak demand means cash, never short exposure.",
+  "ex_ante_direction": "BROADENING_SETTLEMENT_DEMAND_LONG_ELSE_CASH",
+  "source_project": "bigquery-public-data",
+  "source_dataset": "crypto_bitcoin",
+  "source_tables": [
+    "blocks",
+    "transactions"
+  ],
+  "prospective_signal_frequency": "WEEKLY",
+  "raw_measurement_families": [
+    "CONFIRMED_NON_COINBASE_TRANSACTION_COUNT",
+    "CONFIRMED_TRANSACTION_FEES_SATOSHIS",
+    "CONFIRMED_SETTLEMENT_COUNT_AND_FEE_AGREEMENT"
+  ],
+  "causal_observation_policy": [
+    "USE_ONLY_BLOCKS_WITH_AT_LEAST_SIX_CONFIRMATIONS_AT_THE_DECISION_CUTOFF",
+    "WEEKLY_DECISION_MAY_USE_ONLY_COMPLETE_UTC_DAYS_THROUGH_PRIOR_FRIDAY",
+    "EARLIEST_EXECUTION_IS_THE_FOLLOWING_MONDAY_00_00_UTC_BINANCE_OPEN",
+    "MISSING_REORGED_INCOMPLETE_OR_AMBIGUOUS_CHAIN_DATA_FORCES_CASH",
+    "RAW_BLOCK_AND_TRANSACTION_FIELDS_ARE_HASH_BOUND_BEFORE_TRANSFORMATION"
+  ],
+  "exact_source_requirements": [
+    "GOOGLE_BIGQUERY_PUBLIC_CRYPTO_BITCOIN_BLOCKS_AND_TRANSACTIONS_METADATA",
+    "BLOCKCHAIN_ETL_SCHEMA_AND_MIT_LICENSE_BINDING",
+    "PARTITION_FILTERED_GOOGLESQL_WITH_DRY_RUN_TOTAL_BYTES_PROCESSED",
+    "MAXIMUM_BYTES_BILLED_AND_ZERO_DOLLAR_BUDGET_PREFLIGHT",
+    "NON_COINBASE_TRANSACTION_CLASSIFICATION_AND_FEE_UNITS_RECONSTRUCTABLE",
+    "OFFICIAL_BINANCE_SPOT_BTCUSDT_EXECUTION_PRICES_WITH_PUBLISHED_CHECKSUMS",
+    "IMMUTABLE_QUERY_TEXT_JOB_METADATA_RESPONSE_AND_OUTPUT_HASHES"
+  ],
+  "independence_exclusions": [
+    "NO_PRICE_MOMENTUM_TREND_PULLBACK_BREAKOUT_OR_MEAN_REVERSION_SIGNAL_INPUT",
+    "NO_VOLATILITY_SCALING_PATH_QUALITY_OR_CROSS_SECTIONAL_RANKING_INPUT",
+    "NO_AGGRESSOR_FLOW_ORDER_BOOK_CLOCK_PHASE_OR_JAM_EXHAUSTION_INPUT",
+    "NO_FUNDING_BASIS_CARRY_PERPETUAL_FLOW_OR_CROSS_VENUE_INPUT",
+    "NO_NFCI_MONETARY_FINANCIAL_CONDITIONS_OR_OTHER_MACRO_INPUT",
+    "NO_HASHRATE_AS_PRIMARY_PREDICTIVE_INPUT",
+    "NO_ACTIVE_ADDRESS_COUNT_AS_A_USER_COUNT_PROXY",
+    "NO_COIN_METRICS_COMMUNITY_VALUES_AS_TRADING_INPUT",
+    "NO_REUSE_OF_RETIRED_THRESHOLDS_DIAGNOSTICS_OR_OUTCOMES"
+  ],
+  "feasibility_gates": [
+    "ALL_NINE_PREDECESSOR_FAMILIES_BOUND_AND_NONREUSABLE",
+    "BIGQUERY_PUBLIC_DATASET_AND_REQUIRED_TABLES_CURRENTLY_EXIST",
+    "REQUIRED_SCHEMA_FIELDS_AND_PARTITION_COLUMNS_RECONSTRUCT_EXACTLY",
+    "DRY_RUN_BYTES_FOR_EACH_BOUNDED_QUERY_FIT_ZERO_DOLLAR_BUDGET_CONTROLS",
+    "GOOGLE_CLOUD_PROJECT_AUTHENTICATION_AND_BILLING_GUARDRAILS_AVAILABLE",
+    "COMPLETE_CHAIN_COVERAGE_FROM_2017_08_17_WITH_DOCUMENTED_UPDATE_LAG",
+    "SIX_CONFIRMATION_AND_PRIOR_FRIDAY_CAUSAL_CUTOFF_IS_IMPLEMENTABLE",
+    "RAW_FEE_AND_TRANSACTION_AGGREGATION_EXCLUDES_COINBASE_EXACTLY",
+    "BINANCE_EXECUTION_SOURCE_REMAINS_CHECKSUM_BOUND_AND_SPOT_ONLY",
+    "ONE_SELECTABLE_MECHANISM_AND_ZERO_CHARTER_STAGE_PARAMETERS",
+    "FAILURE_OF_ANY_GATE_SELECTS_ZERO_AND_STOPS_S2_BEFORE_NUMERIC_QUERY"
+  ],
+  "partitions": [
+    {
+      "role": "DEVELOPMENT",
+      "start": "2017-08-17T00:00:00Z",
+      "end": "2023-01-01T00:00:00Z",
+      "state": "OUTCOME_AWARE_NONQUALIFYING",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "OUTCOME_AWARE_HISTORICAL_SCREEN",
+      "start": "2023-01-01T00:00:00Z",
+      "end": "2026-11-07T00:00:00Z",
+      "state": "OUTCOME_AWARE_NONQUALIFYING",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "PROSPECTIVE_VALIDATION",
+      "start": "2026-11-07T00:00:00Z",
+      "end": "2027-05-07T00:00:00Z",
+      "state": "LOCKED_FUTURE",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "FUTURE_HOLDOUT",
+      "start": "2027-05-07T00:00:00Z",
+      "end": "2027-11-07T00:00:00Z",
+      "state": "LOCKED_FUTURE",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "FORWARD",
+      "start": "2027-11-07T00:00:00Z",
+      "end": null,
+      "state": "LOCKED_FUTURE",
+      "outcome_access_permitted": false
+    }
+  ],
+  "proposal_budget": 1,
+  "selected_mechanism_count": 1,
+  "familywise_predecessor_count": 9,
+  "prior_coin_metrics_catalog_metadata_request_count_declared": 2,
+  "prior_catalog_market_values_read_declared": 0,
+  "coin_metrics_community_data_permitted_as_trading_input": false,
+  "historical_target_outcome_awareness_declared": true,
+  "market_numeric_fields_inspected": [],
+  "blockchain_numeric_fields_inspected": [],
+  "exact_parameters_defined": [],
+  "return_metrics_calculated": [],
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "decision": "FREEZE_S2_FOR_SOURCE_AND_QUERY_FEASIBILITY_ONLY",
+  "next_authorization": "AUTHORIZE_S2_BIGQUERY_METADATA_AND_QUERY_COST_FEASIBILITY_ONLY",
+  "authorizes_source_metadata_requests": true,
+  "authorizes_bigquery_dry_runs": true,
+  "authorizes_bigquery_numeric_queries": false,
+  "authorizes_market_value_access": false,
+  "authorizes_payload_acquisition": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_return_testing": false,
+  "authorizes_validation_access": false,
+  "authorizes_holdout_access": false,
+  "authorizes_pine_deployment": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "This charter selects a source-feasibility hypothesis, not a profitable strategy.",
+    "All historical BTC target periods are outcome-aware and cannot serve as untouched qualification evidence.",
+    "Prospective validation and holdout together require twelve future months before live eligibility can be considered.",
+    "Transaction activity can be caused by price, batching, congestion, or non-investment usage; published evidence is bidirectional and weak for trading claims.",
+    "BigQuery authentication, schema, current coverage, dry-run bytes, and zero-dollar cost controls are not yet qualified.",
+    "Coin Metrics community values are excluded because free access is documented for non-commercial use.",
+    "No blockchain value, market value, parameter, return, candidate, signal, paper order, Testnet strategy order, production action, live action, real capital, or profit is authorized."
+  ],
+  "charter_evidence_hash": "77e61e9f01519d6b7b56aa2ce45d4689356120bb1a338ead9edce35ef18fe9b0"
+}

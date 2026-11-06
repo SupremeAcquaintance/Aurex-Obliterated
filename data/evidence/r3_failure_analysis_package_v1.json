@@ -1,0 +1,37 @@
+{
+  "schema_version": "aurex-r3-failure-analysis-package-v1",
+  "package_id": "r3-cross-sectional-momentum-failure-analysis-package-v1",
+  "package_version": "1.0.0",
+  "frozen_at": "2026-07-23T08:39:26.692024Z",
+  "status": "FROZEN_POST_OUTCOME_PRE_ANALYSIS",
+  "failure_protocol_evidence_hash": "62ec8d11920cc4634f624ca7ce11fa93a7dc3bebd9871122984aff21e1da7725",
+  "result_ledger_evidence_hash": "dd751538457a4876ee38fbe7b139cace3b30a81f8846a0ec3e93114fa82d282c",
+  "monthly_addendum_evidence_hash": "7f538ce899ca6513c109510479980602d6820397fb22e19d80334f46b036192a",
+  "development_dataset_bundle_evidence_hash": "fba63b8e237220c760daf902f2c999e9b01121357a4cc583c9fa5cb50b83d341",
+  "source_file_sha256": {
+    "scripts/run_r3_failure_analysis.py": "433bd12c8d136fd6d4c14bc3ee845da69d9030cd14c148bd1054b8ef45ce825e",
+    "src/aurex/backtest_engine/research_failure_analysis.py": "ef882ed792fc7477a52ad8bded7fe67d2d5d30bfc543009a8d52244bd3f5a670",
+    "src/aurex/backtest_engine/research_failure_runner.py": "aa89113072039471a6ffd766af646c51a30159fed512a1bfbefac8fdb7ff095b"
+  },
+  "decimal_precision": 50,
+  "decimal_rounding": "ROUND_HALF_EVEN",
+  "quarter_source": "INDEPENDENT_FOLD_REPLAYS",
+  "trade_quarter_attribution": "FOLD_ARTIFACT_MEMBERSHIP",
+  "diagnostic_return_formula": "LAST_CLOSE_DIVIDED_BY_FIRST_OPEN_MINUS_ONE",
+  "diagnostic_volatility_formula": "SAMPLE_STDDEV_LOG_RETURNS_TIMES_SQRT_2190",
+  "breadth_formula": "COUNT_STRICTLY_POSITIVE_SCORES_AT_PRIMARY_BASE_REBALANCE",
+  "drawdown_episode_formula": "CONTIGUOUS_POSITIVE_DRAWDOWN_SNAPSHOTS_CLOSED_AT_ZERO_OR_WINDOW_END",
+  "symbol_contribution_formula": "SUM_FOLD_TRADE_NET_AND_RAW_PL_BY_SYMBOL",
+  "next_decision_rule": "PROPOSE_ONLY_IF_ALL_DESCRIPTIVE_CONTINUATION_CRITERIA_PASS_ELSE_STOP",
+  "continuation_criteria": [
+    "ALL_THREE_HORIZONS_POSITIVE_AT_BASE_AND_DOUBLE_COST",
+    "HORIZON_POSITIVE_FOLDS_STRICTLY_IMPROVE_FAST_TO_PRIMARY_TO_SLOW",
+    "PRIMARY_CONCENTRATION_GATES_PASSED",
+    "PRIMARY_LEAVE_ONE_MARKET_OUT_FRACTION_AT_LEAST_0_80",
+    "PRIMARY_TEMPORAL_GATE_REMAINS_FAILED_AND_UNCHANGED"
+  ],
+  "expected_result_relative_path": "r3_failure_analysis_result_v1.json",
+  "preexisting_analysis_artifacts": [],
+  "builder_contract_hash": "d4329b882139c93526067e7e65850526db341f0d0bd29018a2991b1af320bdbd",
+  "package_evidence_hash": "7863931e7a391f693a788339b583bf5c586a98a41424419aac0d774551cfbbdb"
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": "aurex-s5-github-preflight-failure-audit-v1",
+  "audit_id": "s5-github-preflight-failure-audit-v1",
+  "audited_at": "2026-09-02T15:54:53.728707Z",
+  "auditor_contract_hash": "1afbd39c2fa660a5ee693127e21cb92ca221cd68df22cf71788d65d645b10187",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_preflight_protocol_audit_v1.json",
+      "file_sha256": "4a71f74c89c4c2927f936a23d6d20cb1298d2d57bf5868d9e1fd376a7f95aedd"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_preflight_protocol_v1.json",
+      "file_sha256": "8438c168cbafbac5c4272c1326cf50a56669f3ca39a31c2b0474a28d43a4c2ae"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_preflight_result_audit_v1.json",
+      "file_sha256": "c06fbb9bb776840d915566fab93865687f6d3343db592bb6b78e60189ec12451"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_preflight_result_v1.json",
+      "file_sha256": "8694fd28d997063df04dd98708f3f83ccbffc19ee8c388c2fc22aaa524ad3b18"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_source_feasibility_responses_v1/01_github_repository_metadata.json",
+      "file_sha256": "74ee6f424001d3d59c93919cd858dac799ca0d50c905955d63d522c7dca2e26b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_source_feasibility_result_v1.json",
+      "file_sha256": "397726b4bfbc0477041401d4cfd751434b2f0e8ff59e3783a0e1a277db40f8e2"
+    },
+    {
+      "path": "data/evidence/s5_github_pull_metadata_preflight_transcript_v1.json",
+      "file_sha256": "abf49c61202d1c44f6bc7f8c9a34003792a6af8e152651ad8648eb491ac497ab"
+    }
+  ],
+  "protocol_evidence_hash": "b711d7010c0a549bd699712a1b6605b8b77a4836516f66a98a5b077d7293e41d",
+  "prior_result_evidence_hash": "08984a1bd4f5c01fb1d062a5b5bb6b0cea4a3829b27d06dfab216314b53035e3",
+  "prior_result_audit_evidence_hash": "f015c24de0ed4dbdd65b49b96ff8bd6aa8e2c7f3ed0ff7917eed56530f8af291",
+  "transcript_file_sha256": "abf49c61202d1c44f6bc7f8c9a34003792a6af8e152651ad8648eb491ac497ab",
+  "repository_metadata_file_sha256": "74ee6f424001d3d59c93919cd858dac799ca0d50c905955d63d522c7dca2e26b",
+  "request_attempt_count": 1,
+  "additional_request_count": 0,
+  "http_status": 200,
+  "final_url_matched_request": true,
+  "response_byte_count": 15733,
+  "response_body_sha256": "48e21e42f34f768826c4ec91679ac0e727a9be9c1ed21a1ee08798770ba22620",
+  "rate_limit": 60,
+  "rate_remaining": 59,
+  "canonical_repository_id": 1181927,
+  "canonical_repository_full_name": "bitcoin/bitcoin",
+  "observed_link_path": "/repositories/1181927/pulls",
+  "frozen_link_path": "/repos/bitcoin/bitcoin/pulls",
+  "observed_link_path_is_canonical_repository_identity": true,
+  "first_record_number": 9,
+  "first_record_state": "closed",
+  "first_record_base_ref": "master",
+  "merge_commit_sha_key_present": false,
+  "head_sha_key_present": true,
+  "head_sha_value_persisted": false,
+  "transport_succeeded": true,
+  "interpreter_rejected_source_compatible_response": true,
+  "original_stop_preserved": true,
+  "request_replay_permitted": false,
+  "local_revalidation_feasible": true,
+  "github_metadata_records_newly_acquired": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "adjudication": "TRANSPORT_SUCCEEDED_INTERPRETER_REJECTED_CANONICAL_LINK_AND_ACTUAL_LIST_SCHEMA",
+  "next_authorization": "FREEZE_S5_GITHUB_PREFLIGHT_LOCAL_INTERPRETER_AMENDMENT_V2_ONLY",
+  "limitations": [
+    "A local correction can establish transport shape but not history completeness.",
+    "Any corrected identity rule must fail closed on head-parent mismatch or ambiguity.",
+    "No BTC value, parameter, return, candidate, signal, or order was accessed.",
+    "No paper, Testnet strategy, production, live, real-capital, or profit authority is created.",
+    "The numeric repository Link path matches prior official repository identity.",
+    "The official list response includes head.sha, but its value is not persisted here.",
+    "The official list response omits merge_commit_sha for the observed record.",
+    "The original STOP remains immutable and is not relabeled.",
+    "This audit reuses only the preserved response and executes no request."
+  ],
+  "audit_evidence_hash": "ffaf4571bafcdac3d4771e59a8a8905178a7e16cf0863b7199dbc7de805bb093"
+}

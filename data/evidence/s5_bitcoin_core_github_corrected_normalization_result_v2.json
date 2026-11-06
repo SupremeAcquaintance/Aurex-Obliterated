@@ -1,0 +1,209 @@
+{
+  "schema_version": "aurex-s5-github-corrected-normalization-result-v2",
+  "result_id": "s5-github-corrected-normalization-result-v2",
+  "started_at": "2026-09-08T17:47:19.505754Z",
+  "completed_at": "2026-09-08T17:48:00.172175Z",
+  "elapsed_seconds": 40.666421,
+  "protocol_evidence_hash": "d8a6c5bf331c75a127e47f63c3e2f14c6d3a1292f9015666009da3a1b106bc95",
+  "protocol_audit_evidence_hash": "b664ae816c730550f7876aaba41c7090797b848bfdfeaf9c2c0fa420d36fff8c",
+  "execution_contract_evidence_hash": "9a374dc928e74d3708e587ed5e9eec436225dc560f35d62b036c277a69779477",
+  "execution_contract_audit_evidence_hash": "bec0bd3756616fe3161b74f18318111dc0d9a4bd55365c9af65114f552f8ced6",
+  "runner_contract_hash": "fa8f692ffe1f5f88b5d34b1bd50264b698a55c6b574d9bd5e07a8267d5f32c4c",
+  "failed_normalization_result_evidence_hash": "02f461aeb23e00479a9044e7017daa4eaa569f296cd69d8fdbc7dd7e6e6c3a89",
+  "targeted_correction_result_evidence_hash": "e7c059f0a01998e2af13b72c1ee4d5a6c01f05184f79c3b915dac619f08e2d50",
+  "targeted_correction_result_audit_evidence_hash": "5e6c1f1b7dfd5a28395ec28a0f9cfed08ad053203edacaeb38628687c7edacac",
+  "history_dataset_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "first_parent_stream_sha256": "f60412d7911fd0b51b13c19c82a9f05ea9c8372b810b18d58d5fdc05d253730d",
+  "full_graph_stream_sha256": "5724337ec5bb46b7111835d17038fa75b4228268ca2e83105dece4ab14643c9e",
+  "source_page_files_opened": 245,
+  "response_bodies_decoded": 245,
+  "targeted_responses_decoded": 194,
+  "local_git_process_count": 2,
+  "raw_record_count": 24407,
+  "cohort_record_count": 24398,
+  "github_accepted_pull_count": 16279,
+  "first_parent_commit_count": 17543,
+  "first_parent_merge_count": 16721,
+  "full_graph_commit_count": 50395,
+  "legacy_exact_mapping_count": 16167,
+  "legacy_unresolved_merge_count": 554,
+  "recognized_recovery_count": 75,
+  "recognized_unresolved_count": 8,
+  "canonical_mapping_count": 16242,
+  "corrected_unresolved_merge_count": 479,
+  "accepted_source_linked_count": 16271,
+  "accepted_source_unverified_count": 8,
+  "many_to_one_group_count": 2,
+  "output_paths": [
+    "data/evidence/datasets/s5_bitcoin_core_github_pulls_normalized_v2.jsonl",
+    "data/evidence/datasets/s5_bitcoin_core_canonical_merge_mapping_v2.jsonl",
+    "data/evidence/datasets/s5_bitcoin_core_target_resolution_v2.jsonl",
+    "data/evidence/datasets/s5_bitcoin_core_accepted_source_coverage_v2.jsonl",
+    "data/evidence/datasets/s5_bitcoin_core_unresolved_git_merges_v2.jsonl"
+  ],
+  "output_file_sha256s": [
+    "1075bcd84b27a8408c26d9beab481b7b6df762a922267e57bae05a1725ee5888",
+    "e13d5aba80bcb688abf004fc8813dfd81a3083c1bc295859267b9baac001e564",
+    "6e11c4183adfde890d3188a6ae20bdce1700faf3651e76f2b0975051a0968bd2",
+    "5975b299d2b6e291ac1961038e067150372846d4d54e11a84ca5405781b3627c",
+    "992c21f70d99e1243296d851b836119ff7825cd54574ac98ef32f65bf0a66de8"
+  ],
+  "output_byte_counts": [
+    17310732,
+    12333457,
+    172310,
+    5481706,
+    191523
+  ],
+  "output_row_counts": [
+    24398,
+    16242,
+    194,
+    16279,
+    479
+  ],
+  "output_row_manifest_evidence_hashes": [
+    "8322a392190b090d656e5bca6a07b07712aff650cf0630336893eebda2dc27bb",
+    "f2258f31f962eca23a0954f5b6fd3f91605d884af2697a8818ad52ac6ef737f7",
+    "c7ec6e975596d509d633a8b1f1a6ac4baac731a3d2b73d2fbdcf5f7b125b5b93",
+    "cc4733623e3d000495af0e9c2c767e76fca353eba9d367399a023b64beb98d8b",
+    "0aefeb2063b45c2fbd852ca76c4460e0ac88562fb454b2de3ada7f196fd082ab"
+  ],
+  "gate_results": [
+    {
+      "gate_id": "FROZEN_PREDECESSOR_FAILURE_AND_TARGETED_CORRECTION_LINEAGE_BOUND",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "ALL_BOUND_SOURCE_FILES_REHASH_EXACTLY",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "LEGACY_NORMALIZATION_FAILURE_RECONSTRUCTS_EXACTLY",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "BULK_245_PAGE_24407_RAW_24398_COHORT_ACCOUNTING_RECONSTRUCTS",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "TARGETED_194_RESPONSE_MANIFEST_RECONSTRUCTS_EXACTLY",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "FIRST_PARENT_17543_COMMIT_16721_MERGE_TOPOLOGY_RECONSTRUCTS",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "FULL_GRAPH_50395_COMMIT_REACHABILITY_RECONSTRUCTS",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "LEGACY_16167_EXACT_MAPPINGS_ARE_PRESERVED",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "EXACTLY_75_RECOGNIZED_GAPS_RECOVER_BY_DIRECT_HEAD_SHA",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "EXACTLY_8_RECOGNIZED_ENDPOINT_404_GAPS_REMAIN_UNRESOLVED",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "CANONICAL_GIT_PR_MAPPING_IS_ONE_TO_ONE_WITH_16242_ROWS",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "ALL_16279_GITHUB_ACCEPTED_PULLS_RECEIVE_SOURCE_STATUS",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "EXACTLY_16271_ACCEPTED_PULLS_HAVE_LOCAL_SOURCE_LINKAGE",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "EXACTLY_8_ACCEPTED_PULLS_REMAIN_LOCAL_INCLUSION_UNVERIFIED",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "MANY_TO_ONE_SOURCE_LINKS_ARE_PRESERVED_WITHOUT_CANONICAL_GUESSING",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "GITHUB_ACCEPTED_AND_GIT_INTEGRATION_UNIVERSES_REMAIN_DISTINCT",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "EVENT_TIME_SOURCE_AND_IDENTITY_UNCERTAINTY_ARE_EXPLICIT",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "ALL_VERSIONED_OUTPUTS_RECONSTRUCT_BYTE_FOR_BYTE",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    },
+    {
+      "gate_id": "ZERO_NETWORK_MARKET_VALUES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS",
+      "status": "PASS",
+      "evidence": "Frozen corrected-normalization condition reconstructed exactly."
+    }
+  ],
+  "passed_gate_count": 19,
+  "failed_gate_count": 0,
+  "original_normalization_stop_upheld": true,
+  "github_and_git_universes_separate": true,
+  "network_requests_executed": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_GITHUB_CORRECTED_NORMALIZATION",
+  "next_authorization": "FREEZE_S5_ACCEPTED_DEVELOPMENT_MEASUREMENT_PROTOCOL_ONLY",
+  "authorizes_measurement_protocol_design": true,
+  "authorizes_market_values": false,
+  "authorizes_returns": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "failure_type": null,
+  "failure_message": null,
+  "limitations": [
+    "A 404 is endpoint evidence at acquisition time, not proof a PR never existed.",
+    "A source link does not imply exclusive canonical ownership of a Git merge.",
+    "Current GitHub responses are not historical snapshots from the event date.",
+    "Current targeted metadata is supplemental and never overwrites frozen bulk metadata.",
+    "Eight GitHub-accepted pulls lack exact local inclusion evidence at the cutoff.",
+    "Eight recognized PR endpoints return 404 and remain unresolved.",
+    "GitHub accepted pulls and Git first-parent integrations are different universes.",
+    "GitHub merged_at and Git committer time are event proxies with source labels.",
+    "No market value, parameter, return, candidate, signal, or order is authorized.",
+    "No paper, Testnet strategy, production, live, or capital authority exists.",
+    "No unresolved identity may be guessed or imputed as an accepted event.",
+    "Normalization success will not establish predictive edge or profitability.",
+    "Protocol counts were informed by disclosed post-acquisition source analysis.",
+    "Real net profit remains zero.",
+    "The failed v1 normalization and its STOP remain immutable evidence.",
+    "Two disclosed pull groups share exact source identities and remain explicit."
+  ],
+  "result_evidence_hash": "a205e0759b235fae0810ae9203afa4dd81087f52ce782cd4e8c00c670fdd45a5"
+}

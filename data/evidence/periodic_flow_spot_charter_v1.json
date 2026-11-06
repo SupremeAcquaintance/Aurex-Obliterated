@@ -1,0 +1,273 @@
+{
+  "schema_version": "aurex-periodic-perpetual-flow-spot-charter-v1",
+  "charter_id": "periodic-perpetual-flow-to-spot-charter-v1",
+  "frozen_at": "2026-08-06T10:50:52.665994Z",
+  "status": "FROZEN_CHARTER_ONLY_NO_OUTCOMES",
+  "authorization_record": "PASS_AUREX_STRATEGY_FACTORY_READY_FOR_NEW_MECHANISM_CHARTER_ONLY",
+  "builder_contract_hash": "b2297ff5ba5573d93806f873b6bbae5fd9cf54e8dcf9aa3125f17ee5d4444840",
+  "predecessor_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_contract_v1.json",
+      "file_sha256": "f8bfcb9f321269433205c901f9d44506d6d12a681a07730b76f4ab2e221f8d68",
+      "evidence_hash": "8676ffc5caea7782607ad7e9072e71ab8e09fbd93fe115f47c8860833f33f50e",
+      "decision": "FROZEN_PRE_CANDIDATE"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_audit_v3.json",
+      "file_sha256": "054ede5ee92eb8f2c7fb6da4b3c15c51224bc699f1777b375d1cdd047781bb34",
+      "evidence_hash": "607b4620abc9589d0c05f95cb2d4ad0a78d1a57ef5144c454e771214e544d80e",
+      "decision": "PASS_AUREX_STRATEGY_FACTORY_READY_FOR_NEW_MECHANISM_CHARTER_ONLY"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_result_v3.json",
+      "file_sha256": "c63dba8b40bccf7ce50b298df2dcb591e87c3a71b4902cda56e92cea9809e498",
+      "evidence_hash": "ef5fc397ca81d473ade1a90b7d651f24761eb466f43d6313f1b3a619589bca3a",
+      "decision": "PASS_AUREX_STRATEGY_FACTORY_READY_FOR_NEW_MECHANISM_CHARTER_ONLY"
+    },
+    {
+      "path": "data/evidence/binance_spot_testnet_sandbox_profile_v1.json",
+      "file_sha256": "19e0f02caa92fe0bdde0b121491b63eb4b3d8d409212a367d3c0275245d6d9a1",
+      "evidence_hash": "adc95174c169f2f1b76ac2d53770ee13b5049850f1bcabb2cbc7d4a461e55b69",
+      "decision": "AUTHORIZE_SANDBOX_ADAPTER_IMPLEMENTATION_AND_SUCCESSOR_CHARTER_DESIGN_ONLY"
+    },
+    {
+      "path": "data/evidence/jam_successor_development_outcome_result_v1.json",
+      "file_sha256": "82639d4af205f089c71192856228873c13e94f8f03587560291e90583b359962",
+      "evidence_hash": "560d990748bcefce3e7a46c4bb88e89bf16563bef659213e55b2934005bff430",
+      "decision": "STOP_JAM_SUCCESSOR_DEVELOPMENT_OUTCOME_FAILED"
+    },
+    {
+      "path": "data/evidence/strategy_contamination_ledger_v2.json",
+      "file_sha256": "69890df964ea4a293180d465f2e4dea68ab22f9f7124835092411ad9381186b1",
+      "evidence_hash": "f24cc36011e9f9ddc40e277197bd3fa03310cac12b6848b30714aae26cdb37bd",
+      "decision": "APPEND_ONLY_CONTAMINATION_LEDGER_VALID"
+    },
+    {
+      "path": "data/evidence/v3_mechanism_discovery_charter_v1.json",
+      "file_sha256": "a8e229b8be0c7137a5a10d0c6609156a78a8b50ffe17bdeec32169599d1da213",
+      "evidence_hash": "10912cefdbd875b202fcc6903e5ffdf82652a97eddde7e9dc073a79308ed9b32",
+      "decision": "FROZEN_PRE_V3_PROPOSAL_SCREEN"
+    },
+    {
+      "path": "data/evidence/v3_mechanism_feasibility_screen_v1.json",
+      "file_sha256": "192a08b4ed7b28bf57416c3b227213db25392e3b1830e17aa0c348880d1cc36f",
+      "evidence_hash": "48e60151a4e4f6c86f5efa2569a4c6e63747bc1ee0996bf749d51a66f16f604e",
+      "decision": "SELECT_ZERO_V3_PRIMARY_MECHANISMS"
+    },
+    {
+      "path": "data/evidence/v3_mechanism_proposal_register_v1.json",
+      "file_sha256": "b529bce2ab87b1143981d68ece679c0826cf9a1ef3bfe297d3190569d0dfe9ef",
+      "evidence_hash": "1f0bc727d673f6daac6a6d6cad306f6e3007e1f718a67a96f249d586507ff321",
+      "decision": "FREEZE_THREE_PROPOSALS_FOR_NO_RETURN_FEASIBILITY_AUDIT"
+    },
+    {
+      "path": "data/evidence/v3_p02_aggtrades_census_result_v1.json",
+      "file_sha256": "8852568a6012695071b445d2c88111ef7b6586951f058893127160229c636806",
+      "evidence_hash": "b69fb4d2f1c04df7a12020d47f2a6263442db60980ef65cd73de08062b3a36b2",
+      "decision": "PERMIT_SEPARATE_V3P02_AGGTRADES_PILOT_PROTOCOL"
+    },
+    {
+      "path": "data/evidence/v3_p02_payload_pilot_stop_result_v1.json",
+      "file_sha256": "d2437f6452b1759c9b7e0934ad088f45f748a7b5dc1b802b9167938d07632616",
+      "evidence_hash": "67c967764111f831d80fb2e52d965460e0d59958b285e35e28715569dcb971f8",
+      "decision": "STOP_V3P02_TRANSPORT_UNRESOLVED_NO_RETRY_NO_SELECTION"
+    }
+  ],
+  "research_sources": [
+    {
+      "source_id": "BINANCE-PUBLIC-DATA",
+      "source_type": "OFFICIAL_EXCHANGE_DOCUMENTATION",
+      "title": "Binance Public Data",
+      "reference": "https://github.com/binance/binance-public-data",
+      "bounded_claims": [
+        "Official daily and monthly Spot and USD-M Futures archives are public.",
+        "Aggregate trades expose exchange-native timestamps and buyer-maker identity.",
+        "Archive checksum companions exist and archived files may later be revised."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "HANSEN-KIM-KIMBROUGH-2024",
+      "source_type": "PEER_REVIEWED_RESEARCH",
+      "title": "Periodicity in Cryptocurrency Volatility and Liquidity",
+      "reference": "https://doi.org/10.1093/jjfinec/nbac034",
+      "bounded_claims": [
+        "Bitcoin and Ether show recurrent within-hour volatility and volume patterns.",
+        "The documented periodicity is consistent with algorithmic activity and funding times.",
+        "Activity periodicity alone does not establish positive after-cost returns."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "KIM-HANSEN-2026",
+      "source_type": "RESEARCH_PREPRINT",
+      "title": "The Quarter-Hour Effect: Periodic Algorithmic Trading and Return Predictability in Cryptocurrency Futures",
+      "reference": "https://arxiv.org/abs/2607.09426",
+      "bounded_claims": [
+        "Perpetual-market activity clusters at one-, five-, and fifteen-minute boundaries.",
+        "The paper reports that quarter-hour opening order imbalance forecasts four-to-twelve-hour returns.",
+        "The result is external preprint evidence and must be independently falsified by Aurex."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "WEN-BOURI-XU-ZHAO-2022",
+      "source_type": "PEER_REVIEWED_RESEARCH",
+      "title": "Intraday return predictability in the cryptocurrency markets: Momentum, reversal, or both",
+      "reference": "https://doi.org/10.1016/j.najef.2022.101733",
+      "bounded_claims": [
+        "Intraday crypto predictability can exhibit both momentum and reversal.",
+        "Liquidity, jumps, macro events, and regimes can change the sign or strength.",
+        "Aurex must freeze one direction and reject regime-dependent rescue after outcomes."
+      ],
+      "does_not_prove_edge": true
+    }
+  ],
+  "operator_scope": {
+    "environment": "BINANCE_SPOT_TESTNET",
+    "execution_product": "SPOT_ONLY",
+    "execution_symbol": "BTCUSDT",
+    "signal_market": "BINANCE_USDM_PERPETUAL_BTCUSDT",
+    "direction": "LONG_OR_CASH_NO_SHORT",
+    "maximum_effective_leverage": "1",
+    "simulated_equity_usd": "100",
+    "maximum_per_trade_loss_usd": "0.50",
+    "maximum_daily_loss_usd": "1.00",
+    "maximum_total_loss_usd": "10.00",
+    "paid_data_budget_usd": "0",
+    "production_account_verified": false,
+    "real_capital_authorized": false
+  },
+  "mechanism": {
+    "mechanism_id": "Q1-PERIODIC-PERPETUAL-ORDER-FLOW-SPOT-CONTINUATION",
+    "name": "Periodic perpetual order-flow continuation into BTC spot",
+    "causal_actor": "Scheduled and algorithmic participants concentrating aggressive USD-M perpetual orders at recurring UTC quarter-hour boundaries.",
+    "economic_premise": "A concentrated burst of aggressive perpetual buying can reveal information or urgent demand before that pressure is fully incorporated into BTC spot over a slower multi-hour horizon.",
+    "ex_ante_direction": "Only positive, causally completed perpetual order-flow imbalance may later qualify a BTCUSDT spot-long decision; negative imbalance means cash, never a short.",
+    "who_pays": "Immediacy-demanding and mechanically scheduled traders pay market impact; slower cross-market assimilation is the proposed source of compensation.",
+    "persistence_case": "UTC scheduling and institutional execution constraints can recur, while a multi-hour expression is slower than latency arbitrage. Competition, venue maturation, and regime changes may erase the effect completely.",
+    "decay_and_failure_risks": [
+      "the external result may not replicate on BTCUSDT spot after fees",
+      "the effect may be contemporaneous impact rather than forward information",
+      "quarter-hour participation and direction may change across regimes",
+      "a one-minute archive may be too coarse to isolate the causal opening burst",
+      "full taker fees and adverse slippage may dominate gross movement",
+      "signal overlap with momentum may make the mechanism non-independent"
+    ],
+    "falsifiable_predictions": [
+      "positive opening-window imbalance has positive net spot expectancy in development",
+      "the moving-block bootstrap expectancy lower bound is above zero",
+      "the result survives 1.5x and 2.0x trade-level cost stress",
+      "walk-forward and regime gates pass without selecting a sign or horizon afterward",
+      "validation passes before the one-shot future holdout is opened",
+      "profit is not concentrated in one day, month, or market regime"
+    ],
+    "required_input_families": [
+      "BINANCE_USDM_BTCUSDT_AGGTRADES",
+      "BINANCE_SPOT_BTCUSDT_AGGTRADES_OR_1M_KLINES_FOR_EXECUTION",
+      "EXCHANGE_NATIVE_ARCHIVE_CHECKSUMS_AND_REVISION_RECORDS",
+      "POINT_IN_TIME_SPOT_FILTERS_AND_CONSERVATIVE_TAKER_COSTS"
+    ],
+    "observation_boundary": "A later protocol must choose one UTC quarter-hour observation duration, one imbalance normalization, one positive threshold, and one holding horizon before reading development outcomes. The decision occurs only after every trade in the observation window is available.",
+    "execution_expression": "Future research may model a taker BTCUSDT Spot buy after the causal signal window and a taker Spot exit at one frozen horizon. No perpetual order, short, borrow, leverage, maker fill, or Testnet performance claim is permitted.",
+    "exact_parameters_defined": [],
+    "exact_pine_compatible": false
+  },
+  "partitions": [
+    {
+      "partition_id": "Q1-DEVELOPMENT-2020-2023",
+      "start": "2020-01-01T00:00:00Z",
+      "end": "2024-01-01T00:00:00Z",
+      "role": "DEVELOPMENT",
+      "state": "CLOSED_PENDING_SEPARATE_PROTOCOL",
+      "outcome_access_permitted": false,
+      "purpose": "Feature arithmetic and one parameter set may be falsified here only after metadata, payload, quality, and execution protocols pass."
+    },
+    {
+      "partition_id": "Q1-VALIDATION-2024-2025",
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z",
+      "role": "VALIDATION",
+      "state": "SEALED",
+      "outcome_access_permitted": false,
+      "purpose": "Untouched Q1 validation opened only after every development gate passes."
+    },
+    {
+      "partition_id": "Q1-EXCLUDED-2026-PRECHARTER",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-07T00:00:00Z",
+      "role": "EXCLUDED_WASHOUT",
+      "state": "EXCLUDED_FROM_ALL_SELECTION_AND_SCORING",
+      "outcome_access_permitted": false,
+      "purpose": "Exclude the pre-charter 2026 interval because current-market observation and prior Aurex work make it unsuitable as a clean Q1 holdout."
+    },
+    {
+      "partition_id": "Q1-HOLDOUT-2026-08-07-2026-11-07",
+      "start": "2026-08-07T00:00:00Z",
+      "end": "2026-11-07T00:00:00Z",
+      "role": "HOLDOUT",
+      "state": "SEALED_FUTURE",
+      "outcome_access_permitted": false,
+      "purpose": "One-shot future holdout. It remains sealed until development and validation independently pass the universal factory contract."
+    },
+    {
+      "partition_id": "Q1-FORWARD-2026-11-07",
+      "start": "2026-11-07T00:00:00Z",
+      "end": null,
+      "role": "FORWARD",
+      "state": "LOCKED_FORWARD",
+      "outcome_access_permitted": false,
+      "purpose": "Potential forward paper evidence only after a passing one-shot holdout and a separate promotion decision."
+    }
+  ],
+  "feasibility_gates": [
+    "FACTORY_CONTRACT_AND_READINESS_LINEAGE_VALID",
+    "V3P02_TRANSPORT_STOP_PRESERVED_WITHOUT_RETRY_OR_OUTCOME_REUSE",
+    "BTCUSDT_SPOT_AND_USDM_AGGTRADE_ARCHIVE_METADATA_CHECKSUMS_PRESENT",
+    "SPOT_MICROSECOND_AND_FUTURES_MILLISECOND_TIMESTAMPS_NORMALIZED",
+    "AGGRESSOR_SIDE_MAPPING_PROVEN_FROM_EXCHANGE_NATIVE_FIELDS",
+    "QUARTER_HOUR_OBSERVATION_IS_CAUSAL_AND_CLOSES_BEFORE_DECISION",
+    "SPOT_AND_PERPETUAL_CLOCK_ALIGNMENT_IS_DETERMINISTIC",
+    "NO_GAP_FORWARD_FILL_INTERPOLATION_OR_SYNTHETIC_TRADE_ALLOWED",
+    "FULL_TAKER_FEES_AND_ADVERSE_SLIPPAGE_REQUIRED",
+    "TESTNET_ZERO_FEES_AND_FILLS_EXCLUDED_FROM_EDGE_EVIDENCE",
+    "NO_DERIVATIVES_ORDER_MARGIN_FUNDING_OR_LIQUIDATION_AUTHORITY",
+    "ONE_PARAMETER_SET_FROZEN_BEFORE_DEVELOPMENT_OUTCOMES",
+    "VALIDATION_HOLDOUT_AND_FORWARD_PARTITIONS_REMAIN_SEALED",
+    "UNIVERSAL_FACTORY_COST_INFERENCE_MULTIPLICITY_AND_HOLDOUT_GATES_BIND"
+  ],
+  "decision": "FREEZE_Q1_FOR_METADATA_AND_SCHEMA_FEASIBILITY_ONLY",
+  "next_authorization": "AUTHORIZE_Q1_METADATA_ONLY_BTCUSDT_ARCHIVE_CENSUS",
+  "family_predecessor_variant_count": 1,
+  "new_parameter_set_budget": 1,
+  "project_wide_variant_registry_required": true,
+  "market_numeric_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "exact_parameters_defined": [],
+  "real_market_values_opened": 0,
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "qualified_strategy_count": 0,
+  "authorizes_archive_payload_download": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_return_testing": false,
+  "authorizes_validation_access": false,
+  "authorizes_holdout_access": false,
+  "authorizes_pine_deployment": false,
+  "authorizes_paper_operation": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "External research motivates a falsifiable mechanism; it is not Aurex edge evidence.",
+    "The V3P02 transport stop and prior proposal remain immutable and count in multiplicity.",
+    "The charter authorizes metadata and checksum census design only, not a network attempt.",
+    "No archive payload, price, signal, return, parameter, candidate, or strategy was created.",
+    "Pine cannot reproduce exchange-native perpetual aggressor flow exactly.",
+    "Testnet fills and zero commissions cannot establish real-market expectancy.",
+    "Production account, legal, tax, live, and real-capital facts remain unresolved."
+  ],
+  "charter_evidence_hash": "17e9a73193a0c159aa6d3a15fea2412285e3cd12a5a4e0e52e3e27bcf4fa195b"
+}

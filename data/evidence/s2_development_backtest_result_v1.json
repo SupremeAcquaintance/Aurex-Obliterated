@@ -1,0 +1,184 @@
+{
+  "schema_version": "aurex-s2-development-backtest-result-v1",
+  "result_id": "s2-development-backtest-result-v1",
+  "completed_at": "2026-08-30T19:45:56.085853Z",
+  "protocol_file_sha256": "09fed047ba6a2a7e6234ea722e3315fbfeedb14d954383635566c6fb5ee5de50",
+  "protocol_evidence_hash": "c2f105dd9d350c0a45c2d00b29bf6e744b5dac75edb9bd8cc8aa3f7f1e8f8be8",
+  "execution_contract_file_sha256": "957e81737ff6e31b501764e9962809b594b52defe1431e26e3af64b1ba133e34",
+  "execution_contract_evidence_hash": "e954fd8d487117c8ab649bdac5bf1241040c28a8d5007c99dbbda9d967ec784f",
+  "runner_contract_hash": "acb837481be28f4b3f3a4253236c67cab156b3971261d7943b9cd484fb23c9fc",
+  "measurement_dataset_file_sha256": "513237db0a939170efb2113444fdd633a5c5dc1b397b8022b154020cfdf4b327",
+  "price_dataset_file_sha256": "6c9c09c8b6a4c484f64a366a8b66a1e939d198894117f9f91b01ea12024af156",
+  "outcome_ledger_path": "data/evidence/datasets/s2_development_backtest_ledger_v1.jsonl",
+  "outcome_ledger_file_sha256": "792a9abe0fa57e3e69af2532a0489eb918733547da66716b9b567d644e23e984",
+  "outcome_ledger_bytes": 411217,
+  "outcome_ledger_row_count": 272,
+  "candidate_outcome": {
+    "candidate_id": "S2-C1-SETTLEMENT-DEMAND-BREADTH-PRIMARY",
+    "interval_count": 272,
+    "position_transition_count": 36,
+    "long_interval_count": 76,
+    "long_exposure_fraction": "0.279411764705882352941176470588235294117647058823529411764706",
+    "base_final_equity_usd": "112.063472602313097390395411111125681031398202678511415629486",
+    "base_net_total_return": "0.12063472602313097390395411111125681031398202678511415629486",
+    "base_profit_factor": "1.02748199373037372669293691431666728509008944612872613358741",
+    "base_maximum_drawdown": "0.707740049956904089285893208176271142584762183384968050755893",
+    "base_weekly_sharpe": "0.286390017323276527748979610258184753239480719205885693937216",
+    "base_cagr": "0.02201287632899466681409403543867677254168570061984170431029",
+    "base_calmar_ratio": "0.0311030530635295843606081528489722490985152865859665783672604",
+    "stress_final_equity_usd": "109.072708363889675089922409055425735123240916269979015992266",
+    "stress_net_total_return": "0.09072708363889675089922409055425735123240916269979015992266",
+    "stress_profit_factor": "1.02070783487755994104628441793165325076189058902950560890413",
+    "stress_maximum_drawdown": "0.709273261329896086952238055348716491390621206493723461802945",
+    "stress_weekly_sharpe": "0.275631379712972554379304337039458637833234626122291368194606",
+    "annual_base_returns": {
+      "2018": "-0.598120807383478683117133882968200617542319771146670616119405",
+      "2019": "0.94638103310291287120485396253016689140046991013907300882684",
+      "2020": "-0.140838937134519193338101074314174933851310330235684646649252",
+      "2021": "0.10272009673570086551166129253799684263460656826218064244749",
+      "2022": "-0.188975330528548329833029024659939196464717807090614063220105"
+    },
+    "positive_full_calendar_year_count": 2,
+    "stress_bootstrap_lower_mean_weekly_return": "-0.00454300194938842239445260680287457919341326241980245048258930",
+    "buy_hold_base_final_equity_usd": "290.146337629290718038528896672504378283712784588441330998230",
+    "buy_hold_base_net_total_return": "1.9014633762929071803852889667250437828371278458844133099823",
+    "buy_hold_base_maximum_drawdown": "0.828779790498853660967845243170215969849480700995331929306621",
+    "base_drawdown_minus_buy_hold_drawdown": "-0.121039740541949571681952034993944827264718517610363878550728",
+    "interval_manifest_evidence_hash": "2a1600106e7363bfe938551ca0e23e61488a93c8f5e2a29d0139f0f3470fdd43",
+    "outcome_evidence_hash": "41e88492465f4fc40eec105b06858d5b27808d5c528bb17637c1faec49c584aa"
+  },
+  "gate_results": [
+    {
+      "gate_id": "EXACT_WEEKLY_INTERVAL_COUNT",
+      "operator": "EQ",
+      "threshold": "272",
+      "observed": "272",
+      "status": "PASS",
+      "reason": "Observed metric satisfies the frozen S2 development gate."
+    },
+    {
+      "gate_id": "MINIMUM_POSITION_TRANSITIONS",
+      "operator": "GE",
+      "threshold": "12",
+      "observed": "36",
+      "status": "PASS",
+      "reason": "Observed metric satisfies the frozen S2 development gate."
+    },
+    {
+      "gate_id": "MINIMUM_LONG_EXPOSURE_FRACTION",
+      "operator": "GE",
+      "threshold": "0.15",
+      "observed": "0.279411764705882352941176470588235294117647058823529411764706",
+      "status": "PASS",
+      "reason": "Observed metric satisfies the frozen S2 development gate."
+    },
+    {
+      "gate_id": "MAXIMUM_LONG_EXPOSURE_FRACTION",
+      "operator": "LE",
+      "threshold": "0.85",
+      "observed": "0.279411764705882352941176470588235294117647058823529411764706",
+      "status": "PASS",
+      "reason": "Observed metric satisfies the frozen S2 development gate."
+    },
+    {
+      "gate_id": "BASE_NET_TOTAL_RETURN_POSITIVE",
+      "operator": "GT",
+      "threshold": "0",
+      "observed": "0.12063472602313097390395411111125681031398202678511415629486",
+      "status": "PASS",
+      "reason": "Observed metric satisfies the frozen S2 development gate."
+    },
+    {
+      "gate_id": "STRESS_NET_TOTAL_RETURN_POSITIVE",
+      "operator": "GT",
+      "threshold": "0",
+      "observed": "0.09072708363889675089922409055425735123240916269979015992266",
+      "status": "PASS",
+      "reason": "Observed metric satisfies the frozen S2 development gate."
+    },
+    {
+      "gate_id": "BASE_PROFIT_FACTOR",
+      "operator": "GE",
+      "threshold": "1.10",
+      "observed": "1.02748199373037372669293691431666728509008944612872613358741",
+      "status": "FAIL",
+      "reason": "Observed metric fails the frozen S2 development gate."
+    },
+    {
+      "gate_id": "STRESS_PROFIT_FACTOR",
+      "operator": "GE",
+      "threshold": "1.00",
+      "observed": "1.02070783487755994104628441793165325076189058902950560890413",
+      "status": "PASS",
+      "reason": "Observed metric satisfies the frozen S2 development gate."
+    },
+    {
+      "gate_id": "BASE_MAXIMUM_DRAWDOWN",
+      "operator": "LE",
+      "threshold": "0.25",
+      "observed": "0.707740049956904089285893208176271142584762183384968050755893",
+      "status": "FAIL",
+      "reason": "Observed metric fails the frozen S2 development gate."
+    },
+    {
+      "gate_id": "STRESS_MAXIMUM_DRAWDOWN",
+      "operator": "LE",
+      "threshold": "0.27",
+      "observed": "0.709273261329896086952238055348716491390621206493723461802945",
+      "status": "FAIL",
+      "reason": "Observed metric fails the frozen S2 development gate."
+    },
+    {
+      "gate_id": "POSITIVE_FULL_CALENDAR_YEARS",
+      "operator": "GE",
+      "threshold": "3",
+      "observed": "2",
+      "status": "FAIL",
+      "reason": "Observed metric fails the frozen S2 development gate."
+    },
+    {
+      "gate_id": "STRESS_BOOTSTRAP_95PCT_LOWER_MEAN_WEEKLY_RETURN",
+      "operator": "GT",
+      "threshold": "0",
+      "observed": "-0.00454300194938842239445260680287457919341326241980245048258930",
+      "status": "FAIL",
+      "reason": "Observed metric fails the frozen S2 development gate."
+    },
+    {
+      "gate_id": "STRESS_WEEKLY_SHARPE",
+      "operator": "GT",
+      "threshold": "0",
+      "observed": "0.275631379712972554379304337039458637833234626122291368194606",
+      "status": "PASS",
+      "reason": "Observed metric satisfies the frozen S2 development gate."
+    },
+    {
+      "gate_id": "BASE_CALMAR_RATIO",
+      "operator": "GE",
+      "threshold": "0.50",
+      "observed": "0.0311030530635295843606081528489722490985152865859665783672604",
+      "status": "FAIL",
+      "reason": "Observed metric fails the frozen S2 development gate."
+    },
+    {
+      "gate_id": "BASE_MAXIMUM_DRAWDOWN_NOT_WORSE_THAN_BUY_AND_HOLD",
+      "operator": "LE",
+      "threshold": "0",
+      "observed": "-0.121039740541949571681952034993944827264718517610363878550728",
+      "status": "PASS",
+      "reason": "Observed metric satisfies the frozen S2 development gate."
+    }
+  ],
+  "passed_gate_count": 9,
+  "failed_gate_count": 6,
+  "candidate_count": 1,
+  "parameter_combination_count": 1,
+  "rescue_candidate_count": 0,
+  "historical_screen_values_read": 0,
+  "validation_values_read": 0,
+  "holdout_values_read": 0,
+  "orders_submitted": 0,
+  "decision": "STOP_S2_DEVELOPMENT_BACKTEST_FAILED_RETIRE_S2",
+  "next_authorization": "NONE_S2_DEVELOPMENT_BACKTEST_FAILED_RETIRE_S2",
+  "result_evidence_hash": "a9661515cbbb584ceaa8894c250f31916d8e35e9e67ea4670b21226c9a99eb54"
+}

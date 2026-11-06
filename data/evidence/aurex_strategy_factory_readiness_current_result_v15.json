@@ -1,0 +1,524 @@
+{
+  "schema_version": "aurex-strategy-factory-readiness-result-v1",
+  "result_id": "aurex-strategy-factory-readiness-baseline-v1",
+  "evaluated_at": "2026-08-27T07:50:03.325066Z",
+  "protocol_evidence_hash": "bf0392dfe2876bbb0a8b798880651ab89af887e1e16dd70e4631c2ddacc73b90",
+  "runner_contract_hash": "64d0f720f20e703c4f553636ca3975b13cde00e6f8607d492e7f29b41b102fb2",
+  "gate_results": [
+    {
+      "gate_id": "CANONICAL_PROGRAM_TRUTH",
+      "status": "PASS",
+      "summary": "Canonical control and terminal Jam evidence state the same strategy and profit truth.",
+      "checks": [
+        "Canonical checkpoint records the terminal Jam decision.",
+        "No next authorization exists for the failed Jam lineage.",
+        "Real net profit remains zero and the verified suite count is recorded."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "docs/10_PROJECT_CONTROL.md",
+          "file_sha256": "d0a8d00f3fbbbbf6ff2d73969c9a34314c0c24a4032cb5c42c957d0ef469b73e",
+          "byte_count": 322115
+        },
+        {
+          "path": "docs/31_JAM_SUCCESSOR_DEVELOPMENT_OUTCOME.md",
+          "file_sha256": "188b1c8dfdfa81de8b5dd852a778bf5483656f14f0442c82fbde657321ebe301",
+          "byte_count": 6860
+        }
+      ]
+    },
+    {
+      "gate_id": "IMMUTABLE_EVIDENCE_INTEGRITY",
+      "status": "PASS",
+      "summary": "Canonical outcome and independent audit hashes reconcile with zero sealed access.",
+      "checks": [
+        "Result and audit evidence hashes reconcile.",
+        "Audit records zero sealed-period access and zero strategy execution.",
+        "Shared evidence models enforce schema and hash validation."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "data/evidence/jam_successor_development_outcome_audit_v1.json",
+          "file_sha256": "5f658a59ac7f46be964f5c46307faef3b1503b3a37b1487346fa07ef49f3ea4f",
+          "byte_count": 1599
+        },
+        {
+          "path": "data/evidence/jam_successor_development_outcome_result_v1.json",
+          "file_sha256": "82639d4af205f089c71192856228873c13e94f8f03587560291e90583b359962",
+          "byte_count": 21952
+        },
+        {
+          "path": "src/aurex/backtest_engine/universe.py",
+          "file_sha256": "85a7bb14342f67b94a13d686fa8c92228ab6b6bcf12136c78564cd4769c0b35d",
+          "byte_count": 23496
+        },
+        {
+          "path": "tests/unit/test_jam_successor_development_outcome.py",
+          "file_sha256": "59c4009b9bb2246872bbc2f755377b73834d92aa655dfa0bb34cdba44b5456cb",
+          "byte_count": 14459
+        }
+      ]
+    },
+    {
+      "gate_id": "MARKET_DATA_LINEAGE_AND_QUALITY",
+      "status": "PASS",
+      "summary": "Dataset identity, continuity, quarantine, and validation-bundle controls exist.",
+      "checks": [
+        "Binance Vision files are checksum-bound.",
+        "Dataset records preserve source identity and gap diagnostics.",
+        "Validation bundles bind contamination and evidence hashes."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "src/aurex/backtest_engine/binance_vision.py",
+          "file_sha256": "9336417419ecb144070cff193bd9b632d5ab992069c45e792099f390588dac44",
+          "byte_count": 12289
+        },
+        {
+          "path": "src/aurex/backtest_engine/datasets.py",
+          "file_sha256": "97bcbbaf90d5b991173e013d0da4cc082f559f5c42f341b982a3619c7b7d2c22",
+          "byte_count": 26877
+        },
+        {
+          "path": "src/aurex/backtest_engine/validation_bundle.py",
+          "file_sha256": "239e9ba08b7b4effda309f8ebb2a11ceab571b301ca75ae80592400679a46ebe",
+          "byte_count": 29186
+        },
+        {
+          "path": "tests/integration/test_backtest_datasets.py",
+          "file_sha256": "87b244a139bca37233dea1609fea393b9aa824b7e59846b83980bc81179bac86",
+          "byte_count": 21301
+        },
+        {
+          "path": "tests/unit/test_validation_bundle.py",
+          "file_sha256": "ac563a091cbffc9f82986aa39fbbef07ba9b0286a37b218c8b6b911b3470df27",
+          "byte_count": 11794
+        }
+      ]
+    },
+    {
+      "gate_id": "CONTAMINATION_AND_PARTITION_ISOLATION",
+      "status": "PASS",
+      "summary": "The append-only contamination ledger is hash-valid and partition conflicts fail closed.",
+      "checks": [
+        "Canonical v2 contamination ledger validates.",
+        "Retired holdout use is represented explicitly.",
+        "Conflict checks cover strategy family, symbol, timeframe, and period."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "data/evidence/strategy_contamination_ledger_v2.json",
+          "file_sha256": "69890df964ea4a293180d465f2e4dea68ab22f9f7124835092411ad9381186b1",
+          "byte_count": 8115
+        },
+        {
+          "path": "src/aurex/backtest_engine/contamination.py",
+          "file_sha256": "da8ced2e42c027a466f3303a3c5fb99a465b1340975809162d6cf88537160f44",
+          "byte_count": 7217
+        },
+        {
+          "path": "tests/unit/test_strategy_contamination.py",
+          "file_sha256": "af23921161c323ac12b9577a432abafcdd07586e79903f513edb8d00ca976f63",
+          "byte_count": 4858
+        }
+      ]
+    },
+    {
+      "gate_id": "PREREGISTRATION_BEFORE_OUTCOMES",
+      "status": "PASS",
+      "summary": "Candidate protocols commit durably and reject prior-outcome contamination.",
+      "checks": [
+        "Protocol registration precedes candidate outcomes.",
+        "Persisted protocol hashes are re-read after commit.",
+        "Protocol consumption is immutable and single-use."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "src/aurex/backtest_engine/candidate_protocols.py",
+          "file_sha256": "dd4f5ef492396e4bb8b59ba7ce9a218d53b5baeec4b22d02e7b85d7a74753c47",
+          "byte_count": 14871
+        },
+        {
+          "path": "src/aurex/backtest_engine/service.py",
+          "file_sha256": "3512a99320a8b48d6c639b292c1a108ed6b28246fb9ff026b30e381fb01cfc23",
+          "byte_count": 128995
+        },
+        {
+          "path": "tests/integration/test_candidate_preregistration.py",
+          "file_sha256": "f98755c3d9909e2685bf4c44fe3baf4a2d3d2db8999ed1b980c44b7f07e62c08",
+          "byte_count": 11385
+        }
+      ]
+    },
+    {
+      "gate_id": "DETERMINISTIC_REPLAY_AND_RECONCILIATION",
+      "status": "PASS",
+      "summary": "Replay, trade, walk-forward, and parity evidence are deterministic and reconcilable.",
+      "checks": [
+        "Reference replay persists deterministic evidence identity.",
+        "Trade and walk-forward evidence hashes are recomputed during eligibility.",
+        "Parity reports mismatches rather than silently accepting aggregates."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "src/aurex/backtest_engine/parity.py",
+          "file_sha256": "d7340d718404bf43d5deffefb687d4ec9e7b746c5dcaf7e6f2d515f0f5272446",
+          "byte_count": 54484
+        },
+        {
+          "path": "src/aurex/backtest_engine/reference_replay.py",
+          "file_sha256": "6227cd4254c2d58df7b2b9a79ccc0db32ca6f4c5e761f4a3d3ce0773060bcd41",
+          "byte_count": 84500
+        },
+        {
+          "path": "src/aurex/backtest_engine/service.py",
+          "file_sha256": "3512a99320a8b48d6c639b292c1a108ed6b28246fb9ff026b30e381fb01cfc23",
+          "byte_count": 128995
+        },
+        {
+          "path": "tests/integration/test_backtest_lab.py",
+          "file_sha256": "7fde19e4526929b3265a3276a9e836e027ee1c1df75a0c047df4c5c5ec3c8132",
+          "byte_count": 54175
+        },
+        {
+          "path": "tests/integration/test_reference_replay.py",
+          "file_sha256": "7dbc25a50940cb99235a641622d3f3eeccdfbd530f2ed5218d65647f1d46f4e2",
+          "byte_count": 34489
+        }
+      ]
+    },
+    {
+      "gate_id": "UNIVERSAL_COST_STRESS_AND_INFERENCE",
+      "status": "PASS",
+      "summary": "Candidate-specific research engines contain strong controls, but the reusable acceptance schema does not mandate them for every candidate.",
+      "checks": [
+        "Generic acceptance already requires OOS, walk-forward, regime, drawdown, and concentration evidence.",
+        "Universal robustness requirement anchors present: 4/4.",
+        "Lineage-specific engines demonstrate cost-stress capability but do not create a universal contract."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "src/aurex/backtest_engine/research_execution_spec.py",
+          "file_sha256": "aa479dbe683e168909df378315288b4bfd68fa034eb04a4f9495aa2b8d8f217e",
+          "byte_count": 14583
+        },
+        {
+          "path": "src/aurex/backtest_engine/schemas.py",
+          "file_sha256": "8b2370edd1b69e9bf04369cd3a1b77611e787cf6d122e4c16cbb4109bd87d52d",
+          "byte_count": 30231
+        },
+        {
+          "path": "src/aurex/backtest_engine/service.py",
+          "file_sha256": "3512a99320a8b48d6c639b292c1a108ed6b28246fb9ff026b30e381fb01cfc23",
+          "byte_count": 128995
+        },
+        {
+          "path": "tests/integration/test_backtest_lab.py",
+          "file_sha256": "7fde19e4526929b3265a3276a9e836e027ee1c1df75a0c047df4c5c5ec3c8132",
+          "byte_count": 54175
+        }
+      ]
+    },
+    {
+      "gate_id": "CANDIDATE_LIFECYCLE_AND_RETIREMENT",
+      "status": "PASS",
+      "summary": "Retirement is strongly preserved in research evidence, but the shared strategy registry does not yet enforce lifecycle state.",
+      "checks": [
+        "Registered strategies default disabled.",
+        "Paper promotion independently requires accepted evidence.",
+        "Machine-readable retired/quarantined lifecycle enforcement is checked."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "src/aurex/backtest_engine/contamination.py",
+          "file_sha256": "da8ced2e42c027a466f3303a3c5fb99a465b1340975809162d6cf88537160f44",
+          "byte_count": 7217
+        },
+        {
+          "path": "src/aurex/strategy_engine/registry.py",
+          "file_sha256": "28047c7d918279efd8cac3213c4324fde55a62409e18981e7c128b1e8a2e6164",
+          "byte_count": 8503
+        },
+        {
+          "path": "src/aurex/strategy_engine/service.py",
+          "file_sha256": "6df2240d933b2f2912cc78c6f679559b29cb97d2cd2bac8319b2a1f7a8f7f998",
+          "byte_count": 77006
+        },
+        {
+          "path": "tests/integration/test_strategy_portfolio.py",
+          "file_sha256": "b78596530d029155d2141376de8256826fc6bac3898a89ed5aa8e0033db79827",
+          "byte_count": 11580
+        }
+      ]
+    },
+    {
+      "gate_id": "FAIL_CLOSED_PAPER_PROMOTION",
+      "status": "PASS",
+      "summary": "Paper risk approval requires accepted, intact, scope-matched backtest and signal evidence.",
+      "checks": [
+        "Strategy enabled state is insufficient by itself.",
+        "Persisted trades, protocol identity, OOS, regime, and walk-forward evidence are re-audited.",
+        "Signal version and settings fingerprint must match accepted evidence."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "src/aurex/backtest_engine/eligibility.py",
+          "file_sha256": "5be8e435618dbdcd7d21f74bef077c68b5aed0189e8e16170ad40956a871a8c4",
+          "byte_count": 18383
+        },
+        {
+          "path": "src/aurex/risk_engine/service.py",
+          "file_sha256": "8adc3170b4e81cfbbd08f76988a4fad2fa5ca277aaa28f35d17e5d5f71b9142d",
+          "byte_count": 21000
+        },
+        {
+          "path": "tests/integration/test_backtest_source_eligibility.py",
+          "file_sha256": "eed38dd029c752a88509cd07eff06d6c2e2925ca4447b3b80934ccd1625ab0e9",
+          "byte_count": 9775
+        },
+        {
+          "path": "tests/integration/test_risk_engine.py",
+          "file_sha256": "b34762b2c44ebddc679d1b200591187c632a1de0e5b4386b62fe411719382f31",
+          "byte_count": 14867
+        }
+      ]
+    },
+    {
+      "gate_id": "AUTHENTICATED_SIGNAL_DELIVERY",
+      "status": "PARTIAL",
+      "summary": "Webhook delivery controls are code-ready, but no genuine external proof artifact exists.",
+      "checks": [
+        "Exact request body and sender policy are evidence-bound.",
+        "Idempotent normalization and side-effect checks exist.",
+        "Genuine external proof artifact present: False."
+      ],
+      "blockers": [
+        "genuine_tradingview_external_proof_missing"
+      ],
+      "source_evidence": [
+        {
+          "path": "src/aurex/signal_gateway/tradingview_delivery.py",
+          "file_sha256": "a60e90504532e2b410ecc894bd36fe8379f7a9ba0b27008141606e8ff266c92b",
+          "byte_count": 3745
+        },
+        {
+          "path": "src/aurex/signal_gateway/tradingview_external_proof.py",
+          "file_sha256": "95b05b34811ecd2ac927d9090cbd6259ade42632fe37194f6fc690c67c688d5c",
+          "byte_count": 20534
+        },
+        {
+          "path": "tests/unit/test_tradingview_delivery.py",
+          "file_sha256": "cd2aae3ddc27cf9b3e2680d3a6183b99299da66ac4d79d16fa758cf5ca6744d7",
+          "byte_count": 2542
+        },
+        {
+          "path": "tests/unit/test_tradingview_external_proof.py",
+          "file_sha256": "99014cd2b003f3715b1fcd656828720486fa4460802566b5e4f0e9cea47030ef",
+          "byte_count": 11668
+        }
+      ]
+    },
+    {
+      "gate_id": "EVIDENCE_GRADE_PAPER_EXECUTION",
+      "status": "PASS",
+      "summary": "Paper orders and trades preserve explicit fill, fee, slippage, and position evidence.",
+      "checks": [
+        "Only risk-approved signals can execute.",
+        "Modeled execution enforces a conservative cost floor.",
+        "Imported paper evidence preserves source hashes and reconciliation context."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "src/aurex/execution_engine/paper.py",
+          "file_sha256": "23e7cbc069d04bc5272fbae4458e66fbb51da457629eaab933fedad7268956fd",
+          "byte_count": 22524
+        },
+        {
+          "path": "tests/integration/test_paper_evidence_import.py",
+          "file_sha256": "6e797d840b6cdc143bfb5779ca1a603a3850ae3b1b0bbe3b79931998f596c719",
+          "byte_count": 24719
+        },
+        {
+          "path": "tests/integration/test_tradingview_webhook.py",
+          "file_sha256": "7192f659f0bd23eaac6d0caf58571eb2e99a7de504695adb86b1988bbf7945d9",
+          "byte_count": 21409
+        }
+      ]
+    },
+    {
+      "gate_id": "RISK_LIMITS_AND_KILL_SWITCH",
+      "status": "PASS",
+      "summary": "Risk approval fails closed on kill, stale, loss, exposure, regime, and evidence gates.",
+      "checks": [
+        "Position size derives from equity, stop distance, and bounded risk.",
+        "Daily, weekly, per-strategy, and account exposure limits exist.",
+        "Kill switch and stale signals reject before paper execution."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "src/aurex/risk_engine/calculations.py",
+          "file_sha256": "f4eea60cb14faf3410b2fdf3f2c1c06234ad984ac671c0d63472e4919b2f813d",
+          "byte_count": 1316
+        },
+        {
+          "path": "src/aurex/risk_engine/service.py",
+          "file_sha256": "8adc3170b4e81cfbbd08f76988a4fad2fa5ca277aaa28f35d17e5d5f71b9142d",
+          "byte_count": 21000
+        },
+        {
+          "path": "tests/integration/test_risk_engine.py",
+          "file_sha256": "b34762b2c44ebddc679d1b200591187c632a1de0e5b4386b62fe411719382f31",
+          "byte_count": 14867
+        },
+        {
+          "path": "tests/unit/test_risk_calculations.py",
+          "file_sha256": "0aa1219b456d63b61f5536301c7f18e2171eb01cd6d57e1ea2f3e46979911cc0",
+          "byte_count": 1227
+        }
+      ]
+    },
+    {
+      "gate_id": "EXCHANGE_SANDBOX_QUALIFICATION",
+      "status": "PASS",
+      "summary": "Binance Spot Testnet Phase 2A-D is independently qualified without live authority.",
+      "checks": [
+        "Authenticated order lifecycle and fill/fee/balance reconciliation passed.",
+        "User stream, REST gap recovery, restart idempotency, kill-stop, and soak passed.",
+        "Qualified adapter evidence grants no strategy or production authority."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "data/evidence/binance_spot_testnet_fill_fee_audit_20260731T091050Z.json",
+          "file_sha256": "6ca045ea4ea3a6a082067c7c57f97790112221f72afc3ca1a2d6e4e80420de53",
+          "byte_count": 1513
+        },
+        {
+          "path": "data/evidence/binance_spot_testnet_restart_soak_audit_20260731T125305Z.json",
+          "file_sha256": "d23ff2ba31ab39a2a61b2d164f86f527044a4d8d9aafc60cf91f04dbbfab6487",
+          "byte_count": 1456
+        },
+        {
+          "path": "data/evidence/binance_spot_testnet_user_stream_audit_20260731T100023Z.json",
+          "file_sha256": "3f3bcd3f820c839b73fdc0349ed01987b0ce889e51e80f108d525e7eba963e4d",
+          "byte_count": 1415
+        },
+        {
+          "path": "src/aurex/broker_engine/binance_spot_testnet.py",
+          "file_sha256": "3535a53986fbf035e1569c7895a78079952580253a21be314f779c4ed05a712b",
+          "byte_count": 45045
+        },
+        {
+          "path": "tests/unit/test_binance_testnet_restart_soak.py",
+          "file_sha256": "8288c279faf4b0b42b80e488256a1059882b47cfcd7210e91542816a2a2b7c2b",
+          "byte_count": 13671
+        }
+      ]
+    },
+    {
+      "gate_id": "LIVE_EXECUTION_ISOLATION",
+      "status": "PASS",
+      "summary": "Live order submission is intentionally unimplemented and activation attempts remain audit-only.",
+      "checks": [
+        "Platform live flag defaults false.",
+        "Configured adapter defaults disabled and cannot submit orders.",
+        "Activation service records blockers while forcing plan live state false."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "src/aurex/config/settings.py",
+          "file_sha256": "39ed394822dda4d3d96a353d1f532df3a3a64ca3f45d4fbf914eaabbc5ca0797",
+          "byte_count": 1872
+        },
+        {
+          "path": "src/aurex/live_deployment/execution_adapter.py",
+          "file_sha256": "c36bd68130fbddc13c053d80d5094790e21ce80ba0cc4d72fef65ab0855ca431",
+          "byte_count": 3494
+        },
+        {
+          "path": "src/aurex/live_deployment/service.py",
+          "file_sha256": "f8b01743d007f9e9bc5b89d9a32eb33da89d62d4b0c483fde0ba3baf9a6ad3b0",
+          "byte_count": 199935
+        },
+        {
+          "path": "tests/integration/test_live_micro_deployment.py",
+          "file_sha256": "8287eedf2a01b2b4bbea6558afb07a92d5bef562f6a4af39c0b7f12f20ff0618",
+          "byte_count": 117124
+        }
+      ]
+    },
+    {
+      "gate_id": "OPERATOR_READINESS_VISIBILITY",
+      "status": "PASS",
+      "summary": "Operator strategy context is derived from canonical readiness and lifecycle authority.",
+      "checks": [
+        "Canonical readiness API present: True.",
+        "Canonical readiness UI present: True.",
+        "Authority-aware strategy context present: True.",
+        "Stale hard-coded core strategy guidance present: False."
+      ],
+      "blockers": [],
+      "source_evidence": [
+        {
+          "path": "apps/frontend/app.js",
+          "file_sha256": "a8daac32c915f9bd4f342bd17bd1ffcf4ef8bd972353836bb1e884beffad2817",
+          "byte_count": 278183
+        },
+        {
+          "path": "apps/frontend/index.html",
+          "file_sha256": "6541762cc3657665d56bcb1850675f4f5c9aae4e94eb5760603d67e5406435e9",
+          "byte_count": 111184
+        },
+        {
+          "path": "src/aurex/api/routes/system.py",
+          "file_sha256": "fbf9a8cbd22ca7d831be150411f42b9215bd2eb6f57dde89d92e80ea7d41ed22",
+          "byte_count": 54302
+        },
+        {
+          "path": "tests/integration/test_dashboard.py",
+          "file_sha256": "5e49948c96987c57e72694cc07c52525ac8b394c1f49572937ce71b818c3fc1e",
+          "byte_count": 46823
+        }
+      ]
+    }
+  ],
+  "passed_gate_count": 14,
+  "partial_gate_count": 1,
+  "failed_gate_count": 0,
+  "research_required_gate_count": 14,
+  "research_blocking_gate_ids": [],
+  "strategy_research_ready": true,
+  "paper_operation_ready": false,
+  "sandbox_strategy_use_ready": false,
+  "production_ready": false,
+  "live_ready": false,
+  "decision": "PASS_AUREX_STRATEGY_FACTORY_READY_FOR_NEW_MECHANISM_CHARTER_ONLY",
+  "next_action": "DESIGN_ONE_NEW_UNRELATED_MECHANISM_CHARTER_ONLY",
+  "external_tradingview_proof_present": false,
+  "qualified_strategy_count": 0,
+  "real_market_values_opened": 0,
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "A passing capability gate does not establish a profitable strategy.",
+    "No candidate is historically, paper, sandbox-strategy, production, or live eligible.",
+    "Operational TradingView delivery remains unproven without a genuine external artifact.",
+    "Production account, legal, tax, and real-capital facts remain unresolved.",
+    "The baseline audit inspects source and existing evidence only."
+  ],
+  "result_evidence_hash": "9e25605d0ccd64804c78749f9c3c8a058228faaead66e55b43a8a32789a69a7b"
+}

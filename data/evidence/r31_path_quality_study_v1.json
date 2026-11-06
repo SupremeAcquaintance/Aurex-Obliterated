@@ -1,0 +1,241 @@
+{
+  "schema_version": "aurex-r3.1-path-consistency-study-protocol-v1",
+  "study_id": "r3.1-cross-sectional-path-quality-spot-v1",
+  "study_version": "1.0.0",
+  "registered_at": "2026-07-23T08:59:29.900829Z",
+  "status": "FROZEN_PRE_R31_OUTCOME",
+  "research_class": "DEVELOPMENT_ONLY_MECHANISM_FOLLOW_UP",
+  "mechanism_family": "CROSS_SECTIONAL_MOMENTUM_PATH_QUALITY",
+  "hypothesis": "For the fixed Aurex 84-day formation and 14-day rebalance schedule, cross-sectional ranking by a positive, path-consistent log-price trend will be temporally more reliable after costs than ranking by endpoint return because gradual price adjustment should produce both a stronger positive slope and higher regression fit, while isolated jumps and noisy reversals should receive weaker scores.",
+  "falsification_claim": "The path-quality mechanism is not supported if its single fixed primary misses any preregistered profitability, drawdown, trade-count, 4-of-6 quarter, double-cost, leave-one-market-out, or concentration gate. A failure stops this cross-sectional momentum family without a rescue variant, parameter change, gate change, or sealed-data inspection.",
+  "known_outcome_boundary": {
+    "parent_r3_verdict": "NO_CANDIDATE",
+    "parent_r3_passed_gates": 9,
+    "parent_r3_total_gates": 10,
+    "parent_r3_positive_folds": 3,
+    "parent_r3_required_positive_folds": 4,
+    "failure_analysis_decision": "PROPOSE_BOUNDED_R3_1",
+    "r31_outcome_known": false
+  },
+  "parent_r3_protocol_evidence_hash": "8af37e15ca08bcbbdd82c457927d5a4b5039e70f173ff735c16c91a3bed4f893",
+  "parent_r3_execution_spec_evidence_hash": "7125758ab4b4672576db8de49d8f67f5988f02dc5c39e2d94d36ae2e7edb6eb6",
+  "parent_r3_result_ledger_evidence_hash": "dd751538457a4876ee38fbe7b139cace3b30a81f8846a0ec3e93114fa82d282c",
+  "failure_protocol_evidence_hash": "62ec8d11920cc4634f624ca7ce11fa93a7dc3bebd9871122984aff21e1da7725",
+  "failure_package_evidence_hash": "7863931e7a391f693a788339b583bf5c586a98a41424419aac0d774551cfbbdb",
+  "failure_result_evidence_hash": "52a766a8d0c7e586b340ee28f5900320ed74cc0c57ddab12c4c1367026b40cab",
+  "universe_manifest_evidence_hash": "dacc57f649846f716b8134aa0abba5accc78b0f1607d653addb0df3d9e132a74",
+  "development_dataset_bundle_evidence_hash": "fba63b8e237220c760daf902f2c999e9b01121357a4cc583c9fa5cb50b83d341",
+  "contamination_ledger_hash": "9f7face6a22a51b2a0b20d653561396fb6415f532ad0fecd883b3c6e6c132207",
+  "builder_contract_hash": "a95804a6fc6256b49401aeaf050a242f4d9c39e28a00793801c3cc00f3dd4002",
+  "venue": "BINANCE",
+  "market_type": "SPOT",
+  "quote_asset": "USDT",
+  "timeframe": "4h",
+  "development_data_start": "2023-01-01T00:00:00Z",
+  "development_data_end": "2025-01-01T00:00:00Z",
+  "evaluation_start": "2023-07-01T00:00:00Z",
+  "evaluation_end": "2025-01-01T00:00:00Z",
+  "decision_symbols": [
+    "AAVEUSDT",
+    "ADAUSDT",
+    "APEUSDT",
+    "APTUSDT",
+    "ATOMUSDT",
+    "AVAXUSDT",
+    "BCHUSDT",
+    "BNBUSDT",
+    "CFXUSDT",
+    "CRVUSDT",
+    "DOGEUSDT",
+    "DOTUSDT",
+    "DYDXUSDT",
+    "ETCUSDT",
+    "FETUSDT",
+    "FILUSDT",
+    "FTMUSDT",
+    "GALAUSDT",
+    "GRTUSDT",
+    "ICPUSDT",
+    "INJUSDT",
+    "LDOUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "LUNCUSDT",
+    "MKRUSDT",
+    "NEARUSDT",
+    "OPUSDT",
+    "RUNEUSDT",
+    "SANDUSDT",
+    "SHIBUSDT",
+    "STXUSDT",
+    "TRXUSDT",
+    "UNIUSDT",
+    "XRPUSDT"
+  ],
+  "diagnostic_only_symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "forbidden_partitions": [
+    "FORWARD",
+    "HOLDOUT",
+    "VALIDATION"
+  ],
+  "signal": {
+    "signal_id": "xsmom_path_quality_84d_14d_primary",
+    "lookback_intervals": 504,
+    "close_observations": 505,
+    "rebalance_bars": 84,
+    "input_price": "CLOSE",
+    "input_bar_rule": "505_COMPLETED_CLOSES_SPANNING_504_INTERVALS_ENDING_AT_SIGNAL_CLOSE",
+    "regression_x": "INTEGER_INDEX_0_THROUGH_504",
+    "regression_y": "NATURAL_LOG_OF_CLOSE",
+    "score_formula": "OLS_SLOPE_TIMES_R_SQUARED",
+    "eligibility_rule": "OLS_SLOPE_STRICTLY_POSITIVE",
+    "degenerate_rule": "ZERO_SCORE_AND_REJECT_IF_SST_OR_SXX_IS_ZERO",
+    "ranking_order": "SCORE_DESCENDING_THEN_SYMBOL_ASCENDING",
+    "selected_fraction": "0.20",
+    "parameter_search_allowed": false
+  },
+  "folds": [
+    {
+      "fold_id": "fold-01-2023q3",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2023-10-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-02-2023q4",
+      "evaluation_start": "2023-10-01T00:00:00Z",
+      "evaluation_end": "2024-01-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-03-2024q1",
+      "evaluation_start": "2024-01-01T00:00:00Z",
+      "evaluation_end": "2024-04-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-04-2024q2",
+      "evaluation_start": "2024-04-01T00:00:00Z",
+      "evaluation_end": "2024-07-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-05-2024q3",
+      "evaluation_start": "2024-07-01T00:00:00Z",
+      "evaluation_end": "2024-10-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-06-2024q4",
+      "evaluation_start": "2024-10-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "portfolio": {
+    "direction": "LONG_SPOT_ONLY",
+    "initial_capital": "1000",
+    "weighting_method": "ATR_RISK_WITH_EXPOSURE_CAPS",
+    "volatility_lookback_bars": 168,
+    "atr_lookback_bars": 84,
+    "catastrophe_stop_atr_multiple": "3",
+    "risk_per_position_percent": "0.50",
+    "max_symbol_exposure_percent": "20",
+    "max_gross_exposure_percent": "100",
+    "max_open_positions": 7,
+    "minimum_ranked_positions": 3,
+    "cash_when_insufficient_positive_markets": true,
+    "rebalance_semantics": "FULL_ROTATION",
+    "signal_semantics": "CLOSED_4H_BAR",
+    "entry_semantics": "NEXT_4H_OPEN",
+    "exit_semantics": "NEXT_REBALANCE_OR_FIXED_ATR_STOP",
+    "stop_gap_semantics": "BAR_OPEN_IF_BELOW_STOP_ELSE_STOP",
+    "same_bar_semantics": "NO_ENTRY_AND_STOP_ON_SAME_BAR",
+    "no_leverage": true,
+    "no_shorting": true,
+    "no_pyramiding": true,
+    "quantity_increment_assumption": "1E-8",
+    "price_increment_assumption": "1E-8"
+  },
+  "costs": {
+    "commission_percent_per_side": "0.10",
+    "adverse_slippage_percent_per_side": "0.05",
+    "funding_percent": "0",
+    "borrow_percent": "0",
+    "stress_multipliers": [
+      "1",
+      "1.5",
+      "2"
+    ]
+  },
+  "gates": {
+    "primary_net_pl_strictly_positive": true,
+    "minimum_primary_profit_factor": "1.10",
+    "maximum_primary_drawdown_percent": "20",
+    "minimum_primary_completed_trades": 100,
+    "minimum_positive_quarterly_folds": 4,
+    "total_quarterly_folds": 6,
+    "double_cost_net_pl_strictly_positive": true,
+    "minimum_leave_one_market_out_positive_fraction": "0.80",
+    "maximum_single_symbol_gross_profit_fraction": "0.30",
+    "maximum_top_five_gross_profit_fraction": "0.65",
+    "all_gates_required": true
+  },
+  "selection_control": {
+    "selectable_primary_count": 1,
+    "selectable_parameter_sets": 1,
+    "falsification_variants": 0,
+    "adaptive_parameter_selection": false,
+    "nested_selection_required": false,
+    "multiplicity_treatment": "NO_CORRECTION_REQUIRED_FOR_ONE_FIXED_SELECTABLE_HYPOTHESIS",
+    "development_pass_creates_eligible_strategy": false,
+    "post_pass_action": "FREEZE_SEPARATE_R4_CANDIDATE_BEFORE_ONE_SHOT_2025_VALIDATION",
+    "failure_action": "STOP_CROSS_SECTIONAL_MOMENTUM_FAMILY",
+    "rescue_variants_allowed": false
+  },
+  "required_diagnostics": [
+    "accepted_and_rejected_opportunities",
+    "cost_decomposition",
+    "cost_stress",
+    "drawdown_and_exposure_over_time",
+    "leave_one_market_out",
+    "monthly_net_returns",
+    "ols_slope_and_r_squared_at_rebalance",
+    "quarterly_fold_results",
+    "score_distribution_at_rebalance",
+    "symbol_gross_profit_concentration",
+    "turnover"
+  ],
+  "external_evidence": [
+    {
+      "evidence_id": "CRYPTO_CROSS_SECTIONAL_FACTOR",
+      "citation": "Liu, Tsyvinski, and Wu (2022), Common Risk Factors in Cryptocurrency, Journal of Finance 77(2), 1133-1177.",
+      "url": "https://www.nber.org/papers/w25882",
+      "relevance": "Documents cryptocurrency market, size, and momentum factors and supports testing cross-sectional momentum as an economic mechanism.",
+      "limitation": "Its factor evidence is not a guarantee that Aurex's long-only, costed spot implementation or this exact signal has positive edge."
+    },
+    {
+      "evidence_id": "CRYPTO_MOMENTUM_REVERSAL",
+      "citation": "Dobrynskaya (2023), Cryptocurrency Momentum and Reversal, Journal of Alternative Investments 26(1), 65-76.",
+      "url": "https://doi.org/10.3905/jai.2023.1.189",
+      "relevance": "Finds crypto momentum and reversal vary materially by formation and holding horizon, supporting strict temporal falsification.",
+      "limitation": "Its broad 2014-2020 universe and long-short portfolio construction differ from Aurex and argue against assuming slow momentum persists."
+    },
+    {
+      "evidence_id": "CRYPTO_REALISTIC_ASSUMPTIONS",
+      "citation": "Han, Kang, and Ryu (2026 revision), Momentum in the Cryptocurrency Market: A Comprehensive Analysis under Realistic Assumptions.",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4675565",
+      "relevance": "Reports weak cross-sectional momentum under realistic costs and fat-tailed outcomes, supporting the all-gates stop rule.",
+      "limitation": "Its design and leverage assumptions differ from Aurex; it is adverse prior evidence, not proof that this study must fail."
+    },
+    {
+      "evidence_id": "MOMENTUM_PRICE_PATH",
+      "citation": "Grinblatt and Han (2005), Prospect Theory, Mental Accounting, and Momentum, Journal of Financial Economics 78(2), 311-339.",
+      "url": "https://www.nber.org/papers/w8734",
+      "relevance": "Provides a behavioral mechanism in which momentum profitability depends on the path of past prices, motivating a path-aware signal.",
+      "limitation": "The evidence is from equities and does not validate OLS trend quality in cryptocurrency; R3.1 must earn support from its gates."
+    }
+  ],
+  "preexisting_r31_result_artifacts": [],
+  "r31_outcome_fields_inspected": [],
+  "decision_rule": "IF_ALL_GATES_PASS_FREEZE_SEPARATE_R4_CANDIDATE_ELSE_STOP_FAMILY",
+  "protocol_evidence_hash": "dba4e1282533d5a93825eb1b6bd8b8e854f4146218bd70d5633f9a489b7030b5"
+}

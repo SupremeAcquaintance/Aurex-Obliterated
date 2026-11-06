@@ -1,0 +1,953 @@
+{
+  "schema_version": "aurex-s5-targeted-completeness-correction-result-v1",
+  "result_id": "s5-targeted-completeness-correction-result-v1",
+  "started_at": "2026-09-04T14:47:48.949811Z",
+  "completed_at": "2026-09-04T14:47:54.076067Z",
+  "elapsed_seconds": 5.126256,
+  "protocol_evidence_hash": "c3861c112d41d233ac28f7751eab5fae347b075c9984d41792ee54495ce0df8f",
+  "protocol_audit_evidence_hash": "b77bdc2fa9bff2a30bf4ddd9fd6423e98f73ca626325b067bb6b2af8405249bb",
+  "execution_contract_evidence_hash": "b9e28bf45138dfeec22c954e616fdf1da0b626b6a0a40715a40ac1e8736078fe",
+  "execution_contract_audit_evidence_hash": "e0de16bf7f19c69c429f1d254ec3281c4960404011ec36528692887acb778cd7",
+  "runner_contract_hash": "a78b5de5ba416eca2beff06c0312dd4d9f3bcc1bc29d287dc50c8ef78a8f0951",
+  "target_manifest_evidence_hash": "05c335cafec64026bf2ef7a086eb069ad3cdce6782489309536d9934a71b1ea7",
+  "history_dataset_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "full_graph_stream_sha256": "2daa2b52454914861a3429f256fb910c2724ab7da693c32d2622c77c259ce662",
+  "full_graph_commit_count": 50395,
+  "first_parent_commit_count": 17543,
+  "first_parent_merge_count": 16721,
+  "recognized_target_reachable_count": 83,
+  "commit_diagnostics": [
+    {
+      "sequence": 1,
+      "pull_number": 18568,
+      "census_merge_commit_sha": "bfd910cae4e5f8ae9a6ec9dea02a9c28d023b8cb",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#18568: doc: Clarify developer notes about constant naming",
+      "first_line_sha256": "0edde9de2ee97624741ffe33ab3e2456f26ac0dced3f158319c1f2649b8d0962",
+      "census_first_line_sha256": "0edde9de2ee97624741ffe33ab3e2456f26ac0dced3f158319c1f2649b8d0962",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 2,
+      "pull_number": 20233,
+      "census_merge_commit_sha": "803ef70fd9f65ef800567ff9456fac525bc3e3c2",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#20233: addrman: Make consistency checks a runtime option",
+      "first_line_sha256": "d9268b39e848e2266ed31c5afbf34ff029abcc68768d8a39c7993ec2788c4c71",
+      "census_first_line_sha256": "d9268b39e848e2266ed31c5afbf34ff029abcc68768d8a39c7993ec2788c4c71",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 3,
+      "pull_number": 20354,
+      "census_merge_commit_sha": "531c2b7c04898f5a2097f44e8c12bfb2f53aaf9b",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#20354: test: Add feature_taproot.py --previous_release",
+      "first_line_sha256": "45d11753c9a8d2ff91f92b8f96f1eff4b8d6af7ec72228da8e012c3f910cb2c0",
+      "census_first_line_sha256": "45d11753c9a8d2ff91f92b8f96f1eff4b8d6af7ec72228da8e012c3f910cb2c0",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 4,
+      "pull_number": 21329,
+      "census_merge_commit_sha": "722776c0fd218cc41ccb741453c58190c71e64f9",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#21329: descriptor wallet: Cache last hardened xpub and use in normalized descriptors",
+      "first_line_sha256": "e00745942ff5588255b64c6b124ff34621e644612d85021feeef8e458b0f0e22",
+      "census_first_line_sha256": "e00745942ff5588255b64c6b124ff34621e644612d85021feeef8e458b0f0e22",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 5,
+      "pull_number": 21943,
+      "census_merge_commit_sha": "64059b78f59e45cc4200ca76d0af8c6dff8a20d4",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#21943: Dedup and RAII-fy the creation of a copy of CConnman::vNodes",
+      "first_line_sha256": "94c092fbc0755a2d7d871002bf5bad2b7e2e52fdcc2926695a123d1cc6546cfe",
+      "census_first_line_sha256": "94c092fbc0755a2d7d871002bf5bad2b7e2e52fdcc2926695a123d1cc6546cfe",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 6,
+      "pull_number": 22226,
+      "census_merge_commit_sha": "6401de0133e32a641ed9e78a85b3aa337c75d190",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22226: doc: add unittest core dump instructions",
+      "first_line_sha256": "ecdf570b9e56706b3366cd949f4320cb130261c74bd80279ed10016b3f3c11ce",
+      "census_first_line_sha256": "ecdf570b9e56706b3366cd949f4320cb130261c74bd80279ed10016b3f3c11ce",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 7,
+      "pull_number": 22340,
+      "census_merge_commit_sha": "4e1de1fc59057c5f6fe15a02acd922e158e91292",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22340: p2p: Use legacy relaying to download blocks in blocks-only mode",
+      "first_line_sha256": "d53c6002aee55e572c56ceb0d83d435c4f5a55a5ca3413cd787c371121bc0d6b",
+      "census_first_line_sha256": "d53c6002aee55e572c56ceb0d83d435c4f5a55a5ca3413cd787c371121bc0d6b",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 8,
+      "pull_number": 22349,
+      "census_merge_commit_sha": "8cdf91735f2bdc55577d84a9915f5920ce23b00a",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22349: doc: repository IRC updates",
+      "first_line_sha256": "d0813e804e971fbc539c16d6f8aeb6984b5ac0c49014efded6c3869b3dd3efbc",
+      "census_first_line_sha256": "d0813e804e971fbc539c16d6f8aeb6984b5ac0c49014efded6c3869b3dd3efbc",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 9,
+      "pull_number": 22469,
+      "census_merge_commit_sha": "7fc9a45f47bf69ae8768ce3a8acd4c8216e93fc2",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22469: build: Add support for Android NDK r22+",
+      "first_line_sha256": "c1e0725e155962282ccc6105e1cf35776f7cc1b9265430e8ec7a6c32d8f5943d",
+      "census_first_line_sha256": "c1e0725e155962282ccc6105e1cf35776f7cc1b9265430e8ec7a6c32d8f5943d",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 10,
+      "pull_number": 22597,
+      "census_merge_commit_sha": "31a481be297bd76e6e78c6d03e8e7ff2d6fbcd38",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22597: consensus/params: simplify ValidDeployment check to avoid gcc warning",
+      "first_line_sha256": "67612a488797afdfbd1dbbeacac85838c08496df674eade82916cdb3bf39eefb",
+      "census_first_line_sha256": "67612a488797afdfbd1dbbeacac85838c08496df674eade82916cdb3bf39eefb",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 11,
+      "pull_number": 22619,
+      "census_merge_commit_sha": "f4328ebef52f51a5ee45cc42815c91ccd28b0669",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22619: test: refactor: use consistent bytes <-> hex-string conversion in functional test framework",
+      "first_line_sha256": "47b598b2a9e81aca74e20bfb764e16d72981e3d7e3886d93ac35b9a69f136981",
+      "census_first_line_sha256": "47b598b2a9e81aca74e20bfb764e16d72981e3d7e3886d93ac35b9a69f136981",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 12,
+      "pull_number": 22627,
+      "census_merge_commit_sha": "f3dbd1c2b2bc2b8edae657f79a2d31820b428e86",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22627: [addrman] De-duplicate Add() function",
+      "first_line_sha256": "5a1dc9f72500356146901a42c829e673967ad9f59724d9d0769b133645b29751",
+      "census_first_line_sha256": "5a1dc9f72500356146901a42c829e673967ad9f59724d9d0769b133645b29751",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 13,
+      "pull_number": 22684,
+      "census_merge_commit_sha": "b935abb9eb2eeaceb5621e110e1889c2ce1b7734",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22684: test: check for invalid `-prune` parameters",
+      "first_line_sha256": "c832b1cd48d3593771d282c967f0ad6725c15f2bb77be03e33dfc5d6f285bbf8",
+      "census_first_line_sha256": "c832b1cd48d3593771d282c967f0ad6725c15f2bb77be03e33dfc5d6f285bbf8",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 14,
+      "pull_number": 22688,
+      "census_merge_commit_sha": "fdd80b0a53b4af0b29cb6e03118e2456d053a757",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22688: contrib: use `keys.openpgp.org` to retrieve builder keys",
+      "first_line_sha256": "2afd78f4e9c07bf36217ba32c36c272908895e1b0e6ba151e501e20f44bc12c3",
+      "census_first_line_sha256": "2afd78f4e9c07bf36217ba32c36c272908895e1b0e6ba151e501e20f44bc12c3",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 15,
+      "pull_number": 22872,
+      "census_merge_commit_sha": "4a8707741de2a8646d66b73d88b753fc9f4d9772",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22872: log: improve checkaddrman logging with duration in milliseconds",
+      "first_line_sha256": "cf785d5732f48442b819819ca3607318f4292c1b0c85217263ad710f7057e282",
+      "census_first_line_sha256": "cf785d5732f48442b819819ca3607318f4292c1b0c85217263ad710f7057e282",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 16,
+      "pull_number": 22952,
+      "census_merge_commit_sha": "ec7ec69c7bcaea2b301991066a06b183b50ebe11",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22952: Cleanup headers after #20788",
+      "first_line_sha256": "e7f88e45d705f5bcbf842d576611bd0c9d8c579b0abd5020fbb3fd0cd7ea43af",
+      "census_first_line_sha256": "e7f88e45d705f5bcbf842d576611bd0c9d8c579b0abd5020fbb3fd0cd7ea43af",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 17,
+      "pull_number": 22987,
+      "census_merge_commit_sha": "de2af19dc8e8c848afbc4b43b9b4092fe263364f",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22987: qa: Fix \"RuntimeError: Event loop is closed\" on Windows",
+      "first_line_sha256": "1ce877f8e1abd7bae69aaffcca2e2a2e3e1067c439bfbcfde7b2ec37aaaa88d8",
+      "census_first_line_sha256": "1ce877f8e1abd7bae69aaffcca2e2a2e3e1067c439bfbcfde7b2ec37aaaa88d8",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 18,
+      "pull_number": 22994,
+      "census_merge_commit_sha": "87780dfee8c82ea09b84e74d331db2ad6f9e75ab",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22994: ci: use Debian Bullseye in ARM CI",
+      "first_line_sha256": "800c91ce1fc70eba24ef02d2cd6508c79023b0e753ba5fc56de37b9f09de8364",
+      "census_first_line_sha256": "800c91ce1fc70eba24ef02d2cd6508c79023b0e753ba5fc56de37b9f09de8364",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 19,
+      "pull_number": 22995,
+      "census_merge_commit_sha": "7a999879d2f6961579fb1057566cbb76232c644f",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#22995: doc: Remove stale comment for CPrivKey",
+      "first_line_sha256": "d8b3721ce1148bb9af05b6cd9cfa4ce0f58957451e7e78642231333b739b208f",
+      "census_first_line_sha256": "d8b3721ce1148bb9af05b6cd9cfa4ce0f58957451e7e78642231333b739b208f",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 20,
+      "pull_number": 23064,
+      "census_merge_commit_sha": "419afa93419e6840f78cb94b4a39d826eb10e139",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23064: fuzz: Fix memory leak in system fuzz target",
+      "first_line_sha256": "4895bc433cc4891540a0a35e2deed9e607515738c86ec24877e2f8e2e8c9dc0f",
+      "census_first_line_sha256": "4895bc433cc4891540a0a35e2deed9e607515738c86ec24877e2f8e2e8c9dc0f",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 21,
+      "pull_number": 23097,
+      "census_merge_commit_sha": "efa227f5df5f5a9669dec5f1d574cf22d3c0903f",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23097: Run specified functional tests with all matching flags",
+      "first_line_sha256": "a4ef815fd31aa9848840a7e57bcd01ea95fc0b8ec7903131fe840d80f29f096c",
+      "census_first_line_sha256": "a4ef815fd31aa9848840a7e57bcd01ea95fc0b8ec7903131fe840d80f29f096c",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 22,
+      "pull_number": 23115,
+      "census_merge_commit_sha": "829c441af2f06c2ac33423d4385f0d99a68e99c0",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23115: bloom: use Span instead of std::vector for `insert` and `contains`",
+      "first_line_sha256": "4b5e53955faf7c0dd89ebe5f43b5f593a9a333f4850a1f7637f129adf4f8238e",
+      "census_first_line_sha256": "4b5e53955faf7c0dd89ebe5f43b5f593a9a333f4850a1f7637f129adf4f8238e",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 23,
+      "pull_number": 23123,
+      "census_merge_commit_sha": "571bb94dfb5047c9be8fcbae5dae71de7256b86c",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23123: Remove `-rescan` startup parameter",
+      "first_line_sha256": "c47ef00cc588ef33b21e81c4c9f761c7c43c8f58ceaaf53591cfd68d809f6028",
+      "census_first_line_sha256": "c47ef00cc588ef33b21e81c4c9f761c7c43c8f58ceaaf53591cfd68d809f6028",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 24,
+      "pull_number": 23147,
+      "census_merge_commit_sha": "33b0696d3106646d5251ceebbeaee53bc8765e3a",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23147: refactor: rename DBErrors::RESCAN_REQUIRED to NEED_RESCAN",
+      "first_line_sha256": "dced00ebf76f337c3b1b7f6461516d55f89c0d3278aac603bc263302b54bfe53",
+      "census_first_line_sha256": "dced00ebf76f337c3b1b7f6461516d55f89c0d3278aac603bc263302b54bfe53",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 25,
+      "pull_number": 23175,
+      "census_merge_commit_sha": "caf8b26b52bf38289899dfa1ca15aa9c9d140971",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23175: Add CJDNS network to -addrinfo and -netinfo",
+      "first_line_sha256": "13adbc45d6ab5d10e9475f0d9c164b56f86925235498bfcd18a4d17adc0d2302",
+      "census_first_line_sha256": "13adbc45d6ab5d10e9475f0d9c164b56f86925235498bfcd18a4d17adc0d2302",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 26,
+      "pull_number": 23371,
+      "census_merge_commit_sha": "2539980e1d74a637be5bcadb566263f903adffd1",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23371: test: MiniWallet: add P2TR support and use it per default",
+      "first_line_sha256": "96f00bd513cb6d6ddfa86e3ce3c7396f334293c9771abc550328d472663604fd",
+      "census_first_line_sha256": "96f00bd513cb6d6ddfa86e3ce3c7396f334293c9771abc550328d472663604fd",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 27,
+      "pull_number": 23394,
+      "census_merge_commit_sha": "5ccab7187b35142e03c15dd55390e45b3d233c52",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23394: Taproot wallet test vectors (generation+tests)",
+      "first_line_sha256": "727b9b3dedd9a3f97a1c94d3c3d789d3d60bcc5b2ce6cc745b5a05b4d75c04b0",
+      "census_first_line_sha256": "727b9b3dedd9a3f97a1c94d3c3d789d3d60bcc5b2ce6cc745b5a05b4d75c04b0",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 28,
+      "pull_number": 23409,
+      "census_merge_commit_sha": "aecc08f62eab8f4202f8730890846e5669453468",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23409: refactor: Take Span in SetSeed",
+      "first_line_sha256": "739fc90e5ebec6e8510b6637d5cc47b56cbcf987635b655d1353b0fc82e3d76a",
+      "census_first_line_sha256": "739fc90e5ebec6e8510b6637d5cc47b56cbcf987635b655d1353b0fc82e3d76a",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 29,
+      "pull_number": 23466,
+      "census_merge_commit_sha": "c702d1fefddcbd8c6465d3dc330fde235d03337e",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23466: doc: Suggest `keys.openpgp.org` as keyserver in SECURITY.md",
+      "first_line_sha256": "5bb7ea00e89fb18c0ab3b4c56c0d68cc94907226467e6dd6aec4f8c9e2a645fb",
+      "census_first_line_sha256": "5bb7ea00e89fb18c0ab3b4c56c0d68cc94907226467e6dd6aec4f8c9e2a645fb",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 30,
+      "pull_number": 23489,
+      "census_merge_commit_sha": "c9b63ab61e4c0c94430064c9025c040f2abaeefc",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23489: build: Qt 5.15.2",
+      "first_line_sha256": "5737126e2a667ca7e96cd9840e84e04fcaa5a45fe670cf4031ed563c13cd4b04",
+      "census_first_line_sha256": "5737126e2a667ca7e96cd9840e84e04fcaa5a45fe670cf4031ed563c13cd4b04",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 31,
+      "pull_number": 23492,
+      "census_merge_commit_sha": "c9dd5c8d6e59e27af98e99d2844d6ead8eec3162",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23492: test: tidy up addrman unit tests",
+      "first_line_sha256": "8b055dd6ad796ac4e2128cf3187f468da7c2b866f20764834357bea4c9ee1fbd",
+      "census_first_line_sha256": "8b055dd6ad796ac4e2128cf3187f468da7c2b866f20764834357bea4c9ee1fbd",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 32,
+      "pull_number": 23594,
+      "census_merge_commit_sha": "111c3e06b35b7867f2e0f740e988f648ac6c325d",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23594: build: don't set PORT=no in config.site",
+      "first_line_sha256": "eaa982c40931420fe8828d47329ef55652680961c5bdb5f391847dc63438b1f1",
+      "census_first_line_sha256": "eaa982c40931420fe8828d47329ef55652680961c5bdb5f391847dc63438b1f1",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 33,
+      "pull_number": 23636,
+      "census_merge_commit_sha": "26a1147ce56083d7aa820ac115c16b01e47d911c",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23636: Remove GetAdjustedTime from init.cpp",
+      "first_line_sha256": "ad38aaead98cc30c9ff824af5879d82639452ad6224dec36d6bcb11d255634a7",
+      "census_first_line_sha256": "ad38aaead98cc30c9ff824af5879d82639452ad6224dec36d6bcb11d255634a7",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 34,
+      "pull_number": 23642,
+      "census_merge_commit_sha": "0bd7ca9a036ea33397b04cade07d9acc1c31cd30",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23642: refactor: Call type-solver earlier in decodescript",
+      "first_line_sha256": "337f0cff7a318b83240e9aae01826ce151b6f013cd48025c77d0cc4496814f72",
+      "census_first_line_sha256": "337f0cff7a318b83240e9aae01826ce151b6f013cd48025c77d0cc4496814f72",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 35,
+      "pull_number": 23647,
+      "census_merge_commit_sha": "8b4d53e4d6e6a4b6e65a43a78b31d9d091be5b0e",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23647: MOVEONLY: Move wallet backup and encryption RPCs out of rpcwallet",
+      "first_line_sha256": "bb163936cf0a80e430c12bfffd42f69ae1e8a286ba181257e399ee231637b0f9",
+      "census_first_line_sha256": "bb163936cf0a80e430c12bfffd42f69ae1e8a286ba181257e399ee231637b0f9",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 36,
+      "pull_number": 23652,
+      "census_merge_commit_sha": "0ee9a00f90e81a6978b30bdb250a37cbfa6da022",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#23652: doc: Document optional RPC result fields",
+      "first_line_sha256": "9a5023edf8791dcedd2f2620fcb1f18a1485f6de2ca2622cb70f28df9924c7f4",
+      "census_first_line_sha256": "9a5023edf8791dcedd2f2620fcb1f18a1485f6de2ca2622cb70f28df9924c7f4",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 37,
+      "pull_number": 24051,
+      "census_merge_commit_sha": "4766cd198172225c66a0adb01f6cb9513c3d0e66",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#24051: Bugfix: configure: bitcoin-{cli,tx,util} don't need UPnP, NAT-PMP, or ZMQ",
+      "first_line_sha256": "5b73c97693da846bf135372070bfa0512cb398c2c78e52c20e2a26e6c94d93e5",
+      "census_first_line_sha256": "5b73c97693da846bf135372070bfa0512cb398c2c78e52c20e2a26e6c94d93e5",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 38,
+      "pull_number": 24796,
+      "census_merge_commit_sha": "38d3d0bfc4cae6b31c5ac30f9b0da458bd9a9e57",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#24796: lint: misc updates & fixes",
+      "first_line_sha256": "229cf4db581ffb9d0598d7b2ab9ca4b6ebc12ab36f6ade4d084168bb0ae38304",
+      "census_first_line_sha256": "229cf4db581ffb9d0598d7b2ab9ca4b6ebc12ab36f6ade4d084168bb0ae38304",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 39,
+      "pull_number": 25001,
+      "census_merge_commit_sha": "132d5f8c2f2397a4600a42203f413dafdb6bcc37",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#25001: Modernize util/strencodings and util/string: `string_view` and `optional`",
+      "first_line_sha256": "7881f2cb0bd405684f82cca6ad437d1c804603e78a3a2a8cb8f95a91c4453480",
+      "census_first_line_sha256": "7881f2cb0bd405684f82cca6ad437d1c804603e78a3a2a8cb8f95a91c4453480",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 40,
+      "pull_number": 25166,
+      "census_merge_commit_sha": "345d860f38188b1bb6dfb95cb47f8b4057455669",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#25166: doc: Add link to NetBSD release",
+      "first_line_sha256": "5e559b96949077230cea8f3c15f75d0aaba8bf785b717792d950a5c456a28568",
+      "census_first_line_sha256": "5e559b96949077230cea8f3c15f75d0aaba8bf785b717792d950a5c456a28568",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 41,
+      "pull_number": 25248,
+      "census_merge_commit_sha": "2a7c9984dbc1cd4058b7a43896b10749ed46edfe",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#25248: refactor: Add LIFETIMEBOUND / -Wdangling-gsl to Assert()",
+      "first_line_sha256": "fdc186991ed34a029e20136665d989adea785ed8ba48510ebf66b080f467035a",
+      "census_first_line_sha256": "fdc186991ed34a029e20136665d989adea785ed8ba48510ebf66b080f467035a",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 42,
+      "pull_number": 25296,
+      "census_merge_commit_sha": "79e007d1d60b8d600479d787667d91e05a492ab4",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#25296: Add DataStream without ser-type and ser-version and use it where possible",
+      "first_line_sha256": "4b033138cbb03b4ad7fbf70e725feca5f998537a9749ceee89696041aa8ecb91",
+      "census_first_line_sha256": "4b033138cbb03b4ad7fbf70e725feca5f998537a9749ceee89696041aa8ecb91",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 43,
+      "pull_number": 25409,
+      "census_merge_commit_sha": "a09033e22c4f072c86a1885dd476f3059e5416d1",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#25409: doc: fix typos",
+      "first_line_sha256": "e27eaa69352d21c94067878b21b94469ba98fd372016dad692438b20f908fd0d",
+      "census_first_line_sha256": "e27eaa69352d21c94067878b21b94469ba98fd372016dad692438b20f908fd0d",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 44,
+      "pull_number": 25615,
+      "census_merge_commit_sha": "55b76ac1c0a4da9fe7fa1f2ec6ef558fc8f195ae",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#25615: rpc: add missing description in gettxout help text",
+      "first_line_sha256": "5d02d6ac712fe6341788e4541cde7479ee03a5ed157418a83f1d7c3069a0ffc2",
+      "census_first_line_sha256": "5d02d6ac712fe6341788e4541cde7479ee03a5ed157418a83f1d7c3069a0ffc2",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 45,
+      "pull_number": 25932,
+      "census_merge_commit_sha": "7bb07bf8bd8e240562714f9cc4b7696868cb6c26",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#25932: refactor: Simplify backtrack logic",
+      "first_line_sha256": "e0ccc725c61aab56024c61cd2d642456548533d62a4e3a0353d06d80a81bea59",
+      "census_first_line_sha256": "e0ccc725c61aab56024c61cd2d642456548533d62a4e3a0353d06d80a81bea59",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 46,
+      "pull_number": 26084,
+      "census_merge_commit_sha": "718304d222671f98d2335cd9b90a3022f62d7b21",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26084: sendall: check if the maxtxfee has been exceeded",
+      "first_line_sha256": "f64dad130868eb38a1559f8a1de585615da758bfce78e1a8c33ed4536642b2eb",
+      "census_first_line_sha256": "f64dad130868eb38a1559f8a1de585615da758bfce78e1a8c33ed4536642b2eb",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 47,
+      "pull_number": 26265,
+      "census_merge_commit_sha": "f3bc1a72825fe2b51f4bc20e004cef464f05b965",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26265: POLICY: Relax MIN_STANDARD_TX_NONWITNESS_SIZE to 65 non-witness bytes",
+      "first_line_sha256": "6639842a1a5d346084197ca3200862400a80889d60a22c1e53302c298f447260",
+      "census_first_line_sha256": "6639842a1a5d346084197ca3200862400a80889d60a22c1e53302c298f447260",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 48,
+      "pull_number": 26294,
+      "census_merge_commit_sha": "27e76afe24c390cc091e246bdbc691bdf5bb090c",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26294: build: move util/url to common/url",
+      "first_line_sha256": "2e52f632903ff9603d205c952a199d263f91b1a319fe45f8dacb8d1bf5ffc223",
+      "census_first_line_sha256": "2e52f632903ff9603d205c952a199d263f91b1a319fe45f8dacb8d1bf5ffc223",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 49,
+      "pull_number": 26328,
+      "census_merge_commit_sha": "329d7e379d09fa5db9c057baa0e100d2b174427d",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26328: doc: fix -netinfo relaytxes help",
+      "first_line_sha256": "6f5ed8b73348b276140d3ea2dc818363e627a3cdbc3b3d5529c42dc95ee1e4e5",
+      "census_first_line_sha256": "6f5ed8b73348b276140d3ea2dc818363e627a3cdbc3b3d5529c42dc95ee1e4e5",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 50,
+      "pull_number": 26349,
+      "census_merge_commit_sha": "551c8e9526d2502f857e1ef6348c7f1380f37443",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26349: rpc: make `address` field optional `list{transactions, sinceblock}` response",
+      "first_line_sha256": "5a34a594e0308d6fe56d29389e9426be314999b084cf6792152d3668a00f924c",
+      "census_first_line_sha256": "5a34a594e0308d6fe56d29389e9426be314999b084cf6792152d3668a00f924c",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 51,
+      "pull_number": 26373,
+      "census_merge_commit_sha": "d08b63baa020651d3cc5597c85d5316cb39aaf59",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26373: Update minisketch subtree to latest upstream",
+      "first_line_sha256": "bd7c12aa089c22e419fde87eada7d2d6fef4a8709eba5f1b80b7eb4228626348",
+      "census_first_line_sha256": "bd7c12aa089c22e419fde87eada7d2d6fef4a8709eba5f1b80b7eb4228626348",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 52,
+      "pull_number": 26387,
+      "census_merge_commit_sha": "43e813cab266eef42e622519836f171f6a18d426",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26387: p2p: TryLowWorkHeadersSync follow-ups",
+      "first_line_sha256": "3fe6736cafe02e2aaece625e92813cd8ad5f5f6d65e47788bf45d3331918d6a3",
+      "census_first_line_sha256": "3fe6736cafe02e2aaece625e92813cd8ad5f5f6d65e47788bf45d3331918d6a3",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 53,
+      "pull_number": 26402,
+      "census_merge_commit_sha": "2856dee808620a6518e86cd333eebdbf1a7e1344",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26402: doc: Fix typos",
+      "first_line_sha256": "36df2cbd1c5107199e9e66696d78b67f932fc36a7a115b2ba061b0abc0096ffc",
+      "census_first_line_sha256": "36df2cbd1c5107199e9e66696d78b67f932fc36a7a115b2ba061b0abc0096ffc",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 54,
+      "pull_number": 26437,
+      "census_merge_commit_sha": "bf0cb4399061c6827bd5d7428a146010102d7ab1",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26437: test: remove unused `CHANGE_{XPRV,XPUB}` constants",
+      "first_line_sha256": "0a90432fbad35fca4e8776f1422ae346ff29f7b1edc60d14f2515afef497461c",
+      "census_first_line_sha256": "0a90432fbad35fca4e8776f1422ae346ff29f7b1edc60d14f2515afef497461c",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 55,
+      "pull_number": 26515,
+      "census_merge_commit_sha": "3d974960d38b8effcf9c7f84965b8f9cc681d5a1",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26515: rpc: skip getpeerinfo for a peer without CNodeStateStats",
+      "first_line_sha256": "8b1973c09cd160219e563c34627a63ca19b8cdc2827847e79e8060e0aeb2c624",
+      "census_first_line_sha256": "8b1973c09cd160219e563c34627a63ca19b8cdc2827847e79e8060e0aeb2c624",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 56,
+      "pull_number": 26598,
+      "census_merge_commit_sha": "296e88225096125b08665b97715c5b8ebb1d28ec",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26598: contrib: remove builder keys",
+      "first_line_sha256": "c46b74105e93a8dcc8b9682e45c81f05b2b2d2ee2070e50bbdc5e53804ed660a",
+      "census_first_line_sha256": "c46b74105e93a8dcc8b9682e45c81f05b2b2d2ee2070e50bbdc5e53804ed660a",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 57,
+      "pull_number": 26618,
+      "census_merge_commit_sha": "1aedc3b6c81ba5ecf96749be0fb59d873bfd6d49",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26618: rpc: Prevent unloading a wallet when rescanning",
+      "first_line_sha256": "2c2fb5500fbc6f18fb054f19ac324a0a8885fc52f39b47d3a6d73270addf65f2",
+      "census_first_line_sha256": "2c2fb5500fbc6f18fb054f19ac324a0a8885fc52f39b47d3a6d73270addf65f2",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 58,
+      "pull_number": 26638,
+      "census_merge_commit_sha": "8456bfac6ba2dcca42a03d3374c12e1a3f009106",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26638: test: prefer sqlite for wallet tests",
+      "first_line_sha256": "f92d603da3b75ce9489ab94a5eae6afcedb0cdf98c0acab0d815b50e8fa785b1",
+      "census_first_line_sha256": "f92d603da3b75ce9489ab94a5eae6afcedb0cdf98c0acab0d815b50e8fa785b1",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 59,
+      "pull_number": 26702,
+      "census_merge_commit_sha": "1e6b384d592b2d1e036750dbbc62308483312225",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26702: refactor: walletdb: drop unused `FindWalletTx` parameter and rename",
+      "first_line_sha256": "b662f442416e663c5a7f42a33395e3c62343c6606bc661a1799a5068504e2fca",
+      "census_first_line_sha256": "b662f442416e663c5a7f42a33395e3c62343c6606bc661a1799a5068504e2fca",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 60,
+      "pull_number": 26723,
+      "census_merge_commit_sha": "8ab19237e11ee510a7941a4ab429471b29cccd69",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26723: test: call `keypoolrefill` with priv key disabled should throw an error",
+      "first_line_sha256": "4d028acd5ba7b83e2fc046b99d8e01c88eeed5cde27cb561782de7e46d9d458c",
+      "census_first_line_sha256": "4d028acd5ba7b83e2fc046b99d8e01c88eeed5cde27cb561782de7e46d9d458c",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 61,
+      "pull_number": 26730,
+      "census_merge_commit_sha": "b168b71a5d30c1441737cace281ffa3cce0357fc",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26730: test: add coverage for `purpose` arg in `listlabels`",
+      "first_line_sha256": "7c4c8c075628dc231eac0ac9048ab060a84928725e066e6ff91ca8bb43d90d86",
+      "census_first_line_sha256": "7c4c8c075628dc231eac0ac9048ab060a84928725e066e6ff91ca8bb43d90d86",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 62,
+      "pull_number": 26758,
+      "census_merge_commit_sha": "9887fc789886b356efc6818783cabaab2b14481f",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26758: refactor: Add `performance-no-automatic-move` clang-tidy check",
+      "first_line_sha256": "1e9cc26467b92721481e9e9ac803c585fdf918cba3651de3f43c6360c711dd4f",
+      "census_first_line_sha256": "1e9cc26467b92721481e9e9ac803c585fdf918cba3651de3f43c6360c711dd4f",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 63,
+      "pull_number": 26759,
+      "census_merge_commit_sha": "4654506c3014cdfad2647108e6bb3efc27f6dd96",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26759: test: Drop no longer needed `race:epoll_ctl` TSan suppression",
+      "first_line_sha256": "3fccf405ee4eb5da4e0ffe3158a8349964f5db341abb7a8029429a17971b8ef0",
+      "census_first_line_sha256": "3fccf405ee4eb5da4e0ffe3158a8349964f5db341abb7a8029429a17971b8ef0",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 64,
+      "pull_number": 26805,
+      "census_merge_commit_sha": "adc41cf3b22f8f168e88ce3ad5f27c1130f12beb",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26805: tests: Use unique port for ZMQ tests to allow for multiple test instances",
+      "first_line_sha256": "97241b2123acf974f3c4f9ec6a2e1c5ef797d291957d3007fbd47b896b8ba75f",
+      "census_first_line_sha256": "97241b2123acf974f3c4f9ec6a2e1c5ef797d291957d3007fbd47b896b8ba75f",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 65,
+      "pull_number": 26809,
+      "census_merge_commit_sha": "cabeae43ea6e385c8352aeb13adc0dbe9bddc9c6",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26809: compat: use STDIN_FILENO over 0",
+      "first_line_sha256": "5a378c57422f8b73b1c42593314bfc226ca1f401f44e5cae48821512be99ca9b",
+      "census_first_line_sha256": "5a378c57422f8b73b1c42593314bfc226ca1f401f44e5cae48821512be99ca9b",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 66,
+      "pull_number": 26818,
+      "census_merge_commit_sha": "61f35159ffada45dddca0c229b4cdf9de4f7949d",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26818: test: Fix feature_startupnotify intermittent issue",
+      "first_line_sha256": "21121ad725feacdf4d57e8fae0e5a53b5240f0ccc9355f488eae94b07e24c3cb",
+      "census_first_line_sha256": "21121ad725feacdf4d57e8fae0e5a53b5240f0ccc9355f488eae94b07e24c3cb",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 67,
+      "pull_number": 26822,
+      "census_merge_commit_sha": "39363a4b945114f5e4718f75098f3036e8fe6a1d",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26822: p2p, rpc: don't allow past absolute timestamp in `setban`",
+      "first_line_sha256": "16a3f4c7358d9b614c0f75dbcd1e7e88d5fd42943eea51ba1ef78bd80cd352a7",
+      "census_first_line_sha256": "16a3f4c7358d9b614c0f75dbcd1e7e88d5fd42943eea51ba1ef78bd80cd352a7",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 68,
+      "pull_number": 26823,
+      "census_merge_commit_sha": "2cfe37962343a1e28642acc0f9f17e04e221dcfd",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26823: refactor: Work around Werror=free-nonheap-object in AssumeCalculateMemPoolAncestors",
+      "first_line_sha256": "d8eafc70d2a13692ca7f754ddb1c875d023f028d2ed8ed3ca81714b61fee6651",
+      "census_first_line_sha256": "d8eafc70d2a13692ca7f754ddb1c875d023f028d2ed8ed3ca81714b61fee6651",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 69,
+      "pull_number": 26824,
+      "census_merge_commit_sha": "8915e4d9f5b7e360f70d2f67baa99cca451a10da",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26824: build: fix configuring with only bitcoin-util",
+      "first_line_sha256": "23c40ea0998ce1cd078d2220226a38771ded8b2b63437770faf9406c56335e30",
+      "census_first_line_sha256": "23c40ea0998ce1cd078d2220226a38771ded8b2b63437770faf9406c56335e30",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 70,
+      "pull_number": 26827,
+      "census_merge_commit_sha": "fcd1a57be0609e680f5269cf99aacc60a03f71bd",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26827: doc: use \"std lib clock\" over \"C++11 clock\"",
+      "first_line_sha256": "865cdfe9f894065d5940716156d668e1efa6f3dd8cefbc3389f7d968e3a899a1",
+      "census_first_line_sha256": "865cdfe9f894065d5940716156d668e1efa6f3dd8cefbc3389f7d968e3a899a1",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 71,
+      "pull_number": 26838,
+      "census_merge_commit_sha": "dbca00ef76e5a004555dbd4cdc9209492f02e358",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26838: doc: I2P documentation updates",
+      "first_line_sha256": "f316399382213b223a50439c6254437b2dc0892775d80171e53f74831201190b",
+      "census_first_line_sha256": "f316399382213b223a50439c6254437b2dc0892775d80171e53f74831201190b",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 72,
+      "pull_number": 26851,
+      "census_merge_commit_sha": "0e81d119e09dba13dddb42506855ba8eba761238",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26851: ci: Remove unused busybox workaround",
+      "first_line_sha256": "51533e0f03ca4da759583ff7a16b6f839f18d8a477a63c7b5737b36e4bfbc5a4",
+      "census_first_line_sha256": "51533e0f03ca4da759583ff7a16b6f839f18d8a477a63c7b5737b36e4bfbc5a4",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 73,
+      "pull_number": 26856,
+      "census_merge_commit_sha": "1c9457bc8b067b5052eaa10342cf9c0f13024cde",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26856: ci: Run one task with all tests on credits",
+      "first_line_sha256": "caa602b1d0c1f81ce9e304a2842837b10363b80670634bcf0d9e1fd73cb63d3f",
+      "census_first_line_sha256": "caa602b1d0c1f81ce9e304a2842837b10363b80670634bcf0d9e1fd73cb63d3f",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 74,
+      "pull_number": 26864,
+      "census_merge_commit_sha": "b264410e012a61b103e1a03c43df4e17b9b75452",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#26864: doc: net: fix link to onion address encoding scheme [ONIONADDRESS]",
+      "first_line_sha256": "8d1ebfe2f2bfedd6c470fa6c722c7d2986d9a81b0a9553c31f5890a19f8c8a11",
+      "census_first_line_sha256": "8d1ebfe2f2bfedd6c470fa6c722c7d2986d9a81b0a9553c31f5890a19f8c8a11",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 75,
+      "pull_number": 27477,
+      "census_merge_commit_sha": "467fa8943801911c233cb96d45282b1de10bfa90",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#27477: test: add regression tests for #27468 (invalid URI segfaults)",
+      "first_line_sha256": "bdd5df5b7dbd89c111f331f87a0e842adc788ef7d9ee8234a2daecf767cc5bc0",
+      "census_first_line_sha256": "bdd5df5b7dbd89c111f331f87a0e842adc788ef7d9ee8234a2daecf767cc5bc0",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 76,
+      "pull_number": 27719,
+      "census_merge_commit_sha": "9e54dde04ccd490c6719f5d975ed49a75242611b",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#27719: doc: remove Tor link & generalize onion getnodeaddresses RPC",
+      "first_line_sha256": "00e479f735757b9a24e0f28d70b98a3442317c171e5cc122e2e83fd5a07024b1",
+      "census_first_line_sha256": "00e479f735757b9a24e0f28d70b98a3442317c171e5cc122e2e83fd5a07024b1",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 77,
+      "pull_number": 29052,
+      "census_merge_commit_sha": "7a283836eb78d76452fcc586275626df010f3cd9",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#29052: doc/reduce-traffic: update/clarify max outbound connection count",
+      "first_line_sha256": "f47f7c99b233f4dde8c1a63eb3ecd7d4821c3d1cfa51c2f9165311999f5e5cc0",
+      "census_first_line_sha256": "f47f7c99b233f4dde8c1a63eb3ecd7d4821c3d1cfa51c2f9165311999f5e5cc0",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 78,
+      "pull_number": 29495,
+      "census_merge_commit_sha": "ae4165f7bc395ffdfc0ff46371d539d29c54dfce",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#29495: fuzz: add target for local address stuff",
+      "first_line_sha256": "b2b8ad58f73bfb666915f61ce780fb9105ac233d5c0fcc6c30f2dbf38ce045d6",
+      "census_first_line_sha256": "b2b8ad58f73bfb666915f61ce780fb9105ac233d5c0fcc6c30f2dbf38ce045d6",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 79,
+      "pull_number": 29518,
+      "census_merge_commit_sha": "d72cf823d4f0a79dd8720f9b81996ef4a703be40",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#29518: doc: correct function name in AssumeUTXO design docs",
+      "first_line_sha256": "bb65ebe13b17c3897293e5423603ac367245d1ac0b22816ead79cc8bb7c1da44",
+      "census_first_line_sha256": "bb65ebe13b17c3897293e5423603ac367245d1ac0b22816ead79cc8bb7c1da44",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 80,
+      "pull_number": 29827,
+      "census_merge_commit_sha": "67c0d93982ad214f5e0c9509e9dc3d6d792ad97c",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#29827: test: p2p: add test for rejected tx request logic (`m_recent_rejects` filter)",
+      "first_line_sha256": "d8643fcb98aa1af5011ff815e6a639b007b6ec573b290fe6ea927362447aa370",
+      "census_first_line_sha256": "d8643fcb98aa1af5011ff815e6a639b007b6ec573b290fe6ea927362447aa370",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 81,
+      "pull_number": 30556,
+      "census_merge_commit_sha": "66e82dc90c598c9c42ff980693ef5367a845e1d0",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#30556: doc: multisig-tutorial: remove obsolete mention and link to closed PR",
+      "first_line_sha256": "8775fe10dd3ca2c5e6faa0a28a9be5f1ecb8426c40a5495911e46a14c3a8d14c",
+      "census_first_line_sha256": "8775fe10dd3ca2c5e6faa0a28a9be5f1ecb8426c40a5495911e46a14c3a8d14c",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 82,
+      "pull_number": 30763,
+      "census_merge_commit_sha": "5abb9b1af49be9024f95fa2f777285c531785d85",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#30763: doc: update Fedora build instructions for cmake",
+      "first_line_sha256": "46a18d2cf6e6822aff7ac2ce167be053a3f27bfa121ee184f698a11cc60a2f14",
+      "census_first_line_sha256": "46a18d2cf6e6822aff7ac2ce167be053a3f27bfa121ee184f698a11cc60a2f14",
+      "first_line_hash_matches_census": true
+    },
+    {
+      "sequence": 83,
+      "pull_number": 31007,
+      "census_merge_commit_sha": "6a370435526875a441001be8c44c9b94a2361c8c",
+      "parent_count": 2,
+      "first_line": "Merge bitcoin/bitcoin#31007: doc: add testnet4 section header for config file",
+      "first_line_sha256": "6456bd22be294fe8f8798d6a7f24b4b83e8632c494b2de87d2a3a8ab62fd1322",
+      "census_first_line_sha256": "6456bd22be294fe8f8798d6a7f24b4b83e8632c494b2de87d2a3a8ab62fd1322",
+      "first_line_hash_matches_census": true
+    }
+  ],
+  "raw_response_directory": "data/evidence/s5_github_targeted_pull_responses_v1",
+  "response_bindings": [],
+  "request_attempt_marker_count": 1,
+  "logical_request_attempt_count": 1,
+  "new_request_attempt_count": 1,
+  "resumed_response_count": 0,
+  "http_200_count": 0,
+  "http_404_count": 0,
+  "total_response_bytes": 0,
+  "rate_limit_wait_count": 0,
+  "rate_limit_wait_seconds": 0.0,
+  "local_git_process_count": 2,
+  "gate_results": [
+    {
+      "gate_id": "NORMALIZATION_STOP_AND_FAILURE_ADJUDICATION_LINEAGE_BOUND",
+      "status": "PASS",
+      "evidence": "This invariant remained preserved during the acquisition stop."
+    },
+    {
+      "gate_id": "EXACT_83_RECOGNIZED_112_UNMATCHED_1_OVERLAP_194_UNION_TARGETS",
+      "status": "PASS",
+      "evidence": "This invariant remained preserved during the acquisition stop."
+    },
+    {
+      "gate_id": "TARGET_PULL_IDS_AND_REASONS_FROZEN_BEFORE_DIRECT_ACCESS",
+      "status": "PASS",
+      "evidence": "This invariant remained preserved during the acquisition stop."
+    },
+    {
+      "gate_id": "ONE_CREDENTIAL_FREE_DIRECT_PULL_REQUEST_PER_TARGET_MAXIMUM",
+      "status": "PASS",
+      "evidence": "This invariant remained preserved during the acquisition stop."
+    },
+    {
+      "gate_id": "HTTP_200_AND_404_RESPONSES_PRESERVED_AS_EVIDENCE",
+      "status": "FAIL",
+      "evidence": "Targeted acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "DIRECT_PULL_RESPONSE_SCHEMA_AND_IDENTITY_VALIDATED",
+      "status": "FAIL",
+      "evidence": "Targeted acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "EXACT_83_CENSUS_MERGE_COMMIT_FIRST_LINES_ONLY",
+      "status": "PASS",
+      "evidence": "This invariant remained preserved during the acquisition stop."
+    },
+    {
+      "gate_id": "FULL_REACHABILITY_GRAPH_AND_TARGET_OBJECT_ACCESS_BOUNDED_TO_TWO_GIT_PROCESSES",
+      "status": "PASS",
+      "evidence": "This invariant remained preserved during the acquisition stop."
+    },
+    {
+      "gate_id": "NO_MAPPING_OR_COMPLETENESS_RULE_CHANGES_DURING_ACQUISITION",
+      "status": "PASS",
+      "evidence": "This invariant remained preserved during the acquisition stop."
+    },
+    {
+      "gate_id": "RAW_RESPONSE_AND_LOCAL_DIAGNOSTIC_MANIFESTS_RECONSTRUCTABLE",
+      "status": "FAIL",
+      "evidence": "Targeted acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "ZERO_MARKET_VALUES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS",
+      "status": "PASS",
+      "evidence": "This invariant remained preserved during the acquisition stop."
+    }
+  ],
+  "passed_gate_count": 8,
+  "failed_gate_count": 3,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "orders_submitted": 0,
+  "mapping_rules_changed": false,
+  "accepted_events_created": 0,
+  "original_normalization_stop_upheld": true,
+  "decision": "STOP_S5_GITHUB_TARGETED_COMPLETENESS_ACQUISITION_REQUIRES_FAILURE_ADJUDICATION",
+  "next_authorization": "FREEZE_S5_GITHUB_TARGETED_ACQUISITION_FAILURE_ADJUDICATION_ONLY",
+  "failure_type": "ResponseFailure",
+  "failure_message": "GitHub request failed: TypeError: 'Response' object does not support the context manager protocol",
+  "failure_artifact_path": "data/evidence/s5_github_targeted_pull_responses_v1/failure_pull_000010.json",
+  "failure_artifact_sha256": "5c40717467be1e1eac0d9ebf9a58fe98ba39b600152717a01e935e855821e8e1",
+  "limitations": [
+    "A 404 establishes only that the direct endpoint returned 404 at acquisition time.",
+    "A pass authorizes corrected normalization protocol design only.",
+    "A source acquisition pass is not evidence of a reliable strategy or profit.",
+    "Commit first lines are diagnostics and do not independently establish acceptance time.",
+    "Direct responses are current GitHub metadata, not immutable historical snapshots.",
+    "GitHub merge_commit_sha semantics depend on merge, squash, and rebase behavior.",
+    "Local Git reachability does not establish historical public availability time.",
+    "No BTC market value, parameter, return, candidate, signal, or order was created.",
+    "No acquired response automatically creates an accepted development event.",
+    "No mapping or completeness rule was changed during this acquisition.",
+    "No paper, Testnet strategy, production, live, or real-capital authority exists.",
+    "Real net profit remains zero.",
+    "Source completeness and predictive edge remain unadjudicated.",
+    "The original normalization STOP remains binding after acquisition."
+  ],
+  "result_evidence_hash": "60fd81a117139a228fbe6155983527b96c4ccafebbae43ed22c2672634581287"
+}

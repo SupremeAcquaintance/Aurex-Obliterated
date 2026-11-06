@@ -1,0 +1,16 @@
+{
+  "schema_version": "aurex-s1-nfci-feature-execution-audit-v1",
+  "audit_id": "s1-nfci-feature-execution-audit-v1",
+  "audited_at": "2026-08-26T20:18:29.293519Z",
+  "addendum_file_sha256": "794159d371525cf85bd88ce9911d6257775d48b6a943026dce07ab892452c622",
+  "addendum_evidence_hash": "2743b1a1f8234d7e82687fc8985dee044855bb13cc33bfc56f54018fb54f5d81",
+  "protocol_evidence_hash": "d2ecbea9b31bc07e0cfec0901f3f262a1dd7e358148ec5e317ea972b51c16ce0",
+  "runner_contract_hash": "3b85b9bc81fa47f6e0aa5745128f2d4ef3d2a1bde35c30283da00eb3e345515a",
+  "auditor_source_sha256": "6487ac27a8487d869f3ed0c2b6d69c53171305d296a1911406e4c9d981b801bb",
+  "normalized_value_rows_parsed": 0,
+  "feature_rows_calculated": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_NFCI_FEATURE_EXECUTION_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_NFCI_DEVELOPMENT_FEATURE_RUN",
+  "audit_evidence_hash": "de8fdc92fa19313120776831e1405623057aee5a598e9f75b782ed7c80f2db7f"
+}

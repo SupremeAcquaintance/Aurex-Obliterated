@@ -1,0 +1,42 @@
+{
+  "artifact_type": "BINANCE_SPOT_TESTNET_RECONCILIATION_ADDENDUM",
+  "base_url": "https://testnet.binance.vision",
+  "created_at": "2026-07-31T06:58:23.245200+00:00",
+  "credentials_stored": false,
+  "decision": "VIRTUAL_CANCEL_RECONCILED",
+  "environment": "BINANCE_SPOT_TESTNET",
+  "live_authority": false,
+  "production_authority": false,
+  "reconciliation_contract": {
+    "cancellation_identity_stage": "cancelled",
+    "final_query_selector": "external_order_id",
+    "placement_identity_stages": [
+      "placed",
+      "queried",
+      "final"
+    ],
+    "requires_exact_quantity": true,
+    "requires_final_cancelled": true,
+    "requires_zero_fill": true,
+    "version": 2
+  },
+  "result": {
+    "cancellation_identity_matches": true,
+    "external_order_identity_matches": true,
+    "lifecycle_status_matches": true,
+    "no_fill_occurred": true,
+    "passed": true,
+    "placement_identity_matches": true,
+    "quantity_matches": true
+  },
+  "sandbox_qualified": false,
+  "schema_version": 1,
+  "source_evidence": {
+    "checked_at": "2026-07-31T06:52:01.244550+00:00",
+    "declared_order_reconciliation": "FAIL",
+    "external_order_id": 22292295,
+    "path": "data/evidence/binance_spot_testnet_virtual_cancel_20260731T065201Z.json",
+    "sha256": "d4a4f6a6be8ab72b2ad4424ee7fcd283dc0f69c66ad381a213077643d57123a6"
+  },
+  "symbol": "BTCUSDT"
+}

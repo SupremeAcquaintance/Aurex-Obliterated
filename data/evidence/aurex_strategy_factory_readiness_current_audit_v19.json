@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-strategy-factory-readiness-audit-v1",
+  "audited_at": "2026-08-30T13:52:43.272366Z",
+  "protocol_path": "data/evidence/aurex_strategy_factory_readiness_protocol_v1.json",
+  "protocol_file_sha256": "a21f61ca91540afc8ec38f7f43111aca1242172bcce9f6befa67cbc37efd5aa2",
+  "protocol_evidence_hash": "bf0392dfe2876bbb0a8b798880651ab89af887e1e16dd70e4631c2ddacc73b90",
+  "result_path": "data/evidence/aurex_strategy_factory_readiness_current_result_v19.json",
+  "result_file_sha256": "9ebaf7fcba3e2415a5815b52a5fe03c1e7fd9f0ded17630eb7d23f49ebb58b76",
+  "result_evidence_hash": "ff3a049b8cc054d2e2253d3ea64e7444b6c2acd3637caa60a692560fa59a2a10",
+  "runner_contract_hash": "64d0f720f20e703c4f553636ca3975b13cde00e6f8607d492e7f29b41b102fb2",
+  "reconstructed_result_matches": true,
+  "reconstructed_gate_count": 15,
+  "strategy_research_ready": true,
+  "decision": "PASS_AUREX_STRATEGY_FACTORY_READY_FOR_NEW_MECHANISM_CHARTER_ONLY",
+  "real_market_values_opened": 0,
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "audit_evidence_hash": "eeb404262d0eb710c8e29fc00061e11691f6443afa4a29bbda55f23fdab86300"
+}

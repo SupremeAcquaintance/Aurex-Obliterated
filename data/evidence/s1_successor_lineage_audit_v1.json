@@ -1,0 +1,17 @@
+{
+  "schema_version": "aurex-s1-successor-lineage-audit-v1",
+  "audit_id": "s1-successor-lineage-audit-v1",
+  "audited_at": "2026-08-26T18:24:20.727382Z",
+  "ledger_path": "data/evidence/s1_successor_lineage_ledger_v1.json",
+  "ledger_file_sha256": "a67c90b56994d9076cbddc2f9f21aa1928c10fc01edf2c745198b1cae9f0d91f",
+  "ledger_evidence_hash": "0e908e278455018f195f0b3a6269e65e67b415889a2fd0bd3d3c7b0df502bdab",
+  "builder_contract_hash": "f6231debb7882b7b24f6d4c51e77231fc6695233e027d2984fb411682a93d218",
+  "auditor_contract_hash": "c4ba1472352ac9ebdbd3acaa1813812411de45fa9c698b654f01d7f419309fc8",
+  "reconstructed_exactly": true,
+  "lineage_count": 8,
+  "source_binding_count": 10,
+  "new_market_numeric_fields_inspected": [],
+  "new_return_metrics_calculated": [],
+  "decision": "PASS_S1_LINEAGE_RECONSTRUCTED_NO_AUTHORITY",
+  "audit_evidence_hash": "590d5f5a848c52dc3c4455ebb7ce2d70db8250b6048fd76dbc0e63e825dbb41d"
+}

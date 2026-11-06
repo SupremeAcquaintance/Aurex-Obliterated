@@ -1,0 +1,280 @@
+{
+  "schema_version": "aurex-v4-p01-feasibility-terminal-result-v1",
+  "terminal_kind": "REJECT",
+  "terminal_timestamp": "2026-07-29T06:44:23.219695Z",
+  "builder_and_contract_hashes": {
+    "continuation_builder_contract_hash": "bd495d10d9d8c5f528b3307511a0c856a18b45828b92d10d3fade6fbd6f82440",
+    "continuation_contract_evidence_hash": "cfaa2e2b507813c81469938ab71b67c98502a8d3348e7e03256041f5e3b79f54",
+    "continuation_runner_contract_hash": "d26c54609dab27f6d7afec5b84e0861ab7401370a878a622d14e21895f5d6a6c",
+    "original_contract_evidence_hash": "684a9f4de4aececab26113c46f98511037fefdcf811ab4abfbe3766a3ad0a69e",
+    "original_metadata_gate_evidence_hash": "14d4fd139d03db5ce2ffa1fb9678f229392058388ee331ad9863e6bae6356605",
+    "original_terminal_reject_evidence_hash": "198d69b4358d7c980357201a7dbb2b209ccf4c8f2186009a9cc8a4c3cf7b8df2"
+  },
+  "completed_and_failed_request_ids": {
+    "completed": [
+      "V4P01_PILOT_BINANCE_20230101_0000",
+      "V4P01_PILOT_COINBASE_20230101_0000",
+      "V4P01_PILOT_BINANCE_20231201_1200",
+      "V4P01_PILOT_COINBASE_20231201_1200",
+      "V4P01_PILOT_BINANCE_20241201_2359",
+      "V4P01_PILOT_COINBASE_20241201_2359"
+    ],
+    "failed": []
+  },
+  "decision": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+  "execution_gate_results": [
+    {
+      "gate_id": "ACCOUNT_AND_JURISDICTION_ACCESS",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded source transport and schema pilot.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "ARCHIVE_CALENDAR_AND_INCIDENT_COVERAGE",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded source transport and schema pilot.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "CAPACITY_AND_STALENESS_FOUNDATION",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded source transport and schema pilot.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "COMMON_ETH_BTC_PRODUCT_IDENTITY",
+      "status": "PASS",
+      "evidence_hashes": [
+        "3ce3d459352ec210a7bfb680802602292af654806a9539d415f4e9c7ace0e394",
+        "5ba33872e860be7b93f85c97ffdc272c7877e17c5b0899f027e672a275acd9a1",
+        "65c5914cb95a0741db80c8f3581a90331399f5474e236079c2115ccec2624925",
+        "6dfb8188e6da31cfa183390d81b68d3065723a40b08d82cdf450833d8b812cd3",
+        "77662a095a1f288fd559f1b82aa81d975501b0b29bd901cdab6311b81f2ac94c",
+        "9891405db098c63690f5294e4165852962f4a2be357713b0592ea806ee0b8875",
+        "e5e2920f89dc0d78ad88c8955a5d17df2520d0318ae3116945f9fa83b4985209",
+        "ea3f0fddccaf0ec3942ab6bf6b1992f629bee8f005401608cb44d70cd913a898",
+        "fd765a89bc5ec36a95a58e7ae4617ddf5696cf46090c547a72d24f726e4b0a8a"
+      ],
+      "reason": "Both metadata records and every captured payload identify the frozen Binance ethbtc and Coinbase ETH-BTC products.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "DETERMINISTIC_TWO_LEG_STATE_MACHINE",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded source transport and schema pilot.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "DISCONNECT_SNAPSHOT_AND_SEQUENCE_RECOVERY",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded source transport and schema pilot.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "EXCHANGE_AND_LOCAL_TIMESTAMP_IDENTITY",
+      "status": "PASS",
+      "evidence_hashes": [
+        "3ce3d459352ec210a7bfb680802602292af654806a9539d415f4e9c7ace0e394",
+        "65c5914cb95a0741db80c8f3581a90331399f5474e236079c2115ccec2624925",
+        "6dfb8188e6da31cfa183390d81b68d3065723a40b08d82cdf450833d8b812cd3",
+        "9891405db098c63690f5294e4165852962f4a2be357713b0592ea806ee0b8875",
+        "e5e2920f89dc0d78ad88c8955a5d17df2520d0318ae3116945f9fa83b4985209",
+        "ea3f0fddccaf0ec3942ab6bf6b1992f629bee8f005401608cb44d70cd913a898"
+      ],
+      "reason": "Every frozen payload row has a bounded local timestamp and each pilot includes exchange timestamp identity.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "IOC_OR_FOK_ORDER_SEMANTICS",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded source transport and schema pilot.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "POINT_IN_TIME_FEES_AND_FEE_CURRENCY",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "3ce3d459352ec210a7bfb680802602292af654806a9539d415f4e9c7ace0e394",
+        "5ba33872e860be7b93f85c97ffdc272c7877e17c5b0899f027e672a275acd9a1",
+        "65c5914cb95a0741db80c8f3581a90331399f5474e236079c2115ccec2624925",
+        "6dfb8188e6da31cfa183390d81b68d3065723a40b08d82cdf450833d8b812cd3",
+        "9891405db098c63690f5294e4165852962f4a2be357713b0592ea806ee0b8875",
+        "e5e2920f89dc0d78ad88c8955a5d17df2520d0318ae3116945f9fa83b4985209",
+        "ea3f0fddccaf0ec3942ab6bf6b1992f629bee8f005401608cb44d70cd913a898",
+        "fd765a89bc5ec36a95a58e7ae4617ddf5696cf46090c547a72d24f726e4b0a8a"
+      ],
+      "reason": "The bounded Tardis census and raw schema pilot do not provide verified point-in-time 2023-2024 account-tier fees or fee-currency rules.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "POINT_IN_TIME_FILTERS_PRODUCT_AND_VENUE_STATE",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "3ce3d459352ec210a7bfb680802602292af654806a9539d415f4e9c7ace0e394",
+        "5ba33872e860be7b93f85c97ffdc272c7877e17c5b0899f027e672a275acd9a1",
+        "65c5914cb95a0741db80c8f3581a90331399f5474e236079c2115ccec2624925",
+        "6dfb8188e6da31cfa183390d81b68d3065723a40b08d82cdf450833d8b812cd3",
+        "9891405db098c63690f5294e4165852962f4a2be357713b0592ea806ee0b8875",
+        "e5e2920f89dc0d78ad88c8955a5d17df2520d0318ae3116945f9fa83b4985209",
+        "ea3f0fddccaf0ec3942ab6bf6b1992f629bee8f005401608cb44d70cd913a898",
+        "fd765a89bc5ec36a95a58e7ae4617ddf5696cf46090c547a72d24f726e4b0a8a"
+      ],
+      "reason": "The bounded source evidence does not prove every historical filter, product status, maintenance state, or venue rule for both exchanges.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "PRE_FUNDED_INVENTORY_AND_BALANCE_ACCOUNTING",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded source transport and schema pilot.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "RAW_BBO_OR_L2_SCHEMA_WITH_QUANTITIES",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "3ce3d459352ec210a7bfb680802602292af654806a9539d415f4e9c7ace0e394",
+        "65c5914cb95a0741db80c8f3581a90331399f5474e236079c2115ccec2624925",
+        "6dfb8188e6da31cfa183390d81b68d3065723a40b08d82cdf450833d8b812cd3",
+        "9891405db098c63690f5294e4165852962f4a2be357713b0592ea806ee0b8875",
+        "e5e2920f89dc0d78ad88c8955a5d17df2520d0318ae3116945f9fa83b4985209",
+        "ea3f0fddccaf0ec3942ab6bf6b1992f629bee8f005401608cb44d70cd913a898"
+      ],
+      "reason": "At least one frozen raw pilot did not expose every required channel and BBO/L2 price/quantity schema key.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "SOURCE_REVISION_AND_BYTE_INTEGRITY",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "3ce3d459352ec210a7bfb680802602292af654806a9539d415f4e9c7ace0e394",
+        "65c5914cb95a0741db80c8f3581a90331399f5474e236079c2115ccec2624925",
+        "6dfb8188e6da31cfa183390d81b68d3065723a40b08d82cdf450833d8b812cd3",
+        "9891405db098c63690f5294e4165852962f4a2be357713b0592ea806ee0b8875",
+        "e5e2920f89dc0d78ad88c8955a5d17df2520d0318ae3116945f9fa83b4985209",
+        "ea3f0fddccaf0ec3942ab6bf6b1992f629bee8f005401608cb44d70cd913a898"
+      ],
+      "reason": "Local byte hashes exist, but at least one payload lacks an upstream revision identity; source revisions cannot be bounded.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "TRANSPORT_RESOURCE_AND_STORAGE_FEASIBILITY",
+      "status": "PASS",
+      "evidence_hashes": [
+        "3ce3d459352ec210a7bfb680802602292af654806a9539d415f4e9c7ace0e394",
+        "5ba33872e860be7b93f85c97ffdc272c7877e17c5b0899f027e672a275acd9a1",
+        "65c5914cb95a0741db80c8f3581a90331399f5474e236079c2115ccec2624925",
+        "6dfb8188e6da31cfa183390d81b68d3065723a40b08d82cdf450833d8b812cd3",
+        "9891405db098c63690f5294e4165852962f4a2be357713b0592ea806ee0b8875",
+        "e5e2920f89dc0d78ad88c8955a5d17df2520d0318ae3116945f9fa83b4985209",
+        "ea3f0fddccaf0ec3942ab6bf6b1992f629bee8f005401608cb44d70cd913a898",
+        "fd765a89bc5ec36a95a58e7ae4617ddf5696cf46090c547a72d24f726e4b0a8a"
+      ],
+      "reason": "The frozen source requests completed inside the immutable attempt, byte, time, and local storage budgets.",
+      "conservative_override_used": false
+    }
+  ],
+  "metadata_and_payload_observation_hashes": {
+    "metadata": [
+      "fd765a89bc5ec36a95a58e7ae4617ddf5696cf46090c547a72d24f726e4b0a8a",
+      "5ba33872e860be7b93f85c97ffdc272c7877e17c5b0899f027e672a275acd9a1"
+    ],
+    "payload": [
+      "9891405db098c63690f5294e4165852962f4a2be357713b0592ea806ee0b8875",
+      "6dfb8188e6da31cfa183390d81b68d3065723a40b08d82cdf450833d8b812cd3",
+      "65c5914cb95a0741db80c8f3581a90331399f5474e236079c2115ccec2624925",
+      "ea3f0fddccaf0ec3942ab6bf6b1992f629bee8f005401608cb44d70cd913a898",
+      "e5e2920f89dc0d78ad88c8955a5d17df2520d0318ae3116945f9fa83b4985209",
+      "3ce3d459352ec210a7bfb680802602292af654806a9539d415f4e9c7ace0e394"
+    ]
+  },
+  "parsed_and_prohibited_field_manifest": {
+    "permitted_observation_fields": [
+      "attempt_count",
+      "boundary_completeness",
+      "capture_line_count",
+      "channel_identity",
+      "content_encoding",
+      "content_length",
+      "content_type",
+      "disconnect_marker_count",
+      "duplicate_local_timestamp_count",
+      "elapsed_milliseconds",
+      "exchange_id",
+      "exchange_timestamp_presence_count",
+      "first_and_last_exchange_timestamp",
+      "first_and_last_local_timestamp",
+      "http_status",
+      "incident_identity_and_time_boundary",
+      "local_timestamp_presence_count",
+      "missing_required_schema_key_count",
+      "payload_sha256",
+      "product_identity",
+      "reconnect_snapshot_count",
+      "request_identity",
+      "response_header_subset",
+      "row_count",
+      "schema_key_presence",
+      "sequence_or_update_id_presence_count",
+      "source_available_since_and_to",
+      "source_revision_identity",
+      "symbol_available_since_and_to"
+    ],
+    "prohibited_parsed_fields": [
+      "ask_price_value",
+      "ask_quantity_value",
+      "bid_price_value",
+      "bid_quantity_value",
+      "fee_amount_value",
+      "market_price_value",
+      "order_book_depth_value",
+      "profit_or_loss",
+      "return_metric",
+      "signal",
+      "spread_value",
+      "trade_price_value",
+      "trade_quantity_value"
+    ]
+  },
+  "request_journal_hash": "050e10e6199a937fe91baa0c0c2242c7870be5bd43a3aa6ff923eadb179a3d2d",
+  "resource_totals": {
+    "attempts_used": 6,
+    "responses_completed": 6,
+    "failures_recorded": 0,
+    "response_bytes": 152078,
+    "active_elapsed_milliseconds": 10654,
+    "durable_storage_bytes": 175711
+  },
+  "selection_and_permission_boundary": {
+    "selects_primary": false,
+    "authorizes_returns": false,
+    "creates_candidate": false,
+    "opens_validation": false,
+    "opens_holdout": false,
+    "opens_forward": false,
+    "permits_pine_parity": false,
+    "creates_paper_eligibility": false,
+    "creates_sandbox_eligibility": false,
+    "creates_live_eligibility": false
+  },
+  "failed_request_id_and_attempt": null,
+  "failure_class_and_message": null,
+  "partial_byte_count_and_sha256": null,
+  "request_intent_record_hash": null,
+  "response_headers_if_received": null,
+  "unconsumed_request_and_byte_budgets": null,
+  "unreconciled_intent_status": null,
+  "selects_primary": false,
+  "authorizes_returns": false,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "result_evidence_hash": "b3941f445cca6ce4c1533fa94fdb598dd6bf6f541a69c95e76dcd51c6e0a1348"
+}

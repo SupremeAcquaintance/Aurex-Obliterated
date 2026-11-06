@@ -1,0 +1,97 @@
+//@version=6
+strategy(
+     "Aurex range_mean_reversion_v1",
+     overlay = true,
+     pyramiding = 0,
+     initial_capital = 1000,
+     currency = currency.USD,
+     commission_type = strategy.commission.percent,
+     commission_value = 0.05,
+     calc_on_every_tick = false,
+     process_orders_on_close = true
+)
+
+higherTimeframe = input.timeframe("60", "Higher timeframe")
+rangeLookback = input.int(40, "Range lookback", minval = 10)
+atrLength = input.int(14, "ATR length", minval = 1)
+adxLength = input.int(14, "ADX length", minval = 1)
+maxAdx = input.float(20.0, "Maximum ADX", minval = 1.0, step = 0.5)
+atrStopMultiplier = input.float(1.2, "ATR stop multiplier", minval = 0.1, step = 0.1)
+rewardRiskRatio = input.float(1.5, "Reward:risk ratio", minval = 1.0, step = 0.1)
+rejectionBodyRatio = input.float(0.45, "Rejection body ratio", minval = 0.1, maxval = 0.9, step = 0.05)
+enableLong = input.bool(true, "Enable long")
+enableShort = input.bool(true, "Enable short")
+
+rangeHigh = ta.highest(high, rangeLookback)
+rangeLow = ta.lowest(low, rangeLookback)
+rangeMid = (rangeHigh + rangeLow) / 2.0
+atrValue = ta.atr(atrLength)
+adxValue = ta.adx(adxLength)
+
+htfAdx = request.security(
+     syminfo.tickerid,
+     higherTimeframe,
+     ta.adx(adxLength),
+     gaps = barmerge.gaps_off,
+     lookahead = barmerge.lookahead_off
+)
+
+candleRange = math.max(high - low, syminfo.mintick)
+bodySize = math.abs(close - open)
+bodyRatio = bodySize / candleRange
+lowerWick = math.min(open, close) - low
+upperWick = high - math.max(open, close)
+quietRange = adxValue <= maxAdx and htfAdx <= maxAdx
+flatPosition = strategy.position_size == 0
+
+longRejection = low <= rangeLow and close > rangeLow and lowerWick > bodySize and bodyRatio <= rejectionBodyRatio
+shortRejection = high >= rangeHigh and close < rangeHigh and upperWick > bodySize and bodyRatio <= rejectionBodyRatio
+
+longStop = math.min(rangeLow, low) - (atrValue * atrStopMultiplier)
+shortStop = math.max(rangeHigh, high) + (atrValue * atrStopMultiplier)
+longRisk = close - longStop
+shortRisk = shortStop - close
+longTakeProfit = math.min(rangeMid, close + (longRisk * rewardRiskRatio))
+shortTakeProfit = math.max(rangeMid, close - (shortRisk * rewardRiskRatio))
+
+longSetup = enableLong and flatPosition and barstate.isconfirmed and quietRange and longRejection and longRisk > syminfo.mintick and longTakeProfit > close
+shortSetup = enableShort and flatPosition and barstate.isconfirmed and quietRange and shortRejection and shortRisk > syminfo.mintick and shortTakeProfit < close
+
+formatPrice(price) =>
+    str.tostring(price, format.mintick)
+
+timestampIso() =>
+    str.format_time(time, "yyyy-MM-dd'T'HH:mm:ss'Z'", "UTC")
+
+signalMessage(direction, entryPrice, stopLoss, takeProfit) =>
+    "{" +
+     "\"source\":\"tradingview\"," +
+     "\"strategy\":\"range_mean_reversion_v1\"," +
+     "\"symbol\":\"" + syminfo.ticker + "\"," +
+     "\"timeframe\":\"" + timeframe.period + "\"," +
+     "\"direction\":\"" + direction + "\"," +
+     "\"entry_price\":" + formatPrice(entryPrice) + "," +
+     "\"stop_loss\":" + formatPrice(stopLoss) + "," +
+     "\"take_profit\":" + formatPrice(takeProfit) + "," +
+     "\"market_regime\":\"RANGING\"," +
+     "\"timestamp\":\"" + timestampIso() + "\"" +
+     "}"
+
+longMessage = signalMessage("LONG", close, longStop, longTakeProfit)
+shortMessage = signalMessage("SHORT", close, shortStop, shortTakeProfit)
+
+if longSetup
+    strategy.entry("AUREX-RANGE-LONG", strategy.long, alert_message = longMessage)
+    strategy.exit("AUREX-RANGE-LONG-EXIT", from_entry = "AUREX-RANGE-LONG", stop = longStop, limit = longTakeProfit)
+    alert(longMessage, alert.freq_once_per_bar_close)
+
+if shortSetup
+    strategy.entry("AUREX-RANGE-SHORT", strategy.short, alert_message = shortMessage)
+    strategy.exit("AUREX-RANGE-SHORT-EXIT", from_entry = "AUREX-RANGE-SHORT", stop = shortStop, limit = shortTakeProfit)
+    alert(shortMessage, alert.freq_once_per_bar_close)
+
+plot(rangeHigh, "Range high", color = color.new(color.red, 20))
+plot(rangeMid, "Range midpoint", color = color.new(color.gray, 0))
+plot(rangeLow, "Range low", color = color.new(color.green, 20))
+plotshape(longSetup, title = "Aurex range long", style = shape.triangleup, color = color.lime, location = location.belowbar, size = size.tiny)
+plotshape(shortSetup, title = "Aurex range short", style = shape.triangledown, color = color.red, location = location.abovebar, size = size.tiny)

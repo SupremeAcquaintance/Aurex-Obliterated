@@ -1,0 +1,16 @@
+{
+  "schema_version": "aurex-s1-nfci-acquisition-execution-audit-v1",
+  "audit_id": "s1-nfci-acquisition-execution-audit-v1",
+  "audited_at": "2026-08-26T19:16:51.487491Z",
+  "addendum_file_sha256": "151b384fc8b3d6463c7a47b51d94da18dd117e344b8fea043607121774f942a0",
+  "addendum_evidence_hash": "c6279a10bb2daf4e8b7bba9fe4dd9aa1f37047aeefed1f3dd48f3aa713e51f76",
+  "protocol_evidence_hash": "ccbff64f29ce5d85eb52dded23df1c393bb1a5ab4d5ce2c2874d8f284b87195e",
+  "runner_contract_hash": "6dd21b6bc5709a5676b2911a28b8cb2413058076f936febd47bed876a5f8c90d",
+  "auditor_source_sha256": "6be99cfd558bb590003ded75a3de38e6ce0a977ffd1468daa025f8f02ac88cee",
+  "reconstructed_exactly": true,
+  "network_requests_observed": 0,
+  "payload_bytes_observed": 0,
+  "decision": "PASS_S1_NFCI_EXECUTION_CONTRACT_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_NFCI_DEVELOPMENT_SOURCE_ACQUISITION",
+  "audit_evidence_hash": "e0dd54aef0058539f105877fd3071d9bfacecc6d8c728fb4027f99586b5909bf"
+}

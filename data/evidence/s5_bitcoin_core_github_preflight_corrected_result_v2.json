@@ -1,0 +1,150 @@
+{
+  "schema_version": "aurex-s5-github-preflight-corrected-result-v2",
+  "result_id": "s5-github-preflight-corrected-result-v2",
+  "corrected_at": "2026-09-02T15:56:52.038030Z",
+  "runner_contract_hash": "32bc7ca5110b1c3b10226a8d17f5805bfdd220c9885b5a20ddca06c81c79fa56",
+  "protocol_evidence_hash": "b711d7010c0a549bd699712a1b6605b8b77a4836516f66a98a5b077d7293e41d",
+  "prior_result_evidence_hash": "08984a1bd4f5c01fb1d062a5b5bb6b0cea4a3829b27d06dfab216314b53035e3",
+  "prior_result_audit_evidence_hash": "f015c24de0ed4dbdd65b49b96ff8bd6aa8e2c7f3ed0ff7917eed56530f8af291",
+  "failure_audit_evidence_hash": "ffaf4571bafcdac3d4771e59a8a8905178a7e16cf0863b7199dbc7de805bb093",
+  "amendment_evidence_hash": "49d5be7ee08ea89e83295cb206f0992681e2d6d559c497b9a34554fea377b3db",
+  "amendment_audit_evidence_hash": "50b935b96fb20db2a3f92060a3f739bdf14bcbe11c0e3f314088b841dcdc5224",
+  "transcript_file_sha256": "abf49c61202d1c44f6bc7f8c9a34003792a6af8e152651ad8648eb491ac497ab",
+  "local_revalidation_count": 1,
+  "original_request_attempt_count": 1,
+  "additional_network_request_count": 0,
+  "http_status": 200,
+  "final_url_matched_request": true,
+  "redirect_count": 0,
+  "response_byte_count": 15733,
+  "response_body_sha256": "48e21e42f34f768826c4ec91679ac0e727a9be9c1ed21a1ee08798770ba22620",
+  "content_type": "application/json; charset=utf-8",
+  "rate_limit": 60,
+  "rate_remaining": 59,
+  "rate_resource": "core",
+  "canonical_repository_id": 1181927,
+  "accepted_link_path": "/repositories/1181927/pulls",
+  "parsed_pull_record_count": 1,
+  "first_pull_number": 9,
+  "first_pull_state": "closed",
+  "first_pull_base_ref": "master",
+  "first_pull_base_sha": "cba3a1741a8d7874eeb729bd2e1734b1ba712da9",
+  "first_pull_head_sha": "86c2bdfd5d7773e94dda258c52d2dd056fcfb261",
+  "first_pull_created_at": "2010-12-20T15:47:21Z",
+  "first_pull_merged_at": null,
+  "merge_commit_sha_key_present": false,
+  "terminal_record_count": 24012,
+  "bulk_request_page_count_at_100": 241,
+  "bulk_unauthenticated_hours_lower_bound": 5,
+  "gate_results": [
+    {
+      "gate_id": "TRANSPORT_DECISION_AND_READINESS_V31_LINEAGE_BOUND",
+      "status": "PASS",
+      "evidence": "Transport, failure, amendment, and amendment-audit lineage is hash-bound."
+    },
+    {
+      "gate_id": "EXACT_UNAUTHENTICATED_PAGE_ONE_REQUEST_BOUND",
+      "status": "PASS",
+      "evidence": "The original exact unauthenticated page-one request remains unchanged."
+    },
+    {
+      "gate_id": "ONE_AND_ONLY_ONE_REQUEST_ATTEMPT_EXECUTED",
+      "status": "PASS",
+      "evidence": "The original run executed exactly one request and the correction executes zero."
+    },
+    {
+      "gate_id": "HTTP_200_WITHOUT_REDIRECT",
+      "status": "PASS",
+      "evidence": "The preserved response is HTTP 200 at the original URL with zero redirect."
+    },
+    {
+      "gate_id": "RESPONSE_BODY_BOUNDED_AND_EXACTLY_PRESERVED",
+      "status": "PASS",
+      "evidence": "The 15,733-byte response body and transcript hashes reverify exactly."
+    },
+    {
+      "gate_id": "JSON_CONTENT_TYPE_AND_PAYLOAD_PARSE_PASS",
+      "status": "PASS",
+      "evidence": "The actual one-record GitHub list payload validates under the corrected schema."
+    },
+    {
+      "gate_id": "UNAUTHENTICATED_RATE_LIMIT_HEADERS_VALID",
+      "status": "PASS",
+      "evidence": "The preserved unauthenticated core rate-limit headers validate exactly."
+    },
+    {
+      "gate_id": "TERMINAL_LINK_PAGE_PARSED_WITH_FROZEN_QUERY_SCOPE",
+      "status": "PASS",
+      "evidence": "The numeric Link path matches canonical repository ID 1181927 and query scope."
+    },
+    {
+      "gate_id": "EXACTLY_ONE_CLOSED_MASTER_PULL_RECORD_SCHEMA_VALID",
+      "status": "PASS",
+      "evidence": "The closed master record exposes created_at, nullable merged_at, base.sha, and head.sha."
+    },
+    {
+      "gate_id": "EXACT_BULK_PAGE_AND_RATE_WINDOW_BUDGET_CALCULATED",
+      "status": "PASS",
+      "evidence": "The terminal count 24,012 yields exactly 241 bulk pages and five rate windows."
+    },
+    {
+      "gate_id": "NO_TOKEN_VALUE_OR_AUTHORIZATION_HEADER_USED",
+      "status": "PASS",
+      "evidence": "No Authorization header, token value, environment proxy, redirect, or retry was used."
+    },
+    {
+      "gate_id": "ZERO_BTC_VALUES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS",
+      "status": "PASS",
+      "evidence": "Zero BTC values, parameters, returns, candidates, strategy executions, or orders ran."
+    },
+    {
+      "gate_id": "SOURCE_COMPLETENESS_AND_PREDICTIVE_EDGE_NOT_ADJUDICATED",
+      "status": "PASS",
+      "evidence": "Source completeness and predictive edge remain explicitly unadjudicated."
+    },
+    {
+      "gate_id": "PASS_AUTHORIZES_BULK_ACQUISITION_PROTOCOL_ONLY",
+      "status": "PASS",
+      "evidence": "A PASS authorizes only a separately frozen bulk-acquisition protocol."
+    }
+  ],
+  "passed_gate_count": 14,
+  "failed_gate_count": 0,
+  "github_api_requests_executed": 1,
+  "additional_github_api_requests_executed": 0,
+  "github_metadata_records_parsed": 1,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "source_completeness_conclusion": "NOT_YET_ADJUDICATED",
+  "predictive_edge_conclusion": "NOT_EVALUATED",
+  "decision": "PASS_S5_GITHUB_METADATA_PREFLIGHT_LOCAL_CORRECTION",
+  "next_authorization": "FREEZE_S5_GITHUB_METADATA_BULK_ACQUISITION_PROTOCOL_ONLY",
+  "authorizes_bulk_acquisition_protocol_design": true,
+  "authorizes_bulk_metadata_acquisition_now": false,
+  "authorizes_market_values": false,
+  "authorizes_parameters": false,
+  "authorizes_returns": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "A PASS authorizes only bulk-acquisition protocol design.",
+    "Bulk identity must match head.sha to the Git merge second parent or fail closed.",
+    "Bulk normalization must require merged_at before treating a record as accepted.",
+    "Closed pull records include both merged and unmerged proposals.",
+    "Deleted or mutated historical records can still prevent source completeness.",
+    "No BTC value, parameter, return, candidate, signal, or order was created.",
+    "No paper, Testnet strategy, production, live, real-capital, or profit authority was created.",
+    "No request was replayed and no new response or metadata record was acquired.",
+    "Source completeness and predictive edge remain unadjudicated.",
+    "The original STOP is preserved and this result records a local correction.",
+    "The terminal count is a current snapshot and can change after acquisition."
+  ],
+  "result_evidence_hash": "f0ac3019b1d2487d53c6225f4a625609fe36bcd29878b77cc1b6fc9129258ae7"
+}

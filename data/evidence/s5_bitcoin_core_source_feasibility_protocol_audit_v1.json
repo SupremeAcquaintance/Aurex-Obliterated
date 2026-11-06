@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-s5-bitcoin-core-source-feasibility-protocol-audit-v1",
+  "audit_id": "s5-bitcoin-core-source-feasibility-protocol-audit-v1",
+  "audited_at": "2026-09-01T13:46:40.180395Z",
+  "protocol_path": "data/evidence/s5_bitcoin_core_source_feasibility_protocol_v1.json",
+  "protocol_file_sha256": "da3a66648ee71596559fcbc26837664b34c31d8315b923d336729306e503ec9a",
+  "protocol_evidence_hash": "62af43c11658ea6f8c887e6a376524cb4b0df3bab3f55f6bb61a589b0ca01fa8",
+  "builder_contract_hash": "d564a27f7f0f5b9824d54f4a70e47d4b08fd072749eff7c3bfd30609ce8ef81d",
+  "auditor_contract_hash": "1ca88ea74343c00012a38ca20770a3a82c9356ec478c32fc53f5f0a5985e54b6",
+  "reconstructed_exactly": true,
+  "source_binding_count": 4,
+  "gate_count": 14,
+  "planned_attempt_count": 2,
+  "network_requests_observed": 0,
+  "repository_history_records_parsed": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_BITCOIN_CORE_SOURCE_FEASIBILITY_PROTOCOL_AUDIT",
+  "next_authorization": "RUN_S5_BITCOIN_CORE_SOURCE_METADATA_FEASIBILITY_ONCE",
+  "audit_evidence_hash": "a8d7cbc990eee5e6aa11bef384d443e0af28b368fa054e4cc24b0288fd3f8152"
+}

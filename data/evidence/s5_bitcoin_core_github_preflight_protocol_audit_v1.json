@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-s5-github-preflight-protocol-audit-v1",
+  "audit_id": "s5-github-preflight-protocol-audit-v1",
+  "audited_at": "2026-09-02T15:39:29.820825Z",
+  "protocol_path": "data/evidence/s5_bitcoin_core_github_preflight_protocol_v1.json",
+  "protocol_file_sha256": "8438c168cbafbac5c4272c1326cf50a56669f3ca39a31c2b0474a28d43a4c2ae",
+  "protocol_evidence_hash": "b711d7010c0a549bd699712a1b6605b8b77a4836516f66a98a5b077d7293e41d",
+  "builder_contract_hash": "02ffec43ad2c78ae493eaa94e397b44575abfe0ec0d23f00ee3a085b8ad7f2d2",
+  "auditor_contract_hash": "07e17d30f2be5b9ec27dc58da8187a31f36997974d0ad3fb3bafc8e5833bf3ff",
+  "reconstructed_exactly": true,
+  "source_binding_count": 4,
+  "request_attempts_observed": 0,
+  "response_bytes_observed": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "next_authorization": "RUN_S5_GITHUB_METADATA_PREFLIGHT_ONCE",
+  "decision": "PASS_S5_GITHUB_PREFLIGHT_PROTOCOL_AUDIT",
+  "audit_evidence_hash": "c03407225007c4b15ed917953255881a88353576545e7ddc2616fb26ac8353e5"
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "aurex-s5-release-tag-source-remediation-result-audit-v1",
+  "audit_id": "s5-release-tag-source-remediation-result-audit-v1",
+  "audited_at": "2026-09-08T21:55:56.991566Z",
+  "result_path": "data/evidence/s5_release_tag_source_remediation_result_v1.json",
+  "result_file_sha256": "ca552f8b5fa79f43a8a1455516dce024bf378fb7a31d08002b5fc8a82f4c664a",
+  "result_evidence_hash": "33573936841b64dc1e553ff51413a3fca7b07379a59f0e101f07bcab6de454bd",
+  "protocol_evidence_hash": "150f4a354b26125f47bbb425be53492943ec8eca1e276adf01f17cf3043389c9",
+  "protocol_audit_evidence_hash": "e43ffcf2ed8b8bb01aacf78f30543327ba902ea69efff7af9c70545eb39c1c34",
+  "execution_contract_evidence_hash": "f7ed8856f45c6e0092761042395aa1ab8e4de3631d3d5f5af182d5dcd7640dd5",
+  "execution_contract_audit_evidence_hash": "f532059a77d8899ed7d31fe0136d2f4d6e672e77bfed7d42c3f3f8e34f4fd155",
+  "runner_contract_hash": "b0cbc6b38ca9fb854c12bd4b974d9651bc9b1d6543f7306a6e324a4b7db4f9ef",
+  "auditor_implementation_bindings": [
+    {
+      "path": "scripts/audit_s5_release_tag_source_remediation_result.py",
+      "file_sha256": "4b746f02573c5270bc83e5c8b5338a26c0f3038c7be4a5709b9518eb5980e2a8"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_release_tag_source_remediation_result_audit.py",
+      "file_sha256": "a19a7a372de26a9afdf43fb5321da1dc28e63c66b45c87455ad03fc4683f7e2a"
+    }
+  ],
+  "auditor_contract_hash": "1e6cb725fd2a1cc01e02483542272bdaaab3bfa14cce3dccc5e6cf2a0df88aa4",
+  "transcript_paths": [
+    "data/evidence/s5_release_tag_source_responses_v1/01_ls_remote_tags.json",
+    "data/evidence/s5_release_tag_source_responses_v1/02_reachable_commits.json",
+    "data/evidence/s5_release_tag_source_responses_v1/03_fetch_tags.json",
+    "data/evidence/s5_release_tag_source_responses_v1/04_verify_tags.json"
+  ],
+  "transcript_file_sha256s": [
+    "d9908533fc396defd4c93dbb55d0445b1a46011de3cc2b5ab5b1b2154fc6c4fb",
+    "73f37ddca276546c239b99043026fc9801b40743b67edbd803b624216d41eadb",
+    "a2397f35a51a6e49d04288d091b8cb992e9e3b97637e904234444a0e08548f6b",
+    "9687bac08745f43e3eaf6fb925fe923836041643559803ccee9bd36b8485c28b"
+  ],
+  "transcript_evidence_hashes": [
+    "b7f6e88ddaabd8a60d8eac73edc9ec08b0b439404c3dead8e6cae399890bff5d",
+    "4b000a9f0d888e42f02537d68b9ce4442298ffa3ea8997c964c7eded61e84b93",
+    "debecbeb1a9a8cd7c7a9a165db25d110ed26dd21247f646f2738ffc769f17fd4",
+    "2cdafd548435195ecfd294bfc1e5ec56b98171055f5244178c85c79708b360eb"
+  ],
+  "transcript_models_reverified": true,
+  "transcript_commands_reverified": true,
+  "stored_process_count": 4,
+  "stored_network_process_count": 2,
+  "stored_local_process_count": 2,
+  "remote_tag_ref_record_count": 691,
+  "remote_exact_stable_base_ref_count": 132,
+  "admitted_stable_tag_count": 42,
+  "admitted_annotated_tag_count": 14,
+  "admitted_lightweight_tag_count": 28,
+  "omitted_stable_tag_count": 90,
+  "omitted_annotated_tag_count": 90,
+  "omitted_lightweight_tag_count": 0,
+  "reachable_commit_count": 50395,
+  "admitted_tag_manifest_evidence_hash": "3f0d5d8f4e5f5b8d4dd031afb105ebab22995da3a5d546fb58c0dcc399cfa24d",
+  "fetched_tag_count": 42,
+  "fetched_tag_identity_drift_count": 0,
+  "original_repository_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+  "original_repository_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "original_repository_manifest_reverified": true,
+  "remediated_repository_path": "data/evidence/s5_bitcoin_core_release_tags_v1.git",
+  "remediated_repository_directory_sha256": "6e7cd0a147cb9ae26237fa1e4bac6b13c2c52295b264ed0f543d0d626b99e7e4",
+  "remediated_repository_manifest_reverified": true,
+  "frozen_protocol_pass_reproduced": true,
+  "nominal_result_pass_upheld": false,
+  "release_tag_source_complete_for_measurement": false,
+  "defect_classification": "ANCESTOR_ONLY_POLICY_EXCLUDED_90_ANNOTATED_MAINTENANCE_BRANCH_RELEASES",
+  "transcript_rows_parsed": 51128,
+  "git_processes_executed_during_audit": 0,
+  "network_requests_executed_during_audit": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "parameters_defined": 0,
+  "candidates_created": 0,
+  "signals_created": 0,
+  "orders_submitted": 0,
+  "decision": "REJECT_S5_RELEASE_TAG_SOURCE_REMEDIATION_PASS_INCOMPLETE_RELEASE_COVERAGE",
+  "next_authorization": "FREEZE_S5_COMPLETE_RELEASE_TAG_SOURCE_REMEDIATION_PROTOCOL_ONLY",
+  "limitations": [
+    "A new additive remediation must preserve all prior artifacts.",
+    "All 42 fetched refs and object identities are internally valid.",
+    "Ancestor reachability is not a valid completeness rule for release branches.",
+    "Ninety annotated stable-name refs were excluded by the frozen policy.",
+    "No Git process or network request was executed during this audit.",
+    "No market value, return, strategy, signal, or order was created.",
+    "Production and live trading remain prohibited.",
+    "Qualified strategies and real net profit remain zero.",
+    "The nominal remediation PASS is rejected for measurement use.",
+    "The original and remediated repositories remain immutable evidence."
+  ],
+  "audit_evidence_hash": "9395958f1ce5ee00a07c2605fd7447a390f42b551175a325949ff8a17019a005"
+}

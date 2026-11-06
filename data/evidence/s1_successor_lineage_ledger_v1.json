@@ -1,0 +1,183 @@
+{
+  "schema_version": "aurex-s1-successor-lineage-ledger-v1",
+  "ledger_id": "s1-successor-lineage-ledger-v1",
+  "frozen_at": "2026-08-26T18:24:11.663453Z",
+  "builder_contract_hash": "f6231debb7882b7b24f6d4c51e77231fc6695233e027d2984fb411682a93d218",
+  "records": [
+    {
+      "lineage_id": "01-legacy-candle-strategies",
+      "mechanism_families": [
+        "intraday_trend_pullback",
+        "intraday_volatility_breakout",
+        "jam_reversal",
+        "slow_trend_breakout_spot"
+      ],
+      "terminal_decision": "PARENT_CONTAMINATION_LEDGER_7_RECORDS",
+      "terminal_stage": "MIXED_RETIRED_SET",
+      "source_bindings": [
+        {
+          "path": "data/evidence/strategy_contamination_ledger_v2.json",
+          "file_sha256": "69890df964ea4a293180d465f2e4dea68ab22f9f7124835092411ad9381186b1"
+        }
+      ],
+      "outcomes_opened": true,
+      "reusable_for_s1_selection": false,
+      "successor_policy": "RETIRED_NO_RESCUE",
+      "reason": "Seven frozen strategy/window records preserve every inspected candle-strategy outcome and prevent renamed or nearby variants from being treated as fresh evidence."
+    },
+    {
+      "lineage_id": "02-cross-sectional-momentum-path-quality",
+      "mechanism_families": [
+        "cross_sectional_momentum",
+        "path_quality_momentum"
+      ],
+      "terminal_decision": "RETIRE_R4_CANDIDATE",
+      "terminal_stage": "OUTCOME_REJECTED",
+      "source_bindings": [
+        {
+          "path": "data/evidence/r31_path_quality_result_v1.json",
+          "file_sha256": "7a345f336eef773704fc045762a094a905954e6cca43fcb5b4cb1ae04b740584"
+        },
+        {
+          "path": "data/evidence/r3_cross_sectional_momentum_result_v1.json",
+          "file_sha256": "e8bab3bb97828db24b70ccc0fe6930fe68cff94638ce3576b52b8dcd2be5bad5"
+        },
+        {
+          "path": "data/evidence/r4_path_quality_result_v1.json",
+          "file_sha256": "4f557a55d4181c7fc4b89c8569da00e4ae338f6adf9b23c461b5778827baecc8"
+        }
+      ],
+      "outcomes_opened": true,
+      "reusable_for_s1_selection": false,
+      "successor_policy": "RETIRED_NO_RESCUE",
+      "reason": "R3, R3.1, and R4 consumed the cross-sectional momentum and path-quality continuation family through development and validation, ending in candidate retirement."
+    },
+    {
+      "lineage_id": "03-volatility-managed-broad-spot-beta",
+      "mechanism_families": [
+        "volatility_managed_broad_spot_beta"
+      ],
+      "terminal_decision": "STOP_VOLATILITY_MANAGED_BROAD_SPOT_BETA",
+      "terminal_stage": "OUTCOME_REJECTED",
+      "source_bindings": [
+        {
+          "path": "data/evidence/u1_primary_mechanism_result_v1.json",
+          "file_sha256": "6cad26e155cbdc7d464ed941344b02667aecd60ec33492bac5fc87da52b3c2c0"
+        }
+      ],
+      "outcomes_opened": true,
+      "reusable_for_s1_selection": false,
+      "successor_policy": "RETIRED_NO_RESCUE",
+      "reason": "The volatility-managed broad spot beta primary opened development returns and failed its frozen decision contract despite positive aggregate performance."
+    },
+    {
+      "lineage_id": "04-positive-funding-carry",
+      "mechanism_families": [
+        "delta_neutral_positive_funding_carry"
+      ],
+      "terminal_decision": "STOP_P01_INSUFFICIENT_QUALIFIED_HISTORICAL_DATA",
+      "terminal_stage": "SOURCE_REJECTED",
+      "source_bindings": [
+        {
+          "path": "data/evidence/v2_p01_full_acquisition_result_v1.json",
+          "file_sha256": "515aa546481762386b2140a3f9a8ba86edb7141752f653379a6f6fbe4dd6960c"
+        }
+      ],
+      "outcomes_opened": false,
+      "reusable_for_s1_selection": false,
+      "successor_policy": "CLOSED_COUNTS_FOR_MULTIPLICITY",
+      "reason": "The delta-neutral funding-carry source path failed its predeclared historical data sufficiency gate before any return was calculated."
+    },
+    {
+      "lineage_id": "05-v3-independent-mechanisms",
+      "mechanism_families": [
+        "clock_phase_intraday_predictability",
+        "cross_asset_cointegration_relative_value",
+        "passive_limit_order_liquidity_provision"
+      ],
+      "terminal_decision": "SELECT_ZERO_V3_PRIMARY_MECHANISMS",
+      "terminal_stage": "FEASIBILITY_REJECTED",
+      "source_bindings": [
+        {
+          "path": "data/evidence/v3_mechanism_feasibility_screen_v1.json",
+          "file_sha256": "192a08b4ed7b28bf57416c3b227213db25392e3b1830e17aa0c348880d1cc36f"
+        }
+      ],
+      "outcomes_opened": false,
+      "reusable_for_s1_selection": false,
+      "successor_policy": "CLOSED_COUNTS_FOR_MULTIPLICITY",
+      "reason": "All three V3 mechanisms failed source or execution feasibility before primary selection, parameters, or returns."
+    },
+    {
+      "lineage_id": "06-v4-independent-mechanisms",
+      "mechanism_families": [
+        "delta_hedged_crypto_variance_risk_premium",
+        "inventory_backed_cross_venue_arbitrage"
+      ],
+      "terminal_decision": "SELECT_ZERO_V4_PRIMARY_MECHANISMS",
+      "terminal_stage": "FEASIBILITY_REJECTED",
+      "source_bindings": [
+        {
+          "path": "data/evidence/v4_mechanism_feasibility_screen_v1.json",
+          "file_sha256": "16abb0c5a5b83fb91e254914320cc8160e0c543accad26a0fb22071179419d15"
+        }
+      ],
+      "outcomes_opened": false,
+      "reusable_for_s1_selection": false,
+      "successor_policy": "CLOSED_COUNTS_FOR_MULTIPLICITY",
+      "reason": "Both V4 mechanisms failed crash-safe source and execution feasibility before any market value or return was opened."
+    },
+    {
+      "lineage_id": "07-jam-aggressive-flow-exhaustion",
+      "mechanism_families": [
+        "aggressive_sell_flow_exhaustion_reclaim"
+      ],
+      "terminal_decision": "STOP_JAM_SUCCESSOR_DEVELOPMENT_OUTCOME_FAILED",
+      "terminal_stage": "OUTCOME_REJECTED",
+      "source_bindings": [
+        {
+          "path": "data/evidence/jam_successor_development_outcome_result_v1.json",
+          "file_sha256": "82639d4af205f089c71192856228873c13e94f8f03587560291e90583b359962"
+        }
+      ],
+      "outcomes_opened": true,
+      "reusable_for_s1_selection": false,
+      "successor_policy": "RETIRED_NO_RESCUE",
+      "reason": "The preregistered aggregate-flow exhaustion event failed fee-net development economics and all temporal robustness gates."
+    },
+    {
+      "lineage_id": "08-periodic-perpetual-flow",
+      "mechanism_families": [
+        "periodic_perpetual_order_flow_spot_continuation"
+      ],
+      "terminal_decision": "STOP_Q1_SUCCESSOR_SOURCE_SUFFICIENCY_FAILED",
+      "terminal_stage": "SOURCE_REJECTED",
+      "source_bindings": [
+        {
+          "path": "data/evidence/q1_periodic_flow_successor_acquisition_result_v7.json",
+          "file_sha256": "deea039ad9d3e0c3c45a5df24ed00b9ce56ac60533dc2487a081c6c16e41283c"
+        }
+      ],
+      "outcomes_opened": false,
+      "reusable_for_s1_selection": false,
+      "successor_policy": "CLOSED_COUNTS_FOR_MULTIPLICITY",
+      "reason": "Q1 classified every source month but failed the frozen paired-month, per-year, and quarter sufficiency gates before measurement."
+    }
+  ],
+  "lineage_count": 8,
+  "source_binding_count": 10,
+  "selected_successor_count": 0,
+  "new_market_numeric_fields_inspected": [],
+  "new_return_metrics_calculated": [],
+  "authorizes_market_data_import": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_return_testing": false,
+  "authorizes_candidate": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "decision": "CLOSE_PRE_S1_LINEAGES_AUTHORIZE_NEW_CHARTER_ONLY",
+  "ledger_evidence_hash": "0e908e278455018f195f0b3a6269e65e67b415889a2fd0bd3d3c7b0df502bdab"
+}

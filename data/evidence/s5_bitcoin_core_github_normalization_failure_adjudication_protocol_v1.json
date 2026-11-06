@@ -1,0 +1,159 @@
+{
+  "schema_version": "aurex-s5-normalization-failure-adjudication-protocol-v1",
+  "protocol_id": "s5-normalization-failure-adjudication-protocol-v1",
+  "frozen_at": "2026-09-04T14:00:12.771024Z",
+  "status": "FROZEN_DIAGNOSTIC_ONLY_ZERO_SOURCE_ROW_ACCESS",
+  "builder_contract_hash": "2f58ea931422e27baefa7633288aebf0c661fee7586ad6639823b6a49fe8d0f9",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_final_result_audit_v4.json",
+      "file_sha256": "56ec5c6e808778f42697812f6ee2322b84bd755575cafbd2642ac9a3b50ba071"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v4.json",
+      "file_sha256": "1cc2d4b07b643d81e93999ba9f2ce424f07ec185367cd9469474ecc47e85d40b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_execution_contract_audit_v1.json",
+      "file_sha256": "6f1066118b4532f789702a3afa597b466020c85570d354378549b9c80701d8d6"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_execution_contract_v1.json",
+      "file_sha256": "2dc4910b7c2aecd3ff1e9b4d8902e33b2e2ee68db377e966a780cc9e9791c0e9"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_protocol_audit_v1.json",
+      "file_sha256": "ad50041af31f3109995d8a36dcdd92ba6aed6b5ff4eb384ddda089b63fbc91cc"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_protocol_v1.json",
+      "file_sha256": "4e81bba7146bea45af5bfbc8b04b9d79f422219be0733672da41178ba69b663c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_result_v1.json",
+      "file_sha256": "cd9adaac46af2b033cf03e4d14138db25d4a016ceb7c7cbb3f7502d4a61e85cc"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_audit_v1.json",
+      "file_sha256": "0151d680208341673edf49bf0c5b4bf573e6bedfd1546a990da966b399518b1c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_v1.json",
+      "file_sha256": "518ae10d31085a5aa79498b0552cfa7b55334d05c609471a6dad47b2fb321740"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_audit_v2.json",
+      "file_sha256": "07cbe45b2d8c4792e435d759ea5c011753849d6343f40bef73d81834731b8792"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_v2.json",
+      "file_sha256": "b96a57ea99c0b1bb1aef3fcf7b534afe9821e9687583813ab4a64b5f849323d9"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "a7229a46be569c211e51d462feddfb45084cc1be66f886cb6dc3a2dceb79dfef",
+  "normalization_protocol_evidence_hash": "2e634950d959e05bc3e5baf98bbc2f6dd3ead779a7c4406150d267a7d3099dfb",
+  "normalization_protocol_audit_evidence_hash": "7149bfb6d20948c1bd4b765ca4268e2ebcc0c4e0446e8a6ce2e9454b2745db9f",
+  "execution_contract_evidence_hash": "e08683548312d70eb3070bfe17b6e3550781e2014af0882c1c9f700231500875",
+  "execution_contract_audit_evidence_hash": "d833a1c6fba4bf9e399edc8ac67184822f53da087e4a99722b651216784913d8",
+  "failed_result_file_sha256": "cd9adaac46af2b033cf03e4d14138db25d4a016ceb7c7cbb3f7502d4a61e85cc",
+  "failed_result_evidence_hash": "02f461aeb23e00479a9044e7017daa4eaa569f296cd69d8fdbc7dd7e6e6c3a89",
+  "bulk_result_evidence_hash": "3c2bd020ee115e0d28e75fc80c977ffef2a4bad8ac6ad4cd5f4219380a25e082",
+  "bulk_final_audit_evidence_hash": "cc1a4604a6d8c2819dd629900374f60cbac7ff50499eb14af34f63c2bc1acc29",
+  "census_result_evidence_hash": "6596e9e8d4d1c360247642373d387ddd33f08058423ddf30f1f8817f2cc977dd",
+  "census_result_audit_evidence_hash": "829eb1701cac6552f38578fefbd649c54d2267c57b5cec272a5a559c9ab369f0",
+  "history_result_evidence_hash": "0725c5080e6940290bde9134ac297d7c073013b7392219ec9f9ce9f1fd608bbb",
+  "history_result_audit_evidence_hash": "93d8b2285c0865f63cc626424c47fc4aa508d8e5cd6b717128093971cee45efa",
+  "original_passed_gate_count": 13,
+  "original_failed_gate_count": 4,
+  "original_recognized_pull_merge_count": 7961,
+  "original_recognized_exact_mapping_count": 7878,
+  "original_recognized_gap_count": 83,
+  "original_accepted_github_pull_count": 16279,
+  "original_total_exact_mapping_count": 16167,
+  "original_unmatched_accepted_pull_count": 112,
+  "original_ambiguous_git_merge_count": 1,
+  "original_unresolved_git_merge_count": 554,
+  "full_graph_command": "git rev-list --parents <source_cutoff_commit>",
+  "diagnostic_github_fields": [
+    "number",
+    "state",
+    "created_at",
+    "closed_at",
+    "merged_at",
+    "merge_commit_sha",
+    "head.sha",
+    "base.ref"
+  ],
+  "recognized_classification_order": [
+    "EXACT_PRIOR_MAPPING",
+    "ABSENT_FROM_MASTER_SCOPED_COHORT",
+    "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+    "HEAD_SHA_MISMATCH",
+    "AMBIGUOUS_HEAD_SHA"
+  ],
+  "unmatched_classification_order": [
+    "MERGE_COMMIT_SHA_EQUALS_FIRST_PARENT_MERGE",
+    "MERGE_COMMIT_SHA_EQUALS_REACHABLE_COMMIT_NOT_FIRST_PARENT_MERGE",
+    "HEAD_SHA_REACHABLE_NOT_FIRST_PARENT_SECOND_PARENT",
+    "NOT_REACHABLE_AT_SOURCE_CUTOFF",
+    "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+    "OTHER_UNRESOLVED"
+  ],
+  "fixed_recent_merge_windows_days": [
+    1,
+    7,
+    30
+  ],
+  "direct_pull_requests_permitted": false,
+  "network_access_permitted": false,
+  "repository_fetch_permitted": false,
+  "commit_message_access_permitted": false,
+  "author_or_committer_header_access_permitted": false,
+  "git_timestamp_access_permitted": false,
+  "merge_commit_sha_mapping_change_permitted": false,
+  "normalization_rule_change_permitted": false,
+  "maximum_local_git_process_count": 1,
+  "maximum_run_count": 1,
+  "maximum_elapsed_seconds": 1200,
+  "maximum_diagnostic_items_per_category": 250,
+  "result_path": "data/evidence/s5_bitcoin_core_github_normalization_failure_adjudication_result_v1.json",
+  "result_was_absent_at_freeze": true,
+  "source_page_files_opened_during_freeze": 0,
+  "response_bodies_decoded_during_freeze": 0,
+  "local_git_processes_executed_during_freeze": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "orders_submitted": 0,
+  "required_gate_ids": [
+    "FROZEN_NORMALIZATION_STOP_RESULT_AND_LINEAGE_BOUND",
+    "ORIGINAL_13_PASS_4_FAIL_COUNTS_RECONCILE",
+    "ORIGINAL_83_RECOGNIZED_112_REVERSE_1_AMBIGUOUS_GAPS_RECONCILE",
+    "ALL_245_SOURCE_PAGES_AND_RESPONSE_BODIES_REHASH",
+    "ONE_LOCAL_FULL_REACHABILITY_PARENT_COMMAND_ONLY",
+    "FIRST_PARENT_TOPOLOGY_RECONSTRUCTS_FROM_FULL_GRAPH",
+    "EVERY_RECOGNIZED_REFERENCE_RECEIVES_ONE_FROZEN_CATEGORY",
+    "EVERY_UNMATCHED_ACCEPTED_PULL_RECEIVES_ONE_FROZEN_CATEGORY",
+    "MERGE_COMMIT_SHA_IS_DIAGNOSTIC_ONLY_AND_NEVER_SILENTLY_SUBSTITUTED",
+    "AMBIGUOUS_HEAD_SHA_RECORDS_ARE_PRESERVED_EXACTLY",
+    "ZERO_MARKET_VALUES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS"
+  ],
+  "decision": "FREEZE_S5_NORMALIZATION_FAILURE_ADJUDICATION_PROTOCOL",
+  "next_authorization": "RUN_S5_NORMALIZATION_FAILURE_ADJUDICATION_ONCE",
+  "limitations": [
+    "A diagnostic category is not evidence of predictive edge or strategy value.",
+    "A missing pull number cannot distinguish deletion from a different base without new metadata.",
+    "Any correction requires a new frozen protocol and independent audit.",
+    "Current GitHub metadata can reflect mutations after the historical merge event.",
+    "Fixed one, seven, and thirty day windows describe cutoff proximity only.",
+    "Full Git reachability at the frozen cutoff does not establish public availability time.",
+    "Git author, committer, message, and timestamp fields remain prohibited.",
+    "GitHub merge_commit_sha is inspected only as a diagnostic and cannot alter prior mappings.",
+    "No market value, parameter, return, candidate, or order is authorized.",
+    "No network request, direct pull lookup, or repository fetch is authorized.",
+    "The preserved GitHub pages are scoped to pull requests whose current base is master.",
+    "This is a diagnostic protocol and the original normalization STOP remains binding."
+  ],
+  "protocol_evidence_hash": "f067e7e143096e2f754e26e466edc2936a24251024713f6767cb4677699bb451"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "aurex-s5-complete-release-execution-contract-audit-v1",
+  "audit_id": "s5-complete-release-execution-contract-audit-v1",
+  "audited_at": "2026-09-09T20:14:01.001404Z",
+  "contract_file_sha256": "1441ee2f3d1da0f613e8b12484ef28fcb1fa99bafe1136d58aeaee1a7c75fee8",
+  "contract_evidence_hash": "1484a05941216ebc5c5d022d800aff3d02fd55e3b319ed44bccd485d8a08d280",
+  "builder_contract_hash": "6f86c5d751d8c64c5dbba62d1b0f410065f6fa52fa2f424241e4893b72436ce6",
+  "runner_contract_hash": "e4a056b7f39726fa991b97db169ce4ea06f83b0fcafa5b64107a4633db335904",
+  "source_binding_manifest_evidence_hash": "cc46f5d369935f10a7b93bfd246678ad7985ed25b864ec66cc5e60c75ae22e09",
+  "implementation_binding_manifest_evidence_hash": "e4a056b7f39726fa991b97db169ce4ea06f83b0fcafa5b64107a4633db335904",
+  "auditor_implementation_bindings": [
+    {
+      "path": "scripts/audit_s5_complete_release_tag_source_remediation_execution.py",
+      "file_sha256": "99807b4976b0ea751a58cad91078ba55a16143c94c4a30a69c88b74b806a7c08"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_complete_release_tag_source_remediation_execution.py",
+      "file_sha256": "d37e026cd78d9dd0442a4b9b0ad63641d92233e112fd2b908cceeba77fcf3b0f"
+    }
+  ],
+  "auditor_contract_hash": "318ee18f22d1c934755fefada7ae7ce6dde22b2400067f48e6f7b621fda89408",
+  "reconstructed_exactly": true,
+  "git_processes_executed": 0,
+  "repository_copies_executed": 0,
+  "network_processes_executed": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_COMPLETE_RELEASE_EXECUTION_CONTRACT_AUDIT",
+  "next_authorization": "RUN_S5_COMPLETE_RELEASE_TAG_SOURCE_REMEDIATION_ONCE",
+  "audit_evidence_hash": "80b29a31545d4203378fa0b86f89e79632872c340e260a07e0fa4970e144da4c"
+}

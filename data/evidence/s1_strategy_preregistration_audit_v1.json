@@ -1,0 +1,23 @@
+{
+  "schema_version": "aurex-s1-strategy-preregistration-audit-v1",
+  "audit_id": "s1-strategy-preregistration-audit-v1",
+  "audited_at": "2026-08-26T20:27:59.877324Z",
+  "protocol_file_sha256": "05863ebe52a71cb30d805902a8a88cf543343de0107c050ddd6358583289a249",
+  "protocol_evidence_hash": "6ca639fa0ff744dc13c1c8db229d46a8a7710b77bb49eded2ac8cae4a022816f",
+  "builder_contract_hash": "649ebbbb460cbc0c34e46674fadb72cfccbddf6b184befa83de9273d04fda3de",
+  "feature_result_evidence_hash": "a59707114ec19c2576e72071fcba5ad7fa36e5232629a40fe1e9704f122f7664",
+  "feature_audit_evidence_hash": "da54d8a9ee1097994b1b3fc6edc81f844abcb7f9f046426c1f0a51732a0cc1f3",
+  "feature_dataset_file_sha256": "db93ee6954fee447cba66b3d873282da4d289f5ef6a63446d6ad036f787b24d6",
+  "feature_row_manifest_evidence_hash": "03b81a2e0da1e4acf508b1bd21cbb75dd8a26c74a7d8c335b50ea9da7e6e962e",
+  "auditor_source_sha256": "e888263f74f70cdb85a2b4e2ac6837bbe5eb5538a146b8a22031a639dea7993c",
+  "feature_dataset_bytes_hashed": 90632,
+  "feature_value_rows_parsed": 0,
+  "btc_market_values_read": 0,
+  "candidate_count": 4,
+  "promotable_candidate_count": 1,
+  "development_gate_count": 12,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_STRATEGY_PREREGISTRATION_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_BTCUSDT_DAILY_1H_SOURCE_ACQUISITION_PROTOCOL_ONLY",
+  "audit_evidence_hash": "6d10abaf857bba7dd28c10e19957bdffc7fef7bc67da96d7dfd5060d3ba17c00"
+}

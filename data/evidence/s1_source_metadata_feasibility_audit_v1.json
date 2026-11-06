@@ -1,0 +1,17 @@
+{
+  "schema_version": "aurex-s1-source-metadata-feasibility-audit-v1",
+  "audit_id": "s1-source-metadata-feasibility-audit-v1",
+  "audited_at": "2026-08-26T18:32:29.265475Z",
+  "protocol_file_sha256": "3ded3f020e82f81dbdec70266a2e5757093c3a85005630deaab151543309a050",
+  "protocol_evidence_hash": "b36cc55362af6e027aaaf16355576b7f5d478e0600fce080a442ec994ec6f4c9",
+  "result_file_sha256": "6c861ead9743925edb8d88824c9e7097be012bf818d27ae90b09889acec30208",
+  "result_evidence_hash": "e81cbfed69cb4886d756b390b7f3110b63df87669f4c4b13b0e2d5b3ed12d502",
+  "runner_source_sha256": "6f71e9425f78598016908f7839e80d4a1f8425a7eda587a0052bee55682f7eb1",
+  "auditor_source_sha256": "aec67507ac075aab399665b0b335f867d4b5a4bb9c2ee7c80bbd610f1c968a15",
+  "response_count": 4,
+  "response_body_bytes_read": 0,
+  "reconstructed_exactly": true,
+  "decision": "STOP_S1_METADATA_RESULT_RECONSTRUCTED",
+  "next_authorization": "NONE_SOURCE_TRANSPORT_UNAVAILABLE",
+  "audit_evidence_hash": "9720c07355cdafedd0a1d3e8486311770cdc70e5260cfd1981532c4d3cea9a9e"
+}

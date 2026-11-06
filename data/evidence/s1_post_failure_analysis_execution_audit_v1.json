@@ -1,0 +1,25 @@
+{
+  "schema_version": "aurex-s1-post-failure-analysis-execution-audit-v1",
+  "audit_id": "s1-post-failure-analysis-execution-audit-v1",
+  "audited_at": "2026-08-27T06:57:10.276983Z",
+  "contract_file_sha256": "b63f91f3dabdda31767af7eea4026d91f0b68706ee1cf812459f6a5756a40540",
+  "contract_evidence_hash": "84a4d09a653ca932e837adaa515faa47301a4a38cea5915839fd8ded22209064",
+  "protocol_evidence_hash": "f4b7ebd92fd1a149d784cce1840c08180d8c942ff2e54b6047313f91ba359c9b",
+  "runner_contract_hash": "ef79c9f59508c717bcd36fcd1d54c7fdcc2a09588e5bb930a2855fc48d737a87",
+  "auditor_source_sha256": "8fc12b6daaa496627e4af41c1c8188c7fa7ed6b7fe7e7d46e97c20fb2892dcfd",
+  "synthetic_test_ids": [
+    "PROTOCOL_FORBIDS_RESCUE_AND_EXECUTION",
+    "GROSS_EQUITY_COMPOUNDS_EXISTING_INTERVALS",
+    "DRAWDOWN_EARLIEST_TIE_AND_RECOVERY",
+    "DRAWDOWN_UNRECOVERED_STATE",
+    "MAXIMAL_CONTIGUOUS_LONG_EPISODES",
+    "TAIL_MAGNITUDE_AND_SEQUENCE_TIEBREAK",
+    "DIAGNOSTIC_DUPLICATE_POSITION_VECTORS",
+    "ACTUAL_FAILED_LINEAGE_DEVELOPMENT_ONLY"
+  ],
+  "reconstructed_exactly": true,
+  "analysis_values_calculated": 0,
+  "decision": "PASS_S1_POST_FAILURE_ANALYSIS_EXECUTION_CONTRACT_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_ONE_S1_POST_FAILURE_ANALYSIS",
+  "audit_evidence_hash": "13a27548fa293a6082b9fa8311bb321162cf4f8318aeeeacc777017caf79945b"
+}

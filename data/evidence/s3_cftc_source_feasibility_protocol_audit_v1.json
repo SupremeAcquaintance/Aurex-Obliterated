@@ -1,0 +1,19 @@
+{
+  "schema_version": "aurex-s3-cftc-source-feasibility-protocol-audit-v1",
+  "audit_id": "s3-cftc-source-feasibility-protocol-audit-v1",
+  "audited_at": "2026-08-30T20:54:33.157591Z",
+  "protocol_path": "data/evidence/s3_cftc_source_feasibility_protocol_v1.json",
+  "protocol_file_sha256": "ad24ef243e544321ac5eee2e8dc253303ccc4db303cdda5fc33f8677b4b2da6d",
+  "protocol_evidence_hash": "1d9e2b672b754c3e6d7296fc3c75fd8d7ab4f49e445b06383ec4e1722271c15a",
+  "charter_evidence_hash": "2cf73ead1b04999c3b5f9f818bb60d18ad96d2041fae2d65d77084aa88e4802a",
+  "builder_contract_hash": "bea1a359af1523395a803962298fc57b2f8eada856c7e6679ba2517012b95186",
+  "auditor_contract_hash": "b3edbdb263bbc8d45cdb0603258b8fd330a8db6cd055fe0d0914714579be1acb",
+  "reconstructed_exactly": true,
+  "network_requests_observed": 0,
+  "cftc_target_position_values_observed": 0,
+  "btc_market_values_observed": 0,
+  "orders_observed": 0,
+  "decision": "PASS_S3_CFTC_SOURCE_FEASIBILITY_PROTOCOL_AUDIT",
+  "next_authorization": "RUN_S3_CFTC_POINT_IN_TIME_SOURCE_FEASIBILITY_ONCE",
+  "audit_evidence_hash": "bbea600436e66ee35e809a323c0f83bdbdfe948e352c4f2f4fa1add03999d7c1"
+}

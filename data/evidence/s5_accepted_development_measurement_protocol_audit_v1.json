@@ -1,0 +1,44 @@
+{
+  "schema_version": "aurex-s5-accepted-development-measurement-protocol-audit-v1",
+  "audit_id": "s5-accepted-development-measurement-protocol-audit-v1",
+  "audited_at": "2026-09-08T19:59:16.127349Z",
+  "protocol_path": "data/evidence/s5_accepted_development_measurement_protocol_v1.json",
+  "protocol_file_sha256": "4556e84ddc6174d3e9ab08c233147767b735eb63d46c9320f08c1727c231b7f6",
+  "protocol_evidence_hash": "0d4f9dbc73675a0e625971a9a53181bcd4a2b707ebe02f01a28edfc4c65478d0",
+  "builder_contract_hash": "e32dcdef0420cd0fd6859d9d93bac9283978c7eea3ec7b7e3c90fb2b2e57f7a4",
+  "auditor_implementation_bindings": [
+    {
+      "path": "scripts/audit_s5_accepted_development_measurement_protocol.py",
+      "file_sha256": "16b2cdb58734866ea5bb73c5a146cfe7f860322a03f0bc01aa069818c0ba413f"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_accepted_development_measurement_protocol.py",
+      "file_sha256": "c6ec6ab458e74640beabb8df128237e3c33233e93e273d81693975735a200baa"
+    }
+  ],
+  "auditor_contract_hash": "21d96b4c914ddc7e0dd01b0c394f2b2da210372e36c3246257628331a135642e",
+  "source_binding_manifest_evidence_hash": "227ce5158b1ba174d1f5cfd1e85d2e4b5d7bacc7196627a1385c89cb0118a26b",
+  "corrected_normalization_result_evidence_hash": "a205e0759b235fae0810ae9203afa4dd81087f52ce782cd4e8c00c670fdd45a5",
+  "corrected_normalization_result_audit_evidence_hash": "d0d66d194c6136164999341f5e044bf60d8f2e7b585531a863ba599d54254648",
+  "source_binding_count": 25,
+  "input_file_count": 5,
+  "input_row_count": 57592,
+  "primary_event_count": 16271,
+  "all_accepted_event_count": 16279,
+  "source_unverified_event_count": 8,
+  "canonical_integration_count": 16242,
+  "expected_measurement_month_count": 212,
+  "measurement_definition_count": 17,
+  "protocol_reconstructed_exactly": true,
+  "source_jsonl_rows_parsed": 0,
+  "git_processes_executed": 0,
+  "network_requests_executed": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "signals_created": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_ACCEPTED_DEVELOPMENT_MEASUREMENT_PROTOCOL_AUDIT",
+  "next_authorization": "AUTHORIZE_S5_ACCEPTED_DEVELOPMENT_MEASUREMENT_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "0b6ad1358d206822ab530447bc184dfb98ecd12d209e8cd8c2f3675f17c70064"
+}

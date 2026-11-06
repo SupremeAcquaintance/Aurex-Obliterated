@@ -1,0 +1,208 @@
+{
+  "schema_version": "aurex-s1-strategy-preregistration-v1",
+  "protocol_id": "s1-strategy-preregistration-v1",
+  "frozen_at": "2026-08-26T20:27:51.598056Z",
+  "builder_contract_hash": "649ebbbb460cbc0c34e46674fadb72cfccbddf6b184befa83de9273d04fda3de",
+  "feature_result_file_sha256": "2f7488e224195a92558d00b6830f75172f54f2798d9d3a3a501e17407452c77d",
+  "feature_result_evidence_hash": "a59707114ec19c2576e72071fcba5ad7fa36e5232629a40fe1e9704f122f7664",
+  "feature_audit_file_sha256": "f7e2ac7e0d91bf1f860ef228af2dcc34e4591308f371704e610e5d38197584db",
+  "feature_audit_evidence_hash": "da54d8a9ee1097994b1b3fc6edc81f844abcb7f9f046426c1f0a51732a0cc1f3",
+  "feature_dataset_file_sha256": "db93ee6954fee447cba66b3d873282da4d289f5ef6a63446d6ad036f787b24d6",
+  "feature_row_manifest_evidence_hash": "03b81a2e0da1e4acf508b1bd21cbb75dd8a26c74a7d8c335b50ea9da7e6e962e",
+  "feature_decision": "PASS_S1_NFCI_DEVELOPMENT_FEATURE_CONSTRUCTION",
+  "feature_next_authorization": "AUTHORIZE_S1_NFCI_DEVELOPMENT_STRATEGY_PREREGISTRATION_PROTOCOL_ONLY",
+  "feature_dataset_bytes_hashed_during_freeze": 90632,
+  "feature_value_rows_parsed_during_freeze": 0,
+  "mechanism_id": "S1-NFCI-EASING-BTC-SPOT-RISK-APPETITE",
+  "venue": "BINANCE",
+  "market_type": "SPOT",
+  "symbol": "BTCUSDT",
+  "direction": "LONG_OR_CASH",
+  "effective_leverage": "1",
+  "initial_equity_usd": "100",
+  "source_archive_granularity": "DAILY",
+  "source_kline_interval": "1h",
+  "source_base_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1h",
+  "source_columns": [
+    "open_time",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "close_time",
+    "quote_asset_volume",
+    "trade_count",
+    "taker_buy_base_volume",
+    "taker_buy_quote_volume",
+    "ignore"
+  ],
+  "source_checksum_required": true,
+  "required_price_date_count": 277,
+  "first_required_price_date": "2017-09-15",
+  "last_required_price_date": "2022-12-30",
+  "required_price_weekday": "FRIDAY",
+  "activation_rule": "SOURCE_VINTAGE_PLUS_1_CALENDAR_DAY_AT_00_00_UTC",
+  "execution_price_rule": "EXACT_1H_KLINE_OPEN_AT_ACTIVATION_TIMESTAMP",
+  "missing_execution_price_policy": "STOP_NO_SUBSTITUTION",
+  "scored_signal_sequence_start": 5,
+  "scored_signal_sequence_end_inclusive": 280,
+  "terminal_price_sequence": 281,
+  "expected_weekly_interval_count": 276,
+  "position_rule": "REBALANCE_ONLY_WHEN_BINARY_POSITION_CHANGES",
+  "base_commission_bps_per_fill": "10",
+  "base_slippage_and_spread_bps_per_fill": "5",
+  "base_total_cost_bps_per_fill": "15",
+  "stress_cost_multiplier": "1.5",
+  "stress_total_cost_bps_per_fill": "22.5",
+  "cost_application": "APPLY_PER_POSITION_CHANGING_FILL_TO_COMPOUNDED_EQUITY",
+  "candidates": [
+    {
+      "candidate_id": "S1-C1-CONSISTENT-EASING-PRIMARY",
+      "role": "PRIMARY_ELIGIBILITY",
+      "long_rule": "NFCI_CHANGE_1V_LT_0_AND_NFCI_CHANGE_4V_LT_0",
+      "true_position": "LONG_1X",
+      "false_position": "CASH",
+      "equality_position": "CASH",
+      "shorting_permitted": false,
+      "may_be_promoted": true
+    },
+    {
+      "candidate_id": "S1-D1-ONE-VINTAGE-EASING",
+      "role": "DIAGNOSTIC_ONLY",
+      "long_rule": "NFCI_CHANGE_1V_LT_0",
+      "true_position": "LONG_1X",
+      "false_position": "CASH",
+      "equality_position": "CASH",
+      "shorting_permitted": false,
+      "may_be_promoted": false
+    },
+    {
+      "candidate_id": "S1-D2-FOUR-VINTAGE-EASING",
+      "role": "DIAGNOSTIC_ONLY",
+      "long_rule": "NFCI_CHANGE_4V_LT_0",
+      "true_position": "LONG_1X",
+      "false_position": "CASH",
+      "equality_position": "CASH",
+      "shorting_permitted": false,
+      "may_be_promoted": false
+    },
+    {
+      "candidate_id": "S1-D3-LOOSE-AND-FOUR-VINTAGE-EASING",
+      "role": "DIAGNOSTIC_ONLY",
+      "long_rule": "NFCI_LEVEL_LT_0_AND_NFCI_CHANGE_4V_LT_0",
+      "true_position": "LONG_1X",
+      "false_position": "CASH",
+      "equality_position": "CASH",
+      "shorting_permitted": false,
+      "may_be_promoted": false
+    }
+  ],
+  "candidate_count": 4,
+  "primary_candidate_id": "S1-C1-CONSISTENT-EASING-PRIMARY",
+  "diagnostic_rescue_permitted": false,
+  "primary_failure_policy": "STOP_S1_NO_DIAGNOSTIC_PROMOTION",
+  "full_years_for_year_gates": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "bootstrap_method": "STATIONARY_BLOCK_BOOTSTRAP_WEEKLY_RETURNS",
+  "bootstrap_resamples": 10000,
+  "bootstrap_mean_block_weeks": 8,
+  "bootstrap_seed": 1729,
+  "bootstrap_lower_confidence": "0.95",
+  "development_gates": [
+    {
+      "gate_id": "EXACT_WEEKLY_INTERVAL_COUNT",
+      "operator": "EQ",
+      "threshold": "276",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "MINIMUM_POSITION_TRANSITIONS",
+      "operator": "GE",
+      "threshold": "20",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "MINIMUM_LONG_EXPOSURE_FRACTION",
+      "operator": "GE",
+      "threshold": "0.20",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "MAXIMUM_LONG_EXPOSURE_FRACTION",
+      "operator": "LE",
+      "threshold": "0.80",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "BASE_NET_TOTAL_RETURN_POSITIVE",
+      "operator": "GT",
+      "threshold": "0",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "STRESS_NET_TOTAL_RETURN_POSITIVE",
+      "operator": "GT",
+      "threshold": "0",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "BASE_PROFIT_FACTOR",
+      "operator": "GE",
+      "threshold": "1.10",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "STRESS_PROFIT_FACTOR",
+      "operator": "GE",
+      "threshold": "1.00",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "BASE_MAXIMUM_DRAWDOWN",
+      "operator": "LE",
+      "threshold": "0.20",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "STRESS_MAXIMUM_DRAWDOWN",
+      "operator": "LE",
+      "threshold": "0.22",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "POSITIVE_FULL_CALENDAR_YEARS",
+      "operator": "GE",
+      "threshold": "3",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "STRESS_BOOTSTRAP_95PCT_LOWER_MEAN_WEEKLY_RETURN",
+      "operator": "GT",
+      "threshold": "0",
+      "scope": "PRIMARY_ONLY"
+    }
+  ],
+  "validation_start": "2023-01-01",
+  "validation_end_exclusive": "2025-01-01",
+  "validation_remains_sealed": true,
+  "holdout_remains_sealed": true,
+  "authorizes_protocol_only": true,
+  "authorizes_btc_source_acquisition_now": false,
+  "authorizes_btc_market_value_access": false,
+  "authorizes_return_testing": false,
+  "authorizes_validation_access": false,
+  "authorizes_holdout_access": false,
+  "authorizes_candidate_outcome": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "next_authorization": "AUTHORIZE_S1_BTCUSDT_DAILY_1H_SOURCE_ACQUISITION_PROTOCOL_ONLY",
+  "protocol_evidence_hash": "6ca639fa0ff744dc13c1c8db229d46a8a7710b77bb49eded2ac8cae4a022816f"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-s2-bigquery-payload-protocol-audit-v2",
+  "audit_id": "s2-bigquery-payload-protocol-audit-v2",
+  "audited_at": "2026-08-28T12:54:32.211796Z",
+  "protocol_path": "data/evidence/s2_bigquery_payload_protocol_v2.json",
+  "protocol_file_sha256": "d95b8aee5f2394aeb031e27d0658091bbbe2f8e1277531943d6f3c82c3ee820a",
+  "protocol_evidence_hash": "93d4280e7d852ce5e83b3c3215a67b48c906149e5041ccda08febaedd42131fb",
+  "feasibility_result_evidence_hash": "54daa95943ab19e10fb540a4cc71a70217cb409a21ff7fb804b60386a98e0690",
+  "builder_contract_hash": "e249c8eca6656929d4db1b41d5d4e1c3aa7bb89ea37c636e0012b305211ba400",
+  "auditor_contract_hash": "4112355031927adfb726d9b0b9af9646dd811b961e5ef5740a9212378176a080",
+  "reconstructed_exactly": true,
+  "network_requests_observed": 0,
+  "identifiers_observed": 0,
+  "blockchain_row_values_observed": 0,
+  "query_results_observed": 0,
+  "orders_observed": 0,
+  "decision": "PASS_S2_BIGQUERY_PAYLOAD_PROTOCOL_V2_AUDIT",
+  "next_authorization": "RUN_S2_DEVELOPMENT_PAYLOAD_V2_ONCE",
+  "audit_evidence_hash": "c3fda102a02c5b2fcffe50a7ac14ff25940813e2f64dd8cfaf554ce10bb5d3a4",
+  "prior_payload_result_evidence_hash": "38c151ef24be8987eaa970d1bb0dbb2657ec414b4898e8a1002360185ceda899",
+  "prior_payload_failure_audit_evidence_hash": "2685797df5497fbd709179385d7a1d9e8565698fe04faa42bdcc2b24b9d564e8"
+}

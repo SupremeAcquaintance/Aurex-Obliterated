@@ -1,0 +1,45 @@
+/goal Continue the EXISTING Aurex project autonomously from its latest verified checkpoint until the complete pre-live research-to-execution workflow is implemented, operationally demonstrated, and independently audited. Deliver an evidence-backed decision on readiness for the next trading phase. Preserve our longer-term objective of the first realized $100 net profit, but never treat profitability as guaranteed or authorize real-money trading through this goal.
+
+CONTINUITY AND SOURCE OF TRUTH
+Work in C:\Users\ashumba\Documents\New project\Aurex. Start by reading the current checkpoint in docs/10_PROJECT_CONTROL.md, recent entries in docs/01_IMPLEMENTATION_LOG.md and docs/46_AUREX_DELIVERY_REBASELINE.md, and the relevant implementation contracts, including docs/49_NATIVE_PUBLIC_DATA.md. Verify them against actual code, tests and retained evidence. Do not restart the project, replace Aurex, repeat completed work without cause, or reset the research history.
+
+The known starting checkpoint is v55: pure Jam setup decisions and managed-exit proposals are implemented and tested, but atomic decision-to-ledger integration and the supervised runner remain unfinished. Reconcile this starting point if newer verified work exists.
+
+AUTONOMOUS EXECUTION
+Treat this as an implementation goal, not a planning-only request. After each meaningful increment: implement, test, inspect results, repair defects, update the checkpoint, and immediately begin the next eligible dependency. Routine checkpoints and passing tests are not reasons to stop or ask whether to continue.
+
+Run routine commands, diagnostics, tests and permitted local operations yourself. Make conservative, reversible engineering decisions using existing repository patterns. Do not delegate commands to me unless they genuinely require my credentials, physical access, personal attestation or approval.
+
+Keep concise progress updates, but do not wait for acknowledgment. At unavoidable turn boundaries, record the exact next action and leave the unfinished goal active for automatic continuation, subject to platform controls. Do not create unnecessary approval gates.
+
+ORDERED DELIVERY
+1. Complete atomic native integration: reconstruct features and decision state from audited history; bind source, exact head, settings and decisions to risk approval, cost-aware sizing, paper effects and immutable receipts in one transaction. Prove rejection, idempotency, crash recovery, concurrent-head changes, exit ordering and partial-bar handling.
+
+2. Complete the stoppable supervised runner. Demonstrate genuine fresh public-data admission, persistent restart, bounded resource usage, clock checks, outage handling, stale/missing-data stops, rate limits, kill controls and reconciliation. Distinguish imported data, simulations and actual forward observations.
+
+3. Complete the usable private operator workflow and operational deployment. Verify dashboard accuracy, clear operating modes, lifecycle controls, alerts, logs, startup/shutdown, backups, restore, guarded migrations and rollback. Test critical workflows end to end. Keep management private; public exposure is not authorized by this goal.
+
+4. Audit platform readiness against explicit acceptance criteria. Fix critical defects and missing user workflows before adding optional features. Freeze fresh evidence tied to the exact tested source. Do not confuse capability inspection, test counts or hosting availability with production acceptance.
+
+5. Once the platform passes, pursue only research permitted by the existing doctrine. Preregister a finite investigation scope, candidate limits, costs, chronological partitions and stopping rules before examining outcomes. Perform reproducible backtesting and independent validation. Preserve untouched holdouts, account for multiple testing, and reject failures honestly. Do not search indefinitely until something appears profitable.
+
+6. For an independently eligible candidate, complete the required forward-paper evaluation and fresh Binance Spot Testnet execution/reconciliation within existing sandbox authority. Engineering diagnostics may proceed without a qualified strategy, but must never be relabeled qualifying strategy evidence. Do not shorten observation periods or count virtual profits as real profits.
+
+7. Produce a final acceptance package separating software readiness, operational readiness, strategy evidence, sandbox readiness and outstanding live prerequisites. Give a reproducible runbook and an explicit go/no-go decision. Live activation remains a separate, explicitly approved phase.
+
+PROGRESS RECORDS
+Maintain the existing canonical records throughout. Each meaningful checkpoint must state: current stage, implemented changes, verification commands/results, evidence locations, unresolved defects, blockers and the exact next action. Distinguish implemented, tested, operationally demonstrated, deferred and blocked. Preserve historical artifacts and failed results. Keep the top resume checkpoint concise; avoid creating competing plans.
+
+GUARDRAILS
+Preserve the $0 external-services/data route, $100 unborrowed capital model, BTCUSDT spot-only scope, maximum 1x exposure and existing loss limits. No purchases, paid trials, increased risk, real orders, transfers or withdrawals. Never weaken evidence or risk gates to make progress appear faster.
+
+Jam remains retired/quarantined as applicable; its mechanics may serve engineering fixtures, not eligibility. Do not revive failed candidates using consumed outcomes. Preserve S5's frozen future partitions and current deferral. Keep Kalshi, paid TradingView webhooks, hosting exploration and optional connectors off the critical path unless a demonstrated dependency changes that decision.
+
+Preserve unrelated user changes, secrets and operator records. Validate backups/restoration and migrations on disposable copies before any permitted operator upgrade. Respect tool permissions and request required approvals through the proper mechanism.
+
+BLOCKERS AND COMPLETION
+When one dependency blocks, record it and continue independent authorized work. Ask me only for genuinely necessary input, spending approval, personal/legal confirmation, consequential scope changes or permissions you cannot supply. Report the smallest specific action needed; do not repeatedly retry unchanged failures or invent busywork.
+
+Do not mark the goal complete after a module, checkpoint or partial demonstration. Complete it only when the scoped pre-live deliverables have passed their documented acceptance checks and the final evidence-backed assessment is delivered. A bounded research no-go is a valid assessment, not a claim that the profit objective was achieved. If essential work remains impossible without external action, report the exact blocker and follow the platform's blocked-status rules.
+
+Optimize for verified progress on the critical path. No fabricated evidence, guaranteed returns, arbitrary completion percentages or promises of perfection.

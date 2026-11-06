@@ -1,0 +1,2194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aurex Dashboard</title>
+    <link rel="stylesheet" href="/dashboard/assets/styles.css?v=20261011-1">
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Aurex navigation">
+        <div class="brand">
+          <div class="brand-mark">AX</div>
+          <div class="brand-copy">
+            <h1>Aurex</h1>
+            <p>Operations console</p>
+          </div>
+        </div>
+        <nav class="nav-list" aria-label="Workspace views">
+          <div class="nav-group">
+            <p class="nav-label">Monitor</p>
+            <button class="nav-item is-active" type="button" data-view-target="command" aria-current="page">Command</button>
+            <button class="nav-item" type="button" data-view-target="signals">Signals <span id="nav-signals-count" class="nav-count">0</span></button>
+            <button class="nav-item" type="button" data-view-target="trades">Trades <span id="nav-trades-count" class="nav-count">0</span></button>
+            <button class="nav-item" type="button" data-view-target="performance">Performance</button>
+          </div>
+          <div class="nav-group">
+            <p class="nav-label">Research</p>
+            <button class="nav-item" type="button" data-view-target="strategies">Strategies</button>
+            <button class="nav-item" type="button" data-view-target="analyst">Analyst</button>
+            <button class="nav-item" type="button" data-view-target="backtests">Backtests <span id="nav-backtests-count" class="nav-count">0</span></button>
+            <button class="nav-item" type="button" data-view-target="prediction">Markets <span id="nav-prediction-count" class="nav-count">0</span></button>
+          </div>
+          <div class="nav-group">
+            <p class="nav-label">Control</p>
+            <button class="nav-item" type="button" data-view-target="risk">Risk</button>
+            <button class="nav-item" type="button" data-view-target="broker">Broker</button>
+            <button class="nav-item" type="button" data-view-target="operator">Operator</button>
+            <button class="nav-item" type="button" data-view-target="deployment">Deployment</button>
+          </div>
+          <div class="nav-group">
+            <p class="nav-label">Audit</p>
+            <button class="nav-item" type="button" data-view-target="evidence">Evidence <span id="nav-evidence-count" class="nav-count">0</span></button>
+            <button class="nav-item" type="button" data-view-target="events">Events <span id="nav-events-count" class="nav-count">0</span></button>
+          </div>
+        </nav>
+        <div class="sidebar-status" aria-label="System status">
+          <span id="health-indicator" class="presence-dot" aria-hidden="true"></span>
+          <div>
+            <strong id="health-mode">Connecting</strong>
+            <span id="health-state">Waiting for Aurex</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div class="view-heading">
+            <p id="view-eyebrow" class="eyebrow">Paper operations / live locked</p>
+            <h2 id="view-title">Command Center</h2>
+            <p id="view-context" class="view-context">Portfolio state and market posture</p>
+          </div>
+          <div class="actions">
+            <span id="last-sync-state" class="sync-state">Not synced</span>
+            <button id="refresh-button" type="button">Refresh</button>
+            <button id="kill-switch-button" class="danger" type="button">Enable kill switch</button>
+            <button id="reset-kill-switch-button" type="button" disabled>Reset kill switch</button>
+          </div>
+        </header>
+
+        <section class="market-preview dashboard-view is-active" data-dashboard-view="command" aria-label="Market preview">
+          <div class="preview-copy">
+            <p class="eyebrow">Market Preview</p>
+            <h2>Market posture</h2>
+            <div class="preview-stats">
+              <span id="preview-symbol-pill">BTCUSDT</span>
+              <span id="preview-risk-pill">Risk state unknown</span>
+              <span id="preview-strategy-pill">No qualified strategy</span>
+              <span id="preview-mode-pill">Research only</span>
+            </div>
+          </div>
+          <div class="preview-chart" aria-label="Recorded paper equity">
+            <div class="chart-toolbar">
+              <span id="preview-chart-symbol">Paper equity</span>
+              <strong id="preview-chart-title">No equity history</strong>
+              <span id="preview-risk-label">USD</span>
+            </div>
+            <div class="chart-stage">
+              <div class="chart-grid"></div>
+              <svg class="equity-line" viewBox="0 0 760 220" role="img" aria-label="Aurex equity curve">
+                <defs>
+                  <linearGradient id="aurexLine" x1="0" x2="1" y1="0" y2="0">
+                    <stop offset="0%" stop-color="#3cf2b5"></stop>
+                    <stop offset="58%" stop-color="#59b8ff"></stop>
+                    <stop offset="100%" stop-color="#e5cf78"></stop>
+                  </linearGradient>
+                </defs>
+                <path id="preview-line-shadow" class="line-shadow" d=""></path>
+                <path id="preview-line-main" class="line-main" d=""></path>
+              </svg>
+              <p id="preview-chart-empty" class="chart-empty">No recorded equity history</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="command" class="metrics-grid dashboard-view is-active" data-dashboard-view="command" aria-label="Command center">
+          <article class="metric">
+            <span>Equity</span>
+            <strong id="metric-equity">--</strong>
+          </article>
+          <article class="metric">
+            <span>Net P/L</span>
+            <strong id="metric-net-pl">--</strong>
+          </article>
+          <article class="metric">
+            <span>Open Positions</span>
+            <strong id="metric-open-positions">--</strong>
+          </article>
+          <article class="metric">
+            <span>Kill Switch</span>
+            <strong id="metric-kill-switch">--</strong>
+          </article>
+        </section>
+
+        <section class="runtime-status dashboard-view is-active" data-dashboard-view="command" aria-label="Private runtime">
+          <div class="panel-heading">
+            <h3>Operator runtime</h3>
+            <span id="runtime-state" class="status-pill">NOT VERIFIED</span>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Service boundary</dt><dd id="runtime-service">Not verified</dd></div>
+            <div><dt>Instance</dt><dd id="runtime-instance">Not verified</dd></div>
+            <div><dt>Database revision</dt><dd id="runtime-schema">Not verified</dd></div>
+            <div><dt>Native supervisor</dt><dd id="runtime-supervisor">Not verified</dd></div>
+            <div><dt>Operational acceptance</dt><dd id="runtime-acceptance">Not verified</dd></div>
+          </dl>
+          <div class="section-toolbar">
+            <h4>Native supervisor</h4>
+            <div class="panel-actions">
+              <button id="native-start-button" type="button" disabled>Start supervisor</button>
+              <button id="native-stop-button" type="button" disabled>Stop supervisor</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Mode</dt><dd id="native-mode">Not configured</dd></div>
+            <div><dt>Owned run</dt><dd id="native-run">No owned run</dd></div>
+            <div><dt>Process</dt><dd id="native-process">Unknown</dd></div>
+            <div><dt>Last outcome</dt><dd id="native-reason">Status unavailable</dd></div>
+            <div><dt>Journal</dt><dd id="native-journal">Not verified</dd></div>
+            <div><dt>Run limits</dt><dd id="native-limits">Not configured</dd></div>
+          </dl>
+        </section>
+
+        <section id="platform-readiness" class="panel dashboard-view is-active" data-dashboard-view="command" aria-label="Platform readiness">
+          <div class="panel-heading">
+            <h3>Platform readiness</h3>
+            <span id="command-evidence-path-state" class="status-pill">--</span>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Current blocker</dt><dd id="command-evidence-current">--</dd></div>
+            <div><dt>Factory contract</dt><dd id="command-evidence-pine">--</dd></div>
+            <div><dt>Research gates</dt><dd id="command-evidence-protocol">--</dd></div>
+            <div><dt>Qualified strategy</dt><dd id="command-evidence-manifest">--</dd></div>
+            <div><dt>Backtest authority</dt><dd id="command-evidence-backtest">--</dd></div>
+            <div><dt>External signal</dt><dd id="command-evidence-signal">--</dd></div>
+            <div><dt>Paper evidence</dt><dd id="command-evidence-paper">--</dd></div>
+            <div><dt>Broker sandbox</dt><dd id="command-evidence-broker">--</dd></div>
+            <div><dt>Displayed checks</dt><dd id="command-evidence-progress">--</dd></div>
+            <div><dt>Live boundary</dt><dd id="command-evidence-live">--</dd></div>
+            <div class="definition-wide"><dt>Next action</dt><dd id="command-evidence-next">--</dd></div>
+          </dl>
+        </section>
+
+        <section class="two-column">
+          <article id="risk" class="panel dashboard-view" data-dashboard-view="risk">
+            <div class="panel-heading">
+              <h3>Risk</h3>
+              <span id="risk-mode" class="status-pill">--</span>
+            </div>
+            <dl class="definition-grid">
+              <div><dt>Risk per trade</dt><dd id="risk-per-trade">--</dd></div>
+              <div><dt>Daily loss</dt><dd id="max-daily-loss">--</dd></div>
+              <div><dt>Weekly loss</dt><dd id="max-weekly-loss">--</dd></div>
+              <div><dt>Minimum R:R</dt><dd id="minimum-rr">--</dd></div>
+            </dl>
+          </article>
+
+          <article id="performance" class="panel dashboard-view" data-dashboard-view="performance">
+            <div class="panel-heading">
+              <h3>Performance</h3>
+              <span id="performance-trades" class="status-pill">--</span>
+            </div>
+            <dl class="definition-grid">
+              <div><dt>Win rate</dt><dd id="win-rate">--</dd></div>
+              <div><dt>Expectancy</dt><dd id="expectancy">--</dd></div>
+              <div><dt>Profit factor</dt><dd id="profit-factor">--</dd></div>
+              <div><dt>Max drawdown</dt><dd id="max-drawdown">--</dd></div>
+            </dl>
+          </article>
+        </section>
+
+        <section id="strategies" class="panel dashboard-view" data-dashboard-view="strategies">
+          <div class="panel-heading">
+            <h3>Strategy Portfolio</h3>
+            <span id="strategies-count" class="status-pill">--</span>
+          </div>
+          <div class="table-wrap">
+            <table class="strategy-table">
+              <thead>
+                <tr>
+                  <th>Strategy</th>
+                  <th>Lifecycle</th>
+                  <th>Runtime</th>
+                  <th>Regimes</th>
+                  <th>Risk</th>
+                  <th>Min R:R</th>
+                  <th>Open</th>
+                  <th>Closed</th>
+                  <th>Net P/L</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="strategies-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>Research candidates</h4>
+            <div class="panel-actions">
+              <span id="research-candidate-state" class="status-pill">--</span>
+              <button id="research-candidate-button" class="compact" type="button">Candidate</button>
+              <button id="research-observation-button" class="compact" type="button">Observation</button>
+              <button id="research-mkt-readiness-button" class="compact" type="button">MKT readiness</button>
+              <button id="research-mkt-runbook-button" class="compact" type="button">MKT runbook</button>
+              <button id="research-mkt-preflight-button" class="compact" type="button">MKT preflight</button>
+              <button id="research-mkt-import-button" class="compact" type="button">MKT import</button>
+              <button id="research-backtest-button" class="compact" type="button">Backtest</button>
+            </div>
+          </div>
+          <div class="section-toolbar">
+            <h4>Readiness queue</h4>
+            <span id="research-readiness-state" class="status-pill">--</span>
+          </div>
+          <dl class="definition-grid research-readiness-grid">
+            <div><dt>Paper research</dt><dd id="research-readiness-paper">--</dd></div>
+            <div><dt>Gate blocked</dt><dd id="research-readiness-blocked">--</dd></div>
+            <div><dt>Ready for gate</dt><dd id="research-readiness-ready">--</dd></div>
+            <div><dt>Next action</dt><dd id="research-readiness-next">--</dd></div>
+          </dl>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Candidate</th>
+                  <th>State</th>
+                  <th>Evidence</th>
+                  <th>OOS</th>
+                  <th>Next</th>
+                  <th>Inspect</th>
+                </tr>
+              </thead>
+              <tbody id="research-readiness-body"></tbody>
+            </table>
+          </div>
+          <div class="evidence-form">
+            <label class="wide">
+              MKT DB path
+              <input id="research-mkt-db-path" type="text" value="My-Krypt-Trader/.aurex-demo-userdata/data/krypt-trader.db" autocomplete="off">
+            </label>
+            <label>
+              Candidate key
+              <input id="research-candidate-key" type="text" value="mkt_whale_research_candidate" autocomplete="off">
+            </label>
+            <label>
+              Candidate strategy
+              <input id="research-strategy" type="text" value="mkt_whale_research_candidate" autocomplete="off">
+            </label>
+            <label>
+              Display name
+              <input id="research-display-name" type="text" value="MKT Whale Research Candidate" autocomplete="off">
+            </label>
+            <label>
+              Observation type
+              <select id="research-observation-type">
+                <option value="WHALE_TRADE">Whale trade</option>
+                <option value="MOMENTUM_CLUSTER">Momentum cluster</option>
+                <option value="CRYPTO_15M">Crypto 15m</option>
+                <option value="MANUAL">Manual</option>
+              </select>
+            </label>
+            <label class="wide">
+              Hypothesis
+              <textarea id="research-hypothesis" rows="3" spellcheck="false">Large Kalshi trades may reveal followable prediction-market pressure.</textarea>
+            </label>
+            <label>
+              Event ID
+              <input id="research-source-event-id" type="text" value="mkt-fixture-1" autocomplete="off">
+            </label>
+            <label>
+              Symbol
+              <input id="research-symbol" type="text" value="BTCUSDT" autocomplete="off">
+            </label>
+            <label>
+              Contract ticker
+              <input id="research-contract-ticker" type="text" value="KXBTCD-26JUN25-B62500" autocomplete="off">
+            </label>
+            <label>
+              Side
+              <input id="research-side" type="text" value="YES" autocomplete="off">
+            </label>
+            <label>
+              Confidence
+              <input id="research-confidence" type="text" value="0.64" autocomplete="off">
+            </label>
+            <label>
+              Implied probability
+              <input id="research-implied-probability" type="text" value="0.59" autocomplete="off">
+            </label>
+            <label>
+              Expected edge
+              <input id="research-expected-edge" type="text" value="0.05" autocomplete="off">
+            </label>
+            <label class="checkbox-label wide">
+              <input id="research-mkt-ack-research-only" type="checkbox">
+              Research-only MKT import
+            </label>
+          </div>
+          <div class="section-toolbar">
+            <h4>MKT import quality</h4>
+            <span id="research-mkt-import-state" class="status-pill">NOT_RUN</span>
+          </div>
+          <dl class="definition-grid research-import-grid">
+            <div><dt>Intake gate</dt><dd id="research-mkt-intake-readiness-state">NOT_CHECKED</dd></div>
+            <div><dt>DB freshness</dt><dd id="research-mkt-intake-db-freshness">--</dd></div>
+            <div><dt>Log activity</dt><dd id="research-mkt-log-activity">--</dd></div>
+            <div><dt>Collection health</dt><dd id="research-mkt-collection-health">--</dd></div>
+            <div><dt>Start command</dt><dd id="research-mkt-intake-start-command">--</dd></div>
+            <div><dt>Imported rows</dt><dd id="research-mkt-import-rows">--</dd></div>
+            <div><dt>Resolved depth</dt><dd id="research-mkt-import-depth">--</dd></div>
+            <div><dt>Ledger writes</dt><dd id="research-mkt-import-mutation">--</dd></div>
+            <div><dt>Runbook</dt><dd id="research-mkt-runbook-state">NOT_RUN</dd></div>
+            <div><dt>Current step</dt><dd id="research-mkt-runbook-current-step">--</dd></div>
+            <div><dt>Current command</dt><dd id="research-mkt-runbook-current-command">--</dd></div>
+            <div><dt>Runbook progress</dt><dd id="research-mkt-runbook-progress">--</dd></div>
+            <div><dt>Intake next</dt><dd id="research-mkt-intake-readiness-next">Run MKT readiness before importing donor research.</dd></div>
+            <div><dt>Runbook next</dt><dd id="research-mkt-runbook-next">Build the MKT research runbook before importing donor research.</dd></div>
+            <div><dt>Import next</dt><dd id="research-mkt-import-next">Run MKT import after selecting a donor DB.</dd></div>
+          </dl>
+          <div class="section-toolbar">
+            <h4>MKT research runbook</h4>
+            <span id="research-mkt-runbook-badge" class="status-pill">NOT_RUN</span>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Status</th>
+                  <th>Evidence</th>
+                  <th>Writes</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="research-mkt-runbook-body"></tbody>
+            </table>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Source</th>
+                  <th>Table</th>
+                  <th>Status</th>
+                  <th>Resolved</th>
+                  <th>Unresolved</th>
+                  <th>Target</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="research-mkt-import-quality-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>Research gate</h4>
+            <span id="research-gate-state" class="status-pill">NO_BACKTEST</span>
+          </div>
+          <dl class="definition-grid research-gate-grid">
+            <div><dt>Decision</dt><dd id="research-gate-decision">--</dd></div>
+            <div><dt>First blocker</dt><dd id="research-gate-blocker">--</dd></div>
+            <div><dt>OOS edge</dt><dd id="research-gate-oos">--</dd></div>
+            <div><dt>OOS drawdown</dt><dd id="research-gate-drawdown">--</dd></div>
+            <div><dt>Regime coverage</dt><dd id="research-gate-regime">--</dd></div>
+            <div><dt>Variant pressure</dt><dd id="research-gate-variants">--</dd></div>
+            <div><dt>Statistical edge</dt><dd id="research-gate-significance">--</dd></div>
+          </dl>
+          <div class="section-toolbar">
+            <h4>Evidence drilldown</h4>
+            <span id="research-evidence-state" class="status-pill">NO_CANDIDATE</span>
+          </div>
+          <dl class="definition-grid research-evidence-grid">
+            <div><dt>Resolved evidence</dt><dd id="research-evidence-resolution">--</dd></div>
+            <div><dt>Gate history</dt><dd id="research-evidence-history">--</dd></div>
+            <div><dt>Latest hash</dt><dd id="research-evidence-hash">--</dd></div>
+            <div><dt>Selected candidate</dt><dd id="research-evidence-candidate">--</dd></div>
+          </dl>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Reviewed</th>
+                  <th>Decision</th>
+                  <th>Trades</th>
+                  <th>OOS</th>
+                  <th>First blocker</th>
+                  <th>Hash</th>
+                </tr>
+              </thead>
+              <tbody id="research-backtest-runs-body"></tbody>
+            </table>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Observed</th>
+                  <th>Type</th>
+                  <th>Symbol</th>
+                  <th>Side</th>
+                  <th>Resolved</th>
+                  <th>Hash</th>
+                </tr>
+              </thead>
+              <tbody id="research-observation-evidence-body"></tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Seen</th>
+                  <th>Candidate</th>
+                  <th>Status</th>
+                  <th>Eligible</th>
+                  <th>Observations</th>
+                  <th>Reason</th>
+                  <th>Inspect</th>
+                </tr>
+              </thead>
+              <tbody id="research-candidates-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="analyst" class="panel dashboard-view" data-dashboard-view="analyst">
+          <div class="panel-heading">
+            <h3>Analyst</h3>
+            <div class="panel-actions">
+              <span id="analyst-state" class="status-pill">--</span>
+              <button id="analyst-scan-button" class="compact" type="button">Run scan</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Closed trades</dt><dd id="analyst-closed-trades">--</dd></div>
+            <div><dt>Notes</dt><dd id="analyst-note-count">--</dd></div>
+            <div><dt>Warnings</dt><dd id="analyst-warning-count">--</dd></div>
+            <div><dt>Critical</dt><dd id="analyst-critical-count">--</dd></div>
+          </dl>
+          <p id="analyst-headline" class="panel-note">--</p>
+          <ol id="analyst-notes-list" class="event-list compact-list"></ol>
+        </section>
+
+        <section id="prediction" class="panel dashboard-view" data-dashboard-view="prediction">
+          <div class="panel-heading">
+            <h3>Prediction Markets</h3>
+            <div class="panel-actions">
+              <span id="prediction-live-state" class="status-pill">Paper only</span>
+              <button id="prediction-snapshot-button" class="compact" type="button">Snapshot</button>
+              <button id="prediction-intent-button" class="compact" type="button">Intent</button>
+              <button id="prediction-submit-button" class="compact" type="button">Submit</button>
+              <button id="prediction-cancel-button" class="compact" type="button">Cancel</button>
+              <button id="prediction-settle-button" class="compact" type="button">Settle</button>
+              <button id="prediction-expire-button" class="compact" type="button">Expire</button>
+              <button id="prediction-reconcile-button" class="compact" type="button">Reconcile</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Contracts</dt><dd id="prediction-contract-count">--</dd></div>
+            <div><dt>Intents</dt><dd id="prediction-intent-count">--</dd></div>
+            <div><dt>Orders</dt><dd id="prediction-order-count">--</dd></div>
+            <div><dt>Fills</dt><dd id="prediction-fill-count">--</dd></div>
+            <div><dt>Open positions</dt><dd id="prediction-open-position-count">--</dd></div>
+            <div><dt>Settled positions</dt><dd id="prediction-settled-position-count">--</dd></div>
+            <div><dt>Rejected intents</dt><dd id="prediction-rejected-count">--</dd></div>
+            <div><dt>Reconciliation</dt><dd id="prediction-reconciliation-state">--</dd></div>
+          </dl>
+          <dl class="definition-grid prediction-gate-grid">
+            <div><dt>Paper demo readiness</dt><dd id="prediction-demo-readiness-state">--</dd></div>
+            <div><dt>Start readiness</dt><dd id="prediction-demo-readiness-start">--</dd></div>
+            <div><dt>Demo lifecycle</dt><dd id="prediction-demo-readiness-lifecycle">--</dd></div>
+            <div><dt>Current demo gate</dt><dd id="prediction-demo-readiness-current">--</dd></div>
+            <div><dt>Readiness progress</dt><dd id="prediction-demo-readiness-progress">--</dd></div>
+            <div><dt>Next demo action</dt><dd id="prediction-demo-readiness-next">--</dd></div>
+          </dl>
+          <dl class="definition-grid prediction-gate-grid">
+            <div><dt>Demo evidence target</dt><dd id="prediction-demo-progress-state">--</dd></div>
+            <div><dt>Current evidence gate</dt><dd id="prediction-demo-progress-current">--</dd></div>
+            <div><dt>Evidence progress</dt><dd id="prediction-demo-progress-completion">--</dd></div>
+            <div><dt>Closed records</dt><dd id="prediction-demo-closed-records">--</dd></div>
+            <div><dt>Calendar days</dt><dd id="prediction-demo-calendar-days">--</dd></div>
+            <div><dt>Active days</dt><dd id="prediction-demo-active-days">--</dd></div>
+            <div><dt>Unique contracts</dt><dd id="prediction-demo-unique-contracts">--</dd></div>
+            <div><dt>Fee-net P/L</dt><dd id="prediction-demo-pl">--</dd></div>
+            <div><dt>Expectancy</dt><dd id="prediction-demo-expectancy">--</dd></div>
+            <div><dt>Concentration</dt><dd id="prediction-demo-concentration">--</dd></div>
+            <div><dt>Contract concentration</dt><dd id="prediction-demo-contract-concentration">--</dd></div>
+            <div><dt>Provenance</dt><dd id="prediction-demo-provenance">--</dd></div>
+            <div><dt>Ledger clean</dt><dd id="prediction-demo-ledger-clean">--</dd></div>
+            <div><dt>Next evidence action</dt><dd id="prediction-demo-progress-next">--</dd></div>
+          </dl>
+          <dl class="definition-grid prediction-gate-grid">
+            <div><dt>Demo runbook</dt><dd id="prediction-demo-runbook-state">--</dd></div>
+            <div><dt>Current runbook step</dt><dd id="prediction-demo-runbook-current">--</dd></div>
+            <div><dt>Research blocker</dt><dd id="prediction-demo-runbook-upstream">--</dd></div>
+            <div><dt>Runbook progress</dt><dd id="prediction-demo-runbook-progress">--</dd></div>
+            <div><dt>Runbook next</dt><dd id="prediction-demo-runbook-next">--</dd></div>
+          </dl>
+          <div class="section-toolbar">
+            <h4>Paper/demo runbook</h4>
+            <div class="panel-actions">
+              <span id="prediction-demo-runbook-badge" class="status-pill">--</span>
+            </div>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Status</th>
+                  <th>Evidence</th>
+                  <th>Writes</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-demo-runbook-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>Demo ledger</h4>
+            <div class="panel-actions">
+              <span id="prediction-demo-ledger-state" class="status-pill">--</span>
+            </div>
+          </div>
+          <p id="prediction-demo-ledger-next" class="panel-note">--</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Settled</th>
+                  <th>Contract</th>
+                  <th>Strategy</th>
+                  <th>P/L</th>
+                  <th>Fees</th>
+                  <th>Source</th>
+                  <th>Recon</th>
+                  <th>Hash</th>
+                  <th>Evidence</th>
+                  <th>Count</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-demo-ledger-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>Campaign audit</h4>
+            <div class="panel-actions">
+              <span id="prediction-demo-campaign-state" class="status-pill">--</span>
+            </div>
+          </div>
+          <p id="prediction-demo-campaign-next" class="panel-note">--</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ran</th>
+                  <th>Status</th>
+                  <th>Strategy</th>
+                  <th>Side</th>
+                  <th>P/L</th>
+                  <th>Records</th>
+                  <th>Gap</th>
+                  <th>Current ledger</th>
+                  <th>Progress</th>
+                  <th>Source</th>
+                  <th>Donor tier</th>
+                  <th>Side warning</th>
+                  <th>Hash</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-demo-campaign-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>Market snapshot</h4>
+          </div>
+          <div class="evidence-form">
+            <label>
+              Event ticker
+              <input id="prediction-event-ticker" type="text" value="KXBTCD-26JUN25" autocomplete="off">
+            </label>
+            <label>
+              Contract ticker
+              <input id="prediction-contract-ticker" type="text" value="KXBTCD-26JUN25-B62500" autocomplete="off">
+            </label>
+            <label>
+              Market title
+              <input id="prediction-market-title" type="text" value="Bitcoin above test level on Jun 25" autocomplete="off">
+            </label>
+            <label>
+              Contract title
+              <input id="prediction-contract-title" type="text" value="Bitcoin above 62500" autocomplete="off">
+            </label>
+            <label>
+              Category
+              <input id="prediction-category" type="text" value="crypto" autocomplete="off">
+            </label>
+            <label>
+              Yes bid
+              <input id="prediction-yes-bid" type="text" value="0.59" autocomplete="off">
+            </label>
+            <label>
+              Yes ask
+              <input id="prediction-yes-ask" type="text" value="0.60" autocomplete="off">
+            </label>
+            <label>
+              No bid
+              <input id="prediction-no-bid" type="text" value="0.40" autocomplete="off">
+            </label>
+            <label>
+              No ask
+              <input id="prediction-no-ask" type="text" value="0.41" autocomplete="off">
+            </label>
+            <label>
+              Expiration
+              <input id="prediction-expiration" type="text" autocomplete="off">
+            </label>
+          </div>
+          <div class="section-toolbar">
+            <h4>Snapshot CSV</h4>
+            <div class="panel-actions">
+              <button id="prediction-csv-template-button" class="compact" type="button">Template</button>
+              <button id="prediction-csv-preflight-button" class="compact" type="button">Preflight</button>
+              <button id="prediction-csv-import-button" class="compact" type="button">Import</button>
+            </div>
+          </div>
+          <dl class="definition-grid prediction-gate-grid">
+            <div><dt>CSV preflight</dt><dd id="prediction-csv-preflight-state">--</dd></div>
+            <div><dt>Importable rows</dt><dd id="prediction-csv-importable">--</dd></div>
+            <div><dt>Rejected rows</dt><dd id="prediction-csv-rejected">--</dd></div>
+            <div><dt>Actionable quotes</dt><dd id="prediction-csv-actionable">--</dd></div>
+          </dl>
+          <div class="section-toolbar">
+            <h4>MKT DB snapshots</h4>
+            <div class="panel-actions">
+              <button id="prediction-mkt-donor-runbook-button" class="compact" type="button">Donor runbook</button>
+              <button id="prediction-mkt-donor-bootstrap-button" class="compact" type="button">Demo bootstrap</button>
+              <button id="prediction-mkt-donor-launch-preflight-button" class="compact" type="button">Launch preflight</button>
+              <button id="prediction-mkt-donor-copy-launch-command-button" class="compact" type="button" disabled>Copy launch</button>
+              <button id="prediction-mkt-donor-collection-status-button" class="compact" type="button">Collection status</button>
+              <button id="prediction-mkt-runtime-safety-button" class="compact" type="button">Runtime safety</button>
+              <button id="prediction-mkt-donor-readiness-button" class="compact" type="button">Donor readiness</button>
+              <button id="prediction-mkt-db-discover-button" class="compact" type="button">DB discover</button>
+              <button id="prediction-mkt-db-readiness-button" class="compact" type="button">DB readiness</button>
+              <button id="prediction-mkt-db-inventory-button" class="compact" type="button">DB inventory</button>
+              <button id="prediction-mkt-db-preflight-button" class="compact" type="button">DB preflight</button>
+              <button id="prediction-mkt-db-import-button" class="compact" type="button">DB import</button>
+              <button id="prediction-mkt-db-campaign-readiness-button" class="compact" type="button">Campaign readiness</button>
+              <button id="prediction-mkt-db-campaign-manifest-button" class="compact" type="button">Campaign manifest</button>
+              <button id="prediction-mkt-db-campaign-preflight-button" class="compact" type="button">Campaign preflight</button>
+              <button id="prediction-mkt-db-campaign-run-button" class="compact" type="button">Campaign replay</button>
+            </div>
+          </div>
+          <dl class="definition-grid prediction-gate-grid">
+            <div><dt>MKT runbook</dt><dd id="prediction-mkt-donor-runbook-state">NOT_BUILT</dd></div>
+            <div><dt>Runbook blockers</dt><dd id="prediction-mkt-donor-runbook-blockers">--</dd></div>
+            <div><dt>Runbook next</dt><dd id="prediction-mkt-donor-runbook-next">Build the donor runbook before collecting MKT data.</dd></div>
+            <div><dt>MKT bootstrap</dt><dd id="prediction-mkt-donor-bootstrap-state">NOT_RUN</dd></div>
+            <div><dt>Bootstrap settings</dt><dd id="prediction-mkt-donor-bootstrap-settings">--</dd></div>
+            <div><dt>Bootstrap next</dt><dd id="prediction-mkt-donor-bootstrap-next">Prepare a demo-safe MKT runtime before collection.</dd></div>
+            <div><dt>MKT launch</dt><dd id="prediction-mkt-donor-launch-state">NOT_CHECKED</dd></div>
+            <div><dt>Launch boundary</dt><dd id="prediction-mkt-donor-launch-boundary">--</dd></div>
+            <div><dt>Launch command</dt><dd id="prediction-mkt-donor-launch-command">--</dd></div>
+            <div><dt>Launch next</dt><dd id="prediction-mkt-donor-launch-next">Preflight MKT launch before running npm.</dd></div>
+            <div><dt>MKT collection</dt><dd id="prediction-mkt-donor-collection-state">NOT_CHECKED</dd></div>
+            <div><dt>Collection DB</dt><dd id="prediction-mkt-donor-collection-db">--</dd></div>
+            <div><dt>Collection freshness</dt><dd id="prediction-mkt-donor-collection-freshness">--</dd></div>
+            <div><dt>Collection quality</dt><dd id="prediction-mkt-donor-collection-quality">--</dd></div>
+            <div><dt>Evidence tier</dt><dd id="prediction-mkt-donor-evidence-tier">--</dd></div>
+            <div><dt>Quality next</dt><dd id="prediction-mkt-donor-collection-quality-next">--</dd></div>
+            <div><dt>Launch health</dt><dd id="prediction-mkt-donor-launch-health">--</dd></div>
+            <div><dt>Health next</dt><dd id="prediction-mkt-donor-launch-health-next">--</dd></div>
+            <div><dt>Collection next</dt><dd id="prediction-mkt-donor-collection-next">Check collection status after launching MKT.</dd></div>
+            <div><dt>Collection recheck</dt><dd id="prediction-mkt-donor-collection-recheck">--</dd></div>
+            <div><dt>MKT safety</dt><dd id="prediction-mkt-runtime-safety-state">NOT_CHECKED</dd></div>
+            <div><dt>Safety checks</dt><dd id="prediction-mkt-runtime-safety-checks">--</dd></div>
+            <div><dt>Safety blockers</dt><dd id="prediction-mkt-runtime-safety-blockers">--</dd></div>
+            <div><dt>Settings path</dt><dd id="prediction-mkt-runtime-settings-path">--</dd></div>
+            <div><dt>Userdata path</dt><dd id="prediction-mkt-runtime-userdata-path">--</dd></div>
+            <div><dt>Safety next</dt><dd id="prediction-mkt-runtime-safety-next">Run runtime safety before starting MKT donor collection.</dd></div>
+            <div><dt>MKT donor</dt><dd id="prediction-mkt-donor-readiness-state">NOT_CHECKED</dd></div>
+            <div><dt>Donor DBs</dt><dd id="prediction-mkt-donor-readiness-dbs">--</dd></div>
+            <div><dt>Donor blockers</dt><dd id="prediction-mkt-donor-readiness-blockers">--</dd></div>
+            <div><dt>Donor next</dt><dd id="prediction-mkt-donor-readiness-next">Check donor readiness before DB discovery.</dd></div>
+            <div><dt>MKT DB discovery</dt><dd id="prediction-mkt-db-discovery-state">NOT_RUN</dd></div>
+            <div><dt>Ready discovered DBs</dt><dd id="prediction-mkt-db-discovery-ready">--</dd></div>
+            <div><dt>Discovery next</dt><dd id="prediction-mkt-db-discovery-next">Discover local MKT SQLite DBs before readiness.</dd></div>
+            <div><dt>MKT DB readiness</dt><dd id="prediction-mkt-db-readiness-state">NOT_CHECKED</dd></div>
+            <div><dt>Usable DB rows</dt><dd id="prediction-mkt-db-readiness-rows">--</dd></div>
+            <div><dt>DB next</dt><dd id="prediction-mkt-db-readiness-next">Check MKT DB data before campaign preflight.</dd></div>
+            <div><dt>MKT DB inventory</dt><dd id="prediction-mkt-db-inventory-state">NOT_CHECKED</dd></div>
+            <div><dt>Inventory rows</dt><dd id="prediction-mkt-db-inventory-rows">--</dd></div>
+            <div><dt>Inventory blockers</dt><dd id="prediction-mkt-db-inventory-blockers">--</dd></div>
+            <div><dt>Inventory next</dt><dd id="prediction-mkt-db-inventory-next">Inspect DB tables after donor data exists.</dd></div>
+            <div><dt>MKT DB preflight</dt><dd id="prediction-mkt-db-state">NOT_RUN</dd></div>
+            <div><dt>Importable DB rows</dt><dd id="prediction-mkt-db-importable">--</dd></div>
+            <div><dt>Rejected DB rows</dt><dd id="prediction-mkt-db-rejected">--</dd></div>
+            <div><dt>DB actionable quotes</dt><dd id="prediction-mkt-db-actionable">--</dd></div>
+            <div><dt>Campaign readiness</dt><dd id="prediction-mkt-db-campaign-readiness-state">NOT_CHECKED</dd></div>
+            <div><dt>Campaign data</dt><dd id="prediction-mkt-db-campaign-readiness-data">--</dd></div>
+            <div><dt>Campaign evidence tier</dt><dd id="prediction-mkt-db-campaign-evidence-tier">--</dd></div>
+            <div><dt>Campaign gate</dt><dd id="prediction-mkt-db-campaign-readiness-gate">--</dd></div>
+            <div><dt>Readiness next</dt><dd id="prediction-mkt-db-campaign-readiness-next">Check campaign readiness before preflight.</dd></div>
+            <div><dt>Campaign manifest</dt><dd id="prediction-mkt-db-campaign-manifest-state">NOT_BUILT</dd></div>
+            <div><dt>Manifest hash</dt><dd id="prediction-mkt-db-campaign-manifest-hash">--</dd></div>
+            <div><dt>Manifest next</dt><dd id="prediction-mkt-db-campaign-manifest-next">Build a campaign manifest before replay.</dd></div>
+            <div><dt>MKT DB campaign</dt><dd id="prediction-mkt-db-campaign-state">NOT_RUN</dd></div>
+            <div><dt>Campaign imported</dt><dd id="prediction-mkt-db-campaign-imported">--</dd></div>
+            <div><dt>Campaign completed</dt><dd id="prediction-mkt-db-campaign-completed">--</dd></div>
+            <div><dt>Projected evidence</dt><dd id="prediction-mkt-db-campaign-projected-evidence">--</dd></div>
+            <div><dt>Projected coverage</dt><dd id="prediction-mkt-db-campaign-projected-coverage">--</dd></div>
+            <div><dt>Projected fee-net P/L</dt><dd id="prediction-mkt-db-campaign-projected-pl">--</dd></div>
+            <div><dt>Opposite-side P/L</dt><dd id="prediction-mkt-db-campaign-opposite-pl">--</dd></div>
+            <div><dt>Projection blocker</dt><dd id="prediction-mkt-db-campaign-projection-blocker">--</dd></div>
+            <div><dt>Side sensitivity</dt><dd id="prediction-mkt-db-campaign-side-sensitivity">--</dd></div>
+            <div><dt>Campaign evidence</dt><dd id="prediction-mkt-db-campaign-evidence">--</dd></div>
+            <div><dt>Campaign next</dt><dd id="prediction-mkt-db-campaign-next">Preflight before replay.</dd></div>
+          </dl>
+          <div class="section-toolbar">
+            <h4>Discovered DB candidates</h4>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>DB file</th>
+                  <th>Status</th>
+                  <th>Rows</th>
+                  <th>Actionable</th>
+                  <th>Rejected</th>
+                  <th>Modified</th>
+                  <th>Next</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-mkt-db-discovery-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>MKT donor runbook</h4>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Status</th>
+                  <th>Purpose</th>
+                  <th>Safety</th>
+                  <th>Command</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-mkt-donor-runbook-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>MKT demo bootstrap</h4>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Command</th>
+                  <th>Purpose</th>
+                  <th>Safety</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-mkt-donor-bootstrap-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>MKT launch preflight</h4>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Check</th>
+                  <th>Status</th>
+                  <th>Observed</th>
+                  <th>Expected</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-mkt-donor-launch-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>MKT collection monitor</h4>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Log file</th>
+                  <th>Size</th>
+                  <th>Modified</th>
+                  <th>Path</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-mkt-donor-collection-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>MKT collection quality gates</h4>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Gate</th>
+                  <th>Status</th>
+                  <th>Observed</th>
+                  <th>Expected</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-mkt-donor-collection-quality-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>MKT launch health gates</h4>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Check</th>
+                  <th>Status</th>
+                  <th>Observed</th>
+                  <th>Expected</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-mkt-donor-launch-health-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>MKT runtime safety</h4>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Check</th>
+                  <th>Status</th>
+                  <th>Observed</th>
+                  <th>Expected</th>
+                  <th>Source</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-mkt-runtime-safety-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>MKT DB inventory</h4>
+          </div>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Table</th>
+                  <th>Role</th>
+                  <th>Rows</th>
+                  <th>Resolved</th>
+                  <th>Latest</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-mkt-db-inventory-body"></tbody>
+            </table>
+          </div>
+          <div class="evidence-form">
+            <label class="wide">
+              MKT DB path
+              <input id="prediction-mkt-db-path" type="text" value="My-Krypt-Trader/.aurex-demo-userdata/data/krypt-trader.db" autocomplete="off">
+            </label>
+            <label class="wide">
+              MKT settings path
+              <input id="prediction-mkt-settings-path" type="text" autocomplete="off">
+            </label>
+            <label class="wide">
+              MKT userdata path
+              <input id="prediction-mkt-userdata-path" type="text" autocomplete="off">
+            </label>
+            <label>
+              DB source
+              <input id="prediction-mkt-db-source" type="text" value="my-krypt-trader" autocomplete="off">
+            </label>
+            <label>
+              DB source reference
+              <input id="prediction-mkt-db-source-reference" type="text" value="My-Krypt-Trader/.aurex-demo-userdata/data/krypt-trader.db::markets" autocomplete="off">
+            </label>
+            <label>
+              DB status
+              <select id="prediction-mkt-db-status-filter">
+                <option value="resolved">Resolved</option>
+                <option value="open">Open</option>
+                <option value="all">All</option>
+              </select>
+            </label>
+            <label>
+              DB limit
+              <input id="prediction-mkt-db-limit" type="number" value="100" min="1" max="500" step="1">
+            </label>
+            <label>
+              Min volume
+              <input id="prediction-mkt-db-min-volume" type="number" min="0" step="1">
+            </label>
+            <label>
+              Settlement required
+              <input id="prediction-mkt-db-require-settlement" type="checkbox" checked>
+            </label>
+            <label>
+              Acknowledge side sensitivity
+              <input id="prediction-mkt-db-ack-side-sensitivity" type="checkbox">
+            </label>
+            <label class="wide">
+              Side rationale
+              <textarea id="prediction-mkt-db-side-rationale" rows="3" spellcheck="false">Pre-declared side hypothesis before reviewing campaign replay projection.</textarea>
+            </label>
+          </div>
+          <div class="evidence-form">
+            <label>
+              CSV source
+              <input id="prediction-csv-source" type="text" value="my-krypt-trader" autocomplete="off">
+            </label>
+            <label>
+              Source reference
+              <input id="prediction-csv-source-reference" type="text" value="krypt-trader.db::markets" autocomplete="off">
+            </label>
+            <label>
+              CSV format
+              <select id="prediction-csv-format">
+                <option value="auto">Auto</option>
+                <option value="aurex">Aurex</option>
+                <option value="mkt_markets">MKT markets</option>
+              </select>
+            </label>
+            <label class="wide">
+              Contract snapshot CSV
+              <textarea id="prediction-contract-csv" rows="6" spellcheck="false"></textarea>
+            </label>
+          </div>
+          <div class="section-toolbar">
+            <h4>Paper order</h4>
+            <div class="panel-actions">
+              <button id="prediction-demo-run-button" class="compact" type="button">Demo run</button>
+              <button id="prediction-demo-batch-preflight-button" class="compact" type="button">Batch preflight</button>
+              <button id="prediction-demo-batch-button" class="compact" type="button">Batch replay</button>
+            </div>
+          </div>
+          <dl class="definition-grid prediction-gate-grid">
+            <div><dt>Paper intent gate</dt><dd id="prediction-intent-gate-state">--</dd></div>
+            <div><dt>Gate evidence</dt><dd id="prediction-intent-gate-evidence">--</dd></div>
+            <div><dt>Latest intent gate</dt><dd id="prediction-intent-gate-latest">--</dd></div>
+            <div><dt>Next action</dt><dd id="prediction-intent-gate-next">--</dd></div>
+            <div><dt>Batch replay</dt><dd id="prediction-demo-batch-state">NOT_RUN</dd></div>
+            <div><dt>Batch preflight hash</dt><dd id="prediction-demo-batch-hash">--</dd></div>
+            <div><dt>Batch records</dt><dd id="prediction-demo-batch-records">--</dd></div>
+            <div><dt>Batch skipped</dt><dd id="prediction-demo-batch-skipped">--</dd></div>
+            <div><dt>Batch next</dt><dd id="prediction-demo-batch-next">Run only after importing resolved snapshots.</dd></div>
+          </dl>
+          <div class="section-toolbar">
+            <h4>Batch audit</h4>
+            <div class="panel-actions">
+              <span id="prediction-demo-batch-audit-state" class="status-pill">--</span>
+            </div>
+          </div>
+          <p id="prediction-demo-batch-audit-next" class="panel-note">--</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ran</th>
+                  <th>Status</th>
+                  <th>Side</th>
+                  <th>P/L</th>
+                  <th>Records</th>
+                  <th>Gap</th>
+                  <th>Current ledger</th>
+                  <th>Preflight</th>
+                  <th>Hash</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-demo-batch-audit-body"></tbody>
+            </table>
+          </div>
+          <div class="evidence-form">
+            <label>
+              Contract ID
+              <input id="prediction-contract-id" type="text" autocomplete="off">
+            </label>
+            <label>
+              Strategy
+              <input id="prediction-strategy" type="text" value="mkt_whale_research_candidate" autocomplete="off">
+            </label>
+            <label>
+              Side
+              <select id="prediction-side">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+              </select>
+            </label>
+            <label>
+              Action
+              <select id="prediction-action">
+                <option value="BUY">BUY</option>
+                <option value="SELL">SELL to close</option>
+              </select>
+            </label>
+            <label>
+              Quantity
+              <input id="prediction-quantity" type="text" value="10" autocomplete="off">
+            </label>
+            <label>
+              Limit
+              <input id="prediction-limit-price" type="text" value="0.60" autocomplete="off">
+            </label>
+            <label>
+              Max order cost
+              <input id="prediction-max-order-cost" type="text" value="50" autocomplete="off">
+            </label>
+            <label>
+              Max exposure
+              <input id="prediction-max-contract-exposure" type="text" value="50" autocomplete="off">
+            </label>
+            <label>
+              Manual max quote age s
+              <input id="prediction-max-quote-age-seconds" type="text" value="900" autocomplete="off">
+            </label>
+            <label>
+              Manual max spread
+              <input id="prediction-max-spread" type="text" value="0.10" autocomplete="off">
+            </label>
+            <label>
+              Manual max latency ms
+              <input id="prediction-max-latency-ms" type="text" value="1000" autocomplete="off">
+            </label>
+            <label>
+              Manual max slippage
+              <input id="prediction-max-slippage" type="text" value="0.02" autocomplete="off">
+            </label>
+            <label>
+              Idempotency
+              <input id="prediction-idempotency-key" type="text" value="ui-prediction-paper-intent" autocomplete="off">
+            </label>
+            <label>
+              Intent ID
+              <input id="prediction-intent-id" type="text" autocomplete="off">
+            </label>
+            <label>
+              Available
+              <input id="prediction-available-quantity" type="text" value="10" autocomplete="off">
+            </label>
+            <label>
+              Execution price
+              <input id="prediction-execution-price" type="text" value="0.60" autocomplete="off">
+            </label>
+            <label>
+              Latency ms
+              <input id="prediction-latency-ms" type="text" value="500" autocomplete="off">
+            </label>
+            <label>
+              Batch max
+              <input id="prediction-batch-max-records" type="text" value="5" autocomplete="off">
+            </label>
+            <label>
+              Position ID
+              <input id="prediction-position-id" type="text" autocomplete="off">
+            </label>
+            <label>
+              Settlement
+              <input id="prediction-settlement-value" type="text" autocomplete="off">
+            </label>
+          </div>
+          <div class="section-toolbar">
+            <h4>Contracts</h4>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Seen</th>
+                  <th>Ticker</th>
+                  <th>Status</th>
+                  <th>YES</th>
+                  <th>NO</th>
+                  <th>ID</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-contracts-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>Orders</h4>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Submitted</th>
+                  <th>Status</th>
+                  <th>Side</th>
+                  <th>Action</th>
+                  <th>Quantity</th>
+                  <th>Filled</th>
+                  <th>Limit</th>
+                  <th>Average</th>
+                  <th>Fees</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-orders-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>Positions</h4>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Opened</th>
+                  <th>Status</th>
+                  <th>Side</th>
+                  <th>Quantity</th>
+                  <th>Entry</th>
+                  <th>Open fees</th>
+                  <th>Lifecycle fees</th>
+                  <th>P/L</th>
+                  <th>ID</th>
+                </tr>
+              </thead>
+              <tbody id="prediction-positions-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>Evidence</h4>
+          </div>
+          <ol id="prediction-evidence-list" class="event-list compact-list"></ol>
+        </section>
+
+        <section id="broker" class="panel dashboard-view" data-dashboard-view="broker">
+          <div class="panel-heading">
+            <h3>Broker Readiness</h3>
+            <div class="panel-actions">
+              <span id="broker-state" class="status-pill">--</span>
+              <button id="broker-check-button" class="compact" type="button">Run checks</button>
+              <button id="broker-stop-button" class="compact danger" type="button">Stop</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Environment</dt><dd id="broker-environment">--</dd></div>
+            <div><dt>Live enabled</dt><dd id="broker-live-enabled">--</dd></div>
+            <div><dt>Connection</dt><dd id="broker-connection-status">--</dd></div>
+            <div><dt>Reconciliation</dt><dd id="broker-reconciliation">--</dd></div>
+          </dl>
+          <p id="broker-summary" class="panel-note">--</p>
+          <ol id="broker-checks-list" class="event-list compact-list"></ol>
+        </section>
+
+        <section id="operator" class="panel dashboard-view" data-dashboard-view="operator">
+          <div class="panel-heading">
+            <h3>Operator Access Profile</h3>
+            <div class="panel-actions">
+              <span id="operator-profile-state" class="status-pill">--</span>
+              <button id="operator-profile-reset-button" class="compact" type="button">Reset</button>
+              <button id="operator-profile-preflight-button" class="compact" type="button">Preflight</button>
+              <button id="operator-profile-download-button" class="compact" type="button" disabled>Download input</button>
+              <button id="operator-profile-copy-freeze-button" class="compact" type="button" disabled>Copy freeze command</button>
+            </div>
+          </div>
+          <dl class="definition-grid operator-profile-summary">
+            <div><dt>Frozen artifact</dt><dd id="operator-profile-artifact">--</dd></div>
+            <div><dt>Decision</dt><dd id="operator-profile-decision">--</dd></div>
+            <div><dt>Gate score</dt><dd id="operator-profile-gates">--</dd></div>
+            <div><dt>Total loss limit</dt><dd id="operator-profile-total-risk">--</dd></div>
+            <div><dt>Daily loss limit</dt><dd id="operator-profile-daily-risk">--</dd></div>
+            <div><dt>Per-trade loss limit</dt><dd id="operator-profile-trade-risk">--</dd></div>
+            <div><dt>First $100 / capital</dt><dd id="operator-profile-milestone-ratio">--</dd></div>
+            <div><dt>Authority</dt><dd id="operator-profile-authority">NO TRADING AUTHORITY</dd></div>
+            <div><dt>Next action</dt><dd id="operator-profile-next">Supply operator facts</dd></div>
+          </dl>
+          <p id="operator-profile-note" class="panel-note">NO CREDENTIALS / PREFLIGHT WRITES NOTHING / FREEZE REQUIRES INDEPENDENT CLI AUDIT</p>
+
+          <div class="section-toolbar">
+            <h4>Binance Spot Testnet boundary</h4>
+            <span id="sandbox-profile-state" class="status-pill">--</span>
+          </div>
+          <dl class="definition-grid operator-profile-summary">
+            <div><dt>Frozen artifact</dt><dd id="sandbox-profile-artifact">--</dd></div>
+            <div><dt>Gate score</dt><dd id="sandbox-profile-gates">--</dd></div>
+            <div><dt>Scope</dt><dd>BTCUSDT / Spot / 1x</dd></div>
+            <div><dt>Simulated equity</dt><dd>$100.00</dd></div>
+            <div><dt>Adapter implementation</dt><dd id="sandbox-profile-adapter-authority">--</dd></div>
+            <div><dt>Public connectivity</dt><dd id="sandbox-connectivity-public">--</dd></div>
+            <div><dt>Authenticated read</dt><dd id="sandbox-connectivity-auth">--</dd></div>
+            <div><dt>Signed test order</dt><dd id="sandbox-connectivity-test-order">--</dd></div>
+            <div><dt>Virtual cancel lifecycle</dt><dd id="sandbox-connectivity-cancel">--</dd></div>
+            <div><dt>Order reconciliation</dt><dd id="sandbox-connectivity-reconciliation">--</dd></div>
+            <div><dt>Fill/fee contract</dt><dd id="sandbox-fill-contract">--</dd></div>
+            <div><dt>Fill/fee reconciliation</dt><dd id="sandbox-fill-reconciliation">--</dd></div>
+            <div><dt>User-stream contract</dt><dd id="sandbox-stream-contract">--</dd></div>
+            <div><dt>Reconnect recovery</dt><dd id="sandbox-stream-reconciliation">--</dd></div>
+            <div><dt>Restart/soak contract</dt><dd id="sandbox-restart-contract">--</dd></div>
+            <div><dt>Restart/soak result</dt><dd id="sandbox-restart-reconciliation">--</dd></div>
+            <div><dt>Virtual order authority</dt><dd id="sandbox-profile-order-authority">--</dd></div>
+            <div><dt>Sandbox qualification</dt><dd id="sandbox-profile-qualification">--</dd></div>
+            <div><dt>Production and live</dt><dd id="sandbox-profile-live-authority">DISABLED</dd></div>
+            <div><dt>Next action</dt><dd id="sandbox-profile-next">Freeze sandbox profile</dd></div>
+          </dl>
+          <p class="panel-note">TESTNET FUNDS ARE VIRTUAL / TESTNET P/L IS NOT EDGE EVIDENCE / PRODUCTION REMAINS DEFERRED</p>
+
+          <form id="operator-profile-form" novalidate>
+            <div class="section-toolbar">
+              <h4>Identity and access</h4>
+            </div>
+            <div class="evidence-form operator-profile-form-grid">
+              <label>
+                Operator alias
+                <input id="operator-profile-operator-identifier" type="text" autocomplete="off" placeholder="Non-secret alias">
+              </label>
+              <label>
+                Jurisdiction
+                <input id="operator-profile-jurisdiction" type="text" autocomplete="off" placeholder="Country or jurisdiction">
+              </label>
+              <label>
+                Execution venue
+                <input id="operator-profile-venue" type="text" autocomplete="off" placeholder="Exact exchange name">
+              </label>
+              <label>
+                Account alias
+                <input id="operator-profile-account-alias" type="text" autocomplete="off" placeholder="Alias only, never an account number">
+              </label>
+              <label>
+                Account status
+                <select id="operator-profile-account-status">
+                  <option value="UNVERIFIED">Unverified</option>
+                  <option value="VERIFIED">Verified</option>
+                  <option value="NONE">None</option>
+                </select>
+              </label>
+              <label>
+                API access
+                <select id="operator-profile-api-access-status">
+                  <option value="UNKNOWN">Unknown</option>
+                  <option value="UNAVAILABLE">Unavailable</option>
+                  <option value="DOCUMENTED_AVAILABLE_NOT_TESTED">Documented, not tested</option>
+                  <option value="VERIFIED_READ_ONLY">Verified read-only</option>
+                  <option value="VERIFIED_ORDER_ENTRY_DISABLED">Verified, order entry disabled</option>
+                </select>
+              </label>
+              <label>
+                Sandbox access
+                <select id="operator-profile-sandbox-status">
+                  <option value="UNKNOWN">Unknown</option>
+                  <option value="UNAVAILABLE">Unavailable</option>
+                  <option value="DOCUMENTED_AVAILABLE_NOT_TESTED">Documented, not tested</option>
+                  <option value="VERIFIED">Verified</option>
+                </select>
+              </label>
+              <label>
+                Venue terms reference
+                <input id="operator-profile-terms-reference" type="text" autocomplete="off" placeholder="Official URL or local evidence reference">
+              </label>
+              <label>
+                Fee schedule reference
+                <input id="operator-profile-fee-reference" type="text" autocomplete="off" placeholder="Official URL or local evidence reference">
+              </label>
+              <label>
+                API documentation reference
+                <input id="operator-profile-api-reference" type="text" autocomplete="off" placeholder="Official URL or local evidence reference">
+              </label>
+              <label>
+                Product access evidence
+                <input id="operator-profile-product-reference" type="text" autocomplete="off" placeholder="Non-secret evidence reference">
+              </label>
+              <label>
+                Sandbox evidence
+                <input id="operator-profile-sandbox-reference" type="text" autocomplete="off" placeholder="Official URL or local evidence reference">
+              </label>
+            </div>
+
+            <div class="section-toolbar">
+              <h4>Product boundary</h4>
+            </div>
+            <div class="evidence-form operator-profile-form-grid">
+              <label>
+                Product scope
+                <select id="operator-profile-product-scope">
+                  <option value="SPOT_ONLY">Spot only</option>
+                  <option value="SPOT_AND_PERPETUALS">Spot and perpetuals</option>
+                  <option value="SPOT_PERPETUALS_AND_OPTIONS">Spot, perpetuals, and options</option>
+                  <option value="OTHER">Other</option>
+                </select>
+              </label>
+              <label>
+                Other product scope
+                <input id="operator-profile-other-scope" type="text" autocomplete="off" disabled>
+              </label>
+              <label>
+                Maximum effective leverage
+                <input id="operator-profile-leverage" type="number" min="0" max="1" step="0.01" value="1">
+              </label>
+              <label class="checkbox-label">
+                <input id="operator-profile-derivatives-access" type="checkbox">
+                Derivatives access confirmed
+              </label>
+              <label class="checkbox-label">
+                <input id="operator-profile-derivatives-suitability" type="checkbox">
+                Derivatives suitability acknowledged
+              </label>
+              <label class="checkbox-label">
+                <input id="operator-profile-legal-ack" type="checkbox">
+                Legal and tax obligations acknowledged
+              </label>
+            </div>
+
+            <div class="section-toolbar">
+              <h4>Capital and loss boundary</h4>
+            </div>
+            <div class="evidence-form operator-profile-form-grid">
+              <label>
+                Starting trading capital
+                <input id="operator-profile-capital" type="number" min="0.01" step="0.01" placeholder="0.00">
+              </label>
+              <label>
+                Capital currency
+                <input id="operator-profile-capital-currency" type="text" value="USD" maxlength="12" autocomplete="off">
+              </label>
+              <label>
+                Maximum total loss
+                <input id="operator-profile-total-loss" type="number" min="0.01" step="0.01" placeholder="Maximum 10% of capital">
+              </label>
+              <label>
+                Maximum daily loss
+                <input id="operator-profile-daily-loss" type="number" min="0.01" step="0.01" placeholder="Maximum 1% of capital">
+              </label>
+              <label>
+                Maximum per-trade loss
+                <input id="operator-profile-trade-loss" type="number" min="0.01" step="0.01" placeholder="Maximum 0.5% of capital">
+              </label>
+              <label>
+                Capital-source attestation
+                <input id="operator-profile-capital-reference" type="text" autocomplete="off" placeholder="Non-secret attestation reference">
+              </label>
+              <label class="checkbox-label">
+                <input id="operator-profile-unborrowed" type="checkbox">
+                Capital is unborrowed
+              </label>
+              <label class="checkbox-label">
+                <input id="operator-profile-emergency-funds" type="checkbox">
+                Capital excludes emergency funds
+              </label>
+            </div>
+
+            <div class="section-toolbar">
+              <h4>Data budget</h4>
+            </div>
+            <div class="evidence-form operator-profile-form-grid">
+              <label>
+                One-time data budget
+                <input id="operator-profile-one-time-budget" type="number" min="0" step="0.01" value="0">
+              </label>
+              <label>
+                Monthly data budget
+                <input id="operator-profile-monthly-budget" type="number" min="0" step="0.01" value="0">
+              </label>
+              <label>
+                Budget currency
+                <input id="operator-profile-budget-currency" type="text" value="USD" maxlength="12" autocomplete="off">
+              </label>
+              <label>
+                Data-budget attestation
+                <input id="operator-profile-budget-reference" type="text" autocomplete="off" placeholder="Non-secret attestation reference">
+              </label>
+              <label class="checkbox-label">
+                <input id="operator-profile-paid-data" type="checkbox">
+                Paid data is permitted
+              </label>
+            </div>
+
+            <div class="section-toolbar">
+              <h4>Attestation</h4>
+            </div>
+            <div class="evidence-form operator-profile-attestation">
+              <label>
+                Attested at
+                <input id="operator-profile-attested-at" type="text" readonly>
+              </label>
+              <label class="checkbox-label wide">
+                <input id="operator-profile-no-credentials" type="checkbox">
+                This input contains no API key, private key, password, bearer token, secret, or account number
+              </label>
+              <label class="checkbox-label wide">
+                <input id="operator-profile-attestation" type="checkbox">
+                I attest that this profile is accurate and contains no credentials
+              </label>
+            </div>
+          </form>
+
+          <div class="section-toolbar">
+            <h4>Preflight gates</h4>
+          </div>
+          <ol id="operator-profile-gate-list" class="event-list operator-profile-gates"></ol>
+        </section>
+
+        <section id="deployment" class="panel dashboard-view" data-dashboard-view="deployment">
+          <div class="panel-heading">
+            <h3>Live Micro-Deployment</h3>
+            <div class="panel-actions">
+              <span id="deployment-state" class="status-pill">--</span>
+              <button id="deployment-check-button" class="compact" type="button">Run gates</button>
+              <button id="deployment-audit-button" class="compact danger" type="button">Audit</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Live enabled</dt><dd id="deployment-live-enabled">--</dd></div>
+            <div><dt>Strategy</dt><dd id="deployment-strategy">--</dd></div>
+            <div><dt>Symbols</dt><dd id="deployment-symbols">--</dd></div>
+            <div><dt>Risk</dt><dd id="deployment-risk">--</dd></div>
+            <div><dt>Target</dt><dd id="deployment-target">--</dd></div>
+            <div><dt>Approvals</dt><dd id="deployment-approvals">--</dd></div>
+            <div><dt>Activation audit</dt><dd id="deployment-activation-audit">--</dd></div>
+            <div><dt>Live execution adapter</dt><dd id="deployment-live-adapter">--</dd></div>
+            <div><dt>MKT credential boundary</dt><dd id="deployment-mkt-credentials">--</dd></div>
+            <div><dt>Backtest evidence</dt><dd id="deployment-backtest-evidence">--</dd></div>
+            <div><dt>Paper evidence</dt><dd id="deployment-paper-evidence">--</dd></div>
+            <div><dt>Paper freshness</dt><dd id="deployment-paper-freshness">--</dd></div>
+            <div><dt>Paper progress</dt><dd id="deployment-paper-progress">--</dd></div>
+            <div><dt>Paper scope</dt><dd id="deployment-paper-scope">--</dd></div>
+            <div><dt>Paper coverage</dt><dd id="deployment-paper-coverage">--</dd></div>
+            <div><dt>Paper integrity</dt><dd id="deployment-paper-integrity">--</dd></div>
+            <div><dt>Execution quality</dt><dd id="deployment-paper-execution">--</dd></div>
+            <div><dt>Journal coverage</dt><dd id="deployment-journal-coverage">--</dd></div>
+            <div><dt>Prediction demo</dt><dd id="deployment-prediction-demo">--</dd></div>
+            <div><dt>Selected campaign</dt><dd id="deployment-prediction-demo-selected">--</dd></div>
+            <div><dt>Campaign drift</dt><dd id="deployment-prediction-demo-campaign-drift">--</dd></div>
+            <div><dt>Batch drift</dt><dd id="deployment-prediction-demo-batch-drift">--</dd></div>
+            <div><dt>Demo gate next</dt><dd id="deployment-prediction-demo-next">--</dd></div>
+            <div><dt>Statement reconciliation</dt><dd id="deployment-statement-reconciliation">--</dd></div>
+            <div><dt>Statement freshness</dt><dd id="deployment-statement-freshness">--</dd></div>
+            <div><dt>Statement CSV</dt><dd id="deployment-statement-csv-summary">--</dd></div>
+            <div><dt>Statement fixes</dt><dd id="deployment-statement-csv-fixes">--</dd></div>
+            <div><dt>First profit milestone</dt><dd id="deployment-profit-milestone">--</dd></div>
+            <div><dt>Strategy review</dt><dd id="deployment-evidence-review">--</dd></div>
+            <div><dt>Strategy next</dt><dd id="deployment-evidence-review-next">--</dd></div>
+            <div><dt>Review blockers</dt><dd id="deployment-evidence-review-blockers">--</dd></div>
+            <div><dt>Broker packet</dt><dd id="deployment-approval-packet">--</dd></div>
+            <div><dt>Broker diligence</dt><dd id="deployment-broker-diligence">--</dd></div>
+          </dl>
+          <p id="deployment-summary" class="panel-note">--</p>
+          <ol id="deployment-gates-list" class="event-list compact-list"></ol>
+          <div class="section-toolbar">
+            <h4>Evidence operations</h4>
+            <div class="panel-actions">
+              <button id="deployment-review-button" class="compact" type="button">Daily review</button>
+              <button id="deployment-evidence-button" class="compact" type="button">Paper evidence</button>
+              <button id="profit-milestone-button" class="compact" type="button">Profit check</button>
+              <button id="evidence-review-button" class="compact" type="button">Strategy review</button>
+            </div>
+          </div>
+          <div class="section-toolbar">
+            <h4>Broker statement</h4>
+            <div class="panel-actions">
+              <button id="statement-preflight-button" class="compact" type="button">Preflight</button>
+              <button id="statement-reconcile-button" class="compact" type="button">Reconcile</button>
+            </div>
+          </div>
+          <div class="evidence-form">
+            <label>
+              Statement reference
+              <input id="statement-reference" type="text" value="broker-statement-export" autocomplete="off">
+            </label>
+            <label class="wide">
+              Broker statement CSV
+              <textarea id="statement-csv" rows="5" spellcheck="false"></textarea>
+            </label>
+          </div>
+          <div class="section-toolbar">
+            <h4>Due diligence packet</h4>
+            <div class="panel-actions">
+              <button id="approval-packet-button" class="compact" type="button">Submit packet</button>
+            </div>
+          </div>
+          <div class="evidence-form">
+            <label>
+              Broker
+              <input id="approval-broker-name" type="text" value="Aurex Reviewed Broker" autocomplete="off">
+            </label>
+            <label>
+              Account label
+              <input id="approval-account-label" type="text" value="micro-live-review" autocomplete="off">
+            </label>
+            <label>
+              Account type
+              <input id="approval-account-type" type="text" value="cash" autocomplete="off">
+            </label>
+            <label>
+              Asset class
+              <input id="approval-asset-class" type="text" value="crypto" autocomplete="off">
+            </label>
+            <label>
+              Jurisdiction
+              <input id="approval-jurisdiction" type="text" value="United States" autocomplete="off">
+            </label>
+            <label>
+              Currency
+              <input id="approval-currency" type="text" value="USD" autocomplete="off">
+            </label>
+            <label>
+              Terms reference
+              <input id="approval-terms-reference" type="text" value="docs/broker/aurex-reviewed-broker-terms.md" autocomplete="off">
+            </label>
+            <label>
+              Fee reference
+              <input id="approval-fee-reference" type="text" value="docs/broker/aurex-reviewed-broker-fees.md" autocomplete="off">
+            </label>
+            <label>
+              Margin reference
+              <input id="approval-margin-reference" type="text" value="docs/broker/aurex-reviewed-broker-margin.md" autocomplete="off">
+            </label>
+            <label>
+              Constraints reference
+              <input id="approval-constraints-reference" type="text" value="docs/broker/aurex-reviewed-broker-account-constraints.md" autocomplete="off">
+            </label>
+            <label>
+              Execution reference
+              <input id="approval-execution-reference" type="text" value="docs/broker/aurex-reviewed-broker-execution.md" autocomplete="off">
+            </label>
+            <label>
+              Cost model reference
+              <input id="approval-cost-model-reference" type="text" value="docs/broker/aurex-reviewed-broker-fee-slippage-model.md" autocomplete="off">
+            </label>
+            <label>
+              Paper-live checklist
+              <input id="approval-checklist-reference" type="text" value="docs/broker/aurex-reviewed-broker-paper-to-live-checklist.md" autocomplete="off">
+            </label>
+            <label>
+              Sandbox reference
+              <input id="approval-sandbox-reference" type="text" value="docs/broker/aurex-reviewed-broker-sandbox-test.md" autocomplete="off">
+            </label>
+            <label class="wide">
+              Tax notes
+              <textarea id="approval-tax-notes" rows="3" spellcheck="false">Personal account review only.</textarea>
+            </label>
+            <label class="checkbox-label">
+              <input id="approval-leverage-allowed" type="checkbox">
+              Leverage allowed
+            </label>
+            <label class="checkbox-label">
+              <input id="approval-credentials-stored" type="checkbox">
+              Credentials stored
+            </label>
+          </div>
+          <div class="section-toolbar">
+            <h4>Approval record</h4>
+            <div class="panel-actions">
+              <button id="approval-record-button" class="compact" type="button">Record decision</button>
+            </div>
+          </div>
+          <div class="evidence-form">
+            <label>
+              Approval domain
+              <select id="approval-record-type">
+                <option value="BROKER">Broker</option>
+                <option value="ACCOUNT">Account</option>
+                <option value="JURISDICTION">Jurisdiction</option>
+                <option value="LIVE_EXECUTION">Live execution</option>
+              </select>
+            </label>
+            <label>
+              Approver
+              <input id="approval-record-approver" type="text" value="Adonis" autocomplete="off">
+            </label>
+            <label class="wide">
+              Evidence reference
+              <input id="approval-record-evidence" type="text" value="manual-review:broker-account-jurisdiction" autocomplete="off">
+            </label>
+            <label class="wide">
+              Approval notes
+              <textarea id="approval-record-notes" rows="3" spellcheck="false">Reviewed evidence packet; no credentials stored and live execution remains disabled.</textarea>
+            </label>
+            <label class="checkbox-label">
+              <input id="approval-record-approved" type="checkbox" checked>
+              Approved
+            </label>
+          </div>
+        </section>
+
+        <section id="backtests" class="panel dashboard-view" data-dashboard-view="backtests">
+          <div class="panel-heading">
+            <h3>Backtest Evidence Intake</h3>
+            <div class="panel-actions">
+              <span id="backtest-import-state" class="status-pill">--</span>
+              <button id="backtest-setup-button" class="compact" type="button">Setup</button>
+              <button id="backtest-window-plan-button" class="compact" type="button">Plan folds</button>
+              <button id="backtest-protocol-button" class="compact" type="button">Register protocol</button>
+              <button id="backtest-template-button" class="compact" type="button">Template</button>
+              <button id="backtest-preflight-button" class="compact" type="button">Preflight</button>
+              <button id="backtest-import-button" class="compact" type="button">Import</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Pine setup</dt><dd id="backtest-setup-summary">--</dd></div>
+            <div><dt>Fold plan</dt><dd id="backtest-window-plan-summary">--</dd></div>
+            <div><dt>Pre-registered protocol</dt><dd id="backtest-protocol-summary">--</dd></div>
+            <div><dt>Preflight</dt><dd id="backtest-preflight-summary">--</dd></div>
+            <div><dt>Acceptance</dt><dd id="backtest-acceptance-summary">--</dd></div>
+            <div><dt>Paper eligibility</dt><dd id="backtest-paper-eligibility">--</dd></div>
+            <div><dt>Out-of-sample</dt><dd id="backtest-oos-summary">--</dd></div>
+            <div><dt>Walk-forward</dt><dd id="backtest-walk-forward-summary">--</dd></div>
+            <div><dt>Distribution</dt><dd id="backtest-distribution-summary">--</dd></div>
+            <div><dt>Regime coverage</dt><dd id="backtest-regime-summary">--</dd></div>
+            <div><dt>Parameter evidence</dt><dd id="backtest-parameter-summary">--</dd></div>
+            <div><dt>Fix queue</dt><dd id="backtest-fix-summary">--</dd></div>
+          </dl>
+          <div class="section-toolbar">
+            <h4>Frozen TradingView run</h4>
+            <div class="panel-actions">
+              <span id="backtest-run-manifest-state" class="status-pill">--</span>
+              <button id="backtest-run-manifest-button" class="compact" type="button" disabled>Verify manifest</button>
+              <button id="backtest-run-package-button" class="compact" type="button" disabled>Prepare run</button>
+              <button id="backtest-copy-pine-button" class="compact" type="button" disabled>Copy Pine</button>
+              <button id="backtest-copy-setup-button" class="compact" type="button" disabled>Copy setup</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Pine source</dt><dd id="backtest-run-source">--</dd></div>
+            <div><dt>TradingView ticker</dt><dd id="backtest-run-ticker">--</dd></div>
+            <div><dt>Manifest</dt><dd id="backtest-run-manifest-hash">--</dd></div>
+            <div><dt>Run package</dt><dd id="backtest-run-package-hash">--</dd></div>
+            <div><dt>Checks</dt><dd id="backtest-run-checks">--</dd></div>
+            <div><dt>Run blocker</dt><dd id="backtest-run-blocker">--</dd></div>
+          </dl>
+          <div class="section-toolbar">
+            <h4>Historical data</h4>
+            <div class="panel-actions">
+              <span id="backtest-ohlcv-state" class="status-pill">--</span>
+              <button id="backtest-ohlcv-preflight-button" class="compact" type="button">Data preflight</button>
+              <button id="backtest-ohlcv-import-button" class="compact" type="button" disabled>Import data</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Dataset rows</dt><dd id="backtest-ohlcv-rows">--</dd></div>
+            <div><dt>Coverage</dt><dd id="backtest-ohlcv-coverage">--</dd></div>
+            <div><dt>Missing intervals</dt><dd id="backtest-ohlcv-gaps">--</dd></div>
+            <div><dt>Gap evidence</dt><dd id="backtest-ohlcv-gap-evidence">--</dd></div>
+            <div><dt>Source verification</dt><dd id="backtest-ohlcv-source-verification">--</dd></div>
+            <div><dt>Canonical CSV</dt><dd id="backtest-ohlcv-input-hash">--</dd></div>
+            <div><dt>Dataset hash</dt><dd id="backtest-ohlcv-hash">--</dd></div>
+            <div><dt>Latest dataset</dt><dd id="backtest-ohlcv-latest">--</dd></div>
+          </dl>
+          <div class="evidence-form">
+            <label>
+              Dataset source
+              <input id="backtest-ohlcv-source" type="text" value="tradingview-chart-export" autocomplete="off">
+            </label>
+            <label>
+              Dataset timezone
+              <input id="backtest-ohlcv-timezone" type="text" value="UTC" autocomplete="off">
+            </label>
+            <label>
+              Continuity
+              <select id="backtest-ohlcv-continuity">
+                <option value="continuous_24_7">Continuous 24/7</option>
+                <option value="continuous_24_7_with_documented_outages">24/7 with documented outages</option>
+                <option value="session_based">Session based</option>
+              </select>
+            </label>
+            <label class="wide">
+              Dataset source reference
+              <input id="backtest-ohlcv-source-reference" type="text" value="tradingview://chart/BINANCE:BTCUSDT/15m" autocomplete="off">
+            </label>
+            <label class="wide">
+              OHLCV CSV file
+              <input id="backtest-ohlcv-file" type="file" accept=".csv,text/csv">
+            </label>
+            <label class="wide">
+              Source manifest file
+              <input id="backtest-ohlcv-manifest-file" type="file" accept=".json,application/json">
+            </label>
+            <label class="wide">
+              Source manifest JSON
+              <textarea id="backtest-ohlcv-manifest" rows="6" spellcheck="false">{}</textarea>
+            </label>
+            <label class="wide">
+              Documented outage evidence JSON
+              <textarea id="backtest-ohlcv-documented-gaps" rows="5" spellcheck="false">[]</textarea>
+            </label>
+            <label class="wide">
+              OHLCV CSV contents
+              <textarea id="backtest-ohlcv-csv" rows="6" spellcheck="false"></textarea>
+            </label>
+          </div>
+          <div class="section-toolbar">
+            <h4>Reference replay</h4>
+            <div class="panel-actions">
+              <span id="backtest-reference-state" class="status-pill">--</span>
+              <button id="backtest-reference-button" class="compact" type="button" disabled>Replay preflight</button>
+              <button id="backtest-reference-record-button" class="compact" type="button" disabled>Record evidence</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Engine</dt><dd id="backtest-reference-engine">--</dd></div>
+            <div><dt>Replay dataset</dt><dd id="backtest-reference-dataset">--</dd></div>
+            <div><dt>Reference trades</dt><dd id="backtest-reference-trades">--</dd></div>
+            <div><dt>Reference net P/L</dt><dd id="backtest-reference-net-pl">--</dd></div>
+            <div><dt>Warm-up</dt><dd id="backtest-reference-warmup">--</dd></div>
+            <div><dt>Eligibility</dt><dd id="backtest-reference-eligibility">COMPARISON ONLY</dd></div>
+            <div><dt>Replay hash</dt><dd id="backtest-reference-hash">--</dd></div>
+            <div><dt>Record hash</dt><dd id="backtest-reference-record-hash">--</dd></div>
+            <div><dt>Recorded at</dt><dd id="backtest-reference-recorded-at">NOT RECORDED</dd></div>
+            <div><dt>Replay blocker</dt><dd id="backtest-reference-blocker">--</dd></div>
+          </dl>
+          <div class="evidence-form">
+            <label class="wide">
+              Immutable dataset
+              <select id="backtest-reference-dataset-id">
+                <option value="">Import an immutable dataset first</option>
+              </select>
+            </label>
+            <label>
+              Tick size
+              <input id="backtest-reference-tick-size" type="text" value="0.01" autocomplete="off">
+            </label>
+            <label>
+              Point value
+              <input id="backtest-reference-point-value" type="text" value="1" autocomplete="off">
+            </label>
+            <label>
+              Minimum contract
+              <input id="backtest-reference-minimum-contract" type="text" value="0.001" autocomplete="off">
+            </label>
+            <label>
+              Commission per side (%)
+              <input id="backtest-reference-commission" type="text" value="0.05" autocomplete="off">
+            </label>
+            <label>
+              Slippage ticks
+              <input id="backtest-reference-slippage-ticks" type="number" min="0" max="100" step="1" value="2">
+            </label>
+          </div>
+          <div class="section-toolbar">
+            <h4>Frozen validation</h4>
+            <div class="panel-actions">
+              <span id="backtest-reference-validation-state" class="status-pill">--</span>
+              <button id="backtest-reference-validation-button" class="compact" type="button" disabled>Evaluate</button>
+              <button id="backtest-reference-validation-record-button" class="compact" type="button" disabled>Record validation</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Evidence binding</dt><dd id="backtest-reference-validation-binding">--</dd></div>
+            <div><dt>Out-of-sample</dt><dd id="backtest-reference-validation-oos">--</dd></div>
+            <div><dt>Walk-forward</dt><dd id="backtest-reference-validation-walk-forward">--</dd></div>
+            <div><dt>Distribution</dt><dd id="backtest-reference-validation-distribution">--</dd></div>
+            <div><dt>Regime split</dt><dd id="backtest-reference-validation-regimes">--</dd></div>
+            <div><dt>Sample assignment</dt><dd id="backtest-reference-validation-assignment">--</dd></div>
+            <div><dt>Validation hash</dt><dd id="backtest-reference-validation-hash">--</dd></div>
+            <div><dt>Primary blocker</dt><dd id="backtest-reference-validation-blocker">--</dd></div>
+          </dl>
+          <div class="evidence-form">
+            <label class="wide">
+              Recorded replay
+              <select id="backtest-reference-validation-replay-id">
+                <option value="">Record a reference replay first</option>
+              </select>
+            </label>
+            <label class="wide">
+              Frozen protocol
+              <select id="backtest-reference-validation-protocol-id">
+                <option value="">Register a frozen protocol first</option>
+              </select>
+            </label>
+          </div>
+          <div class="section-toolbar">
+            <h4>Strategy report</h4>
+          </div>
+          <div class="evidence-form">
+            <label class="wide">
+              Backtest protocol
+              <select id="backtest-protocol-id">
+                <option value="">Register or select a protocol before preflight</option>
+              </select>
+            </label>
+            <label>
+              Strategy
+              <input id="backtest-strategy" type="text" placeholder="Frozen strategy charter ID" autocomplete="off">
+            </label>
+            <label>
+              Version
+              <input id="backtest-version" type="text" placeholder="Frozen strategy version" autocomplete="off">
+            </label>
+            <label>
+              Symbols
+              <input id="backtest-symbols" type="text" value="BTCUSDT" autocomplete="off">
+            </label>
+            <label>
+              Timeframe
+              <input id="backtest-timeframe" type="text" value="15m" autocomplete="off">
+            </label>
+            <label>
+              Data source
+              <input id="backtest-data-source" type="text" value="tradingview-export" autocomplete="off">
+            </label>
+            <label>
+              CSV timezone
+              <input id="backtest-csv-timezone" type="text" value="UTC" autocomplete="off">
+            </label>
+            <label class="wide">
+              Source reference
+              <input id="backtest-source-reference" type="text" value="tradingview://strategy-tester/BINANCE:BTCUSDT/15m" autocomplete="off">
+            </label>
+            <label>
+              Data start
+              <input id="backtest-data-start" type="text" value="2026-01-01T00:00:00Z" autocomplete="off">
+            </label>
+            <label>
+              Data end
+              <input id="backtest-data-end" type="text" value="2026-03-31T00:00:00Z" autocomplete="off">
+            </label>
+            <label>
+              In-sample start
+              <input id="backtest-is-start" type="text" value="2026-01-01T00:00:00Z" autocomplete="off">
+            </label>
+            <label>
+              In-sample end
+              <input id="backtest-is-end" type="text" value="2026-02-15T00:00:00Z" autocomplete="off">
+            </label>
+            <label>
+              OOS start
+              <input id="backtest-oos-start" type="text" value="2026-02-16T00:00:00Z" autocomplete="off">
+            </label>
+            <label>
+              OOS end
+              <input id="backtest-oos-end" type="text" value="2026-03-31T00:00:00Z" autocomplete="off">
+            </label>
+            <label class="wide">
+              Parameters JSON
+              <textarea id="backtest-parameters" rows="8" spellcheck="false">{"initial_capital":"1000","backtest_start":"2026-01-01T00:00:00Z","backtest_end":"2026-03-31T00:00:00Z","higher_timeframe":"60","pullback_ema_fast":20,"pullback_ema_slow":50,"trend_ema":200,"htf_ema_fast":50,"htf_ema_slow":200,"rsi_length":14,"atr_length":14,"atr_multiplier":"1.5","reward_risk":"2.0","swing_lookback":5,"pullback_atr_tolerance":"0.25","stop_mode":"Wider","risk_per_trade_percent":"0.5","max_position_value_percent":"95.0","enable_long":true,"enable_short":true}</textarea>
+            </label>
+            <label class="wide">
+              Cost model JSON
+              <textarea id="backtest-cost-model" rows="3" spellcheck="false">{"commission_percent":"0.05"}</textarea>
+            </label>
+            <label class="wide">
+              Slippage model JSON
+              <textarea id="backtest-slippage-model" rows="3" spellcheck="false">{"type":"fixed_ticks","ticks":"2"}</textarea>
+            </label>
+            <label class="wide">
+              Risk snapshot JSON
+              <textarea id="backtest-risk-snapshot" rows="3" spellcheck="false">{"risk_per_trade":"0.005"}</textarea>
+            </label>
+            <label class="wide">
+              Walk-forward windows JSON
+              <textarea id="backtest-walk-forward-windows" rows="6" spellcheck="false">[]</textarea>
+            </label>
+            <label class="wide">
+              Acceptance JSON
+              <textarea id="backtest-acceptance" rows="6" spellcheck="false">{"min_trades":100,"min_profit_factor":"1.15","max_drawdown":"50","min_out_of_sample_trades":30,"min_out_of_sample_profit_factor":"1.15","min_active_trading_days":15,"max_single_day_trade_share":"0.25","min_walk_forward_windows":3,"min_walk_forward_trades_per_window":10,"min_walk_forward_pass_rate":"0.66"}</textarea>
+            </label>
+            <label class="wide">
+              TradingView CSV file
+              <input id="backtest-csv-file" type="file" accept=".csv,text/csv">
+            </label>
+            <label class="wide">
+              Report CSV contents
+              <textarea id="backtest-csv" rows="7" spellcheck="false"></textarea>
+            </label>
+          </div>
+          <p id="backtest-import-summary" class="panel-note">--</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Data end</th>
+                  <th>Strategy</th>
+                  <th>Scope</th>
+                  <th>Status</th>
+                  <th>Trades</th>
+                  <th>OOS</th>
+                  <th>WF</th>
+                  <th>Hash</th>
+                </tr>
+              </thead>
+              <tbody id="backtest-reports-body"></tbody>
+            </table>
+          </div>
+          <div class="section-toolbar">
+            <h4>TradingView parity</h4>
+            <div class="panel-actions">
+              <span id="backtest-parity-state" class="status-pill">--</span>
+              <button id="backtest-parity-preflight-button" class="compact" type="button" disabled>Compare trades</button>
+              <button id="backtest-parity-record-button" class="compact" type="button" disabled>Record evidence</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Reference report</dt><dd id="backtest-parity-report">--</dd></div>
+            <div><dt>Replay engine</dt><dd id="backtest-parity-engine">--</dd></div>
+            <div><dt>Chart candles</dt><dd id="backtest-parity-market-counts">--</dd></div>
+            <div><dt>Chart match</dt><dd id="backtest-parity-market-match">--</dd></div>
+            <div><dt>Trade counts</dt><dd id="backtest-parity-counts">--</dd></div>
+            <div><dt>Exact matches</dt><dd id="backtest-parity-matches">--</dd></div>
+            <div><dt>Unmatched</dt><dd id="backtest-parity-unmatched">--</dd></div>
+            <div><dt>Top mismatch</dt><dd id="backtest-parity-mismatch">--</dd></div>
+            <div><dt>Export lineage</dt><dd id="backtest-parity-lineage-state">NOT PREPARED</dd></div>
+            <div><dt>Lineage hash</dt><dd id="backtest-parity-lineage-hash">--</dd></div>
+            <div><dt>Parity hash</dt><dd id="backtest-parity-hash">--</dd></div>
+            <div><dt>Eligibility</dt><dd id="backtest-parity-eligibility">COMPARISON ONLY</dd></div>
+          </dl>
+          <div class="evidence-form">
+            <label class="wide">
+              Binance Vision reference dataset
+              <select id="backtest-parity-dataset-id">
+                <option value="">Import verified Binance Vision data first</option>
+              </select>
+            </label>
+            <label class="wide">
+              TradingView chart export dataset
+              <select id="backtest-parity-chart-dataset-id">
+                <option value="">Import the matching TradingView chart CSV first</option>
+              </select>
+            </label>
+            <label class="wide">
+              Imported TradingView report
+              <select id="backtest-parity-report-id">
+                <option value="">Import a TradingView strategy report first</option>
+              </select>
+            </label>
+            <label class="checkbox-label wide">
+              <input id="backtest-parity-export-attestation" type="checkbox">
+              I attest that both TradingView CSVs came from the same unchanged frozen run
+            </label>
+            <div class="panel-actions wide">
+              <button id="backtest-parity-lineage-button" class="compact" type="button" disabled>Prepare lineage</button>
+            </div>
+            <label>
+              Tick size
+              <input id="backtest-parity-tick-size" type="text" value="0.01" autocomplete="off">
+            </label>
+            <label>
+              Point value
+              <input id="backtest-parity-point-value" type="text" value="1" autocomplete="off">
+            </label>
+            <label>
+              Minimum contract
+              <input id="backtest-parity-minimum-contract" type="text" value="0.001" autocomplete="off">
+            </label>
+            <label>
+              Entry tolerance (s)
+              <input id="backtest-parity-entry-seconds" type="number" min="0" max="3600" step="1" value="0">
+            </label>
+            <label>
+              Exit tolerance (s)
+              <input id="backtest-parity-exit-seconds" type="number" min="0" max="3600" step="1" value="0">
+            </label>
+            <label>
+              Price tolerance (ticks)
+              <input id="backtest-parity-price-ticks" type="number" min="0" max="10" step="1" value="1">
+            </label>
+            <label>
+              Quantity tolerance
+              <input id="backtest-parity-quantity-relative" type="text" value="0.000001" autocomplete="off">
+            </label>
+            <label>
+              Money tolerance
+              <input id="backtest-parity-money-absolute" type="text" value="0.01" autocomplete="off">
+            </label>
+          </div>
+          <p id="backtest-parity-note" class="panel-note">Select evidence sources to measure trade-level parity.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Mismatch</th>
+                  <th>TradingView evidence</th>
+                  <th>Aurex reference</th>
+                  <th>Reasons</th>
+                </tr>
+              </thead>
+              <tbody id="backtest-parity-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="evidence" class="panel dashboard-view" data-dashboard-view="evidence">
+          <div class="panel-heading">
+            <h3>Paper Evidence Intake</h3>
+            <div class="panel-actions">
+              <span id="evidence-import-state" class="status-pill">--</span>
+              <button id="evidence-template-button" class="compact" type="button">Template</button>
+              <button id="evidence-preflight-button" class="compact" type="button">Preflight</button>
+              <button id="evidence-import-button" class="compact" type="button">Import</button>
+            </div>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Collection status</dt><dd id="evidence-collection-status">--</dd></div>
+            <div><dt>Backtest gate</dt><dd id="evidence-collection-backtest">--</dd></div>
+            <div><dt>Paper gate</dt><dd id="evidence-collection-paper">--</dd></div>
+            <div><dt>Imported rows</dt><dd id="evidence-collection-imported">--</dd></div>
+            <div><dt>Required trades</dt><dd id="evidence-collection-trades">--</dd></div>
+            <div><dt>Required days</dt><dd id="evidence-collection-days">--</dd></div>
+            <div><dt>Active days</dt><dd id="evidence-collection-active-days">--</dd></div>
+            <div><dt>Execution quality</dt><dd id="evidence-collection-execution">--</dd></div>
+            <div><dt>Evidence drift</dt><dd id="evidence-collection-drift">--</dd></div>
+            <div><dt>Preflight</dt><dd id="evidence-preflight-summary">--</dd></div>
+            <div><dt>Export window</dt><dd id="evidence-analysis-window">--</dd></div>
+            <div><dt>Fix queue</dt><dd id="evidence-analysis-fixes">--</dd></div>
+            <div><dt>Next action</dt><dd id="evidence-collection-next">--</dd></div>
+          </dl>
+          <div class="evidence-form">
+            <label>
+              Source
+              <input id="evidence-source" type="text" value="paper-platform" autocomplete="off">
+            </label>
+            <label>
+              Source reference
+              <input id="evidence-source-reference" type="text" value="export:paper-platform">
+            </label>
+            <label class="wide">
+              CSV
+              <textarea id="evidence-csv" rows="7" spellcheck="false"></textarea>
+            </label>
+          </div>
+          <p id="evidence-import-summary" class="panel-note">--</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Imported</th>
+                  <th>Source</th>
+                  <th>Status</th>
+                  <th>Rows</th>
+                  <th>Accepted</th>
+                  <th>Skipped</th>
+                  <th>Rejected</th>
+                  <th>Hash</th>
+                </tr>
+              </thead>
+              <tbody id="evidence-imports-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="signals" class="panel dashboard-view" data-dashboard-view="signals">
+          <div class="panel-heading">
+            <h3>Signals</h3>
+            <span id="signals-count" class="status-pill">--</span>
+          </div>
+          <dl class="definition-grid">
+            <div><dt>Contract</dt><dd id="signals-contract-status">--</dd></div>
+            <div><dt>Runbook</dt><dd id="signals-runbook-status">--</dd></div>
+            <div><dt>Current step</dt><dd id="signals-runbook-current">--</dd></div>
+            <div><dt>Runbook progress</dt><dd id="signals-runbook-progress">--</dd></div>
+            <div><dt>External proof</dt><dd id="signals-verification-status">--</dd></div>
+            <div><dt>Delivery proof</dt><dd id="signals-verification-delivery">--</dd></div>
+            <div><dt>Aurex pipeline</dt><dd id="signals-verification-pipeline">--</dd></div>
+            <div><dt>Delivery origin</dt><dd id="signals-verification-origin">--</dd></div>
+            <div><dt>Latest signal</dt><dd id="signals-verification-signal">--</dd></div>
+            <div><dt>Latest trade</dt><dd id="signals-verification-trade">--</dd></div>
+            <div><dt>Accepted backtest</dt><dd id="signals-contract-backtest">--</dd></div>
+            <div><dt>Expected version</dt><dd id="signals-contract-version">--</dd></div>
+            <div><dt>Expected fingerprint</dt><dd id="signals-contract-fingerprint">--</dd></div>
+            <div><dt>Alert setup</dt><dd id="signals-alert-setup-status">--</dd></div>
+            <div><dt>Webhook URL</dt><dd id="signals-alert-setup-url">--</dd></div>
+            <div><dt>Webhook auth</dt><dd id="signals-alert-setup-auth">--</dd></div>
+            <div><dt>Preflight</dt><dd id="signals-preflight-status">--</dd></div>
+            <div><dt>Estimated size</dt><dd id="signals-preflight-size">--</dd></div>
+            <div><dt>Expected webhook</dt><dd id="signals-preflight-webhook">--</dd></div>
+            <div><dt>Duplicate check</dt><dd id="signals-preflight-duplicate">--</dd></div>
+            <div><dt>Idempotency</dt><dd id="signals-preflight-idempotency">--</dd></div>
+          </dl>
+          <p id="signals-contract-next" class="panel-note">--</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Verification</th>
+                  <th>Status</th>
+                  <th>Evidence</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="signals-verification-body"></tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Runbook step</th>
+                  <th>Status</th>
+                  <th>Evidence</th>
+                  <th>Next</th>
+                </tr>
+              </thead>
+              <tbody id="signals-runbook-body"></tbody>
+            </table>
+          </div>
+          <div class="panel-actions">
+            <button id="signal-alert-setup-button" class="compact" type="button">Setup alert</button>
+            <button id="signal-preflight-button" class="compact" type="button">Preflight alert</button>
+          </div>
+          <p id="signals-alert-setup-next" class="panel-note">--</p>
+          <textarea id="signal-preflight-payload" rows="8" spellcheck="false"></textarea>
+          <p id="signals-preflight-next" class="panel-note">--</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Strategy</th>
+                  <th>Symbol</th>
+                  <th>Side</th>
+                  <th>Status</th>
+                  <th>Provenance</th>
+                  <th>Delivery</th>
+                  <th>Reason</th>
+                </tr>
+              </thead>
+              <tbody id="signals-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="trades" class="panel dashboard-view" data-dashboard-view="trades">
+          <div class="panel-heading">
+            <h3>Paper Trades</h3>
+            <span id="trades-count" class="status-pill">--</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Opened</th>
+                  <th>Strategy</th>
+                  <th>Symbol</th>
+                  <th>Side</th>
+                  <th>Status</th>
+                  <th>Net P/L</th>
+                  <th>R</th>
+                </tr>
+              </thead>
+              <tbody id="trades-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="events" class="panel dashboard-view" data-dashboard-view="events">
+          <div class="panel-heading">
+            <h3>System Events</h3>
+            <span id="events-count" class="status-pill">--</span>
+          </div>
+          <ol id="events-list" class="event-list"></ol>
+        </section>
+      </main>
+    </div>
+
+    <div id="notification-region" class="notification-region" role="status" aria-live="polite" aria-atomic="false"></div>
+
+    <script src="/dashboard/assets/dashboard-transport.js?v=20261011-1" defer></script>
+    <script src="/dashboard/assets/app.js?v=20261011-1" defer></script>
+  </body>
+</html>

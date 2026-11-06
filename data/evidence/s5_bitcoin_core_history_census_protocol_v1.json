@@ -1,0 +1,146 @@
+{
+  "schema_version": "aurex-s5-bitcoin-core-history-census-protocol-v1",
+  "protocol_id": "s5-bitcoin-core-history-census-protocol-v1",
+  "frozen_at": "2026-09-02T14:56:49.003926Z",
+  "status": "FROZEN_PROTOCOL_ONLY_ZERO_CENSUS_EXECUTION",
+  "builder_contract_hash": "a48bbc724e9f5eddecd8690735f5a6fa7ede43daad8e217dd912ea069ee0e3e5",
+  "history_result_evidence_hash": "0725c5080e6940290bde9134ac297d7c073013b7392219ec9f9ce9f1fd608bbb",
+  "history_result_audit_evidence_hash": "93d8b2285c0865f63cc626424c47fc4aa508d8e5cd6b717128093971cee45efa",
+  "readiness_v29_result_evidence_hash": "d8cde2bd5095d440d64dd105e37b0fa225b53a363bfde1eb4374403bd30d8dd1",
+  "source_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_audit_v29.json",
+      "file_sha256": "8a905e74aa42aaf3b2ccfadef69090196aaf87d4375be501e586292a508ce5f5"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_result_v29.json",
+      "file_sha256": "121f00f855a8a8508f523167b69c4ae114ef7111c0b7071b80494a6c96c2b212"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_local_verifier_amendment_audit_v2.json",
+      "file_sha256": "202ce01ac61fe3ec2dc10af05ce41299352ef50b0259ea3c05a67525da24b820"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_local_verifier_amendment_v2.json",
+      "file_sha256": "ea0224b764a6a9bb6a015408dc31f7ddf02fc949768043e2935a70f74df045d9"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_audit_v1.json",
+      "file_sha256": "e64615314acae1f5e2658d7ca03c6a43720885a3c777000924af691f49cc9131"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_v1.json",
+      "file_sha256": "676f189b1a8df713b8704ba4eaa3c7c5627790d9bff2bed86b8e756624c1c93f"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_audit_v1.json",
+      "file_sha256": "b5b4f30ef909cbbf653eafda852415b9f4ec07c48acf74f66669747fcaa0c3d7"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_audit_v2.json",
+      "file_sha256": "07cbe45b2d8c4792e435d759ea5c011753849d6343f40bef73d81834731b8792"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_v1.json",
+      "file_sha256": "e571f6dd288843fe1a1407a571028615f035d07288f9e42a5e40bb7eaee0cd73"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_v2.json",
+      "file_sha256": "b96a57ea99c0b1bb1aef3fcf7b534afe9821e9687583813ab4a64b5f849323d9"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_verifier_failure_audit_v1.json",
+      "file_sha256": "6a280ce4e5195a51d53cbfc9096a65bb9d386b40430bbcd37a56423d548cf89a"
+    }
+  ],
+  "dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+  "dataset_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "source_cutoff_commit": "dc0395c5858a1d55239b82a834e5075cf2069219",
+  "maximum_reachable_commit_count": 50395,
+  "first_parent_command": "git rev-list --first-parent --reverse <cutoff>",
+  "batch_object_command": "git cat-file --batch",
+  "message_patterns": [
+    {
+      "pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE",
+      "regular_expression": "^Merge bitcoin/bitcoin#([1-9][0-9]*):(?: |$)",
+      "applies_only_to_multi_parent_commit": true,
+      "first_match_wins": true
+    },
+    {
+      "pattern_id": "GITHUB_DEFAULT_PULL_MERGE",
+      "regular_expression": "^Merge pull request #([1-9][0-9]*) from .+$",
+      "applies_only_to_multi_parent_commit": true,
+      "first_match_wins": true
+    }
+  ],
+  "maximum_unrecognized_merge_samples": 25,
+  "maximum_first_line_characters_persisted": 300,
+  "github_direct_pull_endpoint_template": "https://api.github.com/repos/bitcoin/bitcoin/pulls/{pull_number}",
+  "github_unauthenticated_requests_per_hour": 60,
+  "github_authenticated_requests_per_hour": 5000,
+  "maximum_local_git_process_count": 2,
+  "maximum_run_count": 1,
+  "maximum_elapsed_seconds": 600,
+  "result_required_on_every_normal_exit": true,
+  "rerun_after_result_forbidden": true,
+  "network_access_permitted": false,
+  "repository_fetch_permitted": false,
+  "commit_hash_access_permitted": true,
+  "parent_header_access_permitted": true,
+  "commit_message_first_line_access_permitted": true,
+  "commit_message_body_persistence_permitted": false,
+  "author_header_parsing_permitted": false,
+  "committer_header_parsing_permitted": false,
+  "timestamp_parsing_permitted": false,
+  "github_api_requests_permitted": false,
+  "btc_market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "strategy_candidate_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "local_git_processes_executed": 0,
+  "commit_objects_parsed": 0,
+  "pull_request_ids_parsed": 0,
+  "github_api_requests_executed": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "orders_submitted": 0,
+  "required_gate_ids": [
+    "S5_HISTORY_PAYLOAD_AND_READINESS_V29_LINEAGE_BOUND",
+    "FINAL_DATASET_MANIFEST_AND_SOURCE_CUTOFF_BOUND",
+    "ZERO_NETWORK_LOCAL_CENSUS_ONLY",
+    "FIRST_PARENT_COMMIT_STREAM_COMPLETE_AND_NONEMPTY",
+    "BATCH_COMMIT_OBJECT_COUNT_MATCHES_FIRST_PARENT_STREAM",
+    "PARENT_TOPOLOGY_COUNTS_RECONCILE_EXACTLY",
+    "PULL_REQUEST_MESSAGE_PATTERNS_FROZEN_AND_DETERMINISTIC",
+    "RECOGNIZED_PULL_REQUEST_RECORDS_AND_DISTINCT_IDS_RECONCILE",
+    "UNRECOGNIZED_MERGE_SAMPLE_IS_BOUNDED_AND_HASHED",
+    "DIRECT_GITHUB_REQUEST_BUDGET_CALCULATED_EXACTLY",
+    "AUTHOR_IDENTITIES_AND_TIMESTAMPS_NOT_PARSED_OR_PERSISTED",
+    "ZERO_MARKET_VALUES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS",
+    "PASS_AUTHORIZES_METADATA_TRANSPORT_DECISION_ONLY"
+  ],
+  "decision": "FREEZE_S5_BITCOIN_CORE_HISTORY_COMPLETENESS_CENSUS_PROTOCOL",
+  "next_authorization": "RUN_S5_BITCOIN_CORE_HISTORY_COMPLETENESS_CENSUS_ONCE",
+  "limitations": [
+    "A PASS authorizes only a metadata transport decision, not metadata access.",
+    "Git commit and committer timestamps do not prove first public availability and are not parsed in this census.",
+    "No BTC market value, parameter, return, candidate, signal, or order is permitted.",
+    "No network, fetch, GitHub API call, credential, or repository mutation is permitted.",
+    "No paper, Testnet strategy, production, live, real-capital, or profit authority is created.",
+    "Only commits on master first-parent ancestry through the frozen cutoff are included.",
+    "Pull-request IDs are recognized only from two patterns frozen before message access.",
+    "Raw commit objects contain incidental author and committer headers; the parser must skip rather than decode or persist them.",
+    "Recognized pull-request references do not prove that GitHub retains complete historical metadata.",
+    "Source completeness remains explicitly unadjudicated after this census.",
+    "The exact direct endpoint budget is one request per distinct recognized pull request; list-endpoint pages are only a lower bound.",
+    "This census inventories source structure only and cannot establish predictive edge.",
+    "Unrecognized merges are counted and only the first 25 first lines may be persisted for source diagnosis."
+  ],
+  "protocol_evidence_hash": "2dc3d2a7fb4696881b3c82d024b8e96f420c0676e2d2b0f0f55cc7a0f9c6c0ba"
+}

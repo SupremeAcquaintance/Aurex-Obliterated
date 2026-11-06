@@ -1,0 +1,174 @@
+{
+  "schema_version": "aurex-strategy-factory-readiness-protocol-v1",
+  "protocol_id": "aurex-strategy-factory-readiness-v1",
+  "frozen_at": "2026-08-06T08:11:07.222389Z",
+  "status": "FROZEN_PRE_READINESS_SCORING",
+  "authorization_record": "User instructed Aurex to continue with finesse while remaining grounded in truth, facts, and reality after selecting Readiness Closure as the next stage.",
+  "purpose": "Determine whether Aurex is a reusable, fail-closed strategy research factory before any new strategy mechanism is designed.",
+  "source_scope": [
+    "apps/frontend",
+    "data/evidence",
+    "docs/00_AUREX_MASTER_PLAN.md",
+    "docs/10_PROJECT_CONTROL.md",
+    "src/aurex",
+    "tests"
+  ],
+  "gate_specs": [
+    {
+      "gate_id": "CANONICAL_PROGRAM_TRUTH",
+      "domain": "governance",
+      "requirement": "One canonical checkpoint must state current strategy, authority, and profit truth.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "IMMUTABLE_EVIDENCE_INTEGRITY",
+      "domain": "evidence",
+      "requirement": "Protocols, results, audits, and ledgers must be schema-validated and hash-bound.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "MARKET_DATA_LINEAGE_AND_QUALITY",
+      "domain": "market_data",
+      "requirement": "Historical inputs must have source identity, continuity, quality, and no-synthesis controls.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "CONTAMINATION_AND_PARTITION_ISOLATION",
+      "domain": "research_governance",
+      "requirement": "Consumed periods and retired lineages must be immutable and development/validation/holdout roles isolated.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "PREREGISTRATION_BEFORE_OUTCOMES",
+      "domain": "research_governance",
+      "requirement": "A durable protocol must be committed before any candidate outcome is recorded.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "DETERMINISTIC_REPLAY_AND_RECONCILIATION",
+      "domain": "backtesting",
+      "requirement": "Replays and audits must reproduce trades, metrics, and decisions deterministically.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "UNIVERSAL_COST_STRESS_AND_INFERENCE",
+      "domain": "backtesting",
+      "requirement": "Every future candidate promotion contract must require cost stress, uncertainty, multiplicity, concentration, regime, and chronological evidence.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "CANDIDATE_LIFECYCLE_AND_RETIREMENT",
+      "domain": "strategy_lifecycle",
+      "requirement": "Lifecycle state must be machine-enforced so retired or quarantined strategies cannot be re-enabled or promoted.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "FAIL_CLOSED_PAPER_PROMOTION",
+      "domain": "promotion",
+      "requirement": "Paper execution must require accepted protocol-bound evidence and matching signal provenance.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "AUTHENTICATED_SIGNAL_DELIVERY",
+      "domain": "signals",
+      "requirement": "Webhook authentication, exact-body evidence, idempotency, and one genuine external safe-rejection proof must exist.",
+      "required_for_research": false,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "EVIDENCE_GRADE_PAPER_EXECUTION",
+      "domain": "paper_execution",
+      "requirement": "Paper fills, costs, positions, PnL, and imported evidence must reconcile under explicit assumptions.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "RISK_LIMITS_AND_KILL_SWITCH",
+      "domain": "risk",
+      "requirement": "Position sizing, account/session limits, stale-signal rejection, and durable kill controls must fail closed.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "EXCHANGE_SANDBOX_QUALIFICATION",
+      "domain": "sandbox_execution",
+      "requirement": "Authenticated order, fill, fee, balance, stream, restart, idempotency, and soak evidence must be independently reconciled.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "LIVE_EXECUTION_ISOLATION",
+      "domain": "capital_protection",
+      "requirement": "Production execution must remain unavailable until a separately implemented adapter, evidence gates, and explicit approval pass.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    },
+    {
+      "gate_id": "OPERATOR_READINESS_VISIBILITY",
+      "domain": "operator_ui",
+      "requirement": "The API and UI must expose current platform readiness, blockers, authority, and next action without stale hard-coded strategy claims.",
+      "required_for_research": true,
+      "required_for_paper": true,
+      "required_for_sandbox_strategy_use": true,
+      "required_for_live": true
+    }
+  ],
+  "scoring_rule": "RESEARCH_READY_ONLY_WHEN_EVERY_RESEARCH_REQUIRED_GATE_PASSES",
+  "partial_is_pass": false,
+  "code_presence_is_operational_proof": false,
+  "no_strategy_design_permitted": true,
+  "no_market_outcome_access_permitted": true,
+  "no_paper_campaign_permitted": true,
+  "no_testnet_strategy_order_permitted": true,
+  "no_production_or_live_permitted": true,
+  "real_market_values_opened": 0,
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "limitations": [
+    "Code presence is capability evidence, not proof of profitable operation.",
+    "External TradingView delivery remains unproven until genuine evidence exists.",
+    "No readiness score can create or imply a profitable strategy.",
+    "Production legality, account verification, and real-capital approval remain external blockers.",
+    "The audit may inspect source and existing evidence but may not open a market outcome."
+  ],
+  "builder_contract_hash": "b47bad16390c04f93f30190b880cffd1a4d37432ac5864025cc1c34578985de4",
+  "protocol_evidence_hash": "bf0392dfe2876bbb0a8b798880651ab89af887e1e16dd70e4631c2ddacc73b90"
+}

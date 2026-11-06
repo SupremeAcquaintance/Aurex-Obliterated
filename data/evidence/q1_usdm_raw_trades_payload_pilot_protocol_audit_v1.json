@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-q1-usdm-raw-trades-payload-protocol-audit-v1",
+  "audit_id": "q1-usdm-raw-trades-payload-protocol-audit-v1",
+  "audited_at": "2026-08-07T11:53:50.548381Z",
+  "protocol_file_sha256": "004f16d7f90d53ae3bdab382c817405665870e62e3fe462a1e844808df4a791d",
+  "protocol_evidence_hash": "79e7ec935f31dba86a0173398133ec4abd0acc3f2a559bc5dda0dd3f3fa77451",
+  "builder_contract_hash": "75309d896703f49e962f23b6d3df57b99a0db0835177d28fafd477c69109826b",
+  "auditor_contract_hash": "a8a26b28d15f9c964777d454874f760338b24b3c4e1056b936c3f12d9a6dc1fb",
+  "reconstructed_exactly": true,
+  "archive_target_count": 1,
+  "qualified_spot_reference_count": 1,
+  "network_requests_made": 0,
+  "payload_requests_made": 0,
+  "price_or_quantity_values_parsed": [],
+  "authorizes_one_raw_payload": true,
+  "authorizes_full_acquisition": false,
+  "authorizes_outcomes": false,
+  "authorizes_trading": false,
+  "audit_evidence_hash": "26ec1c8fd400228443beeda4130b17a019428fa8ef22b67c937e122c2b97bbe3"
+}

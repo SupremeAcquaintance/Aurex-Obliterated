@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-s3-cftc-positioning-charter-audit-v1",
+  "audit_id": "s3-cftc-positioning-charter-audit-v1",
+  "audited_at": "2026-08-30T20:25:24.237671Z",
+  "charter_path": "data/evidence/s3_cftc_positioning_charter_v1.json",
+  "charter_file_sha256": "f28766dc4ca19aeaff70b8b3126cbff445a198dbdbfff63889f269c3c2f6f1bf",
+  "charter_evidence_hash": "2cf73ead1b04999c3b5f9f818bb60d18ad96d2041fae2d65d77084aa88e4802a",
+  "builder_contract_hash": "0026c90c955562f11087c8a1cc5be881c84b971aaf003db4c12c1d065726e10e",
+  "auditor_contract_hash": "cffb4dbbab28f2aee045ed829aa98bfaed8916ed2ccd6367bea39674e5166528",
+  "reconstructed_exactly": true,
+  "predecessor_binding_count": 12,
+  "research_source_count": 8,
+  "partition_count": 6,
+  "cftc_position_values_inspected": [],
+  "btc_market_numeric_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "decision": "PASS_S3_CHARTER_RECONSTRUCTED_NO_VALUES_OR_OUTCOMES",
+  "next_authorization": "AUTHORIZE_S3_CFTC_SOURCE_METADATA_AND_POINT_IN_TIME_FEASIBILITY_PROTOCOL_ONLY",
+  "audit_evidence_hash": "f746adc212d5e41f66507a372d60824bdb84609e50b05e797a6116b60d39c90b"
+}

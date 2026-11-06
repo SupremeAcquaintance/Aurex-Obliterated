@@ -1,0 +1,240 @@
+{
+  "schema_version": "aurex-s2-strategy-preregistration-v1",
+  "protocol_id": "s2-strategy-preregistration-v1",
+  "frozen_at": "2026-08-30T14:56:41.339499Z",
+  "status": "FROZEN_BEFORE_S2_BTC_MARKET_VALUE_READ",
+  "builder_contract_hash": "746836a3f82fb0dc9cd27ae47f6d466074b231b99c80721778d63e712bae460d",
+  "measurement_result_file_sha256": "63d683a46ed32a1c2a0c2e9ffcedb0cee211cdab0eff531004a138333ca5f30f",
+  "measurement_result_evidence_hash": "8e4534468b2f471b56e4b7d3391a08f1299b6d0079c8fc4b3ae4880630977f3b",
+  "measurement_audit_file_sha256": "966d0b0413ec60ed7e9e954cda383347e3baaf4b07f5969e707e50afde0b8f8f",
+  "measurement_audit_evidence_hash": "3af9c1b2332932f6064fe9ccc1172b888e14abe53cd529abcd4c0c930e913523",
+  "measurement_dataset_file_sha256": "513237db0a939170efb2113444fdd633a5c5dc1b397b8022b154020cfdf4b327",
+  "measurement_row_manifest_evidence_hash": "aaa30f9a9cda7921101192165e8d7820bdbe1253a2b3c5a7977d83fed27b5479",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s2_development_measurement_execution_addendum_v1.json",
+      "file_sha256": "593318350b911c0da6c34081f7cb91e0f1c0208df2c96a2447e684ce662be9da"
+    },
+    {
+      "path": "data/evidence/s2_development_measurement_execution_audit_v1.json",
+      "file_sha256": "7105ef3e3be52325d8d988531ef76de9103f46c74cdf2a7450d2bfed769bc017"
+    },
+    {
+      "path": "data/evidence/s2_development_measurement_protocol_audit_v1.json",
+      "file_sha256": "c1e921558a9c7ec8a76fd44ca72260547f5b69748aedbf361b332231cc37a8d1"
+    },
+    {
+      "path": "data/evidence/s2_development_measurement_protocol_v1.json",
+      "file_sha256": "71443a7b2fe81ca69ac4bb780613ac98296cfa8cdb44eed10614730a80aacf8b"
+    },
+    {
+      "path": "data/evidence/s2_development_measurement_result_audit_v1.json",
+      "file_sha256": "966d0b0413ec60ed7e9e954cda383347e3baaf4b07f5969e707e50afde0b8f8f"
+    },
+    {
+      "path": "data/evidence/s2_development_measurement_result_v1.json",
+      "file_sha256": "63d683a46ed32a1c2a0c2e9ffcedb0cee211cdab0eff531004a138333ca5f30f"
+    },
+    {
+      "path": "data/evidence/s2_development_measurements_v1.jsonl",
+      "file_sha256": "513237db0a939170efb2113444fdd633a5c5dc1b397b8022b154020cfdf4b327"
+    }
+  ],
+  "measurement_dataset_bytes_hashed_during_freeze": 130754,
+  "measurement_value_rows_parsed_during_freeze": 0,
+  "measurement_row_count": 273,
+  "mechanism_id": "S2-BTC-SETTLEMENT-DEMAND-BREADTH-SPOT",
+  "venue": "BINANCE",
+  "market_type": "SPOT",
+  "symbol": "BTCUSDT",
+  "direction": "LONG_OR_CASH",
+  "effective_leverage": "1",
+  "initial_equity_usd": "100",
+  "source_archive_granularity": "DAILY",
+  "source_kline_interval": "1h",
+  "source_base_url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1h",
+  "source_checksum_required": true,
+  "source_columns": [
+    "open_time",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "close_time",
+    "quote_asset_volume",
+    "trade_count",
+    "taker_buy_base_volume",
+    "taker_buy_quote_volume",
+    "ignore"
+  ],
+  "required_price_date_count": 273,
+  "first_required_price_date": "2017-10-16",
+  "last_required_price_date": "2023-01-02",
+  "required_price_weekday": "MONDAY",
+  "execution_price_rule": "EXACT_1H_KLINE_OPEN_AT_MEASUREMENT_EARLIEST_EXECUTION_TIMESTAMP",
+  "missing_execution_price_policy": "STOP_NO_SUBSTITUTION",
+  "scored_signal_sequence_start": 8,
+  "scored_signal_sequence_end_inclusive": 279,
+  "terminal_price_sequence": 280,
+  "expected_weekly_interval_count": 272,
+  "position_rule": "REBALANCE_ONLY_WHEN_BINARY_POSITION_CHANGES",
+  "base_commission_bps_per_fill": "10",
+  "base_slippage_and_spread_bps_per_fill": "5",
+  "base_total_cost_bps_per_fill": "15",
+  "stress_cost_multiplier": "1.5",
+  "stress_total_cost_bps_per_fill": "22.5",
+  "cost_application": "APPLY_PER_POSITION_CHANGING_FILL_TO_COMPOUNDED_EQUITY",
+  "candidate": {
+    "candidate_id": "S2-C1-SETTLEMENT-DEMAND-BREADTH-PRIMARY",
+    "role": "PRIMARY_DEVELOPMENT_FALSIFICATION",
+    "long_rule": "SETTLEMENT_DEMAND_AGREEMENT_EQ_BOTH_BROADENING",
+    "true_position": "LONG_1X",
+    "false_position": "CASH",
+    "flat_or_mixed_position": "CASH",
+    "shorting_permitted": false,
+    "parameter_count": 0,
+    "parameter_combinations": 1
+  },
+  "candidate_count": 1,
+  "diagnostic_candidates_permitted": false,
+  "outcome_driven_parameter_search_permitted": false,
+  "primary_failure_policy": "STOP_S2_NO_RESCUE_OR_DIAGNOSTIC_PROMOTION",
+  "full_years_for_year_gates": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "bootstrap_method": "STATIONARY_BLOCK_BOOTSTRAP_WEEKLY_RETURNS",
+  "bootstrap_resamples": 10000,
+  "bootstrap_mean_block_weeks": 8,
+  "bootstrap_seed": 2718,
+  "bootstrap_lower_confidence": "0.95",
+  "development_gates": [
+    {
+      "gate_id": "EXACT_WEEKLY_INTERVAL_COUNT",
+      "operator": "EQ",
+      "threshold": "272",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "MINIMUM_POSITION_TRANSITIONS",
+      "operator": "GE",
+      "threshold": "12",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "MINIMUM_LONG_EXPOSURE_FRACTION",
+      "operator": "GE",
+      "threshold": "0.15",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "MAXIMUM_LONG_EXPOSURE_FRACTION",
+      "operator": "LE",
+      "threshold": "0.85",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "BASE_NET_TOTAL_RETURN_POSITIVE",
+      "operator": "GT",
+      "threshold": "0",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "STRESS_NET_TOTAL_RETURN_POSITIVE",
+      "operator": "GT",
+      "threshold": "0",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "BASE_PROFIT_FACTOR",
+      "operator": "GE",
+      "threshold": "1.10",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "STRESS_PROFIT_FACTOR",
+      "operator": "GE",
+      "threshold": "1.00",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "BASE_MAXIMUM_DRAWDOWN",
+      "operator": "LE",
+      "threshold": "0.25",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "STRESS_MAXIMUM_DRAWDOWN",
+      "operator": "LE",
+      "threshold": "0.27",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "POSITIVE_FULL_CALENDAR_YEARS",
+      "operator": "GE",
+      "threshold": "3",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "STRESS_BOOTSTRAP_95PCT_LOWER_MEAN_WEEKLY_RETURN",
+      "operator": "GT",
+      "threshold": "0",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "STRESS_WEEKLY_SHARPE",
+      "operator": "GT",
+      "threshold": "0",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "BASE_CALMAR_RATIO",
+      "operator": "GE",
+      "threshold": "0.50",
+      "scope": "PRIMARY_ONLY"
+    },
+    {
+      "gate_id": "BASE_MAXIMUM_DRAWDOWN_NOT_WORSE_THAN_BUY_AND_HOLD",
+      "operator": "LE",
+      "threshold": "0",
+      "scope": "PRIMARY_ONLY"
+    }
+  ],
+  "historical_screen_start": "2023-01-01",
+  "historical_screen_end_exclusive": "2026-11-07",
+  "historical_screen_remains_sealed": true,
+  "prospective_validation_remains_sealed": true,
+  "future_holdout_remains_sealed": true,
+  "authorizes_protocol_only": true,
+  "authorizes_btc_source_acquisition_now": false,
+  "authorizes_btc_market_value_access": false,
+  "authorizes_return_testing": false,
+  "authorizes_historical_screen_access": false,
+  "authorizes_validation_access": false,
+  "authorizes_holdout_access": false,
+  "authorizes_candidate_outcome": false,
+  "authorizes_pine": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "decision": "FREEZE_S2_SINGLE_CANDIDATE_BEFORE_MARKET_OUTCOMES",
+  "next_authorization": "AUTHORIZE_S2_BTCUSDT_MONDAY_1H_SOURCE_ACQUISITION_PROTOCOL_ONLY",
+  "limitations": [
+    "All development BTC outcomes are outcome-aware and nonqualifying.",
+    "Both-broadening is an economic hypothesis, not evidence of predictive edge.",
+    "Daily Binance archives require one exact Monday open per measurement row.",
+    "Development failure retires S2 without rescue candidates or threshold tuning.",
+    "Historical screen, prospective validation, and future holdout remain sealed.",
+    "One candidate and one parameter combination cannot be expanded after outcomes.",
+    "Source acquisition must be separately frozen and checksum verified.",
+    "The development result cannot qualify paper, Testnet strategy, or live use.",
+    "Trading costs are modeled at 15 bps per fill and stressed at 22.5 bps.",
+    "Zero market values or returns were read while freezing this protocol."
+  ],
+  "protocol_evidence_hash": "5d6cd308ad31cfc22588760c8890b97d49bcce95682bcb563397fe19acfa7a6c"
+}

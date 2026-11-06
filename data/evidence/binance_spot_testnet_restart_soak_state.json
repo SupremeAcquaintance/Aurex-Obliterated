@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "run_id": "aurex-run-ca2c2b4a5b5cfc71",
+  "contract_sha256": "5e5f1f22a014fa087c44a13341f862fe6d64ea441db280fabae677bf2af820d8",
+  "created_at": "2026-07-31T12:42:34.609504Z",
+  "updated_at": "2026-07-31T12:53:05.882571Z",
+  "stage": "PASSED",
+  "process_ids": [
+    656,
+    48024,
+    57776
+  ],
+  "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+  "cancel_client_order_id": "aurex-restart-x-ca2c2b4a5b5cfc71",
+  "blocked_client_order_id": "aurex-kill-proof-ca2c2b4a5b5cfc71",
+  "placement_request_count": 1,
+  "idempotent_resolution_count": 1,
+  "blocked_entry_count": 1,
+  "kill_stop_enabled": true,
+  "kill_stop_reason": "restart recovery",
+  "kill_stop_enabled_at": "2026-07-31T12:42:52.534086Z",
+  "initial_open_orders": [],
+  "restart_open_orders": [
+    {
+      "symbol": "BTCUSDT",
+      "external_order_id": 22377060,
+      "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+      "original_client_order_id": null,
+      "status": "NEW",
+      "side": "BUY",
+      "type": "LIMIT",
+      "price": "57294.00000000",
+      "original_quantity": "0.00009000",
+      "original_quote_order_quantity": "0E-8",
+      "executed_quantity": "0E-8",
+      "cumulative_quote_quantity": "0E-8",
+      "transact_time_ms": null
+    }
+  ],
+  "final_open_orders": [],
+  "initial_account": {
+    "can_trade": true,
+    "account_type": "SPOT",
+    "permissions": [
+      "SPOT"
+    ],
+    "maker_commission": "0E-8",
+    "taker_commission": "0E-8",
+    "balances": {
+      "BTC": {
+        "free": "1.00000000",
+        "locked": "0E-8",
+        "total": "1.00000000"
+      },
+      "USDT": {
+        "free": "9999.99999900",
+        "locked": "0E-8",
+        "total": "9999.99999900"
+      }
+    }
+  },
+  "final_account": {
+    "can_trade": true,
+    "account_type": "SPOT",
+    "permissions": [
+      "SPOT"
+    ],
+    "maker_commission": "0E-8",
+    "taker_commission": "0E-8",
+    "balances": {
+      "BTC": {
+        "free": "1.00000000",
+        "locked": "0E-8",
+        "total": "1.00000000"
+      },
+      "USDT": {
+        "free": "9999.99999900",
+        "locked": "0E-8",
+        "total": "9999.99999900"
+      }
+    }
+  },
+  "account_fingerprint": "3b21bc484855d9cf86b74e6945ed9d1712d9f5773b81637bd37ef7aaf05295a6",
+  "placed_order": {
+    "symbol": "BTCUSDT",
+    "external_order_id": 22377060,
+    "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+    "original_client_order_id": null,
+    "status": "NEW",
+    "side": "BUY",
+    "type": "LIMIT",
+    "price": "57294.00000000",
+    "original_quantity": "0.00009000",
+    "original_quote_order_quantity": "0E-8",
+    "executed_quantity": "0E-8",
+    "cumulative_quote_quantity": "0E-8",
+    "transact_time_ms": 1785501765181
+  },
+  "restart_resolved_order": {
+    "symbol": "BTCUSDT",
+    "external_order_id": 22377060,
+    "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+    "original_client_order_id": null,
+    "status": "NEW",
+    "side": "BUY",
+    "type": "LIMIT",
+    "price": "57294.00000000",
+    "original_quantity": "0.00009000",
+    "original_quote_order_quantity": "0E-8",
+    "executed_quantity": "0E-8",
+    "cumulative_quote_quantity": "0E-8",
+    "transact_time_ms": null
+  },
+  "cancelled_order": {
+    "symbol": "BTCUSDT",
+    "external_order_id": 22377060,
+    "client_order_id": "aurex-restart-x-ca2c2b4a5b5cfc71",
+    "original_client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+    "status": "CANCELED",
+    "side": "BUY",
+    "type": "LIMIT",
+    "price": "57294.00000000",
+    "original_quantity": "0.00009000",
+    "original_quote_order_quantity": "0E-8",
+    "executed_quantity": "0E-8",
+    "cumulative_quote_quantity": "0E-8",
+    "transact_time_ms": 1785501773221
+  },
+  "final_order": {
+    "symbol": "BTCUSDT",
+    "external_order_id": 22377060,
+    "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+    "original_client_order_id": null,
+    "status": "CANCELED",
+    "side": "BUY",
+    "type": "LIMIT",
+    "price": "57294.00000000",
+    "original_quantity": "0.00009000",
+    "original_quote_order_quantity": "0E-8",
+    "executed_quantity": "0E-8",
+    "cumulative_quote_quantity": "0E-8",
+    "transact_time_ms": null
+  },
+  "trades": [],
+  "websocket_subscription_ids": [
+    0,
+    0,
+    0
+  ],
+  "websocket_reconnect_count": 2,
+  "rest_heartbeat_count": 120,
+  "reconciliation_check_count": 21,
+  "soak_started_at": "2026-07-31T12:43:02.089684Z",
+  "soak_completed_at": "2026-07-31T12:53:05.882571Z",
+  "soak_elapsed_seconds": 602.765999999945,
+  "exchange_reset_detected": false,
+  "state_invalidated": false,
+  "failed_gates": [],
+  "credentials_stored": false,
+  "production_authority": false,
+  "live_authority": false,
+  "real_capital": false,
+  "state_sha256": "d89434b8dfa754624beb814f0d139173e743816e37a5b960b32960bb9b92a853"
+}

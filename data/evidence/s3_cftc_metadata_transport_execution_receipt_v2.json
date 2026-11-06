@@ -1,0 +1,74 @@
+{
+  "schema_version": "aurex-s3-cftc-metadata-transport-execution-receipt-v2",
+  "receipt_id": "s3-cftc-metadata-transport-execution-receipt-v2",
+  "recorded_at": "2026-08-31T11:28:27.604680Z",
+  "recorder_contract_hash": "f6efcd7659b84b9fbadb1c3b7717a46a3919462b70f39d4997d56f75b5e89f35",
+  "runner_contract_hash": "217f73608e4f861de4e9fc0ef54480dce31fb34f0c3e639727b8fca6cb317abc",
+  "protocol_evidence_hash": "1d9e2b672b754c3e6d7296fc3c75fd8d7ab4f49e445b06383ec4e1722271c15a",
+  "prior_result_evidence_hash": "75700f67e97577d7680b97b6bedf28539c9815eb1bf424764d30094b73fe53d8",
+  "failure_audit_evidence_hash": "704373d76fc38d794ef43b96b6ad9d13b3839ec65b11a2394e584ceceb34cef5",
+  "transport_amendment_evidence_hash": "dc3b2acdf29878250a28edb5f951b04b09e78e5f96110798f28f187fe8a2dda9",
+  "transport_amendment_audit_evidence_hash": "dcd641b6febf4d93546f79f8113a8d5c3409d0b5984c6faf150f86913e30ffc6",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s3_cftc_metadata_transport_amendment_audit_v2.json",
+      "file_sha256": "fe8e56ae2023e501ff7ee3a56659951a2e372767384244e6c28d6435ea3d5577"
+    },
+    {
+      "path": "data/evidence/s3_cftc_metadata_transport_amendment_v2.json",
+      "file_sha256": "aaaf003466448e643266634ec5592b164d58e402f405b5fd3e65d360b94e0391"
+    },
+    {
+      "path": "data/evidence/s3_cftc_source_feasibility_protocol_audit_v1.json",
+      "file_sha256": "f0f697b97db05f944ad0013884c35f35ed117ecaff433873534bc6f384320cc7"
+    },
+    {
+      "path": "data/evidence/s3_cftc_source_feasibility_protocol_v1.json",
+      "file_sha256": "ad24ef243e544321ac5eee2e8dc253303ccc4db303cdda5fc33f8677b4b2da6d"
+    },
+    {
+      "path": "data/evidence/s3_cftc_source_feasibility_result_v1.json",
+      "file_sha256": "f6e469a72869cb9019555d194fa62a5d1a62c2c9a47ab3c540f114d08cce33a9"
+    },
+    {
+      "path": "data/evidence/s3_cftc_source_transport_failure_audit_v1.json",
+      "file_sha256": "b4cf0eba9bbdb5f4e94484c363940d3139b897b644eea4262a7d27c366a39885"
+    }
+  ],
+  "authorized_execution_count": 1,
+  "observed_execution_count": 1,
+  "maximum_metadata_requests": 3,
+  "process_exit_code": 1,
+  "terminal_message": "S3 transport v2 did not receive all three responses; no v2 result was written",
+  "result_artifact_path": "data/evidence/s3_cftc_source_feasibility_result_v2.json",
+  "result_artifact_created": false,
+  "expected_response_paths": [
+    "data/evidence/s3_cftc_metadata_v2/cot_faq.html",
+    "data/evidence/s3_cftc_metadata_v2/historical_special_announcements.html",
+    "data/evidence/s3_cftc_metadata_v2/historical_viewable_index.html"
+  ],
+  "persisted_response_artifact_count": 0,
+  "successful_response_count_observed": "UNKNOWN_NOT_PERSISTED",
+  "all_required_responses_received": false,
+  "rerun_authority_exhausted": true,
+  "cftc_target_position_rows_parsed": 0,
+  "cftc_target_position_values_read": 0,
+  "btc_market_values_read": 0,
+  "parameters_evaluated": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "production_authority": false,
+  "live_authority": false,
+  "decision": "RETIRE_S3_SOURCE_FEASIBILITY_NOT_ESTABLISHED_WITHIN_FROZEN_PROTOCOL",
+  "next_authorization": "FREEZE_AND_AUDIT_DISTINCT_S4_MECHANISM_CHARTER_ONLY",
+  "limitations": [
+    "No CFTC position value, BTC value, return, or order was created.",
+    "No response body or v2 feasibility result was persisted.",
+    "S3 source feasibility was not established under the frozen protocol.",
+    "The exact count of successful in-memory responses was not persisted.",
+    "The one authorized transport rerun is exhausted and may not repeat.",
+    "The runner proved only that fewer than all three responses arrived.",
+    "This retirement is not evidence of edge, profitability, or source impossibility."
+  ],
+  "receipt_evidence_hash": "166e3039f51e95046ab2030eeee383e5d9cdfaa046e9fffe366b636dfc5e7d23"
+}

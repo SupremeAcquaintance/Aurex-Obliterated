@@ -1,0 +1,57 @@
+{
+  "schema_version": "aurex-s5-targeted-correction-execution-contract-v1",
+  "contract_id": "s5-targeted-correction-execution-contract-v1",
+  "frozen_at": "2026-09-04T14:47:06.999059Z",
+  "status": "FROZEN_EXECUTION_CONTRACT_ZERO_REQUESTS",
+  "builder_contract_hash": "cb7af9fd84c5bcdbbebad3384271c231d7445d750c6ccacb4028748b2a17d420",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_audit_v1.json",
+      "file_sha256": "d7a72ec4fd8713d2eabf62324b5b599217d251bc61b24dab95bbd3750363988d"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_v1.json",
+      "file_sha256": "fc2fd558ecadd1264bc345be739869a3ecc2f277a776b9cb268da5a9733da0e6"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "fdae1956ce837f9761b754e5025aae20d06d948ebacd7604fa2823164582c586",
+  "implementation_bindings": [
+    {
+      "path": "scripts/freeze_s5_bitcoin_core_github_targeted_correction_execution.py",
+      "file_sha256": "03bf1013b5dae597356205d2db87c321962ade03246cfa3d5a4554eac2e888a7"
+    },
+    {
+      "path": "scripts/run_s5_bitcoin_core_github_targeted_correction.py",
+      "file_sha256": "c77375ceed12f10a568de7f52f9d059d7fa2b6ce847f4128a6f178cd85d60c4d"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_github_targeted_correction_execution.py",
+      "file_sha256": "b365427e12dab55eae96be6f24039539f0ce20853e20067878fe9f13c714c3ea"
+    }
+  ],
+  "implementation_binding_manifest_evidence_hash": "cb7af9fd84c5bcdbbebad3384271c231d7445d750c6ccacb4028748b2a17d420",
+  "protocol_file_sha256": "fc2fd558ecadd1264bc345be739869a3ecc2f277a776b9cb268da5a9733da0e6",
+  "protocol_evidence_hash": "c3861c112d41d233ac28f7751eab5fae347b075c9984d41792ee54495ce0df8f",
+  "protocol_audit_file_sha256": "d7a72ec4fd8713d2eabf62324b5b599217d251bc61b24dab95bbd3750363988d",
+  "protocol_audit_evidence_hash": "b77bdc2fa9bff2a30bf4ddd9fd6423e98f73ca626325b067bb6b2af8405249bb",
+  "target_manifest_evidence_hash": "05c335cafec64026bf2ef7a086eb069ad3cdce6782489309536d9934a71b1ea7",
+  "target_count": 194,
+  "maximum_github_request_count": 194,
+  "maximum_local_git_process_count": 2,
+  "crash_marker_required_before_request": true,
+  "incomplete_attempt_retry_forbidden": true,
+  "completed_response_resume_permitted": true,
+  "credentials_permitted": false,
+  "environment_proxy_permitted": false,
+  "redirects_permitted": false,
+  "concurrency_permitted": false,
+  "mapping_rule_change_permitted": false,
+  "accepted_event_creation_permitted": false,
+  "market_values_permitted": false,
+  "returns_permitted": false,
+  "orders_permitted": false,
+  "result_path": "data/evidence/s5_bitcoin_core_github_targeted_correction_result_v1.json",
+  "runner_contract_hash": "a78b5de5ba416eca2beff06c0312dd4d9f3bcc1bc29d287dc50c8ef78a8f0951",
+  "next_authorization": "RUN_S5_GITHUB_TARGETED_COMPLETENESS_ACQUISITION",
+  "contract_evidence_hash": "b9e28bf45138dfeec22c954e616fdf1da0b626b6a0a40715a40ac1e8736078fe"
+}

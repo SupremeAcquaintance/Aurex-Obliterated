@@ -1,0 +1,2299 @@
+{
+  "schema_version": "aurex-s5-targeted-completeness-correction-protocol-v1",
+  "protocol_id": "s5-targeted-completeness-correction-protocol-v1",
+  "frozen_at": "2026-09-04T14:25:32.698341Z",
+  "status": "FROZEN_ACQUISITION_ONLY_ZERO_TARGET_ACCESS",
+  "builder_contract_hash": "7883b18ab500f7f38cad880a6e4e06e0efb392fe6c1073af301cc4890b09e4d5",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_v1.json",
+      "file_sha256": "2a3c084d57223628228e895f584bc4cb0f7bdf85e52155c4257b9c6a22e79330"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v4.json",
+      "file_sha256": "1cc2d4b07b643d81e93999ba9f2ce424f07ec185367cd9469474ecc47e85d40b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_failure_adjudication_protocol_audit_v1.json",
+      "file_sha256": "b15c75d43e9b1c5496b875ca6fecd9357095005b532fcb02adb64c17765d8554"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_failure_adjudication_protocol_v1.json",
+      "file_sha256": "0ffaa702210c77362a292f83a36c6915aed9c8c79de62baa5a914d87cde3353b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_failure_adjudication_result_audit_v1.json",
+      "file_sha256": "76c57d50691d311b1d1436e281be40d75e595ad5c7d7897b8aebe5e032cd6c37"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_failure_adjudication_result_v1.json",
+      "file_sha256": "a5499b9e0e97b67d33fdcb6611c1147090ef44288d1c2ad6042225dd02d6449e"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_protocol_v1.json",
+      "file_sha256": "4e81bba7146bea45af5bfbc8b04b9d79f422219be0733672da41178ba69b663c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_result_v1.json",
+      "file_sha256": "cd9adaac46af2b033cf03e4d14138db25d4a016ceb7c7cbb3f7502d4a61e85cc"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_audit_v1.json",
+      "file_sha256": "0151d680208341673edf49bf0c5b4bf573e6bedfd1546a990da966b399518b1c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_v1.json",
+      "file_sha256": "518ae10d31085a5aa79498b0552cfa7b55334d05c609471a6dad47b2fb321740"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "02655d858781dce1e3e4db5eb1ad667c68207cfd6acbe1f1ec364f681584d10e",
+  "normalization_protocol_evidence_hash": "2e634950d959e05bc3e5baf98bbc2f6dd3ead779a7c4406150d267a7d3099dfb",
+  "failed_normalization_result_evidence_hash": "02f461aeb23e00479a9044e7017daa4eaa569f296cd69d8fdbc7dd7e6e6c3a89",
+  "adjudication_protocol_evidence_hash": "f067e7e143096e2f754e26e466edc2936a24251024713f6767cb4677699bb451",
+  "adjudication_protocol_audit_evidence_hash": "f8f362463b34cf10d17d1516ed89c2515b940b3de48e93dabc32da038f62eb7e",
+  "adjudication_result_evidence_hash": "3c4cc196661cf7356ec6e54e752c850fd79f98f113180f7e6e23b388bab4acd5",
+  "adjudication_result_audit_evidence_hash": "f5d2a5016f4e43285d67c93935768b0b7e251be0437bc0c92afd9a1150f54d0f",
+  "census_result_evidence_hash": "6596e9e8d4d1c360247642373d387ddd33f08058423ddf30f1f8817f2cc977dd",
+  "census_result_audit_evidence_hash": "829eb1701cac6552f38578fefbd649c54d2267c57b5cec272a5a559c9ab369f0",
+  "bulk_protocol_evidence_hash": "ee1564712af978eddd0081fe7ede7fb19dd275fc2f04e7a19306160f8b3174f5",
+  "bulk_result_evidence_hash": "3c2bd020ee115e0d28e75fc80c977ffef2a4bad8ac6ad4cd5f4219380a25e082",
+  "recognized_gap_target_count": 83,
+  "unmatched_pull_target_count": 112,
+  "overlap_target_count": 1,
+  "unique_target_count": 194,
+  "target_manifest": [
+    {
+      "sequence": 1,
+      "pull_number": 10,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 2,
+      "pull_number": 11,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 3,
+      "pull_number": 21,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 4,
+      "pull_number": 24,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 5,
+      "pull_number": 27,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 6,
+      "pull_number": 30,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 7,
+      "pull_number": 32,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 8,
+      "pull_number": 42,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 9,
+      "pull_number": 43,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 10,
+      "pull_number": 52,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 11,
+      "pull_number": 57,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 12,
+      "pull_number": 62,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 13,
+      "pull_number": 72,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 14,
+      "pull_number": 83,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 15,
+      "pull_number": 95,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 16,
+      "pull_number": 98,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 17,
+      "pull_number": 106,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 18,
+      "pull_number": 114,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 19,
+      "pull_number": 155,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 20,
+      "pull_number": 176,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 21,
+      "pull_number": 221,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 22,
+      "pull_number": 222,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 23,
+      "pull_number": 225,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 24,
+      "pull_number": 253,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 25,
+      "pull_number": 261,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 26,
+      "pull_number": 276,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 27,
+      "pull_number": 277,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 28,
+      "pull_number": 278,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 29,
+      "pull_number": 484,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 30,
+      "pull_number": 488,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 31,
+      "pull_number": 503,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 32,
+      "pull_number": 523,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 33,
+      "pull_number": 569,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 34,
+      "pull_number": 573,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 35,
+      "pull_number": 575,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 36,
+      "pull_number": 604,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 37,
+      "pull_number": 663,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 38,
+      "pull_number": 686,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 39,
+      "pull_number": 698,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 40,
+      "pull_number": 720,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 41,
+      "pull_number": 726,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 42,
+      "pull_number": 748,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 43,
+      "pull_number": 764,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 44,
+      "pull_number": 765,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 45,
+      "pull_number": 778,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 46,
+      "pull_number": 790,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 47,
+      "pull_number": 792,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 48,
+      "pull_number": 803,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 49,
+      "pull_number": 804,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 50,
+      "pull_number": 847,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 51,
+      "pull_number": 892,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 52,
+      "pull_number": 899,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 53,
+      "pull_number": 911,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 54,
+      "pull_number": 969,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 55,
+      "pull_number": 970,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 56,
+      "pull_number": 990,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 57,
+      "pull_number": 991,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 58,
+      "pull_number": 992,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 59,
+      "pull_number": 1008,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 60,
+      "pull_number": 1009,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 61,
+      "pull_number": 1010,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 62,
+      "pull_number": 1141,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 63,
+      "pull_number": 1292,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 64,
+      "pull_number": 1300,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 65,
+      "pull_number": 1378,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 66,
+      "pull_number": 1456,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 67,
+      "pull_number": 1515,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 68,
+      "pull_number": 1525,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 69,
+      "pull_number": 1529,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 70,
+      "pull_number": 1590,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 71,
+      "pull_number": 1606,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 72,
+      "pull_number": 1634,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 73,
+      "pull_number": 1792,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 74,
+      "pull_number": 1812,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 75,
+      "pull_number": 1829,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 76,
+      "pull_number": 1962,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 77,
+      "pull_number": 1995,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 78,
+      "pull_number": 2117,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 79,
+      "pull_number": 2198,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 80,
+      "pull_number": 2235,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 81,
+      "pull_number": 3247,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 82,
+      "pull_number": 4234,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 83,
+      "pull_number": 4286,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 84,
+      "pull_number": 4407,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 85,
+      "pull_number": 4528,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 86,
+      "pull_number": 5103,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 87,
+      "pull_number": 5316,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 88,
+      "pull_number": 5848,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 89,
+      "pull_number": 5913,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 90,
+      "pull_number": 6089,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 91,
+      "pull_number": 6678,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 92,
+      "pull_number": 6687,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 93,
+      "pull_number": 6828,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 94,
+      "pull_number": 7321,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 95,
+      "pull_number": 8144,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 96,
+      "pull_number": 8296,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 97,
+      "pull_number": 9292,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 98,
+      "pull_number": 9589,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 99,
+      "pull_number": 9770,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 100,
+      "pull_number": 12026,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 101,
+      "pull_number": 13046,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 102,
+      "pull_number": 13710,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 103,
+      "pull_number": 14597,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 104,
+      "pull_number": 14925,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 105,
+      "pull_number": 16261,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 106,
+      "pull_number": 18568,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "bfd910cae4e5f8ae9a6ec9dea02a9c28d023b8cb",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 107,
+      "pull_number": 20233,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "803ef70fd9f65ef800567ff9456fac525bc3e3c2",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 108,
+      "pull_number": 20354,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "531c2b7c04898f5a2097f44e8c12bfb2f53aaf9b",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 109,
+      "pull_number": 21329,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "722776c0fd218cc41ccb741453c58190c71e64f9",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 110,
+      "pull_number": 21943,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "64059b78f59e45cc4200ca76d0af8c6dff8a20d4",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 111,
+      "pull_number": 22226,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "6401de0133e32a641ed9e78a85b3aa337c75d190",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 112,
+      "pull_number": 22340,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "4e1de1fc59057c5f6fe15a02acd922e158e91292",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 113,
+      "pull_number": 22349,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "8cdf91735f2bdc55577d84a9915f5920ce23b00a",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 114,
+      "pull_number": 22469,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "7fc9a45f47bf69ae8768ce3a8acd4c8216e93fc2",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 115,
+      "pull_number": 22597,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "31a481be297bd76e6e78c6d03e8e7ff2d6fbcd38",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 116,
+      "pull_number": 22619,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "f4328ebef52f51a5ee45cc42815c91ccd28b0669",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 117,
+      "pull_number": 22627,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "f3dbd1c2b2bc2b8edae657f79a2d31820b428e86",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 118,
+      "pull_number": 22684,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "b935abb9eb2eeaceb5621e110e1889c2ce1b7734",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 119,
+      "pull_number": 22688,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "fdd80b0a53b4af0b29cb6e03118e2456d053a757",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 120,
+      "pull_number": 22872,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "4a8707741de2a8646d66b73d88b753fc9f4d9772",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 121,
+      "pull_number": 22952,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "ec7ec69c7bcaea2b301991066a06b183b50ebe11",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 122,
+      "pull_number": 22987,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "de2af19dc8e8c848afbc4b43b9b4092fe263364f",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 123,
+      "pull_number": 22994,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "87780dfee8c82ea09b84e74d331db2ad6f9e75ab",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 124,
+      "pull_number": 22995,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "7a999879d2f6961579fb1057566cbb76232c644f",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 125,
+      "pull_number": 23064,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "419afa93419e6840f78cb94b4a39d826eb10e139",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 126,
+      "pull_number": 23097,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "efa227f5df5f5a9669dec5f1d574cf22d3c0903f",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 127,
+      "pull_number": 23115,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "829c441af2f06c2ac33423d4385f0d99a68e99c0",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 128,
+      "pull_number": 23123,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "571bb94dfb5047c9be8fcbae5dae71de7256b86c",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 129,
+      "pull_number": 23147,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "33b0696d3106646d5251ceebbeaee53bc8765e3a",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 130,
+      "pull_number": 23175,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "caf8b26b52bf38289899dfa1ca15aa9c9d140971",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 131,
+      "pull_number": 23371,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "2539980e1d74a637be5bcadb566263f903adffd1",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 132,
+      "pull_number": 23394,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "5ccab7187b35142e03c15dd55390e45b3d233c52",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 133,
+      "pull_number": 23409,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "aecc08f62eab8f4202f8730890846e5669453468",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 134,
+      "pull_number": 23466,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "c702d1fefddcbd8c6465d3dc330fde235d03337e",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 135,
+      "pull_number": 23489,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "c9b63ab61e4c0c94430064c9025c040f2abaeefc",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 136,
+      "pull_number": 23492,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "c9dd5c8d6e59e27af98e99d2844d6ead8eec3162",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 137,
+      "pull_number": 23594,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "111c3e06b35b7867f2e0f740e988f648ac6c325d",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 138,
+      "pull_number": 23636,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "26a1147ce56083d7aa820ac115c16b01e47d911c",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 139,
+      "pull_number": 23642,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "0bd7ca9a036ea33397b04cade07d9acc1c31cd30",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 140,
+      "pull_number": 23647,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "8b4d53e4d6e6a4b6e65a43a78b31d9d091be5b0e",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 141,
+      "pull_number": 23652,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "0ee9a00f90e81a6978b30bdb250a37cbfa6da022",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 142,
+      "pull_number": 24051,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "4766cd198172225c66a0adb01f6cb9513c3d0e66",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 143,
+      "pull_number": 24796,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "38d3d0bfc4cae6b31c5ac30f9b0da458bd9a9e57",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 144,
+      "pull_number": 25001,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "132d5f8c2f2397a4600a42203f413dafdb6bcc37",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 145,
+      "pull_number": 25166,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "ABSENT_FROM_MASTER_SCOPED_COHORT",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "345d860f38188b1bb6dfb95cb47f8b4057455669",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 146,
+      "pull_number": 25248,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "2a7c9984dbc1cd4058b7a43896b10749ed46edfe",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 147,
+      "pull_number": 25296,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "79e007d1d60b8d600479d787667d91e05a492ab4",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 148,
+      "pull_number": 25409,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "ABSENT_FROM_MASTER_SCOPED_COHORT",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "a09033e22c4f072c86a1885dd476f3059e5416d1",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 149,
+      "pull_number": 25615,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "ABSENT_FROM_MASTER_SCOPED_COHORT",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "55b76ac1c0a4da9fe7fa1f2ec6ef558fc8f195ae",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 150,
+      "pull_number": 25882,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 151,
+      "pull_number": 25891,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 152,
+      "pull_number": 25932,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "7bb07bf8bd8e240562714f9cc4b7696868cb6c26",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 153,
+      "pull_number": 26081,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 154,
+      "pull_number": 26084,
+      "target_reasons": [
+        "RECOGNIZED_GAP",
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": "AMBIGUOUS_HEAD_SHA",
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": "718304d222671f98d2335cd9b90a3022f62d7b21",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 155,
+      "pull_number": 26265,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "f3bc1a72825fe2b51f4bc20e004cef464f05b965",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 156,
+      "pull_number": 26294,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "27e76afe24c390cc091e246bdbc691bdf5bb090c",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 157,
+      "pull_number": 26328,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "329d7e379d09fa5db9c057baa0e100d2b174427d",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 158,
+      "pull_number": 26349,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "551c8e9526d2502f857e1ef6348c7f1380f37443",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 159,
+      "pull_number": 26373,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "d08b63baa020651d3cc5597c85d5316cb39aaf59",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 160,
+      "pull_number": 26387,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "43e813cab266eef42e622519836f171f6a18d426",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 161,
+      "pull_number": 26402,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "2856dee808620a6518e86cd333eebdbf1a7e1344",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 162,
+      "pull_number": 26437,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "bf0cb4399061c6827bd5d7428a146010102d7ab1",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 163,
+      "pull_number": 26515,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "3d974960d38b8effcf9c7f84965b8f9cc681d5a1",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 164,
+      "pull_number": 26598,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "296e88225096125b08665b97715c5b8ebb1d28ec",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 165,
+      "pull_number": 26618,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "1aedc3b6c81ba5ecf96749be0fb59d873bfd6d49",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 166,
+      "pull_number": 26638,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "8456bfac6ba2dcca42a03d3374c12e1a3f009106",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 167,
+      "pull_number": 26702,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "1e6b384d592b2d1e036750dbbc62308483312225",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 168,
+      "pull_number": 26723,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "8ab19237e11ee510a7941a4ab429471b29cccd69",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 169,
+      "pull_number": 26730,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "b168b71a5d30c1441737cace281ffa3cce0357fc",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 170,
+      "pull_number": 26758,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "9887fc789886b356efc6818783cabaab2b14481f",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 171,
+      "pull_number": 26759,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "4654506c3014cdfad2647108e6bb3efc27f6dd96",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 172,
+      "pull_number": 26805,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "adc41cf3b22f8f168e88ce3ad5f27c1130f12beb",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 173,
+      "pull_number": 26809,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "cabeae43ea6e385c8352aeb13adc0dbe9bddc9c6",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 174,
+      "pull_number": 26818,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "61f35159ffada45dddca0c229b4cdf9de4f7949d",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 175,
+      "pull_number": 26822,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "39363a4b945114f5e4718f75098f3036e8fe6a1d",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 176,
+      "pull_number": 26823,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "2cfe37962343a1e28642acc0f9f17e04e221dcfd",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 177,
+      "pull_number": 26824,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "8915e4d9f5b7e360f70d2f67baa99cca451a10da",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 178,
+      "pull_number": 26827,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "fcd1a57be0609e680f5269cf99aacc60a03f71bd",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 179,
+      "pull_number": 26838,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "dbca00ef76e5a004555dbd4cdc9209492f02e358",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 180,
+      "pull_number": 26851,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "0e81d119e09dba13dddb42506855ba8eba761238",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 181,
+      "pull_number": 26856,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "1c9457bc8b067b5052eaa10342cf9c0f13024cde",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 182,
+      "pull_number": 26864,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "b264410e012a61b103e1a03c43df4e17b9b75452",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 183,
+      "pull_number": 27477,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "467fa8943801911c233cb96d45282b1de10bfa90",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 184,
+      "pull_number": 27719,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "ABSENT_FROM_MASTER_SCOPED_COHORT",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "9e54dde04ccd490c6719f5d975ed49a75242611b",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 185,
+      "pull_number": 29052,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "ABSENT_FROM_MASTER_SCOPED_COHORT",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "7a283836eb78d76452fcc586275626df010f3cd9",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 186,
+      "pull_number": 29495,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "ae4165f7bc395ffdfc0ff46371d539d29c54dfce",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 187,
+      "pull_number": 29518,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "d72cf823d4f0a79dd8720f9b81996ef4a703be40",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 188,
+      "pull_number": 29827,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "PRESENT_NOT_ACCEPTED_AT_CUTOFF",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "67c0d93982ad214f5e0c9509e9dc3d6d792ad97c",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 189,
+      "pull_number": 30556,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "ABSENT_FROM_MASTER_SCOPED_COHORT",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "66e82dc90c598c9c42ff980693ef5367a845e1d0",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 190,
+      "pull_number": 30763,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "ABSENT_FROM_MASTER_SCOPED_COHORT",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "5abb9b1af49be9024f95fa2f777285c531785d85",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 191,
+      "pull_number": 31007,
+      "target_reasons": [
+        "RECOGNIZED_GAP"
+      ],
+      "recognized_failure_category": "ABSENT_FROM_MASTER_SCOPED_COHORT",
+      "unmatched_failure_category": null,
+      "census_merge_commit_sha": "6a370435526875a441001be8c44c9b94a2361c8c",
+      "census_pattern_id": "BITCOIN_CORE_MAINTAINER_MERGE"
+    },
+    {
+      "sequence": 192,
+      "pull_number": 31547,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 193,
+      "pull_number": 35808,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    },
+    {
+      "sequence": 194,
+      "pull_number": 36048,
+      "target_reasons": [
+        "UNMATCHED_ACCEPTED_PULL"
+      ],
+      "recognized_failure_category": null,
+      "unmatched_failure_category": "MERGE_COMMIT_SHA_MISSING_OR_INVALID",
+      "census_merge_commit_sha": null,
+      "census_pattern_id": null
+    }
+  ],
+  "target_manifest_evidence_hash": "05c335cafec64026bf2ef7a086eb069ad3cdce6782489309536d9934a71b1ea7",
+  "repository_owner": "bitcoin",
+  "repository_name": "bitcoin",
+  "direct_pull_endpoint_template": "https://api.github.com/repos/bitcoin/bitcoin/pulls/{pull_number}",
+  "method": "GET",
+  "accept_header": "application/vnd.github+json",
+  "api_version_header": "2022-11-28",
+  "user_agent": "Aurex-Evidence-Research/1.0",
+  "acceptable_http_statuses": [
+    200,
+    404
+  ],
+  "required_200_fields": [
+    "number",
+    "node_id",
+    "state",
+    "created_at",
+    "updated_at",
+    "closed_at",
+    "merged_at",
+    "merged",
+    "merge_commit_sha",
+    "head.sha",
+    "base.ref",
+    "base.sha",
+    "user"
+  ],
+  "raw_response_directory": "data/evidence/s5_github_targeted_pull_responses_v1",
+  "response_file_pattern": "pull_{pull_number:06d}.json",
+  "result_path": "data/evidence/s5_bitcoin_core_github_targeted_correction_result_v1.json",
+  "full_graph_command": "git rev-list --parents <source_cutoff_commit>",
+  "commit_message_command": "git cat-file --batch",
+  "exact_message_target_count": 83,
+  "maximum_first_line_characters_persisted": 300,
+  "maximum_local_git_process_count": 2,
+  "maximum_github_request_count": 194,
+  "maximum_response_bytes_per_target": 2097152,
+  "maximum_total_response_bytes": 268435456,
+  "maximum_elapsed_seconds": 21600,
+  "maximum_run_count": 1,
+  "resume_valid_responses_permitted": true,
+  "result_required_on_every_normal_exit": true,
+  "rerun_after_result_forbidden": true,
+  "credentials_permitted": false,
+  "authorization_header_permitted": false,
+  "environment_proxy_permitted": false,
+  "redirects_permitted": false,
+  "concurrency_permitted": false,
+  "network_access_permitted_during_run": true,
+  "repository_fetch_permitted": false,
+  "mapping_rule_change_permitted": false,
+  "accepted_event_creation_permitted": false,
+  "btc_market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "candidates_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "target_responses_opened_during_freeze": 0,
+  "local_git_processes_executed_during_freeze": 0,
+  "github_requests_executed_during_freeze": 0,
+  "btc_market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "required_gate_ids": [
+    "NORMALIZATION_STOP_AND_FAILURE_ADJUDICATION_LINEAGE_BOUND",
+    "EXACT_83_RECOGNIZED_112_UNMATCHED_1_OVERLAP_194_UNION_TARGETS",
+    "TARGET_PULL_IDS_AND_REASONS_FROZEN_BEFORE_DIRECT_ACCESS",
+    "ONE_CREDENTIAL_FREE_DIRECT_PULL_REQUEST_PER_TARGET_MAXIMUM",
+    "HTTP_200_AND_404_RESPONSES_PRESERVED_AS_EVIDENCE",
+    "DIRECT_PULL_RESPONSE_SCHEMA_AND_IDENTITY_VALIDATED",
+    "EXACT_83_CENSUS_MERGE_COMMIT_FIRST_LINES_ONLY",
+    "FULL_REACHABILITY_GRAPH_AND_TARGET_OBJECT_ACCESS_BOUNDED_TO_TWO_GIT_PROCESSES",
+    "NO_MAPPING_OR_COMPLETENESS_RULE_CHANGES_DURING_ACQUISITION",
+    "RAW_RESPONSE_AND_LOCAL_DIAGNOSTIC_MANIFESTS_RECONSTRUCTABLE",
+    "ZERO_MARKET_VALUES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS"
+  ],
+  "decision": "FREEZE_S5_GITHUB_TARGETED_COMPLETENESS_CORRECTION_PROTOCOL",
+  "next_authorization": "RUN_S5_GITHUB_TARGETED_COMPLETENESS_ACQUISITION",
+  "limitations": [
+    "A GitHub 404 is preserved as source evidence and is not retried or guessed.",
+    "Any corrected normalization requires a separately frozen and audited protocol.",
+    "Current GitHub metadata can reflect changes made after the historical pull event.",
+    "Each target permits at most one credential-free GitHub request across the complete run.",
+    "Full Git reachability proves local ancestry only, not historical public availability.",
+    "GitHub merge_commit_sha semantics vary across merge, squash, and rebase methods.",
+    "No BTC market value, return, parameter, strategy candidate, or order is authorized.",
+    "No mapping rule or completeness threshold may be changed after responses are opened.",
+    "No new accepted event or causal timestamp may be created in this stage.",
+    "The 83 census message first lines are diagnostic evidence and cannot change a mapping.",
+    "The original normalization STOP remains binding throughout acquisition.",
+    "The target set is limited to the 194 pull numbers fixed by the adjudication result.",
+    "This protocol authorizes evidence acquisition only; it does not correct normalization.",
+    "Unauthenticated GitHub rate limits can require several hours of serial waiting."
+  ],
+  "protocol_evidence_hash": "c3861c112d41d233ac28f7751eab5fae347b075c9984d41792ee54495ce0df8f"
+}

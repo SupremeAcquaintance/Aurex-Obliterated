@@ -1,0 +1,257 @@
+{
+  "schema_version": "aurex-s1-macro-financial-conditions-charter-v1",
+  "charter_id": "s1-macro-financial-conditions-charter-v1",
+  "frozen_at": "2026-08-26T18:24:36.264708Z",
+  "status": "FROZEN_CHARTER_ONLY_NO_OUTCOMES",
+  "builder_contract_hash": "6b49d03bfa1842b3948314738a38637faf8515f09b0dc545b132c9fb0c76b631",
+  "predecessor_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_contract_v1.json",
+      "file_sha256": "f8bfcb9f321269433205c901f9d44506d6d12a681a07730b76f4ab2e221f8d68"
+    },
+    {
+      "path": "data/evidence/binance_spot_testnet_sandbox_profile_v1.json",
+      "file_sha256": "19e0f02caa92fe0bdde0b121491b63eb4b3d8d409212a367d3c0275245d6d9a1"
+    },
+    {
+      "path": "data/evidence/q1_periodic_flow_successor_acquisition_terminal_audit_v7.json",
+      "file_sha256": "30330adf86be036ddf0dca8a6199d4a70a3cbae8ebaa327642dbf71e2bb6f922"
+    },
+    {
+      "path": "data/evidence/s1_successor_lineage_audit_v1.json",
+      "file_sha256": "905b3ba01a99c177c0ddfab55ac3d829f01b1b493a2528e2af193a3daa299160"
+    },
+    {
+      "path": "data/evidence/s1_successor_lineage_ledger_v1.json",
+      "file_sha256": "a67c90b56994d9076cbddc2f9f21aa1928c10fc01edf2c745198b1cae9f0d91f"
+    }
+  ],
+  "research_sources": [
+    {
+      "source_id": "CHICAGO-FED-NFCI-CURRENT-DATA",
+      "title": "National Financial Conditions Index: Current Data",
+      "authors_or_publisher": [
+        "Federal Reserve Bank of Chicago"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-26T18:24:36.264708Z",
+      "source_kind": "OFFICIAL_METHOD_DOCUMENTATION",
+      "url": "https://www.chicagofed.org/research/data/nfci/current-data",
+      "supported_claims": [
+        "NFCI is a weekly measure spanning money, debt, equity, traditional banking, and shadow-banking conditions.",
+        "The index normally updates Wednesday at 08:30 Eastern Time for the prior Friday.",
+        "Historical NFCI values can change because inputs and estimated weights are revised."
+      ],
+      "limitations": [
+        "The current-data page is not a point-in-time historical dataset.",
+        "An NFCI relationship does not establish a tradeable Bitcoin edge."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "FRED-ALFRED-REALTIME-PERIODS",
+      "title": "FRED API Real-Time Periods",
+      "authors_or_publisher": [
+        "Federal Reserve Bank of St. Louis"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-26T18:24:36.264708Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://fred.stlouisfed.org/docs/api/fred/realtime_period.html",
+      "supported_claims": [
+        "Real-time periods identify when an observation value was known and when it changed.",
+        "Historical vintages can be requested with explicit real-time boundaries."
+      ],
+      "limitations": [
+        "Documented API capability does not prove endpoint access, coverage, or immutable response identity."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "FRED-ALFRED-VERSUS",
+      "title": "FRED versus ALFRED",
+      "authors_or_publisher": [
+        "Federal Reserve Bank of St. Louis"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-26T18:24:36.264708Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://fred.stlouisfed.org/docs/api/fred/fred_vs_alfred.html",
+      "supported_claims": [
+        "FRED defaults to today's best history while ALFRED can reproduce what was known on a past date."
+      ],
+      "limitations": [
+        "Using current FRED history in a historical signal would introduce revision leakage."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "KARAU-2023-MONETARY-POLICY-BITCOIN",
+      "title": "Monetary policy and Bitcoin",
+      "authors_or_publisher": [
+        "Soren Karau"
+      ],
+      "publication_or_revision_date": "2023-10-01",
+      "accessed_at": "2026-08-26T18:24:36.264708Z",
+      "source_kind": "PEER_REVIEWED_ARTICLE",
+      "url": "https://doi.org/10.1016/j.jimonfin.2023.102880",
+      "supported_claims": [
+        "Bitcoin's response to US monetary policy has varied over time.",
+        "After 2020 Bitcoin reacted more like a risky asset to tightening shocks."
+      ],
+      "limitations": [
+        "The documented relationship is regime-dependent and does not validate NFCI timing or after-cost profitability."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "MA-TIAN-HSIAO-DENG-2022",
+      "title": "Monetary policy shocks and Bitcoin prices",
+      "authors_or_publisher": [
+        "Chaoqun Ma",
+        "Liurui Deng",
+        "Shisong Hsiao",
+        "Yonggang Tian"
+      ],
+      "publication_or_revision_date": "2022-12-01",
+      "accessed_at": "2026-08-26T18:24:36.264708Z",
+      "source_kind": "PEER_REVIEWED_ARTICLE",
+      "url": "https://doi.org/10.1016/j.ribaf.2022.101711",
+      "supported_claims": [
+        "Unexpected US monetary tightening is associated with lower Bitcoin prices and persistent post-announcement effects.",
+        "The estimated response varies with market state."
+      ],
+      "limitations": [
+        "FOMC surprise evidence is not the same signal as weekly NFCI releases.",
+        "The paper does not prove a deployable long-or-cash rule after retail spot costs."
+      ],
+      "does_not_prove_edge": true
+    }
+  ],
+  "operator_scope": {
+    "execution_environment": "BINANCE_SPOT_TESTNET",
+    "product": "SPOT",
+    "symbol": "BTCUSDT",
+    "direction": "LONG_OR_CASH",
+    "maximum_effective_leverage": "1",
+    "simulated_equity_usd": "100",
+    "maximum_per_trade_loss_usd": "0.5",
+    "maximum_daily_loss_usd": "1",
+    "maximum_total_loss_usd": "10",
+    "one_time_data_budget_usd": "0",
+    "monthly_data_budget_usd": "0",
+    "production_authority": false,
+    "live_authority": false,
+    "real_capital": false
+  },
+  "mechanism_id": "S1-NFCI-EASING-BTC-SPOT-RISK-APPETITE",
+  "economic_actor": "GLOBAL_RISK_BEARING_CAPITAL_RESPONDING_TO_US_FINANCIAL_CONDITIONS",
+  "ex_ante_hypothesis": "A causally observed easing in broad US financial conditions can increase global risk-bearing capacity and marginal demand for Bitcoin. Aurex will eventually test one preregistered weekly long-or-cash BTCUSDT Spot rule; tightening supplies a cash state, never a short.",
+  "ex_ante_direction": "EASING_CONDITIONS_LONG_TIGHTENING_CONDITIONS_CASH",
+  "causal_observation_policy": [
+    "USE_ONLY_AN_ALFRED_NFCI_VALUE_WHOSE_REALTIME_START_DATE_IS_ON_OR_BEFORE_THE_DECISION_DATE",
+    "NEVER_BACKFILL_A_REVISED_VALUE_INTO_AN_EARLIER_DECISION",
+    "ENTER_NO_EARLIER_THAN_THE_NEXT_UTC_DAY_OPEN_AFTER_THE_RECORDED_RELEASE_DATE",
+    "MISSING_AMBIGUOUS_OR_UNAVAILABLE_VINTAGE_FORCES_CASH",
+    "CURRENT_FINAL_REVISED_NFCI_IS_DIAGNOSTIC_ONLY_AND_NONSELECTABLE"
+  ],
+  "exact_source_requirements": [
+    "OFFICIAL_ALFRED_NFCI_VINTAGE_DATES_AND_REALTIME_PERIODS",
+    "OFFICIAL_NFCI_RELEASE_AND_REVISION_DOCUMENTATION",
+    "OFFICIAL_BINANCE_SPOT_BTCUSDT_DAILY_KLINES_WITH_PUBLISHED_CHECKSUMS",
+    "POINT_IN_TIME_RELEASE_DATE_TO_NEXT_UTC_DAY_ALIGNMENT",
+    "HISTORICAL_SPOT_FEES_TICK_SIZE_MINIMUM_QUANTITY_AND_NOTIONAL_OR_CONSERVATIVE_BOUNDS",
+    "IMMUTABLE_REQUEST_RESPONSE_AND_FILE_HASH_EVIDENCE"
+  ],
+  "independence_exclusions": [
+    "NO_PRICE_MOMENTUM_TREND_PULLBACK_OR_BREAKOUT_INPUT",
+    "NO_VOLATILITY_SCALING_OR_PATH_QUALITY_INPUT",
+    "NO_CANDLE_MEAN_REVERSION_OR_JAM_REVERSAL_INPUT",
+    "NO_AGGRESSOR_FLOW_ORDER_BOOK_OR_CLOCK_PHASE_INPUT",
+    "NO_FUNDING_BASIS_CARRY_OR_PERPETUAL_ORDER_FLOW_INPUT",
+    "NO_CROSS_ASSET_RANKING_COINTEGRATION_OR_ROTATION",
+    "NO_PASSIVE_MAKER_CROSS_VENUE_OR_OPTIONS_EXECUTION",
+    "NO_REUSE_OF_PRIOR_DIAGNOSTIC_THRESHOLDS_OR_OUTCOMES"
+  ],
+  "feasibility_gates": [
+    "S1_LINEAGE_AND_INDEPENDENT_AUDIT_VALID",
+    "ZERO_PAID_DATA_AND_NO_PRODUCTION_CREDENTIAL_REQUIREMENT",
+    "POINT_IN_TIME_NFCI_VINTAGES_AVAILABLE_FOR_COMPLETE_DEVELOPMENT_AND_VALIDATION",
+    "RELEASE_DATES_AND_REVISIONS_RECONSTRUCTABLE_WITHOUT_FINAL_VALUE_LEAKAGE",
+    "AT_LEAST_260_CAUSALLY_AVAILABLE_DEVELOPMENT_RELEASES",
+    "BINANCE_SPOT_DAILY_SOURCE_METADATA_AND_CHECKSUMS_AVAILABLE",
+    "NEXT_UTC_DAY_EXECUTION_IS_DETERMINISTIC_AND_SPOT_ONLY",
+    "EXPECTED_TURNOVER_CAN_BE_MODELED_WITH_RETAIL_SPOT_COSTS",
+    "ONE_SELECTABLE_MECHANISM_AND_ZERO_CHARTER_STAGE_PARAMETERS",
+    "FAILURE_OF_ANY_GATE_SELECTS_ZERO_AND_STOPS_S1_BEFORE_OUTCOMES"
+  ],
+  "partitions": [
+    {
+      "role": "DEVELOPMENT",
+      "start": "2017-08-17T00:00:00Z",
+      "end": "2023-01-01T00:00:00Z",
+      "outcome_access_permitted": false,
+      "state": "SEALED_PENDING_SOURCE_FEASIBILITY"
+    },
+    {
+      "role": "HISTORICAL_VALIDATION",
+      "start": "2023-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "outcome_access_permitted": false,
+      "state": "SEALED_PENDING_SOURCE_FEASIBILITY"
+    },
+    {
+      "role": "CONTAMINATION_WASHOUT",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-11-07T00:00:00Z",
+      "outcome_access_permitted": false,
+      "state": "EXCLUDED_PRIOR_OUTCOME_AWARENESS"
+    },
+    {
+      "role": "FUTURE_HOLDOUT",
+      "start": "2026-11-07T00:00:00Z",
+      "end": "2027-05-07T00:00:00Z",
+      "outcome_access_permitted": false,
+      "state": "LOCKED_FUTURE"
+    },
+    {
+      "role": "FORWARD",
+      "start": "2027-05-07T00:00:00Z",
+      "end": null,
+      "outcome_access_permitted": false,
+      "state": "LOCKED_FUTURE"
+    }
+  ],
+  "proposal_budget": 1,
+  "selected_mechanism_count": 1,
+  "familywise_predecessor_count": 8,
+  "market_numeric_fields_inspected": [],
+  "exact_parameters_defined": [],
+  "return_metrics_calculated": [],
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "decision": "FREEZE_S1_FOR_METADATA_AND_REVISION_FEASIBILITY_ONLY",
+  "next_authorization": "AUTHORIZE_S1_METADATA_ONLY_NFCI_VINTAGE_FEASIBILITY",
+  "authorizes_source_metadata_requests": true,
+  "authorizes_market_value_access": false,
+  "authorizes_payload_acquisition": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_return_testing": false,
+  "authorizes_validation_access": false,
+  "authorizes_holdout_access": false,
+  "authorizes_pine_deployment": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "This charter selects a theory for source feasibility, not a profitable strategy.",
+    "NFCI includes revised inputs and estimated weights; current revised history is forbidden for historical decisions.",
+    "Published monetary-policy findings are mixed across regimes and do not establish NFCI predictability.",
+    "Historical validation is not the final untouched test; the future holdout remains locked until 2027-05-07.",
+    "No market value, parameter, return, candidate, paper order, Testnet strategy order, production action, live action, real capital, or profit is authorized."
+  ],
+  "charter_evidence_hash": "f5f0aa9980df16c4964abe1a41512abeccce2f009a2743492e2f0e1ce86d0c7d"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-successor-transport-amendment-audit-v3",
+  "audited_at": "2026-08-10T21:42:17.722867Z",
+  "amendment_file_sha256": "dfaf06c1fbc64a75ada5d2cda42e96c6cfc11d8256d6a5f3ce518670d92ad8e8",
+  "amendment_evidence_hash": "e32c9f0d6c74a1eefa9ba60f9c4cc836a30fff5540575972510446f2b39bf19d",
+  "parent_protocol_evidence_hash": "a8ae24f8939aa88d3ea14aee5eb7b867b82bd50f9620183cb57a77c8466fca51",
+  "terminal_v2_audit_evidence_hash": "1c475bd0b60ed92930fa8b54580b91f4ea49b00cb731ab5c881b78db74465a7d",
+  "bootstrap_partial_file_sha256": "51c5191a59188ebfd92c691bd169704f3becab0933142f8ebe9f313a84195153",
+  "bootstrap_partial_bytes": 42991616,
+  "auditor_contract_hash": "2e930e47df7b2253cd3c3018244a5150c801e8832e28e70693bc69c49a498612",
+  "exact_override_scope_verified": true,
+  "terminal_lineage_verified": true,
+  "bootstrap_partial_verified": true,
+  "no_outcome_boundary_verified": true,
+  "network_requests_made": 0,
+  "outcomes_accessed": 0,
+  "orders_submitted": 0,
+  "audit_evidence_hash": "5c060fc2df07ed15d875fb341081199438bce55a53e32b3f67bf8850164d1dd4"
+}

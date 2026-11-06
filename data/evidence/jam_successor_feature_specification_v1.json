@@ -1,0 +1,512 @@
+{
+  "schema_version": "aurex-jam-successor-feature-specification-v1",
+  "specification_id": "jam-successor-feature-specification-v1",
+  "frozen_at": "2026-08-04T11:30:33.049311Z",
+  "status": "FROZEN_CAUSAL_SPECIFICATION_NO_RETURNS",
+  "protocol_path": "data/evidence/jam_successor_feature_specification_protocol_v1.json",
+  "protocol_file_sha256": "8f863f6db68700431c02e653dbde0dbe770e768bb8d93fa10309e67fe2e0a1e6",
+  "protocol_evidence_hash": "86ee3e67c6fc78863378b4a1b30c8cb38f9aafda2335e92054309cd260bfffba",
+  "specification_contract_hash": "699ded46c7b3e342f41828fb51d78a2c4995fe5a67fa07e64a9e85a05a639674",
+  "selected_proposal_id": "J2-P01-AGGRESSIVE-SELL-FLOW-EXHAUSTION-RECLAIM",
+  "source_grain": "UTC_ONE_MINUTE_FROM_AGGTRADES",
+  "timestamp_normalization": "MILLISECONDS_13_DIGITS_OR_MICROSECONDS_16_DIGITS_FLOORED_TO_MILLISECONDS",
+  "buyer_maker_true_mapping": "SELLER_WAS_TAKER_TAKER_SELL",
+  "buyer_maker_false_mapping": "BUYER_WAS_TAKER_TAKER_BUY",
+  "minute_quote_notional_formula": "SUM_PRICE_MULTIPLIED_BY_QUANTITY",
+  "phases": [
+    {
+      "phase_id": "BASELINE",
+      "oldest_lag_minutes": 132,
+      "newest_lag_minutes": 13,
+      "minute_count": 120,
+      "purpose": "Robust pre-event flow and imbalance normalization."
+    },
+    {
+      "phase_id": "PRE_SHOCK_REFERENCE",
+      "oldest_lag_minutes": 12,
+      "newest_lag_minutes": 8,
+      "minute_count": 5,
+      "purpose": "Causal pre-shock volume-weighted price reference."
+    },
+    {
+      "phase_id": "SHOCK",
+      "oldest_lag_minutes": 7,
+      "newest_lag_minutes": 3,
+      "minute_count": 5,
+      "purpose": "Candidate sell-flow shock and contemporaneous price impact."
+    },
+    {
+      "phase_id": "CONFIRMATION",
+      "oldest_lag_minutes": 2,
+      "newest_lag_minutes": 0,
+      "minute_count": 3,
+      "purpose": "Post-shock flow decay and price-reclaim confirmation."
+    }
+  ],
+  "features": [
+    {
+      "feature_id": "baseline_sell_quote_median_120m",
+      "category": "BASELINE",
+      "formula": "MEDIAN(taker_sell_quote_volume per BASELINE minute)",
+      "source_fields": [
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "BASELINE"
+      ],
+      "units": "QUOTE_ASSET",
+      "undefined_when": []
+    },
+    {
+      "feature_id": "baseline_sell_quote_mad_120m",
+      "category": "BASELINE",
+      "formula": "MEDIAN(ABS(taker_sell_quote_volume - baseline_sell_quote_median_120m))",
+      "source_fields": [
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "BASELINE"
+      ],
+      "units": "QUOTE_ASSET",
+      "undefined_when": []
+    },
+    {
+      "feature_id": "baseline_sell_share_median_120m",
+      "category": "BASELINE",
+      "formula": "MEDIAN(taker_sell_quote_volume / quote_volume per BASELINE minute)",
+      "source_fields": [
+        "quote_volume",
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "BASELINE"
+      ],
+      "units": "RATIO",
+      "undefined_when": [
+        "ANY_BASELINE_QUOTE_VOLUME_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "baseline_sell_share_mad_120m",
+      "category": "BASELINE",
+      "formula": "MEDIAN(ABS(sell_share - baseline_sell_share_median_120m))",
+      "source_fields": [
+        "quote_volume",
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "BASELINE"
+      ],
+      "units": "RATIO",
+      "undefined_when": [
+        "ANY_BASELINE_QUOTE_VOLUME_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "pre_shock_vwap_5m",
+      "category": "REFERENCE",
+      "formula": "SUM(quote_volume) / SUM(base_volume)",
+      "source_fields": [
+        "base_volume",
+        "quote_volume"
+      ],
+      "temporal_phases": [
+        "PRE_SHOCK_REFERENCE"
+      ],
+      "units": "PRICE",
+      "undefined_when": [
+        "PRE_SHOCK_BASE_VOLUME_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "shock_sell_quote_mean_5m",
+      "category": "SHOCK",
+      "formula": "SUM(taker_sell_quote_volume) / 5",
+      "source_fields": [
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "SHOCK"
+      ],
+      "units": "QUOTE_ASSET",
+      "undefined_when": []
+    },
+    {
+      "feature_id": "shock_sell_flow_robust_z_5m",
+      "category": "SHOCK",
+      "formula": "(shock_sell_quote_mean_5m - baseline_sell_quote_median_120m) / (1.4826 * baseline_sell_quote_mad_120m)",
+      "source_fields": [
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "BASELINE",
+        "SHOCK"
+      ],
+      "units": "ROBUST_Z",
+      "undefined_when": [
+        "BASELINE_SELL_QUOTE_MAD_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "shock_sell_share_5m",
+      "category": "SHOCK",
+      "formula": "SUM(taker_sell_quote_volume) / SUM(quote_volume)",
+      "source_fields": [
+        "quote_volume",
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "SHOCK"
+      ],
+      "units": "RATIO",
+      "undefined_when": [
+        "SHOCK_QUOTE_VOLUME_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "shock_price_impact_bps_5m",
+      "category": "SHOCK",
+      "formula": "10000 * (SHOCK final close_price / pre_shock_vwap_5m - 1)",
+      "source_fields": [
+        "close_price",
+        "high_price",
+        "low_price",
+        "open_price"
+      ],
+      "temporal_phases": [
+        "PRE_SHOCK_REFERENCE",
+        "SHOCK"
+      ],
+      "units": "BASIS_POINTS",
+      "undefined_when": [
+        "PRE_SHOCK_VWAP_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "shock_low_bps_vs_pre_shock_vwap",
+      "category": "SHOCK",
+      "formula": "10000 * (MIN(SHOCK low_price) / pre_shock_vwap_5m - 1)",
+      "source_fields": [
+        "close_price",
+        "high_price",
+        "low_price",
+        "open_price"
+      ],
+      "temporal_phases": [
+        "PRE_SHOCK_REFERENCE",
+        "SHOCK"
+      ],
+      "units": "BASIS_POINTS",
+      "undefined_when": [
+        "PRE_SHOCK_VWAP_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "confirmation_sell_quote_mean_3m",
+      "category": "CONFIRMATION",
+      "formula": "SUM(taker_sell_quote_volume) / 3",
+      "source_fields": [
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "CONFIRMATION"
+      ],
+      "units": "QUOTE_ASSET",
+      "undefined_when": []
+    },
+    {
+      "feature_id": "confirmation_sell_flow_robust_z_3m",
+      "category": "CONFIRMATION",
+      "formula": "(confirmation_sell_quote_mean_3m - baseline_sell_quote_median_120m) / (1.4826 * baseline_sell_quote_mad_120m)",
+      "source_fields": [
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "BASELINE",
+        "CONFIRMATION"
+      ],
+      "units": "ROBUST_Z",
+      "undefined_when": [
+        "BASELINE_SELL_QUOTE_MAD_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "confirmation_sell_share_3m",
+      "category": "CONFIRMATION",
+      "formula": "SUM(taker_sell_quote_volume) / SUM(quote_volume)",
+      "source_fields": [
+        "quote_volume",
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "CONFIRMATION"
+      ],
+      "units": "RATIO",
+      "undefined_when": [
+        "CONFIRMATION_QUOTE_VOLUME_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "sell_flow_decay_ratio_3m_vs_5m",
+      "category": "DECAY",
+      "formula": "confirmation_sell_quote_mean_3m / shock_sell_quote_mean_5m",
+      "source_fields": [
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "CONFIRMATION",
+        "SHOCK"
+      ],
+      "units": "RATIO",
+      "undefined_when": [
+        "SHOCK_SELL_QUOTE_MEAN_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "sell_share_decay_delta_5m_to_3m",
+      "category": "DECAY",
+      "formula": "shock_sell_share_5m - confirmation_sell_share_3m",
+      "source_fields": [
+        "quote_volume",
+        "taker_sell_quote_volume"
+      ],
+      "temporal_phases": [
+        "CONFIRMATION",
+        "SHOCK"
+      ],
+      "units": "RATIO",
+      "undefined_when": [
+        "CONFIRMATION_QUOTE_VOLUME_IS_ZERO",
+        "SHOCK_QUOTE_VOLUME_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "reclaim_bps_vs_pre_shock_vwap",
+      "category": "RECLAIM",
+      "formula": "10000 * (CONFIRMATION final close_price / pre_shock_vwap_5m - 1)",
+      "source_fields": [
+        "close_price",
+        "high_price",
+        "low_price",
+        "open_price"
+      ],
+      "temporal_phases": [
+        "CONFIRMATION",
+        "PRE_SHOCK_REFERENCE"
+      ],
+      "units": "BASIS_POINTS",
+      "undefined_when": [
+        "PRE_SHOCK_VWAP_IS_ZERO"
+      ]
+    },
+    {
+      "feature_id": "bounce_bps_from_shock_low",
+      "category": "RECLAIM",
+      "formula": "10000 * (CONFIRMATION final close_price / MIN(SHOCK low_price) - 1)",
+      "source_fields": [
+        "close_price",
+        "high_price",
+        "low_price",
+        "open_price"
+      ],
+      "temporal_phases": [
+        "CONFIRMATION",
+        "SHOCK"
+      ],
+      "units": "BASIS_POINTS",
+      "undefined_when": [
+        "SHOCK_LOW_IS_ZERO"
+      ]
+    }
+  ],
+  "feature_count": 17,
+  "maximum_lookback_minutes": 133,
+  "minimum_consecutive_valid_minutes": 133,
+  "robust_scale_constant": "1.4826",
+  "basis_points_constant": "10000",
+  "output_decimal_places": 18,
+  "output_rounding": "ROUND_HALF_EVEN",
+  "quality_states": [
+    {
+      "state": "READY",
+      "feature_values_permitted": true,
+      "resets_state": false,
+      "description": "All 133 required minutes are valid and causal."
+    },
+    {
+      "state": "PARTITION_RESET_WARMUP",
+      "feature_values_permitted": false,
+      "resets_state": true,
+      "description": "The active evidence partition contains fewer than 133 completed valid minutes."
+    },
+    {
+      "state": "SOURCE_QUARANTINE",
+      "feature_values_permitted": false,
+      "resets_state": true,
+      "description": "The evaluation minute is in the frozen quarantine."
+    },
+    {
+      "state": "POST_DEFECT_WARMUP",
+      "feature_values_permitted": false,
+      "resets_state": true,
+      "description": "A quarantined or absent source minute remains inside the required 133-minute causal window."
+    },
+    {
+      "state": "NO_AGGTRADE_MINUTE",
+      "feature_values_permitted": false,
+      "resets_state": true,
+      "description": "The evaluation minute has no aggregate trade and is not synthesized from klines or prior price."
+    },
+    {
+      "state": "DEGENERATE_ROBUST_SCALE",
+      "feature_values_permitted": false,
+      "resets_state": false,
+      "description": "The 120-minute sell-quote MAD is zero."
+    },
+    {
+      "state": "DEGENERATE_DENOMINATOR",
+      "feature_values_permitted": false,
+      "resets_state": false,
+      "description": "A required causal volume or price denominator is zero."
+    }
+  ],
+  "source_quarantine_manifest_hash": "618df63c38ca848e7d34188d20e99f3eac330f76cec5226bb6046d33354c9d27",
+  "partition_reset_required": true,
+  "defect_reset_required": true,
+  "no_synthetic_minute_permitted": true,
+  "no_cross_partition_rolling_state": true,
+  "official_kline_feature_authority": false,
+  "exact_pine_signal_supported": false,
+  "future_order_earliest_time": "NEXT_MINUTE_AFTER_EVALUATION_CLOSE_IF_LATER_GATES_PASS",
+  "evidence_partitions": [
+    {
+      "partition_id": "JAM_DEVELOPMENT_2019_2020",
+      "start_month": "2019-01",
+      "end_month": "2020-12",
+      "role": "DEVELOPMENT",
+      "outcome_access_permitted": false
+    },
+    {
+      "partition_id": "JAM_SEALED_VALIDATION_2021",
+      "start_month": "2021-01",
+      "end_month": "2021-12",
+      "role": "SEALED_VALIDATION",
+      "outcome_access_permitted": false
+    },
+    {
+      "partition_id": "JAM_SEALED_HOLDOUT_2022",
+      "start_month": "2022-01",
+      "end_month": "2022-12",
+      "role": "SEALED_HOLDOUT",
+      "outcome_access_permitted": false
+    }
+  ],
+  "conformance_cases": [
+    {
+      "case_id": "C01_AGGRESSOR_MAPPING",
+      "assertion": "buyer_maker false maps to taker buy and true maps to taker sell",
+      "passed": true,
+      "synthetic_row_count": 266,
+      "observed_state": "BUY_AND_SELL_NOTIONAL_MATCH",
+      "case_evidence_hash": "5a11304f4174960539f6c6270908d63d13795cdb27b876a38292802470ba559a"
+    },
+    {
+      "case_id": "C02_CAUSAL_READY_VECTOR",
+      "assertion": "exactly seventeen causal features exist after 133 valid minutes",
+      "passed": true,
+      "synthetic_row_count": 266,
+      "observed_state": "READY_17_FEATURES",
+      "case_evidence_hash": "a487975234d8205491c05fdd4e50474cfea588ff35f9bc52de976611ef1364c0"
+    },
+    {
+      "case_id": "C03_FUTURE_INVARIANCE",
+      "assertion": "a later synthetic minute cannot change the current feature row",
+      "passed": true,
+      "synthetic_row_count": 268,
+      "observed_state": "CURRENT_ROW_UNCHANGED",
+      "case_evidence_hash": "8d25708e667216a455cd75fdd7da5909ea20b7ba0dd2d9339bb38e72aa566e57"
+    },
+    {
+      "case_id": "C04_PARTITION_RESET",
+      "assertion": "rolling state cannot cross an evidence-partition boundary",
+      "passed": true,
+      "synthetic_row_count": 266,
+      "observed_state": "PARTITION_RESET_WARMUP",
+      "case_evidence_hash": "18a2d96494125f89521cf4aa9334b04cb58b43f7e537db8c1068bf43af3980ec"
+    },
+    {
+      "case_id": "C05_CURRENT_QUARANTINE",
+      "assertion": "a quarantined evaluation minute emits no feature values",
+      "passed": true,
+      "synthetic_row_count": 266,
+      "observed_state": "SOURCE_QUARANTINE",
+      "case_evidence_hash": "f7260d2c4487608745439c46ebdb4cdd340a40ea16e6a006ad463f1982455f9e"
+    },
+    {
+      "case_id": "C06_POST_DEFECT_WARMUP",
+      "assertion": "a defect inside the 133-minute window withholds all features",
+      "passed": true,
+      "synthetic_row_count": 266,
+      "observed_state": "POST_DEFECT_WARMUP",
+      "case_evidence_hash": "d969b14bd075de308b8b7687faf8f18a307ceb8b729cc70aa4baa62dcb399069"
+    },
+    {
+      "case_id": "C07_NO_AGGTRADE_MINUTE",
+      "assertion": "an absent aggregate minute is not synthesized from klines",
+      "passed": true,
+      "synthetic_row_count": 264,
+      "observed_state": "NO_AGGTRADE_MINUTE",
+      "case_evidence_hash": "1f5072beda2be29ed7165bdd27dc8a9698be6e789abc3241b170b9c9fee1ac0d"
+    },
+    {
+      "case_id": "C08_DEGENERATE_ROBUST_SCALE",
+      "assertion": "zero baseline MAD emits no robust-z feature values",
+      "passed": true,
+      "synthetic_row_count": 266,
+      "observed_state": "DEGENERATE_ROBUST_SCALE",
+      "case_evidence_hash": "63a7c1a996a31fd5a0d0fdeda3c7613a9cda3d2a5b7b5c0ba42ef7b92d13053e"
+    },
+    {
+      "case_id": "C09_DECIMAL_DETERMINISM",
+      "assertion": "repeated Decimal calculation is byte-stable",
+      "passed": true,
+      "synthetic_row_count": 266,
+      "observed_state": "BYTE_STABLE_ROUND_HALF_EVEN_18DP",
+      "case_evidence_hash": "d989aaa1075b2436d80067b5e4d3d48a46929151a74361159c4bb5ebd0d6f5e3"
+    }
+  ],
+  "conformance_manifest_hash": "cae28c8f9acdc3884747281d78003f128a33907aca89d73fed6217d5974122bc",
+  "real_market_rows_inspected": 0,
+  "future_labels_defined": [],
+  "decision_thresholds_defined": [],
+  "return_metrics_calculated": [],
+  "strategy_executions": 0,
+  "creates_strategy": false,
+  "creates_signal": false,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_testnet_order_authority": false,
+  "creates_production_authority": false,
+  "creates_live_eligibility": false,
+  "decision": "PASS_CAUSAL_FEATURE_SPECIFICATION_AWAIT_DEVELOPMENT_DISTRIBUTION_AUTHORIZATION",
+  "next_required_authorization": "AUTHORIZE_JAM_SUCCESSOR_DEVELOPMENT_FEATURE_DISTRIBUTION_NO_RETURNS",
+  "limitations": [
+    "A quarantined or absent minute requires 133 subsequent contiguous valid minutes before feature readiness can resume.",
+    "A source quarantine, absent aggregate minute, or partition boundary withholds the complete feature vector.",
+    "All four temporal phases are non-overlapping, contiguous, and available by the close of the evaluation minute.",
+    "Buyer-maker true means the seller was taker; buyer-maker false means the buyer was taker.",
+    "Every output uses Decimal arithmetic and ROUND_HALF_EVEN at eighteen decimal places.",
+    "Exact Pine parity remains unavailable because Pine has no exact Binance aggregate-trade aggressor stream.",
+    "No future label, decision threshold, signal conjunction, entry rule, exit rule, stop, target, or sizing rule is defined.",
+    "No future return, PnL, profit factor, expectancy, drawdown, or strategy outcome was calculated.",
+    "Official one-minute klines remain QA-only and cannot fill, carry, or overwrite an aggregate-trade feature value.",
+    "Quote notional is the exact sum of price multiplied by quantity; no candle volume is substituted.",
+    "Robust flow normalization uses the conventional 1.4826 median absolute-deviation scale without defining a trade cutoff.",
+    "The 133-minute input window is fixed as 120 baseline, five pre-shock, five shock, and three confirmation minutes.",
+    "The earliest theoretical order time is the next minute only if later candidate, backtest, risk, and execution gates pass.",
+    "The nine conformance cases use deterministic synthetic values only and contain no copied market observation or outcome.",
+    "This artifact specifies causal transformations only and inspects zero real market rows.",
+    "This specification creates no strategy, signal, candidate, paper eligibility, Testnet order authority, production, live, capital, or profit authority."
+  ],
+  "specification_evidence_hash": "8c69103a5e65c73ff248e365a5c25362c0f4f7fffc1452ca197bf57e04d53701"
+}

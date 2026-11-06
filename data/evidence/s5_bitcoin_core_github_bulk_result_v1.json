@@ -1,0 +1,154 @@
+{
+  "schema_version": "aurex-s5-github-bulk-result-v1",
+  "result_id": "s5-github-bulk-result-v1",
+  "executed_at": "2026-09-02T21:44:29.332817Z",
+  "started_at": "2026-09-02T21:44:26.432567Z",
+  "completed_at": "2026-09-02T21:44:29.332817Z",
+  "elapsed_seconds": 2.90025,
+  "protocol_evidence_hash": "ee1564712af978eddd0081fe7ede7fb19dd275fc2f04e7a19306160f8b3174f5",
+  "runner_contract_hash": "f91447463e6e252bf4e0c9198e643b5aec60d73ed3a25cbbf567ebdfdd2bbf31",
+  "raw_page_directory": "data/evidence/s5_github_pull_metadata_bulk_v1",
+  "page_bindings": [],
+  "logical_request_attempt_count": 1,
+  "new_request_attempt_count": 1,
+  "successful_request_count": 0,
+  "resumed_page_count": 0,
+  "acquired_page_count": 0,
+  "terminal_page_count": null,
+  "raw_record_count": 0,
+  "cohort_record_count": 0,
+  "post_cutoff_record_count": 0,
+  "open_record_count": 0,
+  "closed_unmerged_record_count": 0,
+  "merged_record_count": 0,
+  "null_user_record_count": 0,
+  "unique_pull_number_count": 0,
+  "duplicate_pull_number_count": 0,
+  "minimum_created_at": null,
+  "maximum_created_at": null,
+  "total_response_bytes": 0,
+  "rate_limit_wait_count": 0,
+  "rate_limit_wait_seconds": 0.0,
+  "gate_results": [
+    {
+      "gate_id": "CORRECTED_PREFLIGHT_AND_READINESS_V32_LINEAGE_BOUND",
+      "status": "PASS",
+      "evidence": "This invariant remains preserved despite the transport stop."
+    },
+    {
+      "gate_id": "ALL_STATE_STABLE_MEMBERSHIP_QUERY_EXACTLY_BOUND",
+      "status": "PASS",
+      "evidence": "This invariant remains preserved despite the transport stop."
+    },
+    {
+      "gate_id": "UNAUTHENTICATED_SERIAL_REQUEST_POLICY_PRESERVED",
+      "status": "PASS",
+      "evidence": "This invariant remains preserved despite the transport stop."
+    },
+    {
+      "gate_id": "CONTIGUOUS_PAGE_RANGE_ACQUIRED",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "HTTP_200_WITHOUT_REDIRECT_FOR_EVERY_PAGE",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "EVERY_RESPONSE_BODY_BOUNDED_AND_HASH_PRESERVED",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "EVERY_PAGE_JSON_AND_PULL_SCHEMA_VALID",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "PAGINATION_SCOPE_AND_TERMINAL_BOUND_VALID",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "NONTERMINAL_PAGES_FULL_AND_TERMINAL_PAGE_COMPLETE",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "PULL_NUMBERS_UNIQUE_AND_CREATION_ORDER_MONOTONIC",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "FROZEN_CREATION_CUTOFF_COHORT_RECONSTRUCTED",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "RATE_LIMIT_HEADERS_VALID_AND_EXHAUSTION_WAITED",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "RAW_PAGE_MANIFEST_EXACTLY_RECONSTRUCTABLE",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    },
+    {
+      "gate_id": "NO_TOKEN_PROXY_MARKET_VALUE_PARAMETER_RETURN_OR_ORDER",
+      "status": "PASS",
+      "evidence": "This invariant remains preserved despite the transport stop."
+    },
+    {
+      "gate_id": "SOURCE_COMPLETENESS_AND_PREDICTIVE_EDGE_NOT_ADJUDICATED",
+      "status": "PASS",
+      "evidence": "This invariant remains preserved despite the transport stop."
+    },
+    {
+      "gate_id": "PASS_AUTHORIZES_NORMALIZATION_PROTOCOL_ONLY",
+      "status": "FAIL",
+      "evidence": "Bulk acquisition stopped before this gate could pass: GitHub request failed: TypeError: 'Response' object does not support the context manager protocol."
+    }
+  ],
+  "passed_gate_count": 5,
+  "failed_gate_count": 11,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "source_completeness_conclusion": "NOT_YET_ADJUDICATED",
+  "predictive_edge_conclusion": "NOT_EVALUATED",
+  "decision": "STOP_S5_GITHUB_METADATA_BULK_ACQUISITION_REQUIRES_FAILURE_AUDIT",
+  "next_authorization": "FREEZE_S5_GITHUB_METADATA_BULK_FAILURE_AUDIT_ONLY",
+  "authorizes_normalization_protocol_design": false,
+  "authorizes_market_values": false,
+  "authorizes_parameters": false,
+  "authorizes_returns": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "failure_type": "PageFailure",
+  "failure_message": "GitHub request failed: TypeError: 'Response' object does not support the context manager protocol",
+  "failure_artifact_path": "data/evidence/s5_github_pull_metadata_bulk_v1/failure_page_0001.json",
+  "failure_artifact_sha256": "06dff5507e434732d0202a3e09c4d385f95e9e1e82adca98875dec751476c38e",
+  "limitations": [
+    "A passing result authorizes normalization protocol design only.",
+    "A transport pass is not evidence of a reliable strategy or profit.",
+    "Deleted or retargeted historical records can still prevent completeness.",
+    "GitHub current metadata does not prove historical publication timing by itself.",
+    "Merged-only filtering and Git second-parent identity matching remain undone.",
+    "No BTC market value, parameter, return, candidate, signal, or order was created.",
+    "No paper, Testnet strategy, production, live, or real-capital authority exists.",
+    "Page membership is stable against state changes but not every metadata mutation.",
+    "Public account identifiers require explicit uncertainty handling before use.",
+    "Raw records created after the frozen cutoff are excluded from the cohort.",
+    "Real net profit remains zero.",
+    "Source completeness and predictive edge remain unadjudicated."
+  ],
+  "result_evidence_hash": "a3443b57f5cb805cf37daa79cbe561d317a4ede3ca552cccf0675bec97f131f8"
+}

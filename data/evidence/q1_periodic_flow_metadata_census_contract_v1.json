@@ -1,0 +1,1392 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-metadata-census-contract-v1",
+  "contract_id": "q1-periodic-flow-metadata-census-v1",
+  "frozen_at": "2026-08-07T06:40:02.662664Z",
+  "status": "FROZEN_PRE_NETWORK_METADATA_ONLY",
+  "charter_file_sha256": "dd6baa815e3a0dab897d5b76ed26e748f1f8480125a32bcfe762851636833881",
+  "charter_evidence_hash": "17e9a73193a0c159aa6d3a15fea2412285e3cd12a5a4e0e52e3e27bcf4fa195b",
+  "charter_audit_file_sha256": "085d8f936dc68ec471696a0c4c3c4a329fb29074abe572c5d82f48d14c07486a",
+  "charter_audit_evidence_hash": "ad6a76574af1f3ff5dbf91f0ed42f6c1c066ff8746b7202bf0fc1c2e0373096a",
+  "readiness_result_evidence_hash": "948f16adcd556b0e9050119f2a26f19d1da7353d5abcb5b33900fa431931302a",
+  "readiness_audit_evidence_hash": "2f2a7dd3743ff7553e599175462f80acb4350c9cc2c62b6d71cd932a29d7e856",
+  "builder_contract_hash": "33a3e15868a96bf957cf82d0e9f6faeace20324de35d0395e5f4b47bf6a33c4d",
+  "official_document_reference": "https://github.com/binance/binance-public-data",
+  "documentation_claims": [
+    "Binance publishes daily and monthly public Spot and Futures archives.",
+    "Every published ZIP archive is accompanied by a CHECKSUM file.",
+    "Spot aggregate trades have eight documented columns.",
+    "USD-M Futures aggregate trades have seven documented columns.",
+    "Spot timestamps from 2025-01-01 onward are documented in microseconds.",
+    "Archived files may be revised after publication."
+  ],
+  "schema_register": [
+    {
+      "product": "SPOT",
+      "api_source": "/api/v3/aggTrades",
+      "columns": [
+        "aggregate_trade_id",
+        "price",
+        "quantity",
+        "first_trade_id",
+        "last_trade_id",
+        "timestamp",
+        "buyer_was_maker",
+        "best_price_match"
+      ],
+      "timestamp_rule": "MILLISECONDS_THROUGH_2024_MICROSECONDS_FROM_2025_01"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "api_source": "/fapi/v1/aggTrades",
+      "columns": [
+        "aggregate_trade_id",
+        "price",
+        "quantity",
+        "first_trade_id",
+        "last_trade_id",
+        "timestamp",
+        "buyer_was_maker"
+      ],
+      "timestamp_rule": "MILLISECONDS"
+    }
+  ],
+  "schema_register_hash": "379ecc0b6bc626da15797738c29a4d9e7c542aa7c397284a0d81b7245d9f3f58",
+  "targets": [
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-01.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-01.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-02",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-02.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-02.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-02",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-02.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-02.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-03",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-03.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-03.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-03",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-03.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-03.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-04",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-04.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-04.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-04",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-04.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-04.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-05",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-05.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-05.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-05",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-05.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-05.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-06",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-06.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-06.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-06",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-06.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-06.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-07",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-07.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-07.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-07",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-07.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-07.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-08",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-08.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-08.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-08",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-08.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-08.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-09",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-09.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-09.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-09",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-09.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-09.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-10",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-10.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-10.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-10",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-10.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-10.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-11",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-11.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-11.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-11",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-11.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-11.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-12",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-12.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-12.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-12",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-12.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-01.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-01.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-02",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-02.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-02.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-02",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-02.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-02.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-03",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-03.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-03.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-03",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-03.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-03.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-04",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-04.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-04.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-04",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-04.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-04.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-05",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-05.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-05.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-05",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-05.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-05.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-06",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-06.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-06.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-06",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-06.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-06.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-07",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-07.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-07.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-07",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-07.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-07.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-08",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-08.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-08.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-08",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-08.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-08.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-09",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-09.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-09.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-09",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-09.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-09.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-10",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-10.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-10.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-10",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-10.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-10.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-11",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-11.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-11.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-11",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-11.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-11.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2021-12",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-12.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-12.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2021-12",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-12.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-01.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-01.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-02",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-02.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-02.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-02",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-02.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-02.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-03",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-03.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-03.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-03",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-03.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-03.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-04",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-04.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-04.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-04",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-04.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-04.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-05",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-05.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-05.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-05",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-05.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-05.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-06",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-06.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-06.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-06",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-06.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-06.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-07",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-07.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-07.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-07",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-07.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-07.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-08",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-08.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-08.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-08",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-08.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-08.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-09",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-09.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-09.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-09",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-09.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-09.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-10",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-10.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-10.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-10",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-10.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-10.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-11",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-11.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-11.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-11",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-11.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-11.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2022-12",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-12.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-12.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2022-12",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2022-12.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-01.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-01.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-02",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-02.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-02.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-02",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-02.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-02.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-03",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-03.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-03.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-03",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-03.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-03.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-04",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-04.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-04.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-04",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-04.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-04.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-05",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-05.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-05.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-05",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-05.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-05.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-06",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-06.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-06.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-06",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-06.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-06.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-07",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-07.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-07.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-07",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-07.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-07.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-08",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-08.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-08.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-08",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-08.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-08.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-09",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-09.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-09.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-09",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-09.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-09.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-10",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-10.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-10.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-10",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-10.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-10.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-11",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-11.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-11.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-11",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-11.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-11.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2023-12",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-12.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-12.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2023-12",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2023-12.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-01",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-01.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-01",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-01.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-02",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-02.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-02.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-02",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-02.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-02.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-03",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-03.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-03.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-03",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-03.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-03.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-04",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-04.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-04.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-04",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-04.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-04.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-05",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-05.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-05.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-05",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-05.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-05.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-06",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-06.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-06.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-06",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-06.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-06.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-07",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-07.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-07.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-07",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-07.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-07.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-08",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-08.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-08.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-08",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-08.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-08.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-09",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-09.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-09.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-09",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-09.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-09.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-10",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-10.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-10.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-10",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-10.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-10.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-11",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-11.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-11.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-11",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-11.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-11.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2024-12",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-12.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2024-12",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2024-12.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-01",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-01.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-01",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-01.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-02",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-02.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-02.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-02",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-02.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-02.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-03",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-03.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-03.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-03",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-03.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-03.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-04",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-04.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-04.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-04",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-04.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-04.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-05",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-05.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-05.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-05",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-05.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-05.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-06",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-06.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-06.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-06",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-06.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-06.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-07",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-07.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-07.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-07",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-07.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-07.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-08",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-08.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-08.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-08",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-08.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-08.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-09",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-09.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-09.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-09",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-09.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-09.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-10",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-10.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-10.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-10",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-10.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-10.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-11",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-11.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-11.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-11",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-11.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-11.zip.CHECKSUM"
+    },
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2025-12",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MICROSECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-12.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-12.zip.CHECKSUM"
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2025-12",
+      "partition_role": "VALIDATION",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2025-12.zip.CHECKSUM"
+    }
+  ],
+  "target_manifest_hash": "9d844fa8c80ecf3c650dd42e8d716bef7acfed3f62107acc880805885b4270fe",
+  "maximum_unique_checksum_urls": 144,
+  "maximum_http_attempts": 432,
+  "maximum_checksum_response_bytes": 512,
+  "request_timeout_seconds": 30,
+  "maximum_retries": 2,
+  "retry_backoff_seconds": [
+    1,
+    3
+  ],
+  "maximum_concurrency": 4,
+  "required_present_target_count": 144,
+  "required_paired_month_count": 72,
+  "permitted_http_statuses": [
+    200,
+    404
+  ],
+  "checksum_get_requests_permitted": true,
+  "archive_head_requests_permitted": false,
+  "archive_payload_requests_permitted": false,
+  "market_numeric_values_permitted": false,
+  "parameter_definition_permitted": false,
+  "strategy_outcomes_permitted": false,
+  "validation_outcomes_permitted": false,
+  "holdout_access_permitted": false,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_testnet_strategy_order_eligibility": false,
+  "creates_live_eligibility": false,
+  "limitations": [
+    "Only the 144 frozen Binance checksum URLs may receive GET requests.",
+    "No archive HEAD or ZIP payload request is permitted by this contract.",
+    "Checksum text proves publication identity, not payload quality or edge.",
+    "The schema and timestamp register is documentary and awaits payload proof.",
+    "No price, quantity, side, signal, trade, PnL, or return may be inspected.",
+    "All 144 targets and all 72 paired months must be present to pass.",
+    "A pass permits only a separately frozen one-month paired payload protocol.",
+    "No candidate, Pine, paper, Testnet strategy-order, production, or live authority is created."
+  ],
+  "contract_evidence_hash": "841caf8e7dc20d21722247759f9804f5f896ac5936c40d8000467a96a03acb90"
+}

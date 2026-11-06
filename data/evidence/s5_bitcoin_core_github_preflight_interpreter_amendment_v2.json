@@ -1,0 +1,62 @@
+{
+  "schema_version": "aurex-s5-github-preflight-interpreter-amendment-v2",
+  "amendment_id": "s5-github-preflight-interpreter-amendment-v2",
+  "frozen_at": "2026-09-02T15:55:21.893669Z",
+  "status": "FROZEN_LOCAL_INTERPRETER_AMENDMENT_ZERO_NETWORK",
+  "builder_contract_hash": "e6ecc9441ee15eb3c175f6344a66fe966d4078a3652f0c962f8d6b0a56ce1f01",
+  "failure_audit_evidence_hash": "ffaf4571bafcdac3d4771e59a8a8905178a7e16cf0863b7199dbc7de805bb093",
+  "prior_result_evidence_hash": "08984a1bd4f5c01fb1d062a5b5bb6b0cea4a3829b27d06dfab216314b53035e3",
+  "prior_result_audit_evidence_hash": "f015c24de0ed4dbdd65b49b96ff8bd6aa8e2c7f3ed0ff7917eed56530f8af291",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_preflight_failure_audit_v1.json",
+      "file_sha256": "c00c5ffb7c0272a5687949ed1bda2757871d75dbff65e5f8e92962b8dc923a76"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_preflight_result_audit_v1.json",
+      "file_sha256": "c06fbb9bb776840d915566fab93865687f6d3343db592bb6b78e60189ec12451"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_preflight_result_v1.json",
+      "file_sha256": "8694fd28d997063df04dd98708f3f83ccbffc19ee8c388c2fc22aaa524ad3b18"
+    }
+  ],
+  "permitted_link_paths": [
+    "/repos/bitcoin/bitcoin/pulls",
+    "/repositories/1181927/pulls"
+  ],
+  "canonical_repository_id": 1181927,
+  "prior_required_identity_field": "merge_commit_sha",
+  "corrected_required_identity_field": "head.sha",
+  "identity_consistency_rule": "MATCH_API_HEAD_SHA_TO_ACCEPTED_MERGE_SECOND_PARENT_SHA_OR_FAIL_AMBIGUOUS",
+  "merged_at_null_for_unmerged_record_permitted": true,
+  "merge_commit_sha_absence_in_list_record_permitted": true,
+  "request_url_unchanged": true,
+  "request_headers_unchanged": true,
+  "response_body_unchanged": true,
+  "protocol_gate_ids_unchanged": true,
+  "maximum_local_revalidation_count": 1,
+  "additional_network_requests_permitted": 0,
+  "credential_access_permitted": false,
+  "market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "candidates_permitted": false,
+  "orders_permitted": false,
+  "decision": "AMEND_LINK_AND_LIST_IDENTITY_INTERPRETATION_WITH_ZERO_ADDITIONAL_REQUESTS",
+  "next_authorization": "RUN_S5_GITHUB_PREFLIGHT_LOCAL_REVALIDATION_V2_ONCE",
+  "limitations": [
+    "A later bulk mapper must match head.sha to a merge second parent or fail closed.",
+    "A null merged_at is valid for a closed but unmerged pull request.",
+    "No BTC value, parameter, return, candidate, signal, or order is permitted.",
+    "No paper, Testnet strategy, production, live, real-capital, or profit authority is created.",
+    "No request replay, new response, credential, or token access is permitted.",
+    "Protocol gate identities, request scope, body bytes, and limits remain unchanged.",
+    "The correction cannot establish source completeness or predictive edge.",
+    "The numeric Link path is accepted only for canonical repository ID 1181927.",
+    "The original one-request STOP remains immutable and is not relabeled.",
+    "This amendment permits one local interpretation of the preserved response.",
+    "head.sha replaces the absent list-level merge_commit_sha identity field."
+  ],
+  "amendment_evidence_hash": "49d5be7ee08ea89e83295cb206f0992681e2d6d559c497b9a34554fea377b3db"
+}

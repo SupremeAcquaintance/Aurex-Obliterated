@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-s2-btc-source-acquisition-protocol-audit-v1",
+  "audit_id": "s2-btc-source-acquisition-protocol-audit-v1",
+  "audited_at": "2026-08-30T15:10:25.912674Z",
+  "protocol_file_sha256": "04dc11b54bbc6c5af8be3d54902fd5b1ebade3f6174b75cfbdfa873faeb76bfd",
+  "protocol_evidence_hash": "a8d07b3ff6395ad5d08b9c50638c6d1b01453073d9392000d8583fd2be5b5610",
+  "builder_contract_hash": "9444124843800b5d269723d3478a0510dce0db669439ca5a697b196975a6aca4",
+  "preregistration_evidence_hash": "5d6cd308ad31cfc22588760c8890b97d49bcce95682bcb563397fe19acfa7a6c",
+  "preregistration_audit_evidence_hash": "d71184f3b0bd674f8a55750c174e01a23c9d76c7882d4d6c111c37ff92aa67c9",
+  "auditor_contract_hash": "28b6dfc86dfe330f3fabf22d2e96eefd6830bf35d17c8e676f39905bd1c06716",
+  "target_count": 273,
+  "first_activation_date": "2017-10-16",
+  "last_activation_date": "2023-01-02",
+  "network_requests_observed": 0,
+  "payload_bytes_observed": 0,
+  "btc_market_values_read": 0,
+  "returns_calculated": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S2_BTC_SOURCE_ACQUISITION_PROTOCOL_AUDIT",
+  "next_authorization": "AUTHORIZE_S2_BTCUSDT_MONDAY_1H_SOURCE_ACQUISITION_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "362ab972301087a05635b7cc43ec929c0b0dca1e2b8d76de7e725ad2ee0f7eb4"
+}

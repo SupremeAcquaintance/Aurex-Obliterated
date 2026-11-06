@@ -1,0 +1,21 @@
+{
+  "schema_version": "aurex-s5-bitcoin-core-history-payload-protocol-audit-v1",
+  "audit_id": "s5-bitcoin-core-history-payload-protocol-audit-v1",
+  "audited_at": "2026-09-01T22:19:19.754506Z",
+  "protocol_path": "data/evidence/s5_bitcoin_core_history_payload_protocol_v1.json",
+  "protocol_file_sha256": "676f189b1a8df713b8704ba4eaa3c7c5627790d9bff2bed86b8e756624c1c93f",
+  "protocol_evidence_hash": "e23a6368563bd45908f9e89fa14c15f37778a5ce276908aef5fe363d73b2b2b5",
+  "builder_contract_hash": "371e5afe3610b31e9654e64f88e26b99555305414390f710510b559030ebab7c",
+  "auditor_contract_hash": "2d622db9291b5e8e296b39f4e9fdf96d74dedeede6840082b7520c690abd9aac",
+  "reconstructed_exactly": true,
+  "source_binding_count": 8,
+  "gate_count": 14,
+  "planned_network_process_count": 1,
+  "history_access_observed": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_BITCOIN_CORE_HISTORY_PAYLOAD_PROTOCOL_AUDIT",
+  "next_authorization": "RUN_S5_BITCOIN_CORE_HISTORY_PAYLOAD_ONCE",
+  "audit_evidence_hash": "9de05f97359ff82f0fe17f870b623e7c05f0b2dce17f39d7b04c67098a162775"
+}

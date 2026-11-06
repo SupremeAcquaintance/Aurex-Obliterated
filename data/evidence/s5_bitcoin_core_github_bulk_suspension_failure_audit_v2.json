@@ -1,0 +1,84 @@
+{
+  "schema_version": "aurex-s5-github-bulk-suspension-failure-audit-v2",
+  "audit_id": "s5-github-bulk-suspension-failure-audit-v2",
+  "audited_at": "2026-09-03T13:53:50.289029Z",
+  "auditor_contract_hash": "55210e7cc764209031d8d7f6336bab7d1d2faa72a4ac35e003fcea696c67011c",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_v1.json",
+      "file_sha256": "2a3c084d57223628228e895f584bc4cb0f7bdf85e52155c4257b9c6a22e79330"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_response_handling_amendment_audit_v2.json",
+      "file_sha256": "5f242a3b3021d1d852fdafb60d538a9cc0f9d759c76596a03a3e37c9007eebcf"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_response_handling_amendment_v2.json",
+      "file_sha256": "c2783c27a986cf360a9f7bd0e66f0c185c868ac0ec2c362ed0cd965c5c22ef45"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v2.json",
+      "file_sha256": "ecac60bb6c8f630b9f13ffa0bae363d106b2d7c37812cc9765b9c4cb7a111c59"
+    },
+    {
+      "path": "data/evidence/s5_github_pull_metadata_bulk_v1/failure_v2_page_0118.json",
+      "file_sha256": "51a4a21b7784fa0831a48a2cdc10709e251315d952659ad5f887775755497403"
+    },
+    {
+      "path": "scripts/run_s5_bitcoin_core_github_bulk_acquisition_v2.py",
+      "file_sha256": "a5e41abfee77c2f223452ecf41ccc745059366d3de0f115a83b657c0468e558b"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_github_bulk_correction.py",
+      "file_sha256": "c5af10b6d8774f47626addf8bf0f50009bad3a32235d6e237c9157a9ef8db72b"
+    }
+  ],
+  "protocol_evidence_hash": "ee1564712af978eddd0081fe7ede7fb19dd275fc2f04e7a19306160f8b3174f5",
+  "response_amendment_evidence_hash": "b5788d7ff5c2aa582a228625dd9dcd8dbc2a20a263e598f7b146ae8a683c7499",
+  "response_amendment_audit_evidence_hash": "06d9be9468a63ca72c1c5d3afc82615806405df3ccd57287708738bfd5e4e5fe",
+  "prior_result_evidence_hash": "1ea0cbe722ee25db4b766e3c955f0fcb2b3ff42ef8d91de35894f3e659275f85",
+  "prior_result_file_sha256": "ecac60bb6c8f630b9f13ffa0bae363d106b2d7c37812cc9765b9c4cb7a111c59",
+  "failure_artifact_file_sha256": "51a4a21b7784fa0831a48a2cdc10709e251315d952659ad5f887775755497403",
+  "prior_runner_contract_hash": "a11702cbf6cad6c1e3b59535877b75db560d828ca886b31be1cdb589a39bc8ee",
+  "original_failed_request_attempt_count": 1,
+  "corrected_v2_request_attempt_count": 117,
+  "total_request_attempt_count": 118,
+  "maximum_total_request_attempts": 300,
+  "remaining_request_attempt_capacity": 182,
+  "successful_page_count": 117,
+  "raw_record_count": 11700,
+  "terminal_page_count": 244,
+  "next_required_page": 118,
+  "page_file_hashes_reverified": true,
+  "response_body_hashes_reverified": true,
+  "page_118_request_attempted": false,
+  "failure_artifact_http_status_captured": false,
+  "failure_artifact_response_bytes": 0,
+  "local_error_type": "ValueError",
+  "local_error_message": "S5 GitHub bulk v2 exceeded the frozen elapsed-time bound",
+  "original_cohort_cutoff_preserved": true,
+  "contiguous_resume_feasible": true,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "adjudication": "HOST_SUSPENSION_EXCEEDED_RUN_DURATION_ZERO_PAGE_118_REQUEST_PAGES_1_TO_117_VALID",
+  "next_authorization": "FREEZE_S5_GITHUB_BULK_CONTIGUOUS_RESUME_AMENDMENT_V3_ONLY",
+  "limitations": [
+    "A new process clock may resume only from page 118.",
+    "No BTC value, parameter, return, candidate, signal, or order was accessed.",
+    "No credential, token, proxy, redirect, or concurrency is permitted.",
+    "No page-118 network request was made after the stale wait completed.",
+    "No paper, Testnet strategy, production, live, or real-capital authority exists.",
+    "No prior page may be requested again.",
+    "Pages 1 through 117 and their response hashes reverify exactly.",
+    "Source completeness, predictive edge, and profit remain unestablished.",
+    "The first failed request and all 117 v2 requests count toward the ceiling.",
+    "The host suspension caused the process clock to exceed the 12-hour bound.",
+    "The original cohort cutoff, endpoint, query, and page files remain unchanged.",
+    "The remaining 182-request capacity is greater than the 127-page minimum."
+  ],
+  "audit_evidence_hash": "925d5edb0a719596977699b8d549ccef4029fe5bdbc3aa3ff184d0f001be1841"
+}

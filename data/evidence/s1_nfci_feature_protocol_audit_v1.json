@@ -1,0 +1,21 @@
+{
+  "schema_version": "aurex-s1-nfci-feature-protocol-audit-v1",
+  "audit_id": "s1-nfci-feature-protocol-audit-v1",
+  "audited_at": "2026-08-26T20:13:11.310891Z",
+  "protocol_file_sha256": "249109ba28d59e2403282354cc08b86c15fa9fbbf313cf534fecd855603ec33b",
+  "protocol_evidence_hash": "d2ecbea9b31bc07e0cfec0901f3f262a1dd7e358148ec5e317ea972b51c16ce0",
+  "builder_contract_hash": "81d1b55821dce7fde3e352817fb382097071c86a4a737ab259f6d4e4a9415845",
+  "normalization_result_evidence_hash": "d9816fce4035ec50368eb1d0541f287ea261b9f64c5dee779fc671a998d07f4c",
+  "normalization_audit_evidence_hash": "5070de85bafb6b657055d4e89e49927b2494c1a3116c700edac5d28bfc67e58d",
+  "normalized_dataset_file_sha256": "789829ee9a9b84de528507c660c7abdcd5bd34a3c4a5d9cae1a46b7cd2ac927b",
+  "input_row_manifest_evidence_hash": "ec984b29fb4b179c744bb265eb282f603d1a29911f3198776e1bb01f64ffd82f",
+  "auditor_source_sha256": "d8cd36a052ffc7e2802435c447d5f011fd7b293a55b326a74d538157c8142da6",
+  "normalized_dataset_payload_bytes_hashed": 107885,
+  "normalized_value_rows_parsed": 0,
+  "feature_count": 3,
+  "expected_feature_row_count": 277,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_NFCI_FEATURE_PROTOCOL_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_NFCI_DEVELOPMENT_FEATURE_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "2a1486c2ab3c9c5be5b3cc07a905ad3bcba6f4a961988cf3023f2797526acd8f"
+}

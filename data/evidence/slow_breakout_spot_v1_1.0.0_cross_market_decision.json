@@ -1,0 +1,2047 @@
+{
+  "artifact_evidence_hash": "ce8ce41c25e8dff811db44bf8fe8a77af8d920f67c811be8b6fd403154a95c82",
+  "artifact_schema_version": "aurex-holdout-campaign-artifact-v1",
+  "completed_at": "2026-07-22T12:08:32.543335+00:00",
+  "cross_market_decision": {
+    "candidate_eligible_for_paper": false,
+    "candidate_eligible_for_parity": false,
+    "combined": {
+      "expectancy": "0.9851989271423696031857516075",
+      "gross_loss": "149.8718116079088220623103297",
+      "gross_profit": "254.302897885",
+      "gross_profit_shares": {
+        "ETHUSDT": "0.491952150291950260368540039",
+        "SOLUSDT": "0.508047849708049739631459961"
+      },
+      "profit_factor": "1.696802721984180574200674385",
+      "stress_150_percent_net_pl": "101.2307933085376283684206134",
+      "total_net_pl": "104.4310862770911779376896704",
+      "total_trades": 106
+    },
+    "decision_evidence_hash": "b1214ceb3e2f6ef416d0ef83b27e93e331afa5ff59c3201680f5e8013c9bd4d3",
+    "gates": {
+      "both_individual_validations_must_pass": true,
+      "max_single_symbol_gross_profit_share": "0.7",
+      "min_combined_profit_factor": "1.15",
+      "require_combined_positive_expectancy": true,
+      "require_combined_positive_stress_150_percent_net": true,
+      "require_each_symbol_nonnegative_base_net": true,
+      "required_binding_checks_must_pass": [
+        "backtest_end",
+        "backtest_start",
+        "commission_percent",
+        "dataset_integrity",
+        "minimum_contract",
+        "parameters",
+        "point_value",
+        "protocol_integrity",
+        "protocol_registered_before_reference_replay",
+        "reference_replay_integrity",
+        "risk_per_trade",
+        "slippage_ticks",
+        "strategy",
+        "strategy_version",
+        "symbol",
+        "tick_size",
+        "timeframe"
+      ]
+    },
+    "markets": [
+      {
+        "binding_checks_passed": true,
+        "gross_loss": "80.41844586942023438635231593",
+        "gross_profit": "125.10485744",
+        "individual_validation_passed": false,
+        "protocol_id": "ff612386-ffa3-41e8-a332-1565d8d46495",
+        "reference_replay_run_id": "0bbe94e9-4596-41f0-9889-e21ab26085e7",
+        "required_bindings_present": true,
+        "stress_150_percent_net_pl": "43.18690830555460809348419041",
+        "symbol": "ETHUSDT",
+        "total_net_pl": "44.68641157057976561364768409",
+        "total_trades": 53,
+        "validation_evidence_hash": "238aacc86272b3f945ecc59f8d7e31cecde5f643ac237e25de9066fdc227c515"
+      },
+      {
+        "binding_checks_passed": true,
+        "gross_loss": "69.45336573848858767595801373",
+        "gross_profit": "129.198040445",
+        "individual_validation_passed": false,
+        "protocol_id": "080084a0-d1b2-435b-ad9b-bd294a9bf603",
+        "reference_replay_run_id": "97700413-7a29-4dff-aa7c-aab086e8c1b1",
+        "required_bindings_present": true,
+        "stress_150_percent_net_pl": "58.04388500298302027493642302",
+        "symbol": "SOLUSDT",
+        "total_net_pl": "59.74467470651141232404198627",
+        "total_trades": 53,
+        "validation_evidence_hash": "9f0ce8605f461a019fd1d43d636b1adeae898d1c38060c3bd6258f1bb12289d3"
+      }
+    ],
+    "reasons": [
+      "ETHUSDT:individual_validation_failed",
+      "SOLUSDT:individual_validation_failed"
+    ],
+    "schema_version": "aurex-slow-breakout-spot-cross-market-decision-v1",
+    "status": "REJECT",
+    "strategy": "slow_breakout_spot_v1",
+    "strategy_version": "1.0.0",
+    "symbols": [
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  "execution_spec_retrieved_at": "2026-07-22T11:46:00Z",
+  "execution_spec_source": "https://data-api.binance.vision/api/v3/exchangeInfo",
+  "holdouts": [
+    {
+      "pine_source_sha256": "2312c6ce75b79b691bfa3542e4d44221a917f2efdeb0853408d93b5e1a099f16",
+      "protocol_hash": "66045e3554a0dd3a9db47e71dcedccb83624610b1dd2d7676480b16e47be8c67",
+      "protocol_id": "ff612386-ffa3-41e8-a332-1565d8d46495",
+      "protocol_registered_at": "2026-07-22 11:49:17.484902",
+      "request": {
+        "commission_percent": "0.05",
+        "dataset_id": "287e1cca-27d9-4308-8ae7-458d563d4867",
+        "intrabar_policy": "stop_first",
+        "minimum_contract": "0.0001",
+        "parameters": {
+          "atr_length": 20,
+          "atr_stop_multiplier": "3.0",
+          "backtest_end": "2026-07-01T00:00:00Z",
+          "backtest_start": "2023-02-01T00:00:00Z",
+          "enable_long": true,
+          "entry_channel_length": 55,
+          "exit_channel_length": 20,
+          "initial_capital": "1000",
+          "max_position_value_percent": "50.0",
+          "risk_per_trade_percent": "0.25"
+        },
+        "point_value": "1",
+        "slippage_ticks": 2,
+        "strategy": "slow_breakout_spot_v1",
+        "strategy_version": "1.0.0",
+        "tick_size": "0.01"
+      },
+      "request_hash": "bd4a8762f5e8f8eca0ab399eabc83f5d438f7ca5d8c21f37a949bf8f9817ce11",
+      "symbol": "ETHUSDT",
+      "walk_forward_plan_hash": "0ddadf63cf5c94d396b0e3020e1a75080727d1972d123b5c657526c6e556de6e"
+    },
+    {
+      "pine_source_sha256": "2312c6ce75b79b691bfa3542e4d44221a917f2efdeb0853408d93b5e1a099f16",
+      "protocol_hash": "af79109cc893bc08550993e0c1375f905b92873cfaa35a2c2afab1c7f8fdc987",
+      "protocol_id": "080084a0-d1b2-435b-ad9b-bd294a9bf603",
+      "protocol_registered_at": "2026-07-22 11:49:17.559446",
+      "request": {
+        "commission_percent": "0.05",
+        "dataset_id": "411799dd-1e55-4b97-ba7b-b6952146ecb5",
+        "intrabar_policy": "stop_first",
+        "minimum_contract": "0.001",
+        "parameters": {
+          "atr_length": 20,
+          "atr_stop_multiplier": "3.0",
+          "backtest_end": "2026-07-01T00:00:00Z",
+          "backtest_start": "2023-02-01T00:00:00Z",
+          "enable_long": true,
+          "entry_channel_length": 55,
+          "exit_channel_length": 20,
+          "initial_capital": "1000",
+          "max_position_value_percent": "50.0",
+          "risk_per_trade_percent": "0.25"
+        },
+        "point_value": "1",
+        "slippage_ticks": 2,
+        "strategy": "slow_breakout_spot_v1",
+        "strategy_version": "1.0.0",
+        "tick_size": "0.01"
+      },
+      "request_hash": "2c5175f7a5ac26b78f07615c5952f3d2091fd5ffb423ba5f6cdf09d386b7a145",
+      "symbol": "SOLUSDT",
+      "walk_forward_plan_hash": "0ddadf63cf5c94d396b0e3020e1a75080727d1972d123b5c657526c6e556de6e"
+    }
+  ],
+  "replay_audits": [
+    {
+      "checked_at": "2026-07-22T12:08:30.230588Z",
+      "current_record_evidence_hash": "a46f60db5d87282e9174a034e6a02d6c53474eb9d49488dda6d25cfa00245186",
+      "dataset_evidence_hash_matches": true,
+      "engine_evidence_hash_matches": true,
+      "reasons": [],
+      "record_evidence_hash_matches": true,
+      "reference_replay_run_id": "0bbe94e9-4596-41f0-9889-e21ab26085e7",
+      "replayed_engine_evidence_hash": "b7f5ea043f07abed2a485963cc350e7cc551703e55bdfb1eeb1fecae5c2de5dc",
+      "result_snapshot_matches": true,
+      "status": "PASS",
+      "stored_engine_evidence_hash": "b7f5ea043f07abed2a485963cc350e7cc551703e55bdfb1eeb1fecae5c2de5dc",
+      "stored_record_evidence_hash": "a46f60db5d87282e9174a034e6a02d6c53474eb9d49488dda6d25cfa00245186"
+    },
+    {
+      "checked_at": "2026-07-22T12:08:30.830856Z",
+      "current_record_evidence_hash": "19c8bd18650f96f0ddb2dd3a0c6b4b21522a1c6da8f5ba335b3e2c2a469e6836",
+      "dataset_evidence_hash_matches": true,
+      "engine_evidence_hash_matches": true,
+      "reasons": [],
+      "record_evidence_hash_matches": true,
+      "reference_replay_run_id": "97700413-7a29-4dff-aa7c-aab086e8c1b1",
+      "replayed_engine_evidence_hash": "13a4d6a4b2ea0de3ddcb1b08b6d5e7040972c35741ab99cad40570a813575866",
+      "result_snapshot_matches": true,
+      "status": "PASS",
+      "stored_engine_evidence_hash": "13a4d6a4b2ea0de3ddcb1b08b6d5e7040972c35741ab99cad40570a813575866",
+      "stored_record_evidence_hash": "19c8bd18650f96f0ddb2dd3a0c6b4b21522a1c6da8f5ba335b3e2c2a469e6836"
+    }
+  ],
+  "replays": [
+    {
+      "engine_evidence_hash": "b7f5ea043f07abed2a485963cc350e7cc551703e55bdfb1eeb1fecae5c2de5dc",
+      "record_evidence_hash": "a46f60db5d87282e9174a034e6a02d6c53474eb9d49488dda6d25cfa00245186",
+      "record_id": "0bbe94e9-4596-41f0-9889-e21ab26085e7",
+      "reused_existing": false,
+      "symbol": "ETHUSDT"
+    },
+    {
+      "engine_evidence_hash": "13a4d6a4b2ea0de3ddcb1b08b6d5e7040972c35741ab99cad40570a813575866",
+      "record_evidence_hash": "19c8bd18650f96f0ddb2dd3a0c6b4b21522a1c6da8f5ba335b3e2c2a469e6836",
+      "record_id": "97700413-7a29-4dff-aa7c-aab086e8c1b1",
+      "reused_existing": false,
+      "symbol": "SOLUSDT"
+    }
+  ],
+  "started_at": "2026-07-22T12:08:25.770130+00:00",
+  "strategy": "slow_breakout_spot_v1",
+  "strategy_version": "1.0.0",
+  "validation_audits": [
+    {
+      "checked_at": "2026-07-22T12:08:31.652342Z",
+      "current_validation_evidence_hash": "238aacc86272b3f945ecc59f8d7e31cecde5f643ac237e25de9066fdc227c515",
+      "evaluation_matches": true,
+      "reasons": [],
+      "record_evidence_hash_matches": true,
+      "reference_replay_validation_id": "efa5db06-08f9-4344-8869-294cdca54d38",
+      "replayed_validation_evidence_hash": "238aacc86272b3f945ecc59f8d7e31cecde5f643ac237e25de9066fdc227c515",
+      "source_evidence_matches": true,
+      "status": "PASS",
+      "stored_validation_evidence_hash": "238aacc86272b3f945ecc59f8d7e31cecde5f643ac237e25de9066fdc227c515"
+    },
+    {
+      "checked_at": "2026-07-22T12:08:32.542336Z",
+      "current_validation_evidence_hash": "9f0ce8605f461a019fd1d43d636b1adeae898d1c38060c3bd6258f1bb12289d3",
+      "evaluation_matches": true,
+      "reasons": [],
+      "record_evidence_hash_matches": true,
+      "reference_replay_validation_id": "9ea9e6dd-61d1-4e4e-a1d6-f15cfb899d72",
+      "replayed_validation_evidence_hash": "9f0ce8605f461a019fd1d43d636b1adeae898d1c38060c3bd6258f1bb12289d3",
+      "source_evidence_matches": true,
+      "status": "PASS",
+      "stored_validation_evidence_hash": "9f0ce8605f461a019fd1d43d636b1adeae898d1c38060c3bd6258f1bb12289d3"
+    }
+  ],
+  "validations": [
+    {
+      "acceptance_reasons": [
+        "Walk-forward pass rate 0.2 below minimum 0.66"
+      ],
+      "acceptance_snapshot": {
+        "max_drawdown": "100",
+        "max_single_day_trade_share": "0.25",
+        "min_active_trading_days": 15,
+        "min_out_of_sample_profit_factor": "1.15",
+        "min_out_of_sample_trades": 10,
+        "min_profit_factor": "1.15",
+        "min_trades": 25,
+        "min_walk_forward_pass_rate": "0.66",
+        "min_walk_forward_trades_per_window": 5,
+        "min_walk_forward_windows": 3,
+        "require_cost_model": true,
+        "require_market_regime_breakdown": true,
+        "require_out_of_sample_metrics": true,
+        "require_out_of_sample_positive_expectancy": true,
+        "require_positive_expectancy": true,
+        "require_risk_snapshot": true,
+        "require_sample_windows": true,
+        "require_slippage_model": true,
+        "require_trade_dates": true,
+        "require_walk_forward_validation": true
+      },
+      "binding_checks": [
+        {
+          "expected": "PASS",
+          "name": "reference_replay_integrity",
+          "observed": "PASS",
+          "status": "PASS"
+        },
+        {
+          "expected": "PASS",
+          "name": "dataset_integrity",
+          "observed": "PASS",
+          "status": "PASS"
+        },
+        {
+          "expected": "66045e3554a0dd3a9db47e71dcedccb83624610b1dd2d7676480b16e47be8c67",
+          "name": "protocol_integrity",
+          "observed": "66045e3554a0dd3a9db47e71dcedccb83624610b1dd2d7676480b16e47be8c67",
+          "status": "PASS"
+        },
+        {
+          "expected": "slow_breakout_spot_v1",
+          "name": "strategy",
+          "observed": "slow_breakout_spot_v1",
+          "status": "PASS"
+        },
+        {
+          "expected": "1.0.0",
+          "name": "strategy_version",
+          "observed": "1.0.0",
+          "status": "PASS"
+        },
+        {
+          "expected": [
+            "ETHUSDT"
+          ],
+          "name": "symbol",
+          "observed": "ETHUSDT",
+          "status": "PASS"
+        },
+        {
+          "expected": "4h",
+          "name": "timeframe",
+          "observed": "4h",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "atr_length": 20,
+            "atr_stop_multiplier": "3.0",
+            "backtest_end": "2026-07-01T00:00:00Z",
+            "backtest_start": "2023-02-01T00:00:00Z",
+            "enable_long": true,
+            "entry_channel_length": 55,
+            "exit_channel_length": 20,
+            "initial_capital": "1000",
+            "max_position_value_percent": "50.0",
+            "risk_per_trade_percent": "0.25"
+          },
+          "name": "parameters",
+          "observed": {
+            "atr_length": 20,
+            "atr_stop_multiplier": "3.0",
+            "backtest_end": "2026-07-01T00:00:00Z",
+            "backtest_start": "2023-02-01T00:00:00Z",
+            "enable_long": true,
+            "entry_channel_length": 55,
+            "exit_channel_length": 20,
+            "initial_capital": "1000",
+            "max_position_value_percent": "50.0",
+            "risk_per_trade_percent": "0.25"
+          },
+          "status": "PASS"
+        },
+        {
+          "expected": "2023-02-01T00:00:00+00:00",
+          "name": "backtest_start",
+          "observed": "2023-02-01T00:00:00Z",
+          "status": "PASS"
+        },
+        {
+          "expected": "2026-07-01T00:00:00+00:00",
+          "name": "backtest_end",
+          "observed": "2026-07-01T00:00:00Z",
+          "status": "PASS"
+        },
+        {
+          "expected": "0.05",
+          "name": "commission_percent",
+          "observed": "0.05",
+          "status": "PASS"
+        },
+        {
+          "expected": "2",
+          "name": "slippage_ticks",
+          "observed": 2,
+          "status": "PASS"
+        },
+        {
+          "expected": "0.0025",
+          "name": "risk_per_trade",
+          "observed": "0.25",
+          "status": "PASS"
+        },
+        {
+          "expected": "0.01",
+          "name": "tick_size",
+          "observed": "0.01",
+          "status": "PASS"
+        },
+        {
+          "expected": "1",
+          "name": "point_value",
+          "observed": "1",
+          "status": "PASS"
+        },
+        {
+          "expected": "0.0001",
+          "name": "minimum_contract",
+          "observed": "0.0001",
+          "status": "PASS"
+        },
+        {
+          "expected": "no later than 2026-07-22T12:08:26.595713+00:00",
+          "name": "protocol_registered_before_reference_replay",
+          "observed": "2026-07-22T11:49:17.484902+00:00",
+          "status": "PASS"
+        },
+        {
+          "expected": "21.77901580456199218566653583",
+          "name": "reference_replay_max_drawdown",
+          "observed": "21.77901580456199218566653583",
+          "status": "PASS"
+        },
+        {
+          "expected": "all_base_case_metrics_match",
+          "name": "reference_replay_cost_decomposition",
+          "observed": {
+            "expectancy": true,
+            "max_drawdown": true,
+            "profit_factor": true,
+            "total_net_pl": true
+          },
+          "status": "PASS"
+        }
+      ],
+      "checked_at": "2026-07-22T12:08:28.736800Z",
+      "comparison_only": true,
+      "dataset_evidence_hash": "41acac572e4669b12af1cc477aff8ede82d792ecdce12fd670af135fdaefd12b",
+      "dataset_id": "287e1cca-27d9-4308-8ae7-458d563d4867",
+      "engine_evidence_hash": "b7f5ea043f07abed2a485963cc350e7cc551703e55bdfb1eeb1fecae5c2de5dc",
+      "evaluator_version": "reference-replay-validation-v1.2.0",
+      "id": "efa5db06-08f9-4344-8869-294cdca54d38",
+      "immutable": true,
+      "metrics_snapshot": {
+        "average_loss": "2.297669881983435268181494741",
+        "average_win": "6.950269857777777777777777778",
+        "breakeven": 0,
+        "cost_evidence": {
+          "cost_model_declared": true,
+          "fees_missing_count": 0,
+          "fees_provided_count": 53,
+          "missing_trade_costs_are_not_assumed_zero": true,
+          "realized_pl_semantics": "reported_net_pl",
+          "slippage_missing_count": 0,
+          "slippage_model_declared": true,
+          "slippage_provided_count": 53,
+          "trade_count": 53
+        },
+        "cost_sensitivity": {
+          "base_case_matches_reference_replay": true,
+          "base_case_reference_comparison": {
+            "expectancy": true,
+            "max_drawdown": true,
+            "profit_factor": true,
+            "total_net_pl": true
+          },
+          "base_fee_cost": "2.948426530050315040326987338",
+          "base_slippage_cost": "0.050580",
+          "gross_before_modeled_costs": "47.68541810063008065397467138",
+          "market_impact_modeled": false,
+          "method": "fixed_trade_path_linear_monetary_cost_multipliers",
+          "position_quantities_held_constant": true,
+          "scenarios": [
+            {
+              "commission_multiplier": "0",
+              "expectancy": "0.899724869823209068942918327",
+              "fee_cost": "0E-27",
+              "gross_before_modeled_costs": "47.68541810063008065397467138",
+              "max_drawdown": "20.91707112228059646885853874",
+              "name": "zero_cost_upper_bound",
+              "profit_factor": "1.607537100994784872946318101",
+              "profitable": true,
+              "slippage_cost": "0.000000",
+              "slippage_multiplier": "0",
+              "total_modeled_cost": "0E-27",
+              "total_net_pl": "47.68541810063008065397467138"
+            },
+            {
+              "commission_multiplier": "0.5",
+              "expectancy": "0.871432355388772134600210901",
+              "fee_cost": "1.474213265025157520163493669",
+              "gross_before_modeled_costs": "47.68541810063008065397467138",
+              "max_drawdown": "21.31344003812991664594309076",
+              "name": "half_cost",
+              "profit_factor": "1.581290634510429725107569464",
+              "profitable": true,
+              "slippage_cost": "0.0252900",
+              "slippage_multiplier": "0.5",
+              "total_modeled_cost": "1.499503265025157520163493669",
+              "total_net_pl": "46.18591483560492313381117773"
+            },
+            {
+              "commission_multiplier": "1",
+              "expectancy": "0.843139840954335200257503473",
+              "fee_cost": "2.948426530050315040326987338",
+              "gross_before_modeled_costs": "47.68541810063008065397467138",
+              "max_drawdown": "21.77901580456199218566653583",
+              "name": "base_case",
+              "profit_factor": "1.555673652822631028668550504",
+              "profitable": true,
+              "slippage_cost": "0.050580",
+              "slippage_multiplier": "1",
+              "total_modeled_cost": "2.999006530050315040326987338",
+              "total_net_pl": "44.68641157057976561364768409"
+            },
+            {
+              "commission_multiplier": "1.5",
+              "expectancy": "0.814847326519898265914796045",
+              "fee_cost": "4.422639795075472560490481007",
+              "gross_before_modeled_costs": "47.68541810063008065397467138",
+              "max_drawdown": "22.24459157099406772538998093",
+              "name": "stress_150_percent",
+              "profit_factor": "1.530663778310465354978554576",
+              "profitable": true,
+              "slippage_cost": "0.0758700",
+              "slippage_multiplier": "1.5",
+              "total_modeled_cost": "4.498509795075472560490481007",
+              "total_net_pl": "43.18690830555460809348419041"
+            },
+            {
+              "commission_multiplier": "2",
+              "expectancy": "0.786554812085461331572088618",
+              "fee_cost": "5.896853060100630080653974676",
+              "gross_before_modeled_costs": "47.68541810063008065397467138",
+              "max_drawdown": "22.71016733742614326511342601",
+              "name": "stress_200_percent",
+              "profit_factor": "1.506134765111987852856061920",
+              "profitable": true,
+              "slippage_cost": "0.101160",
+              "slippage_multiplier": "2",
+              "total_modeled_cost": "5.998013060100630080653974676",
+              "total_net_pl": "41.68740504052945057332069675"
+            }
+          ],
+          "trade_count": 53,
+          "trade_path_held_constant": true
+        },
+        "drawdown_evidence": {
+          "matches_reference_replay": true,
+          "method": "cumulative_realized_pl_from_each_evaluation_segment_start",
+          "post_trade_account_equity_used": false,
+          "reference_replay_max_drawdown": "21.77901580456199218566653583",
+          "validation_max_drawdown": "21.77901580456199218566653583"
+        },
+        "equity_curve": [
+          {
+            "drawdown": "1.472054418",
+            "equity": "-1.472054418",
+            "index": "1",
+            "realized_pl": "-1.472054418"
+          },
+          {
+            "drawdown": "4.007418162685359706632586713",
+            "equity": "-4.007418162685359706632586713",
+            "index": "2",
+            "realized_pl": "-2.535363744685359706632586713"
+          },
+          {
+            "drawdown": "2.928232426685359706632586713",
+            "equity": "-2.928232426685359706632586713",
+            "index": "3",
+            "realized_pl": "1.079185736"
+          },
+          {
+            "drawdown": "3.848752306685359706632586713",
+            "equity": "-3.848752306685359706632586713",
+            "index": "4",
+            "realized_pl": "-0.920519880"
+          },
+          {
+            "drawdown": "4.031844958685359706632586713",
+            "equity": "-4.031844958685359706632586713",
+            "index": "5",
+            "realized_pl": "-0.183092652"
+          },
+          {
+            "drawdown": "6.579040910204531516720012077",
+            "equity": "-6.579040910204531516720012077",
+            "index": "6",
+            "realized_pl": "-2.547195951519171810087425364"
+          },
+          {
+            "drawdown": "9.149955035487807930573429867",
+            "equity": "-9.149955035487807930573429867",
+            "index": "7",
+            "realized_pl": "-2.570914125283276413853417790"
+          },
+          {
+            "drawdown": "11.70507207193154029403036710",
+            "equity": "-11.70507207193154029403036710",
+            "index": "8",
+            "realized_pl": "-2.555117036443732363456937238"
+          },
+          {
+            "drawdown": "9.08877920193154029403036710",
+            "equity": "-9.08877920193154029403036710",
+            "index": "9",
+            "realized_pl": "2.616292870"
+          },
+          {
+            "drawdown": "11.62609551139922779470612565",
+            "equity": "-11.62609551139922779470612565",
+            "index": "10",
+            "realized_pl": "-2.537316309467687500675758551"
+          },
+          {
+            "drawdown": "14.16584670597225642458075389",
+            "equity": "-14.16584670597225642458075389",
+            "index": "11",
+            "realized_pl": "-2.539751194573028629874628243"
+          },
+          {
+            "drawdown": "16.70609230501616488871806140",
+            "equity": "-16.70609230501616488871806140",
+            "index": "12",
+            "realized_pl": "-2.540245599043908464137307511"
+          },
+          {
+            "drawdown": "19.24959590978824062697392908",
+            "equity": "-19.24959590978824062697392908",
+            "index": "13",
+            "realized_pl": "-2.543503604772075738255867677"
+          },
+          {
+            "drawdown": "21.77901580456199218566653583",
+            "equity": "-21.77901580456199218566653583",
+            "index": "14",
+            "realized_pl": "-2.529419894773751558692606754"
+          },
+          {
+            "drawdown": "7.29861194356199218566653583",
+            "equity": "-7.29861194356199218566653583",
+            "index": "15",
+            "realized_pl": "14.480403861"
+          },
+          {
+            "drawdown": "9.12940064356199218566653583",
+            "equity": "-9.12940064356199218566653583",
+            "index": "16",
+            "realized_pl": "-1.8307887000"
+          },
+          {
+            "drawdown": "6.34462172356199218566653583",
+            "equity": "-6.34462172356199218566653583",
+            "index": "17",
+            "realized_pl": "2.784778920"
+          },
+          {
+            "drawdown": "8.872005764950736522046475805",
+            "equity": "-8.872005764950736522046475805",
+            "index": "18",
+            "realized_pl": "-2.527384041388744336379939975"
+          },
+          {
+            "drawdown": "9.078383684950736522046475805",
+            "equity": "-9.078383684950736522046475805",
+            "index": "19",
+            "realized_pl": "-0.206377920"
+          },
+          {
+            "drawdown": "0",
+            "equity": "30.85127761254926347795352420",
+            "index": "20",
+            "realized_pl": "39.9296612975"
+          },
+          {
+            "drawdown": "2.62364311490758993981088815",
+            "equity": "28.22763449764167353814263605",
+            "index": "21",
+            "realized_pl": "-2.623643114907589939810888152"
+          },
+          {
+            "drawdown": "5.23747695202932020301867881",
+            "equity": "25.61380066051994327493484539",
+            "index": "22",
+            "realized_pl": "-2.613833837121730263207790662"
+          },
+          {
+            "drawdown": "7.84056212729464253254042063",
+            "equity": "23.01071548525462094541310357",
+            "index": "23",
+            "realized_pl": "-2.603085175265322329521741817"
+          },
+          {
+            "drawdown": "0",
+            "equity": "34.43440468525462094541310357",
+            "index": "24",
+            "realized_pl": "11.42368920"
+          },
+          {
+            "drawdown": "0",
+            "equity": "36.47385677325462094541310357",
+            "index": "25",
+            "realized_pl": "2.039452088"
+          },
+          {
+            "drawdown": "2.60546407476556742835246153",
+            "equity": "33.86839269848905351706064204",
+            "index": "26",
+            "realized_pl": "-2.605464074765567428352461531"
+          },
+          {
+            "drawdown": "5.04384859476556742835246153",
+            "equity": "31.43000817848905351706064204",
+            "index": "27",
+            "realized_pl": "-2.43838452"
+          },
+          {
+            "drawdown": "5.01094595226556742835246153",
+            "equity": "31.46291082098905351706064204",
+            "index": "28",
+            "realized_pl": "0.0329026425"
+          },
+          {
+            "drawdown": "3.56305275826556742835246153",
+            "equity": "32.91080401498905351706064204",
+            "index": "29",
+            "realized_pl": "1.4478931940"
+          },
+          {
+            "drawdown": "0.42925796326556742835246153",
+            "equity": "36.04459880998905351706064204",
+            "index": "30",
+            "realized_pl": "3.133794795"
+          },
+          {
+            "drawdown": "0",
+            "equity": "40.07646256198905351706064204",
+            "index": "31",
+            "realized_pl": "4.031863752"
+          },
+          {
+            "drawdown": "2.64496025131795727597399029",
+            "equity": "37.43150231067109624108665175",
+            "index": "32",
+            "realized_pl": "-2.644960251317957275973990286"
+          },
+          {
+            "drawdown": "4.28864046881795727597399029",
+            "equity": "35.78782209317109624108665175",
+            "index": "33",
+            "realized_pl": "-1.6436802175"
+          },
+          {
+            "drawdown": "6.93099645392820591361293149",
+            "equity": "33.14546610806084760344771055",
+            "index": "34",
+            "realized_pl": "-2.642355985110248637638941196"
+          },
+          {
+            "drawdown": "4.38167186142820591361293149",
+            "equity": "35.69479070056084760344771055",
+            "index": "35",
+            "realized_pl": "2.5493245925"
+          },
+          {
+            "drawdown": "0",
+            "equity": "49.12527301056084760344771055",
+            "index": "36",
+            "realized_pl": "13.430482310"
+          },
+          {
+            "drawdown": "2.64963909631419885733701658",
+            "equity": "46.47563391424664874611069397",
+            "index": "37",
+            "realized_pl": "-2.649639096314198857337016576"
+          },
+          {
+            "drawdown": "5.31130636626162581917591700",
+            "equity": "43.81396664429922178427179355",
+            "index": "38",
+            "realized_pl": "-2.661667269947426961838900421"
+          },
+          {
+            "drawdown": "0",
+            "equity": "61.47899428329922178427179355",
+            "index": "39",
+            "realized_pl": "17.665027639"
+          },
+          {
+            "drawdown": "0",
+            "equity": "66.26690015629922178427179355",
+            "index": "40",
+            "realized_pl": "4.787905873"
+          },
+          {
+            "drawdown": "2.67945838776288133463692257",
+            "equity": "63.58744176853634044963487098",
+            "index": "41",
+            "realized_pl": "-2.679458387762881334636922571"
+          },
+          {
+            "drawdown": "5.39390878359789918920849886",
+            "equity": "60.87299137270132259506329469",
+            "index": "42",
+            "realized_pl": "-2.714450395835017854571576294"
+          },
+          {
+            "drawdown": "5.12173191159789918920849886",
+            "equity": "61.14516824470132259506329469",
+            "index": "43",
+            "realized_pl": "0.272176872"
+          },
+          {
+            "drawdown": "7.80703395112425364424331621",
+            "equity": "58.45986620517496814002847734",
+            "index": "44",
+            "realized_pl": "-2.685302039526354455034817348"
+          },
+          {
+            "drawdown": "10.49345460991382596757565873",
+            "equity": "55.77344554638539581669613482",
+            "index": "45",
+            "realized_pl": "-2.686420658789572323332342523"
+          },
+          {
+            "drawdown": "12.85644758841382596757565873",
+            "equity": "53.41045256788539581669613482",
+            "index": "46",
+            "realized_pl": "-2.3629929785"
+          },
+          {
+            "drawdown": "9.90514869491382596757565873",
+            "equity": "56.36175146138539581669613482",
+            "index": "47",
+            "realized_pl": "2.9512988935"
+          },
+          {
+            "drawdown": "12.57546740615205993151607757",
+            "equity": "53.69143275014716185275571598",
+            "index": "48",
+            "realized_pl": "-2.670318711238233963940418836"
+          },
+          {
+            "drawdown": "15.23025607672925007573261700",
+            "equity": "51.03664407956997170853917655",
+            "index": "49",
+            "realized_pl": "-2.654788670577190144216539434"
+          },
+          {
+            "drawdown": "17.89377911284369968461930258",
+            "equity": "48.37312104345552209965249097",
+            "index": "50",
+            "realized_pl": "-2.663523036114449608886685580"
+          },
+          {
+            "drawdown": "17.44505620884369968461930258",
+            "equity": "48.82184394745552209965249097",
+            "index": "51",
+            "realized_pl": "0.448722904"
+          },
+          {
+            "drawdown": "20.13168959321945617062410946",
+            "equity": "46.13521056307976561364768409",
+            "index": "52",
+            "realized_pl": "-2.686633384375756486004806879"
+          },
+          {
+            "drawdown": "21.58048858571945617062410946",
+            "equity": "44.68641157057976561364768409",
+            "index": "53",
+            "realized_pl": "-1.4487989925"
+          }
+        ],
+        "expectancy": "0.843139840954335200257503473",
+        "gross_loss": "80.41844586942023438635231593",
+        "gross_profit": "125.1048574400",
+        "in_sample": {
+          "average_loss": "2.169924573587090655186349918",
+          "average_win": "7.545447123272727272727272727",
+          "breakeven": 0,
+          "expectancy": "1.169734447208471757533957866",
+          "losses": 21,
+          "max_drawdown": "21.77901580456199218566653583",
+          "profit_factor": "1.821435229906528630718099915",
+          "total_net_pl": "37.43150231067109624108665175",
+          "total_trades": 32,
+          "win_rate": "0.34375",
+          "wins": 11
+        },
+        "losses": 35,
+        "market_regime_breakdown": {
+          "missing_market_regime_count": 0,
+          "regime_count": 1,
+          "regimes": {
+            "TRENDING_UP": {
+              "average_loss": "2.297669881983435268181494741",
+              "average_win": "6.950269857777777777777777778",
+              "breakeven": 0,
+              "expectancy": "0.843139840954335200257503473",
+              "losses": 35,
+              "max_drawdown": "21.77901580456199218566653583",
+              "profit_factor": "1.555673652822631028668550504",
+              "total_net_pl": "44.68641157057976561364768409",
+              "total_trades": 53,
+              "win_rate": "0.3396226415094339622641509434",
+              "wins": 18
+            }
+          }
+        },
+        "max_drawdown": "21.77901580456199218566653583",
+        "out_of_sample": {
+          "average_loss": "2.489287844577952187674211975",
+          "average_win": "6.014991297714285714285714286",
+          "breakeven": 0,
+          "expectancy": "0.345471869519460446312430112",
+          "losses": 14,
+          "max_drawdown": "21.58048858571945617062410946",
+          "profit_factor": "1.208175123422518670149923978",
+          "total_net_pl": "7.254909259908669372561032341",
+          "total_trades": 21,
+          "win_rate": "0.3333333333333333333333333333",
+          "wins": 7
+        },
+        "profit_factor": "1.555673652822631028668550504",
+        "reference_replay_lineage": {
+          "comparison_only": true,
+          "dataset_evidence_hash": "41acac572e4669b12af1cc477aff8ede82d792ecdce12fd670af135fdaefd12b",
+          "dataset_id": "287e1cca-27d9-4308-8ae7-458d563d4867",
+          "engine_evidence_hash": "b7f5ea043f07abed2a485963cc350e7cc551703e55bdfb1eeb1fecae5c2de5dc",
+          "protocol_hash": "66045e3554a0dd3a9db47e71dcedccb83624610b1dd2d7676480b16e47be8c67",
+          "protocol_id": "ff612386-ffa3-41e8-a332-1565d8d46495",
+          "reference_replay_run_id": "0bbe94e9-4596-41f0-9889-e21ab26085e7",
+          "replay_record_evidence_hash": "a46f60db5d87282e9174a034e6a02d6c53474eb9d49488dda6d25cfa00245186"
+        },
+        "sample_assignment": {
+          "in_sample_trade_count": 32,
+          "out_of_sample_trade_count": 21,
+          "purge_gap_end": "2025-01-01T00:00:00+00:00",
+          "purge_gap_start": "2024-12-31T23:59:59.999999+00:00",
+          "unassigned_trade_count": 0
+        },
+        "source_format": "reference_replay",
+        "strategy_parameter_evidence": {
+          "complete": true,
+          "known_strategy": true,
+          "missing_parameters": [],
+          "required_parameters": [
+            "initial_capital",
+            "backtest_start",
+            "backtest_end",
+            "entry_channel_length",
+            "exit_channel_length",
+            "atr_length",
+            "atr_stop_multiplier",
+            "risk_per_trade_percent",
+            "max_position_value_percent",
+            "enable_long"
+          ],
+          "strategy": "slow_breakout_spot_v1"
+        },
+        "total_net_pl": "44.68641157057976561364768409",
+        "total_trades": 53,
+        "trade_distribution": {
+          "active_trading_days": 53,
+          "dated_trade_count": 53,
+          "first_closed_at": "2023-02-05",
+          "last_closed_at": "2026-06-18",
+          "max_single_day_trade_count": 1,
+          "max_single_day_trade_share": "0.01886792452830188679245283019",
+          "total_trade_count": 53
+        },
+        "trade_evidence_hash": "36e18f2f0c2dd7b89269c499c843a8759e1a56f4d120b457abfd3eba87730978",
+        "walk_forward": {
+          "acceptance_eligible": true,
+          "evidence_hash": "d44f372162268eba10d1f1aaf093ac6e436d6b8fc6f711393743301b63e68a11",
+          "failed_windows": 4,
+          "invalid_window_count": 0,
+          "method": "explicit_anchored_fixed_parameter",
+          "minimum_pass_rate": "0.66",
+          "minimum_trades_per_window": 5,
+          "minimum_windows": 3,
+          "pass_rate": "0.2",
+          "passed_windows": 1,
+          "valid_window_count": 5,
+          "window_count": 5,
+          "windows": [
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-1",
+              "enough_trades": true,
+              "index": 1,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": true,
+              "positive_expectancy": true,
+              "profit_factor_ok": true,
+              "summary": {
+                "average_loss": "1.521516887129581445459979992",
+                "average_win": "8.6325913905",
+                "breakeven": 0,
+                "expectancy": "2.540126423922251132724012005",
+                "losses": 3,
+                "max_drawdown": "2.73376196138874433637993998",
+                "profit_factor": "3.782449590722067821949007870",
+                "total_net_pl": "12.70063211961125566362006002",
+                "total_trades": 5,
+                "win_rate": "0.4",
+                "wins": 2
+              },
+              "test_end": "2024-01-30T23:59:59.999999+00:00",
+              "test_start": "2023-11-08T00:00:00+00:00",
+              "test_trade_evidence_hash": "56785a38c376ba75fa4e61b15f72f9b1b09d5372f34d1bbe505af3ef3e2fd68d",
+              "train_end": "2023-11-07T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-1"
+            },
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-2",
+              "enough_trades": false,
+              "index": 2,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": false,
+              "positive_expectancy": true,
+              "profit_factor_ok": true,
+              "summary": {
+                "average_loss": "2.623643114907589939810888152",
+                "average_win": "39.9296612975",
+                "breakeven": 0,
+                "expectancy": "18.65300909129620503009455592",
+                "losses": 1,
+                "max_drawdown": "2.62364311490758993981088815",
+                "profit_factor": "15.21916646003372455197658573",
+                "total_net_pl": "37.30601818259241006018911185",
+                "total_trades": 2,
+                "win_rate": "0.5",
+                "wins": 1
+              },
+              "test_end": "2024-04-23T23:59:59.999999+00:00",
+              "test_start": "2024-01-31T00:00:00+00:00",
+              "test_trade_evidence_hash": "de88711e94c315de137f118ab9035935a4a54455fcd240a9e7b2f824c092e98d",
+              "train_end": "2024-01-30T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-2"
+            },
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-3",
+              "enough_trades": false,
+              "index": 3,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": false,
+              "positive_expectancy": true,
+              "profit_factor_ok": true,
+              "summary": {
+                "average_loss": "2.608459506193526296364766240",
+                "average_win": "11.42368920",
+                "breakeven": 0,
+                "expectancy": "2.068923395870982469090155840",
+                "losses": 2,
+                "max_drawdown": "5.216919012387052592729532479",
+                "profit_factor": "2.189738650892527211379293454",
+                "total_net_pl": "6.206770187612947407270467521",
+                "total_trades": 3,
+                "win_rate": "0.3333333333333333333333333333",
+                "wins": 1
+              },
+              "test_end": "2024-07-16T23:59:59.999999+00:00",
+              "test_start": "2024-04-24T00:00:00+00:00",
+              "test_trade_evidence_hash": "64b0b95017c79d0142bdc34adae3cd070e54793afe4f7edfa547d2d5466d8413",
+              "train_end": "2024-04-23T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-3"
+            },
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-4",
+              "enough_trades": false,
+              "index": 4,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": false,
+              "positive_expectancy": false,
+              "profit_factor_ok": false,
+              "summary": {
+                "average_loss": "2.521924297382783714176230766",
+                "average_win": "1.03617736525",
+                "breakeven": 0,
+                "expectancy": "-0.742873466066391857088115383",
+                "losses": 2,
+                "max_drawdown": "5.043848594765567428352461531",
+                "profit_factor": "0.4108677513933823351741969027",
+                "total_net_pl": "-2.971493864265567428352461531",
+                "total_trades": 4,
+                "win_rate": "0.5",
+                "wins": 2
+              },
+              "test_end": "2024-10-08T23:59:59.999999+00:00",
+              "test_start": "2024-07-17T00:00:00+00:00",
+              "test_trade_evidence_hash": "bbd4d26543f254b55c46e847da23ba0cb64bfdd32d7c168ad18f91d89b9f3357",
+              "train_end": "2024-07-16T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-4"
+            },
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-5",
+              "enough_trades": false,
+              "index": 5,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": false,
+              "positive_expectancy": true,
+              "profit_factor_ok": true,
+              "summary": {
+                "average_loss": "2.644960251317957275973990286",
+                "average_win": "2.871183913666666666666666667",
+                "breakeven": 0,
+                "expectancy": "1.492147872420510681006502428",
+                "losses": 1,
+                "max_drawdown": "2.644960251317957275973990286",
+                "profit_factor": "3.256590240517963624460315732",
+                "total_net_pl": "5.968591489682042724026009714",
+                "total_trades": 4,
+                "win_rate": "0.75",
+                "wins": 3
+              },
+              "test_end": "2024-12-31T23:59:59.999999+00:00",
+              "test_start": "2024-10-09T00:00:00+00:00",
+              "test_trade_evidence_hash": "1c4a44d98910a2f6c645adc428d2fff6748be87543728b802d7df626de5bac1c",
+              "train_end": "2024-10-08T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-5"
+            }
+          ]
+        },
+        "win_rate": "0.3396226415094339622641509434",
+        "wins": 18
+      },
+      "mutates_ledger": false,
+      "paper_eligible": false,
+      "promotion_eligible": false,
+      "protocol_hash": "66045e3554a0dd3a9db47e71dcedccb83624610b1dd2d7676480b16e47be8c67",
+      "protocol_id": "ff612386-ffa3-41e8-a332-1565d8d46495",
+      "reasons": [],
+      "recorded_at": "2026-07-22T12:08:28.736800Z",
+      "reference_replay_run_id": "0bbe94e9-4596-41f0-9889-e21ab26085e7",
+      "replay_record_evidence_hash": "a46f60db5d87282e9174a034e6a02d6c53474eb9d49488dda6d25cfa00245186",
+      "reused_existing": false,
+      "statistical_acceptance_passed": false,
+      "status": "REJECTED",
+      "strategy": "slow_breakout_spot_v1",
+      "strategy_version": "1.0.0",
+      "symbol": "ETHUSDT",
+      "timeframe": "4h",
+      "trade_evidence_hash": "36e18f2f0c2dd7b89269c499c843a8759e1a56f4d120b457abfd3eba87730978",
+      "validation_evidence_hash": "238aacc86272b3f945ecc59f8d7e31cecde5f643ac237e25de9066fdc227c515",
+      "warnings": [
+        "This validation is comparison-only and cannot promote a strategy.",
+        "The frozen TradingView protocol remains unconsumed by local replay validation.",
+        "Tick size, point value, and minimum contract are bound to the frozen protocol.",
+        "Evaluator v1.2 requires the durable protocol record to predate the replay.",
+        "Cost sensitivity holds the recorded trade path and quantities constant; it is not an order-book or market-impact simulation."
+      ]
+    },
+    {
+      "acceptance_reasons": [
+        "Out-of-sample expectancy -0.7072835200020939303958807962 is not positive",
+        "Out-of-sample profit factor 0.5185183388129812105820795559 below minimum 1.15",
+        "Walk-forward pass rate 0 below minimum 0.66"
+      ],
+      "acceptance_snapshot": {
+        "max_drawdown": "100",
+        "max_single_day_trade_share": "0.25",
+        "min_active_trading_days": 15,
+        "min_out_of_sample_profit_factor": "1.15",
+        "min_out_of_sample_trades": 10,
+        "min_profit_factor": "1.15",
+        "min_trades": 25,
+        "min_walk_forward_pass_rate": "0.66",
+        "min_walk_forward_trades_per_window": 5,
+        "min_walk_forward_windows": 3,
+        "require_cost_model": true,
+        "require_market_regime_breakdown": true,
+        "require_out_of_sample_metrics": true,
+        "require_out_of_sample_positive_expectancy": true,
+        "require_positive_expectancy": true,
+        "require_risk_snapshot": true,
+        "require_sample_windows": true,
+        "require_slippage_model": true,
+        "require_trade_dates": true,
+        "require_walk_forward_validation": true
+      },
+      "binding_checks": [
+        {
+          "expected": "PASS",
+          "name": "reference_replay_integrity",
+          "observed": "PASS",
+          "status": "PASS"
+        },
+        {
+          "expected": "PASS",
+          "name": "dataset_integrity",
+          "observed": "PASS",
+          "status": "PASS"
+        },
+        {
+          "expected": "af79109cc893bc08550993e0c1375f905b92873cfaa35a2c2afab1c7f8fdc987",
+          "name": "protocol_integrity",
+          "observed": "af79109cc893bc08550993e0c1375f905b92873cfaa35a2c2afab1c7f8fdc987",
+          "status": "PASS"
+        },
+        {
+          "expected": "slow_breakout_spot_v1",
+          "name": "strategy",
+          "observed": "slow_breakout_spot_v1",
+          "status": "PASS"
+        },
+        {
+          "expected": "1.0.0",
+          "name": "strategy_version",
+          "observed": "1.0.0",
+          "status": "PASS"
+        },
+        {
+          "expected": [
+            "SOLUSDT"
+          ],
+          "name": "symbol",
+          "observed": "SOLUSDT",
+          "status": "PASS"
+        },
+        {
+          "expected": "4h",
+          "name": "timeframe",
+          "observed": "4h",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "atr_length": 20,
+            "atr_stop_multiplier": "3.0",
+            "backtest_end": "2026-07-01T00:00:00Z",
+            "backtest_start": "2023-02-01T00:00:00Z",
+            "enable_long": true,
+            "entry_channel_length": 55,
+            "exit_channel_length": 20,
+            "initial_capital": "1000",
+            "max_position_value_percent": "50.0",
+            "risk_per_trade_percent": "0.25"
+          },
+          "name": "parameters",
+          "observed": {
+            "atr_length": 20,
+            "atr_stop_multiplier": "3.0",
+            "backtest_end": "2026-07-01T00:00:00Z",
+            "backtest_start": "2023-02-01T00:00:00Z",
+            "enable_long": true,
+            "entry_channel_length": 55,
+            "exit_channel_length": 20,
+            "initial_capital": "1000",
+            "max_position_value_percent": "50.0",
+            "risk_per_trade_percent": "0.25"
+          },
+          "status": "PASS"
+        },
+        {
+          "expected": "2023-02-01T00:00:00+00:00",
+          "name": "backtest_start",
+          "observed": "2023-02-01T00:00:00Z",
+          "status": "PASS"
+        },
+        {
+          "expected": "2026-07-01T00:00:00+00:00",
+          "name": "backtest_end",
+          "observed": "2026-07-01T00:00:00Z",
+          "status": "PASS"
+        },
+        {
+          "expected": "0.05",
+          "name": "commission_percent",
+          "observed": "0.05",
+          "status": "PASS"
+        },
+        {
+          "expected": "2",
+          "name": "slippage_ticks",
+          "observed": 2,
+          "status": "PASS"
+        },
+        {
+          "expected": "0.0025",
+          "name": "risk_per_trade",
+          "observed": "0.25",
+          "status": "PASS"
+        },
+        {
+          "expected": "0.01",
+          "name": "tick_size",
+          "observed": "0.01",
+          "status": "PASS"
+        },
+        {
+          "expected": "1",
+          "name": "point_value",
+          "observed": "1",
+          "status": "PASS"
+        },
+        {
+          "expected": "0.001",
+          "name": "minimum_contract",
+          "observed": "0.001",
+          "status": "PASS"
+        },
+        {
+          "expected": "no later than 2026-07-22T12:08:27.144293+00:00",
+          "name": "protocol_registered_before_reference_replay",
+          "observed": "2026-07-22T11:49:17.559446+00:00",
+          "status": "PASS"
+        },
+        {
+          "expected": "25.04429975005444219029290069",
+          "name": "reference_replay_max_drawdown",
+          "observed": "25.04429975005444219029290069",
+          "status": "PASS"
+        },
+        {
+          "expected": "all_base_case_metrics_match",
+          "name": "reference_replay_cost_decomposition",
+          "observed": {
+            "expectancy": true,
+            "max_drawdown": true,
+            "profit_factor": true,
+            "total_net_pl": true
+          },
+          "status": "PASS"
+        }
+      ],
+      "checked_at": "2026-07-22T12:08:29.476728Z",
+      "comparison_only": true,
+      "dataset_evidence_hash": "6bc0e852d6d97f30d43cd226706c080907a677d45ff2e17cff3869f0744319d1",
+      "dataset_id": "411799dd-1e55-4b97-ba7b-b6952146ecb5",
+      "engine_evidence_hash": "13a4d6a4b2ea0de3ddcb1b08b6d5e7040972c35741ab99cad40570a813575866",
+      "evaluator_version": "reference-replay-validation-v1.2.0",
+      "id": "9ea9e6dd-61d1-4e4e-a1d6-f15cfb899d72",
+      "immutable": true,
+      "metrics_snapshot": {
+        "average_loss": "2.240431152854470570192193991",
+        "average_win": "5.872638202045454545454545455",
+        "breakeven": 0,
+        "cost_evidence": {
+          "cost_model_declared": true,
+          "fees_missing_count": 0,
+          "fees_provided_count": 53,
+          "missing_trade_costs_are_not_assumed_zero": true,
+          "realized_pl_semantics": "reported_net_pl",
+          "slippage_missing_count": 0,
+          "slippage_model_declared": true,
+          "slippage_provided_count": 53,
+          "trade_count": 53
+        },
+        "cost_sensitivity": {
+          "base_case_matches_reference_replay": true,
+          "base_case_reference_comparison": {
+            "expectancy": true,
+            "max_drawdown": true,
+            "profit_factor": true,
+            "total_net_pl": true
+          },
+          "base_fee_cost": "2.157779407056784098211126555",
+          "base_slippage_cost": "1.24380",
+          "gross_before_modeled_costs": "63.14625411356819642225311283",
+          "market_impact_modeled": false,
+          "method": "fixed_trade_path_linear_monetary_cost_multipliers",
+          "position_quantities_held_constant": true,
+          "scenarios": [
+            {
+              "commission_multiplier": "0",
+              "expectancy": "1.191438756859777290985907789",
+              "fee_cost": "0E-27",
+              "gross_before_modeled_costs": "63.14625411356819642225311283",
+              "max_drawdown": "23.89675803907397917988284210",
+              "name": "zero_cost_upper_bound",
+              "profit_factor": "1.933982638216833080261579445",
+              "profitable": true,
+              "slippage_cost": "0.00000",
+              "slippage_multiplier": "0",
+              "total_modeled_cost": "0E-27",
+              "total_net_pl": "63.14625411356819642225311283"
+            },
+            {
+              "commission_multiplier": "0.5",
+              "expectancy": "1.159348385095090648549953766",
+              "fee_cost": "1.078889703528392049105563278",
+              "gross_before_modeled_costs": "63.14625411356819642225311283",
+              "max_drawdown": "24.47052889456421068508787140",
+              "name": "half_cost",
+              "profit_factor": "1.896615761517550486236248603",
+              "profitable": true,
+              "slippage_cost": "0.621900",
+              "slippage_multiplier": "0.5",
+              "total_modeled_cost": "1.700789703528392049105563278",
+              "total_net_pl": "61.44546441003980437314754956"
+            },
+            {
+              "commission_multiplier": "1",
+              "expectancy": "1.127258013330404006113999742",
+              "fee_cost": "2.157779407056784098211126555",
+              "gross_before_modeled_costs": "63.14625411356819642225311283",
+              "max_drawdown": "25.04429975005444219029290069",
+              "name": "base_case",
+              "profit_factor": "1.860212807129705973008711040",
+              "profitable": true,
+              "slippage_cost": "1.24380",
+              "slippage_multiplier": "1",
+              "total_modeled_cost": "3.401579407056784098211126555",
+              "total_net_pl": "59.74467470651141232404198627"
+            },
+            {
+              "commission_multiplier": "1.5",
+              "expectancy": "1.095167641565717363678045718",
+              "fee_cost": "3.236669110585176147316689832",
+              "gross_before_modeled_costs": "63.14625411356819642225311283",
+              "max_drawdown": "25.61807060554467369549792996",
+              "name": "stress_150_percent",
+              "profit_factor": "1.824764650243233956762492081",
+              "profitable": true,
+              "slippage_cost": "1.865700",
+              "slippage_multiplier": "1.5",
+              "total_modeled_cost": "5.102369110585176147316689832",
+              "total_net_pl": "58.04388500298302027493642302"
+            },
+            {
+              "commission_multiplier": "2",
+              "expectancy": "1.063077269801030721242091693",
+              "fee_cost": "4.315558814113568196422253110",
+              "gross_before_modeled_costs": "63.14625411356819642225311283",
+              "max_drawdown": "26.19184146103490520070295926",
+              "name": "stress_200_percent",
+              "profit_factor": "1.790234212650184414007525757",
+              "profitable": true,
+              "slippage_cost": "2.48760",
+              "slippage_multiplier": "2",
+              "total_modeled_cost": "6.803158814113568196422253110",
+              "total_net_pl": "56.34309529945462822583085973"
+            }
+          ],
+          "trade_count": 53,
+          "trade_path_held_constant": true
+        },
+        "drawdown_evidence": {
+          "matches_reference_replay": true,
+          "method": "cumulative_realized_pl_from_each_evaluation_segment_start",
+          "post_trade_account_equity_used": false,
+          "reference_replay_max_drawdown": "25.04429975005444219029290069",
+          "validation_max_drawdown": "25.04429975005444219029290069"
+        },
+        "equity_curve": [
+          {
+            "drawdown": "2.556333543738942878315977416",
+            "equity": "-2.556333543738942878315977416",
+            "index": "1",
+            "realized_pl": "-2.556333543738942878315977416"
+          },
+          {
+            "drawdown": "5.090031589854228642023597818",
+            "equity": "-5.090031589854228642023597818",
+            "index": "2",
+            "realized_pl": "-2.533698046115285763707620402"
+          },
+          {
+            "drawdown": "6.631030529854228642023597818",
+            "equity": "-6.631030529854228642023597818",
+            "index": "3",
+            "realized_pl": "-1.54099894"
+          },
+          {
+            "drawdown": "5.207640209854228642023597818",
+            "equity": "-5.207640209854228642023597818",
+            "index": "4",
+            "realized_pl": "1.42339032"
+          },
+          {
+            "drawdown": "7.792975497070321273853645294",
+            "equity": "-7.792975497070321273853645294",
+            "index": "5",
+            "realized_pl": "-2.585335287216092631830047476"
+          },
+          {
+            "drawdown": "0",
+            "equity": "10.82453065292967872614635471",
+            "index": "6",
+            "realized_pl": "18.61750615"
+          },
+          {
+            "drawdown": "1.24517826000000000000000000",
+            "equity": "9.57935239292967872614635471",
+            "index": "7",
+            "realized_pl": "-1.245178260"
+          },
+          {
+            "drawdown": "3.26096868000000000000000000",
+            "equity": "7.56356197292967872614635471",
+            "index": "8",
+            "realized_pl": "-2.01579042"
+          },
+          {
+            "drawdown": "1.65431288000000000000000000",
+            "equity": "9.17021777292967872614635471",
+            "index": "9",
+            "realized_pl": "1.606655800"
+          },
+          {
+            "drawdown": "0",
+            "equity": "55.26929657292967872614635471",
+            "index": "10",
+            "realized_pl": "46.0990788"
+          },
+          {
+            "drawdown": "0",
+            "equity": "59.48644604792967872614635471",
+            "index": "11",
+            "realized_pl": "4.217149475"
+          },
+          {
+            "drawdown": "0",
+            "equity": "65.60998286792967872614635471",
+            "index": "12",
+            "realized_pl": "6.12353682"
+          },
+          {
+            "drawdown": "0",
+            "equity": "69.24240104292967872614635471",
+            "index": "13",
+            "realized_pl": "3.632418175"
+          },
+          {
+            "drawdown": "2.70009088632889922672948873",
+            "equity": "66.54231015660077949941686598",
+            "index": "14",
+            "realized_pl": "-2.700090886328899226729488729"
+          },
+          {
+            "drawdown": "0",
+            "equity": "69.71973624660077949941686598",
+            "index": "15",
+            "realized_pl": "3.17742609"
+          },
+          {
+            "drawdown": "2.70780133778095204978143238",
+            "equity": "67.01193490881982744963543360",
+            "index": "16",
+            "realized_pl": "-2.707801337780952049781432376"
+          },
+          {
+            "drawdown": "5.39505721463228495051627548",
+            "equity": "64.32467903196849454890059050",
+            "index": "17",
+            "realized_pl": "-2.687255876851332900734843104"
+          },
+          {
+            "drawdown": "8.08232344795820329577409146",
+            "equity": "61.63741279864257620364277452",
+            "index": "18",
+            "realized_pl": "-2.687266233325918345257815977"
+          },
+          {
+            "drawdown": "8.12422940295820329577409146",
+            "equity": "61.59550684364257620364277452",
+            "index": "19",
+            "realized_pl": "-0.041905955"
+          },
+          {
+            "drawdown": "10.81134880503492498508197902",
+            "equity": "58.90838744156585451433488696",
+            "index": "20",
+            "realized_pl": "-2.687119402076721689307887557"
+          },
+          {
+            "drawdown": "2.26090826503492498508197902",
+            "equity": "67.45882798156585451433488696",
+            "index": "21",
+            "realized_pl": "8.55044054"
+          },
+          {
+            "drawdown": "4.16567541503492498508197902",
+            "equity": "65.55406083156585451433488696",
+            "index": "22",
+            "realized_pl": "-1.90476715"
+          },
+          {
+            "drawdown": "6.37651513003492498508197902",
+            "equity": "63.34322111656585451433488696",
+            "index": "23",
+            "realized_pl": "-2.210839715"
+          },
+          {
+            "drawdown": "3.33093348003492498508197902",
+            "equity": "66.38880276656585451433488696",
+            "index": "24",
+            "realized_pl": "3.04558165"
+          },
+          {
+            "drawdown": "4.48662234003492498508197902",
+            "equity": "65.23311390656585451433488696",
+            "index": "25",
+            "realized_pl": "-1.15568886"
+          },
+          {
+            "drawdown": "0.99185450003492498508197902",
+            "equity": "68.72788174656585451433488696",
+            "index": "26",
+            "realized_pl": "3.49476784"
+          },
+          {
+            "drawdown": "0",
+            "equity": "78.13404622656585451433488696",
+            "index": "27",
+            "realized_pl": "9.40616448"
+          },
+          {
+            "drawdown": "0",
+            "equity": "78.43223491656585451433488696",
+            "index": "28",
+            "realized_pl": "0.29818869"
+          },
+          {
+            "drawdown": "0",
+            "equity": "81.95173477656585451433488696",
+            "index": "29",
+            "realized_pl": "3.51949986"
+          },
+          {
+            "drawdown": "2.08161590000000000000000000",
+            "equity": "79.87011887656585451433488696",
+            "index": "30",
+            "realized_pl": "-2.0816159"
+          },
+          {
+            "drawdown": "2.00625414000000000000000000",
+            "equity": "79.94548063656585451433488696",
+            "index": "31",
+            "realized_pl": "0.07536176"
+          },
+          {
+            "drawdown": "1.18850622000000000000000000",
+            "equity": "80.76322855656585451433488696",
+            "index": "32",
+            "realized_pl": "0.81774792"
+          },
+          {
+            "drawdown": "0",
+            "equity": "84.78897445656585451433488696",
+            "index": "33",
+            "realized_pl": "4.02574590"
+          },
+          {
+            "drawdown": "2.74691111949295904920783497",
+            "equity": "82.04206333707289546512705199",
+            "index": "34",
+            "realized_pl": "-2.746911119492959049207834972"
+          },
+          {
+            "drawdown": "5.48977131563545338323495672",
+            "equity": "79.29920314093040113109993024",
+            "index": "35",
+            "realized_pl": "-2.742860196142494334027121748"
+          },
+          {
+            "drawdown": "8.22926860886984060874282660",
+            "equity": "76.55970584769601390559206036",
+            "index": "36",
+            "realized_pl": "-2.739497293234387225507869877"
+          },
+          {
+            "drawdown": "9.69214422386984060874282660",
+            "equity": "75.09683023269601390559206036",
+            "index": "37",
+            "realized_pl": "-1.462875615"
+          },
+          {
+            "drawdown": "5.52074914886984060874282660",
+            "equity": "79.26822530769601390559206036",
+            "index": "38",
+            "realized_pl": "4.171395075"
+          },
+          {
+            "drawdown": "8.26379715607325541021769539",
+            "equity": "76.52517730049259910411719157",
+            "index": "39",
+            "realized_pl": "-2.743048007203414801474868793"
+          },
+          {
+            "drawdown": "9.95230808607325541021769539",
+            "equity": "74.83666637049259910411719157",
+            "index": "40",
+            "realized_pl": "-1.68851093"
+          },
+          {
+            "drawdown": "12.66502799242642300050180027",
+            "equity": "72.12394646413943151383308669",
+            "index": "41",
+            "realized_pl": "-2.712719906353167590284104880"
+          },
+          {
+            "drawdown": "8.29934524742642300050180027",
+            "equity": "76.48962920913943151383308669",
+            "index": "42",
+            "realized_pl": "4.365682745"
+          },
+          {
+            "drawdown": "7.99746699242642300050180027",
+            "equity": "76.79150746413943151383308669",
+            "index": "43",
+            "realized_pl": "0.301878255"
+          },
+          {
+            "drawdown": "10.73316680863234599880916525",
+            "equity": "74.05580764793350851552572171",
+            "index": "44",
+            "realized_pl": "-2.735699816205922998307364976"
+          },
+          {
+            "drawdown": "8.85206150863234599880916525",
+            "equity": "75.93691294793350851552572171",
+            "index": "45",
+            "realized_pl": "1.881105300"
+          },
+          {
+            "drawdown": "11.57907998791280050900972905",
+            "equity": "73.20989446865305400532515791",
+            "index": "46",
+            "realized_pl": "-2.727018479280454510200563797"
+          },
+          {
+            "drawdown": "14.30427962350053688769939249",
+            "equity": "70.48469483306531762663549447",
+            "index": "47",
+            "realized_pl": "-2.725199635587736378689663443"
+          },
+          {
+            "drawdown": "17.00782708053115621378824939",
+            "equity": "67.78114737603469830054663757",
+            "index": "48",
+            "realized_pl": "-2.703547457030619326088856900"
+          },
+          {
+            "drawdown": "19.72435690497474755298655868",
+            "equity": "65.06461755159110696134832828",
+            "index": "49",
+            "realized_pl": "-2.716529824443591339198309286"
+          },
+          {
+            "drawdown": "22.44433599005444219029290069",
+            "equity": "62.34463846651141232404198627",
+            "index": "50",
+            "realized_pl": "-2.719979085079694637306342010"
+          },
+          {
+            "drawdown": "22.09701719005444219029290069",
+            "equity": "62.69195726651141232404198627",
+            "index": "51",
+            "realized_pl": "0.34731880"
+          },
+          {
+            "drawdown": "23.92888025005444219029290069",
+            "equity": "60.86009420651141232404198627",
+            "index": "52",
+            "realized_pl": "-1.83186306"
+          },
+          {
+            "drawdown": "25.04429975005444219029290069",
+            "equity": "59.74467470651141232404198627",
+            "index": "53",
+            "realized_pl": "-1.1154195"
+          }
+        ],
+        "expectancy": "1.127258013330404006113999742",
+        "gross_loss": "69.45336573848858767595801373",
+        "gross_profit": "129.198040445",
+        "in_sample": {
+          "average_loss": "2.084004660895609699044340869",
+          "average_win": "9.116176345",
+          "breakeven": 0,
+          "expectancy": "2.893853563946883500530921739",
+          "losses": 15,
+          "max_drawdown": "10.81134880503492498508197902",
+          "profit_factor": "3.499484052432890500825515695",
+          "total_net_pl": "78.13404622656585451433488696",
+          "total_trades": 27,
+          "win_rate": "0.4444444444444444444444444444",
+          "wins": 12
+        },
+        "losses": 31,
+        "market_regime_breakdown": {
+          "missing_market_regime_count": 0,
+          "regime_count": 1,
+          "regimes": {
+            "TRENDING_UP": {
+              "average_loss": "2.240431152854470570192193991",
+              "average_win": "5.872638202045454545454545455",
+              "breakeven": 0,
+              "expectancy": "1.127258013330404006113999742",
+              "losses": 31,
+              "max_drawdown": "25.04429975005444219029290069",
+              "profit_factor": "1.860212807129705973008711040",
+              "total_net_pl": "59.74467470651141232404198627",
+              "total_trades": 53,
+              "win_rate": "0.4150943396226415094339622642",
+              "wins": 22
+            }
+          }
+        },
+        "max_drawdown": "25.04429975005444219029290069",
+        "out_of_sample": {
+          "average_loss": "2.387080989065902636893306293",
+          "average_win": "1.9803924305",
+          "breakeven": 0,
+          "expectancy": "-0.7072835200020939303958807962",
+          "losses": 16,
+          "max_drawdown": "25.04429975005444219029290069",
+          "profit_factor": "0.5185183388129812105820795559",
+          "total_net_pl": "-18.38937152005444219029290069",
+          "total_trades": 26,
+          "win_rate": "0.3846153846153846153846153846",
+          "wins": 10
+        },
+        "profit_factor": "1.860212807129705973008711040",
+        "reference_replay_lineage": {
+          "comparison_only": true,
+          "dataset_evidence_hash": "6bc0e852d6d97f30d43cd226706c080907a677d45ff2e17cff3869f0744319d1",
+          "dataset_id": "411799dd-1e55-4b97-ba7b-b6952146ecb5",
+          "engine_evidence_hash": "13a4d6a4b2ea0de3ddcb1b08b6d5e7040972c35741ab99cad40570a813575866",
+          "protocol_hash": "af79109cc893bc08550993e0c1375f905b92873cfaa35a2c2afab1c7f8fdc987",
+          "protocol_id": "080084a0-d1b2-435b-ad9b-bd294a9bf603",
+          "reference_replay_run_id": "97700413-7a29-4dff-aa7c-aab086e8c1b1",
+          "replay_record_evidence_hash": "19c8bd18650f96f0ddb2dd3a0c6b4b21522a1c6da8f5ba335b3e2c2a469e6836"
+        },
+        "sample_assignment": {
+          "in_sample_trade_count": 27,
+          "out_of_sample_trade_count": 26,
+          "purge_gap_end": "2025-01-01T00:00:00+00:00",
+          "purge_gap_start": "2024-12-31T23:59:59.999999+00:00",
+          "unassigned_trade_count": 0
+        },
+        "source_format": "reference_replay",
+        "strategy_parameter_evidence": {
+          "complete": true,
+          "known_strategy": true,
+          "missing_parameters": [],
+          "required_parameters": [
+            "initial_capital",
+            "backtest_start",
+            "backtest_end",
+            "entry_channel_length",
+            "exit_channel_length",
+            "atr_length",
+            "atr_stop_multiplier",
+            "risk_per_trade_percent",
+            "max_position_value_percent",
+            "enable_long"
+          ],
+          "strategy": "slow_breakout_spot_v1"
+        },
+        "total_net_pl": "59.74467470651141232404198627",
+        "total_trades": 53,
+        "trade_distribution": {
+          "active_trading_days": 53,
+          "dated_trade_count": 53,
+          "first_closed_at": "2023-02-22",
+          "last_closed_at": "2026-06-30",
+          "max_single_day_trade_count": 1,
+          "max_single_day_trade_share": "0.01886792452830188679245283019",
+          "total_trade_count": 53
+        },
+        "trade_evidence_hash": "adbd52ac7df2e4f76650fc294bd72e2d9efdbbd23ed38670120adf6d2e5b371f",
+        "walk_forward": {
+          "acceptance_eligible": true,
+          "evidence_hash": "5b6f1c92026fbf99c2e3c5d5159fb2b9b8d5161c7ec67535b166898d1f562857",
+          "failed_windows": 5,
+          "invalid_window_count": 0,
+          "method": "explicit_anchored_fixed_parameter",
+          "minimum_pass_rate": "0.66",
+          "minimum_trades_per_window": 5,
+          "minimum_windows": 3,
+          "pass_rate": "0",
+          "passed_windows": 0,
+          "valid_window_count": 5,
+          "window_count": 5,
+          "windows": [
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-1",
+              "enough_trades": false,
+              "index": 1,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": false,
+              "positive_expectancy": true,
+              "profit_factor_ok": true,
+              "summary": {
+                "average_loss": "0",
+                "average_win": "18.81325503166666666666666667",
+                "breakeven": 0,
+                "expectancy": "18.81325503166666666666666667",
+                "losses": 0,
+                "max_drawdown": "0",
+                "profit_factor": null,
+                "total_net_pl": "56.439765095",
+                "total_trades": 3,
+                "win_rate": "1",
+                "wins": 3
+              },
+              "test_end": "2024-01-30T23:59:59.999999+00:00",
+              "test_start": "2023-11-08T00:00:00+00:00",
+              "test_trade_evidence_hash": "cb4f0ddb66b07ad045959670828df90831a32dc5b128a48f09b3d58a7b8fcb22",
+              "train_end": "2023-11-07T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-1"
+            },
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-2",
+              "enough_trades": false,
+              "index": 2,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": false,
+              "positive_expectancy": true,
+              "profit_factor_ok": true,
+              "summary": {
+                "average_loss": "2.703946112054925638255460552",
+                "average_win": "3.4049221325",
+                "breakeven": 0,
+                "expectancy": "0.350488010222537180872269724",
+                "losses": 2,
+                "max_drawdown": "2.707801337780952049781432376",
+                "profit_factor": "1.259241860375816297740206129",
+                "total_net_pl": "1.401952040890148723489078895",
+                "total_trades": 4,
+                "win_rate": "0.5",
+                "wins": 2
+              },
+              "test_end": "2024-04-23T23:59:59.999999+00:00",
+              "test_start": "2024-01-31T00:00:00+00:00",
+              "test_trade_evidence_hash": "1dd67feefcff0c878d4803fb89cce4d6f608c1b073c6d4fa2df280cba3361f93",
+              "train_end": "2024-01-30T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-2"
+            },
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-3",
+              "enough_trades": false,
+              "index": 3,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": false,
+              "positive_expectancy": false,
+              "profit_factor_ok": false,
+              "summary": {
+                "average_loss": "2.025886866813493233825136660",
+                "average_win": "0",
+                "breakeven": 0,
+                "expectancy": "-2.025886866813493233825136660",
+                "losses": 4,
+                "max_drawdown": "8.103547467253972935300546638",
+                "profit_factor": "0E+27",
+                "total_net_pl": "-8.103547467253972935300546638",
+                "total_trades": 4,
+                "win_rate": "0",
+                "wins": 0
+              },
+              "test_end": "2024-07-16T23:59:59.999999+00:00",
+              "test_start": "2024-04-24T00:00:00+00:00",
+              "test_trade_evidence_hash": "64a34236a74f95caba50de1f757bb97e38629345f4b286191343ff02211615ab",
+              "train_end": "2024-04-23T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-3"
+            },
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-4",
+              "enough_trades": false,
+              "index": 4,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": false,
+              "positive_expectancy": true,
+              "profit_factor_ok": true,
+              "summary": {
+                "average_loss": "2.0578034325",
+                "average_win": "5.798011095",
+                "breakeven": 0,
+                "expectancy": "1.87010383125",
+                "losses": 2,
+                "max_drawdown": "4.115606865",
+                "profit_factor": "2.817572856293697527399765381",
+                "total_net_pl": "7.480415325",
+                "total_trades": 4,
+                "win_rate": "0.5",
+                "wins": 2
+              },
+              "test_end": "2024-10-08T23:59:59.999999+00:00",
+              "test_start": "2024-07-17T00:00:00+00:00",
+              "test_trade_evidence_hash": "a973c0133f0573a2cddf1da3b58044743a9380244c73b46c5488813e756e9760",
+              "train_end": "2024-07-16T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-4"
+            },
+            {
+              "configuration_reference": "aurex://walk-forward-plan/slow_breakout_spot_v1/wf-5",
+              "enough_trades": false,
+              "index": 5,
+              "parameter_fingerprint": "slow_breakout_spot_v1|initial_capital=1000|backtest_start=2023-02-01T00:00:00Z|backtest_end=2026-07-01T00:00:00Z|entry_channel_length=55|exit_channel_length=20|atr_length=20|atr_stop_multiplier=3|risk_per_trade_percent=0.25|max_position_value_percent=50|enable_long=true",
+              "passed": false,
+              "positive_expectancy": true,
+              "profit_factor_ok": true,
+              "summary": {
+                "average_loss": "1.15568886",
+                "average_win": "6.45046616",
+                "breakeven": 0,
+                "expectancy": "3.915081153333333333333333334",
+                "losses": 1,
+                "max_drawdown": "1.15568886",
+                "profit_factor": "11.16298059669797284365966805",
+                "total_net_pl": "11.74524346",
+                "total_trades": 3,
+                "win_rate": "0.6666666666666666666666666667",
+                "wins": 2
+              },
+              "test_end": "2024-12-31T23:59:59.999999+00:00",
+              "test_start": "2024-10-09T00:00:00+00:00",
+              "test_trade_evidence_hash": "36ae06ffdc0ceff76c7b9db49174a21c10ee889dfb350d81874f82ae8fe58ad5",
+              "train_end": "2024-10-08T23:59:59.999999+00:00",
+              "train_start": "2023-02-01T00:00:00+00:00",
+              "valid": true,
+              "validation_reasons": [],
+              "window_id": "wf-5"
+            }
+          ]
+        },
+        "win_rate": "0.4150943396226415094339622642",
+        "wins": 22
+      },
+      "mutates_ledger": false,
+      "paper_eligible": false,
+      "promotion_eligible": false,
+      "protocol_hash": "af79109cc893bc08550993e0c1375f905b92873cfaa35a2c2afab1c7f8fdc987",
+      "protocol_id": "080084a0-d1b2-435b-ad9b-bd294a9bf603",
+      "reasons": [],
+      "recorded_at": "2026-07-22T12:08:29.476728Z",
+      "reference_replay_run_id": "97700413-7a29-4dff-aa7c-aab086e8c1b1",
+      "replay_record_evidence_hash": "19c8bd18650f96f0ddb2dd3a0c6b4b21522a1c6da8f5ba335b3e2c2a469e6836",
+      "reused_existing": false,
+      "statistical_acceptance_passed": false,
+      "status": "REJECTED",
+      "strategy": "slow_breakout_spot_v1",
+      "strategy_version": "1.0.0",
+      "symbol": "SOLUSDT",
+      "timeframe": "4h",
+      "trade_evidence_hash": "adbd52ac7df2e4f76650fc294bd72e2d9efdbbd23ed38670120adf6d2e5b371f",
+      "validation_evidence_hash": "9f0ce8605f461a019fd1d43d636b1adeae898d1c38060c3bd6258f1bb12289d3",
+      "warnings": [
+        "This validation is comparison-only and cannot promote a strategy.",
+        "The frozen TradingView protocol remains unconsumed by local replay validation.",
+        "Tick size, point value, and minimum contract are bound to the frozen protocol.",
+        "Evaluator v1.2 requires the durable protocol record to predate the replay.",
+        "Cost sensitivity holds the recorded trade path and quantities constant; it is not an order-book or market-impact simulation."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aurex-delivery-diagnostic",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-06-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": false },
+  "durable_objects": {
+    "bindings": [{ "name": "RECEIPT_BOX", "class_name": "ReceiptBox" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ReceiptBox"] }],
+  "vars": {
+    "ARMED": "false",
+    "CAMPAIGN_ID": "UNCONFIGURED",
+    "WORKER_HOSTNAME": "UNCONFIGURED",
+    "STARTS_AT": "UNCONFIGURED",
+    "EXPIRES_AT": "UNCONFIGURED",
+    "SOURCE_REVIEWED_AT": "UNCONFIGURED",
+    "EXPECTED_BODY_SHA256": "UNCONFIGURED"
+  }
+}

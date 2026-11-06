@@ -1,0 +1,21 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-full-development-acquisition-protocol-audit-v1",
+  "audit_id": "q1-periodic-flow-full-development-acquisition-protocol-audit-v1",
+  "audited_at": "2026-08-07T12:36:38.679701Z",
+  "protocol_file_sha256": "9b36d16f2c2aafb01f737e3b94b801bb3e439dd5f83cc7e4bb61229f681988ab",
+  "protocol_evidence_hash": "44264aa5cd54d6b82156e068cf93de59b0ebfbe1d151363beffe598f3803e67c",
+  "builder_contract_hash": "f79673b20fc9b38793e3b54573d844696b19915ee7bd9589c95beea001e4176e",
+  "auditor_contract_hash": "7a277671787ca416d27fc25c69d544d1d82626e164ba5271ed6be287710a3084",
+  "reconstructed_exactly": true,
+  "target_count": 96,
+  "month_count": 48,
+  "reuse_candidate_count": 37,
+  "network_target_count": 59,
+  "network_requests_made": 0,
+  "archive_payload_requests_made": 0,
+  "market_numeric_values_parsed": 0,
+  "authorizes_full_development_archive_acquisition": true,
+  "authorizes_features_or_outcomes": false,
+  "authorizes_trading": false,
+  "audit_evidence_hash": "f4193b58181ab70156edeb1ffd47a41804bb45eb038f5d2fe127948e19d40e52"
+}

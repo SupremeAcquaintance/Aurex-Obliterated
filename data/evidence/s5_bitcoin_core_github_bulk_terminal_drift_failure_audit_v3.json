@@ -1,0 +1,88 @@
+{
+  "schema_version": "aurex-s5-github-bulk-terminal-drift-audit-v3",
+  "audit_id": "s5-github-bulk-terminal-drift-audit-v3",
+  "audited_at": "2026-09-03T14:14:10.691451Z",
+  "auditor_contract_hash": "e86431def957d22198f73e7e8c17651253e3c32eb4a468c6c246d0187b9f43f9",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_v1.json",
+      "file_sha256": "2a3c084d57223628228e895f584bc4cb0f7bdf85e52155c4257b9c6a22e79330"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_contiguous_resume_amendment_audit_v3.json",
+      "file_sha256": "409a5940bc00449af9faa3d91bc89c185c88762b02e1bc92510cd88b0f2e3c74"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_contiguous_resume_amendment_v3.json",
+      "file_sha256": "67a42d54ee1ab3a3d8dcbee61278c60b4c7a76a0d23a4dc603aa0758d736b341"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v3.json",
+      "file_sha256": "7be4d2c213e977a244d326b576ef5bb25c37e40b89917397e88cce8eec19f81a"
+    },
+    {
+      "path": "data/evidence/s5_github_pull_metadata_bulk_v1/failure_v3_page_0118.json",
+      "file_sha256": "bd2277e62b801f9f3ba3c013a8799561686a3f5ea8cb8d9eab1a8291d31d76bf"
+    },
+    {
+      "path": "scripts/run_s5_bitcoin_core_github_bulk_acquisition_v3.py",
+      "file_sha256": "5e10c1315c01090c471b984d0d29bc75758d994e3de617cba9112d70ef4dd713"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_github_bulk_resume.py",
+      "file_sha256": "56c9912790a4160621b6ebb832a08da633ea7262fa50bc3502411a1e8db7571c"
+    }
+  ],
+  "protocol_evidence_hash": "ee1564712af978eddd0081fe7ede7fb19dd275fc2f04e7a19306160f8b3174f5",
+  "resume_amendment_evidence_hash": "af1524f5ed40d588878aafb5f09e18b1b1164426ae93c1687b6cf80a42b59ffc",
+  "resume_amendment_audit_evidence_hash": "b796a4852668bdce9172a8610cbd3d45ba6a6f7786f8d081546159e78fdea934",
+  "prior_result_evidence_hash": "6354ab5cdb329a3246a32b02b0cf34cbc5d63ff89aaeee5ef6c2fca277d8a4c5",
+  "prior_result_file_sha256": "7be4d2c213e977a244d326b576ef5bb25c37e40b89917397e88cce8eec19f81a",
+  "failure_artifact_file_sha256": "bd2277e62b801f9f3ba3c013a8799561686a3f5ea8cb8d9eab1a8291d31d76bf",
+  "prior_runner_contract_hash": "7c32bc7e5a50c78fb3000b91c069c70c0895de2aa3ccbbbcdf642c4d5138f4c6",
+  "original_failed_request_attempt_count": 1,
+  "corrected_v2_request_attempt_count": 117,
+  "corrected_v3_request_attempt_count": 1,
+  "total_request_attempt_count": 119,
+  "maximum_total_request_attempts": 300,
+  "remaining_request_attempt_capacity": 181,
+  "successful_page_prefix_count": 117,
+  "candidate_page": 118,
+  "candidate_page_http_status": 200,
+  "candidate_page_response_bytes": 1574768,
+  "candidate_page_response_body_sha256": "7206ba2c7c812dd5603ff2c470165ed2330b9b58a2b7b21d0f114cc1ef82f657",
+  "candidate_page_record_count": 100,
+  "candidate_page_schema_valid": true,
+  "candidate_page_continues_creation_order": true,
+  "candidate_page_pull_numbers_disjoint_from_prefix": true,
+  "prior_terminal_page": 244,
+  "observed_terminal_page": 245,
+  "terminal_page_growth": 1,
+  "protocol_maximum_terminal_page": 300,
+  "candidate_page_reusable_without_request": true,
+  "original_cohort_cutoff_preserved": true,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "adjudication": "PAGE_118_HTTP_200_VALID_TERMINAL_GREW_244_TO_245_RESPONSE_LOCALLY_REUSABLE",
+  "next_authorization": "FREEZE_S5_GITHUB_BULK_MONOTONIC_TERMINAL_AMENDMENT_V4_ONLY",
+  "limitations": [
+    "All 119 requests count toward the original 300-attempt ceiling.",
+    "Any local promotion must preserve response headers and body bytes exactly.",
+    "Final uniqueness, ordering, cutoff, and completeness checks remain mandatory.",
+    "Future terminal movement may be accepted only if nondecreasing and at most 300.",
+    "No BTC value, parameter, return, candidate, signal, or order was accessed.",
+    "No credential, token, proxy, redirect, concurrency, or replay is authorized.",
+    "No paper, Testnet strategy, production, live, or real-capital authority exists.",
+    "Page 118 continues the preserved creation order and has disjoint pull IDs.",
+    "Page 118 is a complete HTTP 200 response and needs no replay.",
+    "Source completeness, predictive edge, and profit remain unestablished.",
+    "The all-state query and frozen creation cutoff remain unchanged.",
+    "The exact cause of terminal growth is not inferred from pagination alone.",
+    "The terminal page moved from 244 to 245 between request windows."
+  ],
+  "audit_evidence_hash": "6ad04a3458c8fe972a0f13d89c3b75c4e546b5b95e3edb260faf75dd1012391d"
+}

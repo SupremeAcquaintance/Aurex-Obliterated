@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-09-26T04:53:38.666810+00:00",
+  "status": "BLOCKED",
+  "blockers": [
+    "DEDICATED_HIGH_ENTROPY_WEBHOOK_SECRET_REQUIRED",
+    "TLS_CERTIFICATE_AND_PRIVATE_KEY_REQUIRED"
+  ],
+  "tls_key_pair_loadable": false,
+  "proxy_headers_trusted": false,
+  "access_logging_enabled": false,
+  "scope": "RETIRED_CANDIDATE_SAFE_REJECTION_ONLY",
+  "public_reachability_verified": false,
+  "certificate_hostname_and_public_trust_verified": false,
+  "external_delivery_proven": false,
+  "database_schema_verified": true,
+  "credentials_in_report": false,
+  "live_authority": false,
+  "remaining_external_requirements": [
+    "Approved direct IPv4 HTTPS hostname and publicly trusted certificate on port 443",
+    "Fresh no-write signal preflight on the deployment database",
+    "Official sender list rechecked within 24 hours before the alert",
+    "TradingView 2FA, webhook access, and authority to create one alert",
+    "Genuine alert log and matching receipt independently reconciled"
+  ]
+}

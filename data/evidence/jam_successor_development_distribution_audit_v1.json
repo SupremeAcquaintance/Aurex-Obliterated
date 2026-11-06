@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-jam-successor-development-distribution-audit-v1",
+  "audited_at": "2026-08-04T17:15:17.626455Z",
+  "protocol_path": "data/evidence/jam_successor_development_distribution_protocol_v1.json",
+  "protocol_file_sha256": "f56eff43ca8868786b55b047041ce3d453ec5cb60ac3754ba1c76dfea03cc6d1",
+  "protocol_evidence_hash": "8451a456171524092390ce3ef9536032d3d6e3dea1eee4eedc8e70cd014b8551",
+  "result_path": "data/evidence/jam_successor_development_distribution_result_v1.json",
+  "result_file_sha256": "be5e863b6a12b8d37646a6899cab3ee1b4808d429dac6ceaf53a693926ff8cc8",
+  "result_evidence_hash": "d79092c225bb5cd4ecda603a45f1114f6e7f669c1413e3e36057cdcac72b9eef",
+  "feature_rows_path": "data/evidence/jam_successor_development_feature_rows_v1.parquet",
+  "feature_rows_file_sha256": "fbb6ee42fca63ea6fe38db093c6c5c5484d2c6997d658d616f09f6fd4c2a0dfa",
+  "feature_rows_schema_hash": "15995c028cfb437bea77990389eee4e036f9493b106270476ad1ce07cfcc037b",
+  "archive_count_reconstructed": 24,
+  "calendar_row_count_reconstructed": 1052640,
+  "feature_count_reconstructed": 17,
+  "sealed_market_periods_opened": 0,
+  "return_metrics_calculated": false,
+  "decision": "PASS_DEVELOPMENT_FEATURE_DISTRIBUTIONS_AWAIT_EVENT_PROTOCOL_AUTHORIZATION",
+  "audit_evidence_hash": "7ede08a05049a8f2bb82c4b660488b5803449b6536aaf17628630eb113a1bc9b"
+}

@@ -1,0 +1,543 @@
+{
+  "schema_version": "aurex-v4-independent-mechanism-proposal-register-v1",
+  "register_id": "v4-independent-mechanism-proposals-v1",
+  "register_version": "1.0.0",
+  "frozen_at": "2026-07-29T05:15:52.983993Z",
+  "status": "FROZEN_PRE_FEASIBILITY_OBSERVATION",
+  "discovery_charter_evidence_hash": "2230f042c676f97988129bf752aff889c83404627ff782c5462bd984e13cbd81",
+  "builder_contract_hash": "13d8af4bfcdc033b8cfdd997ee8ad1836fae990025043953a384c0ba3431a591",
+  "proposals": [
+    {
+      "proposal_id": "V4P01_INVENTORY_BACKED_SAME_ASSET_CROSS_VENUE_ARBITRAGE",
+      "mechanism_name": "Inventory-backed same-asset cross-venue executable-price arbitrage",
+      "economic_premise": "The identical spot asset can trade at different executable prices on independently operated central limit-order books because venue access, capital segmentation, latency, inventory location, fiat rails, and operational risk limit immediate law-of-one-price enforcement. Aurex would test only pre-funded same-asset dislocations and would never treat unmatched last trades, candles, or post-trade transfers as an arbitrage fill.",
+      "ex_ante_payoff_direction": "When the executable bid on one accessible venue exceeds the executable ask on another, simultaneously sell pre-positioned base inventory at the high bid and buy the same quantity with pre-positioned quote inventory at the low ask. Net payoff exists only if both acknowledged fills complete and the locked spread exceeds both venue fees, adverse movement, partial-leg rollback, inventory rebalance, custody, and capital costs.",
+      "economic_reason_edge_might_persist": [
+        "Capital and inventory cannot move instantaneously across separately operated venues, so local order flow can temporarily segment prices.",
+        "Jurisdiction, account access, counterparty, custody, fee tier, and operational constraints can limit competing arbitrage capital."
+      ],
+      "exact_point_in_time_data_requirements": [
+        "best_bid_best_ask_and_displayed_quantity_for_the_same_spot_asset",
+        "disconnect_reconnect_sequence_and_snapshot_recovery_events",
+        "exchange_and_local_receipt_timestamps_for_both_venue_feeds",
+        "full_order_lifecycle_ack_fill_partial_fill_cancel_reject_events",
+        "point_in_time_fee_tier_tick_lot_notional_and_order_status_rules",
+        "pre_trade_base_quote_inventory_and_post_trade_balance_state",
+        "venue_status_product_status_and_maintenance_events"
+      ],
+      "execution_path": "Maintain base inventory on the prospective sell venue and quote inventory on the prospective buy venue. At a later separately frozen decision event, compare synchronized non-stale executable top-of-book prices and quantities, submit bounded IOC or FOK legs with unique client IDs, reconcile acknowledgements and fills independently, cancel or flatten any unmatched residual under a predeclared rollback path, then reconcile venue balances before another attempt. Transfers are inventory rebalancing events, never assumed atomic trade legs.",
+      "principal_risks": [
+        "capacity_decay_and_competing_low_latency_arbitrage",
+        "cross_venue_clock_skew_and_stale_quotes",
+        "fee_tier_spread_and_adverse_selection",
+        "inventory_depletion_and_rebalancing_cost",
+        "jurisdiction_account_and_product_access_change",
+        "one_leg_fill_reject_timeout_or_partial_fill",
+        "venue_custody_counterparty_and_withdrawal_risk"
+      ],
+      "pre_return_falsification_condition": "Reject before primary selection if Aurex cannot qualify a synchronized 2023-2024 same-asset BBO archive with quantities, exchange and local timestamps, disconnect or sequence recovery, and point-in-time venue rules for two legally accessible accounts; if historical fees and filters cannot be bounded; or if a deterministic two-leg acknowledgement, partial-fill rollback, inventory, balance, and reconciliation model cannot be proven without real orders.",
+      "independence_from_blocked_lineages": [
+        "It does not forecast price direction and does not express trend, breakout, path quality, broad beta, clock phase, or reversal.",
+        "It is inventory-backed spot execution and does not use funding, perpetual basis, borrow, or passive market-making compensation.",
+        "This is same-asset law-of-one-price enforcement across venues, not V3P01 cross-asset cointegration, hedge-ratio estimation, or spread mean reversion."
+      ],
+      "primary_sources": [
+        {
+          "source_id": "MAKAROV_SCHOAR_JFE_2020",
+          "title": "Trading and arbitrage in cryptocurrency markets",
+          "authors_or_publisher": [
+            "Antoinette Schoar",
+            "Igor Makarov"
+          ],
+          "publication_or_revision_date": "2020-02-01",
+          "accessed_at": "2026-07-29T05:15:52.983993Z",
+          "source_kind": "PEER_REVIEWED_ARTICLE",
+          "url": "https://dspace.mit.edu/server/api/core/bitstreams/a3b4b145-a125-4d4d-add5-8bd452d2869d/content",
+          "supported_claims": [
+            "Capital controls, capital location, fees, and limits to arbitrage are material to interpreting those deviations.",
+            "Cryptocurrency markets exhibited recurring cross-exchange price deviations and market segmentation."
+          ],
+          "explicit_limitations": [
+            "The study used historical Kaiko trade data and does not prove a current executable Aurex edge or current account access."
+          ],
+          "historical_truth_scope": "DATED_RESEARCH_EVIDENCE",
+          "aurex_market_values_used": [],
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "BINANCE_SPOT_WS_CURRENT",
+          "title": "Binance Spot API WebSocket Streams",
+          "authors_or_publisher": [
+            "Binance"
+          ],
+          "publication_or_revision_date": null,
+          "accessed_at": "2026-07-29T05:15:52.983993Z",
+          "source_kind": "OFFICIAL_EXCHANGE_DOCUMENTATION",
+          "url": "https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md",
+          "supported_claims": [
+            "Depth reconstruction has explicit snapshot, update, and connection-limit semantics.",
+            "The bookTicker stream publishes best bid and ask prices and quantities with an order-book update identifier."
+          ],
+          "explicit_limitations": [
+            "Current mutable documentation is not point-in-time proof of the 2023-2024 schema, fees, filters, or venue state."
+          ],
+          "historical_truth_scope": "CURRENT_DOCUMENTATION_NOT_HISTORICAL_PROOF",
+          "aurex_market_values_used": [],
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "COINBASE_EXCHANGE_WS_CURRENT",
+          "title": "Coinbase Exchange WebSocket Channels",
+          "authors_or_publisher": [
+            "Coinbase"
+          ],
+          "publication_or_revision_date": null,
+          "accessed_at": "2026-07-29T05:15:52.983993Z",
+          "source_kind": "OFFICIAL_EXCHANGE_DOCUMENTATION",
+          "url": "https://docs.cdp.coinbase.com/exchange/websocket-feed/channels",
+          "supported_claims": [
+            "Coinbase publishes BBO fields and sequence-aware level-two or full order-book feeds.",
+            "The order lifecycle includes received, open, match, change, and done events, and dropped-message recovery matters."
+          ],
+          "explicit_limitations": [
+            "Current mutable documentation does not establish historical availability, account eligibility, fee tier, or schema."
+          ],
+          "historical_truth_scope": "CURRENT_DOCUMENTATION_NOT_HISTORICAL_PROOF",
+          "aurex_market_values_used": [],
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "TARDIS_DATASETS_CURRENT",
+          "title": "Tardis downloadable CSV market data documentation",
+          "authors_or_publisher": [
+            "Tardis.dev"
+          ],
+          "publication_or_revision_date": null,
+          "accessed_at": "2026-07-29T05:15:52.983993Z",
+          "source_kind": "INDEPENDENT_MARKET_DATA_DOCUMENTATION",
+          "url": "https://docs.tardis.dev/downloadable-csv-files",
+          "supported_claims": [
+            "Raw replay can preserve disconnect events that normalized CSV quote files omit.",
+            "The vendor documents tick-level quotes, order-book updates, trades, exchange timestamps, and local receipt timestamps."
+          ],
+          "explicit_limitations": [
+            "Availability, completeness, subscription cost, checksums, and exact Binance/Coinbase coverage require a separate bounded census and transport contract."
+          ],
+          "historical_truth_scope": "CURRENT_DOCUMENTATION_NOT_HISTORICAL_PROOF",
+          "aurex_market_values_used": [],
+          "aurex_return_metrics_used": []
+        }
+      ],
+      "source_feasibility_contract": {
+        "required_source_products": [
+          "binance_spot_bbo_or_l2_with_exchange_and_local_timestamps",
+          "coinbase_spot_bbo_or_l2_with_exchange_and_local_timestamps",
+          "disconnect_reconnect_snapshot_and_sequence_recovery_records",
+          "historical_product_fee_filter_status_and_maintenance_metadata"
+        ],
+        "exact_non_value_fields": [
+          "archive_or_endpoint_identity",
+          "boundary_completeness",
+          "checksum_and_revision_identity",
+          "content_length_and_storage_projection",
+          "continuity_gap_count",
+          "duplicate_timestamp_count",
+          "first_and_last_timestamp",
+          "http_status_and_selected_headers",
+          "missing_timestamp_count",
+          "request_attempt_and_elapsed_time",
+          "row_count",
+          "schema_identity",
+          "transport_journal_identity_and_hash"
+        ],
+        "required_cross_source_bindings": [
+          "same_base_asset_and_economically_equivalent_quote_currency",
+          "utc_event_and_local_receipt_clock_identity",
+          "venue_product_listing_status_and_calendar_boundary"
+        ],
+        "metadata_census_required": true,
+        "payload_requests_require_separate_transport_contract": true,
+        "minimum_complete_calendar_day_fraction": "0.95",
+        "minimum_complete_calendar_month_fraction": "0.90",
+        "maximum_unexplained_sequence_gap_events": 0,
+        "missing_event_policy": "Never infer, forward-fill, interpolate, or backfill a BBO, quantity, sequence, disconnect, or venue state. Any unexplained event-sequence gap invalidates the affected session; any failed calendar coverage gate rejects the proposal before primary selection.",
+        "source_revision_policy": "Freeze endpoint identity, dataset revision, content length, and available checksum before payload access. A changed or absent revision requires a terminal transport-stop result, never silent replacement or continuation.",
+        "prohibited_substitutions": [
+          "candles_or_bar_high_low_for_executable_quotes",
+          "last_trades_for_simultaneous_bbo",
+          "normalized_quotes_without_disconnect_or_recovery_evidence",
+          "post_trade_asset_transfer_as_atomic_second_leg"
+        ],
+        "pre_return_source_stop": "Stop if a separately frozen metadata census cannot prove the exact two-venue 2023-2024 archive scope, or if a bounded payload pilot cannot prove schema, timestamp, disconnect, sequence, and checksum integrity without inspecting bid, ask, size, trade, P/L, or return values.",
+        "synthetic_rows_allowed": false,
+        "market_numeric_values_permitted": false,
+        "strategy_outcomes_permitted": false,
+        "return_metrics_permitted": false
+      },
+      "execution_feasibility_contract": {
+        "required_venues_or_instruments": [
+          "same_base_asset_with_economically_equivalent_quote_inventory",
+          "two_independently_operated_legally_accessible_spot_clobs"
+        ],
+        "jurisdiction_and_account_requirements": [
+          "documented_account_and_product_access_for_the_operator_jurisdiction",
+          "kyc_tax_custody_and_transfer_constraints_recorded_before_selection",
+          "no_assumption_that_documented_api_access_equals_trading_access"
+        ],
+        "point_in_time_metadata_requirements": [
+          "both_venue_fee_tiers_and_fee_currency",
+          "both_venue_tick_lot_notional_and_price_bands",
+          "deposit_withdrawal_network_limits_and_rebalancing_cost",
+          "product_listing_trading_halt_and_maintenance_state"
+        ],
+        "order_lifecycle_requirements": [
+          "independent_ack_reject_fill_and_cancel_state_machine_per_venue",
+          "partial_fill_quantity_and_fee_reconciliation",
+          "timeout_state_unknown_order_query_and_idempotent_recovery",
+          "unique_client_order_id_per_leg_and_attempt",
+          "venue_balance_and_inventory_reconciliation_before_rearm"
+        ],
+        "financing_and_collateral_requirements": [
+          "capital_custody_and_idle_inventory_cost_accounting",
+          "pre_funded_base_inventory_on_sell_venue",
+          "pre_funded_quote_inventory_on_buy_venue"
+        ],
+        "multi_leg_failure_requirements": [
+          "bounded_residual_exposure_and_emergency_flattening",
+          "halt_on_unknown_order_balance_or_venue_state",
+          "no_assumed_cross_venue_atomicity",
+          "predeclared_second_leg_reject_and_partial_fill_rollback"
+        ],
+        "capacity_requirements": [
+          "displayed_executable_quantity_caps_each_leg",
+          "inventory_and_rebalance_capacity_caps",
+          "latency_and_staleness_budget_before_any_order"
+        ],
+        "mandatory_risk_controls": [
+          "daily_loss_custody_and_inventory_concentration_limits",
+          "maximum_attempt_and_residual_loss_bound",
+          "venue_disconnect_clock_skew_and_stale_quote_kill_switch"
+        ],
+        "pre_return_execution_stop": "Reject if either venue is not legally and operationally accessible, point-in-time fees or filters cannot be bounded, pre-funded inventory is impractical for the intended capital, or Aurex cannot deterministically reconcile both legs, unknown orders, partial fills, balances, residual exposure, and rollback without assuming atomic execution.",
+        "credentials_permitted_during_feasibility": false,
+        "private_endpoints_permitted_during_feasibility": false,
+        "real_orders_permitted_during_feasibility": false
+      },
+      "preliminary_fit": "REQUIRES_SYNCHRONIZED_MULTI_VENUE_BBO_AND_INVENTORY_FOUNDATION",
+      "parameter_sets_defined": [],
+      "market_numeric_fields_inspected": [],
+      "strategy_outcome_fields_inspected": [],
+      "return_metrics_calculated": [],
+      "disposition": "REGISTER_FOR_SEPARATE_CRASH_SAFE_NO_RETURN_FEASIBILITY"
+    },
+    {
+      "proposal_id": "V4P02_DELTA_HEDGED_CRYPTO_VARIANCE_RISK_PREMIUM",
+      "mechanism_name": "Delta-hedged cryptocurrency option variance-risk-premium harvesting",
+      "economic_premise": "Option buyers may pay a persistent premium for convex protection against large cryptocurrency moves, creating a variance risk premium for capitalized sellers who absorb jump, volatility, skew, and liquidity risk. Aurex would test a delta-hedged option exposure, not forecast the underlying price and not equate quoted implied volatility with an executable return.",
+      "ex_ante_payoff_direction": "A short delta-hedged option exposure can earn only when collected executable option premium exceeds realized gamma hedging losses, option and hedge-leg fees, bid-ask spread, discrete hedging error, jumps, settlement costs, margin drag, and liquidation losses. The payoff is negatively convex and can suffer losses much larger than routine gains.",
+      "economic_reason_edge_might_persist": [
+        "Capital, margin, model, liquidity, and operational constraints can limit competition in crypto option supply.",
+        "Protection demand can compensate option sellers for bearing crash, jump, volatility-of-volatility, and skew risk."
+      ],
+      "exact_point_in_time_data_requirements": [
+        "all_listed_option_instruments_expiries_strikes_types_and_contract_sizes",
+        "instrument_listing_expiry_settlement_and_delivery_price_records",
+        "option_best_bid_best_ask_quantities_trades_and_exchange_timestamps",
+        "point_in_time_option_and_hedge_leg_fees_and_fee_caps",
+        "point_in_time_option_greeks_mark_iv_underlying_and_interest_rate_inputs",
+        "point_in_time_standard_or_portfolio_margin_and_liquidation_parameters",
+        "underlying_index_perpetual_or_future_bbo_trades_and_local_timestamps"
+      ],
+      "execution_path": "A later separately frozen protocol would construct one predefined delta-hedged option exposure from executable bid prices, hedge its underlying delta with a specified future or perpetual using executable quotes, update hedge state only under frozen rules, settle fees and cash flows in their actual currencies, apply point-in-time margin and liquidation, and close or cash-settle all legs with deterministic position and balance reconciliation. No mark, midpoint, or model Greek may be used as an assumed fill.",
+      "principal_risks": [
+        "fee_delivery_and_settlement_rule_change",
+        "implied_volatility_skew_and_surface_model_error",
+        "jump_and_discrete_delta_hedging_error",
+        "margin_liquidation_collateral_and_currency_mismatch",
+        "unbounded_or_large_convex_tail_loss",
+        "vendor_archive_completeness_cost_and_revision",
+        "wide_option_spreads_sparse_quotes_and_leg_execution"
+      ],
+      "pre_return_falsification_condition": "Reject before primary selection if Aurex cannot qualify complete 2023-2024 Deribit option-chain quotes, sizes, trades, instrument lifecycle, underlying hedge quotes, settlement, fees, and margin state; if the archive omits disconnect or revision evidence; if the operator cannot legally access the venue; or if deterministic multi-leg fills, delta accounting, cash flows, liquidation, expiry, and reconciliation cannot be proven before any return test.",
+      "independence_from_blocked_lineages": [
+        "Delta hedging targets first-order direction and does not use trend, breakout, reversal, path-quality, beta, or clock-phase signals.",
+        "It is an options risk-premium mechanism, not V3P03 passive spread capture or queue-position market making.",
+        "The premise is compensation for transferring option convexity and tail risk, not spot-perpetual funding or basis carry."
+      ],
+      "primary_sources": [
+        {
+          "source_id": "ALEXANDER_IMERAJ_JAI_2021",
+          "title": "The Bitcoin VIX and its Variance Risk Premium",
+          "authors_or_publisher": [
+            "Arben Imeraj",
+            "Carol Alexander"
+          ],
+          "publication_or_revision_date": "2021-03-01",
+          "accessed_at": "2026-07-29T05:15:52.983993Z",
+          "source_kind": "PEER_REVIEWED_ARTICLE",
+          "url": "https://sussex.figshare.com/articles/journal_contribution/Practical_applications_of_The_Bitcoin_VIX_and_its_variance_risk_premium/23490374",
+          "supported_claims": [
+            "High-frequency option observations and realized variance are required to measure the mechanism.",
+            "Peer-reviewed research constructs Bitcoin implied-volatility indices and studies variance risk premia from Deribit options."
+          ],
+          "explicit_limitations": [
+            "A variance-risk-premium estimate does not prove a tradable short-option strategy after spreads, hedging, margin, and tail losses."
+          ],
+          "historical_truth_scope": "DATED_RESEARCH_EVIDENCE",
+          "aurex_market_values_used": [],
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "DERIBIT_HISTORY_GUIDE_CURRENT",
+          "title": "Deribit Institutional Account Setup Guide historical data",
+          "authors_or_publisher": [
+            "Deribit"
+          ],
+          "publication_or_revision_date": null,
+          "accessed_at": "2026-07-29T05:15:52.983993Z",
+          "source_kind": "OFFICIAL_EXCHANGE_DATA_ARCHIVE",
+          "url": "https://statics.deribit.com/files/DeribitInstitutionalSetupGuide.pdf",
+          "supported_claims": [
+            "Deribit documents public historical trade and instrument endpoints and states that instrument history is retained.",
+            "Historical endpoints expose exchange-native instrument and trade records for later bounded feasibility work."
+          ],
+          "explicit_limitations": [
+            "The guide does not provide sequence-complete historical BBO or prove complete option-chain quote coverage."
+          ],
+          "historical_truth_scope": "CURRENT_DOCUMENTATION_NOT_HISTORICAL_PROOF",
+          "aurex_market_values_used": [],
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "DERIBIT_INSTRUMENT_API_CURRENT",
+          "title": "Deribit public get instrument API reference",
+          "authors_or_publisher": [
+            "Deribit"
+          ],
+          "publication_or_revision_date": null,
+          "accessed_at": "2026-07-29T05:15:52.983993Z",
+          "source_kind": "OFFICIAL_EXCHANGE_DOCUMENTATION",
+          "url": "https://docs.deribit.com/api-reference/market-data/public-get_instrument",
+          "supported_claims": [
+            "Instrument identity is required to reconstruct option lifecycle and cash-flow semantics.",
+            "Instrument records include option type, strike, expiration, contract size, settlement, tick size, and state."
+          ],
+          "explicit_limitations": [
+            "Current API documentation is not proof of point-in-time 2023-2024 specifications or later revisions."
+          ],
+          "historical_truth_scope": "CURRENT_DOCUMENTATION_NOT_HISTORICAL_PROOF",
+          "aurex_market_values_used": [],
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "TARDIS_DERIBIT_OPTIONS_CURRENT",
+          "title": "Tardis downloadable Deribit options datasets",
+          "authors_or_publisher": [
+            "Tardis.dev"
+          ],
+          "publication_or_revision_date": null,
+          "accessed_at": "2026-07-29T05:15:52.983993Z",
+          "source_kind": "INDEPENDENT_MARKET_DATA_DOCUMENTATION",
+          "url": "https://docs.tardis.dev/downloadable-csv-files",
+          "supported_claims": [
+            "Daily files and exchange-native raw replay can support a bounded source census and disconnect-aware pilot.",
+            "The vendor documents grouped Deribit option quotes, option chains, trades, order books, and local receipt timestamps."
+          ],
+          "explicit_limitations": [
+            "Exact availability, subscription cost, completeness, revision identity, and payload integrity are unqualified."
+          ],
+          "historical_truth_scope": "CURRENT_DOCUMENTATION_NOT_HISTORICAL_PROOF",
+          "aurex_market_values_used": [],
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "DERIBIT_FEES_CURRENT",
+          "title": "Deribit fees and delivery fees",
+          "authors_or_publisher": [
+            "Deribit"
+          ],
+          "publication_or_revision_date": "2026-07-08",
+          "accessed_at": "2026-07-29T05:15:52.983993Z",
+          "source_kind": "OFFICIAL_EXCHANGE_DOCUMENTATION",
+          "url": "https://support.deribit.com/hc/en-us/articles/25944746248989-Fees",
+          "supported_claims": [
+            "Current fee tiers are scheduled to change, demonstrating that point-in-time fee history is mandatory.",
+            "Options and hedge instruments have product-specific trading, delivery, liquidation, and fee-cap semantics."
+          ],
+          "explicit_limitations": [
+            "The current page cannot be projected backward as the exact 2023-2024 fee schedule without dated archive evidence."
+          ],
+          "historical_truth_scope": "CURRENT_DOCUMENTATION_NOT_HISTORICAL_PROOF",
+          "aurex_market_values_used": [],
+          "aurex_return_metrics_used": []
+        }
+      ],
+      "source_feasibility_contract": {
+        "required_source_products": [
+          "deribit_grouped_option_quotes_sizes_trades_and_option_chain",
+          "deribit_option_instrument_lifecycle_and_settlement_records",
+          "deribit_underlying_index_and_hedge_instrument_quotes_and_trades",
+          "disconnect_reconnect_sequence_and_dataset_revision_records",
+          "historical_fee_margin_liquidation_and_delivery_metadata"
+        ],
+        "exact_non_value_fields": [
+          "archive_or_endpoint_identity",
+          "boundary_completeness",
+          "checksum_and_revision_identity",
+          "content_length_and_storage_projection",
+          "continuity_gap_count",
+          "duplicate_timestamp_count",
+          "first_and_last_timestamp",
+          "http_status_and_selected_headers",
+          "missing_timestamp_count",
+          "request_attempt_and_elapsed_time",
+          "row_count",
+          "schema_identity",
+          "transport_journal_identity_and_hash"
+        ],
+        "required_cross_source_bindings": [
+          "option_event_underlying_index_and_hedge_instrument_clock_identity",
+          "option_symbol_expiry_strike_type_contract_and_settlement_identity",
+          "venue_session_expiry_delivery_and_margin_regime_identity"
+        ],
+        "metadata_census_required": true,
+        "payload_requests_require_separate_transport_contract": true,
+        "minimum_complete_calendar_day_fraction": "0.95",
+        "minimum_complete_calendar_month_fraction": "0.90",
+        "maximum_unexplained_sequence_gap_events": 0,
+        "missing_event_policy": "Never infer, interpolate, forward-fill, or backfill an option quote, size, trade, Greek, instrument, underlying hedge quote, disconnect, fee, or margin state. Any unexplained sequence or lifecycle gap invalidates the affected session; failed coverage rejects the proposal before primary selection.",
+        "source_revision_policy": "Freeze vendor exchange metadata, available-since and available-to fields, source revision, content length, and available integrity headers before payload access. A changed source ends in a preserved transport-stop result unless the predeclared contract permits and verifies the exact replacement.",
+        "prohibited_substitutions": [
+          "current_fee_margin_or_instrument_rules_as_historical_truth",
+          "mark_midpoint_or_model_value_for_executable_option_fill",
+          "option_trades_without_bbo_for_continuous_executability",
+          "underlying_candles_for_hedge_leg_execution"
+        ],
+        "pre_return_source_stop": "Stop if a separate metadata census cannot establish complete daily grouped option, underlying hedge, instrument, and rule coverage for 2023-2024, or if a bounded checksum-aware payload pilot cannot prove schema, timestamp, lifecycle, disconnect, and cross-product identity without inspecting prices, Greeks, signals, P/L, or returns.",
+        "synthetic_rows_allowed": false,
+        "market_numeric_values_permitted": false,
+        "strategy_outcomes_permitted": false,
+        "return_metrics_permitted": false
+      },
+      "execution_feasibility_contract": {
+        "required_venues_or_instruments": [
+          "legally_accessible_deribit_option_account",
+          "specified_deribit_future_or_perpetual_delta_hedge_instrument",
+          "specified_option_settlement_and_collateral_currency"
+        ],
+        "jurisdiction_and_account_requirements": [
+          "documented_operator_jurisdiction_and_product_eligibility",
+          "kyc_tax_derivatives_suitability_and_api_access_recorded",
+          "no_assumption_that_public_market_data_implies_trading_access"
+        ],
+        "point_in_time_metadata_requirements": [
+          "index_composition_delivery_price_and_session_state",
+          "instrument_contract_tick_amount_expiry_and_settlement_rules",
+          "liquidation_insurance_and_collateral_currency_rules",
+          "option_and_hedge_leg_fees_caps_and_delivery_fees",
+          "standard_or_portfolio_margin_parameters_and_account_mode"
+        ],
+        "order_lifecycle_requirements": [
+          "ack_reject_partial_fill_cancel_and_unknown_order_recovery",
+          "balance_margin_and_liquidation_state_reconciliation",
+          "expiry_exercise_delivery_and_settlement_reconciliation",
+          "option_and_hedge_position_fee_and_cash_flow_reconciliation",
+          "unique_client_order_id_for_every_option_and_hedge_order"
+        ],
+        "financing_and_collateral_requirements": [
+          "collateral_currency_haircut_fee_and_conversion_accounting",
+          "fully_funded_option_tail_loss_and_hedge_margin_budget",
+          "no_unbounded_short_option_notional_or_implicit_borrow"
+        ],
+        "multi_leg_failure_requirements": [
+          "bounded_unhedged_delta_gamma_and_vega_exposure",
+          "emergency_flattening_and_halt_on_unknown_state",
+          "no_assumed_option_and_delta_hedge_atomicity",
+          "predeclared_option_or_hedge_partial_fill_rollback"
+        ],
+        "capacity_requirements": [
+          "executable_option_and_hedge_displayed_quantity_caps",
+          "hedge_turnover_fee_and_market_impact_budget",
+          "spread_open_interest_and_concentration_caps"
+        ],
+        "mandatory_risk_controls": [
+          "maximum_tail_loss_margin_usage_and_daily_loss_bound",
+          "no_automatic_rearm_after_margin_or_reconciliation_breach",
+          "stale_surface_stale_hedge_and_venue_disconnect_kill_switch",
+          "stress_scenarios_for_jump_volatility_skew_and_liquidity"
+        ],
+        "pre_return_execution_stop": "Reject if venue access is unavailable, complete point-in-time fees, settlement, margin, liquidation, and contract state cannot be bounded, or Aurex cannot deterministically model executable multi-leg fills, Greeks and cash flows, discrete hedging, expiry, liquidation, balances, and worst-case tail-loss controls.",
+        "credentials_permitted_during_feasibility": false,
+        "private_endpoints_permitted_during_feasibility": false,
+        "real_orders_permitted_during_feasibility": false
+      },
+      "preliminary_fit": "REQUIRES_OPTION_CHAIN_QUOTE_HEDGE_MARGIN_AND_SETTLEMENT_FOUNDATION",
+      "parameter_sets_defined": [],
+      "market_numeric_fields_inspected": [],
+      "strategy_outcome_fields_inspected": [],
+      "return_metrics_calculated": [],
+      "disposition": "REGISTER_FOR_SEPARATE_CRASH_SAFE_NO_RETURN_FEASIBILITY"
+    }
+  ],
+  "screened_out_theories": [
+    {
+      "theory_id": "TRIANGULAR_WITHIN_VENUE_ARBITRAGE",
+      "disposition": "NOT_REGISTERED_RELATED_TO_REGISTERED_PROPOSAL",
+      "reason": "This is another simultaneous law-of-one-price multi-leg mechanism with the same order-book synchronization, fee, partial-fill, and rollback core as V4P01. Registering it separately would spend a proposal slot on a closely related execution family.",
+      "return_metrics_calculated": []
+    },
+    {
+      "theory_id": "OPTION_PUT_CALL_PARITY_ARBITRAGE",
+      "disposition": "NOT_REGISTERED_RELATED_TO_REGISTERED_PROPOSAL",
+      "reason": "Put-call parity uses the same option-chain, underlying hedge, multi-leg execution, margin, and settlement foundation as V4P02. It may become a non-return data-quality diagnostic but is not an independent primary theory in this round.",
+      "return_metrics_calculated": []
+    },
+    {
+      "theory_id": "STABLECOIN_MINT_REDEMPTION_ARBITRAGE",
+      "disposition": "NOT_REGISTERED_EXECUTION_ACCESS_NOT_CREDIBLE",
+      "reason": "Direct issuer mint and redemption access, banking rails, limits, settlement timing, compliance, and counterparty terms are not credible assumptions for Aurex today. Exchange-only premium trades would not reproduce the redemption mechanism.",
+      "return_metrics_calculated": []
+    },
+    {
+      "theory_id": "LIQUIDATION_EVENT_DIRECTIONAL_REACTION",
+      "disposition": "NOT_REGISTERED_RETIRED_LINEAGE_OVERLAP",
+      "reason": "A directional post-liquidation rule would likely choose continuation or reversal from outcomes and overlap retired trend, path, breakout, or reversal families. It lacks one independent pre-outcome payoff direction suitable for this bounded round.",
+      "return_metrics_calculated": []
+    }
+  ],
+  "maximum_proposal_budget": 3,
+  "proposal_budget_consumed": 2,
+  "proposal_budget_unused": 1,
+  "selected_primary_count": 0,
+  "parameter_set_count": 0,
+  "strategy_outcome_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "decision": "FREEZE_TWO_PROPOSALS_LEAVE_ONE_SLOT_UNUSED_FOR_NO_RETURN_FEASIBILITY",
+  "authorizes_network_requests": false,
+  "requires_separate_transport_contract_before_network": true,
+  "authorizes_market_numeric_value_inspection": false,
+  "authorizes_return_testing": false,
+  "selects_primary": false,
+  "creates_candidate": false,
+  "opens_development_outcomes": false,
+  "opens_validation": false,
+  "opens_holdout": false,
+  "opens_forward": false,
+  "permits_pine_parity": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "limitations": [
+    "Commercial data access, account access, and required starting capital remain unresolved costs rather than hidden assumptions.",
+    "Cross-venue arbitrage requires pre-funded inventory, legally accessible accounts, synchronized executable BBO, and deterministic two-venue failure reconciliation.",
+    "Current exchange and vendor documentation cannot be projected backward as point-in-time 2023-2024 execution truth.",
+    "Development outcomes, validation, holdout, forward, Pine, paper, sandbox, live trading, and capital permissions remain false.",
+    "Every payload request requires a separate frozen crash-safe transport contract with cumulative request, byte, timeout, retry, resume, persistence, and terminal-stop budgets.",
+    "Neither proposal is selected; source and execution feasibility may still reject both and close V4 with zero primaries.",
+    "No price, quote value, quantity value, parameter, signal, trade, P/L, strategy outcome, or return was inspected or calculated.",
+    "One of three proposal slots is deliberately unused because adding a related or operationally inaccessible theory would inflate multiplicity without adding an independent mechanism.",
+    "Registration freezes two theories and their no-return feasibility requirements; it does not claim either mechanism has current edge.",
+    "Variance-risk-premium exposure is negatively convex and requires complete option quotes, hedge execution, margin, settlement, and tail-loss evidence; routine premium collection is not safe income."
+  ],
+  "register_evidence_hash": "a4fb8e0739cdd07f8a9a810cf395aa5fed3216000cb8b37c01f232eb5ec8973a"
+}

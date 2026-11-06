@@ -1,0 +1,62 @@
+{
+  "schema_version": "aurex-s5-targeted-correction-v3-result-audit-v1",
+  "audit_id": "s5-targeted-correction-v3-result-audit-v1",
+  "audited_at": "2026-09-08T15:19:56.545712Z",
+  "result_file_sha256": "4c6fd424a257f11125723ff6a69a5a9fe8ca6e40fe3bc20d0f2071cfaff31597",
+  "result_evidence_hash": "e7c059f0a01998e2af13b72c1ee4d5a6c01f05184f79c3b915dac619f08e2d50",
+  "protocol_evidence_hash": "369338e2b8ae0ffdcd2d4fa8e0378d9b86b089f35ab595c0a5fb26c61a9cad7b",
+  "protocol_audit_evidence_hash": "07afa67d603592ab5eb43893a8775df4134fc5affe7d3c3c8ee1aebf624e1618",
+  "execution_contract_evidence_hash": "a7f76b1a98652f68c1415d80fbd74c269b7b532d947b862f3aa84b674cc3610f",
+  "execution_contract_audit_evidence_hash": "5bea834847c49c4ab7f4ded9a27c68faab13672fea9af87f20a893d55d4d6849",
+  "runner_contract_hash": "38cd573542c302340a7fac4f9493604160869d2323899fd387f6b9ef485d6755",
+  "transitive_v1_execution_contract_evidence_hash": "b9e28bf45138dfeec22c954e616fdf1da0b626b6a0a40715a40ac1e8736078fe",
+  "transitive_v1_runner_contract_hash": "a78b5de5ba416eca2beff06c0312dd4d9f3bcc1bc29d287dc50c8ef78a8f0951",
+  "auditor_implementation_bindings": [
+    {
+      "path": "scripts/audit_s5_bitcoin_core_github_targeted_correction_result_v3.py",
+      "file_sha256": "e19bc2b3b315923ecad1bfded03d0fed9b5584ffac0f6bc450ba8d8898ed3673"
+    },
+    {
+      "path": "scripts/run_s5_bitcoin_core_github_targeted_correction.py",
+      "file_sha256": "c77375ceed12f10a568de7f52f9d059d7fa2b6ce847f4128a6f178cd85d60c4d"
+    },
+    {
+      "path": "scripts/run_s5_bitcoin_core_github_targeted_correction_v2.py",
+      "file_sha256": "b3717dbafbcf2677cda66d657e152551f309de88f693d89c9358f8b92b0c2d12"
+    },
+    {
+      "path": "scripts/run_s5_bitcoin_core_github_targeted_correction_v3.py",
+      "file_sha256": "8635192082688d0b41c9e74328a3e0ebadc6e892edb365e136fda3e78a3c8870"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_github_targeted_correction_v3_result_audit.py",
+      "file_sha256": "494fb0157c8b186ed3eda28f4a153f14e6dad0162dc84bb43449775d4e8f919d"
+    }
+  ],
+  "auditor_contract_hash": "baf2ef35416939d374443b24c4200fa834ee118669ad433ae14495207e10de78",
+  "response_binding_manifest_evidence_hash": "b8493c94031765fcfe744dc8bae45d593988ad682a373e5e6d28808474a34417",
+  "v3_request_marker_manifest_evidence_hash": "7e549d00168a33ed34be361620a411d753093a56fb35d3c2e2ed5ff45bb85313",
+  "full_graph_stream_sha256": "2daa2b52454914861a3429f256fb910c2724ab7da693c32d2622c77c259ce662",
+  "response_count": 194,
+  "v3_response_count": 193,
+  "adopted_response_count": 1,
+  "request_attempt_marker_count": 194,
+  "http_200_count": 186,
+  "http_404_count": 8,
+  "empty_merge_commit_sha_response_count": 20,
+  "total_response_bytes": 3021134,
+  "full_graph_commit_count": 50395,
+  "first_parent_commit_count": 17543,
+  "first_parent_merge_count": 16721,
+  "recognized_target_reachable_count": 83,
+  "commit_diagnostic_count": 83,
+  "local_git_process_count": 2,
+  "github_requests_executed": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "result_reconstructed_exactly": true,
+  "decision": "PASS_S5_GITHUB_TARGETED_COMPLETENESS_ACQUISITION_RESULT_AUDIT",
+  "next_authorization": "FREEZE_S5_GITHUB_CORRECTED_NORMALIZATION_PROTOCOL_ONLY",
+  "audit_evidence_hash": "5e6c1f1b7dfd5a28395ec28a0f9cfed08ad053203edacaeb38628687c7edacac"
+}

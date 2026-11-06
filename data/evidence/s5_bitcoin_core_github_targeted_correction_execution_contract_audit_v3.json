@@ -1,0 +1,18 @@
+{
+  "schema_version": "aurex-s5-targeted-correction-v3-execution-contract-audit-v1",
+  "audit_id": "s5-targeted-correction-v3-execution-contract-audit-v1",
+  "audited_at": "2026-09-04T15:44:22.121799Z",
+  "contract_file_sha256": "6834bb51c0319c5d18d201e243dc5b610596e43e08ef62dd6582b6761abc7563",
+  "contract_evidence_hash": "a7f76b1a98652f68c1415d80fbd74c269b7b532d947b862f3aa84b674cc3610f",
+  "builder_contract_hash": "0c65d0bdef47cd277080435dbb720d7991aeaf3c081da80034d18815cc69ab2d",
+  "runner_contract_hash": "38cd573542c302340a7fac4f9493604160869d2323899fd387f6b9ef485d6755",
+  "source_binding_manifest_evidence_hash": "bb3577f6271d630117e80816bed35d4f60521ff73c86f98f40ef14fac3d12a09",
+  "implementation_binding_manifest_evidence_hash": "0c65d0bdef47cd277080435dbb720d7991aeaf3c081da80034d18815cc69ab2d",
+  "auditor_source_sha256": "771dba882d57c1eefb7a3e601797c1213a2218d5ad571bfef958e2bd5d7b200f",
+  "reconstructed_exactly": true,
+  "v3_requests_executed": 0,
+  "market_values_read": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_TARGETED_CORRECTION_V3_EXECUTION_AUDIT",
+  "audit_evidence_hash": "5bea834847c49c4ab7f4ded9a27c68faab13672fea9af87f20a893d55d4d6849"
+}

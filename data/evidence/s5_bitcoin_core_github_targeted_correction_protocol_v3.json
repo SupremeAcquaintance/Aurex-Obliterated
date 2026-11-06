@@ -1,0 +1,108 @@
+{
+  "schema_version": "aurex-s5-targeted-correction-v3-schema-remediation-protocol-v1",
+  "protocol_id": "s5-targeted-correction-v3-schema-remediation-protocol-v1",
+  "frozen_at": "2026-09-04T15:28:49.008233Z",
+  "status": "FROZEN_SCHEMA_REMEDIATION_ZERO_V3_REQUESTS",
+  "builder_contract_hash": "28994edc9c6bdd3d2ad29eb92deb96ca958c48bb1d81dc1315542d42a0e00089",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_execution_contract_audit_v2.json",
+      "file_sha256": "3d161179936ea406f8f08b13a7744bdfa89401be2e60563cd80897c82cc948b3"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_execution_contract_v2.json",
+      "file_sha256": "5ae247c15c881265835186833691f5317cb0b9b53f574eed34a476db8b7f2ed0"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_audit_v2.json",
+      "file_sha256": "807e816e21f1915e33a71f5c0cf3faff1fe2122048d78385977ad6d22741ff4c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_v1.json",
+      "file_sha256": "fc2fd558ecadd1264bc345be739869a3ecc2f277a776b9cb268da5a9733da0e6"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_v2.json",
+      "file_sha256": "5e3f9e8b2d51163cdb8072062faaaf9994e560df4222e3e83f0e92eba6d3d8b4"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_result_v2.json",
+      "file_sha256": "a83a68dc02cb904bca7417e44534865d508e3af69fbeec2cd92d38b38226c47f"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_v2_failure_audit_v1.json",
+      "file_sha256": "214822d28c3d560e4e740de6806311cdb993280861efb4e7f5fb28324d541ece"
+    },
+    {
+      "path": "data/evidence/s5_github_targeted_pull_responses_v2/failure_pull_000010.json",
+      "file_sha256": "258246403c54d1b65d70f8875e57413718b0122bbf2aa033509ca3605e518f19"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "33256c7fe3d439c477f01ee7e46688625b4aff61415d32807b54315fe85b7310",
+  "target_protocol_evidence_hash": "c3861c112d41d233ac28f7751eab5fae347b075c9984d41792ee54495ce0df8f",
+  "v2_protocol_evidence_hash": "909ec95ced0781f29cfdf89f2d331c5a38c75c988e00081927fa6b36bca88312",
+  "v2_execution_contract_evidence_hash": "8458060263b92e6b5a6c054c9d1dd3c23b9a0c30dc92fbd104fa2527bd32faa0",
+  "v2_result_evidence_hash": "e320a2af40931dbc4da637d6c28084399ac0e16b0822ae56df37fa4874c7078c",
+  "v2_failure_audit_evidence_hash": "d907497f4f2fe15947ed2263b52f7e254c886132a806bf4e06f0333868629900",
+  "target_manifest_evidence_hash": "05c335cafec64026bf2ef7a086eb069ad3cdce6782489309536d9934a71b1ea7",
+  "target_count": 194,
+  "adopted_response_pull_number": 10,
+  "adopted_response_http_status": 200,
+  "adopted_response_file_sha256": "258246403c54d1b65d70f8875e57413718b0122bbf2aa033509ca3605e518f19",
+  "adopted_response_body_sha256": "89ca07af933aee8906371fdf0345b3c636eb441f28f5d2f6b13080f3b407b327",
+  "adopted_response_merge_commit_sha_value": "",
+  "pull_10_v3_request_permitted": false,
+  "untouched_v3_request_target_count": 193,
+  "maximum_v3_request_count": 193,
+  "maximum_cumulative_possible_request_count": 195,
+  "merge_commit_sha_accepted_source_shapes": [
+    "NULL",
+    "EMPTY_STRING",
+    "SHA1_40_LOWER_HEX"
+  ],
+  "merge_commit_sha_source_value_normalization_permitted": false,
+  "transport_response_lifecycle": "CLIENT_SEND_STREAM_TRUE_TRY_FINALLY_RESPONSE_CLOSE",
+  "raw_response_directory": "data/evidence/s5_github_targeted_pull_responses_v3",
+  "response_file_pattern": "pull_{pull_number:06d}.json",
+  "result_path": "data/evidence/s5_bitcoin_core_github_targeted_correction_result_v3.json",
+  "crash_marker_required_before_request": true,
+  "incomplete_v3_attempt_retry_forbidden": true,
+  "completed_v3_response_resume_permitted": true,
+  "credentials_permitted": false,
+  "authorization_header_permitted": false,
+  "environment_proxy_permitted": false,
+  "redirects_permitted": false,
+  "concurrency_permitted": false,
+  "mapping_rule_change_permitted": false,
+  "accepted_event_creation_permitted": false,
+  "market_values_permitted": false,
+  "returns_permitted": false,
+  "orders_permitted": false,
+  "maximum_local_git_process_count": 2,
+  "maximum_response_bytes_per_target": 2097152,
+  "maximum_total_response_bytes": 268435456,
+  "maximum_elapsed_seconds": 21600,
+  "v3_requests_executed_during_freeze": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "decision": "FREEZE_S5_TARGETED_CORRECTION_V3_SCHEMA_REMEDIATION",
+  "next_authorization": "RUN_S5_GITHUB_TARGETED_COMPLETENESS_ACQUISITION_V3",
+  "limitations": [
+    "A v3 uncertain request cannot be retried under this protocol.",
+    "Allowing an empty source value does not infer a merge identity.",
+    "Corrected normalization requires a later frozen protocol and audit.",
+    "Cumulative possible targeted GET attempts remain capped at 195.",
+    "Current GitHub metadata may reflect post-event mutations.",
+    "No mapping or completeness rule can change during acquisition.",
+    "No market value, return, parameter, candidate, signal, or order is authorized.",
+    "No response automatically creates an accepted event or timestamp.",
+    "Null, empty, and SHA-40 merge_commit_sha values remain distinct.",
+    "Pull 10 cannot be requested again under v3.",
+    "Pull 10 is adopted from the complete v2 HTTP 200 response artifact.",
+    "Reliability, predictive edge, and profitability remain unproven.",
+    "The corrected response lifecycle from v2 remains mandatory.",
+    "V3 permits requests only for the remaining 193 untouched targets."
+  ],
+  "protocol_evidence_hash": "369338e2b8ae0ffdcd2d4fa8e0378d9b86b089f35ab595c0a5fb26c61a9cad7b"
+}

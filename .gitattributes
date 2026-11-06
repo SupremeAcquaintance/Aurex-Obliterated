@@ -1,0 +1,4 @@
+# Aurex evidence binds exact file bytes, including source line endings.
+# Preserve existing bytes on add/checkout even when core.autocrlf is enabled.
+# This does not disable normal text diffs or change existing files.
+* -text

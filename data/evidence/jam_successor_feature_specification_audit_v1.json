@@ -1,0 +1,17 @@
+{
+  "schema_version": "aurex-jam-successor-feature-specification-audit-v1",
+  "audited_at": "2026-08-04T11:32:25.907616Z",
+  "protocol_path": "data/evidence/jam_successor_feature_specification_protocol_v1.json",
+  "protocol_file_sha256": "8f863f6db68700431c02e653dbde0dbe770e768bb8d93fa10309e67fe2e0a1e6",
+  "protocol_evidence_hash": "86ee3e67c6fc78863378b4a1b30c8cb38f9aafda2335e92054309cd260bfffba",
+  "specification_path": "data/evidence/jam_successor_feature_specification_v1.json",
+  "specification_file_sha256": "83a91e2dc1037e240e8b43122cbe8e2109f86ad4afb0f7d45b8caf9d0aef9a36",
+  "specification_evidence_hash": "8c69103a5e65c73ff248e365a5c25362c0f4f7fffc1452ca197bf57e04d53701",
+  "specification_contract_hash": "699ded46c7b3e342f41828fb51d78a2c4995fe5a67fa07e64a9e85a05a639674",
+  "conformance_case_count_reconstructed": 9,
+  "conformance_manifest_hash": "cae28c8f9acdc3884747281d78003f128a33907aca89d73fed6217d5974122bc",
+  "real_market_rows_inspected": 0,
+  "return_metrics_calculated": false,
+  "decision": "PASS_CAUSAL_FEATURE_SPECIFICATION_AWAIT_DEVELOPMENT_DISTRIBUTION_AUTHORIZATION",
+  "audit_evidence_hash": "760ff52b46792772072d9b14622e1a8555dfed2758b24f148fe81ecf01f512a2"
+}

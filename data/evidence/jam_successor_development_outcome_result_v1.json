@@ -1,0 +1,586 @@
+{
+  "schema_version": "aurex-jam-successor-development-outcome-result-v1",
+  "result_id": "jam-successor-development-outcome-result-v1",
+  "generated_at": "2026-08-05T10:20:59.256463Z",
+  "status": "COMPLETE_DEVELOPMENT_OUTCOMES",
+  "protocol_evidence_hash": "e7ed92d708c80a87b36c7d24d903cd7be1c1f594def74daab22618ed9bc6e07d",
+  "runner_contract_hash": "c7f50b5e8920dee6c8da22caf2d72b9f36af5d07054a004c54f9ed89116d7791",
+  "prevalence_result_evidence_hash": "444fe28b86c6283181f3e99cfe55258fd4e9136cbca1c92b978cbdfae9ea77ea",
+  "event_ledger_file_sha256": "b6fe0c49bbbb8b61ac268b4716d2a50ab5fa08479ccbf254ef532b15a3b7d909",
+  "feature_rows_file_sha256": "fbb6ee42fca63ea6fe38db093c6c5c5484d2c6997d658d616f09f6fd4c2a0dfa",
+  "control_ledger_path": "data/evidence/jam_successor_development_matched_control_ledger_v1.jsonl",
+  "control_ledger_file_sha256": "c23ea774b26fa50bd4bc37dfc3273efe28d56d4a4ccd545243bbca08d0ab6e34",
+  "control_ledger_bytes": 307600,
+  "control_ledger_record_count": 991,
+  "matched_control_count": 456,
+  "unmatched_event_count": 535,
+  "outcome_ledger_path": "data/evidence/jam_successor_development_outcome_ledger_v1.jsonl",
+  "outcome_ledger_file_sha256": "0d322ac7c88f990bc7f714c47f4d4192cb4f81ca8f930e154aa7669336de53d8",
+  "outcome_ledger_bytes": 3478636,
+  "outcome_ledger_record_count": 4341,
+  "archive_evidence": [
+    {
+      "month": "2019-01",
+      "archive_path": "jam_archive_payload_pilot_v1/BTCUSDT/2019-01/aggTrades/BTCUSDT-aggTrades-2019-01.zip",
+      "archive_sha256": "588bff60b17e906ad4b654d0f615d838a2b2ec36b7790e5db40c6d2a03556355",
+      "requested_minute_count": 3900,
+      "recovered_minute_count": 3900,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-02",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-02/aggTrades/BTCUSDT-aggTrades-2019-02.zip",
+      "archive_sha256": "901383dce211994bac410db67f2dbb419fb466573d2b3c50b91a812c33008565",
+      "requested_minute_count": 3480,
+      "recovered_minute_count": 3480,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-03",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-03/aggTrades/BTCUSDT-aggTrades-2019-03.zip",
+      "archive_sha256": "e3ac8e825d75baa45fe8ec6e559720149b1abe839d7e1cb2dada01c062e355ce",
+      "requested_minute_count": 2820,
+      "recovered_minute_count": 2820,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-04",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-04/aggTrades/BTCUSDT-aggTrades-2019-04.zip",
+      "archive_sha256": "7b91748e9e45366e2cf652ad3a5dbeb2cfb62088769447a7a8d618a26b55f647",
+      "requested_minute_count": 3180,
+      "recovered_minute_count": 3180,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-05",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-05/aggTrades/BTCUSDT-aggTrades-2019-05.zip",
+      "archive_sha256": "5a701d36ec0b95c3bc36f422b5a5fc399940c37ec1d6d9875b2c117978aad83d",
+      "requested_minute_count": 3600,
+      "recovered_minute_count": 3600,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-06",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-06/aggTrades/BTCUSDT-aggTrades-2019-06.zip",
+      "archive_sha256": "c9713a0d38b180bb63e6ce7a9f3582d71dadb3a2df60ce70fb60ccd6c05eb2a5",
+      "requested_minute_count": 3712,
+      "recovered_minute_count": 3712,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-07",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-07/aggTrades/BTCUSDT-aggTrades-2019-07.zip",
+      "archive_sha256": "d1427a6b9cb899e99fdd3d63ee7e2f9b722cdeb1104cd147e48b8ee795c1d008",
+      "requested_minute_count": 5347,
+      "recovered_minute_count": 5347,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-08",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-08/aggTrades/BTCUSDT-aggTrades-2019-08.zip",
+      "archive_sha256": "1f21fc4013a38187c1d1f3fcdd9d1de64f100141e0ed290d8822fed28fba2902",
+      "requested_minute_count": 6721,
+      "recovered_minute_count": 6721,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-09",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-09/aggTrades/BTCUSDT-aggTrades-2019-09.zip",
+      "archive_sha256": "54336bdc31db859e33299eff0a583f8c54b8c02fca781a816edbdd215bd21453",
+      "requested_minute_count": 3660,
+      "recovered_minute_count": 3660,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-10",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-10/aggTrades/BTCUSDT-aggTrades-2019-10.zip",
+      "archive_sha256": "d2968d4a8a924ba46596e236917a1ffc9ccc6b2c67463d888ff6a9986dc7568e",
+      "requested_minute_count": 4020,
+      "recovered_minute_count": 4020,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-11",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-11/aggTrades/BTCUSDT-aggTrades-2019-11.zip",
+      "archive_sha256": "4a9ebba1ef616a22717e4467f29f997eb4f1892322d7d50927abc3f666884f02",
+      "requested_minute_count": 4140,
+      "recovered_minute_count": 4140,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2019-12",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2019-12/aggTrades/BTCUSDT-aggTrades-2019-12.zip",
+      "archive_sha256": "aa6f89fe47f4bbdaec3262c1fd3325cb6a92d7c11b7aec515111b6a8ffb9418b",
+      "requested_minute_count": 3060,
+      "recovered_minute_count": 3060,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-01",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-01/aggTrades/BTCUSDT-aggTrades-2020-01.zip",
+      "archive_sha256": "ea2f0aa850fb08b5c8124d2f8080c03689c30cdadf797363fc74b506b92a8d8b",
+      "requested_minute_count": 3540,
+      "recovered_minute_count": 3540,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-02",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-02/aggTrades/BTCUSDT-aggTrades-2020-02.zip",
+      "archive_sha256": "f7f56e2d26261d7c6ce97859c7064ad650b106602db28c59365de8a315c9bc99",
+      "requested_minute_count": 3600,
+      "recovered_minute_count": 3600,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-03",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-03/aggTrades/BTCUSDT-aggTrades-2020-03.zip",
+      "archive_sha256": "cd4ea1f7795a35b6c8e7e4e3c7a1050b22f09eb907cec04510eb4bc8730481f3",
+      "requested_minute_count": 4830,
+      "recovered_minute_count": 4830,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-04",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-04/aggTrades/BTCUSDT-aggTrades-2020-04.zip",
+      "archive_sha256": "94048b161517f2299b22e90a8a736f77f7c88e76b44c7e5d886884ba05f19935",
+      "requested_minute_count": 4051,
+      "recovered_minute_count": 4051,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-05",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-05/aggTrades/BTCUSDT-aggTrades-2020-05.zip",
+      "archive_sha256": "aa3fd6cfd761c4c74e22777eb95b8718424566705572a4970894be3d79c839dd",
+      "requested_minute_count": 4079,
+      "recovered_minute_count": 4079,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-06",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-06/aggTrades/BTCUSDT-aggTrades-2020-06.zip",
+      "archive_sha256": "ecf7ff0737dde7cb331f54579c276ddec1e7b1361733a4c8650580055375fbf1",
+      "requested_minute_count": 2700,
+      "recovered_minute_count": 2700,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-07",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-07/aggTrades/BTCUSDT-aggTrades-2020-07.zip",
+      "archive_sha256": "65c948cf3d564bea39ec17a07f6c408164fa1286c4b6fc830e24f3ee0d528f4e",
+      "requested_minute_count": 2280,
+      "recovered_minute_count": 2280,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-08",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-08/aggTrades/BTCUSDT-aggTrades-2020-08.zip",
+      "archive_sha256": "ae9e76d34ef90179fa5548b308bb5acb922bd013a9e8dfee599241e2e6824cf7",
+      "requested_minute_count": 3120,
+      "recovered_minute_count": 3120,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-09",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-09/aggTrades/BTCUSDT-aggTrades-2020-09.zip",
+      "archive_sha256": "8a5e42ca83492dfcee4e4ad3d2d03a0f7eccc8906b23bf6b0f47b270a645e4fb",
+      "requested_minute_count": 2820,
+      "recovered_minute_count": 2820,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-10",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-10/aggTrades/BTCUSDT-aggTrades-2020-10.zip",
+      "archive_sha256": "dfe4ce8ec1ef04ddeec888ec34b56f6bd05f902359718604f9cfd1f011f7303a",
+      "requested_minute_count": 1680,
+      "recovered_minute_count": 1680,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-11",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-11/aggTrades/BTCUSDT-aggTrades-2020-11.zip",
+      "archive_sha256": "6ffc17890013df71dc9e8ab1e44fe687207bf1bdb58ba925ec31e33a272b4716",
+      "requested_minute_count": 3840,
+      "recovered_minute_count": 3840,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    },
+    {
+      "month": "2020-12",
+      "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2020-12/aggTrades/BTCUSDT-aggTrades-2020-12.zip",
+      "archive_sha256": "1a90fdd37ea9635af11641826f828a714e7d3f39c1b7416f63ec0e65212b88e1",
+      "requested_minute_count": 2640,
+      "recovered_minute_count": 2640,
+      "missing_minute_count": 0,
+      "archive_identity_passed": true
+    }
+  ],
+  "accepted_event_count": 991,
+  "primary_outcome_qualified_event_count": 991,
+  "primary_outcome_qualified_control_count": 456,
+  "matched_primary_pair_count": 456,
+  "event_horizon_available_counts": {
+    "15": 991,
+    "30": 991,
+    "60": 991
+  },
+  "control_horizon_available_counts": {
+    "15": 456,
+    "30": 456,
+    "60": 456
+  },
+  "base_net_mean_30m_bps": "-16.008098281388651150",
+  "base_net_profit_factor_30m": "0.464374516027724364",
+  "stress_net_mean_30m_bps": "-26.189788269683100509",
+  "matched_excess_mean_30m_bps": "2.984977884653180892",
+  "bootstrap_lower_95_base_net_mean_30m_bps": "-19.768677643106546730",
+  "bootstrap_lower_95_matched_excess_mean_30m_bps": "-3.041289366472522414",
+  "yearly_metrics": [
+    {
+      "bucket": "2019",
+      "outcome_count": 565,
+      "base_net_mean_bps": "-18.060047305446033766"
+    },
+    {
+      "bucket": "2020",
+      "outcome_count": 426,
+      "base_net_mean_bps": "-13.286616594551981718"
+    }
+  ],
+  "quarterly_metrics": [
+    {
+      "bucket": "2019-Q1",
+      "outcome_count": 89,
+      "base_net_mean_bps": "-22.800991516598673406"
+    },
+    {
+      "bucket": "2019-Q2",
+      "outcome_count": 136,
+      "base_net_mean_bps": "-12.357190825786931419"
+    },
+    {
+      "bucket": "2019-Q3",
+      "outcome_count": 212,
+      "base_net_mean_bps": "-16.907100844511963017"
+    },
+    {
+      "bucket": "2019-Q4",
+      "outcome_count": 128,
+      "base_net_mean_bps": "-22.732462119188814936"
+    },
+    {
+      "bucket": "2020-Q1",
+      "outcome_count": 151,
+      "base_net_mean_bps": "-7.072863592369177081"
+    },
+    {
+      "bucket": "2020-Q2",
+      "outcome_count": 135,
+      "base_net_mean_bps": "-10.303815615382119916"
+    },
+    {
+      "bucket": "2020-Q3",
+      "outcome_count": 70,
+      "base_net_mean_bps": "-23.836504576672296980"
+    },
+    {
+      "bucket": "2020-Q4",
+      "outcome_count": 70,
+      "base_net_mean_bps": "-21.893226262682164221"
+    }
+  ],
+  "positive_year_count": 0,
+  "positive_quarter_count": 0,
+  "monthly_absolute_return_contributions": [
+    {
+      "month": "2019-01",
+      "absolute_return_sum_bps": "964.597206480912046183",
+      "contribution_share": "0.022240352823376192"
+    },
+    {
+      "month": "2019-02",
+      "absolute_return_sum_bps": "1012.497704524560987811",
+      "contribution_share": "0.023344776483063905"
+    },
+    {
+      "month": "2019-03",
+      "absolute_return_sum_bps": "696.683293332224960382",
+      "contribution_share": "0.016063163096219257"
+    },
+    {
+      "month": "2019-04",
+      "absolute_return_sum_bps": "1810.047368530004375289",
+      "contribution_share": "0.041733577323943388"
+    },
+    {
+      "month": "2019-05",
+      "absolute_return_sum_bps": "2416.196518533242670390",
+      "contribution_share": "0.055709328932061245"
+    },
+    {
+      "month": "2019-06",
+      "absolute_return_sum_bps": "2620.456525481325927749",
+      "contribution_share": "0.060418874628138834"
+    },
+    {
+      "month": "2019-07",
+      "absolute_return_sum_bps": "3920.395360681530523885",
+      "contribution_share": "0.090391072504531228"
+    },
+    {
+      "month": "2019-08",
+      "absolute_return_sum_bps": "3544.526216303417085600",
+      "contribution_share": "0.081724799857021555"
+    },
+    {
+      "month": "2019-09",
+      "absolute_return_sum_bps": "2252.532804171929817266",
+      "contribution_share": "0.051935796594082317"
+    },
+    {
+      "month": "2019-10",
+      "absolute_return_sum_bps": "1988.251935583468152348",
+      "contribution_share": "0.045842372600746280"
+    },
+    {
+      "month": "2019-11",
+      "absolute_return_sum_bps": "1644.364605828491363722",
+      "contribution_share": "0.037913492552314641"
+    },
+    {
+      "month": "2019-12",
+      "absolute_return_sum_bps": "1431.185545989919582608",
+      "contribution_share": "0.032998303628367365"
+    },
+    {
+      "month": "2020-01",
+      "absolute_return_sum_bps": "1885.054481182242802794",
+      "contribution_share": "0.043462987940561753"
+    },
+    {
+      "month": "2020-02",
+      "absolute_return_sum_bps": "2379.763356432477387006",
+      "contribution_share": "0.054869303298410074"
+    },
+    {
+      "month": "2020-03",
+      "absolute_return_sum_bps": "3570.798567222402551235",
+      "contribution_share": "0.082330551511714276"
+    },
+    {
+      "month": "2020-04",
+      "absolute_return_sum_bps": "1848.958539098837390421",
+      "contribution_share": "0.042630737461259774"
+    },
+    {
+      "month": "2020-05",
+      "absolute_return_sum_bps": "1662.491045776402168124",
+      "contribution_share": "0.038331427019846457"
+    },
+    {
+      "month": "2020-06",
+      "absolute_return_sum_bps": "1390.065037738376646220",
+      "contribution_share": "0.032050203628029074"
+    },
+    {
+      "month": "2020-07",
+      "absolute_return_sum_bps": "578.255378881356392993",
+      "contribution_share": "0.013332615481289948"
+    },
+    {
+      "month": "2020-08",
+      "absolute_return_sum_bps": "1033.856853390842265961",
+      "contribution_share": "0.023837246296993966"
+    },
+    {
+      "month": "2020-09",
+      "absolute_return_sum_bps": "1168.136380097601625707",
+      "contribution_share": "0.026933278538067423"
+    },
+    {
+      "month": "2020-10",
+      "absolute_return_sum_bps": "445.621400355216374952",
+      "contribution_share": "0.010274524022004939"
+    },
+    {
+      "month": "2020-11",
+      "absolute_return_sum_bps": "2304.457699961232591036",
+      "contribution_share": "0.053133009269914369"
+    },
+    {
+      "month": "2020-12",
+      "absolute_return_sum_bps": "802.294663896477595581",
+      "contribution_share": "0.018498204508041742"
+    }
+  ],
+  "largest_month_absolute_return_contribution": "0.090391072504531228",
+  "largest_contribution_month": "2019-07",
+  "gates": [
+    {
+      "gate_id": "OUTCOME_QUALIFIED_EVENTS_AT_LEAST_200",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "200",
+      "units": "COUNT",
+      "observed": "991",
+      "passed": true
+    },
+    {
+      "gate_id": "MATCHED_CONTROL_PAIRS_AT_LEAST_180",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "180",
+      "units": "COUNT",
+      "observed": "456",
+      "passed": true
+    },
+    {
+      "gate_id": "BASE_NET_MEAN_30M_AT_LEAST_5_BPS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "5",
+      "units": "BASIS_POINTS",
+      "observed": "-16.008098281388651150",
+      "passed": false
+    },
+    {
+      "gate_id": "BASE_NET_PROFIT_FACTOR_AT_LEAST_1_20",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "1.20",
+      "units": "RATIO",
+      "observed": "0.464374516027724364",
+      "passed": false
+    },
+    {
+      "gate_id": "STRESS_NET_MEAN_30M_POSITIVE",
+      "comparison": "GREATER_THAN",
+      "threshold": "0",
+      "units": "BASIS_POINTS",
+      "observed": "-26.189788269683100509",
+      "passed": false
+    },
+    {
+      "gate_id": "MATCHED_EXCESS_MEAN_30M_AT_LEAST_5_BPS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "5",
+      "units": "BASIS_POINTS",
+      "observed": "2.984977884653180892",
+      "passed": false
+    },
+    {
+      "gate_id": "CLUSTER_BOOTSTRAP_LOWER_95_BASE_NET_POSITIVE",
+      "comparison": "GREATER_THAN",
+      "threshold": "0",
+      "units": "BASIS_POINTS",
+      "observed": "-19.768677643106546730",
+      "passed": false
+    },
+    {
+      "gate_id": "CLUSTER_BOOTSTRAP_LOWER_95_MATCHED_EXCESS_POSITIVE",
+      "comparison": "GREATER_THAN",
+      "threshold": "0",
+      "units": "BASIS_POINTS",
+      "observed": "-3.041289366472522414",
+      "passed": false
+    },
+    {
+      "gate_id": "BOTH_CALENDAR_YEARS_BASE_NET_POSITIVE",
+      "comparison": "EQUAL",
+      "threshold": "2",
+      "units": "POSITIVE_YEAR_COUNT",
+      "observed": "0",
+      "passed": false
+    },
+    {
+      "gate_id": "AT_LEAST_6_OF_8_QUARTERS_BASE_NET_POSITIVE",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "6",
+      "units": "POSITIVE_QUARTER_COUNT",
+      "observed": "0",
+      "passed": false
+    },
+    {
+      "gate_id": "LARGEST_MONTH_ABSOLUTE_RETURN_CONTRIBUTION_AT_MOST_0_20",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "threshold": "0.20",
+      "units": "RATIO",
+      "observed": "0.090391072504531228",
+      "passed": true
+    }
+  ],
+  "passed_gate_count": 3,
+  "failed_gate_count": 8,
+  "decision": "STOP_JAM_SUCCESSOR_DEVELOPMENT_OUTCOME_FAILED",
+  "next_required_authorization": "NONE_DEVELOPMENT_OUTCOME_FAILED",
+  "real_market_periods_opened": [
+    "2019-01_THROUGH_2020-12_DEVELOPMENT"
+  ],
+  "sealed_market_periods_opened": [],
+  "outcome_horizons_calculated": [
+    15,
+    30,
+    60
+  ],
+  "return_metrics_calculated": [
+    "BASE_NET_RETURN_BPS_15M_DIAGNOSTIC",
+    "BASE_NET_RETURN_BPS_30M_PRIMARY",
+    "BASE_NET_RETURN_BPS_60M_DIAGNOSTIC",
+    "CALENDAR_MONTH_CLUSTER_BOOTSTRAP_LOWER_BOUNDS",
+    "MATCHED_EXCESS_BASE_NET_RETURN_BPS_30M",
+    "MAXIMUM_ADVERSE_EXCURSION_BPS",
+    "MAXIMUM_FAVORABLE_EXCURSION_BPS",
+    "STRESS_NET_RETURN_BPS_15M_DIAGNOSTIC",
+    "STRESS_NET_RETURN_BPS_30M_PRIMARY",
+    "STRESS_NET_RETURN_BPS_60M_DIAGNOSTIC"
+  ],
+  "diagnostics_used_for_selection": false,
+  "threshold_changes": [],
+  "strategy_executions": 0,
+  "creates_strategy": false,
+  "creates_signal": false,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_testnet_order_authority": false,
+  "creates_production_authority": false,
+  "creates_live_eligibility": false,
+  "limitations": [
+    "A development failure permits no validation, Pine parity, paper, or Testnet strategy execution.",
+    "A development pass would require explicit authority before opening sealed validation.",
+    "All 2021 validation and 2022 holdout source archives remained sealed.",
+    "All eleven gates are conjunctive; one failure stops the event definition.",
+    "Base and stress results include the frozen two-sided commission and adverse-tick assumptions.",
+    "Bootstrap confidence bounds use the frozen deterministic month resampling matrix.",
+    "Control matching used no future price or return.",
+    "Every unavailable path remained unavailable; no aggregate minute or price was synthesized.",
+    "Exact Pine parity remains unavailable for the aggregate-trade aggressor mechanism.",
+    "Historical modeled returns are not settled cash profit.",
+    "No observed result may authorize threshold, horizon, control, cost, or gate changes.",
+    "Official klines remained QA-only and supplied no outcome price.",
+    "Only accepted 2019-2020 events and outcome-blind deterministic controls received outcomes.",
+    "Production, live, and real-capital authority remain disabled.",
+    "Real net profit remains zero regardless of this historical development decision.",
+    "The 15- and 60-minute horizons and path excursions are non-selectable diagnostics.",
+    "The 30-minute horizon alone controls the advancement decision.",
+    "This result creates no strategy, signal, candidate, paper eligibility, or order authority.",
+    "This result is development evidence only and cannot establish untouched validation or live profitability."
+  ],
+  "result_evidence_hash": "560d990748bcefce3e7a46c4bb88e89bf16563bef659213e55b2934005bff430"
+}

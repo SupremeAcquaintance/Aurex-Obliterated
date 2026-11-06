@@ -1,0 +1,35 @@
+{
+  "auditor_file_hash": "4ec23f2e9dd8275abbba23b59f37a038d1cf3e3b3ebf8aea7c0561cee70568fa",
+  "authority": {
+    "live": false,
+    "market_values": false,
+    "network": false,
+    "paper": false,
+    "production": false,
+    "returns": false,
+    "signals": false,
+    "testnet_strategy_orders": false
+  },
+  "decision": "PASS_S5_AMENDED_MEASUREMENT_INDEPENDENT_AUDIT",
+  "event_counts": {
+    "all_accepted": 16273,
+    "canonical": 16238,
+    "primary": 16267,
+    "unresolved": 479
+  },
+  "evidence_hash": "37f27c2ddfb81aaad18424aaa6ed9224da5fe086bb4f8490514caba0c796cfd1",
+  "excluded_releases": 0,
+  "historical_qualification_permitted": false,
+  "included_releases": 132,
+  "independent_monthly_reconstruction": true,
+  "local_processes_executed": 0,
+  "monthly_rows": 212,
+  "next_action": "S5_MEASUREMENT_VIABILITY_AND_PROGRAM_PRIORITY_DECISION",
+  "non_release_v1_equality": true,
+  "output_hash": "ee98f762806770d3c1b17f26a14fc718db9dab75318c734d20e69d6cec23a6f1",
+  "release_inventory": 132,
+  "result_file_hash": "f0c2999cccfde6ff9731b78659ecd17f3060575236332465de3371b73aca034d",
+  "result_hash": "69d42d1c9e8754d8fa43a0b4ea1aa5cd52904f150c1475e25a572cba34e39c71",
+  "schema": "aurex-s5-amended-measurement-result-audit-v2",
+  "tags_hash": "d5f393456b7dd291aec5e0d3b20b5aa6f7490e239fd63bfcbba96878329464fe"
+}

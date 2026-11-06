@@ -1,0 +1,84 @@
+{
+  "schema_version": "aurex-s2-bigquery-feasibility-protocol-v1",
+  "protocol_id": "s2-bigquery-feasibility-protocol-v1",
+  "frozen_at": "2026-08-27T07:41:43.087248Z",
+  "status": "FROZEN_BEFORE_BIGQUERY_REQUESTS",
+  "builder_contract_hash": "a14aad82f566de64b42dbe18435b06596f1435b0eca3ee49a5f0e3ca46564ee2",
+  "charter_evidence_hash": "77e61e9f01519d6b7b56aa2ce45d4689356120bb1a338ead9edce35ef18fe9b0",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s2_onchain_settlement_charter_audit_v1.json",
+      "file_sha256": "f2a1d02a58504a5d087f60e6f83a6c04d0d9f2637fc5ac7e7fcdb89747cf5465"
+    },
+    {
+      "path": "data/evidence/s2_onchain_settlement_charter_v1.json",
+      "file_sha256": "c3ddfc3e985cf4737422f9ae452a4ad10499dc73f44c2be44e27176b9f086832"
+    }
+  ],
+  "metadata_endpoints": [
+    {
+      "target_id": "BLOCKS_TABLE",
+      "url": "https://bigquery.googleapis.com/bigquery/v2/projects/bigquery-public-data/datasets/crypto_bitcoin/tables/blocks",
+      "expected_reference": "bigquery-public-data:crypto_bitcoin.blocks"
+    },
+    {
+      "target_id": "DATASET",
+      "url": "https://bigquery.googleapis.com/bigquery/v2/projects/bigquery-public-data/datasets/crypto_bitcoin",
+      "expected_reference": "bigquery-public-data:crypto_bitcoin"
+    },
+    {
+      "target_id": "TRANSACTIONS_TABLE",
+      "url": "https://bigquery.googleapis.com/bigquery/v2/projects/bigquery-public-data/datasets/crypto_bitcoin/tables/transactions",
+      "expected_reference": "bigquery-public-data:crypto_bitcoin.transactions"
+    }
+  ],
+  "dry_run_specs": [
+    {
+      "query_id": "CAUSAL_SIX_CONFIRMATION",
+      "google_sql": "WITH confirmed_cutoff AS (\n  SELECT MAX(number) - 6 AS maximum_confirmed_block\n  FROM `bigquery-public-data.crypto_bitcoin.blocks`\n  WHERE timestamp < TIMESTAMP('2023-01-01T00:00:00Z')\n)\nSELECT\n  DATE_TRUNC(DATE(t.block_timestamp), WEEK(MONDAY)) AS week_start,\n  COUNTIF(NOT t.is_coinbase) AS confirmed_non_coinbase_transaction_count,\n  SUM(IF(NOT t.is_coinbase, t.fee, 0)) AS confirmed_fee_satoshis\nFROM `bigquery-public-data.crypto_bitcoin.transactions` AS t\nCROSS JOIN confirmed_cutoff AS c\nWHERE t.block_timestamp >= TIMESTAMP('2017-08-17T00:00:00Z')\n  AND t.block_timestamp < TIMESTAMP('2023-01-01T00:00:00Z')\n  AND t.block_number <= c.maximum_confirmed_block\nGROUP BY week_start\nORDER BY week_start\n",
+      "query_sha256": "437c0ee770e66862407edea0ba58f717f55d3f49634a65d189a29386f05f94b6"
+    },
+    {
+      "query_id": "DEVELOPMENT_WEEKLY_AGGREGATE",
+      "google_sql": "SELECT\n  DATE_TRUNC(DATE(block_timestamp), WEEK(MONDAY)) AS week_start,\n  COUNTIF(NOT is_coinbase) AS non_coinbase_transaction_count,\n  SUM(IF(NOT is_coinbase, fee, 0)) AS fee_satoshis\nFROM `bigquery-public-data.crypto_bitcoin.transactions`\nWHERE block_timestamp >= TIMESTAMP('2017-08-17T00:00:00Z')\n  AND block_timestamp < TIMESTAMP('2023-01-01T00:00:00Z')\nGROUP BY week_start\nORDER BY week_start\n",
+      "query_sha256": "8ff284fe4aa75d1d7bdbf0cc276bb512f9033d5ce6b35b620317461041f3c8ef"
+    }
+  ],
+  "source_project": "bigquery-public-data",
+  "source_dataset": "crypto_bitcoin",
+  "processing_location": "US",
+  "maximum_metadata_requests": 3,
+  "maximum_metadata_response_bytes_each": 2000000,
+  "request_timeout_seconds": 20,
+  "required_local_commands": [
+    "bq",
+    "gcloud"
+  ],
+  "required_billing_mode": "BIGQUERY_SANDBOX_WITHOUT_BILLING_ACCOUNT",
+  "maximum_dry_run_requests": 2,
+  "dry_run_only": true,
+  "query_results_requested": false,
+  "query_result_rows_permitted": 0,
+  "metadata_values_permitted": true,
+  "blockchain_row_values_permitted": false,
+  "market_values_permitted": false,
+  "payload_acquisition_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "validation_access_permitted": false,
+  "holdout_access_permitted": false,
+  "orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "decision": "FREEZE_S2_BIGQUERY_FEASIBILITY_PREFLIGHT_ONLY",
+  "next_authorization": "RUN_S2_BIGQUERY_FEASIBILITY_PREFLIGHT_ONCE",
+  "limitations": [
+    "A metadata or dry-run pass cannot establish predictive edge.",
+    "BigQuery table availability and schema can change after this check.",
+    "Dry-run byte estimates can differ from billed bytes at execution time.",
+    "No numeric query may run without a separately frozen payload protocol.",
+    "The zero-dollar boundary requires a sandbox project without billing.",
+    "This stage returns no blockchain rows, market values, or strategy outcomes."
+  ],
+  "protocol_evidence_hash": "9e91ba7e6d8b388e4873ccd255336577ae1f2c900e3c88f35df6abc6a09720f0"
+}

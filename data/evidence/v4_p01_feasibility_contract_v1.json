@@ -1,0 +1,585 @@
+{
+  "schema_version": "aurex-v4-p01-cross-venue-feasibility-contract-v1",
+  "contract_id": "v4-p01-cross-venue-feasibility-v1",
+  "contract_version": "1.0.0",
+  "frozen_at": "2026-07-29T05:41:28.799148Z",
+  "status": "FROZEN_PRE_NETWORK_AND_PRE_OUTCOME",
+  "discovery_charter_evidence_hash": "2230f042c676f97988129bf752aff889c83404627ff782c5462bd984e13cbd81",
+  "proposal_register_evidence_hash": "a4fb8e0739cdd07f8a9a810cf395aa5fed3216000cb8b37c01f232eb5ec8973a",
+  "proposal_evidence_hash": "a1cd703be816f8b8ebcb690afc7b990010df202cb4c97a9642cb68b01e6f6826",
+  "builder_contract_hash": "894e4206f8d8d20fa42000843590d5ba50b6b02da872e6af462b79d212a8c0e4",
+  "proposal_id": "V4P01_INVENTORY_BACKED_SAME_ASSET_CROSS_VENUE_ARBITRAGE",
+  "exact_common_product": "ETH_BTC",
+  "venue_product_bindings": {
+    "binance": "ethbtc",
+    "coinbase": "ETH-BTC"
+  },
+  "development_start": "2023-01-01T00:00:00Z",
+  "development_end": "2025-01-01T00:00:00Z",
+  "requests": [
+    {
+      "request_id": "V4P01_META_BINANCE_EXCHANGE_DETAILS",
+      "phase": "METADATA_CENSUS",
+      "sequence": 1,
+      "method": "GET",
+      "url": "https://api.tardis.dev/v1/exchanges/binance",
+      "expected_host": "api.tardis.dev",
+      "exchange_id": "binance",
+      "product_id": null,
+      "sample_at": null,
+      "offset_minutes": null,
+      "required_channels": [
+        "exchange_metadata"
+      ],
+      "request_headers": {
+        "Accept": "application/json, application/x-ndjson",
+        "Accept-Encoding": "gzip",
+        "User-Agent": "Aurex-V4P01-Feasibility/1.0"
+      },
+      "authentication": "NONE_FREE_FIRST_DAY_SAMPLE",
+      "maximum_attempts": 1,
+      "maximum_retries": 0,
+      "connect_timeout_seconds": 10,
+      "read_inactivity_timeout_seconds": 30,
+      "total_wall_clock_timeout_seconds": 60,
+      "maximum_response_bytes": 8388608,
+      "range_or_resume_permitted": false,
+      "market_value_parsing_permitted": false
+    },
+    {
+      "request_id": "V4P01_META_COINBASE_EXCHANGE_DETAILS",
+      "phase": "METADATA_CENSUS",
+      "sequence": 2,
+      "method": "GET",
+      "url": "https://api.tardis.dev/v1/exchanges/coinbase",
+      "expected_host": "api.tardis.dev",
+      "exchange_id": "coinbase",
+      "product_id": null,
+      "sample_at": null,
+      "offset_minutes": null,
+      "required_channels": [
+        "exchange_metadata"
+      ],
+      "request_headers": {
+        "Accept": "application/json, application/x-ndjson",
+        "Accept-Encoding": "gzip",
+        "User-Agent": "Aurex-V4P01-Feasibility/1.0"
+      },
+      "authentication": "NONE_FREE_FIRST_DAY_SAMPLE",
+      "maximum_attempts": 1,
+      "maximum_retries": 0,
+      "connect_timeout_seconds": 10,
+      "read_inactivity_timeout_seconds": 30,
+      "total_wall_clock_timeout_seconds": 60,
+      "maximum_response_bytes": 8388608,
+      "range_or_resume_permitted": false,
+      "market_value_parsing_permitted": false
+    },
+    {
+      "request_id": "V4P01_PILOT_BINANCE_20230101_0000",
+      "phase": "PAYLOAD_SCHEMA_PILOT",
+      "sequence": 3,
+      "method": "GET",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance?from=2023-01-01&offset=0&filters=%5B%7B%22channel%22%3A%22bookTicker%22%2C%22symbols%22%3A%5B%22ethbtc%22%5D%7D%2C%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22ethbtc%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22ethbtc%22%5D%7D%5D",
+      "expected_host": "api.tardis.dev",
+      "exchange_id": "binance",
+      "product_id": "ethbtc",
+      "sample_at": "2023-01-01T00:00:00Z",
+      "offset_minutes": 0,
+      "required_channels": [
+        "bookTicker",
+        "depth",
+        "depthSnapshot"
+      ],
+      "request_headers": {
+        "Accept": "application/json, application/x-ndjson",
+        "Accept-Encoding": "gzip",
+        "User-Agent": "Aurex-V4P01-Feasibility/1.0"
+      },
+      "authentication": "NONE_FREE_FIRST_DAY_SAMPLE",
+      "maximum_attempts": 1,
+      "maximum_retries": 0,
+      "connect_timeout_seconds": 10,
+      "read_inactivity_timeout_seconds": 30,
+      "total_wall_clock_timeout_seconds": 180,
+      "maximum_response_bytes": 16777216,
+      "range_or_resume_permitted": false,
+      "market_value_parsing_permitted": false
+    },
+    {
+      "request_id": "V4P01_PILOT_COINBASE_20230101_0000",
+      "phase": "PAYLOAD_SCHEMA_PILOT",
+      "sequence": 4,
+      "method": "GET",
+      "url": "https://api.tardis.dev/v1/data-feeds/coinbase?from=2023-01-01&offset=0&filters=%5B%7B%22channel%22%3A%22l2update%22%2C%22symbols%22%3A%5B%22ETH-BTC%22%5D%7D%2C%7B%22channel%22%3A%22snapshot%22%2C%22symbols%22%3A%5B%22ETH-BTC%22%5D%7D%5D",
+      "expected_host": "api.tardis.dev",
+      "exchange_id": "coinbase",
+      "product_id": "ETH-BTC",
+      "sample_at": "2023-01-01T00:00:00Z",
+      "offset_minutes": 0,
+      "required_channels": [
+        "l2update",
+        "snapshot"
+      ],
+      "request_headers": {
+        "Accept": "application/json, application/x-ndjson",
+        "Accept-Encoding": "gzip",
+        "User-Agent": "Aurex-V4P01-Feasibility/1.0"
+      },
+      "authentication": "NONE_FREE_FIRST_DAY_SAMPLE",
+      "maximum_attempts": 1,
+      "maximum_retries": 0,
+      "connect_timeout_seconds": 10,
+      "read_inactivity_timeout_seconds": 30,
+      "total_wall_clock_timeout_seconds": 180,
+      "maximum_response_bytes": 16777216,
+      "range_or_resume_permitted": false,
+      "market_value_parsing_permitted": false
+    },
+    {
+      "request_id": "V4P01_PILOT_BINANCE_20231201_1200",
+      "phase": "PAYLOAD_SCHEMA_PILOT",
+      "sequence": 5,
+      "method": "GET",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance?from=2023-12-01&offset=720&filters=%5B%7B%22channel%22%3A%22bookTicker%22%2C%22symbols%22%3A%5B%22ethbtc%22%5D%7D%2C%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22ethbtc%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22ethbtc%22%5D%7D%5D",
+      "expected_host": "api.tardis.dev",
+      "exchange_id": "binance",
+      "product_id": "ethbtc",
+      "sample_at": "2023-12-01T12:00:00Z",
+      "offset_minutes": 720,
+      "required_channels": [
+        "bookTicker",
+        "depth",
+        "depthSnapshot"
+      ],
+      "request_headers": {
+        "Accept": "application/json, application/x-ndjson",
+        "Accept-Encoding": "gzip",
+        "User-Agent": "Aurex-V4P01-Feasibility/1.0"
+      },
+      "authentication": "NONE_FREE_FIRST_DAY_SAMPLE",
+      "maximum_attempts": 1,
+      "maximum_retries": 0,
+      "connect_timeout_seconds": 10,
+      "read_inactivity_timeout_seconds": 30,
+      "total_wall_clock_timeout_seconds": 180,
+      "maximum_response_bytes": 16777216,
+      "range_or_resume_permitted": false,
+      "market_value_parsing_permitted": false
+    },
+    {
+      "request_id": "V4P01_PILOT_COINBASE_20231201_1200",
+      "phase": "PAYLOAD_SCHEMA_PILOT",
+      "sequence": 6,
+      "method": "GET",
+      "url": "https://api.tardis.dev/v1/data-feeds/coinbase?from=2023-12-01&offset=720&filters=%5B%7B%22channel%22%3A%22l2update%22%2C%22symbols%22%3A%5B%22ETH-BTC%22%5D%7D%2C%7B%22channel%22%3A%22snapshot%22%2C%22symbols%22%3A%5B%22ETH-BTC%22%5D%7D%5D",
+      "expected_host": "api.tardis.dev",
+      "exchange_id": "coinbase",
+      "product_id": "ETH-BTC",
+      "sample_at": "2023-12-01T12:00:00Z",
+      "offset_minutes": 720,
+      "required_channels": [
+        "l2update",
+        "snapshot"
+      ],
+      "request_headers": {
+        "Accept": "application/json, application/x-ndjson",
+        "Accept-Encoding": "gzip",
+        "User-Agent": "Aurex-V4P01-Feasibility/1.0"
+      },
+      "authentication": "NONE_FREE_FIRST_DAY_SAMPLE",
+      "maximum_attempts": 1,
+      "maximum_retries": 0,
+      "connect_timeout_seconds": 10,
+      "read_inactivity_timeout_seconds": 30,
+      "total_wall_clock_timeout_seconds": 180,
+      "maximum_response_bytes": 16777216,
+      "range_or_resume_permitted": false,
+      "market_value_parsing_permitted": false
+    },
+    {
+      "request_id": "V4P01_PILOT_BINANCE_20241201_2359",
+      "phase": "PAYLOAD_SCHEMA_PILOT",
+      "sequence": 7,
+      "method": "GET",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance?from=2024-12-01&offset=1439&filters=%5B%7B%22channel%22%3A%22bookTicker%22%2C%22symbols%22%3A%5B%22ethbtc%22%5D%7D%2C%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22ethbtc%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22ethbtc%22%5D%7D%5D",
+      "expected_host": "api.tardis.dev",
+      "exchange_id": "binance",
+      "product_id": "ethbtc",
+      "sample_at": "2024-12-01T23:59:00Z",
+      "offset_minutes": 1439,
+      "required_channels": [
+        "bookTicker",
+        "depth",
+        "depthSnapshot"
+      ],
+      "request_headers": {
+        "Accept": "application/json, application/x-ndjson",
+        "Accept-Encoding": "gzip",
+        "User-Agent": "Aurex-V4P01-Feasibility/1.0"
+      },
+      "authentication": "NONE_FREE_FIRST_DAY_SAMPLE",
+      "maximum_attempts": 1,
+      "maximum_retries": 0,
+      "connect_timeout_seconds": 10,
+      "read_inactivity_timeout_seconds": 30,
+      "total_wall_clock_timeout_seconds": 180,
+      "maximum_response_bytes": 16777216,
+      "range_or_resume_permitted": false,
+      "market_value_parsing_permitted": false
+    },
+    {
+      "request_id": "V4P01_PILOT_COINBASE_20241201_2359",
+      "phase": "PAYLOAD_SCHEMA_PILOT",
+      "sequence": 8,
+      "method": "GET",
+      "url": "https://api.tardis.dev/v1/data-feeds/coinbase?from=2024-12-01&offset=1439&filters=%5B%7B%22channel%22%3A%22l2update%22%2C%22symbols%22%3A%5B%22ETH-BTC%22%5D%7D%2C%7B%22channel%22%3A%22snapshot%22%2C%22symbols%22%3A%5B%22ETH-BTC%22%5D%7D%5D",
+      "expected_host": "api.tardis.dev",
+      "exchange_id": "coinbase",
+      "product_id": "ETH-BTC",
+      "sample_at": "2024-12-01T23:59:00Z",
+      "offset_minutes": 1439,
+      "required_channels": [
+        "l2update",
+        "snapshot"
+      ],
+      "request_headers": {
+        "Accept": "application/json, application/x-ndjson",
+        "Accept-Encoding": "gzip",
+        "User-Agent": "Aurex-V4P01-Feasibility/1.0"
+      },
+      "authentication": "NONE_FREE_FIRST_DAY_SAMPLE",
+      "maximum_attempts": 1,
+      "maximum_retries": 0,
+      "connect_timeout_seconds": 10,
+      "read_inactivity_timeout_seconds": 30,
+      "total_wall_clock_timeout_seconds": 180,
+      "maximum_response_bytes": 16777216,
+      "range_or_resume_permitted": false,
+      "market_value_parsing_permitted": false
+    }
+  ],
+  "transport_budget": {
+    "metadata_unique_url_budget": 2,
+    "payload_unique_url_budget": 6,
+    "total_unique_url_budget": 8,
+    "total_attempt_budget": 8,
+    "total_retry_budget": 0,
+    "maximum_concurrency": 1,
+    "metadata_response_byte_budget": 16777216,
+    "payload_response_byte_budget": 100663296,
+    "total_response_byte_budget": 117440512,
+    "storage_budget_bytes": 268435456,
+    "protocol_wall_clock_budget_seconds": 1200,
+    "automatic_retry_permitted": false,
+    "range_or_resume_permitted": false,
+    "budget_expansion_after_observation_permitted": false
+  },
+  "execution_gates": [
+    {
+      "gate_id": "ACCOUNT_AND_JURISDICTION_ACCESS",
+      "evidence_required": [
+        "current_official_venue_terms_and_restriction_evidence",
+        "operator_attestation_for_two_verified_trade_capable_accounts"
+      ],
+      "pass_condition": "The operator jurisdiction is not prohibited, and separate Binance Spot and Coinbase Exchange accounts are verified as able to hold ETH and BTC and trade the exact bound products. Public API access or documentation alone cannot pass this gate.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "ARCHIVE_CALENDAR_AND_INCIDENT_COVERAGE",
+      "evidence_required": [
+        "binance_tardis_exchange_metadata_hash",
+        "coinbase_tardis_exchange_metadata_hash",
+        "target_symbol_availability_and_incident_boundaries"
+      ],
+      "pass_condition": "Both exact products cover the complete 2023-2024 development boundary, all source-declared incidents are preserved, at least 95 percent of calendar days and 90 percent of months can be qualified, and no incident is silently treated as tradable time.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "CAPACITY_AND_STALENESS_FOUNDATION",
+      "evidence_required": [
+        "bbo_quantity_schema_presence",
+        "exchange_and_local_timestamp_schema",
+        "future_predeclared_capacity_and_staleness_model_requirement"
+      ],
+      "pass_condition": "Both feeds expose displayed BBO quantity and exchange/local timing needed for a later capacity and staleness model. No numeric threshold or market value is selected under this feasibility contract.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "COMMON_ETH_BTC_PRODUCT_IDENTITY",
+      "evidence_required": [
+        "base_quote_asset_mapping",
+        "binance_ethbtc_metadata_identity",
+        "coinbase_eth_btc_metadata_identity"
+      ],
+      "pass_condition": "Binance ethbtc and Coinbase ETH-BTC both identify ETH as base and BTC as quote throughout the development boundary, with no synthetic USD, stablecoin, index, derivative, or asset-conversion substitution.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "DETERMINISTIC_TWO_LEG_STATE_MACHINE",
+      "evidence_required": [
+        "balance_position_inventory_reconciliation_contract",
+        "synthetic_order_lifecycle_scenarios",
+        "unique_client_order_identity_contract"
+      ],
+      "pass_condition": "A separately tested state machine can represent independent submit, ack, reject, partial fill, cancel, unknown, rollback, flatten, balance, and inventory states for both venues without assuming cross-venue atomicity.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "DISCONNECT_SNAPSHOT_AND_SEQUENCE_RECOVERY",
+      "evidence_required": [
+        "raw_disconnect_marker_schema",
+        "reconnect_snapshot_schema",
+        "venue_sequence_or_update_identifier_schema"
+      ],
+      "pass_condition": "Every source disconnect begins a nontradable segment and requires a fresh snapshot before rearm. Binance update identifiers and Coinbase ordered L2 updates or reconnect snapshots must support gap detection or fail closed without inferred book state.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "EXCHANGE_AND_LOCAL_TIMESTAMP_IDENTITY",
+      "evidence_required": [
+        "clock_order_and_duplicate_evidence",
+        "exchange_event_timestamp_or_documented_absence",
+        "raw_local_capture_timestamp_schema"
+      ],
+      "pass_condition": "Every event has a source local capture timestamp, exchange timestamps are preserved where supplied, absence is explicit, and line order is available as the tie breaker without modifying or synthesizing time.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "IOC_OR_FOK_ORDER_SEMANTICS",
+      "evidence_required": [
+        "binance_current_official_order_semantics",
+        "coinbase_current_official_order_semantics",
+        "historical_rule_change_limitations"
+      ],
+      "pass_condition": "Both venues document an immediately executable bounded order path and acknowledgement lifecycle suitable for one-leg risk control. Any unsupported historical rule period is rejected rather than filled using current behavior.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "POINT_IN_TIME_FEES_AND_FEE_CURRENCY",
+      "evidence_required": [
+        "dated_binance_spot_fee_schedule_or_hard_upper_bound",
+        "dated_coinbase_exchange_fee_schedule_or_hard_upper_bound",
+        "fee_currency_discount_and_tier_history"
+      ],
+      "pass_condition": "A date-effective, account-applicable taker-fee and fee-currency upper bound exists for every development session on both venues. Current rates, assumed VIP tiers, rebates, or unbounded estimates cannot pass.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "POINT_IN_TIME_FILTERS_PRODUCT_AND_VENUE_STATE",
+      "evidence_required": [
+        "dated_tick_lot_notional_and_price_band_evidence",
+        "historical_rule_change_evidence",
+        "product_listing_halt_auction_and_maintenance_evidence"
+      ],
+      "pass_condition": "Both products have date-effective tick, lot, notional, price-band, listing, halt, auction, and maintenance state for every modeled session. Current filters cannot be projected backward.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "PRE_FUNDED_INVENTORY_AND_BALANCE_ACCOUNTING",
+      "evidence_required": [
+        "base_inventory_on_prospective_sell_venue",
+        "quote_inventory_on_prospective_buy_venue",
+        "transfer_rebalance_and_custody_cost_contract"
+      ],
+      "pass_condition": "The design requires pre-funded ETH and BTC on both venues, treats transfers only as non-atomic rebalancing, accounts for custody and idle capital, and blocks a new attempt until both balances reconcile.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "RAW_BBO_OR_L2_SCHEMA_WITH_QUANTITIES",
+      "evidence_required": [
+        "bid_ask_and_quantity_key_presence_without_value_parsing",
+        "binance_book_ticker_depth_and_snapshot_schema",
+        "coinbase_l2_update_and_snapshot_schema"
+      ],
+      "pass_condition": "All six sample responses preserve exchange-native BBO or L2 updates, snapshots, symbols, bid/ask prices and quantities as schema keys. Trades, candles, or schema-less normalized values cannot substitute.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "SOURCE_REVISION_AND_BYTE_INTEGRITY",
+      "evidence_required": [
+        "metadata_revision_identity",
+        "partial_byte_count_and_hash_policy",
+        "response_header_and_local_sha256_manifest"
+      ],
+      "pass_condition": "Every retained response has request identity, selected headers, byte count, SHA-256, and source metadata revision identity. Any mutable source limitation is explicit and no failed partial response is reported as complete.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    },
+    {
+      "gate_id": "TRANSPORT_RESOURCE_AND_STORAGE_FEASIBILITY",
+      "evidence_required": [
+        "all_eight_terminal_request_records",
+        "cumulative_byte_elapsed_and_storage_totals",
+        "durable_attempt_journal"
+      ],
+      "pass_condition": "All eight one-attempt requests complete within their frozen response, wall-clock, total-byte, and storage budgets, with no retry, resume, or unreconciled intent. Otherwise the protocol stops as transport unresolved.",
+      "failure_action": "REJECT_V4P01_BEFORE_PRIMARY_SELECTION",
+      "conservative_override_permitted": false,
+      "observed_status": "NOT_OBSERVED_PRE_EXECUTION"
+    }
+  ],
+  "permitted_observation_fields": [
+    "attempt_count",
+    "boundary_completeness",
+    "capture_line_count",
+    "channel_identity",
+    "content_encoding",
+    "content_length",
+    "content_type",
+    "disconnect_marker_count",
+    "duplicate_local_timestamp_count",
+    "elapsed_milliseconds",
+    "exchange_id",
+    "exchange_timestamp_presence_count",
+    "first_and_last_exchange_timestamp",
+    "first_and_last_local_timestamp",
+    "http_status",
+    "incident_identity_and_time_boundary",
+    "local_timestamp_presence_count",
+    "missing_required_schema_key_count",
+    "payload_sha256",
+    "product_identity",
+    "reconnect_snapshot_count",
+    "request_identity",
+    "response_header_subset",
+    "row_count",
+    "schema_key_presence",
+    "sequence_or_update_id_presence_count",
+    "source_available_since_and_to",
+    "source_revision_identity",
+    "symbol_available_since_and_to"
+  ],
+  "prohibited_parsed_fields": [
+    "ask_price_value",
+    "ask_quantity_value",
+    "bid_price_value",
+    "bid_quantity_value",
+    "fee_amount_value",
+    "market_price_value",
+    "order_book_depth_value",
+    "profit_or_loss",
+    "return_metric",
+    "signal",
+    "spread_value",
+    "trade_price_value",
+    "trade_quantity_value"
+  ],
+  "journal_policy": [
+    "APPEND_REQUEST_INTENT_AND_FSYNC_BEFORE_EVERY_ATTEMPT",
+    "APPEND_RESPONSE_OR_FAILURE_RECORD_AND_FSYNC_AFTER_EVERY_ATTEMPT",
+    "COUNT_ALL_ATTEMPTS_FROM_DURABLE_JOURNAL_ACROSS_RESTARTS",
+    "HASH_AND_RECORD_PARTIAL_BYTES_BEFORE_TRANSACTIONAL_CLEANUP",
+    "PERSIST_EACH_METADATA_OBSERVATION_BEFORE_ANY_PAYLOAD_REQUEST",
+    "PERSIST_EACH_PAYLOAD_OBSERVATION_BEFORE_THE_NEXT_REQUEST",
+    "REFUSE_DUPLICATE_REQUEST_ID_OR_UNDECLARED_URL",
+    "REFUSE_PAYLOAD_PHASE_UNLESS_METADATA_RESULT_PASSES",
+    "STOP_ON_STALE_PART_FILE_OR_UNRECONCILED_REQUEST_INTENT",
+    "WRITE_EXACTLY_ONE_COMPLETE_REJECT_OR_TRANSPORT_STOP_ARTIFACT"
+  ],
+  "stop_conditions": [
+    "ANY_BOUND_CHARTER_REGISTER_OR_PROPOSAL_HASH_FAILS",
+    "ANY_DECLARED_REQUEST_EXCEEDS_ATTEMPT_BYTE_OR_WALL_CLOCK_BUDGET",
+    "ANY_REQUEST_INTENT_OR_RESPONSE_RECORD_IS_NOT_DURABLE",
+    "ANY_RESPONSE_REQUIRES_A_RETRY_OR_RESUME_NOT_DECLARED_HERE",
+    "BINANCE_OR_COINBASE_ETH_BTC_PRODUCT_IS_ABSENT_OR_INCOMPLETE",
+    "CUMULATIVE_RESOURCE_USE_CANNOT_BE_RECONSTRUCTED",
+    "METADATA_GATE_FAILS_BEFORE_PAYLOAD_PHASE",
+    "POINT_IN_TIME_FEES_FILTERS_OR_VENUE_STATE_CANNOT_BE_BOUNDED",
+    "PUBLIC_SOURCE_REQUIRES_CREDENTIALS_FOR_THE_FROZEN_SAMPLE",
+    "RAW_SCHEMA_CANNOT_PROVE_BBO_QUANTITY_AND_RECOVERY_FIELDS",
+    "SOURCE_REVISION_OR_PARTIAL_BYTE_EVIDENCE_CANNOT_BE_PRESERVED",
+    "TWO_LEG_ACCESS_INVENTORY_ROLLBACK_OR_RECONCILIATION_IS_NOT_FEASIBLE"
+  ],
+  "journal_path": "data/evidence/v4_p01/transport_journal_v1.ndjson",
+  "metadata_observation_path": "data/evidence/v4_p01/metadata_observations_v1.ndjson",
+  "payload_observation_path": "data/evidence/v4_p01/payload_observations_v1.ndjson",
+  "raw_payload_directory": "data/evidence/v4_p01/raw",
+  "terminal_artifacts": {
+    "complete_artifact": "data/evidence/v4_p01_feasibility_complete_result_v1.json",
+    "reject_artifact": "data/evidence/v4_p01_feasibility_reject_result_v1.json",
+    "transport_stop_artifact": "data/evidence/v4_p01_feasibility_transport_stop_v1.json",
+    "mutually_exclusive": true,
+    "required_common_fields": [
+      "builder_and_contract_hashes",
+      "completed_and_failed_request_ids",
+      "decision",
+      "execution_gate_results",
+      "metadata_and_payload_observation_hashes",
+      "parsed_and_prohibited_field_manifest",
+      "request_journal_hash",
+      "resource_totals",
+      "selection_and_permission_boundary",
+      "terminal_timestamp"
+    ],
+    "required_transport_stop_fields": [
+      "failed_request_id_and_attempt",
+      "failure_class_and_message",
+      "partial_byte_count_and_sha256",
+      "request_intent_record_hash",
+      "response_headers_if_received",
+      "unconsumed_request_and_byte_budgets",
+      "unreconciled_intent_status"
+    ],
+    "result_authorizes_returns": false,
+    "result_creates_candidate": false
+  },
+  "decision": "AUTHORIZE_BOUNDED_PUBLIC_METADATA_AND_SCHEMA_PILOT_NO_MARKET_VALUES",
+  "authorizes_network_requests": true,
+  "authorized_network_scope": "EXACT_EIGHT_PUBLIC_TARDIS_GET_REQUESTS_ONLY",
+  "credentials_permitted": false,
+  "private_endpoints_permitted": false,
+  "market_numeric_value_inspection_permitted": false,
+  "signal_trade_pnl_or_return_calculation_permitted": false,
+  "selects_primary": false,
+  "creates_candidate": false,
+  "opens_development_outcomes": false,
+  "opens_validation": false,
+  "opens_holdout": false,
+  "opens_forward": false,
+  "permits_pine_parity": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "strategy_outcome_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "limitations": [
+    "A metadata or payload transport failure writes a terminal stop and cannot be retried or repaired under this contract.",
+    "Current exchange documentation is not point-in-time proof of 2023-2024 fees, filters, product state, or order semantics.",
+    "Free sample access does not establish affordable complete-history access; commercial entitlement and full storage cost remain unresolved.",
+    "No conservative override is permitted for account access, fees, filters, venue state, source integrity, or two-leg reconciliation.",
+    "No parameter, market value, signal, trade, P/L, return, candidate, validation, Pine, paper, sandbox, live, or capital permission exists.",
+    "Only ETH/BTC on Binance Spot and Coinbase Exchange is in scope; no USD, stablecoin, derivative, or asset-conversion proxy is allowed.",
+    "Passing all source pilots still does not select V4P01; every execution gate must independently pass before a terminal screen.",
+    "Raw payload bytes contain market values, but the runner may only hash and inspect schema, identity, timestamp, sequence, disconnect, snapshot, row-count, and resource fields.",
+    "Tardis is an independent vendor and its locally captured bytes are not exchange-signed or guaranteed immutable by the venues.",
+    "The six payload samples are one-minute schema and transport pilots on free first-of-month data and cannot establish a tradable edge.",
+    "This contract authorizes exactly eight public Tardis GET requests and no other network target, method, credential, retry, or resume."
+  ],
+  "contract_evidence_hash": "684a9f4de4aececab26113c46f98511037fefdcf811ab4abfbe3766a3ad0a69e"
+}

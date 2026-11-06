@@ -1,0 +1,18 @@
+{
+  "authority": {
+    "live": false,
+    "market_values": false,
+    "network": false,
+    "paper": false,
+    "production": false,
+    "returns": false,
+    "signals": false,
+    "testnet_strategy_orders": false
+  },
+  "contract_file_hash": "da160e6cb7fe90a50798a1d7c0dbcc2dfd134a5ea10bef5ed0ac0c94733f3994",
+  "contract_hash": "9e8386c26f43e4b28709eeba0123b0b11108d7bce119d5a2fcb08df490156ade",
+  "evidence_hash": "c6e7761f67b53c56937adb9a332ae8f294c1c17149386f3df0104a773806a129",
+  "processes": 0,
+  "reconstructed": true,
+  "schema": "aurex-s5-amended-measurement-execution-audit-v2"
+}

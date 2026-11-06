@@ -1,0 +1,18 @@
+{
+  "schema_version": "aurex-s1-source-timing-amendment-audit-v2",
+  "audit_id": "s1-source-timing-amendment-audit-v2",
+  "audited_at": "2026-08-27T05:52:17.337816Z",
+  "amendment_file_sha256": "b133f7fa18a3ee6b46a27053a6ea881e79dfa8fe9f6259b0478398abe6a4e9d3",
+  "amendment_evidence_hash": "972e49bc1e732bfe567417db63a0b81b26f093517ec7f2532af67b06d7737ada",
+  "builder_contract_hash": "7c8ddf63f2238fa4de2222bb4ad88d38db50a6c6a0db67fd35c380e54218daf3",
+  "failed_source_result_evidence_hash": "f444378a3b89b49812615b8b9313147e32e2ecb646348675054893bea99a57fd",
+  "failed_source_audit_evidence_hash": "b98dff769d6537ee55d00705ea7fe585868390f7c7d0651ed99f91177771949e",
+  "auditor_source_sha256": "8850e06248bfe7cb8d08ffaa75dc5a844ccd021ad5e752bd51aa98ba8abc7117",
+  "prior_materialized_execution_price_count": 21,
+  "prior_return_count": 0,
+  "prior_strategy_outcome_count": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_1_SOURCE_TIMING_AMENDMENT_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_1_BTC_SOURCE_ACQUISITION_PROTOCOL_ONLY",
+  "audit_evidence_hash": "cd53258a7cd8987b4dac63a8aadd6648cd59d37b6cd94525959b3c56fd24e3fe"
+}

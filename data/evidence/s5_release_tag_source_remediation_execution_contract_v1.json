@@ -1,0 +1,58 @@
+{
+  "schema_version": "aurex-s5-release-tag-source-remediation-execution-contract-v1",
+  "contract_id": "s5-release-tag-source-remediation-execution-contract-v1",
+  "frozen_at": "2026-09-08T21:43:40.925205Z",
+  "status": "FROZEN_EXECUTION_CONTRACT_ZERO_DISCOVERY_COPY_OR_FETCH",
+  "builder_contract_hash": "e0c38a15c7147fc994e93fde84a95c645b3d73bc244e830eb1d3494802241442",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_release_tag_source_remediation_protocol_audit_v1.json",
+      "file_sha256": "fda4d080810871d8c2943a430f911d5f920169318991406b733543c14591613d"
+    },
+    {
+      "path": "data/evidence/s5_release_tag_source_remediation_protocol_v1.json",
+      "file_sha256": "4a57f451bdf708baf3015de635d8c649d125dbd80f201959d9e96a77c3b84928"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "17def386dc486a876ca7d1845e6a233e09b46d65501fbee19564fb3e4739a620",
+  "implementation_bindings": [
+    {
+      "path": "scripts/run_s5_release_tag_source_remediation.py",
+      "file_sha256": "4d0d2bdf9633d3f7eb0ddc8ace0567f4c008883f2380e1188ae3fb5233d456af"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_release_tag_source_remediation_execution.py",
+      "file_sha256": "a0da56f9d8f413fc62558d911dbff8708ffa422cba37e077ca15831a5c85f730"
+    }
+  ],
+  "implementation_binding_manifest_evidence_hash": "b0cbc6b38ca9fb854c12bd4b974d9651bc9b1d6543f7306a6e324a4b7db4f9ef",
+  "runner_contract_hash": "b0cbc6b38ca9fb854c12bd4b974d9651bc9b1d6543f7306a6e324a4b7db4f9ef",
+  "protocol_evidence_hash": "150f4a354b26125f47bbb425be53492943ec8eca1e276adf01f17cf3043389c9",
+  "protocol_audit_evidence_hash": "e43ffcf2ed8b8bb01aacf78f30543327ba902ea69efff7af9c70545eb39c1c34",
+  "authorizes_single_remediation_run": true,
+  "expected_process_roles": [
+    "REMOTE_TAG_DISCOVERY",
+    "LOCAL_REACHABLE_COMMITS",
+    "REMOTE_EXACT_TAG_FETCH",
+    "LOCAL_TAG_VERIFICATION"
+  ],
+  "transcript_write_policy": "WRITE_ATOMIC_IMMEDIATELY_AFTER_EACH_PROCESS_BEFORE_INTERPRETATION",
+  "source_copy_policy": "PYTHON_COPYTREE_NO_SYMLINKS_THEN_EXACT_DIRECTORY_HASH",
+  "shell_execution_permitted": false,
+  "environment_proxy_use_permitted": false,
+  "credential_helper_use_permitted": false,
+  "token_environment_access_permitted": false,
+  "original_repository_mutation_permitted": false,
+  "destination_overwrite_permitted": false,
+  "market_values_permitted": false,
+  "returns_permitted": false,
+  "parameters_permitted": false,
+  "candidates_permitted": false,
+  "signals_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "result_path": "data/evidence/s5_release_tag_source_remediation_result_v1.json",
+  "contract_evidence_hash": "f7ed8856f45c6e0092761042395aa1ab8e4de3631d3d5f5af182d5dcd7640dd5"
+}

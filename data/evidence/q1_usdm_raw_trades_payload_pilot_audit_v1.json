@@ -1,0 +1,18 @@
+{
+  "schema_version": "aurex-q1-usdm-raw-trades-payload-pilot-audit-v1",
+  "audit_id": "q1-usdm-raw-trades-payload-pilot-audit-v1",
+  "audited_at": "2026-08-07T11:56:34.875921Z",
+  "result_file_sha256": "3ed5ebaf3eca448807f3eee8e8d7b546513a0573d9f5d76e429c781140387b14",
+  "result_evidence_hash": "efc7bca6f729899d0f8d5de620314fc27f762d53b6dfc779d0506fd57f3e6dd2",
+  "protocol_evidence_hash": "79e7ec935f31dba86a0173398133ec4abd0acc3f2a559bc5dda0dd3f3fa77451",
+  "raw_archive_file_sha256": "5d3b5ab977aa3c10e40928ce8e2fcf33bc0406235bbb7413a95f067189aa8939",
+  "spot_archive_file_sha256": "ea2f0aa850fb08b5c8124d2f8080c03689c30cdadf797363fc74b506b92a8d8b",
+  "runner_contract_hash": "f45518563537f49a95e038dee366b74903a22bf2a0e55c83713f7c8395d88b51",
+  "auditor_contract_hash": "bd70df49506b14379d9f1e24d5a7bb2e4b346ed59a3c34d1e7a56f8b55989db4",
+  "structural_evidence_rebuilt": true,
+  "paired_clock_rebuilt": true,
+  "price_or_quantity_values_parsed": [],
+  "return_metrics_calculated": [],
+  "decision": "PERMIT_Q1_PAIRED_FULL_DEVELOPMENT_ACQUISITION_PROTOCOL",
+  "audit_evidence_hash": "dfc2e5ed2f15b6ce4dc67de55b8075e264b088f896ab4b3cde595670d8a72bf2"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "aurex-jam-archive-quality-remediation-audit-v1",
+  "audited_at": "2026-08-04T10:15:12.801998Z",
+  "protocol_path": "data/evidence/jam_archive_quality_remediation_protocol_v1.json",
+  "protocol_file_sha256": "aa48c6342792f2d34777f4dce5773619455911607d7132e32e5a3a3121ffb95e",
+  "protocol_evidence_hash": "128eb77a416ba9ebd47154639fe383f1f9b9c0058c149c8f7dc62c4e5e24c57a",
+  "result_path": "data/evidence/jam_archive_quality_remediation_result_v1.json",
+  "result_file_sha256": "db1d1321598e07ba24d30aacd8b41cc28af0db186ccf4de7789a5bb2f7b18097",
+  "result_evidence_hash": "02a3b8fef4e44995ebc1c0150044f1506e1f805d6c565f86d54bacc227f4f00c",
+  "duplicate_member_reconstructed": true,
+  "kline_month_count_reconstructed": 48,
+  "mismatch_month_count_reconstructed": 18,
+  "issue_manifest_hash": "477bdb334689c83f805dcf123e365692ea70c64bf9965005606198227eb7ae54",
+  "quarantined_minute_manifest_hash": "618df63c38ca848e7d34188d20e99f3eac330f76cec5226bb6046d33354c9d27",
+  "return_metrics_calculated": false,
+  "decision": "PASS_AGGTRADES_PRIMARY_SOURCE_POLICY_AWAIT_NO_RETURN_FEATURE_SPECIFICATION",
+  "audit_evidence_hash": "146bbf5e1406ed0444edaf62ffdb2788647b4c7f064f087a9202ea602ea6cc48"
+}

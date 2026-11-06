@@ -1,0 +1,184 @@
+{
+  "schema_version": "aurex-post-v4-capability-gap-review-v1",
+  "review_id": "post-v4-capability-gap-review-v1",
+  "review_version": "1.0.0",
+  "frozen_at": "2026-07-29T08:23:23.977019Z",
+  "status": "FROZEN_POST_V4_PRE_SUCCESSOR_NO_CANDIDATE",
+  "v4_discovery_charter_evidence_hash": "2230f042c676f97988129bf752aff889c83404627ff782c5462bd984e13cbd81",
+  "v4_proposal_register_evidence_hash": "a4fb8e0739cdd07f8a9a810cf395aa5fed3216000cb8b37c01f232eb5ec8973a",
+  "v4_feasibility_screen_evidence_hash": "605d3b177b85ceaaf3ae5d9824d8eb2fc680ba355988d26d1a7769a19c897494",
+  "builder_contract_hash": "9ceff1b8a719134558fa0348b94b04a3143cbd316f1feb8f29231520b80ff165",
+  "capability_assessments": [
+    {
+      "capability_id": "AUTHENTICATED_EXTERNAL_TRADINGVIEW_DELIVERY",
+      "status": "IMPLEMENTED_NOT_EXTERNALLY_PROVEN",
+      "evidence_artifacts": [
+        "docs/10_PROJECT_CONTROL.md",
+        "docs/12_TRADINGVIEW_WEBHOOK_EVIDENCE.md"
+      ],
+      "implication": "Authentication, receipt hashing, idempotency, normalization, risk routing, and monitoring exist, but no genuine TradingView alert has produced external delivery evidence."
+    },
+    {
+      "capability_id": "DETERMINISTIC_PRODUCTION_EXCHANGE_ADAPTER",
+      "status": "ABSENT",
+      "evidence_artifacts": [
+        "docs/10_PROJECT_CONTROL.md"
+      ],
+      "implication": "No qualified live-venue adapter proves client IDs, acknowledgements, retry semantics, fills, balances, positions, fees, reconciliation, or kill switches against a selected execution venue."
+    },
+    {
+      "capability_id": "EVIDENCE_GRADE_BAR_REPLAY",
+      "status": "PROVEN",
+      "evidence_artifacts": [
+        "docs/05_HISTORICAL_DATASETS.md",
+        "docs/06_REFERENCE_REPLAY.md",
+        "docs/10_PROJECT_CONTROL.md"
+      ],
+      "implication": "Immutable chronological bar replay, realistic modeled costs, walk-forward evaluation, and rejection evidence are operational for compatible bar-based strategies."
+    },
+    {
+      "capability_id": "EXECUTION_GRADE_HISTORICAL_TICK_OR_L2",
+      "status": "ABSENT",
+      "evidence_artifacts": [
+        "data/evidence/v3_mechanism_feasibility_screen_v1.json",
+        "data/evidence/v4_mechanism_feasibility_screen_v1.json"
+      ],
+      "implication": "Aurex has not qualified complete revision-bound tick or sequence-aware L2 evidence with disconnect recovery for a selectable short-horizon, passive, arbitrage, or options mechanism."
+    },
+    {
+      "capability_id": "FORWARD_PAPER_ENGINE_AND_RISK_CONTROLS",
+      "status": "IMPLEMENTED_NOT_EXTERNALLY_PROVEN",
+      "evidence_artifacts": [
+        "docs/10_PROJECT_CONTROL.md"
+      ],
+      "implication": "Evidence-grade costed paper execution and risk controls exist, but no eligible strategy has opened a forward campaign and no long-duration external operation has qualified them."
+    },
+    {
+      "capability_id": "OPERATOR_CAPITAL_AND_LOSS_BUDGET",
+      "status": "OPERATOR_INPUT_REQUIRED",
+      "evidence_artifacts": [],
+      "implication": "Starting capital, maximum tolerable loss, daily stop, and research or data budget are not frozen, so capacity and risk design cannot be economically or operationally grounded."
+    },
+    {
+      "capability_id": "OPERATOR_JURISDICTION_ACCOUNT_AND_PRODUCT_ACCESS",
+      "status": "OPERATOR_INPUT_REQUIRED",
+      "evidence_artifacts": [],
+      "implication": "The intended venue, jurisdiction, KYC account state, permitted spot or derivatives products, API access, and restrictions are not evidenced; public data access cannot substitute."
+    },
+    {
+      "capability_id": "PINE_TO_AUREX_TRADE_LEVEL_PARITY",
+      "status": "ABSENT",
+      "evidence_artifacts": [
+        "docs/07_TRADINGVIEW_PARITY.md",
+        "docs/09_FROZEN_TRADINGVIEW_RUN.md"
+      ],
+      "implication": "The rejected trend_pullback_v1 v1.3 package has not completed trade-level TradingView parity, so the local engine still lacks an externally compared Pine-semantics proof."
+    },
+    {
+      "capability_id": "POINT_IN_TIME_FEES_FILTERS_AND_VENUE_RULES",
+      "status": "PARTIAL",
+      "evidence_artifacts": [
+        "data/evidence/v4_mechanism_feasibility_screen_v1.json",
+        "data/evidence/v4_p01_terminal_audit_addendum_v1.json"
+      ],
+      "implication": "Modeled costs support conservative bar research, but complete historical account-tier fees, filters, product state, margin, settlement, and venue rules are not qualified for new execution-sensitive mechanisms."
+    },
+    {
+      "capability_id": "PROVEN_POSITIVE_NET_STRATEGY_EDGE",
+      "status": "ABSENT",
+      "evidence_artifacts": [
+        "data/evidence/v4_mechanism_feasibility_screen_v1.json",
+        "docs/10_PROJECT_CONTROL.md"
+      ],
+      "implication": "Every completed candidate is rejected or retired and V3/V4 selected zero primaries; Aurex currently has no positive net expectancy claim, eligible strategy, or profit basis."
+    },
+    {
+      "capability_id": "QUALIFIED_EXCHANGE_SANDBOX_OPERATION",
+      "status": "ABSENT",
+      "evidence_artifacts": [
+        "docs/10_PROJECT_CONTROL.md"
+      ],
+      "implication": "No selected venue and account have completed deterministic sandbox order lifecycle, balance, position, fee, reconciliation, monitoring, stale-data, and kill-switch drills."
+    }
+  ],
+  "required_operator_decisions": [
+    {
+      "decision_id": "ACCOUNT_AND_API_ACCESS",
+      "status": "REQUIRED_UNRESOLVED",
+      "required_value": "Document whether a verified account exists, its KYC state, API availability, permission scopes, and sandbox or testnet access.",
+      "why_it_blocks_successor_discovery": "Adapter design and execution feasibility depend on the actual account's capabilities; public documentation and market data cannot prove account-specific access."
+    },
+    {
+      "decision_id": "DATA_ACQUISITION_BUDGET",
+      "status": "REQUIRED_UNRESOLVED",
+      "required_value": "Set the maximum one-time and monthly amount available for historical tick/L2 data, metadata, storage, and transfer.",
+      "why_it_blocks_successor_discovery": "Microstructure, arbitrage, and options research repeatedly failed on free-source completeness; a budget determines whether those families are feasible or must remain excluded."
+    },
+    {
+      "decision_id": "INTENDED_EXECUTION_VENUE",
+      "status": "REQUIRED_UNRESOLVED",
+      "required_value": "Name the exact exchange and account environment intended for future sandbox and, only after qualification, micro-live use.",
+      "why_it_blocks_successor_discovery": "Fees, symbols, filters, order semantics, market access, APIs, maintenance behavior, and legal restrictions are venue-specific."
+    },
+    {
+      "decision_id": "MAXIMUM_ACCEPTABLE_LOSS",
+      "status": "REQUIRED_UNRESOLVED",
+      "required_value": "Set absolute total, daily, per-trade, and evidence-breach loss limits that Aurex may never exceed.",
+      "why_it_blocks_successor_discovery": "No capital-protection or capacity policy is meaningful without a human-owned maximum loss boundary independent of hoped-for returns."
+    },
+    {
+      "decision_id": "PERMITTED_PRODUCT_SCOPE",
+      "status": "REQUIRED_UNRESOLVED",
+      "required_value": "Choose spot-only, spot plus perpetuals, or another explicitly legal and account-enabled product set; do not assume leverage.",
+      "why_it_blocks_successor_discovery": "Product scope determines required data, financing, margin, liquidation, settlement, tail-risk, and execution foundations."
+    },
+    {
+      "decision_id": "STARTING_TRADING_CAPITAL",
+      "status": "REQUIRED_UNRESOLVED",
+      "required_value": "Set the capital actually available for eventual micro-live use, excluding emergency funds and without borrowing.",
+      "why_it_blocks_successor_discovery": "The first $100 milestone, minimum order sizes, fees, capacity, drawdown limits, and realistic time horizon cannot be designed without a real capital denominator."
+    }
+  ],
+  "allowed_next_tracks": [
+    "FREEZE_OPERATOR_ACCESS_CAPITAL_AND_DATA_PROFILE",
+    "PRESERVE_READ_ONLY_REJECTED_V1_3_PARITY_TRACK",
+    "RUN_ONE_GENUINE_WEBHOOK_DELIVERY_TO_PAPER_SAFE_REJECTION"
+  ],
+  "recommended_sequence": [
+    "01_PRESERVE_V4_ZERO_SELECTION_AND_FORBID_RETRY_OR_RESIZE",
+    "02_COLLECT_AND_FREEZE_THE_SIX_OPERATOR_ACCESS_CAPITAL_AND_DATA_DECISIONS",
+    "03_COMPLETE_REJECTED_V1_3_PARITY_ONLY_WITH_EXPLICIT_TRADINGVIEW_AUTHORITY",
+    "04_COMPLETE_ONE_GENUINE_AUTHENTICATED_WEBHOOK_DELIVERY_TO_PAPER_SAFE_REJECTION",
+    "05_CHOOSE_A_SUCCESSOR_RESEARCH_DOMAIN_ONLY_FROM_PROVEN_ACCESSIBLE_CAPABILITIES",
+    "06_FREEZE_A_NEW_DISCOVERY_CHARTER_BEFORE_ANY_SOURCE_REQUEST_PARAMETER_OR_OUTCOME"
+  ],
+  "decision": "DO_NOT_START_SUCCESSOR_ALPHA_DISCOVERY_UNTIL_ACCESS_PROFILE_IS_FROZEN",
+  "recommended_lane": "ENGINE_PROOF_AND_OPERATOR_ACCESS_FREEZE_BEFORE_NEW_ALPHA_DISCOVERY",
+  "successor_discovery_authorized": false,
+  "network_requests_authorized": false,
+  "market_data_import_authorized": false,
+  "parameter_definition_authorized": false,
+  "return_testing_authorized": false,
+  "creates_candidate": false,
+  "opens_development": false,
+  "opens_validation": false,
+  "opens_holdout": false,
+  "opens_forward": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "market_numeric_values_inspected": [],
+  "strategy_outcome_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "limitations": [
+    "A paid data budget would enable investigation, not guarantee a selectable mechanism or profitable strategy.",
+    "A venue account and API access would enable sandbox evidence, not live-trading eligibility.",
+    "No TradingView mutation is authorized by this artifact; explicit human authority remains mandatory.",
+    "No positive edge, reliability, expected profit, time-to-profit, or first-$100 probability is claimed.",
+    "No successor discovery, network request, market import, parameter, return, candidate, paper eligibility, sandbox eligibility, live eligibility, or capital permission exists.",
+    "Rejected v1.3 parity validates engine semantics only and cannot promote or rescue the rejected strategy.",
+    "This review diagnoses capability and operator-input gaps; it does not propose or select a trading mechanism.",
+    "Webhook delivery evidence must terminate at paper-safe rejection while no strategy is eligible."
+  ],
+  "review_evidence_hash": "01fbf52bdc75f03dac21a26c4fdd642c6671d408464ac52da5ff3b3ac3bbabc6"
+}

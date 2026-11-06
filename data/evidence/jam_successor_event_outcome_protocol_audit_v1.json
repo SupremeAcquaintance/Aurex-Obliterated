@@ -1,0 +1,19 @@
+{
+  "schema_version": "aurex-jam-successor-event-outcome-protocol-audit-v1",
+  "audited_at": "2026-08-05T06:07:05.732995Z",
+  "protocol_path": "data/evidence/jam_successor_event_outcome_protocol_v1.json",
+  "protocol_file_sha256": "6eaf28df7810a9ebb93a048ded432c27d9d7791fdca6210d84d752e89a1f5081",
+  "protocol_evidence_hash": "33323ff5864c9dfdeed1b5ddd5dc237ac5a7b7d23d1a1ac484abf75e02ded8db",
+  "distribution_result_evidence_hash": "d79092c225bb5cd4ecda603a45f1114f6e7f669c1413e3e36057cdcac72b9eef",
+  "distribution_audit_evidence_hash": "7ede08a05049a8f2bb82c4b660488b5803449b6536aaf17628630eb113a1bc9b",
+  "feature_rows_file_sha256": "fbb6ee42fca63ea6fe38db093c6c5c5484d2c6997d658d616f09f6fd4c2a0dfa",
+  "event_condition_count_reconstructed": 5,
+  "prevalence_gate_count_reconstructed": 7,
+  "development_outcome_gate_count_reconstructed": 11,
+  "sealed_validation_gate_count_reconstructed": 7,
+  "sealed_holdout_gate_count_reconstructed": 7,
+  "event_flags_calculated": 0,
+  "future_labels_calculated": 0,
+  "return_metrics_calculated": 0,
+  "audit_evidence_hash": "b2236b02b9e3bbbf495bf66f9d862f446a29ae4bf3a9422d495bd8f0501f80e4"
+}

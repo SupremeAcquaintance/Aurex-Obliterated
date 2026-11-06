@@ -1,0 +1,78 @@
+{
+  "schema_version": "aurex-s5-github-bulk-failure-audit-v1",
+  "audit_id": "s5-github-bulk-failure-audit-v1",
+  "audited_at": "2026-09-02T21:58:02.953902Z",
+  "auditor_contract_hash": "3b3426fb32070f7f7ff7e9c4a74426db16d41b69e305cfc3a42a18c0bcde92ce",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_audit_v1.json",
+      "file_sha256": "7303505d564e3a81c500c7f8e8d901cad872178b43ceb0889ed2ccc311d396c0"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_v1.json",
+      "file_sha256": "2a3c084d57223628228e895f584bc4cb0f7bdf85e52155c4257b9c6a22e79330"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v1.json",
+      "file_sha256": "7f7164bcc8c9b2e8ea5f431e20cd0ff7a81b4f40c9e2ccd5dca809d5981be8f7"
+    },
+    {
+      "path": "data/evidence/s5_github_pull_metadata_bulk_v1/failure_page_0001.json",
+      "file_sha256": "06dff5507e434732d0202a3e09c4d385f95e9e1e82adca98875dec751476c38e"
+    },
+    {
+      "path": "scripts/run_s5_bitcoin_core_github_bulk_acquisition.py",
+      "file_sha256": "32f46df5935cfc9703167ac68ae3af8a60e6ba44f4b9876b4afc614ad8f9b5f3"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_github_bulk.py",
+      "file_sha256": "b62d6db3b8b3da944a922de51471d5c305eac6e6b1903ba3e41abefc2fb13a72"
+    }
+  ],
+  "protocol_evidence_hash": "ee1564712af978eddd0081fe7ede7fb19dd275fc2f04e7a19306160f8b3174f5",
+  "protocol_audit_evidence_hash": "0643d3dceb5e4bc763fc3f5c551d8bfa3576f5cecac415cda91fbba4f64f4b55",
+  "prior_result_evidence_hash": "a3443b57f5cb805cf37daa79cbe561d317a4ede3ca552cccf0675bec97f131f8",
+  "prior_result_file_sha256": "7f7164bcc8c9b2e8ea5f431e20cd0ff7a81b4f40c9e2ccd5dca809d5981be8f7",
+  "failure_artifact_file_sha256": "06dff5507e434732d0202a3e09c4d385f95e9e1e82adca98875dec751476c38e",
+  "prior_runner_contract_hash": "f91447463e6e252bf4e0c9198e643b5aec60d73ed3a25cbbf567ebdfdd2bbf31",
+  "request_attempt_count": 1,
+  "request_dispatch_initiated": true,
+  "response_object_returned_before_local_error": true,
+  "http_status_captured": false,
+  "response_headers_captured": false,
+  "response_body_bytes_captured": 0,
+  "metadata_records_parsed": 0,
+  "successful_pages_persisted": 0,
+  "failure_type": "PageFailure",
+  "local_error_type": "TypeError",
+  "local_error_message": "'Response' object does not support the context manager protocol",
+  "root_cause": "HTTPX_RESPONSE_IS_NOT_A_CONTEXT_MANAGER_IN_INSTALLED_RUNTIME",
+  "exact_correction": "USE_HTTPX_CLIENT_STREAM_CONTEXT_MANAGER_WITH_IDENTICAL_REQUEST_AND_LIMITS",
+  "original_stop_preserved": true,
+  "page_one_replay_required": true,
+  "maximum_total_request_attempts_remains": 300,
+  "additional_request_authority_beyond_protocol_ceiling": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "adjudication": "REQUEST_DISPATCHED_LOCAL_HTTPX_RESPONSE_CONTEXT_MANAGER_DEFECT_ZERO_BODY_CAPTURED",
+  "next_authorization": "FREEZE_S5_GITHUB_BULK_RESPONSE_HANDLING_AMENDMENT_V2_ONLY",
+  "limitations": [
+    "No BTC value, parameter, return, candidate, signal, or order was accessed.",
+    "No credential, token, proxy, redirect, or concurrent request is permitted.",
+    "No paper, Testnet strategy, production, live, or real-capital authority exists.",
+    "No successful raw page or metadata record was persisted.",
+    "One page-one replay is necessary to acquire the missing response evidence.",
+    "Real net profit remains zero.",
+    "Source completeness and predictive edge remain unadjudicated.",
+    "The correction may change only HTTP response resource handling.",
+    "The failure does not establish whether GitHub returned a successful response.",
+    "The original STOP result and empty failure artifact remain immutable.",
+    "The replay must remain inside the original 300-attempt ceiling.",
+    "The request was dispatched, but no status, header, or body was captured."
+  ],
+  "audit_evidence_hash": "7b81b91b39d1960f444764574cc62a4ba159deb65bcf8f394f9d526aa9540738"
+}

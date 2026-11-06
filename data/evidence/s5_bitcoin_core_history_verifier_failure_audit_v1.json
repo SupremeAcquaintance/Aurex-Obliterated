@@ -1,0 +1,188 @@
+{
+  "schema_version": "aurex-s5-bitcoin-core-history-verifier-failure-audit-v1",
+  "audit_id": "s5-bitcoin-core-history-verifier-failure-audit-v1",
+  "audited_at": "2026-09-01T22:34:48.353725Z",
+  "result_path": "data/evidence/s5_bitcoin_core_history_payload_result_v1.json",
+  "result_file_sha256": "e571f6dd288843fe1a1407a571028615f035d07288f9e42a5e40bb7eaee0cd73",
+  "result_evidence_hash": "cdb84ccb79fd4db8e1fb795799a2a16a4fcb14c81c95bb504b38a3956dcbd633",
+  "protocol_evidence_hash": "e23a6368563bd45908f9e89fa14c15f37778a5ce276908aef5fe363d73b2b2b5",
+  "runner_contract_hash": "6009b9189528969bc435d8fc64a7a2a87fa83dd6629cad48662c44f06f89eb22",
+  "auditor_contract_hash": "48851287ab0afd3554734b47a55fe475e185c2755c35f9130501a10f0ab9bacc",
+  "transcript_reverified": true,
+  "dataset_manifest_reverified": true,
+  "local_git_integrity_reverified": true,
+  "passed_gate_count": 6,
+  "failed_gate_count": 8,
+  "dataset_file_count": 23,
+  "dataset_byte_count": 77762990,
+  "cutoff_commit_count": 50395,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "next_authorization": "AUTHORIZE_S5_BITCOIN_CORE_HISTORY_LOCAL_VERIFIER_AMENDMENT_V2_ONLY",
+  "decision": "PASS_S5_BITCOIN_CORE_HISTORY_PAYLOAD_RESULT_AUDIT",
+  "audit_evidence_hash": "1216ec25104c1466ebaa9e5fa637a75136a46b718a048e6e10da267b844dadfe",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_audit_v1.json",
+      "file_sha256": "e64615314acae1f5e2658d7ca03c6a43720885a3c777000924af691f49cc9131"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_v1.json",
+      "file_sha256": "676f189b1a8df713b8704ba4eaa3c7c5627790d9bff2bed86b8e756624c1c93f"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_responses_v1/01_git_clone.json",
+      "file_sha256": "89309fe2d4b1b2a267afb3f3d541eb76bfff2da1e5d0442b9f8934630038afe3"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_audit_v1.json",
+      "file_sha256": "b5b4f30ef909cbbf653eafda852415b9f4ec07c48acf74f66669747fcaa0c3d7"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_v1.json",
+      "file_sha256": "e571f6dd288843fe1a1407a571028615f035d07288f9e42a5e40bb7eaee0cd73"
+    }
+  ],
+  "result_audit_evidence_hash": "0a2b12f261463e78c5973feeb8b0b709989c40444e2bcbf80a3e2803903381ff",
+  "transcript_file_sha256": "89309fe2d4b1b2a267afb3f3d541eb76bfff2da1e5d0442b9f8934630038afe3",
+  "partial_dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git.partial",
+  "partial_dataset_file_manifest": [
+    {
+      "relative_path": "HEAD",
+      "file_sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+      "byte_count": 23
+    },
+    {
+      "relative_path": "config",
+      "file_sha256": "dc99f2347ba64eef129a758985813ecdca7837943e1863e71e4edfaabd347b24",
+      "byte_count": 237
+    },
+    {
+      "relative_path": "description",
+      "file_sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+      "byte_count": 73
+    },
+    {
+      "relative_path": "hooks/applypatch-msg.sample",
+      "file_sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+      "byte_count": 478
+    },
+    {
+      "relative_path": "hooks/commit-msg.sample",
+      "file_sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+      "byte_count": 896
+    },
+    {
+      "relative_path": "hooks/fsmonitor-watchman.sample",
+      "file_sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+      "byte_count": 4726
+    },
+    {
+      "relative_path": "hooks/post-update.sample",
+      "file_sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+      "byte_count": 189
+    },
+    {
+      "relative_path": "hooks/pre-applypatch.sample",
+      "file_sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+      "byte_count": 424
+    },
+    {
+      "relative_path": "hooks/pre-commit.sample",
+      "file_sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+      "byte_count": 1649
+    },
+    {
+      "relative_path": "hooks/pre-merge-commit.sample",
+      "file_sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+      "byte_count": 416
+    },
+    {
+      "relative_path": "hooks/pre-push.sample",
+      "file_sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+      "byte_count": 1374
+    },
+    {
+      "relative_path": "hooks/pre-rebase.sample",
+      "file_sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+      "byte_count": 4898
+    },
+    {
+      "relative_path": "hooks/pre-receive.sample",
+      "file_sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+      "byte_count": 544
+    },
+    {
+      "relative_path": "hooks/prepare-commit-msg.sample",
+      "file_sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+      "byte_count": 1492
+    },
+    {
+      "relative_path": "hooks/push-to-checkout.sample",
+      "file_sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+      "byte_count": 2783
+    },
+    {
+      "relative_path": "hooks/sendemail-validate.sample",
+      "file_sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+      "byte_count": 2308
+    },
+    {
+      "relative_path": "hooks/update.sample",
+      "file_sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+      "byte_count": 3650
+    },
+    {
+      "relative_path": "info/exclude",
+      "file_sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+      "byte_count": 240
+    },
+    {
+      "relative_path": "objects/pack/pack-d9f093872a28b45ee6c1f883ff932c884ac83f3c.idx",
+      "file_sha256": "9fd3224804663b5a940d0eeb8bfcb5a430dc9f2d95b5ce7da63ef3961e86151d",
+      "byte_count": 5711476
+    },
+    {
+      "relative_path": "objects/pack/pack-d9f093872a28b45ee6c1f883ff932c884ac83f3c.pack",
+      "file_sha256": "fd8b71ea21d92c69861aa79929075e3ea56293e2b2da54615f20feaed042fa0d",
+      "byte_count": 71209126
+    },
+    {
+      "relative_path": "objects/pack/pack-d9f093872a28b45ee6c1f883ff932c884ac83f3c.promisor",
+      "file_sha256": "756cded6dd7b79e1b8dd56ab95eaa647b135fb49f2492a8ee2268c56ff55dc4c",
+      "byte_count": 59
+    },
+    {
+      "relative_path": "objects/pack/pack-d9f093872a28b45ee6c1f883ff932c884ac83f3c.rev",
+      "file_sha256": "4fb8718f9e87ed108694cef10c4e153ef1ffcf91a666bfaf49cbe244451384f4",
+      "byte_count": 815824
+    },
+    {
+      "relative_path": "packed-refs",
+      "file_sha256": "7416b3a349caf84d1743243503047043b6bfb84adda9d9a51df299c3cc69f2ca",
+      "byte_count": 105
+    }
+  ],
+  "partial_dataset_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "successful_clone_process_count": 1,
+  "additional_network_process_count": 0,
+  "clone_exit_code": 0,
+  "verifier_error_type": "ValueError",
+  "verifier_error_message": "Local Git integrity command failed: fatal: missing blob object 'd7fe7ad5e244f9a3cbf2f3bc9f332afb9754872d'",
+  "verifier_rejected_promised_missing_blob": true,
+  "repository_is_bare": true,
+  "repository_is_shallow": false,
+  "remote_origin_url": "https://github.com/bitcoin/bitcoin.git",
+  "remote_promisor": true,
+  "remote_partial_clone_filter": "blob:none",
+  "source_cutoff_commit": "dc0395c5858a1d55239b82a834e5075cf2069219",
+  "cutoff_commit_present": true,
+  "commit_messages_read": 0,
+  "author_identities_read": 0,
+  "author_timestamps_read": 0,
+  "pull_request_ids_parsed": 0,
+  "github_api_requests_executed": 0,
+  "original_decision": "STOP_S5_BITCOIN_CORE_HISTORY_PAYLOAD_FAILED_RETIRE_S5",
+  "adjudication": "REJECT_TERMINAL_SOURCE_INTERPRETATION_BLOBLESS_CLONE_SUCCEEDED_VERIFIER_FAILED"
+}

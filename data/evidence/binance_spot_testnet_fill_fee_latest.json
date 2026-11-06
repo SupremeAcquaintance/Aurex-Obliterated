@@ -1,0 +1,266 @@
+{
+  "balance_reconciliation": {
+    "expected_deltas": {
+      "USDT": "-0.00000100"
+    },
+    "mismatches": {},
+    "observed_deltas": {
+      "USDT": "-0.00000100"
+    },
+    "passed": true
+  },
+  "base_url": "https://testnet.binance.vision",
+  "buy_order": {
+    "client_order_id": "aurex-fill-buy-e60e38f1cca8e3b9",
+    "commission_by_asset": {
+      "BTC": "0E-8"
+    },
+    "cumulative_quote_quantity": "6.38180000",
+    "executed_quantity": "0.00010000",
+    "external_order_id": 22331495,
+    "original_quantity": "0.00010000",
+    "original_quote_order_quantity": "6.50000000",
+    "price": "0E-8",
+    "reconciliation_passed": true,
+    "side": "BUY",
+    "status": "FILLED",
+    "symbol": "BTCUSDT",
+    "trades": [
+      {
+        "commission": "0E-8",
+        "commission_asset": "BTC",
+        "external_order_id": 22331495,
+        "is_best_match": true,
+        "is_buyer": true,
+        "is_maker": false,
+        "price": "63818.00000000",
+        "quantity": "0.00010000",
+        "quote_quantity": "6.38180000",
+        "symbol": "BTCUSDT",
+        "time_ms": 1785489056208,
+        "trade_id": 5866662
+      }
+    ],
+    "transact_time_ms": 1785489056208,
+    "type": "MARKET"
+  },
+  "buy_quote_order_quantity": "6.50",
+  "campaign_id": "binance-spot-testnet-fill-fee-v1",
+  "check_status": "PASS",
+  "checked_at": "2026-07-31T09:10:50.791755+00:00",
+  "checkpoints": {
+    "buy_order": {
+      "client_order_id": "aurex-fill-buy-e60e38f1cca8e3b9",
+      "cumulative_quote_quantity": "6.38180000",
+      "executed_quantity": "0.00010000",
+      "external_order_id": 22331495,
+      "original_quantity": "0.00010000",
+      "original_quote_order_quantity": "6.50000000",
+      "price": "0E-8",
+      "side": "BUY",
+      "status": "FILLED",
+      "symbol": "BTCUSDT",
+      "transact_time_ms": 1785489056208,
+      "type": "MARKET"
+    },
+    "buy_trades": [
+      {
+        "commission": "0E-8",
+        "commission_asset": "BTC",
+        "external_order_id": 22331495,
+        "is_best_match": true,
+        "is_buyer": true,
+        "is_maker": false,
+        "price": "63818.00000000",
+        "quantity": "0.00010000",
+        "quote_quantity": "6.38180000",
+        "symbol": "BTCUSDT",
+        "time_ms": 1785489056208,
+        "trade_id": 5866662
+      }
+    ],
+    "final_account": {
+      "account_type": "SPOT",
+      "balances": {
+        "BTC": {
+          "free": "1.00000000",
+          "locked": "0E-8",
+          "total": "1.00000000"
+        },
+        "USDT": {
+          "free": "9999.99999900",
+          "locked": "0E-8",
+          "total": "9999.99999900"
+        }
+      },
+      "can_trade": true,
+      "maker_commission": "0E-8",
+      "permissions": [
+        "SPOT"
+      ],
+      "taker_commission": "0E-8"
+    },
+    "initial_account": {
+      "account_type": "SPOT",
+      "balances": {
+        "BTC": {
+          "free": "1.00000000",
+          "locked": "0E-8",
+          "total": "1.00000000"
+        },
+        "USDT": {
+          "free": "10000.00000000",
+          "locked": "0E-8",
+          "total": "10000.00000000"
+        }
+      },
+      "can_trade": true,
+      "maker_commission": "0E-8",
+      "permissions": [
+        "SPOT"
+      ],
+      "taker_commission": "0E-8"
+    },
+    "market_buy_test_order": {
+      "status": "PASS"
+    },
+    "market_sell_test_order": {
+      "status": "PASS"
+    },
+    "sell_order": {
+      "client_order_id": "aurex-fill-sell-e60e38f1cca8e3b9",
+      "cumulative_quote_quantity": "6.38179900",
+      "executed_quantity": "0.00010000",
+      "external_order_id": 22331518,
+      "original_quantity": "0.00010000",
+      "original_quote_order_quantity": "0E-8",
+      "price": "0E-8",
+      "side": "SELL",
+      "status": "FILLED",
+      "symbol": "BTCUSDT",
+      "transact_time_ms": 1785489059165,
+      "type": "MARKET"
+    },
+    "sell_trades": [
+      {
+        "commission": "0E-8",
+        "commission_asset": "USDT",
+        "external_order_id": 22331518,
+        "is_best_match": true,
+        "is_buyer": false,
+        "is_maker": false,
+        "price": "63817.99000000",
+        "quantity": "0.00010000",
+        "quote_quantity": "6.38179900",
+        "symbol": "BTCUSDT",
+        "time_ms": 1785489059165,
+        "trade_id": 5866676
+      }
+    ]
+  },
+  "cleanup_blocker": null,
+  "cleanup_order_used": false,
+  "client_order_ids": {
+    "buy": "aurex-fill-buy-e60e38f1cca8e3b9",
+    "cleanup": "aurex-cleanup-e60e38f1cca8e3b9",
+    "sell": "aurex-fill-sell-e60e38f1cca8e3b9"
+  },
+  "contract_sha256": "8eddafafb5db47fa218c993476f5e6ae4cf13a4f4894d671c89321953e8719cd",
+  "credentials_stored": false,
+  "environment": "BINANCE_SPOT_TESTNET",
+  "expected_base_residual": "0E-8",
+  "failed_gates": [],
+  "final_account": {
+    "account_type": "SPOT",
+    "balances": {
+      "BTC": {
+        "free": "1.00000000",
+        "locked": "0E-8",
+        "total": "1.00000000"
+      },
+      "USDT": {
+        "free": "9999.99999900",
+        "locked": "0E-8",
+        "total": "9999.99999900"
+      }
+    },
+    "can_trade": true,
+    "maker_commission": "0E-8",
+    "permissions": [
+      "SPOT"
+    ],
+    "taker_commission": "0E-8"
+  },
+  "initial_account": {
+    "account_type": "SPOT",
+    "balances": {
+      "BTC": {
+        "free": "1.00000000",
+        "locked": "0E-8",
+        "total": "1.00000000"
+      },
+      "USDT": {
+        "free": "10000.00000000",
+        "locked": "0E-8",
+        "total": "10000.00000000"
+      }
+    },
+    "can_trade": true,
+    "maker_commission": "0E-8",
+    "permissions": [
+      "SPOT"
+    ],
+    "taker_commission": "0E-8"
+  },
+  "live_authority": false,
+  "maximum_order_notional": "10.00",
+  "maximum_round_trip_loss": "0.50",
+  "phase_2b_qualified": true,
+  "product": "SPOT",
+  "production_authority": false,
+  "public_connectivity": "PASS",
+  "real_capital": false,
+  "round_trip_quote_delta": "-0.00000100",
+  "sandbox_qualified": false,
+  "schema_version": 1,
+  "sell_orders": [
+    {
+      "client_order_id": "aurex-fill-sell-e60e38f1cca8e3b9",
+      "commission_by_asset": {
+        "USDT": "0E-8"
+      },
+      "cumulative_quote_quantity": "6.38179900",
+      "executed_quantity": "0.00010000",
+      "external_order_id": 22331518,
+      "original_quantity": "0.00010000",
+      "original_quote_order_quantity": "0E-8",
+      "price": "0E-8",
+      "purpose": "SELL",
+      "reconciliation_passed": true,
+      "side": "SELL",
+      "status": "FILLED",
+      "symbol": "BTCUSDT",
+      "trades": [
+        {
+          "commission": "0E-8",
+          "commission_asset": "USDT",
+          "external_order_id": 22331518,
+          "is_best_match": true,
+          "is_buyer": false,
+          "is_maker": false,
+          "price": "63817.99000000",
+          "quantity": "0.00010000",
+          "quote_quantity": "6.38179900",
+          "symbol": "BTCUSDT",
+          "time_ms": 1785489059165,
+          "trade_id": 5866676
+        }
+      ],
+      "transact_time_ms": 1785489059165,
+      "type": "MARKET"
+    }
+  ],
+  "server_time_offset_ms": 20,
+  "sold_base_quantity": "0.00010000",
+  "symbol": "BTCUSDT"
+}

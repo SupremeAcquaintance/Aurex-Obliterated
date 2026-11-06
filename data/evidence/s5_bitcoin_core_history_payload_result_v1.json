@@ -1,0 +1,162 @@
+{
+  "schema_version": "aurex-s5-bitcoin-core-history-payload-result-v1",
+  "result_id": "s5-bitcoin-core-history-payload-result-v1",
+  "executed_at": "2026-09-01T22:21:11.506732Z",
+  "protocol_evidence_hash": "e23a6368563bd45908f9e89fa14c15f37778a5ce276908aef5fe363d73b2b2b5",
+  "runner_contract_hash": "6009b9189528969bc435d8fc64a7a2a87fa83dd6629cad48662c44f06f89eb22",
+  "attempt": {
+    "attempt_id": "01_GIT_BLOBLESS_BARE_CLONE",
+    "attempted": true,
+    "succeeded": true,
+    "started_at": "2026-09-01T22:20:01.159458Z",
+    "completed_at": "2026-09-01T22:21:02.463104Z",
+    "elapsed_seconds": 61.297,
+    "exit_code": 0,
+    "transcript_path": "data/evidence/s5_bitcoin_core_history_payload_responses_v1/01_git_clone.json",
+    "transcript_file_sha256": "89309fe2d4b1b2a267afb3f3d541eb76bfff2da1e5d0442b9f8934630038afe3",
+    "transcript_byte_count": 747,
+    "error_type": "ValueError",
+    "error_message": "Local Git integrity command failed: fatal: missing blob object 'd7fe7ad5e244f9a3cbf2f3bc9f332afb9754872d'"
+  },
+  "dataset_path": null,
+  "partial_dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git.partial",
+  "dataset_file_manifest": [],
+  "dataset_file_count": 0,
+  "dataset_byte_count": 0,
+  "dataset_directory_sha256": null,
+  "free_disk_bytes_before": 98199478272,
+  "fetched_master_head": null,
+  "source_cutoff_commit": "dc0395c5858a1d55239b82a834e5075cf2069219",
+  "cutoff_commit_present": false,
+  "cutoff_is_ancestor_of_fetched_master": false,
+  "repository_is_bare": false,
+  "repository_is_shallow": null,
+  "remote_origin_url": null,
+  "remote_promisor": false,
+  "remote_partial_clone_filter": null,
+  "local_branch_refs": [],
+  "local_tag_ref_count": 0,
+  "reachable_object_id_count": 0,
+  "reachable_object_id_stream_sha256": null,
+  "cutoff_commit_count": 0,
+  "newer_remote_state_incidentally_acquired": false,
+  "gate_results": [
+    {
+      "gate_id": "PREDECESSOR_LINEAGE_AND_READINESS_V28_BOUND",
+      "status": "PASS",
+      "evidence": "Eight frozen S5 charter, source, and readiness-v28 artifacts are hash-bound."
+    },
+    {
+      "gate_id": "CANONICAL_BITCOIN_CORE_REMOTE_AND_MASTER_BRANCH_FIXED",
+      "status": "PASS",
+      "evidence": "The canonical public Bitcoin Core Git remote and master branch are fixed."
+    },
+    {
+      "gate_id": "SOURCE_CUTOFF_AND_V30_TAG_IDENTITIES_FIXED_BEFORE_HISTORY_ACCESS",
+      "status": "PASS",
+      "evidence": "The source cutoff and v30.0 tag object identities were frozen before history access."
+    },
+    {
+      "gate_id": "ONE_PUBLIC_CREDENTIAL_FREE_GIT_CLONE_PROCESS_ONLY",
+      "status": "PASS",
+      "evidence": "Exactly one credential-free, noninteractive Git clone process must execute."
+    },
+    {
+      "gate_id": "BARE_SINGLE_BRANCH_TAGLESS_BLOBLESS_CLONE_ENFORCED",
+      "status": "FAIL",
+      "evidence": "The resulting repository must be bare with only master and zero local tag refs."
+    },
+    {
+      "gate_id": "FREE_DISK_AND_DATASET_BYTE_LIMITS_ENFORCED",
+      "status": "FAIL",
+      "evidence": "Pre-run free disk and the two-gigabyte dataset ceiling must both pass."
+    },
+    {
+      "gate_id": "CLONE_COMPLETED_AND_FINAL_DATASET_PATH_EXISTS",
+      "status": "FAIL",
+      "evidence": "The clone must complete and move atomically to the frozen final dataset path."
+    },
+    {
+      "gate_id": "FETCHED_MASTER_CONTAINS_FROZEN_SOURCE_CUTOFF",
+      "status": "FAIL",
+      "evidence": "The frozen source cutoff commit must exist and be an ancestor of fetched master."
+    },
+    {
+      "gate_id": "REPOSITORY_IS_COMPLETE_NOT_SHALLOW",
+      "status": "FAIL",
+      "evidence": "The repository must report complete, non-shallow history."
+    },
+    {
+      "gate_id": "PROMISOR_REMOTE_AND_BLOB_NONE_FILTER_VERIFIED",
+      "status": "FAIL",
+      "evidence": "Origin must be canonical and Git must preserve promisor plus blob:none filter metadata."
+    },
+    {
+      "gate_id": "COMPLETE_DATASET_FILE_MANIFEST_HASHED",
+      "status": "FAIL",
+      "evidence": "Every regular dataset file must be hashed into a complete deterministic manifest."
+    },
+    {
+      "gate_id": "CUTOFF_REACHABLE_OBJECT_ID_STREAM_HASHED_WITHOUT_SEMANTIC_PARSING",
+      "status": "FAIL",
+      "evidence": "Only opaque cutoff-reachable object IDs and a commit count may be integrity-hashed."
+    },
+    {
+      "gate_id": "ZERO_MARKET_OUTCOMES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS",
+      "status": "PASS",
+      "evidence": "The protocol permits zero market values, parameters, returns, candidates, and orders."
+    },
+    {
+      "gate_id": "PASS_AUTHORIZES_COMPLETENESS_CENSUS_PROTOCOL_ONLY",
+      "status": "PASS",
+      "evidence": "A PASS can authorize only a separately frozen completeness-census protocol."
+    }
+  ],
+  "passed_gate_count": 6,
+  "failed_gate_count": 8,
+  "network_process_count": 1,
+  "credentials_used": false,
+  "repository_history_records_acquired": 0,
+  "repository_history_records_semantically_parsed": 0,
+  "commit_messages_read": 0,
+  "author_identities_read": 0,
+  "author_timestamps_read": 0,
+  "pull_request_ids_parsed": 0,
+  "github_api_requests_executed": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "payload_conclusion": "PAYLOAD_NOT_ESTABLISHED_WITHIN_FROZEN_PROTOCOL",
+  "predictive_edge_conclusion": "NOT_EVALUATED",
+  "decision": "STOP_S5_BITCOIN_CORE_HISTORY_PAYLOAD_FAILED_RETIRE_S5",
+  "next_authorization": "NONE_S5_BITCOIN_CORE_HISTORY_PAYLOAD_FAILED_RETIRE_S5",
+  "authorizes_history_completeness_census_protocol": false,
+  "authorizes_history_semantic_parsing": false,
+  "authorizes_github_api_requests": false,
+  "authorizes_market_values": false,
+  "authorizes_parameters": false,
+  "authorizes_returns": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "A PASS authorizes only a separately frozen history-completeness census protocol.",
+    "A newer fetched master, when present, was acquired incidentally and is barred from analysis after the frozen cutoff.",
+    "Commit counts and object identifiers were used only for integrity and are nonqualifying.",
+    "Git transport success does not prove GitHub REST capacity for pull-request metadata.",
+    "No BTC market value, return, candidate, signal, paper order, Testnet strategy order, production action, live action, real capital, or profit was created.",
+    "No commit message, author identity, author timestamp, or pull-request identifier was read.",
+    "No predictive relationship, strategy, or profitable edge was tested or established.",
+    "Partial clone integrity does not imply historical point-in-time availability of later pull-request metadata.",
+    "The blob:none filter minimizes file payloads but does not remove commit or tree topology.",
+    "The dataset cannot be used for parameter selection, signal construction, or market comparison at this stage.",
+    "The public repository can change after acquisition; frozen hashes preserve the exact local payload received.",
+    "This result establishes only canonical Git payload acquisition and integrity."
+  ],
+  "result_evidence_hash": "cdb84ccb79fd4db8e1fb795799a2a16a4fcb14c81c95bb504b38a3956dcbd633"
+}

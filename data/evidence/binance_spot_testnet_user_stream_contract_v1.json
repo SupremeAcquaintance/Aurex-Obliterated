@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "contract_id": "binance-spot-testnet-user-stream-v1",
+  "frozen_at": "2026-07-31T09:37:27.877065Z",
+  "environment": "BINANCE_SPOT_TESTNET",
+  "websocket_url": "wss://ws-api.testnet.binance.vision/ws-api/v3",
+  "rest_url": "https://testnet.binance.vision",
+  "symbol": "BTCUSDT",
+  "product": "SPOT",
+  "simulated_equity_usd": "100.00",
+  "maximum_order_notional": "10.00",
+  "maximum_orders": 2,
+  "event_timeout_seconds": 10,
+  "acknowledgement_phrase": "I ACKNOWLEDGE ONE BOUNDED BINANCE SPOT TESTNET USER STREAM CAMPAIGN",
+  "subscription_method": "userDataStream.subscribe.signature",
+  "reconnect_policy": "Treat every disconnect as a possible event gap. Establish a new WebSocket API connection and a new signature subscription; never assume replay.",
+  "gap_recovery_policy": "After reconnect, query every tracked order and the authenticated account through REST before accepting new execution events.",
+  "duplicate_policy": "Hash the complete subscription wrapper, suppress exact duplicates across connections, and retain the duplicate count in evidence.",
+  "ambiguous_outcome_policy": "Resolve uncertain REST order entry by deterministic client order ID. Never blindly resubmit an order whose exchange outcome is unknown.",
+  "cleanup_policy": "Cancel only a proven open campaign order by deterministic identity. Any fill, unresolved order, nonzero trade ledger, or balance drift fails Phase 2C.",
+  "pass_gates": [
+    "fixed Binance Spot Testnet WebSocket and REST origins",
+    "HMAC signature subscription succeeds without persisting credentials",
+    "first resting order emits a matching NEW execution report",
+    "connection is deliberately closed before first-order cancellation",
+    "new connection and signature subscription succeed",
+    "REST recovers the missed first-order CANCELED state after reconnect",
+    "second resting order emits matching NEW and CANCELED execution reports",
+    "at least one USDT account-position event matches the final REST balance",
+    "both order trade ledgers are empty and both final orders are CANCELED",
+    "initial and final BTC and USDT balances match exactly",
+    "duplicate suppression remains active across both connections",
+    "graceful unsubscribe succeeds and no cleanup uncertainty remains"
+  ],
+  "limitations": [
+    "Testnet events and assets are virtual",
+    "this proves event transport and recovery mechanics, not strategy edge",
+    "a short campaign does not prove long-duration connection reliability",
+    "Phase 2D restart, reset, idempotency, kill-stop, and soak gates remain",
+    "whole-sandbox qualification remains false after Phase 2C",
+    "production, live, and real-capital authority remain false"
+  ],
+  "official_references": [
+    "https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-api.md",
+    "https://github.com/binance/binance-spot-api-docs/blob/master/user-data-stream.md",
+    "https://github.com/binance/binance-spot-api-docs/blob/master/CHANGELOG.md"
+  ],
+  "production_authority": false,
+  "live_authority": false,
+  "real_capital_authority": false,
+  "sandbox_qualified": false,
+  "contract_sha256": "ddf06d9d596812c9dcb45c4c6654e8e50a0b5a3ae2928b15fdbf487fad2f8c2d"
+}

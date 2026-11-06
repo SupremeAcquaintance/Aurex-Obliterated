@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-s1-1-development-outcome-protocol-audit-v1",
+  "audit_id": "s1-1-development-outcome-protocol-audit-v1",
+  "audited_at": "2026-08-27T06:22:35.279273Z",
+  "protocol_file_sha256": "5dfdfe36d53841b8f8b7f66710392eb12d675691c3e557c44b7a8c36c64c437d",
+  "protocol_evidence_hash": "412c8bc189ac723a3fa211b9a2ebf8b35dea8c1e6e94df33f183e07f7517c6da",
+  "builder_contract_hash": "2da56292089a8c2925e908d898e2dd86d74cc98d30a2fbb20b5d9fab4820191d",
+  "strategy_preregistration_evidence_hash": "6ca639fa0ff744dc13c1c8db229d46a8a7710b77bb49eded2ac8cae4a022816f",
+  "timing_amendment_evidence_hash": "972e49bc1e732bfe567417db63a0b81b26f093517ec7f2532af67b06d7737ada",
+  "source_result_evidence_hash": "87e413172462f7006332a53be3ba74b6b7bdd1c61e03d0f7f71e218322e3caa0",
+  "source_audit_evidence_hash": "5685b46d8ef2c787ce606025ee76d75bbf00a830237f692b5ec7b6145ac053f3",
+  "feature_dataset_file_sha256": "db93ee6954fee447cba66b3d873282da4d289f5ef6a63446d6ad036f787b24d6",
+  "price_dataset_file_sha256": "48302226780765f625c1f2241a73d09f07c75227515d8647cdb8ab9759e4fd57",
+  "auditor_source_sha256": "4bc3b94495d86ab5fd5a11ea37a388bc7ea53d5597a95f07984313a834b0ee93",
+  "feature_values_parsed": 0,
+  "price_values_parsed": 0,
+  "returns_calculated": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_1_DEVELOPMENT_OUTCOME_PROTOCOL_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_1_DEVELOPMENT_OUTCOME_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "0da15939a68f5a5ad548d40f390bf02e27f9f623f1607eae42e55c8de6d2bc79"
+}

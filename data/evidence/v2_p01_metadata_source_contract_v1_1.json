@@ -1,0 +1,168 @@
+{
+  "schema_version": "aurex-v2-p01-metadata-source-contract-v1.1",
+  "contract_id": "v2-p01-metadata-source-contract-v1.1",
+  "contract_version": "1.1.0",
+  "frozen_at": "2026-07-28T08:26:49.634859Z",
+  "status": "FROZEN_PRE_REVISED_METADATA_OBSERVATION",
+  "theory_screen_evidence_hash": "ec03d31db661a36b1def820711b20134d416ec2d390a49cdbafaf19f27758dea",
+  "discovery_charter_evidence_hash": "af4dd3e28e20f9a5e99c47e98d567587ef11697c38dd976074ddcb80255db07f",
+  "capability_audit_evidence_hash": "3726b944529990be7160604942f4e580cd8d198efe79f8e074dc72b760638e42",
+  "source_census_result_evidence_hash": "ce5d60e3338903bcb8a3783bd4b41fa63bec518c3041b213c9529bd6458d652e",
+  "pilot_result_evidence_hash": "95e9aaaf1b05b01372ddcdc3f19fff6612f6a7f5ae4e1ca4b99b0eb6e7947874",
+  "derivatives_foundation_result_evidence_hash": "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8",
+  "contamination_ledger_evidence_hash": "9f7face6a22a51b2a0b20d653561396fb6415f532ad0fecd883b3c6e6c132207",
+  "builder_contract_hash": "ef40a687d75134c194eeae9a21d654d9479f31ae21514b712f7e78f8cd0337da",
+  "selected_proposal_id": "P01_POSITIVE_FUNDING_SPOT_PERP_CARRY",
+  "requirement_ids": [
+    "HISTORICAL_ACCOUNT_FEE_TIER",
+    "HISTORICAL_COLLATERAL_LIQUIDATION_AND_ADL_RULES",
+    "HISTORICAL_FUTURES_CONTRACT_LIFECYCLE",
+    "HISTORICAL_FUTURES_ORDER_FILTERS",
+    "HISTORICAL_LEVERAGE_AND_MAINTENANCE_BRACKETS",
+    "HISTORICAL_SETTLED_FUNDING_AND_INTERVALS",
+    "HISTORICAL_SPOT_ORDER_FILTERS",
+    "HISTORICAL_SPOT_PERPETUAL_MARK_INDEX_PREMIUM_SERIES"
+  ],
+  "source_targets": [
+    {
+      "source_id": "BINANCE_PUBLIC_DATA_README",
+      "source_kind": "OFFICIAL_BINANCE_GITHUB_DOCUMENTATION",
+      "requested_url": "https://raw.githubusercontent.com/binance/binance-public-data/master/README.md",
+      "allowed_final_domains": [
+        "raw.githubusercontent.com"
+      ],
+      "declared_temporal_scope": "HISTORICAL_ARCHIVE_DOCUMENTATION",
+      "required_markers": [
+        "Archived files may be updated",
+        "Binance Public Data",
+        "CHECKSUM",
+        "USD-M Futures"
+      ],
+      "supports_requirement_ids": [
+        "HISTORICAL_SETTLED_FUNDING_AND_INTERVALS",
+        "HISTORICAL_SPOT_PERPETUAL_MARK_INDEX_PREMIUM_SERIES"
+      ],
+      "maximum_response_bytes": 2097152
+    },
+    {
+      "source_id": "BINANCE_USD_M_MARKET_DATA_DOCS",
+      "source_kind": "OFFICIAL_BINANCE_GITHUB_DOCUMENTATION",
+      "requested_url": "https://raw.githubusercontent.com/binance/binance-futures-connector-python/main/binance/um_futures/market.py",
+      "allowed_final_domains": [
+        "raw.githubusercontent.com"
+      ],
+      "declared_temporal_scope": "CURRENT_MARKET_AND_CONTRACT_API_DOCUMENTATION",
+      "required_markers": [
+        "/fapi/v1/exchangeInfo",
+        "/fapi/v1/fundingInfo",
+        "/fapi/v1/fundingRate",
+        "Current exchange trading rules and symbol information"
+      ],
+      "supports_requirement_ids": [
+        "HISTORICAL_COLLATERAL_LIQUIDATION_AND_ADL_RULES",
+        "HISTORICAL_FUTURES_CONTRACT_LIFECYCLE",
+        "HISTORICAL_FUTURES_ORDER_FILTERS",
+        "HISTORICAL_SETTLED_FUNDING_AND_INTERVALS",
+        "HISTORICAL_SPOT_PERPETUAL_MARK_INDEX_PREMIUM_SERIES"
+      ],
+      "maximum_response_bytes": 8388608
+    },
+    {
+      "source_id": "BINANCE_USD_M_ACCOUNT_DOCS",
+      "source_kind": "OFFICIAL_BINANCE_GITHUB_DOCUMENTATION",
+      "requested_url": "https://raw.githubusercontent.com/binance/binance-connector-python/master/clients/derivatives_trading_usds_futures/src/binance_sdk_derivatives_trading_usds_futures/rest_api/api/account_api.py",
+      "allowed_final_domains": [
+        "raw.githubusercontent.com"
+      ],
+      "declared_temporal_scope": "CURRENT_SIGNED_ACCOUNT_API_DOCUMENTATION",
+      "required_markers": [
+        "/fapi/v1/commissionRate",
+        "/fapi/v1/leverageBracket",
+        "Notional and Leverage Brackets",
+        "User Commission Rate"
+      ],
+      "supports_requirement_ids": [
+        "HISTORICAL_ACCOUNT_FEE_TIER",
+        "HISTORICAL_COLLATERAL_LIQUIDATION_AND_ADL_RULES",
+        "HISTORICAL_LEVERAGE_AND_MAINTENANCE_BRACKETS"
+      ],
+      "maximum_response_bytes": 6291456
+    },
+    {
+      "source_id": "BINANCE_SPOT_API_DOCS",
+      "source_kind": "OFFICIAL_BINANCE_GITHUB_DOCUMENTATION",
+      "requested_url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/rest-api.md",
+      "allowed_final_domains": [
+        "raw.githubusercontent.com"
+      ],
+      "declared_temporal_scope": "CURRENT_SPOT_API_DOCUMENTATION",
+      "required_markers": [
+        "/api/v3/exchangeInfo",
+        "Current exchange trading rules and symbol information",
+        "Exchange information"
+      ],
+      "supports_requirement_ids": [
+        "HISTORICAL_SPOT_ORDER_FILTERS"
+      ],
+      "maximum_response_bytes": 6291456
+    }
+  ],
+  "classification_policy": [
+    "ARCHIVE_EVIDENCE_MAY_SATISFY_HISTORICAL_MARKET_AND_FUNDING_INPUTS",
+    "CONSERVATIVE_OVERRIDE_REQUIRES_A_SEPARATELY_FROZEN_PROTOCOL",
+    "CURRENT_ONLY_SURFACE_CANNOT_PROVE_A_HISTORICAL_RULE",
+    "DOCUMENT_REACHABILITY_DOES_NOT_PROVE_HISTORICAL_EXECUTABILITY",
+    "NO_CREDENTIAL_ACCOUNT_OR_PRIVATE_ENDPOINT_ACCESS",
+    "NO_MARKET_VALUES_RETURNS_SIGNALS_OR_STRATEGY_OUTCOMES",
+    "SIGNED_CURRENT_ENDPOINT_CANNOT_SATISFY_HISTORICAL_ACCOUNT_STATE",
+    "UNRESOLVED_HISTORICAL_RULES_MUST_FAIL_CLOSED_OR_REMAIN_EXPLICIT_LIMITATIONS"
+  ],
+  "allowed_next_decisions": [
+    "PERMIT_P01_PROTOCOL_DESIGN_WITH_MANDATORY_METADATA_OVERRIDES",
+    "STOP_P01_PROTOCOL_DESIGN_METADATA_SOURCES_INSUFFICIENT"
+  ],
+  "maximum_http_requests": 4,
+  "retry_attempts_per_source": 3,
+  "request_timeout_seconds": 30,
+  "response_bodies_persisted": false,
+  "credentials_permitted": false,
+  "private_endpoint_calls_permitted": false,
+  "market_data_numeric_values_permitted": false,
+  "strategy_outcomes_permitted": false,
+  "return_calculation_permitted": false,
+  "authorizes_full_archive_acquisition": false,
+  "authorizes_market_data_import": false,
+  "creates_candidate": false,
+  "opens_development": false,
+  "opens_validation": false,
+  "opens_holdout": false,
+  "opens_forward": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "market_data_numeric_fields_inspected": [],
+  "strategy_outcome_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "preexisting_result_artifacts": [],
+  "limitations": [
+    "A later protocol may use conservative research overrides only when the assumption and its non-eligibility limitation are explicit.",
+    "Current exchangeInfo cannot be projected backward to 2023-2024 quantity, price, notional, status, or liquidation rules.",
+    "Current signed account endpoints cannot reconstruct historical commission tiers or maintenance-margin brackets.",
+    "Document reachability establishes only the declared source surface and does not establish complete historical metadata.",
+    "No result from this contract authorizes archive expansion, return testing, candidate creation, paper, sandbox, live, or capital.",
+    "The existing archive census proves market-family availability but not historical contract or account rules."
+  ],
+  "contract_evidence_hash": "0908d86a2ea55d26d86d44607f6e462de4cbcad1baf22fea4824bd15db1b4d13",
+  "supersedes_contract_evidence_hash": "dfe728b5c033d354caeda372ba2a5748369442b1943c81c63337bcd07340ac24",
+  "supersession_reason_code": "V1_BINANCE_CATALOG_HTTP_202_EMPTY_BODY",
+  "replaced_source_ids": [
+    "BINANCE_USD_M_ACCOUNT_DOCS",
+    "BINANCE_USD_M_MARKET_DATA_DOCS"
+  ],
+  "supersession_notes": [
+    "Only the two Binance catalog URLs are replaced by official Binance GitHub source files with the same endpoint and temporal markers.",
+    "The deterministic v1 runner received HTTP 202 with an empty body from the Binance USD-M market documentation catalog URL.",
+    "The eight requirements, classification policy, permissions, limitations, and no-return boundary are unchanged from v1.",
+    "The empty response contained none of the frozen markers, so the v1 runner failed before writing an audit result."
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "schema_version": "aurex-s4-etp-source-feasibility-protocol-v1",
+  "protocol_id": "s4-etp-source-feasibility-protocol-v1",
+  "frozen_at": "2026-08-31T18:46:49.383647Z",
+  "status": "FROZEN_BEFORE_S4_METADATA_REQUESTS",
+  "builder_contract_hash": "986fdf1089b3de5bd12f71492cb8e881903fe30afb2c35bfa81776ca9a7630c3",
+  "charter_evidence_hash": "8827763c7b1d71255ceff1859c0e69835403c7653ead6ad6f233edae5b9c08b4",
+  "source_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_audit_v26.json",
+      "file_sha256": "a4419a84dd1d324ebe59499e595ed58eaa50cc61fd6219541cc34c050c904dd7"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_result_v26.json",
+      "file_sha256": "a140cbf281f0a1ad1424b448affa790c43018baed54fbc4c903e878b6462286d"
+    },
+    {
+      "path": "data/evidence/s4_spot_bitcoin_etp_charter_audit_v1.json",
+      "file_sha256": "b7e391836577ab4c946a0167fee66af4d99bef87e350a0e15b8d05dde5602fd8"
+    },
+    {
+      "path": "data/evidence/s4_spot_bitcoin_etp_charter_v1.json",
+      "file_sha256": "7225b89f37d054df69bc3515424807792222226468fde44fc908707f4f3567a9"
+    }
+  ],
+  "static_metadata_endpoints": [
+    {
+      "endpoint_id": "SEC_API_DOCUMENTATION",
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "response_kind": "TEXT_DOCUMENTATION",
+      "required_markers": [
+        "data.sec.gov/submissions/",
+        "do not require any authentication or API keys",
+        "metadata such as current name"
+      ],
+      "permitted_json_keys": [],
+      "maximum_response_bytes": 2000000,
+      "permits_identity_metadata": true,
+      "permits_cik_ticker_exchange_values": false,
+      "permits_etp_numeric_values": false,
+      "permits_btc_market_values": false
+    },
+    {
+      "endpoint_id": "SEC_EDGAR_ACCESS_DOCUMENTATION",
+      "url": "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data",
+      "response_kind": "TEXT_DOCUMENTATION",
+      "required_markers": [
+        "company_tickers_exchange.json",
+        "date filed",
+        "do not guarantee accuracy or scope",
+        "index.json"
+      ],
+      "permitted_json_keys": [],
+      "maximum_response_bytes": 2000000,
+      "permits_identity_metadata": true,
+      "permits_cik_ticker_exchange_values": false,
+      "permits_etp_numeric_values": false,
+      "permits_btc_market_values": false
+    },
+    {
+      "endpoint_id": "SEC_FUND_TICKER_CATALOG",
+      "url": "https://www.sec.gov/files/company_tickers_mf.json",
+      "response_kind": "JSON_IDENTITY_CATALOG",
+      "required_markers": [
+        "cik",
+        "ticker"
+      ],
+      "permitted_json_keys": [
+        "cik",
+        "class",
+        "series",
+        "ticker"
+      ],
+      "maximum_response_bytes": 25000000,
+      "permits_identity_metadata": true,
+      "permits_cik_ticker_exchange_values": true,
+      "permits_etp_numeric_values": false,
+      "permits_btc_market_values": false
+    },
+    {
+      "endpoint_id": "SEC_PUBLIC_REUSE_POLICY",
+      "url": "https://www.sec.gov/about/privacy-information",
+      "response_kind": "TEXT_DOCUMENTATION",
+      "required_markers": [
+        "SEC as the source",
+        "copied or further distributed",
+        "public information"
+      ],
+      "permitted_json_keys": [],
+      "maximum_response_bytes": 2000000,
+      "permits_identity_metadata": true,
+      "permits_cik_ticker_exchange_values": false,
+      "permits_etp_numeric_values": false,
+      "permits_btc_market_values": false
+    },
+    {
+      "endpoint_id": "SEC_TICKER_EXCHANGE_CATALOG",
+      "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+      "response_kind": "JSON_IDENTITY_CATALOG",
+      "required_markers": [
+        "cik",
+        "exchange",
+        "ticker"
+      ],
+      "permitted_json_keys": [
+        "cik",
+        "exchange",
+        "name",
+        "ticker"
+      ],
+      "maximum_response_bytes": 25000000,
+      "permits_identity_metadata": true,
+      "permits_cik_ticker_exchange_values": true,
+      "permits_etp_numeric_values": false,
+      "permits_btc_market_values": false
+    }
+  ],
+  "sec_submissions_url_template": "https://data.sec.gov/submissions/CIK{cik_10_digit}.json",
+  "sec_submissions_permitted_keys": [
+    "acceptanceDateTime",
+    "accessionNumber",
+    "cik",
+    "exchanges",
+    "files",
+    "filingDate",
+    "form",
+    "formerNames",
+    "name",
+    "primaryDocDescription",
+    "primaryDocument",
+    "reportDate",
+    "tickers",
+    "website"
+  ],
+  "maximum_static_requests": 5,
+  "maximum_dynamic_submission_requests": 32,
+  "maximum_total_requests": 37,
+  "maximum_response_bytes_each": 25000000,
+  "request_timeout_seconds": 45,
+  "maximum_run_count": 1,
+  "sec_user_agent_environment_variable": "AUREX_SEC_USER_AGENT",
+  "sec_user_agent_must_identify_operator_and_contact": true,
+  "run_blocked_without_sec_user_agent": true,
+  "required_gate_ids": [
+    "ALL_REQUEST_ATTEMPTS_DURABLY_RECORDED",
+    "OFFICIAL_SEC_AUTHORITY_ONLY",
+    "COMPLETE_SPOT_BITCOIN_ETP_UNIVERSE_RECONSTRUCTABLE",
+    "FUND_LIFECYCLE_AND_TICKER_HISTORY_RECONSTRUCTABLE",
+    "OFFICIAL_ISSUER_DATA_ENDPOINT_CATALOG_COMPLETE",
+    "DAILY_SHARES_OUTSTANDING_HISTORY_DESCRIPTOR_COMPLETE",
+    "DAILY_BITCOIN_HOLDINGS_HISTORY_DESCRIPTOR_COMPLETE",
+    "ACTUAL_PUBLICATION_TIMING_RECONSTRUCTABLE",
+    "PER_FUND_CASH_IN_KIND_REGIME_DATES_RECONSTRUCTABLE",
+    "FEES_SPLITS_MERGERS_AND_NON_CREATION_CHANGES_RECONSTRUCTABLE",
+    "ZERO_DOLLAR_PUBLIC_ACCESS",
+    "REUSE_RIGHTS_EXPLICIT",
+    "ZERO_ETP_NUMERIC_VALUES_ACCESSED",
+    "ZERO_BTC_MARKET_VALUES_OR_OUTCOMES_ACCESSED",
+    "ZERO_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS"
+  ],
+  "result_artifact_required_on_every_exit": true,
+  "attempt_record_required_for_every_planned_request": true,
+  "partial_response_artifacts_must_be_preserved": true,
+  "all_or_nothing_response_persistence_forbidden": true,
+  "unknown_attempt_or_success_counts_forbidden": true,
+  "rerun_after_result_forbidden": true,
+  "raw_sec_documentation_permitted": true,
+  "raw_sec_identity_catalogs_permitted": true,
+  "raw_sec_submission_metadata_permitted": true,
+  "issuer_page_response_bodies_permitted": false,
+  "issuer_head_requests_permitted": false,
+  "sec_filing_document_bodies_permitted": false,
+  "xbrl_fact_endpoints_permitted": false,
+  "etp_numeric_values_permitted": false,
+  "btc_market_values_permitted": false,
+  "payload_acquisition_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "historical_screen_permitted": false,
+  "validation_permitted": false,
+  "holdout_permitted": false,
+  "pine_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "pre_freeze_incidental_current_numeric_context_observed": true,
+  "incidental_context_categories": [
+    "CURRENT_AS_OF_DATE",
+    "CURRENT_BENCHMARK_LEVEL",
+    "CURRENT_BITCOIN_QUANTITY",
+    "CURRENT_HOLDING_COUNT",
+    "CURRENT_MARKET_VALUE",
+    "CURRENT_PORTFOLIO_WEIGHT"
+  ],
+  "incidental_exact_numeric_values_persisted_by_aurex": false,
+  "incidental_context_is_outcome_aware_nonqualifying": true,
+  "decision": "FREEZE_S4_ETP_METADATA_AND_POINT_IN_TIME_SOURCE_FEASIBILITY_PROTOCOL",
+  "next_authorization": "RUN_S4_ETP_SOURCE_FEASIBILITY_ONCE",
+  "limitations": [
+    "A complete current ticker catalog does not prove complete historical universe coverage.",
+    "A filing acceptance timestamp does not prove an issuer data publication timestamp.",
+    "Current issuer pages and response bodies are forbidden because they can expose values.",
+    "EDGAR identity metadata cannot substitute for daily issuer source history.",
+    "Failure to prove one fund's history or timing retires S4 before values.",
+    "Issuer website fields do not prove an official daily data endpoint or archive.",
+    "No ETP value, BTC price, parameter, return, candidate, signal, or order is authorized.",
+    "No XBRL facts, filing bodies, issuer page bodies, payloads, or market data may be requested.",
+    "Numeric values incidentally exposed in pre-freeze search context are outcome-aware and nonqualifying.",
+    "Only SEC documentation, identity catalogs, and submissions metadata are permitted.",
+    "SEC states that ticker association catalogs do not guarantee accuracy or scope.",
+    "The one run must persist every attempt and partial response before returning.",
+    "Zero-dollar access and reuse rights must be established rather than assumed."
+  ],
+  "protocol_evidence_hash": "6c0415149eabf9c22c60854a35b563a26b68b2746899cd53a17e08fac79883bd"
+}

@@ -1,0 +1,230 @@
+{
+  "schema_version": "aurex-s2-development-measurement-protocol-v1",
+  "protocol_id": "s2-development-measurement-protocol-v1",
+  "frozen_at": "2026-08-30T14:18:30.643824Z",
+  "status": "FROZEN_BEFORE_S2_PAYLOAD_VALUE_READ",
+  "builder_contract_hash": "6d85b80acee6a4753dba1257e1c2d03671d8255f95cd11790985ea22d50e4e50",
+  "charter_evidence_hash": "77e61e9f01519d6b7b56aa2ce45d4689356120bb1a338ead9edce35ef18fe9b0",
+  "payload_protocol_evidence_hash": "93d4280e7d852ce5e83b3c3215a67b48c906149e5041ccda08febaedd42131fb",
+  "payload_protocol_audit_evidence_hash": "c3fda102a02c5b2fcffe50a7ac14ff25940813e2f64dd8cfaf554ce10bb5d3a4",
+  "payload_result_evidence_hash": "a50c3c69ebfdcabcce5ea9998c5eea60db8ae74756d05fe6b9460564b247094a",
+  "payload_result_audit_evidence_hash": "edc724a48b7cd0f7726ae1cec925bd379738bf78ba152f7077f2a3b3b5ffb719",
+  "payload_file_sha256": "7fe0f2d398ce6ad75f97c33703062184159b2a48bea93c6c074cdc226e340a6b",
+  "payload_evidence_hash": "fc436388a09ad097829a2edcea4d2789403493a14425b35355a9a50a05eaf070",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s2_bigquery_feasibility_audit_v3.json",
+      "file_sha256": "88f2fd0a4d0fa7ff66463bcbe2707454a9df0318d266f22297a79c2ce6256cd3"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_feasibility_protocol_audit_v3.json",
+      "file_sha256": "73eedb87cf36a4dd7bdaf039c697f31c197746652e1a115e7b9037ed705630ff"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_feasibility_protocol_v3.json",
+      "file_sha256": "5eca2518a3f0bf2b325203eb95758145bb393c0b36c420ae1f72822943fb2114"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_feasibility_result_v3.json",
+      "file_sha256": "14b0c8ea730dc58299d2a41473aeb578a3033fb2bc06022eb8769555fa7cd3e2"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_payload_audit_v2.json",
+      "file_sha256": "1e653eacebeaa2bba98724ff04327b020d2be5234a1bc28e83b8e8e47dba93ed"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_payload_failure_audit_v1.json",
+      "file_sha256": "fd314ca1b21ca6b55463e163e8c14e6c9d53dfe0e680d324ca94ae4aaacd7171"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_payload_protocol_audit_v1.json",
+      "file_sha256": "97a4c27583a59316c6082a590f9a89a22264b8129e772157ec77d07b25d0b849"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_payload_protocol_audit_v2.json",
+      "file_sha256": "4a04eeb5533cb92d5ba864512eb554a43eea3685eeef1d0a11598f75d8a382ea"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_payload_protocol_v1.json",
+      "file_sha256": "b6758a22a9a98e5b29cb698e97ca5ae8be5b2d56c04e09b75c6ca7c2254644da"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_payload_protocol_v2.json",
+      "file_sha256": "d95b8aee5f2394aeb031e27d0658091bbbe2f8e1277531943d6f3c82c3ee820a"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_payload_result_v1.json",
+      "file_sha256": "c4a53948d55a5bb952526dd66e2c1eb243f00ef57ee1aea6c982b3f38e0ca993"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_payload_result_v2.json",
+      "file_sha256": "1aec8c81dcf9edbe62fd22abf5832c7451e0c20c0067a9a0d71a87934502c0b7"
+    },
+    {
+      "path": "data/evidence/s2_development_weekly_payload_v1.json",
+      "file_sha256": "7fe0f2d398ce6ad75f97c33703062184159b2a48bea93c6c074cdc226e340a6b"
+    },
+    {
+      "path": "data/evidence/s2_onchain_settlement_charter_audit_v1.json",
+      "file_sha256": "f2a1d02a58504a5d087f60e6f83a6c04d0d9f2637fc5ac7e7fcdb89747cf5465"
+    },
+    {
+      "path": "data/evidence/s2_onchain_settlement_charter_v1.json",
+      "file_sha256": "c3ddfc3e985cf4737422f9ae452a4ad10499dc73f44c2be44e27176b9f086832"
+    }
+  ],
+  "payload_bytes_hashed_during_freeze": 94662,
+  "payload_value_rows_parsed_during_freeze": 0,
+  "input_row_count": 280,
+  "first_input_week_start": "2017-08-19",
+  "last_input_week_start": "2022-12-24",
+  "input_frequency": "WEEKLY_SATURDAY_TO_FRIDAY_UTC",
+  "decision_cutoff_policy": "FOLLOWING_SATURDAY_00_00_UTC",
+  "earliest_execution_policy": "FOLLOWING_MONDAY_00_00_UTC",
+  "confirmation_policy": "BLOCK_SIXTH_CONFIRMATION_STRICTLY_BEFORE_CUTOFF",
+  "current_window_weeks": 4,
+  "prior_window_weeks": 4,
+  "maximum_lag_weeks": 7,
+  "warmup_input_rows": 7,
+  "expected_measurement_row_count": 273,
+  "measurement_definitions": [
+    {
+      "measurement_id": "confirmed_tx_current_4w",
+      "formula": "SUM_CONFIRMED_NON_COINBASE_TX_LAGS_0_TO_3",
+      "output_type": "INTEGER",
+      "unit": "TRANSACTIONS",
+      "maximum_lag_weeks": 3
+    },
+    {
+      "measurement_id": "confirmed_tx_prior_4w",
+      "formula": "SUM_CONFIRMED_NON_COINBASE_TX_LAGS_4_TO_7",
+      "output_type": "INTEGER",
+      "unit": "TRANSACTIONS",
+      "maximum_lag_weeks": 7
+    },
+    {
+      "measurement_id": "confirmed_fee_sats_current_4w",
+      "formula": "SUM_CONFIRMED_FEE_SATOSHIS_LAGS_0_TO_3",
+      "output_type": "INTEGER",
+      "unit": "SATOSHIS",
+      "maximum_lag_weeks": 3
+    },
+    {
+      "measurement_id": "confirmed_fee_sats_prior_4w",
+      "formula": "SUM_CONFIRMED_FEE_SATOSHIS_LAGS_4_TO_7",
+      "output_type": "INTEGER",
+      "unit": "SATOSHIS",
+      "maximum_lag_weeks": 7
+    },
+    {
+      "measurement_id": "confirmed_tx_growth_ppm",
+      "formula": "ROUND_HALF_EVEN_1E6_TIMES_CURRENT_MINUS_PRIOR_DIVIDED_BY_PRIOR_TX",
+      "output_type": "INTEGER",
+      "unit": "PARTS_PER_MILLION",
+      "maximum_lag_weeks": 7
+    },
+    {
+      "measurement_id": "confirmed_fee_growth_ppm",
+      "formula": "ROUND_HALF_EVEN_1E6_TIMES_CURRENT_MINUS_PRIOR_DIVIDED_BY_PRIOR_FEE",
+      "output_type": "INTEGER",
+      "unit": "PARTS_PER_MILLION",
+      "maximum_lag_weeks": 7
+    },
+    {
+      "measurement_id": "settlement_demand_agreement",
+      "formula": "BOTH_BROADENING_IF_BOTH_GROWTH_PPM_GT_ZERO_BOTH_CONTRACTING_IF_BOTH_LT_ZERO_ELSE_FLAT_OR_MIXED",
+      "output_type": "ENUM",
+      "unit": "CATEGORY",
+      "maximum_lag_weeks": 7
+    }
+  ],
+  "measurement_count": 7,
+  "arithmetic_policy": "INTEGER_SUMS_DECIMAL_28_ROUND_HALF_EVEN_PPM_NO_FLOAT",
+  "normalization_policy": "DIMENSIONLESS_PPM_ONLY_NO_RANK_ZSCORE_OR_OUTCOME_FIT",
+  "missing_value_policy": "REJECT_ENTIRE_RUN_NO_IMPUTATION",
+  "nonpositive_denominator_policy": "REJECT_ENTIRE_RUN",
+  "outlier_policy": "PRESERVE_EXACT_VALUES_NO_WINSORIZATION_OR_CLIPPING",
+  "agreement_categories": [
+    "BOTH_BROADENING",
+    "BOTH_CONTRACTING",
+    "FLAT_OR_MIXED"
+  ],
+  "output_path": "data/evidence/s2_development_measurements_v1.jsonl",
+  "output_fields": [
+    "sequence",
+    "week_start",
+    "decision_cutoff_at",
+    "earliest_execution_at",
+    "source_payload_evidence_hash",
+    "confirmed_tx_current_4w",
+    "confirmed_tx_prior_4w",
+    "confirmed_fee_sats_current_4w",
+    "confirmed_fee_sats_prior_4w",
+    "confirmed_tx_growth_ppm",
+    "confirmed_fee_growth_ppm",
+    "settlement_demand_agreement"
+  ],
+  "forbidden_output_fields": [
+    "btc_open",
+    "btc_high",
+    "btc_low",
+    "btc_close",
+    "btc_volume",
+    "btc_return",
+    "forward_return",
+    "signal",
+    "position",
+    "pnl",
+    "candidate_id"
+  ],
+  "quality_gates": [
+    "ALL_FIFTEEN_PREDECESSOR_ARTIFACT_HASHES_MATCH",
+    "INPUT_PAYLOAD_FILE_HASH_AND_280_ROW_MANIFEST_MATCH",
+    "INPUT_WEEKS_ARE_STRICTLY_ORDERED_CONTIGUOUS_AND_CAUSAL",
+    "ONLY_CURRENT_FOUR_AND_IMMEDIATELY_PRIOR_FOUR_WEEKS_ARE_ACCESSED",
+    "ALL_SUMS_USE_INTEGER_ARITHMETIC_AND_ALL_RATIOS_USE_DECIMAL_NEVER_FLOAT",
+    "SEVEN_ROW_WARMUP_PRODUCES_EXACTLY_273_MEASUREMENT_ROWS",
+    "NONPOSITIVE_DENOMINATOR_MISSING_DUPLICATE_OR_AMBIGUOUS_DATA_STOPS_THE_RUN",
+    "NO_IMPUTATION_WINSORIZATION_CLIPPING_RANKING_ZSCORE_OR_OUTCOME_FIT",
+    "BOTH_COMPONENTS_MUST_STRICTLY_BROADEN_FOR_BROADENING_AGREEMENT",
+    "SOURCE_WEEK_CUTOFF_EXECUTION_DATE_AND_PAYLOAD_HASH_LINEAGE_ARE_RETAINED",
+    "JSONL_SERIALIZATION_REPRODUCES_BYTE_FOR_BYTE",
+    "NO_STRATEGY_RULE_SIGNAL_POSITION_CANDIDATE_OR_ORDER_IS_CREATED",
+    "ZERO_MARKET_VALUES_RETURNS_VALIDATION_HOLDOUT_AND_PROFIT"
+  ],
+  "future_strategy_family_budget": 1,
+  "future_candidate_budget": 1,
+  "future_parameter_combination_budget": 1,
+  "future_parameter_search_policy": "NO_OUTCOME_DRIVEN_PARAMETER_SEARCH",
+  "strategy_parameters_defined": [],
+  "strategy_rules_defined": [],
+  "authorizes_measurement_runner_implementation": true,
+  "authorizes_payload_value_read_now": false,
+  "authorizes_measurement_calculation_now": false,
+  "authorizes_strategy_parameter_definition": false,
+  "authorizes_market_value_access": false,
+  "authorizes_return_testing": false,
+  "authorizes_validation_access": false,
+  "authorizes_holdout_access": false,
+  "authorizes_strategy_candidate": false,
+  "authorizes_pine": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "decision": "FREEZE_S2_DEVELOPMENT_MEASUREMENT_PROTOCOL",
+  "next_authorization": "AUTHORIZE_S2_DEVELOPMENT_MEASUREMENT_RUNNER_IMPLEMENTATION_ONLY",
+  "limitations": [
+    "All historical target periods remain outcome-aware and nonqualifying.",
+    "Fee growth can reflect congestion or fee-market conditions rather than broader user demand.",
+    "Four-week aggregation is an ex-ante measurement choice, not evidence of optimality.",
+    "Measurement construction cannot define a trading rule or strategy candidate.",
+    "No market price or return may be read while constructing this measurement dataset.",
+    "Payload acquisition success does not establish predictive value or profitability.",
+    "Prospective validation and future holdout remain sealed.",
+    "The agreement category is descriptive and cannot itself authorize a position.",
+    "The single future candidate budget forbids outcome-driven model or threshold search.",
+    "Trading, Testnet strategy orders, production, live authority, real capital, and profit remain zero."
+  ],
+  "protocol_evidence_hash": "dedb2d9a0fb23d6a943d290c36333107adf3ef873754d2b8572ac3692377a17b"
+}

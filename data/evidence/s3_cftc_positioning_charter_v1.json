@@ -1,0 +1,392 @@
+{
+  "schema_version": "aurex-s3-cftc-positioning-charter-v1",
+  "charter_id": "s3-cftc-positioning-charter-v1",
+  "frozen_at": "2026-08-30T20:25:21.293515Z",
+  "status": "FROZEN_CHARTER_ONLY_NO_POSITION_VALUES_OR_OUTCOMES",
+  "builder_contract_hash": "0026c90c955562f11087c8a1cc5be881c84b971aaf003db4c12c1d065726e10e",
+  "predecessor_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_contract_v1.json",
+      "file_sha256": "f8bfcb9f321269433205c901f9d44506d6d12a681a07730b76f4ab2e221f8d68"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_audit_v23.json",
+      "file_sha256": "3e88e867a921d22336b4db9eee97e3b1791c8544d32a575666ce9c997db460b1"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_result_v23.json",
+      "file_sha256": "214dfc8ba69fe1b3943e4f29e5ccbe2efd984b5042852525c8e43043f76dd0fc"
+    },
+    {
+      "path": "data/evidence/binance_spot_testnet_sandbox_profile_v1.json",
+      "file_sha256": "19e0f02caa92fe0bdde0b121491b63eb4b3d8d409212a367d3c0275245d6d9a1"
+    },
+    {
+      "path": "data/evidence/s1_successor_lineage_audit_v1.json",
+      "file_sha256": "905b3ba01a99c177c0ddfab55ac3d829f01b1b493a2528e2af193a3daa299160"
+    },
+    {
+      "path": "data/evidence/s1_successor_lineage_ledger_v1.json",
+      "file_sha256": "a67c90b56994d9076cbddc2f9f21aa1928c10fc01edf2c745198b1cae9f0d91f"
+    },
+    {
+      "path": "data/evidence/s2_btc_source_acquisition_audit_v1.json",
+      "file_sha256": "a68a29cb1d29821ea144939adffc4baef83d8cbddb34c2adc4a95602bafd6a47"
+    },
+    {
+      "path": "data/evidence/s2_btc_source_acquisition_result_v1.json",
+      "file_sha256": "44bfa463d754798b164eb9471050920a45a0b102d8bb670952b4dc3912d22869"
+    },
+    {
+      "path": "data/evidence/s2_development_backtest_result_audit_v1.json",
+      "file_sha256": "5912107c45782db56c79f61c0ee71a26e98d20ba10c69e7a16568fb680a151c3"
+    },
+    {
+      "path": "data/evidence/s2_development_backtest_result_v1.json",
+      "file_sha256": "63a1a7bcad56a6a7b8b0b9e8fc04d0bbdaa71b09b92faa4034c49c57a5c83d8a"
+    },
+    {
+      "path": "data/evidence/s2_onchain_settlement_charter_audit_v1.json",
+      "file_sha256": "f2a1d02a58504a5d087f60e6f83a6c04d0d9f2637fc5ac7e7fcdb89747cf5465"
+    },
+    {
+      "path": "data/evidence/s2_onchain_settlement_charter_v1.json",
+      "file_sha256": "c3ddfc3e985cf4737422f9ae452a4ad10499dc73f44c2be44e27176b9f086832"
+    }
+  ],
+  "research_sources": [
+    {
+      "source_id": "BAUR-SMALES-2022",
+      "title": "Trading behavior in Bitcoin futures: Following the \"smart money\"",
+      "authors_or_publisher": [
+        "Dirk G. Baur",
+        "Lee A. Smales"
+      ],
+      "publication_or_revision_date": "2022-07-01",
+      "accessed_at": "2026-08-30T20:25:21.293515Z",
+      "source_kind": "PEER_REVIEWED_ARTICLE",
+      "url": "https://doi.org/10.1002/fut.22332",
+      "supported_claims": [
+        "The published study tests changes in CFTC trader-category net positions as Bitcoin timing information over 2018 through July 2021.",
+        "Its reported leveraged-money directional rule creates direct outcome awareness for the overlapping mechanism family."
+      ],
+      "limitations": [
+        "The published sample, rule, and favorable outcome contaminate that period and cannot qualify Aurex S3.",
+        "Published futures-market results do not establish a reproducible, after-cost Binance Spot edge in a later regime."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "CFTC-ABOUT-COT",
+      "title": "Commitments of Traders: About the COT Reports",
+      "authors_or_publisher": [
+        "United States CFTC"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-30T20:25:21.293515Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/AbouttheCOTReports/index.htm",
+      "supported_claims": [
+        "COT reports provide Tuesday open-interest breakdowns and are generally released on Friday at 15:30 Eastern Time.",
+        "The TFF report separates dealer, asset manager, leveraged funds, and other reportable categories."
+      ],
+      "limitations": [
+        "Generally scheduled Friday publication is not proof of the actual release timestamp for any historical report.",
+        "CFTC categories aggregate reporting firms and do not reveal trader intent."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "CFTC-COT-RELEASE-SCHEDULE",
+      "title": "Commitments of Traders: Release Schedule",
+      "authors_or_publisher": [
+        "United States CFTC"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-30T20:25:21.293515Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm",
+      "supported_claims": [
+        "The official schedule identifies holiday-related release delays."
+      ],
+      "limitations": [
+        "A planned schedule does not prove that a particular report was actually available at the planned time or was never corrected later."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "CFTC-HISTORICAL-COMPRESSED",
+      "title": "Commitments of Traders: Historical Compressed",
+      "authors_or_publisher": [
+        "United States CFTC"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-30T20:25:21.293515Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalCompressed/index.htm",
+      "supported_claims": [
+        "CFTC publishes annual compressed futures-only TFF history for research."
+      ],
+      "limitations": [
+        "Annual files expose report dates but are not, by themselves, a historical publication-timestamp or revision ledger."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "CFTC-HISTORICAL-SPECIAL-ANNOUNCEMENTS",
+      "title": "Commitments of Traders: Historical Special Announcements",
+      "authors_or_publisher": [
+        "United States CFTC"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-30T20:25:21.293515Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalSpecialAnnouncements/index.htm",
+      "supported_claims": [
+        "Exceptional reporting delays and publication interruptions have occurred."
+      ],
+      "limitations": [
+        "Announcement coverage must be reconciled to each affected report; absent an announcement is not proof of normal publication."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "CFTC-TFF-FIELD-DESCRIPTIONS",
+      "title": "Traders in Financial Futures: Explanatory Notes and Field Descriptions",
+      "authors_or_publisher": [
+        "United States CFTC"
+      ],
+      "publication_or_revision_date": null,
+      "accessed_at": "2026-08-30T20:25:21.293515Z",
+      "source_kind": "OFFICIAL_DATA_DOCUMENTATION",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalViewable/cotvariablestfm.html",
+      "supported_claims": [
+        "The TFF schema includes leveraged-money long and short positions and contract-market identity fields."
+      ],
+      "limitations": [
+        "A schema description does not prove historical row completeness, classification stability, or point-in-time availability."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "FERKO-MOIN-ONUR-PENICK-2023",
+      "title": "Who trades bitcoin futures and why?",
+      "authors_or_publisher": [
+        "Alex Ferko",
+        "Amani Moin",
+        "Esen Onur",
+        "Michael Penick"
+      ],
+      "publication_or_revision_date": "2023-02-01",
+      "accessed_at": "2026-08-30T20:25:21.293515Z",
+      "source_kind": "PEER_REVIEWED_ARTICLE",
+      "url": "https://doi.org/10.1016/j.gfj.2022.100778",
+      "supported_claims": [
+        "Regulatory position data reveal heterogeneous CME Bitcoin futures trader types and motives."
+      ],
+      "limitations": [
+        "Heterogeneous motives weaken any claim that aggregate leveraged-money position changes identify one stable causal trading signal."
+      ],
+      "does_not_prove_edge": true
+    },
+    {
+      "source_id": "SHI-2022",
+      "title": "Bitcoin futures risk premia",
+      "authors_or_publisher": [
+        "Shimeng Shi"
+      ],
+      "publication_or_revision_date": "2022-12-01",
+      "accessed_at": "2026-08-30T20:25:21.293515Z",
+      "source_kind": "PEER_REVIEWED_ARTICLE",
+      "url": "https://doi.org/10.1002/fut.22373",
+      "supported_claims": [
+        "The paper studies position-based predictors and risk premia in Bitcoin futures."
+      ],
+      "limitations": [
+        "A futures risk-premium relation is not proof of a causal, after-cost, long-or-cash Bitcoin Spot strategy."
+      ],
+      "does_not_prove_edge": true
+    }
+  ],
+  "operator_scope": {
+    "execution_environment": "BINANCE_SPOT_TESTNET",
+    "product": "SPOT",
+    "symbol": "BTCUSDT",
+    "direction": "LONG_OR_CASH",
+    "maximum_effective_leverage": "1",
+    "simulated_equity_usd": "100",
+    "maximum_per_trade_loss_usd": "0.5",
+    "maximum_daily_loss_usd": "1",
+    "maximum_total_loss_usd": "10",
+    "one_time_data_budget_usd": "0",
+    "monthly_data_budget_usd": "0",
+    "futures_trading_authority": false,
+    "production_authority": false,
+    "live_authority": false,
+    "real_capital": false
+  },
+  "mechanism_id": "S3-CFTC-LEVERAGED-MONEY-POSITIONING-SPOT",
+  "mechanism_family": "REGULATED_BITCOIN_FUTURES_LEVERAGED_MONEY_POSITION_CHANGE",
+  "economic_actor": "CFTC_REPORTABLE_LEVERAGED_FUNDS_IN_CME_BITCOIN_FUTURES",
+  "ex_ante_hypothesis": "A week-over-week increase in the net reported long exposure of leveraged money in regulated CME Bitcoin futures may represent persistent institutional risk demand that transfers to Bitcoin Spot after the public CFTC release. Aurex may later evaluate one weekly BTCUSDT Spot long-or-cash candidate, but only after actual publication timing and point-in-time source identity are proven; a non-increase, missing report, delay, correction, or ambiguity means cash, never short exposure.",
+  "ex_ante_direction": "WEEK_OVER_WEEK_LEVERAGED_MONEY_NET_POSITION_INCREASE_LONG_ELSE_CASH",
+  "source_authority": "UNITED_STATES_CFTC",
+  "report_family": "TRADERS_IN_FINANCIAL_FUTURES_FUTURES_ONLY",
+  "cftc_contract_market_code": "133741",
+  "cftc_market_identity": "BITCOIN_CHICAGO_MERCANTILE_EXCHANGE",
+  "prospective_signal_frequency": "WEEKLY",
+  "prospective_measurement_families": [
+    "LEVERAGED_MONEY_LONG_CONTRACTS",
+    "LEVERAGED_MONEY_SHORT_CONTRACTS",
+    "LEVERAGED_MONEY_NET_POSITION",
+    "WEEK_OVER_WEEK_NET_POSITION_CHANGE"
+  ],
+  "causal_observation_policy": [
+    "USE_ONLY_FUTURES_ONLY_TFF_ROWS_FOR_CFTC_CONTRACT_MARKET_CODE_133741",
+    "REPORT_AS_OF_DATE_IS_NOT_A_RELEASE_TIMESTAMP",
+    "ACTUAL_RELEASE_TIMESTAMP_REQUIRED_FOR_EACH_REPORT_BEFORE_SIGNAL_USE",
+    "EARLIEST_EXECUTION_IS_FIRST_MONDAY_00_00_UTC_AT_LEAST_24_HOURS_AFTER_RELEASE",
+    "DELAYED_OR_BACKLOGGED_REPORTS_ARE_NEVER_BACKFILLED_INTO_EARLIER_DECISIONS",
+    "ANNUAL_COMPRESSED_ROWS_MUST_RECONCILE_TO_ORIGINAL_WEEKLY_PUBLICATIONS",
+    "MISSING_DUPLICATE_REVISED_OR_AMBIGUOUS_REPORT_IDENTITY_FORCES_CASH",
+    "HASH_ALL_METADATA_RELEASE_RECORDS_RESPONSES_AND_FUTURE_SOURCE_PAYLOADS"
+  ],
+  "exact_source_requirements": [
+    "OFFICIAL_CFTC_TFF_FUTURES_ONLY_CONTRACT_MARKET_CODE_133741",
+    "OFFICIAL_CFTC_REPORT_AS_OF_DATE_AND_CONTRACT_MARKET_NAME_FIELDS",
+    "OFFICIAL_CFTC_LEVERAGED_MONEY_LONG_AND_SHORT_POSITION_FIELDS",
+    "ACTUAL_HISTORICAL_PUBLICATION_TIMESTAMP_OR_VERIFIABLE_EQUIVALENT",
+    "HOLIDAY_DELAY_SHUTDOWN_BACKLOG_AND_SPECIAL_ANNOUNCEMENT_RECONCILIATION",
+    "ORIGINAL_WEEKLY_TO_ANNUAL_COMPRESSED_ROW_IDENTITY_RECONCILIATION",
+    "CORRECTION_REVISION_AND_CLASSIFICATION_CHANGE_DETECTION",
+    "IMMUTABLE_REQUEST_RESPONSE_RELEASE_METADATA_AND_FILE_HASHES",
+    "OFFICIAL_BINANCE_SPOT_BTCUSDT_EXECUTION_PRICES_WITH_PUBLISHED_CHECKSUMS",
+    "ZERO_DOLLAR_SOURCE_ACCESS_WITH_DOCUMENTED_REUSE_RIGHTS"
+  ],
+  "independence_exclusions": [
+    "NO_PRICE_MOMENTUM_TREND_PULLBACK_BREAKOUT_OR_MEAN_REVERSION_SIGNAL_INPUT",
+    "NO_VOLATILITY_SCALING_PATH_QUALITY_OR_CROSS_SECTIONAL_RANKING_INPUT",
+    "NO_AGGRESSOR_FLOW_ORDER_BOOK_CLOCK_PHASE_OR_JAM_EXHAUSTION_INPUT",
+    "NO_FUNDING_BASIS_CARRY_PERPETUAL_FLOW_OR_CROSS_VENUE_INPUT",
+    "NO_NFCI_MONETARY_FINANCIAL_CONDITIONS_OR_OTHER_MACRO_INPUT",
+    "NO_ONCHAIN_SETTLEMENT_TRANSACTION_FEE_OR_NETWORK_DEMAND_INPUT",
+    "NO_VARIANCE_RISK_PREMIUM_OPTION_OR_DERIVATIVES_PRICING_INPUT",
+    "NO_REUSE_OF_S2_THRESHOLDS_DIAGNOSTICS_FAILURES_OR_OUTCOMES",
+    "NO_CFTC_DEALER_ASSET_MANAGER_OTHER_REPORTABLE_OR_NONREPORTABLE_SIGNAL",
+    "NO_OPEN_INTEREST_VOLUME_BASIS_CURVE_OR_FUTURES_RETURN_SIGNAL_INPUT",
+    "NO_FUTURES_TRADING_SHORTING_BORROWING_OR_LEVERAGE",
+    "NO_PARAMETER_SEARCH_ENSEMBLE_OR_POST_HOC_SIGNAL_REVERSAL"
+  ],
+  "feasibility_gates": [
+    "ALL_TEN_PREDECESSOR_FAMILIES_BOUND_AND_NONREUSABLE",
+    "OFFICIAL_CFTC_TFF_FUTURES_ONLY_ARCHIVES_EXIST_FOR_REQUIRED_PERIOD",
+    "CFTC_CODE_133741_MAPS_UNAMBIGUOUSLY_TO_CME_BITCOIN_ACROSS_REQUIRED_PERIOD",
+    "LEVERAGED_MONEY_LONG_AND_SHORT_FIELDS_ARE_SCHEMA_STABLE_OR_MAPPED_EX_ANTE",
+    "ACTUAL_RELEASE_TIMESTAMPS_ARE_RECONSTRUCTABLE_FOR_EVERY_REQUIRED_REPORT",
+    "HOLIDAY_DELAY_SHUTDOWN_AND_BACKLOG_RELEASES_ARE_RECONSTRUCTABLE_CAUSALLY",
+    "ORIGINAL_WEEKLY_PUBLICATIONS_RECONCILE_EXACTLY_TO_ANNUAL_COMPRESSED_ROWS",
+    "CORRECTIONS_REVISIONS_AND_CLASSIFICATION_CHANGES_ARE_DETECTABLE",
+    "ZERO_DOLLAR_ACCESS_AND_REUSE_RIGHTS_ARE_DOCUMENTED",
+    "MONDAY_00_00_UTC_AFTER_24_HOUR_CAUSAL_BUFFER_IS_IMPLEMENTABLE",
+    "ONE_SELECTABLE_MECHANISM_AND_ZERO_CHARTER_STAGE_PARAMETERS",
+    "FAILURE_OF_ANY_GATE_SELECTS_ZERO_AND_STOPS_S3_BEFORE_POSITION_VALUES"
+  ],
+  "partitions": [
+    {
+      "role": "PUBLISHED_STUDY_CONTAMINATED_REFERENCE",
+      "start": "2017-12-18T00:00:00Z",
+      "end": "2022-01-01T00:00:00Z",
+      "state": "PUBLISHED_OUTCOME_CONTAMINATED_NONQUALIFYING",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "DEVELOPMENT",
+      "start": "2022-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "state": "OUTCOME_AWARE_NONQUALIFYING",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "OUTCOME_AWARE_HISTORICAL_SCREEN",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-11-07T00:00:00Z",
+      "state": "OUTCOME_AWARE_NONQUALIFYING",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "PROSPECTIVE_VALIDATION",
+      "start": "2026-11-07T00:00:00Z",
+      "end": "2027-05-07T00:00:00Z",
+      "state": "LOCKED_FUTURE",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "FUTURE_HOLDOUT",
+      "start": "2027-05-07T00:00:00Z",
+      "end": "2027-11-07T00:00:00Z",
+      "state": "LOCKED_FUTURE",
+      "outcome_access_permitted": false
+    },
+    {
+      "role": "FORWARD",
+      "start": "2027-11-07T00:00:00Z",
+      "end": null,
+      "state": "LOCKED_FUTURE",
+      "outcome_access_permitted": false
+    }
+  ],
+  "proposal_budget": 1,
+  "selected_mechanism_count": 1,
+  "familywise_predecessor_count": 10,
+  "published_rule_outcome_awareness_declared": true,
+  "published_study_sample": "2018-01_THROUGH_2021-07",
+  "published_study_rule_overlap": "LEVERAGED_MONEY_NET_POSITION_CHANGE_DIRECTION",
+  "published_study_results_cannot_qualify_s3": true,
+  "source_metadata_pages_inspected": [
+    "https://www.cftc.gov/MarketReports/CommitmentsofTraders/AbouttheCOTReports/index.htm",
+    "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalCompressed/index.htm",
+    "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalSpecialAnnouncements/index.htm",
+    "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalViewable/cotvariablestfm.html",
+    "https://www.cftc.gov/MarketReports/CommitmentsofTraders/ReleaseSchedule/index.htm",
+    "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm"
+  ],
+  "cftc_position_values_inspected": [],
+  "btc_market_numeric_fields_inspected": [],
+  "exact_parameters_defined": [],
+  "return_metrics_calculated": [],
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "decision": "FREEZE_S3_FOR_POINT_IN_TIME_SOURCE_FEASIBILITY_ONLY",
+  "next_authorization": "AUTHORIZE_S3_CFTC_SOURCE_METADATA_AND_POINT_IN_TIME_FEASIBILITY_PROTOCOL_ONLY",
+  "authorizes_source_metadata_requests": true,
+  "authorizes_release_calendar_metadata_requests": true,
+  "authorizes_cftc_position_value_access": false,
+  "authorizes_market_value_access": false,
+  "authorizes_payload_acquisition": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_return_testing": false,
+  "authorizes_historical_screen_access": false,
+  "authorizes_validation_access": false,
+  "authorizes_holdout_access": false,
+  "authorizes_pine_deployment": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "This charter selects a source-feasibility hypothesis, not a profitable strategy.",
+    "The exact leveraged-money directional rule and its published 2018 through July 2021 outcome are known, so that rule and period cannot qualify S3.",
+    "COT categories aggregate reporting firms and do not reveal trader intent; heterogeneous motives can destabilize the aggregate relation.",
+    "CME-regulated futures represent only part of global Bitcoin activity.",
+    "Position changes may follow prior Bitcoin returns rather than cause future Spot returns.",
+    "Annual compressed files are not point-in-time archives and may contain later corrections or classifications.",
+    "Actual release timing, holiday delays, outages, revisions, and contract-code continuity are not yet qualified.",
+    "Published futures-market findings do not prove after-cost Binance Spot returns in the later development period.",
+    "All historical target periods currently available are outcome-aware and cannot serve as untouched qualification evidence.",
+    "Prospective validation and holdout together require twelve future months before live eligibility can be considered.",
+    "No CFTC position value, BTC market value, parameter, return, candidate, signal, paper order, Testnet strategy order, production action, live action, real capital, or profit is authorized."
+  ],
+  "charter_evidence_hash": "2cf73ead1b04999c3b5f9f818bb60d18ad96d2041fae2d65d77084aa88e4802a"
+}

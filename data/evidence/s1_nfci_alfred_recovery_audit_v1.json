@@ -1,0 +1,24 @@
+{
+  "schema_version": "aurex-s1-nfci-alfred-recovery-audit-v1",
+  "audit_id": "s1-nfci-alfred-recovery-audit-v1",
+  "audited_at": "2026-08-26T18:57:56.374890Z",
+  "protocol_file_sha256": "17d2109ca4839b7bbde3b269f33f24f23e6ba13b99faf1cf50b868f30ae22e40",
+  "protocol_evidence_hash": "d60d13bbc46a93d02edd7951172e612dd04e655cde026a4be00e800e5f1bd312",
+  "result_file_sha256": "1f027d3bffbbd3ee88f4d757bf307ddbcc7565d7e5f5a2a8b4adca81b6297a48",
+  "result_evidence_hash": "274e9981103b3e31aea001e543f62d29d0d6941a1529b00cb5b037a854c75472",
+  "runner_source_sha256": "190fc15f08f40869359ee6ba15a7b24676ccf4e7c7d58647aadab810fd1cdf46",
+  "auditor_source_sha256": "a665654cde9f748331fd7c093e8c328a4fe861014e9b1d0b06178b1a42f4c36c",
+  "raw_file_sha256": {
+    "01-nfci-vintage-2020": "8b7c25125a0bc1d82d15b82df2e9ab7ad08dd2a407e51788ae3f453c2b9d4b01",
+    "02-nfci-vintage-2021": "50da643cbf83dec10f53913806479aab1220959f5c9bb720c67412ee730fa02a"
+  },
+  "raw_file_bytes": {
+    "01-nfci-vintage-2020": 42751,
+    "02-nfci-vintage-2021": 51399
+  },
+  "raw_file_count": 2,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_ALFRED_SOURCE_RECOVERY_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_FULL_NFCI_VINTAGE_ACQUISITION_PROTOCOL_ONLY",
+  "audit_evidence_hash": "f658ef8639cd5ad17216389687301addf737bcfa480b6064298f5b5036905f56"
+}

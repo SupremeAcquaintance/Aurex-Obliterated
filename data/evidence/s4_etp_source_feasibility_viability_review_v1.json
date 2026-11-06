@@ -1,0 +1,80 @@
+{
+  "schema_version": "aurex-s4-etp-source-feasibility-viability-review-v1",
+  "review_id": "s4-etp-source-feasibility-viability-review-v1",
+  "reviewed_at": "2026-08-31T18:56:01.390813Z",
+  "reviewer_contract_hash": "2771c03d3880d778d350a0fd4284bfb17508f9c547c94c31d03c4a950665f67e",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s4_etp_source_feasibility_protocol_audit_v1.json",
+      "file_sha256": "7e3dbc3f3f9cafc39b7620ff60ded39a7225a90643bd523e6e9cd06e982569ce"
+    },
+    {
+      "path": "data/evidence/s4_etp_source_feasibility_protocol_v1.json",
+      "file_sha256": "1a155db84d2b56d0b58686a097b16209755d7a71f0b43a323003a240b6a6abbd"
+    }
+  ],
+  "protocol_evidence_hash": "6c0415149eabf9c22c60854a35b563a26b68b2746899cd53a17e08fac79883bd",
+  "protocol_audit_evidence_hash": "68f6ef9529dbd8f2a62fc690dd4c29cb699994149a3b84aafb0ff0e4ab70a258",
+  "protocol_reconstructed_before_review": true,
+  "network_requests_executed": 0,
+  "run_authority_consumed": false,
+  "unreachable_gate_ids": [
+    "ACTUAL_PUBLICATION_TIMING_RECONSTRUCTABLE",
+    "DAILY_BITCOIN_HOLDINGS_HISTORY_DESCRIPTOR_COMPLETE",
+    "DAILY_SHARES_OUTSTANDING_HISTORY_DESCRIPTOR_COMPLETE",
+    "FEES_SPLITS_MERGERS_AND_NON_CREATION_CHANGES_RECONSTRUCTABLE",
+    "OFFICIAL_ISSUER_DATA_ENDPOINT_CATALOG_COMPLETE",
+    "PER_FUND_CASH_IN_KIND_REGIME_DATES_RECONSTRUCTABLE"
+  ],
+  "unreachable_gate_count": 6,
+  "allowed_sec_submission_keys_insufficient": true,
+  "issuer_page_bodies_forbidden": true,
+  "sec_filing_bodies_forbidden": true,
+  "xbrl_fact_endpoints_forbidden": true,
+  "permitted_sources_cannot_prove_daily_history_descriptors": true,
+  "permitted_sources_cannot_prove_per_fund_regime_dates": true,
+  "permitted_sources_cannot_prove_actual_issuer_publication_timing": true,
+  "protocol_pass_condition_reachable": false,
+  "protocol_run_permitted_after_review": false,
+  "etp_time_series_rows_parsed": 0,
+  "etp_numeric_values_read": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "source_feasibility_conclusion": "NOT_EVALUATED_PROTOCOL_STOPPED_BEFORE_NETWORK",
+  "predictive_edge_conclusion": "NOT_EVALUATED",
+  "decision": "BLOCK_S4_RUN_PROTOCOL_PASS_CONDITION_UNREACHABLE",
+  "next_authorization": "FREEZE_AND_AUDIT_DISTINCT_S5_MECHANISM_CHARTER_ONLY",
+  "authorizes_protocol_run": false,
+  "authorizes_protocol_amendment": false,
+  "authorizes_etp_numeric_payload": false,
+  "authorizes_market_values": false,
+  "authorizes_parameters": false,
+  "authorizes_returns": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "proof": [
+    "Daily shares and Bitcoin history descriptors are not present in the permitted SEC identity fields.",
+    "Exact issuer data endpoints cannot be discovered when issuer page bodies and filing bodies are both forbidden.",
+    "Filing acceptance metadata cannot establish the publication time of a separate issuer data record.",
+    "Per-fund cash or in-kind operating dates require filing content that the protocol forbids.",
+    "The permitted ticker catalogs identify entities but explicitly do not guarantee scope.",
+    "The permitted website field is only a URL and cannot prove an official daily archive or its history.",
+    "Without issuer records, fees, splits, mergers, and non-creation holding changes cannot be reconciled."
+  ],
+  "limitations": [
+    "A future distinct mechanism must freeze a reachable source path before any request or outcome access.",
+    "It does not establish that official ETP data is unavailable.",
+    "It does not evaluate S4 predictive edge or any return.",
+    "No amendment is authorized because it would change the frozen source surface after the charter boundary.",
+    "No network request was made and the one-run authority remains unused.",
+    "This review establishes a protocol-design contradiction only."
+  ],
+  "review_evidence_hash": "1837ce1e7fb36edeee235d0270043455fa7a3e3e005d183141c6376b4d4f23ff"
+}

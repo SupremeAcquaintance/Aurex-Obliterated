@@ -1,0 +1,272 @@
+{
+  "schema_version": "aurex-v2-p01-metadata-source-audit-v1.1",
+  "result_id": "v2-p01-metadata-source-audit-v1.1",
+  "result_version": "1.1.0",
+  "generated_at": "2026-07-28T08:27:33.978649Z",
+  "status": "COMPLETE_NO_RETURN_METADATA_AUDIT",
+  "metadata_source_contract_evidence_hash": "0908d86a2ea55d26d86d44607f6e462de4cbcad1baf22fea4824bd15db1b4d13",
+  "theory_screen_evidence_hash": "ec03d31db661a36b1def820711b20134d416ec2d390a49cdbafaf19f27758dea",
+  "discovery_charter_evidence_hash": "af4dd3e28e20f9a5e99c47e98d567587ef11697c38dd976074ddcb80255db07f",
+  "source_census_result_evidence_hash": "ce5d60e3338903bcb8a3783bd4b41fa63bec518c3041b213c9529bd6458d652e",
+  "derivatives_foundation_result_evidence_hash": "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8",
+  "runner_contract_hash": "58199f6c2b701caecfcf095b59711cc5467bf9f50314880eef237b58118a3b7c",
+  "observations": [
+    {
+      "source_id": "BINANCE_PUBLIC_DATA_README",
+      "requested_url": "https://raw.githubusercontent.com/binance/binance-public-data/master/README.md",
+      "final_url": "https://raw.githubusercontent.com/binance/binance-public-data/master/README.md",
+      "checked_at": "2026-07-28T08:27:33.978649Z",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "response_bytes": 5144,
+      "response_sha256": "085ab91377aa9325d44f4c7ad27cce4ab381e158403e1d7df2bad39d1a66f7c6",
+      "required_markers": [
+        "Archived files may be updated",
+        "Binance Public Data",
+        "CHECKSUM",
+        "USD-M Futures"
+      ],
+      "found_markers": [
+        "Archived files may be updated",
+        "Binance Public Data",
+        "CHECKSUM",
+        "USD-M Futures"
+      ],
+      "missing_markers": [],
+      "response_body_persisted": false,
+      "observation_status": "PASS"
+    },
+    {
+      "source_id": "BINANCE_USD_M_MARKET_DATA_DOCS",
+      "requested_url": "https://raw.githubusercontent.com/binance/binance-futures-connector-python/main/binance/um_futures/market.py",
+      "final_url": "https://raw.githubusercontent.com/binance/binance-futures-connector-python/main/binance/um_futures/market.py",
+      "checked_at": "2026-07-28T08:27:33.978649Z",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "response_bytes": 20935,
+      "response_sha256": "9e55db014233d92bad66a90ec36212f1fada7f1f93a092ec5d6bc9298988659f",
+      "required_markers": [
+        "/fapi/v1/exchangeInfo",
+        "/fapi/v1/fundingInfo",
+        "/fapi/v1/fundingRate",
+        "Current exchange trading rules and symbol information"
+      ],
+      "found_markers": [
+        "/fapi/v1/exchangeInfo",
+        "/fapi/v1/fundingInfo",
+        "/fapi/v1/fundingRate",
+        "Current exchange trading rules and symbol information"
+      ],
+      "missing_markers": [],
+      "response_body_persisted": false,
+      "observation_status": "PASS"
+    },
+    {
+      "source_id": "BINANCE_USD_M_ACCOUNT_DOCS",
+      "requested_url": "https://raw.githubusercontent.com/binance/binance-connector-python/master/clients/derivatives_trading_usds_futures/src/binance_sdk_derivatives_trading_usds_futures/rest_api/api/account_api.py",
+      "final_url": "https://raw.githubusercontent.com/binance/binance-connector-python/master/clients/derivatives_trading_usds_futures/src/binance_sdk_derivatives_trading_usds_futures/rest_api/api/account_api.py",
+      "checked_at": "2026-07-28T08:27:33.978649Z",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "response_bytes": 35937,
+      "response_sha256": "456f7675cb69401cce38fcf14e57d90bd0c9da05c8dccc4d2e2fba9062d882cd",
+      "required_markers": [
+        "/fapi/v1/commissionRate",
+        "/fapi/v1/leverageBracket",
+        "Notional and Leverage Brackets",
+        "User Commission Rate"
+      ],
+      "found_markers": [
+        "/fapi/v1/commissionRate",
+        "/fapi/v1/leverageBracket",
+        "Notional and Leverage Brackets",
+        "User Commission Rate"
+      ],
+      "missing_markers": [],
+      "response_body_persisted": false,
+      "observation_status": "PASS"
+    },
+    {
+      "source_id": "BINANCE_SPOT_API_DOCS",
+      "requested_url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/rest-api.md",
+      "final_url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/rest-api.md",
+      "checked_at": "2026-07-28T08:27:33.978649Z",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "response_bytes": 181189,
+      "response_sha256": "49ea6809243fc7fb426e07f2fe662097736c7bb405bd2da5eef637d715427999",
+      "required_markers": [
+        "/api/v3/exchangeInfo",
+        "Current exchange trading rules and symbol information",
+        "Exchange information"
+      ],
+      "found_markers": [
+        "/api/v3/exchangeInfo",
+        "Current exchange trading rules and symbol information",
+        "Exchange information"
+      ],
+      "missing_markers": [],
+      "response_body_persisted": false,
+      "observation_status": "PASS"
+    }
+  ],
+  "requirement_assessments": [
+    {
+      "requirement_id": "HISTORICAL_SETTLED_FUNDING_AND_INTERVALS",
+      "status": "READY_HISTORICAL_ARCHIVE",
+      "source_ids": [
+        "BINANCE_PUBLIC_DATA_README",
+        "BINANCE_USD_M_MARKET_DATA_DOCS"
+      ],
+      "existing_evidence_hashes": [
+        "95e9aaaf1b05b01372ddcdc3f19fff6612f6a7f5ae4e1ca4b99b0eb6e7947874",
+        "ce5d60e3338903bcb8a3783bd4b41fa63bec518c3041b213c9529bd6458d652e"
+      ],
+      "blocks_direct_historical_replay": false,
+      "conservative_research_override_permitted": false,
+      "required_protocol_treatment": "USE_IMMUTABLE_ARCHIVE_AND_AUDIT",
+      "rationale": "The checksum-pinned funding archives contain settlement timestamp, interval hours, and settled funding rate; the full-data protocol must still audit every event and cross-check the public history surface."
+    },
+    {
+      "requirement_id": "HISTORICAL_SPOT_PERPETUAL_MARK_INDEX_PREMIUM_SERIES",
+      "status": "READY_HISTORICAL_ARCHIVE",
+      "source_ids": [
+        "BINANCE_PUBLIC_DATA_README",
+        "BINANCE_USD_M_MARKET_DATA_DOCS"
+      ],
+      "existing_evidence_hashes": [
+        "95e9aaaf1b05b01372ddcdc3f19fff6612f6a7f5ae4e1ca4b99b0eb6e7947874",
+        "ce5d60e3338903bcb8a3783bd4b41fa63bec518c3041b213c9529bd6458d652e"
+      ],
+      "blocks_direct_historical_replay": false,
+      "conservative_research_override_permitted": false,
+      "required_protocol_treatment": "USE_IMMUTABLE_ARCHIVE_AND_AUDIT",
+      "rationale": "The census and pilot prove official archive availability and schema for all five one-minute price families over the complete-source set."
+    },
+    {
+      "requirement_id": "HISTORICAL_FUTURES_CONTRACT_LIFECYCLE",
+      "status": "PARTIAL_ARCHIVE_COVERAGE_REQUIRES_CONTINUITY_GATE",
+      "source_ids": [
+        "BINANCE_PUBLIC_DATA_README",
+        "BINANCE_USD_M_MARKET_DATA_DOCS"
+      ],
+      "existing_evidence_hashes": [
+        "95e9aaaf1b05b01372ddcdc3f19fff6612f6a7f5ae4e1ca4b99b0eb6e7947874",
+        "ce5d60e3338903bcb8a3783bd4b41fa63bec518c3041b213c9529bd6458d652e"
+      ],
+      "blocks_direct_historical_replay": true,
+      "conservative_research_override_permitted": false,
+      "required_protocol_treatment": "FAIL_CLOSED_ON_ANY_LIFECYCLE_OR_CONTINUITY_GAP",
+      "rationale": "Archive presence helps bound observable trading periods and current exchangeInfo exposes onboard/status fields, but neither is a complete point-in-time contract-status history. Full continuity must fail closed rather than invent a listing or suspension state."
+    },
+    {
+      "requirement_id": "HISTORICAL_FUTURES_ORDER_FILTERS",
+      "status": "CURRENT_ONLY_NOT_HISTORICAL",
+      "source_ids": [
+        "BINANCE_USD_M_MARKET_DATA_DOCS"
+      ],
+      "existing_evidence_hashes": [],
+      "blocks_direct_historical_replay": true,
+      "conservative_research_override_permitted": true,
+      "required_protocol_treatment": "FREEZE_CONSERVATIVE_OVERRIDE_AND_RETAIN_NON_ELIGIBILITY_LIMITATION",
+      "rationale": "The official endpoint explicitly returns current trading rules. Current tick, step, notional, and market bounds cannot prove the rules that applied to an order in 2023-2024."
+    },
+    {
+      "requirement_id": "HISTORICAL_SPOT_ORDER_FILTERS",
+      "status": "CURRENT_ONLY_NOT_HISTORICAL",
+      "source_ids": [
+        "BINANCE_SPOT_API_DOCS"
+      ],
+      "existing_evidence_hashes": [],
+      "blocks_direct_historical_replay": true,
+      "conservative_research_override_permitted": true,
+      "required_protocol_treatment": "FREEZE_CONSERVATIVE_OVERRIDE_AND_RETAIN_NON_ELIGIBILITY_LIMITATION",
+      "rationale": "The official spot exchangeInfo surface describes current rules. A later research protocol may apply a conservative current-filter proxy but cannot call that historical execution proof."
+    },
+    {
+      "requirement_id": "HISTORICAL_ACCOUNT_FEE_TIER",
+      "status": "CURRENT_SIGNED_ACCOUNT_ONLY_NOT_HISTORICAL",
+      "source_ids": [
+        "BINANCE_USD_M_ACCOUNT_DOCS"
+      ],
+      "existing_evidence_hashes": [],
+      "blocks_direct_historical_replay": true,
+      "conservative_research_override_permitted": true,
+      "required_protocol_treatment": "FREEZE_CONSERVATIVE_OVERRIDE_AND_RETAIN_NON_ELIGIBILITY_LIMITATION",
+      "rationale": "The documented commission endpoint is signed and returns current user rates. No credentials were used and no complete historical account-tier fee series is established."
+    },
+    {
+      "requirement_id": "HISTORICAL_LEVERAGE_AND_MAINTENANCE_BRACKETS",
+      "status": "CURRENT_SIGNED_ACCOUNT_ONLY_NOT_HISTORICAL",
+      "source_ids": [
+        "BINANCE_USD_M_ACCOUNT_DOCS"
+      ],
+      "existing_evidence_hashes": [
+        "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8"
+      ],
+      "blocks_direct_historical_replay": true,
+      "conservative_research_override_permitted": true,
+      "required_protocol_treatment": "FREEZE_CONSERVATIVE_OVERRIDE_AND_RETAIN_NON_ELIGIBILITY_LIMITATION",
+      "rationale": "The leverage-bracket endpoint is signed current user data. The synthetic engine proves internal margin arithmetic but cannot turn its fixed rates into historical Binance brackets."
+    },
+    {
+      "requirement_id": "HISTORICAL_COLLATERAL_LIQUIDATION_AND_ADL_RULES",
+      "status": "CURRENT_OR_UNAVAILABLE_NOT_HISTORICAL",
+      "source_ids": [
+        "BINANCE_USD_M_ACCOUNT_DOCS",
+        "BINANCE_USD_M_MARKET_DATA_DOCS"
+      ],
+      "existing_evidence_hashes": [
+        "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8"
+      ],
+      "blocks_direct_historical_replay": true,
+      "conservative_research_override_permitted": true,
+      "required_protocol_treatment": "FREEZE_CONSERVATIVE_OVERRIDE_AND_RETAIN_NON_ELIGIBILITY_LIMITATION",
+      "rationale": "Current docs expose pieces of margin, liquidation-fee, and ADL behavior, while the synthetic engine covers declared internal failure paths. A complete point-in-time 2023-2024 rule history is not established."
+    }
+  ],
+  "source_observation_count": 4,
+  "passed_source_observation_count": 4,
+  "failed_source_observation_count": 0,
+  "ready_historical_requirement_count": 2,
+  "unresolved_historical_requirement_count": 6,
+  "conservative_override_requirement_count": 5,
+  "decision": "PERMIT_P01_PROTOCOL_DESIGN_WITH_MANDATORY_METADATA_OVERRIDES",
+  "mandatory_next_protocol_requirements": [
+    "CAPTURE_CURRENT_SPOT_AND_FUTURES_FILTER_SNAPSHOTS_AS_PROXIES_ONLY",
+    "FAIL_CLOSED_ON_ANY_ARCHIVE_LIFECYCLE_OR_CONTINUITY_GAP",
+    "FIX_CONSERVATIVE_FEES_SLIPPAGE_AND_AT_LEAST_DOUBLE_COST_STRESS",
+    "FIX_CONSERVATIVE_MARGIN_COLLATERAL_LIQUIDATION_AND_ADL_OVERRIDES",
+    "MARK_CURRENT_FILTERS_FEES_AND_BRACKETS_AS_NON_HISTORICAL",
+    "MODEL_QUANTITIES_AGAINST_BOTH_CURRENT_SPOT_AND_FUTURES_FILTERS",
+    "PRESERVE_ZERO_LIQUIDATION_ZERO_ADL_AND_RECONCILIATION_GATES",
+    "PROHIBIT_DEVELOPMENT_RESULT_FROM_CREATING_ELIGIBILITY",
+    "REQUIRE_SEPARATE_2025_VALIDATION_AND_2026_HOLDOUT_IF_DEVELOPMENT_PASSES"
+  ],
+  "credentials_used": false,
+  "private_endpoint_calls_made": false,
+  "response_bodies_persisted": false,
+  "market_data_numeric_values_inspected": false,
+  "strategy_outcomes_inspected": false,
+  "return_metrics_calculated": [],
+  "authorizes_full_archive_acquisition": false,
+  "authorizes_market_data_import": false,
+  "authorizes_return_testing": false,
+  "creates_candidate": false,
+  "opens_development": false,
+  "opens_validation": false,
+  "opens_holdout": false,
+  "opens_forward": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "limitations": [
+    "Contract lifecycle has no override and must fail closed on any listing, suspension, delisting, or continuity ambiguity.",
+    "Current exchange and signed account documentation cannot be projected backward as 2023-2024 rules or account state.",
+    "Five gaps may receive conservative research-only overrides, but those overrides cannot create historical execution proof.",
+    "Only two of eight requirements have direct historical archive evidence; six still block an unqualified historical replay.",
+    "Source bodies were hashed and discarded; no credential, private endpoint, account data, market value, or return was accessed.",
+    "The decision permits protocol design only and does not authorize full acquisition, data import, development, paper, or live trading."
+  ],
+  "result_evidence_hash": "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7"
+}

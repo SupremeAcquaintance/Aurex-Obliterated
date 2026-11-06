@@ -1,0 +1,166 @@
+{
+  "schema_version": "aurex-s1-nfci-alfred-recovery-result-v1",
+  "result_id": "s1-nfci-alfred-recovery-result-v1",
+  "completed_at": "2026-08-26T18:57:42.997937Z",
+  "protocol_file_sha256": "17d2109ca4839b7bbde3b269f33f24f23e6ba13b99faf1cf50b868f30ae22e40",
+  "protocol_evidence_hash": "d60d13bbc46a93d02edd7951172e612dd04e655cde026a4be00e800e5f1bd312",
+  "runner_source_sha256": "190fc15f08f40869359ee6ba15a7b24676ccf4e7c7d58647aadab810fd1cdf46",
+  "downloads": [
+    {
+      "target_id": "01-nfci-vintage-2020",
+      "vintage_date": "2020-01-01",
+      "attempted_at": "2026-08-26T18:57:37.696456Z",
+      "outcome": "COMPLETE",
+      "status_code": 200,
+      "final_url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2020-01-01",
+      "final_host": "alfred.stlouisfed.org",
+      "content_type": "application/csv",
+      "payload_bytes": 42751,
+      "payload_sha256": "8b7c25125a0bc1d82d15b82df2e9ab7ad08dd2a407e51788ae3f453c2b9d4b01",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_alfred_recovery_v1/nfci_vintage_2020-01-01.csv",
+      "request_marker_path": "data/evidence/source_snapshots/s1_nfci_alfred_recovery_v1/nfci_vintage_2020-01-01.csv.get.01.request.json",
+      "request_marker_sha256": "22ac45f0a8039f705c3d766da1af0d6b94aaae727b83ceb01576d5f5d45f4ed9",
+      "response_marker_path": "data/evidence/source_snapshots/s1_nfci_alfred_recovery_v1/nfci_vintage_2020-01-01.csv.get.01.response.json",
+      "response_marker_sha256": "ec43a4c2c748a5427a7fb765352af5ff048c6c4903fef9d53dbfdba4e1544fc1",
+      "summary": {
+        "csv_header": [
+          "observation_date",
+          "NFCI_20200101"
+        ],
+        "row_count": 2555,
+        "valid_numeric_row_count": 2555,
+        "missing_value_row_count": 0,
+        "distinct_observation_date_count": 2555,
+        "duplicate_observation_date_count": 0,
+        "non_increasing_observation_date_count": 0,
+        "post_vintage_observation_count": 0,
+        "first_observation_date": "1971-01-08",
+        "last_observation_date": "2019-12-20",
+        "release_lag_days": 12
+      },
+      "error_type": null,
+      "error_message": null,
+      "download_evidence_hash": "20f95bbfbc5fc747e19e92b679d4230374bbdaddda5c8742a91ed2e2df5c5371"
+    },
+    {
+      "target_id": "02-nfci-vintage-2021",
+      "vintage_date": "2021-01-01",
+      "attempted_at": "2026-08-26T18:57:41.130885Z",
+      "outcome": "COMPLETE",
+      "status_code": 200,
+      "final_url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=NFCI&vintage_date=2021-01-01",
+      "final_host": "alfred.stlouisfed.org",
+      "content_type": "application/csv",
+      "payload_bytes": 51399,
+      "payload_sha256": "50da643cbf83dec10f53913806479aab1220959f5c9bb720c67412ee730fa02a",
+      "raw_path": "data/evidence/source_snapshots/s1_nfci_alfred_recovery_v1/nfci_vintage_2021-01-01.csv",
+      "request_marker_path": "data/evidence/source_snapshots/s1_nfci_alfred_recovery_v1/nfci_vintage_2021-01-01.csv.get.01.request.json",
+      "request_marker_sha256": "90fff9c9358b90bd647a04b65f4b4c0d19fe8aa06c76e965870c6e7df5edc1d9",
+      "response_marker_path": "data/evidence/source_snapshots/s1_nfci_alfred_recovery_v1/nfci_vintage_2021-01-01.csv.get.01.response.json",
+      "response_marker_sha256": "039eecc38cb2df5eff5f4deab8488dccbed07fc5052ff88204057b13ac6fc6ce",
+      "summary": {
+        "csv_header": [
+          "observation_date",
+          "NFCI_20210101"
+        ],
+        "row_count": 2608,
+        "valid_numeric_row_count": 2608,
+        "missing_value_row_count": 0,
+        "distinct_observation_date_count": 2608,
+        "duplicate_observation_date_count": 0,
+        "non_increasing_observation_date_count": 0,
+        "post_vintage_observation_count": 0,
+        "first_observation_date": "1971-01-08",
+        "last_observation_date": "2020-12-25",
+        "release_lag_days": 7
+      },
+      "error_type": null,
+      "error_message": null,
+      "download_evidence_hash": "843114294f597c908baff28792d26a26e1fe1a56f89bf1c3e11ac05d1842b480"
+    }
+  ],
+  "comparison": {
+    "comparable": true,
+    "earlier_payload_sha256": "8b7c25125a0bc1d82d15b82df2e9ab7ad08dd2a407e51788ae3f453c2b9d4b01",
+    "later_payload_sha256": "50da643cbf83dec10f53913806479aab1220959f5c9bb720c67412ee730fa02a",
+    "payload_hashes_distinct": true,
+    "overlap_observation_count": 2555,
+    "overlap_revision_count": 2555,
+    "later_only_observation_count": 53,
+    "earlier_only_observation_count": 0,
+    "earlier_last_observation_date": "2019-12-20",
+    "later_last_observation_date": "2020-12-25"
+  },
+  "gates": [
+    {
+      "gate_id": "BOTH_ALFRED_SNAPSHOTS_COMPLETE_AND_HASHED",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    },
+    {
+      "gate_id": "DISTINCT_SNAPSHOTS_WITH_LATER_VINTAGE_EXTENSION",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    },
+    {
+      "gate_id": "EACH_SNAPSHOT_COVERS_DEVELOPMENT_START_AND_IS_RECENT_TO_VINTAGE",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    },
+    {
+      "gate_id": "EXACTLY_TWO_FROZEN_ALFRED_GETS_WITHIN_BYTE_BUDGET",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    },
+    {
+      "gate_id": "NO_OBSERVATION_AFTER_REQUESTED_VINTAGE",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    },
+    {
+      "gate_id": "OFFICIAL_ALFRED_FINAL_HOSTS_AND_CSV_CONTENT_TYPES_MATCH",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    },
+    {
+      "gate_id": "OVERLAP_CONTAINS_AT_LEAST_ONE_POINT_IN_TIME_REVISION",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    },
+    {
+      "gate_id": "STRICTLY_INCREASING_UNIQUE_OBSERVATION_DATES",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    },
+    {
+      "gate_id": "VINTAGE_SUFFIXED_CSV_HEADERS_AND_VALID_DECIMAL_ROWS",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    },
+    {
+      "gate_id": "ZERO_BTC_MARKET_VALUES_RETURNS_CANDIDATES_AND_ORDERS",
+      "status": "PASS",
+      "reason": "Observed evidence satisfies the frozen feasibility condition."
+    }
+  ],
+  "request_count": 2,
+  "retry_count": 0,
+  "total_payload_bytes": 94150,
+  "macro_numeric_fields_inspected": [
+    "NFCI"
+  ],
+  "btc_market_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "decision": "PASS_S1_ALFRED_POINT_IN_TIME_SOURCE_RECOVERY",
+  "next_authorization": "AUTHORIZE_S1_FULL_NFCI_VINTAGE_ACQUISITION_PROTOCOL_ONLY",
+  "authorizes_parameter_definition": false,
+  "authorizes_btc_market_value_access": false,
+  "authorizes_return_testing": false,
+  "authorizes_candidate": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "result_evidence_hash": "274e9981103b3e31aea001e543f62d29d0d6941a1529b00cb5b037a854c75472"
+}

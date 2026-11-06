@@ -1,0 +1,33 @@
+{
+  "schema_version": "aurex-s1-btc-source-execution-audit-v2",
+  "audit_id": "s1-btc-source-execution-audit-v2",
+  "audited_at": "2026-08-27T06:02:39.649778Z",
+  "contract_file_sha256": "f77f9196923422b7566c9f5a5718c1a684179f501b6d86db4b42c216e278c1ba",
+  "contract_evidence_hash": "fdb47fabbf335b253c97fbd3cc5b146399dc40331d018ef3e7569186e264df6f",
+  "protocol_evidence_hash": "f6cbee32ed45a14388e116d3e9038a9b32afe9fc5b3ddc0132746e431413f419",
+  "runner_contract_hash": "bfad9185a7b8aa3bee0c7d1dd58cfd0a698322b9c6b6249da845650f6d2a6750",
+  "auditor_source_sha256": "ad9a4d2329455505c8a766e12733ba39545e2cd254d3827016e1058811bcfe51",
+  "synthetic_test_ids": [
+    "prior-exposure-declaration",
+    "midnight-first-available-selection",
+    "delayed-first-available-selection",
+    "real-2018-gap-10utc-selection",
+    "v1-exact-hash-reuse-manifest",
+    "partial-checkpoint-prefix-reconstruction",
+    "published-checksum-mismatch-rejection",
+    "unsafe-zip-member-rejection",
+    "twelve-column-kline-enforcement",
+    "open-time-uniqueness-enforcement",
+    "target-date-boundary-enforcement",
+    "positive-finite-selected-price-enforcement",
+    "execution-authority-isolation"
+  ],
+  "reconstructed_exactly": true,
+  "network_requests_observed": 0,
+  "payload_bytes_observed": 0,
+  "new_btc_market_values_read": 0,
+  "returns_calculated": 0,
+  "decision": "PASS_S1_1_BTC_EXECUTION_CONTRACT_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_1_BTC_SOURCE_ACQUISITION",
+  "audit_evidence_hash": "41055aa1222a1837d520108996f7e56a0a04a7174c123f1480a8e3c5b9523558"
+}

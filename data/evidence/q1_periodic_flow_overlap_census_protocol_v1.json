@@ -1,0 +1,52 @@
+{
+  "schema_version": "aurex-q1-usdm-overlap-daily-source-census-protocol-v1",
+  "protocol_id": "q1-usdm-overlap-daily-source-census-v1",
+  "frozen_at": "2026-08-07T08:53:37.950249Z",
+  "status": "FROZEN_PRE_OVERLAP_LOCALIZATION_AND_CHECKSUM_GET",
+  "parent_result_file_sha256": "e4411199d07b3e83a8ec148299c3648eac86efab44a22749b05178f612036c8f",
+  "parent_result_evidence_hash": "dea09a8f545b8c1885ac1e1c8f5a6d370ab719559c801b16fb12c4f5d49685a3",
+  "parent_audit_file_sha256": "948cda8cf0f32c3a068394cb94b69f5b0a9b767915f7013cbd001fad9f4986d5",
+  "parent_audit_evidence_hash": "d4b555735662dfed6ced975c32e1ed3aaf7313c6b93dc95211bbe5f7b4ccfa6f",
+  "target_archive_sha256": "d93f4201d012c74648d65727be0e17b2f7e38d2f6f9d8cb6817e8486b7ffe435",
+  "builder_contract_hash": "891bceb19780820cfca1cf7877efcaffc51c24fe58e05e6d578739a29b002a47",
+  "expected_overlap_event_count": 1,
+  "checksum_families": [
+    "aggTrades",
+    "trades"
+  ],
+  "maximum_unique_checksum_urls": 2,
+  "maximum_http_attempts": 6,
+  "maximum_retries": 2,
+  "retry_backoff_seconds": [
+    1,
+    3
+  ],
+  "request_timeout_seconds": 30,
+  "maximum_checksum_response_bytes": 512,
+  "permitted_http_statuses": [
+    200,
+    404
+  ],
+  "archive_payload_requests_permitted": false,
+  "price_or_quantity_parsing_permitted": false,
+  "return_calculation_permitted": false,
+  "validation_outcomes_permitted": false,
+  "holdout_access_permitted": false,
+  "candidate_creation_permitted": false,
+  "paper_operation_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "limitations": [
+    "A pass authorizes only a separate daily cross-source payload protocol.",
+    "Daily source availability cannot resolve the overlap by itself.",
+    "No candidate, Pine, paper, strategy-order, production, or live authority is created.",
+    "No daily ZIP payload, price, quantity, return, or outcome may be accessed.",
+    "Only the single known USD-M raw-range overlap may be localized.",
+    "Only two official daily CHECKSUM text files may be requested.",
+    "Real net profit remains zero dollars.",
+    "The overlap UTC day is derived mechanically from its current-row timestamp.",
+    "The two upstream STOP results remain immutable and unsuperseded."
+  ],
+  "protocol_evidence_hash": "188a4d2eb16d40d478518b0abd7f86d19e234428ec68cd4047c50920e8cf7b2b"
+}

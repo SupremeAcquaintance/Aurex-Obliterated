@@ -1,0 +1,24 @@
+{
+  "schema_version": "aurex-s1-nfci-raw-pilot-audit-v1",
+  "audit_id": "s1-nfci-raw-pilot-audit-v1",
+  "audited_at": "2026-08-26T18:49:59.217821Z",
+  "protocol_file_sha256": "ffc928f7c61ade13c6626c4b6dcdbbb46bdc4d69351a17eb1f8ab7bad9c56889",
+  "protocol_evidence_hash": "18ece31c0279273fa6913f5c99b0f564eaa3f8be7c1b5619bcfc6488cea9d992",
+  "result_file_sha256": "493152a841427ee0a33624d04f2af133e436e5ea3ce2d7989270011ef1f6d206",
+  "result_evidence_hash": "e3249edba089c7a8ebe76ced03958ade36625d4bc759783b305e19b0f731e209",
+  "runner_source_sha256": "5aec288a1fe4fd627dafed07fc2128b20ce3598089dd260dcfe784c931def094",
+  "auditor_source_sha256": "ce8b3d93b25cc2ccaa11f78725ff4e54c401a23814921be5cb283ba476a8033f",
+  "raw_file_sha256": {
+    "01-nfci-vintage-2020": "4b489d3be3574ad5c35ffba7a74869f4db1b8ad8d792230f7ed5f57cca038896",
+    "02-nfci-vintage-2021": "4b489d3be3574ad5c35ffba7a74869f4db1b8ad8d792230f7ed5f57cca038896"
+  },
+  "raw_file_bytes": {
+    "01-nfci-vintage-2020": 51425,
+    "02-nfci-vintage-2021": 51425
+  },
+  "raw_file_count": 2,
+  "reconstructed_exactly": true,
+  "decision": "STOP_S1_NFCI_RAW_PILOT_RECONSTRUCTED",
+  "next_authorization": "NONE_S1_NFCI_RAW_PILOT_FAILED",
+  "audit_evidence_hash": "39994116cfcd85e4e049509fce104a56d9b5e7dc9c164070548d32ba1effdb11"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "aurex-s1-post-failure-analysis-protocol-audit-v1",
+  "audit_id": "s1-post-failure-analysis-protocol-audit-v1",
+  "audited_at": "2026-08-27T06:56:38.572076Z",
+  "protocol_file_sha256": "2ca6ab7caf7fe38da4cc83b32a1d9effeca0ad39e1ba0af4bdd2e6fee0f8c773",
+  "protocol_evidence_hash": "f4b7ebd92fd1a149d784cce1840c08180d8c942ff2e54b6047313f91ba359c9b",
+  "outcome_result_evidence_hash": "8d900beb2dcbfcb0d11fed1f8ee0a99ecfa812e03900dae21a886973f86cc317",
+  "outcome_audit_evidence_hash": "ab1f10d0208560933e048f1fb93e5b03f0988048e7c4b5e6057dba14b0c2495d",
+  "outcome_ledger_file_sha256": "9828f806677c2b4e77a835de7fa66b40621a798762c84eb4db00b496e49e0926",
+  "auditor_source_sha256": "2a59940f9fe8333cec6a17fa84ab51cee7c3a224a77e4301ee0fc59b5cf62968",
+  "reconstructed_exactly": true,
+  "analysis_metrics_calculated": 0,
+  "validation_values_read": 0,
+  "holdout_values_read": 0,
+  "decision": "PASS_S1_POST_FAILURE_ANALYSIS_PROTOCOL_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_POST_FAILURE_ANALYSIS_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "5b88bb69058ccde7f839bcb8405123fdd8db283920bccb000ddaf8cfbd431a83"
+}

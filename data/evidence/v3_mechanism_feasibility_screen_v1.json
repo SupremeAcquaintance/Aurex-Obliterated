@@ -1,0 +1,101 @@
+{
+  "schema_version": "aurex-v3-mechanism-feasibility-screen-v1",
+  "screen_id": "v3-mechanism-feasibility-screen-v1",
+  "screen_version": "1.0.0",
+  "frozen_at": "2026-07-28T18:12:10.569507Z",
+  "status": "FROZEN_COMPLETE_NO_RETURN_ZERO_SELECTION",
+  "discovery_charter_evidence_hash": "10912cefdbd875b202fcc6903e5ffdf82652a97eddde7e9dc073a79308ed9b32",
+  "proposal_register_evidence_hash": "1f0bc727d673f6daac6a6d6cad306f6e3007e1f718a67a96f249d586507ff321",
+  "v3p01_terminal_evidence_hash": "b682aa1149203f14c20ef12732bafb13f617a7f1fc260c5af32d25726d5253a2",
+  "v3p02_terminal_evidence_hash": "67c967764111f831d80fb2e52d965460e0d59958b285e35e28715569dcb971f8",
+  "v3p03_terminal_evidence_hash": "733556d1d95f30b1c5b012df66299cecb87234a3fe01577b2441b9504b6fb31d",
+  "builder_contract_hash": "23461aff6e1e755d83ab9bd2d1d41e469539ef29aa08e7c8b00158097b255924",
+  "dispositions": [
+    {
+      "proposal_id": "V3P01_CROSS_ASSET_COINTEGRATION_RELATIVE_VALUE",
+      "mechanism_name": "Cross-asset cointegration relative value with a long spot and short USD-M perpetual pair",
+      "terminal_evidence_artifact": "data/evidence/v3_p01_execution_feasibility_result_v1.json",
+      "terminal_evidence_hash": "b682aa1149203f14c20ef12732bafb13f617a7f1fc260c5af32d25726d5253a2",
+      "formal_status": "REJECTED_EXECUTION_AND_METADATA_FEASIBILITY",
+      "qualified_for_primary_selection": false,
+      "reason_codes": [
+        "CROSS_ASSET_IDENTITY_HEDGE_FOUNDATION_ABSENT",
+        "HISTORICAL_EXECUTION_METADATA_INCOMPLETE",
+        "SEVEN_OF_ELEVEN_REQUIREMENTS_FAILED"
+      ],
+      "parameter_sets_defined": [],
+      "market_numeric_values_inspected": [],
+      "strategy_outcomes_inspected": [],
+      "return_metrics_calculated": []
+    },
+    {
+      "proposal_id": "V3P02_CLOCK_PHASE_INTRADAY_PREDICTABILITY",
+      "mechanism_name": "Clock-phase intraday predictability around recurring algorithmic activity windows",
+      "terminal_evidence_artifact": "data/evidence/v3_p02_payload_pilot_stop_result_v1.json",
+      "terminal_evidence_hash": "67c967764111f831d80fb2e52d965460e0d59958b285e35e28715569dcb971f8",
+      "formal_status": "STOPPED_TRANSPORT_UNRESOLVED",
+      "qualified_for_primary_selection": false,
+      "reason_codes": [
+        "AUTHORITATIVE_THREE_SAMPLE_PILOT_RESULT_ABSENT",
+        "DOGE_RESPONSE_TRUNCATED_BEFORE_DECLARED_SIZE",
+        "NO_RETRY_PER_FROZEN_REQUEST_BUDGET",
+        "TWO_OF_THREE_SAMPLES_VERIFIED"
+      ],
+      "parameter_sets_defined": [],
+      "market_numeric_values_inspected": [],
+      "strategy_outcomes_inspected": [],
+      "return_metrics_calculated": []
+    },
+    {
+      "proposal_id": "V3P03_PASSIVE_LIMIT_ORDER_LIQUIDITY_PROVISION",
+      "mechanism_name": "Passive limit-order liquidity provision with queue and toxicity control",
+      "terminal_evidence_artifact": "data/evidence/v3_p03_source_audit_stop_result_v1.json",
+      "terminal_evidence_hash": "733556d1d95f30b1c5b012df66299cecb87234a3fe01577b2441b9504b6fb31d",
+      "formal_status": "REJECTED_HISTORICAL_EVIDENCE_UNAVAILABLE",
+      "qualified_for_primary_selection": false,
+      "reason_codes": [
+        "FORMAL_SOURCE_AUDIT_INCOMPLETE",
+        "HISTORICAL_L2_QUEUE_EVIDENCE_UNAVAILABLE",
+        "HTTP_202_POLL_BUDGET_EXHAUSTED"
+      ],
+      "parameter_sets_defined": [],
+      "market_numeric_values_inspected": [],
+      "strategy_outcomes_inspected": [],
+      "return_metrics_calculated": []
+    }
+  ],
+  "selection_rule": "EVERY_PREDECLARED_FEASIBILITY_GATE_MUST_PASS_BEFORE_PRIMARY_SELECTION",
+  "selected_primary_proposal_id": null,
+  "selected_primary_count": 0,
+  "decision": "SELECT_ZERO_V3_PRIMARY_MECHANISMS",
+  "next_decision": "CLOSE_V3_AND_REQUIRE_SEPARATELY_FROZEN_V4_DISCOVERY_CHARTER",
+  "v3_closed": true,
+  "authorizes_v3_retry_or_amendment": false,
+  "authorizes_full_payload_acquisition": false,
+  "authorizes_market_data_import": false,
+  "authorizes_return_testing": false,
+  "creates_candidate": false,
+  "opens_development": false,
+  "opens_validation": false,
+  "opens_holdout": false,
+  "opens_forward": false,
+  "permits_pine_parity": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "market_numeric_values_inspected": [],
+  "strategy_outcome_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "limitations": [
+    "A future V4 effort requires a separately versioned discovery charter with new pre-observation source and transport rules.",
+    "Closing V3 prevents after-the-fact retries, amendments, or threshold changes from turning an incomplete path into a selected primary.",
+    "No V3 mechanism parameter set, market numeric value, strategy outcome, trade, PnL, or return was compared in this screen.",
+    "The screen evaluates only the three predeclared V3 feasibility paths and selects none because no path completed every gate.",
+    "This screen grants no candidate, development, validation, holdout, forward, Pine, paper, sandbox, live, or capital permission.",
+    "Two verified V3P02 sample archives remain reusable evidence but do not authorize a full payload acquisition.",
+    "V3P01 is formally rejected for this charter because seven required execution or historical-metadata conditions failed.",
+    "V3P02 is stopped for unresolved transport under its frozen three-request budget; this is not a profitability rejection.",
+    "V3P03 is rejected for this charter because required historical order-book and queue evidence was not qualified."
+  ],
+  "screen_evidence_hash": "48e60151a4e4f6c86f5efa2569a4c6e63747bc1ee0996bf749d51a66f16f604e"
+}

@@ -1,0 +1,785 @@
+{
+  "schema_version": "aurex-r3-run-package-v1",
+  "package_id": "r3-cross-sectional-momentum-run-package-v1",
+  "package_version": "1.0.0",
+  "frozen_at": "2026-07-22T18:25:06.350836Z",
+  "status": "FROZEN_PRE_OUTCOME",
+  "engine_version": "r3-cross-sectional-momentum-engine-v1.0.0",
+  "python_version": "3.12.13",
+  "pydantic_version": "2.13.4",
+  "decimal_precision": 50,
+  "decimal_rounding": "ROUND_HALF_EVEN",
+  "universe_manifest_evidence_hash": "dacc57f649846f716b8134aa0abba5accc78b0f1607d653addb0df3d9e132a74",
+  "development_dataset_bundle_evidence_hash": "fba63b8e237220c760daf902f2c999e9b01121357a4cc583c9fa5cb50b83d341",
+  "market_data_evidence_hash": "ec5e60c129d941b0f72ea39fde63a99df992efbca2c9348c7abc9d313c3c50c2",
+  "protocol_evidence_hash": "8af37e15ca08bcbbdd82c457927d5a4b5039e70f173ff735c16c91a3bed4f893",
+  "execution_specification_evidence_hash": "7125758ab4b4672576db8de49d8f67f5988f02dc5c39e2d94d36ae2e7edb6eb6",
+  "source_file_sha256": {
+    "scripts/run_r3_mechanism_study.py": "26002e29b8ec8d565d5f0af36f9773e8d10b1fcb8f6a133756a45d523c182ae1",
+    "src/aurex/backtest_engine/research_engine.py": "b78e30276489bda7fe240f37264d21bc48ccde2291dd6aa305cfee8d38ba5f73",
+    "src/aurex/backtest_engine/research_result.py": "8a5498f26924c70fa74add8d67ed6e2267d41a5dfd4b9c4d273edb1b699baabc",
+    "src/aurex/backtest_engine/research_run_package.py": "faca2a456bf6de9a7f18620eeef4d1d397cc17aff5cccad7a00190f512815f14",
+    "src/aurex/backtest_engine/research_study_runner.py": "58f7f1f796bc766560db13ffcaf7db2f95d2c50d4f6b8748625ddc3a356f4834"
+  },
+  "planned_replays": [
+    {
+      "run_id": "fold--xsmom_168d_28d_falsification_slow--fold-01-2023q3",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2023-10-01T00:00:00Z",
+      "fold_id": "fold-01-2023q3",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_168d_28d_falsification_slow--fold-02-2023q4",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-10-01T00:00:00Z",
+      "evaluation_end": "2024-01-01T00:00:00Z",
+      "fold_id": "fold-02-2023q4",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_168d_28d_falsification_slow--fold-03-2024q1",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-01-01T00:00:00Z",
+      "evaluation_end": "2024-04-01T00:00:00Z",
+      "fold_id": "fold-03-2024q1",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_168d_28d_falsification_slow--fold-04-2024q2",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-04-01T00:00:00Z",
+      "evaluation_end": "2024-07-01T00:00:00Z",
+      "fold_id": "fold-04-2024q2",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_168d_28d_falsification_slow--fold-05-2024q3",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-07-01T00:00:00Z",
+      "evaluation_end": "2024-10-01T00:00:00Z",
+      "fold_id": "fold-05-2024q3",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_168d_28d_falsification_slow--fold-06-2024q4",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-10-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": "fold-06-2024q4",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_28d_7d_falsification_fast--fold-01-2023q3",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2023-10-01T00:00:00Z",
+      "fold_id": "fold-01-2023q3",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_28d_7d_falsification_fast--fold-02-2023q4",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-10-01T00:00:00Z",
+      "evaluation_end": "2024-01-01T00:00:00Z",
+      "fold_id": "fold-02-2023q4",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_28d_7d_falsification_fast--fold-03-2024q1",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-01-01T00:00:00Z",
+      "evaluation_end": "2024-04-01T00:00:00Z",
+      "fold_id": "fold-03-2024q1",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_28d_7d_falsification_fast--fold-04-2024q2",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-04-01T00:00:00Z",
+      "evaluation_end": "2024-07-01T00:00:00Z",
+      "fold_id": "fold-04-2024q2",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_28d_7d_falsification_fast--fold-05-2024q3",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-07-01T00:00:00Z",
+      "evaluation_end": "2024-10-01T00:00:00Z",
+      "fold_id": "fold-05-2024q3",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_28d_7d_falsification_fast--fold-06-2024q4",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-10-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": "fold-06-2024q4",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_84d_14d_primary--fold-01-2023q3",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2023-10-01T00:00:00Z",
+      "fold_id": "fold-01-2023q3",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_84d_14d_primary--fold-02-2023q4",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-10-01T00:00:00Z",
+      "evaluation_end": "2024-01-01T00:00:00Z",
+      "fold_id": "fold-02-2023q4",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_84d_14d_primary--fold-03-2024q1",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-01-01T00:00:00Z",
+      "evaluation_end": "2024-04-01T00:00:00Z",
+      "fold_id": "fold-03-2024q1",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_84d_14d_primary--fold-04-2024q2",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-04-01T00:00:00Z",
+      "evaluation_end": "2024-07-01T00:00:00Z",
+      "fold_id": "fold-04-2024q2",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_84d_14d_primary--fold-05-2024q3",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-07-01T00:00:00Z",
+      "evaluation_end": "2024-10-01T00:00:00Z",
+      "fold_id": "fold-05-2024q3",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--xsmom_84d_14d_primary--fold-06-2024q4",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-10-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": "fold-06-2024q4",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-AAVEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "AAVEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-ADAUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ADAUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-APEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "APEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-APTUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "APTUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-ATOMUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ATOMUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-AVAXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "AVAXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-BCHUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "BCHUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-BNBUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "BNBUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-CFXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "CFXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-CRVUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "CRVUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-DOGEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "DOGEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-DOTUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "DOTUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-DYDXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "DYDXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-ETCUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ETCUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-FETUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "FETUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-FILUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "FILUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-FTMUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "FTMUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-GALAUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "GALAUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-GRTUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "GRTUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-ICPUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ICPUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-INJUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "INJUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-LDOUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LDOUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-LINKUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LINKUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-LTCUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LTCUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-LUNCUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LUNCUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-MKRUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "MKRUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-NEARUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "NEARUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-OPUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "OPUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-RUNEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "RUNEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-SANDUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "SANDUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-SHIBUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "SHIBUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-STXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "STXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-TRXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "TRXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-UNIUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "UNIUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--xsmom_84d_14d_primary--without-XRPUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "XRPUSDT"
+      ]
+    },
+    {
+      "run_id": "overall--xsmom_168d_28d_falsification_slow--cost-1",
+      "category": "OVERALL",
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--xsmom_168d_28d_falsification_slow--cost-1p5",
+      "category": "OVERALL",
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1.5",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--xsmom_168d_28d_falsification_slow--cost-2",
+      "category": "OVERALL",
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "2",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--xsmom_28d_7d_falsification_fast--cost-1",
+      "category": "OVERALL",
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--xsmom_28d_7d_falsification_fast--cost-1p5",
+      "category": "OVERALL",
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "1.5",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--xsmom_28d_7d_falsification_fast--cost-2",
+      "category": "OVERALL",
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "variant_role": "FALSIFICATION",
+      "cost_multiplier": "2",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--xsmom_84d_14d_primary--cost-1",
+      "category": "OVERALL",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--xsmom_84d_14d_primary--cost-1p5",
+      "category": "OVERALL",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1.5",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--xsmom_84d_14d_primary--cost-2",
+      "category": "OVERALL",
+      "variant_id": "xsmom_84d_14d_primary",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "2",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    }
+  ],
+  "expected_replay_count": 62,
+  "result_ledger_relative_path": "r3_cross_sectional_momentum_result_v1.json",
+  "replay_artifact_directory_relative_path": "r3_cross_sectional_momentum_results_v1",
+  "preexisting_result_artifacts": [],
+  "outcome_fields_inspected": [],
+  "builder_contract_hash": "5f08b1355353d2ca88b8b1924436c9675a1aa3a9f9472be5220e986f288be3fb",
+  "package_evidence_hash": "2ca29f9328306c91f8281051731592da5e3d8b00db47573f5f4b08b9d9bb2756"
+}

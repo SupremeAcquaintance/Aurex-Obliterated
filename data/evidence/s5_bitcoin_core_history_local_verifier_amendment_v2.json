@@ -1,0 +1,75 @@
+{
+  "schema_version": "aurex-s5-bitcoin-core-history-local-verifier-amendment-v2",
+  "amendment_id": "s5-bitcoin-core-history-local-verifier-amendment-v2",
+  "frozen_at": "2026-09-01T22:35:22.795218Z",
+  "status": "FROZEN_AFTER_SUCCESSFUL_CLONE_AND_PROMISED_BLOB_VERIFIER_FAILURE",
+  "builder_contract_hash": "15b4866b34ed8a01652236ea907cbc1b001618fc34858a56e056592e1168fb39",
+  "protocol_evidence_hash": "e23a6368563bd45908f9e89fa14c15f37778a5ce276908aef5fe363d73b2b2b5",
+  "prior_result_evidence_hash": "cdb84ccb79fd4db8e1fb795799a2a16a4fcb14c81c95bb504b38a3956dcbd633",
+  "prior_result_audit_evidence_hash": "0a2b12f261463e78c5973feeb8b0b709989c40444e2bcbf80a3e2803903381ff",
+  "failure_audit_evidence_hash": "1216ec25104c1466ebaa9e5fa637a75136a46b718a048e6e10da267b844dadfe",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_audit_v1.json",
+      "file_sha256": "e64615314acae1f5e2658d7ca03c6a43720885a3c777000924af691f49cc9131"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_v1.json",
+      "file_sha256": "676f189b1a8df713b8704ba4eaa3c7c5627790d9bff2bed86b8e756624c1c93f"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_audit_v1.json",
+      "file_sha256": "b5b4f30ef909cbbf653eafda852415b9f4ec07c48acf74f66669747fcaa0c3d7"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_v1.json",
+      "file_sha256": "e571f6dd288843fe1a1407a571028615f035d07288f9e42a5e40bb7eaee0cd73"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_verifier_failure_audit_v1.json",
+      "file_sha256": "6a280ce4e5195a51d53cbfc9096a65bb9d386b40430bbcd37a56423d548cf89a"
+    }
+  ],
+  "preserved_partial_dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git.partial",
+  "final_dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+  "maximum_local_revalidation_count": 1,
+  "additional_network_process_count": 0,
+  "network_access_permitted": false,
+  "credential_access_permitted": false,
+  "original_object_enumeration": "git rev-list --objects --no-object-names <cutoff>",
+  "corrected_object_enumeration": "git rev-list --objects --no-object-names --missing=print <cutoff>",
+  "corrected_stream_timeout_seconds": 600,
+  "corrected_stream_must_be_hashed_incrementally": true,
+  "missing_promised_blob_prefix": "?",
+  "protocol_source_cutoff_unchanged": true,
+  "protocol_gate_ids_unchanged": true,
+  "all_other_protocol_limits_unchanged": true,
+  "history_semantic_parsing_permitted": false,
+  "commit_message_access_permitted": false,
+  "author_identity_access_permitted": false,
+  "author_timestamp_access_permitted": false,
+  "pull_request_id_parsing_permitted": false,
+  "github_api_requests_permitted": false,
+  "market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "decision": "FREEZE_S5_BITCOIN_CORE_HISTORY_LOCAL_VERIFIER_AMENDMENT_V2",
+  "next_authorization": "RUN_S5_BITCOIN_CORE_HISTORY_LOCAL_VERIFIER_V2_ONCE",
+  "limitations": [
+    "A successful v2 result can authorize only a separately frozen completeness census protocol.",
+    "A timeout, malformed identifier, changed manifest, changed cutoff, or changed Git metadata fails the amendment without another correction.",
+    "No GitHub API request, BTC market value, parameter, return, candidate, signal, or order is permitted.",
+    "No commit message, author identity, timestamp, or pull-request identifier may be read.",
+    "No paper, Testnet strategy, production, live, real-capital, or profit authority is created.",
+    "Only the existing preserved partial dataset may be revalidated.",
+    "The corrected object stream accepts question-mark-prefixed promised missing blob identifiers and hashes every line incrementally.",
+    "The source cutoff, fourteen gate identifiers, and all byte limits remain unchanged.",
+    "The v1 STOP result and its verifier failure remain immutable.",
+    "The v1 clone succeeded once; this amendment permits no clone, fetch, or other network process."
+  ],
+  "amendment_evidence_hash": "ad78b4587f081bc71143f83fc581385eee0266228f87578f84a8eb03e9abdf84"
+}

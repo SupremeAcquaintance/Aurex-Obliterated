@@ -1,0 +1,30 @@
+{
+  "average_price": "64340.09350472",
+  "base_url": "https://testnet.binance.vision",
+  "best_bid_price": "64363.06000000",
+  "checked_at": "2026-07-31T05:59:14.714539+00:00",
+  "credentials_stored": false,
+  "environment": "BINANCE_SPOT_TESTNET",
+  "live_authority": false,
+  "market_price": "64363.06000000",
+  "mode": "public",
+  "production_authority": false,
+  "public_connectivity": "PASS",
+  "resting_order_preview": {
+    "below_best_bid": true,
+    "notional": "5.2134075000000000",
+    "percent_average_price_minutes": 5,
+    "percent_reference_price": "64340.09350472",
+    "price": "57926.75000000",
+    "quantity": "0.00009000",
+    "side": "BUY",
+    "submitted": false
+  },
+  "sandbox_qualified": false,
+  "schema_version": 1,
+  "server_time_offset_ms": 1,
+  "spot_scope": true,
+  "symbol": "BTCUSDT",
+  "symbol_status": "TRADING",
+  "virtual_order_submitted": false
+}

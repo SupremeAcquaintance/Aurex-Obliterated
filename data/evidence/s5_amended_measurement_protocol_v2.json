@@ -1,0 +1,232 @@
+{
+  "annotated_count": 104,
+  "attempt_path": "data/evidence/s5_amended_measurement_attempt_v2.json",
+  "authority": {
+    "live": false,
+    "market_values": false,
+    "network": false,
+    "paper": false,
+    "production": false,
+    "returns": false,
+    "signals": false,
+    "testnet_strategy_orders": false
+  },
+  "availability_lag_days": 7,
+  "command_repositories": [
+    "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+    "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+    "data/evidence/s5_bitcoin_core_release_tags_complete_v2.git"
+  ],
+  "complete_manifest_hash": "07d4b9d80266710faf9dcf578a6835c6d1c36727b362132b896c725811eea82c",
+  "complete_repository": "data/evidence/s5_bitcoin_core_release_tags_complete_v2.git",
+  "complete_repository_hash": "d3e85e76ddf1c6bbb2e796530d9f3a2bb0c3bfbb7b95d65bd4c8dbed442c4214",
+  "complete_source_audit_hash": "f224e7b99256ac04b0ffd8762076cd75f528e7cb88dd402371a2e126ab128e6c",
+  "evidence_hash": "e680dbe872d667636b0568b3cd99363a06c9f04049f03f62e4390fcc9873e578",
+  "frozen_at": "2026-09-25T22:21:20.267294+00:00",
+  "historical_qualification_permitted": false,
+  "lightweight_count": 28,
+  "maximum_output_bytes": 16777216,
+  "maximum_process_seconds": 600,
+  "maximum_stdout_bytes": 536870912,
+  "maximum_total_seconds": 1800,
+  "month_count": 212,
+  "month_end_exclusive": "2026-09-01",
+  "month_start": "2009-01-01",
+  "next_action": "FREEZE_AND_CHECK_S5_AMENDED_MEASUREMENT_EXECUTION",
+  "non_release_policy": "RECONSTRUCT_ALL_FIELDS_AND_REQUIRE_EXACT_V1_EQUALITY",
+  "original_protocol_hash": "0d4f9dbc73675a0e625971a9a53181bcd4a2b707ebe02f01a28edfc4c65478d0",
+  "original_repository": "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+  "original_repository_hash": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "output_path": "data/evidence/s5_accepted_development_monthly_measurements_v2.jsonl",
+  "process_count": 3,
+  "raw_commands": [
+    [
+      "git",
+      "-C",
+      "{history_dataset_path}",
+      "--no-pager",
+      "log",
+      "--first-parent",
+      "--reverse",
+      "--format=%x1e%H%x00",
+      "--name-only",
+      "-z",
+      "--no-renames",
+      "--diff-merges=first-parent",
+      "{source_cutoff_commit}"
+    ],
+    [
+      "git",
+      "-C",
+      "{history_dataset_path}",
+      "rev-list",
+      "--topo-order",
+      "{source_cutoff_commit}"
+    ],
+    [
+      "git",
+      "-C",
+      "{history_dataset_path}",
+      "for-each-ref",
+      "--format=%(refname)%00%(objecttype)%00%(objectname)%00%(*objectname)%00%(taggerdate:iso-strict)%00%(creatordate:iso-strict)%00%(contents:signature)%00%1e",
+      "refs/tags"
+    ]
+  ],
+  "release_policy": {
+    "annotated": "TAGGER_TIME_NO_MASTER_ANCESTRY_REQUIREMENT",
+    "complete_inventory_preserved": true,
+    "lightweight": "COMMITTER_TIME_CUTOFF_REACHABLE_HISTORICAL_EXISTENCE_UNCERTAIN",
+    "signature": "PRESENCE_ONLY_NOT_CRYPTOGRAPHIC_VERIFICATION",
+    "window": "START_INCLUSIVE_END_EXCLUSIVE_UTC"
+  },
+  "response_directory": "data/evidence/s5_amended_measurement_responses_v2",
+  "result_path": "data/evidence/s5_amended_measurement_result_v2.json",
+  "retry_count": 0,
+  "schema": "aurex-s5-amended-measurement-protocol-v2",
+  "serialization": "SORTED_KEYS_COMPACT_ASCII_JSON_LINES_LF",
+  "source_bindings": [
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_accepted_source_coverage_v2.jsonl",
+      "sha256": "5975b299d2b6e291ac1961038e067150372846d4d54e11a84ca5405781b3627c"
+    },
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_canonical_merge_mapping_v2.jsonl",
+      "sha256": "e13d5aba80bcb688abf004fc8813dfd81a3083c1bc295859267b9baac001e564"
+    },
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_github_pulls_normalized_v2.jsonl",
+      "sha256": "1075bcd84b27a8408c26d9beab481b7b6df762a922267e57bae05a1725ee5888"
+    },
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_target_resolution_v2.jsonl",
+      "sha256": "6e11c4183adfde890d3188a6ae20bdce1700faf3651e76f2b0975051a0968bd2"
+    },
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_unresolved_git_merges_v2.jsonl",
+      "sha256": "992c21f70d99e1243296d851b836119ff7825cd54574ac98ef32f65bf0a66de8"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_execution_contract_audit_v1.json",
+      "sha256": "218cdd91196377f52f384a2de90c61a9ccff3ee32485999fbc40e78b11e5c906"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_execution_contract_v1.json",
+      "sha256": "44c99459b12a8e8311463ec4c588f24ac89a2f13b378fecc5825169bc66b5f67"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_protocol_audit_v1.json",
+      "sha256": "ff271ecfc84c79365dd5a37414c8255fde9d2860483860318bbad54ab8a6d6e1"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_protocol_v1.json",
+      "sha256": "4556e84ddc6174d3e9ab08c233147767b735eb63d46c9320f08c1727c231b7f6"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_result_audit_v1.json",
+      "sha256": "fedd56fe7686126748facfee1be1a63f78bc20fe18e528b3f132c973cd4579a1"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_result_v1.json",
+      "sha256": "902360a4437e8f2b87e3a040182e47fe705ec6625071b8d1945341286105c59c"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_monthly_measurements_v1.jsonl",
+      "sha256": "56a54bee72f77102e21c03975eb7a32e95b8eb2ff68882dd32fbe8a01f8bddd8"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_development_charter_audit_v1.json",
+      "sha256": "d1668de55365924bc07b7bfe62146e64d2f3c2418db98554e21e555062611be1"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_development_charter_v1.json",
+      "sha256": "44521e79750685fa0d6d71988c105cc3813535910c8a72e02baa1e0b2338e43b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_audit_v1.json",
+      "sha256": "7303505d564e3a81c500c7f8e8d901cad872178b43ceb0889ed2ccc311d396c0"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_v1.json",
+      "sha256": "2a3c084d57223628228e895f584bc4cb0f7bdf85e52155c4257b9c6a22e79330"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_final_result_audit_v4.json",
+      "sha256": "56ec5c6e808778f42697812f6ee2322b84bd755575cafbd2642ac9a3b50ba071"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v4.json",
+      "sha256": "1cc2d4b07b643d81e93999ba9f2ce424f07ec185367cd9469474ecc47e85d40b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_execution_contract_audit_v2.json",
+      "sha256": "f4ac04555c6f3fe998bfa46ba98243901bc92146a392ca26c8af529bfd0e7baf"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_execution_contract_v2.json",
+      "sha256": "80c33f53f51c1c62da39ab4f177a647d2eef062359d7a350715a755b5dcce69c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_protocol_audit_v2.json",
+      "sha256": "316b47a329791cf3e574f6a59690cf10c42dfa8ffc3561705bf291ca2e8165d2"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_protocol_v2.json",
+      "sha256": "1bb6f7d524ba513ed1eeab839f3216dab97bc258bc84f304e7b273284d73b5bc"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_result_audit_v2.json",
+      "sha256": "f8b5ff90cd5f661812d6da1c4df4e36a952c9115e2586f9b36e5043086736668"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_result_v2.json",
+      "sha256": "d66f10b0cada90d8f20238d9286429c89289a17550fed713be68d9243bd54e5a"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_protocol_audit_v1.json",
+      "sha256": "d519167984103edc21d3748e0f86e64c726335dff2f1ca7a4ea20a429eda77ae"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_protocol_v1.json",
+      "sha256": "7c09685556eaecbb4b4d8b93c8a031200998e4e4261d3bf8a2baa7e0b503d3e4"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_audit_v1.json",
+      "sha256": "0151d680208341673edf49bf0c5b4bf573e6bedfd1546a990da966b399518b1c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_v1.json",
+      "sha256": "518ae10d31085a5aa79498b0552cfa7b55334d05c609471a6dad47b2fb321740"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_audit_v1.json",
+      "sha256": "e64615314acae1f5e2658d7ca03c6a43720885a3c777000924af691f49cc9131"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_v1.json",
+      "sha256": "676f189b1a8df713b8704ba4eaa3c7c5627790d9bff2bed86b8e756624c1c93f"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_audit_v2.json",
+      "sha256": "07cbe45b2d8c4792e435d759ea5c011753849d6343f40bef73d81834731b8792"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_v2.json",
+      "sha256": "b96a57ea99c0b1bb1aef3fcf7b534afe9821e9687583813ab4a64b5f849323d9"
+    },
+    {
+      "path": "data/evidence/s5_complete_release_tag_source_remediation_protocol_v1.json",
+      "sha256": "7ef761ebce8453932e7f2a927645e12221c983fa253add56674bcc992b16f6c3"
+    },
+    {
+      "path": "data/evidence/s5_complete_release_tag_source_remediation_result_audit_v1.json",
+      "sha256": "32e85cf07e72585fd4bb719af1b3c95072b05d99278da884869978773b902763"
+    },
+    {
+      "path": "data/evidence/s5_complete_release_tag_source_remediation_result_v1.json",
+      "sha256": "16ab0c70fc8506db983bb734b278d3e94585400c256535848bebbb44202cae19"
+    }
+  ],
+  "source_cutoff_commit": "dc0395c5858a1d55239b82a834e5075cf2069219",
+  "stable_tag_count": 132,
+  "tag_path": "data/evidence/s5_amended_measurement_release_tags_v2.jsonl"
+}

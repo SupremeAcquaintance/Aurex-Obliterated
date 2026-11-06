@@ -1,0 +1,120 @@
+{
+  "account": {
+    "account_type": "SPOT",
+    "can_trade": true,
+    "maker_commission": "0E-8",
+    "nonzero_asset_count": 445,
+    "permissions": [
+      "SPOT"
+    ],
+    "relevant_nonzero_assets": [
+      "BTC",
+      "USDT"
+    ],
+    "taker_commission": "0E-8"
+  },
+  "authenticated_account_read": "PASS",
+  "average_price": "64227.55577387",
+  "base_url": "https://testnet.binance.vision",
+  "best_bid_price": "64239.22000000",
+  "check_status": "PASS",
+  "checked_at": "2026-07-31T06:52:01.244550+00:00",
+  "credentials_stored": false,
+  "environment": "BINANCE_SPOT_TESTNET",
+  "live_authority": false,
+  "market_price": "64239.23000000",
+  "mode": "virtual-cancel",
+  "order_reconciliation": "FAIL",
+  "production_authority": false,
+  "public_connectivity": "PASS",
+  "qualification_blocker": "Virtual cancel lifecycle did not reconcile exactly; sandbox qualification remains blocked.",
+  "resting_order_preview": {
+    "below_best_bid": true,
+    "notional": "5.2033761000000000",
+    "percent_average_price_minutes": 5,
+    "percent_reference_price": "64227.55577387",
+    "price": "57815.29000000",
+    "quantity": "0.00009000",
+    "side": "BUY",
+    "submitted": false
+  },
+  "sandbox_qualified": false,
+  "schema_version": 1,
+  "server_time_offset_ms": 23,
+  "signed_test_order": "PASS",
+  "spot_scope": true,
+  "symbol": "BTCUSDT",
+  "symbol_status": "TRADING",
+  "test_order": {
+    "client_order_id": "aurex-validation-21cb3465b2349533",
+    "entered_matching_engine": false,
+    "notional": "5.2033761000000000",
+    "price": "57815.29000000",
+    "quantity": "0.00009000",
+    "side": "BUY"
+  },
+  "virtual_cancel_lifecycle": "PASS",
+  "virtual_order": {
+    "cancel_client_order_id": "aurex-cancel-op-eb86fdd03f0ffb9d",
+    "cancel_status": "CANCELED",
+    "cancellation_identity_matches": false,
+    "client_order_id": "aurex-cancel-bbaee2eb49a33a88",
+    "executed_quantity": "0E-8",
+    "external_order_id": 22292295,
+    "external_order_identity_matches": true,
+    "final_status": "CANCELED",
+    "no_fill_occurred": true,
+    "notional": "5.2033761000000000",
+    "order_identity_matches": false,
+    "placed_status": "NEW",
+    "placement_identity_matches": true,
+    "price": "57815.29000000",
+    "production_authority": false,
+    "quantity": "0.00009000",
+    "quantity_matches": true,
+    "queried_status": "NEW",
+    "real_capital": false,
+    "side": "BUY",
+    "symbol": "BTCUSDT",
+    "type": "LIMIT"
+  },
+  "virtual_order_progress": {
+    "cancelled": {
+      "client_order_id": "aurex-cancel-op-eb86fdd03f0ffb9d",
+      "cumulative_quote_quantity": "0E-8",
+      "executed_quantity": "0E-8",
+      "external_order_id": 22292295,
+      "original_client_order_id": "aurex-cancel-bbaee2eb49a33a88",
+      "quantity": "0.00009000",
+      "status": "CANCELED"
+    },
+    "final": {
+      "client_order_id": "aurex-cancel-bbaee2eb49a33a88",
+      "cumulative_quote_quantity": "0E-8",
+      "executed_quantity": "0E-8",
+      "external_order_id": 22292295,
+      "original_client_order_id": null,
+      "quantity": "0.00009000",
+      "status": "CANCELED"
+    },
+    "placed": {
+      "client_order_id": "aurex-cancel-bbaee2eb49a33a88",
+      "cumulative_quote_quantity": "0E-8",
+      "executed_quantity": "0E-8",
+      "external_order_id": 22292295,
+      "original_client_order_id": null,
+      "quantity": "0.00009000",
+      "status": "NEW"
+    },
+    "queried": {
+      "client_order_id": "aurex-cancel-bbaee2eb49a33a88",
+      "cumulative_quote_quantity": "0E-8",
+      "executed_quantity": "0E-8",
+      "external_order_id": 22292295,
+      "original_client_order_id": null,
+      "quantity": "0.00009000",
+      "status": "NEW"
+    }
+  },
+  "virtual_order_submitted": true
+}

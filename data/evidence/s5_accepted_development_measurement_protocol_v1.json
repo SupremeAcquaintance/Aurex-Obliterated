@@ -1,0 +1,482 @@
+{
+  "schema_version": "aurex-s5-accepted-development-measurement-protocol-v1",
+  "protocol_id": "s5-accepted-development-measurement-protocol-v1",
+  "frozen_at": "2026-09-08T19:58:57.814408Z",
+  "status": "FROZEN_BEFORE_MEASUREMENT_EXECUTION_OR_BTC_OUTCOME_ACCESS",
+  "builder_contract_hash": "e32dcdef0420cd0fd6859d9d93bac9283978c7eea3ec7b7e3c90fb2b2e57f7a4",
+  "source_bindings": [
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_accepted_source_coverage_v2.jsonl",
+      "file_sha256": "5975b299d2b6e291ac1961038e067150372846d4d54e11a84ca5405781b3627c"
+    },
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_canonical_merge_mapping_v2.jsonl",
+      "file_sha256": "e13d5aba80bcb688abf004fc8813dfd81a3083c1bc295859267b9baac001e564"
+    },
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_github_pulls_normalized_v2.jsonl",
+      "file_sha256": "1075bcd84b27a8408c26d9beab481b7b6df762a922267e57bae05a1725ee5888"
+    },
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_target_resolution_v2.jsonl",
+      "file_sha256": "6e11c4183adfde890d3188a6ae20bdce1700faf3651e76f2b0975051a0968bd2"
+    },
+    {
+      "path": "data/evidence/datasets/s5_bitcoin_core_unresolved_git_merges_v2.jsonl",
+      "file_sha256": "992c21f70d99e1243296d851b836119ff7825cd54574ac98ef32f65bf0a66de8"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_development_charter_audit_v1.json",
+      "file_sha256": "d1668de55365924bc07b7bfe62146e64d2f3c2418db98554e21e555062611be1"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_development_charter_v1.json",
+      "file_sha256": "44521e79750685fa0d6d71988c105cc3813535910c8a72e02baa1e0b2338e43b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_audit_v1.json",
+      "file_sha256": "7303505d564e3a81c500c7f8e8d901cad872178b43ceb0889ed2ccc311d396c0"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_v1.json",
+      "file_sha256": "2a3c084d57223628228e895f584bc4cb0f7bdf85e52155c4257b9c6a22e79330"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_final_result_audit_v4.json",
+      "file_sha256": "56ec5c6e808778f42697812f6ee2322b84bd755575cafbd2642ac9a3b50ba071"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v4.json",
+      "file_sha256": "1cc2d4b07b643d81e93999ba9f2ce424f07ec185367cd9469474ecc47e85d40b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_execution_contract_audit_v2.json",
+      "file_sha256": "f4ac04555c6f3fe998bfa46ba98243901bc92146a392ca26c8af529bfd0e7baf"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_execution_contract_v2.json",
+      "file_sha256": "80c33f53f51c1c62da39ab4f177a647d2eef062359d7a350715a755b5dcce69c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_protocol_audit_v2.json",
+      "file_sha256": "316b47a329791cf3e574f6a59690cf10c42dfa8ffc3561705bf291ca2e8165d2"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_protocol_v2.json",
+      "file_sha256": "1bb6f7d524ba513ed1eeab839f3216dab97bc258bc84f304e7b273284d73b5bc"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_result_audit_v2.json",
+      "file_sha256": "f8b5ff90cd5f661812d6da1c4df4e36a952c9115e2586f9b36e5043086736668"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_result_v2.json",
+      "file_sha256": "d66f10b0cada90d8f20238d9286429c89289a17550fed713be68d9243bd54e5a"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_protocol_audit_v1.json",
+      "file_sha256": "d519167984103edc21d3748e0f86e64c726335dff2f1ca7a4ea20a429eda77ae"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_protocol_v1.json",
+      "file_sha256": "7c09685556eaecbb4b4d8b93c8a031200998e4e4261d3bf8a2baa7e0b503d3e4"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_audit_v1.json",
+      "file_sha256": "0151d680208341673edf49bf0c5b4bf573e6bedfd1546a990da966b399518b1c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_v1.json",
+      "file_sha256": "518ae10d31085a5aa79498b0552cfa7b55334d05c609471a6dad47b2fb321740"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_audit_v1.json",
+      "file_sha256": "e64615314acae1f5e2658d7ca03c6a43720885a3c777000924af691f49cc9131"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_protocol_v1.json",
+      "file_sha256": "676f189b1a8df713b8704ba4eaa3c7c5627790d9bff2bed86b8e756624c1c93f"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_audit_v2.json",
+      "file_sha256": "07cbe45b2d8c4792e435d759ea5c011753849d6343f40bef73d81834731b8792"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_v2.json",
+      "file_sha256": "b96a57ea99c0b1bb1aef3fcf7b534afe9821e9687583813ab4a64b5f849323d9"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "227ce5158b1ba174d1f5cfd1e85d2e4b5d7bacc7196627a1385c89cb0118a26b",
+  "charter_evidence_hash": "9e06088399d772ff9136456d01c76f44e1c13a3efbac0f5e0fbf3c218c5e8da0",
+  "charter_audit_evidence_hash": "72e0cbec8030d93339243df94726762eaef6bf407243639e5d119e40346d80e3",
+  "corrected_normalization_protocol_evidence_hash": "d8a6c5bf331c75a127e47f63c3e2f14c6d3a1292f9015666009da3a1b106bc95",
+  "corrected_normalization_protocol_audit_evidence_hash": "b664ae816c730550f7876aaba41c7090797b848bfdfeaf9c2c0fa420d36fff8c",
+  "corrected_normalization_execution_contract_evidence_hash": "9a374dc928e74d3708e587ed5e9eec436225dc560f35d62b036c277a69779477",
+  "corrected_normalization_execution_contract_audit_evidence_hash": "bec0bd3756616fe3161b74f18318111dc0d9a4bd55365c9af65114f552f8ced6",
+  "corrected_normalization_result_evidence_hash": "a205e0759b235fae0810ae9203afa4dd81087f52ce782cd4e8c00c670fdd45a5",
+  "corrected_normalization_result_audit_evidence_hash": "d0d66d194c6136164999341f5e044bf60d8f2e7b585531a863ba599d54254648",
+  "history_dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+  "history_dataset_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "source_cutoff_commit": "dc0395c5858a1d55239b82a834e5075cf2069219",
+  "github_cohort_created_at_cutoff": "2026-09-02T21:43:33.504800Z",
+  "normalized_pull_path": "data/evidence/datasets/s5_bitcoin_core_github_pulls_normalized_v2.jsonl",
+  "canonical_mapping_path": "data/evidence/datasets/s5_bitcoin_core_canonical_merge_mapping_v2.jsonl",
+  "target_resolution_path": "data/evidence/datasets/s5_bitcoin_core_target_resolution_v2.jsonl",
+  "accepted_coverage_path": "data/evidence/datasets/s5_bitcoin_core_accepted_source_coverage_v2.jsonl",
+  "unresolved_merge_path": "data/evidence/datasets/s5_bitcoin_core_unresolved_git_merges_v2.jsonl",
+  "input_paths": [
+    "data/evidence/datasets/s5_bitcoin_core_github_pulls_normalized_v2.jsonl",
+    "data/evidence/datasets/s5_bitcoin_core_canonical_merge_mapping_v2.jsonl",
+    "data/evidence/datasets/s5_bitcoin_core_target_resolution_v2.jsonl",
+    "data/evidence/datasets/s5_bitcoin_core_accepted_source_coverage_v2.jsonl",
+    "data/evidence/datasets/s5_bitcoin_core_unresolved_git_merges_v2.jsonl"
+  ],
+  "input_file_sha256s": [
+    "1075bcd84b27a8408c26d9beab481b7b6df762a922267e57bae05a1725ee5888",
+    "e13d5aba80bcb688abf004fc8813dfd81a3083c1bc295859267b9baac001e564",
+    "6e11c4183adfde890d3188a6ae20bdce1700faf3651e76f2b0975051a0968bd2",
+    "5975b299d2b6e291ac1961038e067150372846d4d54e11a84ca5405781b3627c",
+    "992c21f70d99e1243296d851b836119ff7825cd54574ac98ef32f65bf0a66de8"
+  ],
+  "input_row_counts": [
+    24398,
+    16242,
+    194,
+    16279,
+    479
+  ],
+  "input_row_manifest_evidence_hashes": [
+    "8322a392190b090d656e5bca6a07b07712aff650cf0630336893eebda2dc27bb",
+    "f2258f31f962eca23a0954f5b6fd3f91605d884af2697a8818ad52ac6ef737f7",
+    "c7ec6e975596d509d633a8b1f1a6ac4baac731a3d2b73d2fbdcf5f7b125b5b93",
+    "cc4733623e3d000495af0e9c2c767e76fca353eba9d367399a023b64beb98d8b",
+    "0aefeb2063b45c2fbd852ca76c4460e0ac88562fb454b2de3ada7f196fd082ab"
+  ],
+  "event_universes": [
+    {
+      "universe_id": "SOURCE_VERIFIED_ACCEPTED_GITHUB_PULLS",
+      "role": "PRIMARY",
+      "row_count": 16271,
+      "event_key": "PULL_NUMBER",
+      "event_time": "GITHUB_MERGED_AT",
+      "source_link_required": true,
+      "canonical_owner_required": false,
+      "many_to_one_policy": "COUNT_PULL_EVENTS_AND_REPORT_DISTINCT_SOURCE_COMMITS_SEPARATELY",
+      "eligible_for_primary_measurement": true
+    },
+    {
+      "universe_id": "ALL_ACCEPTED_GITHUB_PULLS_SENSITIVITY",
+      "role": "SENSITIVITY",
+      "row_count": 16279,
+      "event_key": "PULL_NUMBER",
+      "event_time": "GITHUB_MERGED_AT",
+      "source_link_required": false,
+      "canonical_owner_required": false,
+      "many_to_one_policy": "COUNT_PULL_EVENTS_AND_REPORT_DISTINCT_SOURCE_COMMITS_SEPARATELY",
+      "eligible_for_primary_measurement": false
+    },
+    {
+      "universe_id": "CANONICAL_FIRST_PARENT_INTEGRATIONS",
+      "role": "CORROBORATION",
+      "row_count": 16242,
+      "event_key": "MERGE_COMMIT_SHA",
+      "event_time": "SOURCE_LABELED_CANONICAL_EVENT_AT",
+      "source_link_required": true,
+      "canonical_owner_required": true,
+      "many_to_one_policy": "COUNT_EACH_CANONICAL_FIRST_PARENT_MERGE_ONCE",
+      "eligible_for_primary_measurement": false
+    }
+  ],
+  "many_to_one_pull_groups": [
+    [
+      25882,
+      25891
+    ],
+    [
+      26081,
+      26084
+    ]
+  ],
+  "measurement_frequency": "MONTHLY",
+  "month_boundary_policy": "UTC_CALENDAR_MONTH_START_INCLUSIVE_END_EXCLUSIVE",
+  "measurement_period_start_month": "2009-01-01",
+  "measurement_period_end_exclusive": "2026-09-01",
+  "expected_measurement_month_count": 212,
+  "incomplete_month_policy": "EXCLUDE",
+  "post_month_availability_lag_days": 7,
+  "measurement_availability_policy": "MONTH_END_EXCLUSIVE_PLUS_SEVEN_CALENDAR_DAYS_AT_00_00_UTC",
+  "primary_event_time_policy": "GITHUB_MERGED_AT_ONLY",
+  "canonical_event_time_policy": "GITHUB_MERGED_AT_ELSE_GIT_COMMITTER_AT_WITH_SOURCE_LABEL",
+  "forbidden_event_time_fields": [
+    "created_at",
+    "closed_at",
+    "updated_at",
+    "git_author_at"
+  ],
+  "actor_identity_key_policy": "GITHUB_NUMERIC_ACTOR_ID_ONLY_NEVER_LOGIN_OR_CURRENT_MAILMAP",
+  "actor_output_privacy_policy": "PERSIST_COUNTS_AND_SORTED_ID_MANIFEST_HASHES_ONLY",
+  "unknown_actor_lower_bound_policy": "KNOWN_HUMAN_OR_UNRESOLVED_DISTINCT_ACTOR_IDS_ONLY",
+  "unknown_actor_upper_bound_policy": "KNOWN_HUMAN_OR_UNRESOLVED_DISTINCT_ACTOR_IDS_PLUS_UNKNOWN_EVENT_COUNT",
+  "bot_policy": "REPORT_DISTINCT_KNOWN_BOT_ACTOR_IDS_SEPARATELY",
+  "component_diff_policy": "DIFF_EACH_CANONICAL_MERGE_FIRST_PARENT_TO_MERGE_WITH_RENAMES_DISABLED",
+  "component_path_policy": "ROOT_FOR_NO_SLASH_SRC_SECOND_DIRECTORY_ELSE_SRC_ROOT_OTHERWISE_FIRST_SEGMENT",
+  "component_key_rules": [
+    "NO_SLASH_PATH_TO_ROOT",
+    "SRC_WITH_AT_LEAST_THREE_SEGMENTS_TO_SRC_SLASH_SECOND_SEGMENT",
+    "OTHER_SRC_PATH_TO_SRC_ROOT",
+    "NON_SRC_PATH_WITH_SLASH_TO_FIRST_SEGMENT"
+  ],
+  "component_path_separator": "/",
+  "component_invalid_path_policy": "REJECT_ENTIRE_RUN",
+  "stable_release_tag_regex": "^refs/tags/v(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)(?:\\.(?:0|[1-9][0-9]*))?$",
+  "release_reachability_policy": "PEELED_COMMIT_MUST_BE_ANCESTOR_OF_SOURCE_CUTOFF_COMMIT",
+  "release_event_time_policy": "ANNOTATED_TAGGER_AT_ELSE_LIGHTWEIGHT_PEELED_COMMIT_COMMITTER_AT_WITH_SOURCE_LABEL",
+  "release_signature_states": [
+    "SIGNED_ANNOTATED_SIGNATURE_PRESENT_NOT_VERIFIED",
+    "ANNOTATED_UNSIGNED",
+    "LIGHTWEIGHT_UNVERIFIED"
+  ],
+  "release_continuity_candidate_feature_eligible": false,
+  "review_continuity_candidate_feature_eligible": false,
+  "review_event_records_acquired": 0,
+  "measurement_definitions": [
+    {
+      "measurement_id": "primary_source_verified_accepted_pull_count",
+      "formula": "COUNT_PRIMARY_PULL_NUMBER_WITH_GITHUB_MERGED_AT_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "PRIMARY_ACCEPTED",
+      "candidate_feature_eligible": true
+    },
+    {
+      "measurement_id": "primary_distinct_local_source_commit_count",
+      "formula": "COUNT_DISTINCT_PRIMARY_LOCAL_SOURCE_COMMIT_SHA_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "PRIMARY_ACCEPTED",
+      "candidate_feature_eligible": true
+    },
+    {
+      "measurement_id": "primary_many_to_one_excess_count",
+      "formula": "PRIMARY_ACCEPTED_COUNT_MINUS_DISTINCT_LOCAL_SOURCE_COMMIT_COUNT",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "PRIMARY_ACCEPTED",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "all_accepted_pull_count",
+      "formula": "COUNT_ALL_ACCEPTED_PULL_NUMBER_WITH_GITHUB_MERGED_AT_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "ALL_ACCEPTED_SENSITIVITY",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "source_unverified_accepted_pull_count",
+      "formula": "COUNT_ALL_ACCEPTED_EVENTS_WITH_LOCAL_SOURCE_LINK_VERIFIED_FALSE_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "ALL_ACCEPTED_SENSITIVITY",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "canonical_integration_count",
+      "formula": "COUNT_DISTINCT_CANONICAL_MERGE_COMMIT_SHA_WITH_EVENT_AT_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "CANONICAL_INTEGRATION",
+      "candidate_feature_eligible": true
+    },
+    {
+      "measurement_id": "canonical_github_time_count",
+      "formula": "COUNT_CANONICAL_EVENTS_WITH_EVENT_TIME_SOURCE_GITHUB_MERGED_AT_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "CANONICAL_INTEGRATION",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "canonical_git_fallback_time_count",
+      "formula": "COUNT_CANONICAL_EVENTS_WITH_EVENT_TIME_SOURCE_GIT_COMMITTER_AT_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "CANONICAL_INTEGRATION",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "known_human_or_unresolved_actor_count",
+      "formula": "COUNT_DISTINCT_PRIMARY_ACTOR_ID_CLASS_HUMAN_OR_UNRESOLVED_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "PRIMARY_ACCEPTED",
+      "candidate_feature_eligible": true
+    },
+    {
+      "measurement_id": "unknown_actor_event_count",
+      "formula": "COUNT_PRIMARY_EVENTS_WITH_ACTOR_IDENTITY_STATUS_UNKNOWN_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "PRIMARY_ACCEPTED",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "human_contributor_lower_bound",
+      "formula": "KNOWN_HUMAN_OR_UNRESOLVED_DISTINCT_ACTOR_COUNT",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "PRIMARY_ACCEPTED",
+      "candidate_feature_eligible": true
+    },
+    {
+      "measurement_id": "human_contributor_upper_bound",
+      "formula": "KNOWN_HUMAN_OR_UNRESOLVED_COUNT_PLUS_UNKNOWN_ACTOR_EVENT_COUNT",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "PRIMARY_ACCEPTED",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "known_bot_actor_count",
+      "formula": "COUNT_DISTINCT_PRIMARY_ACTOR_ID_CLASS_BOT_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "PRIMARY_ACCEPTED",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "canonical_component_key_count",
+      "formula": "COUNT_DISTINCT_FROZEN_COMPONENT_KEYS_TOUCHED_BY_CANONICAL_INTEGRATIONS_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "CANONICAL_INTEGRATION",
+      "candidate_feature_eligible": true
+    },
+    {
+      "measurement_id": "unresolved_git_merge_count",
+      "formula": "COUNT_UNRESOLVED_GIT_MERGES_BY_GIT_COMMITTER_AT_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "UNRESOLVED_GIT_MERGE",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "stable_release_tag_count",
+      "formula": "COUNT_REACHABLE_EXACT_STABLE_NAME_TAG_EVENTS_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "OFFICIAL_STABLE_TAG",
+      "candidate_feature_eligible": false
+    },
+    {
+      "measurement_id": "signed_annotated_stable_release_tag_count",
+      "formula": "COUNT_REACHABLE_STABLE_ANNOTATED_TAG_EVENTS_WITH_SIGNATURE_PRESENT_IN_MONTH",
+      "output_type": "NONNEGATIVE_INTEGER",
+      "source_universe": "OFFICIAL_STABLE_TAG",
+      "candidate_feature_eligible": false
+    }
+  ],
+  "measurement_definition_count": 17,
+  "output_path": "data/evidence/s5_accepted_development_monthly_measurements_v1.jsonl",
+  "output_fields": [
+    "sequence",
+    "month_start",
+    "month_end_exclusive",
+    "measurement_available_at",
+    "primary_source_verified_accepted_pull_count",
+    "primary_distinct_local_source_commit_count",
+    "primary_many_to_one_excess_count",
+    "all_accepted_pull_count",
+    "source_unverified_accepted_pull_count",
+    "canonical_integration_count",
+    "canonical_github_time_count",
+    "canonical_git_fallback_time_count",
+    "known_human_or_unresolved_actor_count",
+    "unknown_actor_event_count",
+    "human_contributor_lower_bound",
+    "human_contributor_upper_bound",
+    "known_bot_actor_count",
+    "canonical_component_key_count",
+    "unresolved_git_merge_count",
+    "stable_release_tag_count",
+    "signed_annotated_stable_release_tag_count",
+    "primary_event_manifest_evidence_hash",
+    "canonical_event_manifest_evidence_hash",
+    "component_key_manifest_evidence_hash",
+    "release_tag_manifest_evidence_hash",
+    "source_normalization_result_evidence_hash"
+  ],
+  "forbidden_output_fields": [
+    "btc_open",
+    "btc_high",
+    "btc_low",
+    "btc_close",
+    "btc_volume",
+    "btc_return",
+    "forward_return",
+    "benchmark_return",
+    "threshold",
+    "signal",
+    "position",
+    "pnl",
+    "candidate_id",
+    "actor_id",
+    "actor_login"
+  ],
+  "serialization_policy": "UTF8_JSONL_SORTED_KEYS_COMPACT_LF_TERMINATED_SHA256",
+  "arithmetic_policy": "NONNEGATIVE_INTEGER_COUNTS_AND_SECONDS_NO_FLOAT",
+  "maximum_local_git_processes_for_future_runner": 4,
+  "maximum_future_runner_seconds": 1800,
+  "maximum_future_output_bytes": 16777216,
+  "future_network_request_budget": 0,
+  "quality_gates": [
+    "ALL_TWENTY_FIVE_SOURCE_BINDINGS_MATCH",
+    "CORRECTED_NORMALIZATION_RESULT_AND_INDEPENDENT_AUDIT_PASS",
+    "ALL_FIVE_INPUT_FILE_AND_ROW_MANIFEST_HASHES_MATCH",
+    "PRIMARY_SOURCE_VERIFIED_ACCEPTED_UNIVERSE_IS_EXACTLY_16271",
+    "ALL_ACCEPTED_SENSITIVITY_UNIVERSE_IS_EXACTLY_16279_WITH_EIGHT_UNVERIFIED",
+    "CANONICAL_FIRST_PARENT_UNIVERSE_IS_EXACTLY_16242",
+    "EVENT_UNIVERSES_REMAIN_SEPARATE_AND_MANY_TO_ONE_LINKS_REMAIN_VISIBLE",
+    "ONLY_COMPLETE_UTC_MONTHS_THROUGH_2026_08_ARE_EMITTED",
+    "SEVEN_DAY_POST_MONTH_AVAILABILITY_LAG_IS_APPLIED",
+    "AUTHOR_AND_UPDATED_TIMESTAMPS_ARE_FORBIDDEN_AS_EVENT_TIME",
+    "ACTOR_IDENTITY_USES_ACCOUNT_ID_WITH_EXPLICIT_UNKNOWN_BOUNDS",
+    "OUTPUT_CONTAINS_COUNTS_AND_HASHED_MANIFESTS_NOT_ACTOR_IDENTIFIERS",
+    "COMPONENT_KEYS_USE_FIRST_PARENT_DIFFS_AND_FROZEN_PATH_RULES",
+    "STABLE_RELEASE_TAG_SHAPE_REACHABILITY_TYPE_AND_SIGNATURE_STATE_ARE_PRESERVED",
+    "UNVERIFIED_RELEASE_AND_REVIEW_CONTINUITY_CANNOT_BECOME_CANDIDATE_FEATURES",
+    "INTEGER_COUNTS_AND_SECONDS_ONLY_WITH_NO_FLOAT_ARITHMETIC",
+    "JSONL_ROWS_ARE_ORDERED_UNIQUE_AND_BYTE_REPRODUCIBLE",
+    "ANY_INPUT_SCHEMA_HASH_COUNT_TIME_OR_GIT_MISMATCH_STOPS_THE_RUN",
+    "ZERO_NETWORK_MARKET_VALUES_RETURNS_CANDIDATES_SIGNALS_OR_ORDERS"
+  ],
+  "source_jsonl_rows_parsed_during_freeze": 0,
+  "git_processes_executed_during_freeze": 0,
+  "network_requests_executed_during_freeze": 0,
+  "market_values_read_during_freeze": 0,
+  "exact_parameters_defined": [],
+  "strategy_rules_defined": [],
+  "future_strategy_family_budget": 1,
+  "future_candidate_budget": 1,
+  "future_parameter_combination_budget": 1,
+  "future_parameter_search_policy": "NO_OUTCOME_DRIVEN_METRIC_THRESHOLD_WINDOW_OR_RULE_SEARCH",
+  "authorizes_measurement_runner_implementation": true,
+  "authorizes_measurement_execution_now": false,
+  "authorizes_repository_mutation": false,
+  "authorizes_network_requests": false,
+  "authorizes_market_value_access": false,
+  "authorizes_return_testing": false,
+  "authorizes_strategy_parameter_definition": false,
+  "authorizes_strategy_candidate": false,
+  "authorizes_signal_generation": false,
+  "authorizes_pine": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "decision": "FREEZE_S5_ACCEPTED_DEVELOPMENT_MEASUREMENT_PROTOCOL",
+  "next_authorization": "AUTHORIZE_S5_ACCEPTED_DEVELOPMENT_MEASUREMENT_RUNNER_IMPLEMENTATION_ONLY",
+  "limitations": [
+    "A measurement pass cannot create a strategy, signal, position, or order.",
+    "All historical repository and BTC periods are outcome-aware and nonqualifying.",
+    "Eight accepted GitHub events lack verified local source inclusion.",
+    "Historical GitHub metadata is a current snapshot, not a revision-time archive.",
+    "Identity aliases are not retroactively merged with a current mailmap.",
+    "Monthly counts can reflect governance workflow changes rather than economic demand.",
+    "No GitHub review-event history has been acquired, so review continuity is ineligible.",
+    "No market value or return may be read while building or executing measurements.",
+    "Prospective validation and future holdout remain sealed.",
+    "Qualified strategies, trading authority, and real net profit remain zero.",
+    "Release continuity remains candidate-ineligible until signer identity is proven.",
+    "Release signature presence is not cryptographic signature verification.",
+    "Source-component breadth measures touched path groups, not code quality or impact.",
+    "The 479 unresolved first-parent merges remain an explicit coverage limitation.",
+    "The seven-day availability lag is conservative and not evidence of optimality.",
+    "Two many-to-one source-link groups require separate event and commit counts."
+  ],
+  "protocol_evidence_hash": "0d4f9dbc73675a0e625971a9a53181bcd4a2b707ebe02f01a28edfc4c65478d0"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "aurex-v3-p03-source-audit-transport-amendment-v1",
+  "amendment_id": "v3-p03-source-audit-transport-amendment-v1",
+  "amendment_version": "1.0.0",
+  "frozen_at": "2026-07-28T16:46:34.181979Z",
+  "status": "FROZEN_AFTER_TRANSPORT_FAILURE_BEFORE_SOURCE_CONTENT",
+  "original_contract_evidence_hash": "f52a3169b60d404033a7a41c24ef8df556d614e8975002035744153134040f7e",
+  "builder_contract_hash": "60693fd326f941576ed61c37537dbdc01d294007d8fdd662f925e57504177fcc",
+  "trigger_source_id": "BINANCE_USDM_ACCOUNT_REST_SCHEMA",
+  "trigger_observation": "HTTP_202_SCHEMA_GENERATION_PENDING_ABORTED_FIRST_RUN",
+  "failed_attempt_authoritative_result_created": false,
+  "source_targets_changed": false,
+  "source_substitution_permitted": false,
+  "qualification_rule_changed": false,
+  "decision_rule_changed": false,
+  "market_value_permissions_changed": false,
+  "permitted_trigger_http_statuses": [
+    200,
+    202
+  ],
+  "maximum_pending_polls": 3,
+  "pending_poll_backoff_seconds": [
+    2,
+    5,
+    10
+  ],
+  "amended_maximum_http_requests": 8,
+  "terminal_success_http_status": 200,
+  "exhausted_pending_action": "ABORT_WITHOUT_AUTHORITATIVE_RESULT",
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_live_eligibility": false,
+  "limitations": [
+    "A terminal HTTP 200 remains mandatory before schema content can be captured or classified.",
+    "No credential, market value, strategy outcome, source substitution, candidate, paper, sandbox, live, or capital permission is added.",
+    "Only the exact schema target may return HTTP 202 and receive up to three bounded follow-up polls.",
+    "Pending-status exhaustion aborts without a partial authoritative result and cannot be treated as a passing source observation.",
+    "The first formal run stopped after the schema target returned HTTP 202 and created no authoritative source-audit result.",
+    "This amendment changes transport polling only; all five source targets and all eight qualification requirements remain unchanged."
+  ],
+  "amendment_evidence_hash": "e94f7576ce132fd3389311d467af605ce9e0ec438e61b151ab08e844b386c6ec"
+}

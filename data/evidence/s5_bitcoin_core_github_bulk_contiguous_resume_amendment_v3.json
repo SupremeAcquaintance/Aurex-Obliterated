@@ -1,0 +1,69 @@
+{
+  "schema_version": "aurex-s5-github-bulk-contiguous-resume-amendment-v3",
+  "amendment_id": "s5-github-bulk-contiguous-resume-amendment-v3",
+  "frozen_at": "2026-09-03T13:54:09.740356Z",
+  "status": "FROZEN_CONTIGUOUS_RESUME_AMENDMENT_ZERO_NETWORK",
+  "builder_contract_hash": "7549990e1e23663a5f4f96d79ec120a8125a5fdb61e0e67110089a4ca8e29e2d",
+  "suspension_failure_audit_evidence_hash": "925d5edb0a719596977699b8d549ccef4029fe5bdbc3aa3ff184d0f001be1841",
+  "prior_result_evidence_hash": "1ea0cbe722ee25db4b766e3c955f0fcb2b3ff42ef8d91de35894f3e659275f85",
+  "protocol_evidence_hash": "ee1564712af978eddd0081fe7ede7fb19dd275fc2f04e7a19306160f8b3174f5",
+  "response_amendment_evidence_hash": "b5788d7ff5c2aa582a228625dd9dcd8dbc2a20a263e598f7b146ae8a683c7499",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_v1.json",
+      "file_sha256": "2a3c084d57223628228e895f584bc4cb0f7bdf85e52155c4257b9c6a22e79330"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v2.json",
+      "file_sha256": "ecac60bb6c8f630b9f13ffa0bae363d106b2d7c37812cc9765b9c4cb7a111c59"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_suspension_failure_audit_v2.json",
+      "file_sha256": "8f858d672eaf55680a2319109dc774ec1468e73e8cc856bff4ada755cdce09df"
+    },
+    {
+      "path": "data/evidence/s5_github_pull_metadata_bulk_v1/failure_v2_page_0118.json",
+      "file_sha256": "51a4a21b7784fa0831a48a2cdc10709e251315d952659ad5f887775755497403"
+    }
+  ],
+  "preserved_page_first": 1,
+  "preserved_page_last": 117,
+  "resume_page": 118,
+  "terminal_page": 244,
+  "preserved_record_count": 11700,
+  "previous_total_request_attempts": 118,
+  "maximum_total_request_attempts": 300,
+  "maximum_resume_request_attempts": 182,
+  "minimum_requests_required_to_terminal_page": 127,
+  "new_process_elapsed_clock_permitted": true,
+  "original_run_elapsed_bound_seconds": 43200,
+  "protocol_evidence_hash_unchanged": true,
+  "cohort_cutoff_unchanged": true,
+  "endpoint_query_headers_unchanged": true,
+  "page_schema_and_hash_rules_unchanged": true,
+  "pagination_and_rate_rules_unchanged": true,
+  "one_attempt_per_remaining_page_unchanged": true,
+  "credential_access_permitted": false,
+  "market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "candidates_permitted": false,
+  "orders_permitted": false,
+  "decision": "RESUME_FROM_PAGE_118_WITH_NEW_PROCESS_CLOCK_AND_UNCHANGED_COHORT",
+  "next_authorization": "RUN_S5_GITHUB_METADATA_BULK_ACQUISITION_V3_ONCE_RESUMABLE",
+  "limitations": [
+    "A completed transport still cannot establish reliable profit.",
+    "At most 182 new requests may execute in the resumed process.",
+    "No BTC value, parameter, return, candidate, signal, or order is permitted.",
+    "No automatic retry, credential, proxy, redirect, or concurrency is introduced.",
+    "No paper, Testnet strategy, production, live, or real-capital authority exists.",
+    "No prior successful page may be overwritten or requested again.",
+    "Only a contiguous resume at page 118 is authorized.",
+    "Pages 1 through 117 must reverify before any new request.",
+    "Source completeness and predictive edge remain unadjudicated.",
+    "The endpoint, query, headers, body limits, and page schema are unchanged.",
+    "The new elapsed clock does not alter the frozen cohort cutoff.",
+    "The prior 118 request attempts remain charged to the 300 ceiling."
+  ],
+  "amendment_evidence_hash": "af1524f5ed40d588878aafb5f09e18b1b1164426ae93c1687b6cf80a42b59ffc"
+}

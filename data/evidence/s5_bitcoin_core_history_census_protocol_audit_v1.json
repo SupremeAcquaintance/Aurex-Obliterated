@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-s5-bitcoin-core-history-census-protocol-audit-v1",
+  "audit_id": "s5-bitcoin-core-history-census-protocol-audit-v1",
+  "audited_at": "2026-09-02T14:56:51.704463Z",
+  "protocol_path": "data/evidence/s5_bitcoin_core_history_census_protocol_v1.json",
+  "protocol_file_sha256": "7c09685556eaecbb4b4d8b93c8a031200998e4e4261d3bf8a2baa7e0b503d3e4",
+  "protocol_evidence_hash": "2dc3d2a7fb4696881b3c82d024b8e96f420c0676e2d2b0f0f55cc7a0f9c6c0ba",
+  "builder_contract_hash": "a48bbc724e9f5eddecd8690735f5a6fa7ede43daad8e217dd912ea069ee0e3e5",
+  "auditor_contract_hash": "ae9790fbd86ca1b5d63f8d1c8ac3dca594d832c3cc696d2b2221d336a9ea0093",
+  "reconstructed_exactly": true,
+  "source_binding_count": 11,
+  "gate_count": 13,
+  "message_pattern_count": 2,
+  "local_git_processes_observed": 0,
+  "commit_objects_parsed": 0,
+  "github_api_requests_observed": 0,
+  "market_values_read": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_BITCOIN_CORE_HISTORY_CENSUS_PROTOCOL_AUDIT",
+  "next_authorization": "RUN_S5_BITCOIN_CORE_HISTORY_COMPLETENESS_CENSUS_ONCE",
+  "audit_evidence_hash": "e484d4c319e0e2a0774009c7b12ba6ec333c0b64c5f189e111809d99f66fe95e"
+}

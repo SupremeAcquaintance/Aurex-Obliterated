@@ -1,0 +1,40 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-payload-transport-amendment-v1",
+  "amendment_id": "q1-periodic-flow-payload-transport-amendment-v1",
+  "frozen_at": "2026-08-07T08:24:59.695676Z",
+  "status": "FROZEN_AFTER_LOCAL_TRANSPORT_DENIAL_BEFORE_HTTP",
+  "parent_protocol_file_sha256": "5f34439365293a023e54d816b752380478e3a00df19755dd190231b0ef2d41af",
+  "parent_protocol_evidence_hash": "f2a6df06336a96050421c449e48a9c8c06aef871b97e73c280a3309c90ca43cc",
+  "failed_product": "SPOT",
+  "local_transport_request_marker_count": 3,
+  "local_transport_response_marker_count": 3,
+  "http_response_count": 0,
+  "payload_bytes_received": 0,
+  "archive_files_created": 0,
+  "marker_file_sha256": {
+    "data/evidence/source_snapshots/q1_periodic_flow_payload_pilot_v1/SPOT/BTCUSDT-aggTrades-2020-01.zip.get.01.request.json": "f17eb45dec6bba729784e4503052e40e35ae563d14cdfe570084cab410bfa5b4",
+    "data/evidence/source_snapshots/q1_periodic_flow_payload_pilot_v1/SPOT/BTCUSDT-aggTrades-2020-01.zip.get.01.response.json": "e5c72585d41be2c3b23fcb0697dc6f6ddd7036895d59de005da6c661fda6e254",
+    "data/evidence/source_snapshots/q1_periodic_flow_payload_pilot_v1/SPOT/BTCUSDT-aggTrades-2020-01.zip.get.02.request.json": "a753ea4b5cec0f0fc31c235b99a54762d9035a090e1d8c4c86ee55ca3b22122c",
+    "data/evidence/source_snapshots/q1_periodic_flow_payload_pilot_v1/SPOT/BTCUSDT-aggTrades-2020-01.zip.get.02.response.json": "03045768f30db73792be0c31a5aaeb701fa08969e54960839c71618622bbf91b",
+    "data/evidence/source_snapshots/q1_periodic_flow_payload_pilot_v1/SPOT/BTCUSDT-aggTrades-2020-01.zip.get.03.request.json": "5a30a5cc6f956244b15940d5c18a103eb8cb186e37e2654cef3bdea5248ec7a5",
+    "data/evidence/source_snapshots/q1_periodic_flow_payload_pilot_v1/SPOT/BTCUSDT-aggTrades-2020-01.zip.get.03.response.json": "e3a0120d2dd4d4dc61aa2a0b13ee4a8a11454403a6e3fc5c0053e48e350f00a8"
+  },
+  "reclassifies_markers_as_pre_http_transport_denials": true,
+  "replacement_spot_http_attempts_authorized": 3,
+  "maximum_total_actual_payload_get_attempts": 6,
+  "original_urls_unchanged": true,
+  "original_checksums_unchanged": true,
+  "original_byte_limits_unchanged": true,
+  "original_parser_and_gates_unchanged": true,
+  "outcome_and_trading_authority_unchanged": true,
+  "limitations": [
+    "Archive URLs, published checksums, byte limits, parser, and gates are unchanged.",
+    "No HTTP response, redirect, payload byte, archive, or source observation occurred.",
+    "No outcome, candidate, Pine, paper, strategy-order, production, or live authority is created.",
+    "The USD-M attempt budget and total six actual HTTP-attempt limit are unchanged.",
+    "The amendment addresses local transport only and says nothing about source feasibility.",
+    "The amendment recognizes only the six frozen zero-byte Spot marker files.",
+    "The same three-attempt Spot HTTP budget is restored exactly once."
+  ],
+  "amendment_evidence_hash": "e5d4c2ab74975ba9aeed754c767f7bc67c11468646ded77f87e980f623a662bd"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "aurex-jam-archive-metadata-census-audit-v1",
+  "audited_at": "2026-08-01T06:07:00.200861Z",
+  "result_path": "data/evidence/jam_archive_metadata_census_result_v1.json",
+  "result_file_sha256": "5a998bc2ff7b778c7c6052a297114d0d490314bff1d47b779d24abf46aeb5102",
+  "result_evidence_hash": "e673175638469d2b0d6133678b9749742c361981703cd89bd4f271ab06a0451e",
+  "contract_evidence_hash": "3670f121f303bf39a17dbc7b057bde913e30252687139046ae4785269f4e8302",
+  "target_manifest_hash": "8eddad0f88511872596f51634448451ab6406c978118c9c3e341b14ddd13dcc9",
+  "record_count": 96,
+  "unique_checksum_url_count": 96,
+  "checksum_get_attempt_count": 96,
+  "checksum_response_bytes": 8785,
+  "archive_head_requests_made": 0,
+  "archive_payload_requests_made": 0,
+  "archive_payload_bytes_received": 0,
+  "redirects_followed": 0,
+  "market_numeric_values_inspected": false,
+  "coverage_complete": true,
+  "decision": "PASS_METADATA_COVERAGE_AWAIT_SEPARATE_PAYLOAD_PILOT_AUTHORIZATION",
+  "audit_evidence_hash": "3f57bd2fb843059606bf32a284db0cc15e58c436115a922073b0c862aaaabfcb"
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "aurex-s5-release-tag-source-remediation-result-v1",
+  "result_id": "s5-release-tag-source-remediation-result-v1",
+  "started_at": "2026-09-08T21:44:24.726394Z",
+  "completed_at": "2026-09-08T21:44:35.739660Z",
+  "elapsed_seconds": 11.013266,
+  "protocol_evidence_hash": "150f4a354b26125f47bbb425be53492943ec8eca1e276adf01f17cf3043389c9",
+  "protocol_audit_evidence_hash": "e43ffcf2ed8b8bb01aacf78f30543327ba902ea69efff7af9c70545eb39c1c34",
+  "execution_contract_evidence_hash": "f7ed8856f45c6e0092761042395aa1ab8e4de3631d3d5f5af182d5dcd7640dd5",
+  "execution_contract_audit_evidence_hash": "f532059a77d8899ed7d31fe0136d2f4d6e672e77bfed7d42c3f3f8e34f4fd155",
+  "runner_contract_hash": "b0cbc6b38ca9fb854c12bd4b974d9651bc9b1d6543f7306a6e324a4b7db4f9ef",
+  "original_history_dataset_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "original_history_dataset_unchanged": true,
+  "destination_copy_completed": true,
+  "destination_prefetch_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "destination_final_directory_sha256": "6e7cd0a147cb9ae26237fa1e4bac6b13c2c52295b264ed0f543d0d626b99e7e4",
+  "destination_initial_byte_count": 77762990,
+  "destination_final_byte_count": 77764811,
+  "destination_growth_bytes": 1821,
+  "transcript_paths": [
+    "data/evidence/s5_release_tag_source_responses_v1/01_ls_remote_tags.json",
+    "data/evidence/s5_release_tag_source_responses_v1/02_reachable_commits.json",
+    "data/evidence/s5_release_tag_source_responses_v1/03_fetch_tags.json",
+    "data/evidence/s5_release_tag_source_responses_v1/04_verify_tags.json"
+  ],
+  "transcript_file_sha256s": [
+    "d9908533fc396defd4c93dbb55d0445b1a46011de3cc2b5ab5b1b2154fc6c4fb",
+    "73f37ddca276546c239b99043026fc9801b40743b67edbd803b624216d41eadb",
+    "a2397f35a51a6e49d04288d091b8cb992e9e3b97637e904234444a0e08548f6b",
+    "9687bac08745f43e3eaf6fb925fe923836041643559803ccee9bd36b8485c28b"
+  ],
+  "process_count": 4,
+  "local_process_count": 2,
+  "network_process_count": 2,
+  "remote_tag_ref_record_count": 691,
+  "reachable_commit_count": 50395,
+  "selected_stable_tag_count": 42,
+  "selected_annotated_tag_count": 14,
+  "selected_lightweight_tag_count": 28,
+  "selected_tag_manifest_evidence_hash": "3f0d5d8f4e5f5b8d4dd031afb105ebab22995da3a5d546fb58c0dcc399cfa24d",
+  "verified_tag_count": 42,
+  "remote_ref_drift_count": 0,
+  "gate_results": [
+    {
+      "gate_id": "ALL_ELEVEN_SOURCE_BINDINGS_MATCH",
+      "status": "PASS",
+      "evidence": "all eleven protocol source bindings and execution bindings matched"
+    },
+    {
+      "gate_id": "MEASUREMENT_RESULT_REJECTION_AUDIT_IS_VALID_AND_TERMINAL",
+      "status": "PASS",
+      "evidence": "terminal rejection audit lineage matched"
+    },
+    {
+      "gate_id": "ORIGINAL_NO_TAGS_REPOSITORY_HASH_CONFIG_AND_PACKED_REFS_MATCH",
+      "status": "PASS",
+      "evidence": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90"
+    },
+    {
+      "gate_id": "ORIGINAL_EVIDENCE_REPOSITORY_IS_NEVER_MUTATED",
+      "status": "PASS",
+      "evidence": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90"
+    },
+    {
+      "gate_id": "DESTINATION_REPOSITORY_AND_TRANSCRIPT_PATHS_ARE_NEW",
+      "status": "PASS",
+      "evidence": "destination repository and four transcript paths were absent"
+    },
+    {
+      "gate_id": "OFFICIAL_BITCOIN_CORE_HTTPS_REMOTE_IS_EXACT",
+      "status": "PASS",
+      "evidence": "https://github.com/bitcoin/bitcoin.git"
+    },
+    {
+      "gate_id": "REMOTE_TAG_DISCOVERY_IS_CREDENTIAL_FREE_AND_BYTE_BOUNDED",
+      "status": "PASS",
+      "evidence": "691 remote tag records; transcript 979a72e37631b303473c5b85920c8b982f57ecd6d8c356b1b28ab5c47974f4c8"
+    },
+    {
+      "gate_id": "ONLY_EXACT_STABLE_TAG_NAMES_ARE_ELIGIBLE",
+      "status": "PASS",
+      "evidence": "42 exact stable-name refs selected"
+    },
+    {
+      "gate_id": "ANNOTATED_AND_LIGHTWEIGHT_TAG_IDENTITIES_ARE_UNAMBIGUOUS",
+      "status": "PASS",
+      "evidence": "base and peeled identities classified before fetch"
+    },
+    {
+      "gate_id": "PEELED_RELEASE_COMMIT_MUST_BE_REACHABLE_FROM_FROZEN_CUTOFF",
+      "status": "PASS",
+      "evidence": "all selected tags resolve within 50395 reachable commits"
+    },
+    {
+      "gate_id": "AT_MOST_500_EXACT_TAG_REFS_CAN_BE_FETCHED",
+      "status": "PASS",
+      "evidence": "42 exact refspecs"
+    },
+    {
+      "gate_id": "FETCHED_TAG_OBJECT_IDS_MUST_MATCH_DISCOVERY_EXACTLY",
+      "status": "PASS",
+      "evidence": "42 fetched tag refs matched discovery"
+    },
+    {
+      "gate_id": "ALL_NETWORK_AND_GIT_TRANSCRIPTS_ARE_HASH_PRESERVED",
+      "status": "PASS",
+      "evidence": "four process transcripts were atomically persisted"
+    },
+    {
+      "gate_id": "ANY_REF_DRIFT_SCHEMA_LIMIT_TIMEOUT_OR_COPY_MISMATCH_STOPS_THE_RUN",
+      "status": "PASS",
+      "evidence": "zero drift and all frozen limits held"
+    },
+    {
+      "gate_id": "ZERO_MARKET_VALUES_RETURNS_PARAMETERS_CANDIDATES_SIGNALS_OR_ORDERS",
+      "status": "PASS",
+      "evidence": "zero market, strategy, signal, and order operations"
+    },
+    {
+      "gate_id": "PASS_AUTHORIZES_AMENDED_MEASUREMENT_PROTOCOL_ONLY",
+      "status": "PASS",
+      "evidence": "FREEZE_S5_AMENDED_MEASUREMENT_PROTOCOL_ONLY"
+    }
+  ],
+  "passed_gate_count": 16,
+  "failed_gate_count": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "parameters_defined": 0,
+  "candidates_created": 0,
+  "signals_created": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_RELEASE_TAG_SOURCE_REMEDIATION",
+  "next_authorization": "FREEZE_S5_AMENDED_MEASUREMENT_PROTOCOL_ONLY",
+  "authorizes_amended_measurement_protocol": true,
+  "authorizes_market_values": false,
+  "authorizes_returns": false,
+  "authorizes_strategy_candidate": false,
+  "authorizes_signals": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "failure_type": null,
+  "failure_message": null,
+  "limitations": [
+    "A remediation pass repairs release-tag source availability only.",
+    "Fetched Git tags do not prove signer identity or signature validity.",
+    "Market values and returns were not read or calculated.",
+    "No strategy candidate, parameter, signal, or order was created.",
+    "Original no-tags evidence and rejected measurements remain immutable.",
+    "Production and live trading remain prohibited.",
+    "Qualified strategies and real net profit remain zero.",
+    "Release counts require a separately frozen amended measurement protocol."
+  ],
+  "result_evidence_hash": "33573936841b64dc1e553ff51413a3fca7b07379a59f0e101f07bcab6de454bd"
+}

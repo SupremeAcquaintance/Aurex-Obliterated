@@ -1,0 +1,19 @@
+{
+  "schema_version": "aurex-s1-nfci-normalization-protocol-audit-v1",
+  "audit_id": "s1-nfci-normalization-protocol-audit-v1",
+  "audited_at": "2026-08-26T19:51:38.897075Z",
+  "protocol_file_sha256": "3181b06646d1dfa45c9aa8186be1fa633537b98e79915d797be18c9124eaf10d",
+  "protocol_evidence_hash": "998b775e60aad081f421b80be678fd209348df149e8a7cc8f1f05b368e0f6041",
+  "builder_contract_hash": "139a44a62d666b16ebdf684a85cd861af5ba90e050399651e620468ca672f9f8",
+  "acquisition_result_evidence_hash": "4e94883da8e48c1dc6282370140084101f123dad2fd427dacee7708ee14c0c5f",
+  "acquisition_audit_evidence_hash": "f6669c6d80cd73f330a4d2c09a410e4eabb4b7628152bbd15636e12f13400ab1",
+  "input_manifest_evidence_hash": "ff86ad1d4e8d92f019b01c90e2a59067db9be605aedde4e7b8c419c89f5a4631",
+  "auditor_source_sha256": "c8658d8539b6ce018003a90a03daf5c786f18e815e747144f97ed2c309de567f",
+  "input_vintage_count": 281,
+  "raw_csv_files_opened": 0,
+  "source_value_rows_read": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_NFCI_NORMALIZATION_PROTOCOL_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_NFCI_DEVELOPMENT_NORMALIZATION_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "2ef0d3405e903c01cdbed8648c26a244c5878bd26bcb2532c5a7f80536d0d087"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-s2-onchain-settlement-charter-audit-v1",
+  "audit_id": "s2-onchain-settlement-charter-audit-v1",
+  "audited_at": "2026-08-27T07:21:56.203702Z",
+  "charter_path": "data/evidence/s2_onchain_settlement_charter_v1.json",
+  "charter_file_sha256": "c3ddfc3e985cf4737422f9ae452a4ad10499dc73f44c2be44e27176b9f086832",
+  "charter_evidence_hash": "77e61e9f01519d6b7b56aa2ce45d4689356120bb1a338ead9edce35ef18fe9b0",
+  "builder_contract_hash": "e6467e39a8b7c1d664e9090a6e8cd19279fb598275e52fe2575b7ae1d7663ff3",
+  "auditor_contract_hash": "396d29ef4c7fac3759fb0052d45ad950d3b6e70152959d9844da1767aee8b2cb",
+  "reconstructed_exactly": true,
+  "predecessor_binding_count": 8,
+  "research_source_count": 6,
+  "partition_count": 5,
+  "market_numeric_fields_inspected": [],
+  "blockchain_numeric_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "decision": "PASS_S2_CHARTER_RECONSTRUCTED_NO_OUTCOMES",
+  "next_authorization": "AUTHORIZE_S2_BIGQUERY_METADATA_AND_QUERY_COST_FEASIBILITY_ONLY",
+  "audit_evidence_hash": "88e82b6c0169e6e9f3f645cfadeeb8e3aac797f002e5c5f88cae9fe863746745"
+}

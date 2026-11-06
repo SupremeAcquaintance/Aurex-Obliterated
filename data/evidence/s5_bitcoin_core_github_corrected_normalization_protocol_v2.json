@@ -1,0 +1,294 @@
+{
+  "schema_version": "aurex-s5-github-corrected-normalization-protocol-v2",
+  "protocol_id": "s5-github-corrected-normalization-protocol-v2",
+  "frozen_at": "2026-09-08T17:17:15.830146Z",
+  "status": "FROZEN_CORRECTED_PROTOCOL_ZERO_EXECUTION",
+  "builder_contract_hash": "56a0a0a24a5a0f5e37a9c5ff2de9cc33c2fe0cf3bc8a772cfe74fa5b5c331086",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_execution_contract_audit_v1.json",
+      "file_sha256": "6f1066118b4532f789702a3afa597b466020c85570d354378549b9c80701d8d6"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_execution_contract_v1.json",
+      "file_sha256": "2dc4910b7c2aecd3ff1e9b4d8902e33b2e2ee68db377e966a780cc9e9791c0e9"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_failure_adjudication_protocol_audit_v1.json",
+      "file_sha256": "b15c75d43e9b1c5496b875ca6fecd9357095005b532fcb02adb64c17765d8554"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_failure_adjudication_protocol_v1.json",
+      "file_sha256": "0ffaa702210c77362a292f83a36c6915aed9c8c79de62baa5a914d87cde3353b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_failure_adjudication_result_audit_v1.json",
+      "file_sha256": "76c57d50691d311b1d1436e281be40d75e595ad5c7d7897b8aebe5e032cd6c37"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_failure_adjudication_result_v1.json",
+      "file_sha256": "a5499b9e0e97b67d33fdcb6611c1147090ef44288d1c2ad6042225dd02d6449e"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_protocol_audit_v1.json",
+      "file_sha256": "ad50041af31f3109995d8a36dcdd92ba6aed6b5ff4eb384ddda089b63fbc91cc"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_protocol_v1.json",
+      "file_sha256": "4e81bba7146bea45af5bfbc8b04b9d79f422219be0733672da41178ba69b663c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_normalization_result_v1.json",
+      "file_sha256": "cd9adaac46af2b033cf03e4d14138db25d4a016ceb7c7cbb3f7502d4a61e85cc"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_execution_contract_audit_v3.json",
+      "file_sha256": "86bd181c0862d7a2316cb6b84b7686132c0795fc39209e9f8c6bb09e79b1fa57"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_execution_contract_v3.json",
+      "file_sha256": "6834bb51c0319c5d18d201e243dc5b610596e43e08ef62dd6582b6761abc7563"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_v1.json",
+      "file_sha256": "fc2fd558ecadd1264bc345be739869a3ecc2f277a776b9cb268da5a9733da0e6"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_v3.json",
+      "file_sha256": "f3ff28178911d721b434b41f95e28a3c31ae475a2cc0fa60f15612bac8263741"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_result_audit_v3.json",
+      "file_sha256": "dcb08c3ab881a501d026aae932362853ce71d4e5bc8452fe38bd60dc06d0e497"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_result_v3.json",
+      "file_sha256": "4c6fd424a257f11125723ff6a69a5a9fe8ca6e40fe3bc20d0f2071cfaff31597"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "86717379dcea8acb5b956f04a9f8dcebf18971322612609070f6f29826b5056b",
+  "failed_normalization_result_evidence_hash": "02f461aeb23e00479a9044e7017daa4eaa569f296cd69d8fdbc7dd7e6e6c3a89",
+  "failure_adjudication_result_evidence_hash": "3c4cc196661cf7356ec6e54e752c850fd79f98f113180f7e6e23b388bab4acd5",
+  "failure_adjudication_result_audit_evidence_hash": "f5d2a5016f4e43285d67c93935768b0b7e251be0437bc0c92afd9a1150f54d0f",
+  "targeted_correction_result_evidence_hash": "e7c059f0a01998e2af13b72c1ee4d5a6c01f05184f79c3b915dac619f08e2d50",
+  "targeted_correction_result_audit_evidence_hash": "5e6c1f1b7dfd5a28395ec28a0f9cfed08ad053203edacaeb38628687c7edacac",
+  "history_dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+  "source_cutoff_commit": "dc0395c5858a1d55239b82a834e5075cf2069219",
+  "raw_bulk_page_directory": "data/evidence/s5_github_pull_metadata_bulk_v1",
+  "raw_targeted_response_directory": "data/evidence/s5_github_targeted_pull_responses_v3",
+  "adopted_pull_10_response_path": "data/evidence/s5_github_targeted_pull_responses_v2/failure_pull_000010.json",
+  "expected_raw_record_count": 24407,
+  "expected_cohort_record_count": 24398,
+  "expected_github_accepted_pull_count": 16279,
+  "expected_legacy_exact_mapping_count": 16167,
+  "expected_legacy_unresolved_merge_count": 554,
+  "expected_targeted_response_count": 194,
+  "expected_targeted_http_200_count": 186,
+  "expected_targeted_http_404_count": 8,
+  "expected_recognized_recovery_count": 75,
+  "expected_recognized_unresolved_count": 8,
+  "expected_canonical_mapping_count": 16242,
+  "expected_corrected_unresolved_merge_count": 479,
+  "expected_accepted_source_linked_count": 16271,
+  "expected_accepted_source_unverified_count": 8,
+  "expected_full_graph_commit_count": 50395,
+  "expected_first_parent_commit_count": 17543,
+  "expected_first_parent_merge_count": 16721,
+  "recognized_endpoint_404_pull_numbers": [
+    25166,
+    25409,
+    25615,
+    27719,
+    29052,
+    30556,
+    30763,
+    31007
+  ],
+  "accepted_local_inclusion_unverified_pull_numbers": [
+    261,
+    4286,
+    4528,
+    5848,
+    9770,
+    12026,
+    35808,
+    36048
+  ],
+  "disclosed_many_to_one_pull_groups": [
+    [
+      25882,
+      25891
+    ],
+    [
+      26081,
+      26084
+    ]
+  ],
+  "legacy_failure_reconstruction_rule": "RECONSTRUCT_V1_RESULT_COUNTS_AND_FAILED_GATES_BEFORE_CORRECTION",
+  "bulk_metadata_rule": "PRESERVE_FROZEN_BULK_METADATA_AND_NEVER_OVERWRITE_WITH_CURRENT_TARGETED_VALUES",
+  "recognized_recovery_rule": "CENSUS_PULL_NUMBER_PLUS_DIRECT_HTTP_200_NUMBER_PLUS_EXACT_SECOND_PARENT_HEAD_SHA",
+  "canonical_mapping_rule": "ONE_CANONICAL_PULL_PER_FIRST_PARENT_MERGE_CENSUS_PRECEDENCE_THEN_UNIQUE_HEAD_ONLY",
+  "accepted_source_link_rule": "CANONICAL_MAPPING_OR_EXACT_TARGET_HEAD_OR_MERGE_SHA_REACHABLE_FROM_CUTOFF",
+  "ambiguous_link_rule": "PRESERVE_ALL_EXACT_SOURCE_LINKS_BUT_NEVER_GUESS_CANONICAL_OWNERSHIP",
+  "event_universe_rule": "GITHUB_ACCEPTED_PULLS_AND_GIT_FIRST_PARENT_INTEGRATIONS_ARE_SEPARATE_UNIVERSES",
+  "event_time_rule": "GITHUB_MERGED_AT_WHEN_PRESENT_ELSE_GIT_COMMITTER_TIME_WITH_SOURCE_LABEL",
+  "first_parent_command": "git rev-list --first-parent --reverse --parents --timestamp <cutoff>",
+  "full_graph_command": "git rev-list <cutoff>",
+  "normalized_pull_fields": [
+    "sequence",
+    "pull_number",
+    "node_id",
+    "state",
+    "created_at",
+    "updated_at",
+    "closed_at",
+    "merged_at",
+    "head_sha",
+    "base_ref",
+    "base_sha",
+    "actor_id",
+    "actor_login",
+    "actor_type",
+    "actor_identity_status",
+    "actor_class",
+    "source_page",
+    "source_page_sha256",
+    "source_response_body_sha256"
+  ],
+  "canonical_mapping_fields": [
+    "sequence",
+    "merge_sequence",
+    "merge_commit_sha",
+    "first_parent_sha",
+    "second_parent_sha",
+    "git_committer_at",
+    "canonical_pull_number",
+    "census_pull_number",
+    "census_pattern_id",
+    "mapping_status",
+    "github_merged_at",
+    "event_at",
+    "event_time_source",
+    "actor_id",
+    "actor_login",
+    "actor_type",
+    "actor_identity_status",
+    "actor_class",
+    "targeted_response_path",
+    "targeted_response_file_sha256"
+  ],
+  "target_resolution_fields": [
+    "sequence",
+    "pull_number",
+    "target_reasons",
+    "http_status",
+    "bulk_accepted",
+    "direct_state",
+    "direct_merged",
+    "direct_merged_at",
+    "direct_base_ref",
+    "direct_head_sha",
+    "direct_merge_commit_sha",
+    "direct_merge_commit_sha_shape",
+    "head_in_full_graph",
+    "merge_commit_sha_in_full_graph",
+    "canonical_merge_commit_sha",
+    "canonical_mapping",
+    "local_source_link_verified",
+    "resolution_status",
+    "response_path",
+    "response_file_sha256",
+    "response_body_sha256"
+  ],
+  "accepted_coverage_fields": [
+    "sequence",
+    "pull_number",
+    "github_merged_at",
+    "canonical_merge_commit_sha",
+    "local_source_commit_sha",
+    "source_link_status",
+    "local_source_link_verified",
+    "targeted_resolution_sequence"
+  ],
+  "unresolved_merge_fields": [
+    "sequence",
+    "merge_sequence",
+    "merge_commit_sha",
+    "first_parent_sha",
+    "second_parent_sha",
+    "git_committer_at",
+    "census_pull_number",
+    "census_pattern_id",
+    "resolution_status",
+    "candidate_pull_numbers"
+  ],
+  "pull_output_path": "data/evidence/datasets/s5_bitcoin_core_github_pulls_normalized_v2.jsonl",
+  "canonical_mapping_output_path": "data/evidence/datasets/s5_bitcoin_core_canonical_merge_mapping_v2.jsonl",
+  "target_resolution_output_path": "data/evidence/datasets/s5_bitcoin_core_target_resolution_v2.jsonl",
+  "accepted_coverage_output_path": "data/evidence/datasets/s5_bitcoin_core_accepted_source_coverage_v2.jsonl",
+  "unresolved_output_path": "data/evidence/datasets/s5_bitcoin_core_unresolved_git_merges_v2.jsonl",
+  "result_path": "data/evidence/s5_bitcoin_core_github_corrected_normalization_result_v2.json",
+  "serialization": "UTF8_JSONL_SORTED_KEYS_COMPACT_SEPARATORS_LF_FINAL_NEWLINE",
+  "maximum_local_git_process_count": 2,
+  "maximum_run_count": 1,
+  "maximum_elapsed_seconds": 1800,
+  "maximum_each_output_bytes": 134217728,
+  "exploratory_source_analysis_completed_before_freeze": true,
+  "output_paths_absent_at_freeze": true,
+  "network_access_permitted": false,
+  "repository_fetch_permitted": false,
+  "github_api_requests_permitted": false,
+  "commit_message_access_permitted": false,
+  "author_or_committer_identity_access_permitted": false,
+  "git_committer_timestamp_access_permitted": true,
+  "btc_market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "strategy_candidate_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "required_gate_ids": [
+    "FROZEN_PREDECESSOR_FAILURE_AND_TARGETED_CORRECTION_LINEAGE_BOUND",
+    "ALL_BOUND_SOURCE_FILES_REHASH_EXACTLY",
+    "LEGACY_NORMALIZATION_FAILURE_RECONSTRUCTS_EXACTLY",
+    "BULK_245_PAGE_24407_RAW_24398_COHORT_ACCOUNTING_RECONSTRUCTS",
+    "TARGETED_194_RESPONSE_MANIFEST_RECONSTRUCTS_EXACTLY",
+    "FIRST_PARENT_17543_COMMIT_16721_MERGE_TOPOLOGY_RECONSTRUCTS",
+    "FULL_GRAPH_50395_COMMIT_REACHABILITY_RECONSTRUCTS",
+    "LEGACY_16167_EXACT_MAPPINGS_ARE_PRESERVED",
+    "EXACTLY_75_RECOGNIZED_GAPS_RECOVER_BY_DIRECT_HEAD_SHA",
+    "EXACTLY_8_RECOGNIZED_ENDPOINT_404_GAPS_REMAIN_UNRESOLVED",
+    "CANONICAL_GIT_PR_MAPPING_IS_ONE_TO_ONE_WITH_16242_ROWS",
+    "ALL_16279_GITHUB_ACCEPTED_PULLS_RECEIVE_SOURCE_STATUS",
+    "EXACTLY_16271_ACCEPTED_PULLS_HAVE_LOCAL_SOURCE_LINKAGE",
+    "EXACTLY_8_ACCEPTED_PULLS_REMAIN_LOCAL_INCLUSION_UNVERIFIED",
+    "MANY_TO_ONE_SOURCE_LINKS_ARE_PRESERVED_WITHOUT_CANONICAL_GUESSING",
+    "GITHUB_ACCEPTED_AND_GIT_INTEGRATION_UNIVERSES_REMAIN_DISTINCT",
+    "EVENT_TIME_SOURCE_AND_IDENTITY_UNCERTAINTY_ARE_EXPLICIT",
+    "ALL_VERSIONED_OUTPUTS_RECONSTRUCT_BYTE_FOR_BYTE",
+    "ZERO_NETWORK_MARKET_VALUES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS"
+  ],
+  "decision": "FREEZE_S5_GITHUB_CORRECTED_NORMALIZATION_PROTOCOL",
+  "next_authorization": "IMPLEMENT_S5_GITHUB_CORRECTED_NORMALIZATION_EXECUTION_CONTRACT_ONLY",
+  "limitations": [
+    "A 404 is endpoint evidence at acquisition time, not proof a PR never existed.",
+    "A source link does not imply exclusive canonical ownership of a Git merge.",
+    "Current GitHub responses are not historical snapshots from the event date.",
+    "Current targeted metadata is supplemental and never overwrites frozen bulk metadata.",
+    "Eight GitHub-accepted pulls lack exact local inclusion evidence at the cutoff.",
+    "Eight recognized PR endpoints return 404 and remain unresolved.",
+    "GitHub accepted pulls and Git first-parent integrations are different universes.",
+    "GitHub merged_at and Git committer time are event proxies with source labels.",
+    "No market value, parameter, return, candidate, signal, or order is authorized.",
+    "No paper, Testnet strategy, production, live, or capital authority exists.",
+    "No unresolved identity may be guessed or imputed as an accepted event.",
+    "Normalization success will not establish predictive edge or profitability.",
+    "Protocol counts were informed by disclosed post-acquisition source analysis.",
+    "Real net profit remains zero.",
+    "The failed v1 normalization and its STOP remain immutable evidence.",
+    "Two disclosed pull groups share exact source identities and remain explicit."
+  ],
+  "protocol_evidence_hash": "d8a6c5bf331c75a127e47f63c3e2f14c6d3a1292f9015666009da3a1b106bc95"
+}

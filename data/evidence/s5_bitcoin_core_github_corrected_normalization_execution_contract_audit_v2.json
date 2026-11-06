@@ -1,0 +1,19 @@
+{
+  "schema_version": "aurex-s5-github-corrected-normalization-execution-contract-audit-v2",
+  "audit_id": "s5-github-corrected-normalization-execution-contract-audit-v2",
+  "audited_at": "2026-09-08T17:46:06.295941Z",
+  "contract_file_sha256": "80c33f53f51c1c62da39ab4f177a647d2eef062359d7a350715a755b5dcce69c",
+  "contract_evidence_hash": "9a374dc928e74d3708e587ed5e9eec436225dc560f35d62b036c277a69779477",
+  "builder_contract_hash": "6df1c4c56713db174a1c638ef7c082137f9ba3f0073ee38c4c5bae4f14420c95",
+  "runner_contract_hash": "fa8f692ffe1f5f88b5d34b1bd50264b698a55c6b574d9bd5e07a8267d5f32c4c",
+  "source_binding_manifest_evidence_hash": "c44f4a4d4808e543e5dc5dca7c0fd748970566f6de074cc2756ea238f01f6753",
+  "implementation_binding_manifest_evidence_hash": "6df1c4c56713db174a1c638ef7c082137f9ba3f0073ee38c4c5bae4f14420c95",
+  "auditor_source_sha256": "95b486c2aca980c232ef6401c1b05148884aad560fe5292c24027ec204d3170d",
+  "reconstructed_exactly": true,
+  "local_git_processes_executed": 0,
+  "github_requests_executed": 0,
+  "market_values_read": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_GITHUB_CORRECTED_NORMALIZATION_EXECUTION_CONTRACT_AUDIT",
+  "audit_evidence_hash": "bec0bd3756616fe3161b74f18318111dc0d9a4bd55365c9af65114f552f8ced6"
+}

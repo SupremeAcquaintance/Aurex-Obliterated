@@ -1,0 +1,26 @@
+{
+  "attempt_count": 5,
+  "checkpoint_evidence_hash": "2462832bd232ab7af730b3e5d9f7cfdffa81127b95ad5a45e85249feab02b9af",
+  "checkpoint_file_sha256": "512a88c34373ff42caca0a0361814e782eecbf4eb7025e1e16ab6adc96cbe14e",
+  "execution_contract_evidence_hash": "445407257f7e9ceb3ab6efed88e07ba7d6bea4caf19a85d0681cc65d44efb550",
+  "failure_class": "WINDOWS_SOCKET_ACCESS_DENIED",
+  "network_requests_made_by_recovery": 0,
+  "next_action": "RESUME_FROZEN_V7_WITH_NETWORK_PERMISSION",
+  "orders_submitted": 0,
+  "outcomes_accessed": 0,
+  "partial_archive_created": false,
+  "payload_bytes_received": 0,
+  "recovered_at": "2026-08-14T07:08:07.698611+00:00",
+  "recovery_evidence_hash": "705f57584bf94a726b010b98fcd6eb395fabdd72640abd2a489333a57350af23",
+  "recovery_script_file_sha256": "9431fcf575d0730ecd19583ddcd52d4371c9c2f80c809ca6dffd3843a97422aa",
+  "response_file_sha256s": [
+    "a0e25398ddafedbf91a2e7b63b54f80e427c1d37babd97797054fdf118ff4343",
+    "0aba5f5453fbf53373bff78a2a2cdec5c510f3275e0e6c87f91aca0d2abe8ac5",
+    "b03d818d0f6f6d7811ed54b929cb2f6a3a19af71b124153f36ab9ea321a28965",
+    "56d9dd7b6ead344283d9718425866307253211af8bfc394bd847f6d630e76528",
+    "b3900accce610512bc05e78712003a17606cfe090084c1f052b8438392b678b1"
+  ],
+  "runner_source_hash": "493ccebe8255ec19a01fcb60571627aac4918b5f4691ea8f9c4852476c518705",
+  "schema_version": "aurex-q1-periodic-flow-successor-access-interruption-recovery-v7",
+  "target_key": "2023-04|USD_M_PERPETUAL"
+}

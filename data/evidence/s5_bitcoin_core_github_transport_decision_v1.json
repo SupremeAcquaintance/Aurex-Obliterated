@@ -1,0 +1,229 @@
+{
+  "schema_version": "aurex-s5-github-transport-decision-v1",
+  "decision_id": "s5-github-transport-decision-v1",
+  "frozen_at": "2026-09-02T15:17:10.910024Z",
+  "status": "FROZEN_DECISION_ONLY_ZERO_METADATA_REQUESTS",
+  "builder_contract_hash": "22fdcb1b138c2f09881f14857133a8b6a6671a25c7a9b3f2a36e862efcf46862",
+  "census_result_evidence_hash": "6596e9e8d4d1c360247642373d387ddd33f08058423ddf30f1f8817f2cc977dd",
+  "census_result_audit_evidence_hash": "829eb1701cac6552f38578fefbd649c54d2267c57b5cec272a5a559c9ab369f0",
+  "readiness_v30_result_evidence_hash": "df932bd3aa8d9d73e2b67220983e105a09bb0b146aa05a76bf99087275a40c80",
+  "source_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_audit_v30.json",
+      "file_sha256": "448fd6bebd965adfb10984bc0e4b9177d3027e7aea1ae110037873f1e7248676"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_result_v30.json",
+      "file_sha256": "6d128cd050c5ef3e84286074ec102d397cdac0798c5a0e8ffdd006e70c59b2c8"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_protocol_audit_v1.json",
+      "file_sha256": "d519167984103edc21d3748e0f86e64c726335dff2f1ca7a4ea20a429eda77ae"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_protocol_v1.json",
+      "file_sha256": "7c09685556eaecbb4b4d8b93c8a031200998e4e4261d3bf8a2baa7e0b503d3e4"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_audit_v1.json",
+      "file_sha256": "0151d680208341673edf49bf0c5b4bf573e6bedfd1546a990da966b399518b1c"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_census_result_v1.json",
+      "file_sha256": "518ae10d31085a5aa79498b0552cfa7b55334d05c609471a6dad47b2fb321740"
+    }
+  ],
+  "official_pull_api_documentation_url": "https://docs.github.com/en/rest/pulls/pulls",
+  "official_rate_limit_documentation_url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+  "endpoint": "https://api.github.com/repos/bitcoin/bitcoin/pulls",
+  "method": "GET",
+  "accept_header": "application/vnd.github+json",
+  "api_version_header": "2026-03-10",
+  "user_agent": "Aurex-Evidence-Research/1.0",
+  "selected_query_state": "closed",
+  "selected_query_base": "master",
+  "selected_query_sort": "created",
+  "selected_query_direction": "asc",
+  "preflight_query_per_page": 1,
+  "preflight_query_page": 1,
+  "maximum_records_per_list_page": 100,
+  "unauthenticated_requests_per_hour": 60,
+  "authenticated_requests_per_hour": 5000,
+  "census_recognized_pull_request_count": 7961,
+  "census_unrecognized_merge_count": 8760,
+  "direct_request_count": 7961,
+  "direct_unauthenticated_hours_lower_bound": 133,
+  "direct_authenticated_hours_lower_bound": 2,
+  "census_list_page_lower_bound": 80,
+  "transport_options": [
+    {
+      "option_id": "DIRECT_PULL_BY_NUMBER",
+      "disposition": "REJECTED",
+      "rationale": "The census requires 7,961 requests, at least 133 unauthenticated rate-limit hours, and still cannot discover PRs missed by merge-message patterns."
+    },
+    {
+      "option_id": "REST_LIST_CLOSED_MASTER_PULLS",
+      "disposition": "SELECTED",
+      "rationale": "The official endpoint supports closed state, master base, deterministic created ordering, and up to 100 records per page; a one-record preflight can reveal the terminal page before bulk acquisition is authorized."
+    },
+    {
+      "option_id": "GRAPHQL_PULL_REQUEST_PAGINATION",
+      "disposition": "REJECTED",
+      "rationale": "GitHub GraphQL requires authentication, while no approved token is present and Aurex has a viable public REST path."
+    },
+    {
+      "option_id": "LOCAL_GIT_ONLY",
+      "disposition": "REJECTED",
+      "rationale": "Git topology cannot prove GitHub public merged_at or recover authoritative pull-request metadata."
+    },
+    {
+      "option_id": "THIRD_PARTY_ARCHIVE",
+      "disposition": "REJECTED",
+      "rationale": "A third-party archive would weaken source authority and is unnecessary before the official GitHub path is tested."
+    }
+  ],
+  "selected_transport": "REST_LIST_CLOSED_MASTER_PULLS",
+  "selected_transport_requires_authentication": false,
+  "token_value_access_permitted": false,
+  "preflight_request_count": 1,
+  "preflight_maximum_response_bytes": 1048576,
+  "preflight_maximum_elapsed_seconds": 60,
+  "preflight_maximum_redirects": 0,
+  "preflight_fields_permitted": [
+    "http_status",
+    "content_type",
+    "link_header",
+    "etag_header",
+    "x_ratelimit_limit",
+    "x_ratelimit_remaining",
+    "x_ratelimit_reset",
+    "x_ratelimit_resource",
+    "pull_number",
+    "state",
+    "base_ref",
+    "created_at",
+    "merged_at",
+    "merge_commit_sha"
+  ],
+  "preflight_must_parse_terminal_link_page": true,
+  "preflight_must_validate_rate_limit_headers": true,
+  "preflight_must_validate_pull_schema": true,
+  "acquisition_page_count_known": false,
+  "acquisition_request_budget_authorized": false,
+  "required_gate_ids": [
+    "CENSUS_AND_READINESS_V30_LINEAGE_BOUND",
+    "CENSUS_COUNTS_AND_DIRECT_REQUEST_BUDGET_RECONCILED",
+    "OFFICIAL_PULL_LIST_ENDPOINT_AND_PARAMETERS_DOCUMENTED",
+    "OFFICIAL_RATE_LIMITS_AND_PAGE_MAXIMUM_DOCUMENTED",
+    "DIRECT_PULL_BY_NUMBER_REJECTED_AS_UNAUTHENTICATEDLY_INFEASIBLE",
+    "GRAPHQL_REJECTED_WITHOUT_AUTHENTICATION",
+    "GIT_ONLY_TRANSPORT_REJECTED_FOR_MISSING_PUBLIC_MERGE_TIME",
+    "THIRD_PARTY_ARCHIVES_REJECTED_AS_NONAUTHORITATIVE",
+    "ONE_REQUEST_PAGE_ONE_PREFLIGHT_SELECTED",
+    "PREFLIGHT_REVEALS_EXACT_RECORD_AND_PAGE_BUDGET_BEFORE_ACQUISITION",
+    "ZERO_NETWORK_METADATA_MARKET_VALUES_RETURNS_CANDIDATES_OR_ORDERS",
+    "DECISION_AUTHORIZES_PREFLIGHT_PROTOCOL_ONLY"
+  ],
+  "gate_results": [
+    {
+      "gate_id": "CENSUS_AND_READINESS_V30_LINEAGE_BOUND",
+      "status": "PASS",
+      "evidence": "The frozen census and readiness-v30 result/audit pairs are hash-bound."
+    },
+    {
+      "gate_id": "CENSUS_COUNTS_AND_DIRECT_REQUEST_BUDGET_RECONCILED",
+      "status": "PASS",
+      "evidence": "The census fixes 7,961 distinct PRs, 8,760 unresolved merges, and 7,961 direct calls."
+    },
+    {
+      "gate_id": "OFFICIAL_PULL_LIST_ENDPOINT_AND_PARAMETERS_DOCUMENTED",
+      "status": "PASS",
+      "evidence": "GitHub documents pull-list state, base, sort, direction, page, and per_page parameters."
+    },
+    {
+      "gate_id": "OFFICIAL_RATE_LIMITS_AND_PAGE_MAXIMUM_DOCUMENTED",
+      "status": "PASS",
+      "evidence": "GitHub documents 60 unauthenticated and 5,000 authenticated requests per hour and 100 records per page."
+    },
+    {
+      "gate_id": "DIRECT_PULL_BY_NUMBER_REJECTED_AS_UNAUTHENTICATEDLY_INFEASIBLE",
+      "status": "PASS",
+      "evidence": "Direct lookup would take at least 133 unauthenticated limit windows and misses unknown PRs."
+    },
+    {
+      "gate_id": "GRAPHQL_REJECTED_WITHOUT_AUTHENTICATION",
+      "status": "PASS",
+      "evidence": "GraphQL is not an unauthenticated public fallback."
+    },
+    {
+      "gate_id": "GIT_ONLY_TRANSPORT_REJECTED_FOR_MISSING_PUBLIC_MERGE_TIME",
+      "status": "PASS",
+      "evidence": "Local Git lacks an authoritative GitHub public merge timestamp."
+    },
+    {
+      "gate_id": "THIRD_PARTY_ARCHIVES_REJECTED_AS_NONAUTHORITATIVE",
+      "status": "PASS",
+      "evidence": "Third-party archives are outside the charter's authoritative source set."
+    },
+    {
+      "gate_id": "ONE_REQUEST_PAGE_ONE_PREFLIGHT_SELECTED",
+      "status": "PASS",
+      "evidence": "One official page-one request with per_page=1 is sufficient for transport preflight."
+    },
+    {
+      "gate_id": "PREFLIGHT_REVEALS_EXACT_RECORD_AND_PAGE_BUDGET_BEFORE_ACQUISITION",
+      "status": "PASS",
+      "evidence": "The Link terminal page can bound record count before a bulk request budget is frozen."
+    },
+    {
+      "gate_id": "ZERO_NETWORK_METADATA_MARKET_VALUES_RETURNS_CANDIDATES_OR_ORDERS",
+      "status": "PASS",
+      "evidence": "This decision executed zero network, metadata, market, strategy, or order activity."
+    },
+    {
+      "gate_id": "DECISION_AUTHORIZES_PREFLIGHT_PROTOCOL_ONLY",
+      "status": "PASS",
+      "evidence": "A PASS authorizes only a separately frozen one-request preflight protocol."
+    }
+  ],
+  "passed_gate_count": 12,
+  "failed_gate_count": 0,
+  "github_api_requests_executed": 0,
+  "github_metadata_records_parsed": 0,
+  "network_response_bytes_received": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "decision": "SELECT_OFFICIAL_REST_CLOSED_MASTER_PULL_LIST_WITH_ONE_REQUEST_PREFLIGHT",
+  "next_authorization": "FREEZE_S5_GITHUB_PULL_REQUEST_METADATA_PREFLIGHT_PROTOCOL_ONLY",
+  "authorizes_preflight_protocol_design": true,
+  "authorizes_preflight_request_now": false,
+  "authorizes_bulk_metadata_acquisition": false,
+  "authorizes_market_values": false,
+  "authorizes_parameters": false,
+  "authorizes_returns": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "A current GitHub snapshot cannot guarantee preservation of deleted historical records.",
+    "Filtering to base master may exclude proposals targeting historical non-master branches.",
+    "Missing or ambiguous merge mappings must fail closed to cash in any later candidate.",
+    "No BTC value, parameter, return, candidate, signal, or order is authorized.",
+    "No credential or token value is permitted in the decision or preflight protocol.",
+    "No paper, Testnet strategy, production, live, real-capital, or profit authority is created.",
+    "Pull-request merged_at is platform metadata, not proof of predictive edge.",
+    "Secondary limits can require slower pacing than the primary hourly limit implies.",
+    "The decision relies on current official GitHub API documentation and does not execute it.",
+    "The one-record preflight proves transport shape only, not full pagination completeness.",
+    "The selected list endpoint includes closed but unmerged pull requests until normalized later.",
+    "The terminal Link page must be observed before any bulk request count is authorized.",
+    "Unauthenticated requests share an IP-based rate limit and may have less than 60 remaining."
+  ],
+  "decision_evidence_hash": "6d271dd3095439538aa97c9dc67c5ea60cd98994767422c23e73417ba310a3e2"
+}

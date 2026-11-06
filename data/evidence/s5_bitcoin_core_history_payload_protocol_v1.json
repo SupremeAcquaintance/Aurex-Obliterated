@@ -1,0 +1,139 @@
+{
+  "schema_version": "aurex-s5-bitcoin-core-history-payload-protocol-v1",
+  "protocol_id": "s5-bitcoin-core-history-payload-protocol-v1",
+  "frozen_at": "2026-09-01T22:19:17.471759Z",
+  "status": "FROZEN_PROTOCOL_ONLY_ZERO_HISTORY_ACCESS",
+  "builder_contract_hash": "371e5afe3610b31e9654e64f88e26b99555305414390f710510b559030ebab7c",
+  "charter_evidence_hash": "9e06088399d772ff9136456d01c76f44e1c13a3efbac0f5e0fbf3c218c5e8da0",
+  "source_feasibility_result_evidence_hash": "b01f9305f3bf82d556444e94cb51b3b71feb49e9c07f9b2fe208c2e0e30c2904",
+  "readiness_v28_result_evidence_hash": "85b443222b2b1b892c66268ae90e41e221fb04d08435d7476a87db936a370225",
+  "source_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_audit_v28.json",
+      "file_sha256": "12ba682c0da89a40541d95224379189082c8cc3c07c1d1108d97eb65e03dd682"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_result_v28.json",
+      "file_sha256": "85aad1ded30c8441c166948f6e4076a0f516cb8ad431c7363c7f859d2523b3d2"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_development_charter_audit_v1.json",
+      "file_sha256": "d1668de55365924bc07b7bfe62146e64d2f3c2418db98554e21e555062611be1"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_development_charter_v1.json",
+      "file_sha256": "44521e79750685fa0d6d71988c105cc3813535910c8a72e02baa1e0b2338e43b"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_source_feasibility_protocol_audit_v1.json",
+      "file_sha256": "1fa3b01340d5a641ce186e0f0805396c09533c7331997051627f9048648e2ba1"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_source_feasibility_protocol_v1.json",
+      "file_sha256": "da3a66648ee71596559fcbc26837664b34c31d8315b923d336729306e503ec9a"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_source_feasibility_result_audit_v1.json",
+      "file_sha256": "f1802226a1dc6c31847e5ba5adcd99965d475c4107c8b7e479759fbe263e4b60"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_source_feasibility_result_v1.json",
+      "file_sha256": "397726b4bfbc0477041401d4cfd751434b2f0e8ff59e3783a0e1a277db40f8e2"
+    }
+  ],
+  "clone_spec": {
+    "remote_url": "https://github.com/bitcoin/bitcoin.git",
+    "branch": "master",
+    "final_dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+    "partial_dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git.partial",
+    "raw_transcript_path": "data/evidence/s5_bitcoin_core_history_payload_responses_v1/01_git_clone.json",
+    "git_arguments": [
+      "clone",
+      "--bare",
+      "--filter=blob:none",
+      "--single-branch",
+      "--no-tags",
+      "--branch",
+      "master",
+      "--quiet"
+    ],
+    "maximum_git_process_count": 1,
+    "maximum_elapsed_seconds": 1800,
+    "minimum_free_disk_bytes": 5000000000,
+    "maximum_dataset_bytes": 2000000000,
+    "maximum_transcript_bytes": 4194304,
+    "credentials_permitted": false,
+    "interactive_prompt_permitted": false,
+    "bare_clone_required": true,
+    "single_branch_required": true,
+    "tags_permitted": false,
+    "blob_payloads_requested": false
+  },
+  "source_cutoff_commit": "dc0395c5858a1d55239b82a834e5075cf2069219",
+  "source_v30_tag_object": "24d56e53d98da73f09f042ea879a662edb0565c9",
+  "required_gate_ids": [
+    "PREDECESSOR_LINEAGE_AND_READINESS_V28_BOUND",
+    "CANONICAL_BITCOIN_CORE_REMOTE_AND_MASTER_BRANCH_FIXED",
+    "SOURCE_CUTOFF_AND_V30_TAG_IDENTITIES_FIXED_BEFORE_HISTORY_ACCESS",
+    "ONE_PUBLIC_CREDENTIAL_FREE_GIT_CLONE_PROCESS_ONLY",
+    "BARE_SINGLE_BRANCH_TAGLESS_BLOBLESS_CLONE_ENFORCED",
+    "FREE_DISK_AND_DATASET_BYTE_LIMITS_ENFORCED",
+    "CLONE_COMPLETED_AND_FINAL_DATASET_PATH_EXISTS",
+    "FETCHED_MASTER_CONTAINS_FROZEN_SOURCE_CUTOFF",
+    "REPOSITORY_IS_COMPLETE_NOT_SHALLOW",
+    "PROMISOR_REMOTE_AND_BLOB_NONE_FILTER_VERIFIED",
+    "COMPLETE_DATASET_FILE_MANIFEST_HASHED",
+    "CUTOFF_REACHABLE_OBJECT_ID_STREAM_HASHED_WITHOUT_SEMANTIC_PARSING",
+    "ZERO_MARKET_OUTCOMES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS",
+    "PASS_AUTHORIZES_COMPLETENESS_CENSUS_PROTOCOL_ONLY"
+  ],
+  "maximum_run_count": 1,
+  "result_artifact_required_on_every_normal_exit": true,
+  "partial_dataset_must_be_preserved_on_failure": true,
+  "rerun_after_result_forbidden": true,
+  "repository_history_payload_permitted": true,
+  "history_semantic_parsing_permitted": false,
+  "commit_message_access_permitted": false,
+  "author_identity_access_permitted": false,
+  "author_timestamp_access_permitted": false,
+  "pull_request_id_parsing_permitted": false,
+  "github_api_requests_permitted": false,
+  "market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "historical_screen_permitted": false,
+  "validation_permitted": false,
+  "holdout_permitted": false,
+  "pine_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "network_processes_executed": 0,
+  "repository_history_records_acquired": 0,
+  "repository_history_records_semantically_parsed": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "orders_submitted": 0,
+  "decision": "FREEZE_S5_BITCOIN_CORE_HISTORY_PAYLOAD_PROTOCOL",
+  "next_authorization": "RUN_S5_BITCOIN_CORE_HISTORY_PAYLOAD_ONCE",
+  "limitations": [
+    "A PASS authorizes only a separately frozen completeness-census protocol.",
+    "A machine-level termination can interrupt result persistence despite atomic writes.",
+    "Credential helpers, interactive prompts, authentication tokens, and cookies are not permitted.",
+    "Exactly one public git clone process is permitted and no retry is authorized.",
+    "Git servers may ignore partial-clone filters; the byte ceiling still applies and failure preserves the partial dataset.",
+    "Integrity checks may count commits and hash opaque object identifiers but may not read messages, authors, timestamps, or pull-request identifiers.",
+    "No BTC market value, parameter, return, candidate, signal, paper order, Testnet strategy order, production action, or live action is permitted.",
+    "No GitHub REST request, pull-request metadata request, or release metadata request is permitted.",
+    "No acquired repository data can establish profitability or justify capital deployment.",
+    "Repository history is inherently outcome-aware and remains nonqualifying until a later preregistered chronological design exists.",
+    "The clone is bare, single-branch, tagless, and requests the blob:none partial clone filter.",
+    "The frozen source cutoff excludes every later commit from all future analysis, even if the clone incidentally receives a newer master ref.",
+    "The v30.0 tag identity is lineage evidence only and is not fetched by this tagless clone.",
+    "This protocol acquires Git commit topology and object identities only; it does not test predictive edge."
+  ],
+  "protocol_evidence_hash": "e23a6368563bd45908f9e89fa14c15f37778a5ce276908aef5fe363d73b2b2b5"
+}

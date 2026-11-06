@@ -1,0 +1,5445 @@
+{
+  "schema_version": "aurex-jam-archive-quality-remediation-result-v1",
+  "result_id": "jam-archive-quality-remediation-result-v1",
+  "generated_at": "2026-08-04T09:49:34.743917Z",
+  "status": "COMPLETE_SOURCE_REMEDIATION_NO_RETURNS",
+  "protocol_evidence_hash": "128eb77a416ba9ebd47154639fe383f1f9b9c0058c149c8f7dc62c4e5e24c57a",
+  "runner_contract_hash": "03e11160bb821947a9e564b22c69140787551c1a5c4505d483da682d2640b7af",
+  "parent_result_evidence_hash": "ffe45a45bc9340e3323aac9ddd4257a19597bcee260961f787b50c8b1dee121b",
+  "parent_audit_evidence_hash": "d0f1d8bc4a2fe8745bf678aacdeeaeb3ef547fed49b9956dc54d36311c96e961",
+  "duplicate_member": {
+    "month": "2021-12",
+    "archive_path": "jam_archive_full_acquisition_v1/BTCUSDT/2021-12/aggTrades/BTCUSDT-aggTrades-2021-12.zip",
+    "archive_sha256": "2ff67048929833d8db2ec32df829d2594052c31799d694486d997bc85b89d42c",
+    "canonical_member_name": "BTCUSDT-aggTrades-2021-12.csv",
+    "duplicate_member_name": "fsx-data/collector_data/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2021-12.csv",
+    "canonical_member_bytes": 2694397270,
+    "duplicate_member_bytes": 2694397270,
+    "canonical_member_sha256": "4a2d823de4b60232442c92cc44d109dc31da89ca988d5111c9f07209c462fa54",
+    "duplicate_member_sha256": "4a2d823de4b60232442c92cc44d109dc31da89ca988d5111c9f07209c462fa54",
+    "byte_identical": true,
+    "policy_pass": true
+  },
+  "kline_gap_intervals": [
+    {
+      "month": "2019-03",
+      "start_open_time_ms": 1552356000000,
+      "end_open_time_ms": 1552377540000,
+      "missing_minute_count": 360,
+      "preceding_open_time_ms": 1552355940000,
+      "following_open_time_ms": 1552377600000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2019-05",
+      "start_open_time_ms": 1557889200000,
+      "end_open_time_ms": 1557925140000,
+      "missing_minute_count": 600,
+      "preceding_open_time_ms": 1557889140000,
+      "following_open_time_ms": 1557925200000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2019-06",
+      "start_open_time_ms": 1559942040000,
+      "end_open_time_ms": 1559945640000,
+      "missing_minute_count": 61,
+      "preceding_open_time_ms": 1559941980000,
+      "following_open_time_ms": 1559945700000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2019-08",
+      "start_open_time_ms": 1565834400000,
+      "end_open_time_ms": 1565863140000,
+      "missing_minute_count": 480,
+      "preceding_open_time_ms": 1565834340000,
+      "following_open_time_ms": 1565863200000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2019-11",
+      "start_open_time_ms": 1573610400000,
+      "end_open_time_ms": 1573618740000,
+      "missing_minute_count": 140,
+      "preceding_open_time_ms": 1573610340000,
+      "following_open_time_ms": 1573618800000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2019-11",
+      "start_open_time_ms": 1573623000000,
+      "end_open_time_ms": 1573623120000,
+      "missing_minute_count": 3,
+      "preceding_open_time_ms": 1573622940000,
+      "following_open_time_ms": 1573623180000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2019-11",
+      "start_open_time_ms": 1574647200000,
+      "end_open_time_ms": 1574654340000,
+      "missing_minute_count": 120,
+      "preceding_open_time_ms": 1574647140000,
+      "following_open_time_ms": 1574654400000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2020-02",
+      "start_open_time_ms": 1581213600000,
+      "end_open_time_ms": 1581217140000,
+      "missing_minute_count": 60,
+      "preceding_open_time_ms": 1581213540000,
+      "following_open_time_ms": 1581217200000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2020-02",
+      "start_open_time_ms": 1582112160000,
+      "end_open_time_ms": 1582133340000,
+      "missing_minute_count": 354,
+      "preceding_open_time_ms": 1582112100000,
+      "following_open_time_ms": 1582133400000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2020-03",
+      "start_open_time_ms": 1583313720000,
+      "end_open_time_ms": 1583321340000,
+      "missing_minute_count": 128,
+      "preceding_open_time_ms": 1583313660000,
+      "following_open_time_ms": 1583321400000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2020-04",
+      "start_open_time_ms": 1587780000000,
+      "end_open_time_ms": 1587788940000,
+      "missing_minute_count": 150,
+      "preceding_open_time_ms": 1587779940000,
+      "following_open_time_ms": 1587789000000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2020-06",
+      "start_open_time_ms": 1593309600000,
+      "end_open_time_ms": 1593322140000,
+      "missing_minute_count": 210,
+      "preceding_open_time_ms": 1593309540000,
+      "following_open_time_ms": 1593322200000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2020-11",
+      "start_open_time_ms": 1606716000000,
+      "end_open_time_ms": 1606719540000,
+      "missing_minute_count": 60,
+      "preceding_open_time_ms": 1606715940000,
+      "following_open_time_ms": 1606719600000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2020-12",
+      "start_open_time_ms": 1608559800000,
+      "end_open_time_ms": 1608573540000,
+      "missing_minute_count": 230,
+      "preceding_open_time_ms": 1608559740000,
+      "following_open_time_ms": 1608573600000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2020-12",
+      "start_open_time_ms": 1608861600000,
+      "end_open_time_ms": 1608865140000,
+      "missing_minute_count": 60,
+      "preceding_open_time_ms": 1608861540000,
+      "following_open_time_ms": 1608865200000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2021-02",
+      "start_open_time_ms": 1613014860000,
+      "end_open_time_ms": 1613019540000,
+      "missing_minute_count": 79,
+      "preceding_open_time_ms": 1613014800000,
+      "following_open_time_ms": 1613019600000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2021-03",
+      "start_open_time_ms": 1614996000000,
+      "end_open_time_ms": 1615001340000,
+      "missing_minute_count": 90,
+      "preceding_open_time_ms": 1614995940000,
+      "following_open_time_ms": 1615001400000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2021-04",
+      "start_open_time_ms": 1618884000000,
+      "end_open_time_ms": 1618892940000,
+      "missing_minute_count": 150,
+      "preceding_open_time_ms": 1618883940000,
+      "following_open_time_ms": 1618893000000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2021-04",
+      "start_open_time_ms": 1619323260000,
+      "end_open_time_ms": 1619340240000,
+      "missing_minute_count": 284,
+      "preceding_open_time_ms": 1619323200000,
+      "following_open_time_ms": 1619340300000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2021-08",
+      "start_open_time_ms": 1628820000000,
+      "end_open_time_ms": 1628836140000,
+      "missing_minute_count": 270,
+      "preceding_open_time_ms": 1628819940000,
+      "following_open_time_ms": 1628836200000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    },
+    {
+      "month": "2021-09",
+      "start_open_time_ms": 1632898800000,
+      "end_open_time_ms": 1632905940000,
+      "missing_minute_count": 120,
+      "preceding_open_time_ms": 1632898740000,
+      "following_open_time_ms": 1632906000000,
+      "aggregate_covered_minute_count": 0,
+      "classification": "PAIRED_SOURCE_OBSERVABILITY_GAP",
+      "disposition": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR"
+    }
+  ],
+  "kline_row_defects": [
+    {
+      "month": "2019-06",
+      "open_time_ms": 1559941980000,
+      "reason_codes": [
+        "CLOSE_TIME_MISMATCH"
+      ],
+      "observed_close_time_ms": 1559941993524,
+      "expected_close_time_ms": 1559942039999,
+      "disposition": "QUARANTINE_MINUTE"
+    },
+    {
+      "month": "2020-02",
+      "open_time_ms": 1582112100000,
+      "reason_codes": [
+        "CLOSE_TIME_MISMATCH"
+      ],
+      "observed_close_time_ms": 1582112132286,
+      "expected_close_time_ms": 1582112159999,
+      "disposition": "QUARANTINE_MINUTE"
+    },
+    {
+      "month": "2020-03",
+      "open_time_ms": 1583313660000,
+      "reason_codes": [
+        "CLOSE_TIME_MISMATCH"
+      ],
+      "observed_close_time_ms": 1583313706694,
+      "expected_close_time_ms": 1583313719999,
+      "disposition": "QUARANTINE_MINUTE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608559740000,
+      "reason_codes": [
+        "CLOSE_TIME_MISMATCH"
+      ],
+      "observed_close_time_ms": 1608558440521,
+      "expected_close_time_ms": 1608559799999,
+      "disposition": "QUARANTINE_MINUTE"
+    },
+    {
+      "month": "2021-02",
+      "open_time_ms": 1613014800000,
+      "reason_codes": [
+        "CLOSE_TIME_MISMATCH"
+      ],
+      "observed_close_time_ms": 1613014854773,
+      "expected_close_time_ms": 1613014859999,
+      "disposition": "QUARANTINE_MINUTE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619323200000,
+      "reason_codes": [
+        "CLOSE_TIME_MISMATCH"
+      ],
+      "observed_close_time_ms": 1619323258146,
+      "expected_close_time_ms": 1619323259999,
+      "disposition": "QUARANTINE_MINUTE"
+    },
+    {
+      "month": "2021-08",
+      "open_time_ms": 1628819940000,
+      "reason_codes": [
+        "CLOSE_TIME_MISMATCH"
+      ],
+      "observed_close_time_ms": 1628819999000,
+      "expected_close_time_ms": 1628819999999,
+      "disposition": "QUARANTINE_MINUTE"
+    },
+    {
+      "month": "2021-12",
+      "open_time_ms": 1640321940000,
+      "reason_codes": [
+        "CLOSE_TIME_MISMATCH"
+      ],
+      "observed_close_time_ms": 1640321994362,
+      "expected_close_time_ms": 1640321999999,
+      "disposition": "QUARANTINE_MINUTE"
+    }
+  ],
+  "cross_family_mismatches": [
+    {
+      "month": "2019-05",
+      "open_time_ms": 1557304860000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "5917.14000000",
+        "high_price": "5918.38000000",
+        "low_price": "5907.90000000",
+        "close_price": "5907.90000000",
+        "base_volume": "18.07318800",
+        "quote_volume": "106881.8152955100000000",
+        "raw_trade_count": 153,
+        "taker_buy_base_volume": "5.03345900",
+        "taker_buy_quote_volume": "29764.2470993000000000"
+      },
+      "kline_values": {
+        "open_price": "5917.14000000",
+        "high_price": "5918.38000000",
+        "low_price": "5907.90000000",
+        "close_price": "5907.90000000",
+        "base_volume": "17.93780100",
+        "quote_volume": "106081.77691158",
+        "raw_trade_count": 150,
+        "taker_buy_base_volume": "4.90113200",
+        "taker_buy_quote_volume": "28982.28930677"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2019-08",
+      "open_time_ms": 1566278100000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "10783.94000000",
+        "high_price": "10785.49000000",
+        "low_price": "10781.62000000",
+        "close_price": "10784.75000000",
+        "base_volume": "2.64752100",
+        "quote_volume": "28552.9295092300000000",
+        "raw_trade_count": 54,
+        "taker_buy_base_volume": "1.48204500",
+        "taker_buy_quote_volume": "15984.4077065000000000"
+      },
+      "kline_values": {
+        "open_price": "10783.94000000",
+        "high_price": "10785.49000000",
+        "low_price": "10781.78000000",
+        "close_price": "10782.13000000",
+        "base_volume": "2.01460300",
+        "quote_volume": "21727.58499825",
+        "raw_trade_count": 31,
+        "taker_buy_base_volume": "1.27298000",
+        "taker_buy_quote_volume": "13729.70408928"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2019-10",
+      "open_time_ms": 1569910440000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "8404.58000000",
+        "high_price": "8404.58000000",
+        "low_price": "8397.43000000",
+        "close_price": "8398.38000000",
+        "base_volume": "12.62230800",
+        "quote_volume": "106041.1231644400000000",
+        "raw_trade_count": 127,
+        "taker_buy_base_volume": "4.45357900",
+        "taker_buy_quote_volume": "37415.3178276600000000"
+      },
+      "kline_values": {
+        "open_price": "8404.58000000",
+        "high_price": "8404.58000000",
+        "low_price": "8397.43000000",
+        "close_price": "8398.38000000",
+        "base_volume": "7.13464700",
+        "quote_volume": "59938.54400468",
+        "raw_trade_count": 97,
+        "taker_buy_base_volume": "4.31581500",
+        "taker_buy_quote_volume": "36257.54096816"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2019-10",
+      "open_time_ms": 1569911580000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "8368.93000000",
+        "high_price": "8370.24000000",
+        "low_price": "8361.00000000",
+        "close_price": "8365.00000000",
+        "base_volume": "40.47523600",
+        "quote_volume": "338576.1699671100000000",
+        "raw_trade_count": 321,
+        "taker_buy_base_volume": "10.54391100",
+        "taker_buy_quote_volume": "88228.5934123600000000"
+      },
+      "kline_values": {
+        "open_price": "8368.93000000",
+        "high_price": "8370.24000000",
+        "low_price": "8361.00000000",
+        "close_price": "8365.00000000",
+        "base_volume": "39.81221400",
+        "quote_volume": "333029.81415961",
+        "raw_trade_count": 308,
+        "taker_buy_base_volume": "10.08361600",
+        "taker_buy_quote_volume": "84378.05470699"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2019-10",
+      "open_time_ms": 1569912900000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "8361.66000000",
+        "high_price": "8369.97000000",
+        "low_price": "8359.32000000",
+        "close_price": "8369.17000000",
+        "base_volume": "18.52053400",
+        "quote_volume": "154964.0860611900000000",
+        "raw_trade_count": 222,
+        "taker_buy_base_volume": "11.86382700",
+        "taker_buy_quote_volume": "99267.7670056200000000"
+      },
+      "kline_values": {
+        "open_price": "8361.66000000",
+        "high_price": "8369.97000000",
+        "low_price": "8359.32000000",
+        "close_price": "8369.17000000",
+        "base_volume": "17.50188800",
+        "quote_volume": "146442.90093213",
+        "raw_trade_count": 206,
+        "taker_buy_base_volume": "11.29047700",
+        "taker_buy_quote_volume": "94471.33406372"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2019-12",
+      "open_time_ms": 1575435960000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "7140.00000000",
+        "high_price": "7142.85000000",
+        "low_price": "7140.00000000",
+        "close_price": "7140.04000000",
+        "base_volume": "15.45809100",
+        "quote_volume": "110379.4671857600000000",
+        "raw_trade_count": 198,
+        "taker_buy_base_volume": "3.05806600",
+        "taker_buy_quote_volume": "21837.8109479900000000"
+      },
+      "kline_values": {
+        "open_price": "7140.00000000",
+        "high_price": "7142.85000000",
+        "low_price": "7140.00000000",
+        "close_price": "7141.92000000",
+        "base_volume": "14.68827600",
+        "quote_volume": "104882.06408664",
+        "raw_trade_count": 187,
+        "taker_buy_base_volume": "2.97723800",
+        "taker_buy_quote_volume": "21260.57859427"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2019-12",
+      "open_time_ms": 1575436020000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "7141.09000000",
+        "high_price": "7141.30000000",
+        "low_price": "7137.79000000",
+        "close_price": "7138.22000000",
+        "base_volume": "15.94273500",
+        "quote_volume": "113807.1829953400000000",
+        "raw_trade_count": 140,
+        "taker_buy_base_volume": "3.10034600",
+        "taker_buy_quote_volume": "22133.8728719400000000"
+      },
+      "kline_values": {
+        "open_price": "7140.00000000",
+        "high_price": "7141.30000000",
+        "low_price": "7137.79000000",
+        "close_price": "7138.22000000",
+        "base_volume": "15.93873500",
+        "quote_volume": "113778.61863534",
+        "raw_trade_count": 139,
+        "taker_buy_base_volume": "3.09634600",
+        "taker_buy_quote_volume": "22105.30851194"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2019-12",
+      "open_time_ms": 1575454680000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "7182.65000000",
+        "high_price": "7190.09000000",
+        "low_price": "7182.65000000",
+        "close_price": "7187.06000000",
+        "base_volume": "48.67122600",
+        "quote_volume": "349809.8628590000000000",
+        "raw_trade_count": 322,
+        "taker_buy_base_volume": "35.44598400",
+        "taker_buy_quote_volume": "254771.0487587200000000"
+      },
+      "kline_values": {
+        "open_price": "7182.65000000",
+        "high_price": "7190.09000000",
+        "low_price": "7182.65000000",
+        "close_price": "7187.06000000",
+        "base_volume": "46.43979300",
+        "quote_volume": "333772.69368565",
+        "raw_trade_count": 299,
+        "taker_buy_base_volume": "34.47987900",
+        "taker_buy_quote_volume": "247827.54955224"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2019-12",
+      "open_time_ms": 1575455040000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "7199.86000000",
+        "high_price": "7209.35000000",
+        "low_price": "7198.99000000",
+        "close_price": "7204.99000000",
+        "base_volume": "46.88829400",
+        "quote_volume": "337804.7882863300000000",
+        "raw_trade_count": 450,
+        "taker_buy_base_volume": "31.84702200",
+        "taker_buy_quote_volume": "229443.5440080200000000"
+      },
+      "kline_values": {
+        "open_price": "7199.86000000",
+        "high_price": "7209.35000000",
+        "low_price": "7198.99000000",
+        "close_price": "7204.99000000",
+        "base_volume": "43.34109800",
+        "quote_volume": "312240.71013507",
+        "raw_trade_count": 393,
+        "taker_buy_base_volume": "29.33554300",
+        "taker_buy_quote_volume": "211343.63672627"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-04",
+      "open_time_ms": 1586421720000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "7321.08000000",
+        "high_price": "7324.90000000",
+        "low_price": "7319.67000000",
+        "close_price": "7322.32000000",
+        "base_volume": "25.77892000",
+        "quote_volume": "188783.8994337800000000",
+        "raw_trade_count": 416,
+        "taker_buy_base_volume": "14.73382600",
+        "taker_buy_quote_volume": "107903.7646146300000000"
+      },
+      "kline_values": {
+        "open_price": "7321.08000000",
+        "high_price": "7324.77000000",
+        "low_price": "7319.67000000",
+        "close_price": "7324.05000000",
+        "base_volume": "8.44521500",
+        "quote_volume": "61836.32421480",
+        "raw_trade_count": 187,
+        "taker_buy_base_volume": "4.92403400",
+        "taker_buy_quote_volume": "36053.92270818"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-06",
+      "open_time_ms": 1592097360000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "9449.46000000",
+        "high_price": "9451.68000000",
+        "low_price": "9449.46000000",
+        "close_price": "9451.66000000",
+        "base_volume": "4.14929700",
+        "quote_volume": "39213.3542276800000000",
+        "raw_trade_count": 110,
+        "taker_buy_base_volume": "2.90641600",
+        "taker_buy_quote_volume": "27466.8913938000000000"
+      },
+      "kline_values": {
+        "open_price": "9449.46000000",
+        "high_price": "9451.68000000",
+        "low_price": "9449.46000000",
+        "close_price": "9451.61000000",
+        "base_volume": "4.09207900",
+        "quote_volume": "38672.54948335",
+        "raw_trade_count": 107,
+        "taker_buy_base_volume": "2.88295300",
+        "taker_buy_quote_volume": "27245.12709522"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-06",
+      "open_time_ms": 1592962680000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "9633.60000000",
+        "high_price": "9633.73000000",
+        "low_price": "9633.59000000",
+        "close_price": "9633.59000000",
+        "base_volume": "6.69446100",
+        "quote_volume": "64491.7116798600000000",
+        "raw_trade_count": 76,
+        "taker_buy_base_volume": "0.64991300",
+        "taker_buy_quote_volume": "6261.0102885600000000"
+      },
+      "kline_values": {
+        "open_price": "9633.60000000",
+        "high_price": "9633.73000000",
+        "low_price": "9633.59000000",
+        "close_price": "9633.60000000",
+        "base_volume": "6.60880800",
+        "quote_volume": "63666.56572474",
+        "raw_trade_count": 68,
+        "taker_buy_base_volume": "0.64282800",
+        "taker_buy_quote_volume": "6192.75623256"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-10",
+      "open_time_ms": 1603779720000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "13097.62000000",
+        "high_price": "13097.84000000",
+        "low_price": "13097.15000000",
+        "close_price": "13097.16000000",
+        "base_volume": "18.24164300",
+        "quote_volume": "238924.4832390800000000",
+        "raw_trade_count": 177,
+        "taker_buy_base_volume": "0.99119600",
+        "taker_buy_quote_volume": "12982.2654000900000000"
+      },
+      "kline_values": {
+        "open_price": "13097.62000000",
+        "high_price": "13097.62000000",
+        "low_price": "13097.61000000",
+        "close_price": "13097.62000000",
+        "base_volume": "3.88554900",
+        "quote_volume": "50891.41376505",
+        "raw_trade_count": 121,
+        "taker_buy_base_volume": "0.83271600",
+        "taker_buy_quote_volume": "10906.59773592"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-10",
+      "open_time_ms": 1603779780000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "13097.16000000",
+        "high_price": "13097.16000000",
+        "low_price": "13096.25000000",
+        "close_price": "13096.25000000",
+        "base_volume": "6.95199400",
+        "quote_volume": "91048.9630032500000000",
+        "raw_trade_count": 107,
+        "taker_buy_base_volume": "2.68384000",
+        "taker_buy_quote_volume": "35150.1127925100000000"
+      },
+      "kline_values": {
+        "open_price": "13097.15000000",
+        "high_price": "13097.16000000",
+        "low_price": "13096.25000000",
+        "close_price": "13096.25000000",
+        "base_volume": "6.84263400",
+        "quote_volume": "89616.65762450",
+        "raw_trade_count": 98,
+        "taker_buy_base_volume": "2.57836500",
+        "taker_buy_quote_volume": "33768.68984151"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608556740000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22647.85000000",
+        "high_price": "22666.66000000",
+        "low_price": "22628.62000000",
+        "close_price": "22637.92000000",
+        "base_volume": "109.87666500",
+        "quote_volume": "2488573.2276324500000000",
+        "raw_trade_count": 2138,
+        "taker_buy_base_volume": "49.06835600",
+        "taker_buy_quote_volume": "1111469.4719180100000000"
+      },
+      "kline_values": {
+        "open_price": "22647.85000000",
+        "high_price": "22661.57000000",
+        "low_price": "22633.30000000",
+        "close_price": "22646.53000000",
+        "base_volume": "47.74209100",
+        "quote_volume": "1081400.91111170",
+        "raw_trade_count": 760,
+        "taker_buy_base_volume": "16.52699800",
+        "taker_buy_quote_volume": "374330.37124588"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608556800000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22641.66000000",
+        "high_price": "22678.15000000",
+        "low_price": "22626.70000000",
+        "close_price": "22646.33000000",
+        "base_volume": "52.66294800",
+        "quote_volume": "1192594.1969092100000000",
+        "raw_trade_count": 1322,
+        "taker_buy_base_volume": "28.07480100",
+        "taker_buy_quote_volume": "635946.7068937200000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608556860000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22641.60000000",
+        "high_price": "22686.27000000",
+        "low_price": "22626.02000000",
+        "close_price": "22680.09000000",
+        "base_volume": "53.55896900",
+        "quote_volume": "1213410.5441639300000000",
+        "raw_trade_count": 918,
+        "taker_buy_base_volume": "31.32748400",
+        "taker_buy_quote_volume": "710001.3327632800000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608556920000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22657.63000000",
+        "high_price": "22704.38000000",
+        "low_price": "22646.53000000",
+        "close_price": "22695.78000000",
+        "base_volume": "44.56363700",
+        "quote_volume": "1010914.7030570500000000",
+        "raw_trade_count": 952,
+        "taker_buy_base_volume": "30.92033700",
+        "taker_buy_quote_volume": "701778.7611600700000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608556980000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22704.11000000",
+        "high_price": "22750.00000000",
+        "low_price": "22671.34000000",
+        "close_price": "22723.47000000",
+        "base_volume": "45.20110900",
+        "quote_volume": "1026248.9263909900000000",
+        "raw_trade_count": 1260,
+        "taker_buy_base_volume": "26.01011500",
+        "taker_buy_quote_volume": "590797.1411345100000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557040000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22723.46000000",
+        "high_price": "22733.82000000",
+        "low_price": "22645.75000000",
+        "close_price": "22683.00000000",
+        "base_volume": "45.35190800",
+        "quote_volume": "1028257.0062919000000000",
+        "raw_trade_count": 967,
+        "taker_buy_base_volume": "12.16823100",
+        "taker_buy_quote_volume": "276203.0363398800000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557100000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22675.01000000",
+        "high_price": "22749.99000000",
+        "low_price": "22645.75000000",
+        "close_price": "22706.12000000",
+        "base_volume": "37.27924000",
+        "quote_volume": "844879.6302524600000000",
+        "raw_trade_count": 784,
+        "taker_buy_base_volume": "24.88593600",
+        "taker_buy_quote_volume": "564102.1581474300000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557160000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22739.75000000",
+        "high_price": "22750.00000000",
+        "low_price": "22695.80000000",
+        "close_price": "22747.29000000",
+        "base_volume": "19.38200200",
+        "quote_volume": "440447.1199448400000000",
+        "raw_trade_count": 560,
+        "taker_buy_base_volume": "10.75662300",
+        "taker_buy_quote_volume": "244627.0750944900000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557220000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22714.96000000",
+        "high_price": "22750.00000000",
+        "low_price": "22651.85000000",
+        "close_price": "22740.48000000",
+        "base_volume": "25.06404400",
+        "quote_volume": "568833.0747355200000000",
+        "raw_trade_count": 514,
+        "taker_buy_base_volume": "8.40802100",
+        "taker_buy_quote_volume": "190972.4352335100000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557280000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22739.78000000",
+        "high_price": "22750.00000000",
+        "low_price": "22685.83000000",
+        "close_price": "22732.90000000",
+        "base_volume": "50.50116400",
+        "quote_volume": "1147156.3946107500000000",
+        "raw_trade_count": 538,
+        "taker_buy_base_volume": "7.11213200",
+        "taker_buy_quote_volume": "161698.0788991000000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557340000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22696.50000000",
+        "high_price": "22771.15000000",
+        "low_price": "22649.96000000",
+        "close_price": "22695.72000000",
+        "base_volume": "30.50540000",
+        "quote_volume": "692614.9058744600000000",
+        "raw_trade_count": 678,
+        "taker_buy_base_volume": "21.57952300",
+        "taker_buy_quote_volume": "490199.9495733100000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557400000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22695.70000000",
+        "high_price": "22710.72000000",
+        "low_price": "22645.35000000",
+        "close_price": "22650.71000000",
+        "base_volume": "47.73362300",
+        "quote_volume": "1081563.9233040300000000",
+        "raw_trade_count": 707,
+        "taker_buy_base_volume": "13.63045500",
+        "taker_buy_quote_volume": "309038.5828679600000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557460000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22650.70000000",
+        "high_price": "22728.58000000",
+        "low_price": "22647.04000000",
+        "close_price": "22706.19000000",
+        "base_volume": "16.81659200",
+        "quote_volume": "381375.2924573500000000",
+        "raw_trade_count": 476,
+        "taker_buy_base_volume": "5.87085700",
+        "taker_buy_quote_volume": "133195.2208273100000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557520000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22705.98000000",
+        "high_price": "22720.72000000",
+        "low_price": "22646.53000000",
+        "close_price": "22648.88000000",
+        "base_volume": "19.75315800",
+        "quote_volume": "447862.5105745200000000",
+        "raw_trade_count": 679,
+        "taker_buy_base_volume": "3.73354300",
+        "taker_buy_quote_volume": "84688.6990299200000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557580000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22648.89000000",
+        "high_price": "22694.99000000",
+        "low_price": "22642.01000000",
+        "close_price": "22692.49000000",
+        "base_volume": "17.53395400",
+        "quote_volume": "397235.5467482600000000",
+        "raw_trade_count": 444,
+        "taker_buy_base_volume": "5.52711100",
+        "taker_buy_quote_volume": "125245.4077515000000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557640000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22665.99000000",
+        "high_price": "22700.00000000",
+        "low_price": "22646.53000000",
+        "close_price": "22651.73000000",
+        "base_volume": "17.45391200",
+        "quote_volume": "395665.8770345600000000",
+        "raw_trade_count": 401,
+        "taker_buy_base_volume": "6.37313300",
+        "taker_buy_quote_volume": "144576.2770112400000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557700000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22651.74000000",
+        "high_price": "22671.26000000",
+        "low_price": "22637.02000000",
+        "close_price": "22650.73000000",
+        "base_volume": "30.20368100",
+        "quote_volume": "684171.0962535200000000",
+        "raw_trade_count": 585,
+        "taker_buy_base_volume": "9.63746600",
+        "taker_buy_quote_volume": "218426.2806772000000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557760000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22650.74000000",
+        "high_price": "22671.26000000",
+        "low_price": "22627.93000000",
+        "close_price": "22647.02000000",
+        "base_volume": "39.02501700",
+        "quote_volume": "883630.3468883800000000",
+        "raw_trade_count": 844,
+        "taker_buy_base_volume": "10.08328200",
+        "taker_buy_quote_volume": "228406.8508662800000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557820000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22647.87000000",
+        "high_price": "22700.00000000",
+        "low_price": "22646.53000000",
+        "close_price": "22696.57000000",
+        "base_volume": "18.74691100",
+        "quote_volume": "424978.1401112400000000",
+        "raw_trade_count": 422,
+        "taker_buy_base_volume": "13.05636900",
+        "taker_buy_quote_volume": "296014.0033677200000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557880000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22691.80000000",
+        "high_price": "22700.00000000",
+        "low_price": "22649.92000000",
+        "close_price": "22676.42000000",
+        "base_volume": "21.56463600",
+        "quote_volume": "489263.3783513400000000",
+        "raw_trade_count": 275,
+        "taker_buy_base_volume": "15.07178800",
+        "taker_buy_quote_volume": "342084.6796649400000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608557940000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22675.72000000",
+        "high_price": "22700.00000000",
+        "low_price": "22647.25000000",
+        "close_price": "22650.73000000",
+        "base_volume": "28.27351100",
+        "quote_volume": "641415.6828313200000000",
+        "raw_trade_count": 301,
+        "taker_buy_base_volume": "18.40084100",
+        "taker_buy_quote_volume": "417639.1369990600000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608558000000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22656.38000000",
+        "high_price": "22700.00000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.54000000",
+        "base_volume": "18.08972900",
+        "quote_volume": "409791.6016989300000000",
+        "raw_trade_count": 341,
+        "taker_buy_base_volume": "4.92782900",
+        "taker_buy_quote_volume": "111685.9898449800000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608558060000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22646.54000000",
+        "high_price": "22666.35000000",
+        "low_price": "22637.87000000",
+        "close_price": "22646.53000000",
+        "base_volume": "14.85482700",
+        "quote_volume": "336416.6233200900000000",
+        "raw_trade_count": 308,
+        "taker_buy_base_volume": "2.95285400",
+        "taker_buy_quote_volume": "66881.8739596500000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608558120000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22700.00000000",
+        "low_price": "22643.02000000",
+        "close_price": "22676.10000000",
+        "base_volume": "9.74222900",
+        "quote_volume": "220841.6711739000000000",
+        "raw_trade_count": 279,
+        "taker_buy_base_volume": "5.32285800",
+        "taker_buy_quote_volume": "120709.9047991800000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608558180000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22672.80000000",
+        "high_price": "22699.99000000",
+        "low_price": "22665.33000000",
+        "close_price": "22699.99000000",
+        "base_volume": "20.53317900",
+        "quote_volume": "465748.4063501300000000",
+        "raw_trade_count": 438,
+        "taker_buy_base_volume": "6.62186800",
+        "taker_buy_quote_volume": "150299.9786010400000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608558240000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22699.99000000",
+        "high_price": "22730.72000000",
+        "low_price": "22687.01000000",
+        "close_price": "22730.72000000",
+        "base_volume": "23.80230700",
+        "quote_volume": "540326.1899324600000000",
+        "raw_trade_count": 345,
+        "taker_buy_base_volume": "20.67803500",
+        "taker_buy_quote_volume": "469411.6201455800000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608558300000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22724.95000000",
+        "high_price": "22755.97000000",
+        "low_price": "22680.72000000",
+        "close_price": "22755.00000000",
+        "base_volume": "15.95897500",
+        "quote_volume": "362743.9128702200000000",
+        "raw_trade_count": 386,
+        "taker_buy_base_volume": "3.85063500",
+        "taker_buy_quote_volume": "87577.8934413300000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608558360000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22755.00000000",
+        "high_price": "22774.00000000",
+        "low_price": "22671.85000000",
+        "close_price": "22680.01000000",
+        "base_volume": "24.77797300",
+        "quote_volume": "563158.3978941700000000",
+        "raw_trade_count": 633,
+        "taker_buy_base_volume": "6.31407200",
+        "taker_buy_quote_volume": "143637.3185129800000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2020-12",
+      "open_time_ms": 1608558420000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "22699.58000000",
+        "high_price": "22721.59000000",
+        "low_price": "22675.80000000",
+        "close_price": "22681.32000000",
+        "base_volume": "4.03960900",
+        "quote_volume": "91646.4882586400000000",
+        "raw_trade_count": 124,
+        "taker_buy_base_volume": "0.61055900",
+        "taker_buy_quote_volume": "13864.3309749400000000"
+      },
+      "kline_values": {
+        "open_price": "22646.53000000",
+        "high_price": "22646.53000000",
+        "low_price": "22646.53000000",
+        "close_price": "22646.53000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352060000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "34382.76000000",
+        "high_price": "34393.49000000",
+        "low_price": "34249.00000000",
+        "close_price": "34364.26000000",
+        "base_volume": "118.89052000",
+        "quote_volume": "4082172.5265113000000000",
+        "raw_trade_count": 2764,
+        "taker_buy_base_volume": "64.46374200",
+        "taker_buy_quote_volume": "2213829.8954915700000000"
+      },
+      "kline_values": {
+        "open_price": "34382.76000000",
+        "high_price": "34393.49000000",
+        "low_price": "34249.00000000",
+        "close_price": "34350.37000000",
+        "base_volume": "114.40445100",
+        "quote_volume": "3927991.40193023",
+        "raw_trade_count": 2494,
+        "taker_buy_base_volume": "61.57995000",
+        "taker_buy_quote_volume": "2114713.60431451"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352120000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "34364.26000000",
+        "high_price": "34364.27000000",
+        "low_price": "34137.69000000",
+        "close_price": "34200.91000000",
+        "base_volume": "99.10988000",
+        "quote_volume": "3395698.5822795900000000",
+        "raw_trade_count": 2967,
+        "taker_buy_base_volume": "38.81206300",
+        "taker_buy_quote_volume": "1330375.8736665400000000"
+      },
+      "kline_values": {
+        "open_price": "34350.37000000",
+        "high_price": "34350.37000000",
+        "low_price": "34350.37000000",
+        "close_price": "34350.37000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352180000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "34196.98000000",
+        "high_price": "34262.96000000",
+        "low_price": "34101.01000000",
+        "close_price": "34229.57000000",
+        "base_volume": "95.14366800",
+        "quote_volume": "3250714.7147300900000000",
+        "raw_trade_count": 3088,
+        "taker_buy_base_volume": "48.81550600",
+        "taker_buy_quote_volume": "1668120.9264605800000000"
+      },
+      "kline_values": {
+        "open_price": "34350.37000000",
+        "high_price": "34350.37000000",
+        "low_price": "34350.37000000",
+        "close_price": "34350.37000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352240000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "34229.95000000",
+        "high_price": "34864.49000000",
+        "low_price": "34227.36000000",
+        "close_price": "34818.17000000",
+        "base_volume": "235.18274500",
+        "quote_volume": "8133535.0945932700000000",
+        "raw_trade_count": 6471,
+        "taker_buy_base_volume": "150.36986200",
+        "taker_buy_quote_volume": "5203026.9928474100000000"
+      },
+      "kline_values": {
+        "open_price": "34350.37000000",
+        "high_price": "34350.37000000",
+        "low_price": "34350.37000000",
+        "close_price": "34350.37000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352300000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "34846.14000000",
+        "high_price": "35266.14000000",
+        "low_price": "34699.01000000",
+        "close_price": "35131.29000000",
+        "base_volume": "494.82318200",
+        "quote_volume": "17287687.0581220200000000",
+        "raw_trade_count": 7820,
+        "taker_buy_base_volume": "326.39068900",
+        "taker_buy_quote_volume": "11408215.8013232700000000"
+      },
+      "kline_values": {
+        "open_price": "34350.37000000",
+        "high_price": "34350.37000000",
+        "low_price": "34350.37000000",
+        "close_price": "34350.37000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352360000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "35102.86000000",
+        "high_price": "35216.75000000",
+        "low_price": "35000.68000000",
+        "close_price": "35038.38000000",
+        "base_volume": "286.12469400",
+        "quote_volume": "10049928.8375015400000000",
+        "raw_trade_count": 5195,
+        "taker_buy_base_volume": "144.05337400",
+        "taker_buy_quote_volume": "5061062.9419749400000000"
+      },
+      "kline_values": {
+        "open_price": "34350.37000000",
+        "high_price": "34350.37000000",
+        "low_price": "34350.37000000",
+        "close_price": "34350.37000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352420000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "35042.58000000",
+        "high_price": "35200.00000000",
+        "low_price": "35038.38000000",
+        "close_price": "35200.00000000",
+        "base_volume": "144.32234500",
+        "quote_volume": "5070025.6756917300000000",
+        "raw_trade_count": 3532,
+        "taker_buy_base_volume": "85.17451300",
+        "taker_buy_quote_volume": "2992207.1272660100000000"
+      },
+      "kline_values": {
+        "open_price": "34350.37000000",
+        "high_price": "34350.37000000",
+        "low_price": "34350.37000000",
+        "close_price": "34350.37000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352480000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "35197.75000000",
+        "high_price": "35490.00000000",
+        "low_price": "35173.14000000",
+        "close_price": "35425.73000000",
+        "base_volume": "403.50612300",
+        "quote_volume": "14256993.5889426900000000",
+        "raw_trade_count": 6338,
+        "taker_buy_base_volume": "192.93113800",
+        "taker_buy_quote_volume": "6818669.4179798200000000"
+      },
+      "kline_values": {
+        "open_price": "34350.37000000",
+        "high_price": "34350.37000000",
+        "low_price": "34350.37000000",
+        "close_price": "34350.37000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352540000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "35416.97000000",
+        "high_price": "35425.99000000",
+        "low_price": "35240.41000000",
+        "close_price": "35311.67000000",
+        "base_volume": "224.22952300",
+        "quote_volume": "7918928.2324892900000000",
+        "raw_trade_count": 5080,
+        "taker_buy_base_volume": "103.72624700",
+        "taker_buy_quote_volume": "3662751.5202165300000000"
+      },
+      "kline_values": {
+        "open_price": "34350.37000000",
+        "high_price": "34350.37000000",
+        "low_price": "34350.37000000",
+        "close_price": "34350.37000000",
+        "base_volume": "0.00000000",
+        "quote_volume": "0.00000000",
+        "raw_trade_count": 0,
+        "taker_buy_base_volume": "0.00000000",
+        "taker_buy_quote_volume": "0.00000000"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-01",
+      "open_time_ms": 1610352600000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "35310.82000000",
+        "high_price": "35550.00000000",
+        "low_price": "35307.57000000",
+        "close_price": "35528.12000000",
+        "base_volume": "209.32702200",
+        "quote_volume": "7419777.4237647300000000",
+        "raw_trade_count": 4926,
+        "taker_buy_base_volume": "125.28729700",
+        "taker_buy_quote_volume": "4442933.4367238900000000"
+      },
+      "kline_values": {
+        "open_price": "35322.79000000",
+        "high_price": "35550.00000000",
+        "low_price": "35320.31000000",
+        "close_price": "35528.12000000",
+        "base_volume": "171.65690700",
+        "quote_volume": "6087223.17420075",
+        "raw_trade_count": 4181,
+        "taker_buy_base_volume": "110.26188900",
+        "taker_buy_quote_volume": "3911241.21815160"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-02",
+      "open_time_ms": 1612431660000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "37189.37000000",
+        "high_price": "37190.50000000",
+        "low_price": "37133.51000000",
+        "close_price": "37136.00000000",
+        "base_volume": "34.61893500",
+        "quote_volume": "1286054.7770563100000000",
+        "raw_trade_count": 910,
+        "taker_buy_base_volume": "15.98068000",
+        "taker_buy_quote_volume": "593648.0934371100000000"
+      },
+      "kline_values": {
+        "open_price": "37189.37000000",
+        "high_price": "37190.50000000",
+        "low_price": "37133.51000000",
+        "close_price": "37142.65000000",
+        "base_volume": "31.33903900",
+        "quote_volume": "1164248.56231355",
+        "raw_trade_count": 841,
+        "taker_buy_base_volume": "15.51038100",
+        "taker_buy_quote_volume": "576180.16705451"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-02",
+      "open_time_ms": 1612795980000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "43544.05000000",
+        "high_price": "43599.99000000",
+        "low_price": "43440.86000000",
+        "close_price": "43578.57000000",
+        "base_volume": "107.59397900",
+        "quote_volume": "4681802.2953021600000000",
+        "raw_trade_count": 2980,
+        "taker_buy_base_volume": "59.30760000",
+        "taker_buy_quote_volume": "2580781.8349074600000000"
+      },
+      "kline_values": {
+        "open_price": "43544.05000000",
+        "high_price": "43599.99000000",
+        "low_price": "43440.86000000",
+        "close_price": "43574.67000000",
+        "base_volume": "107.54530400",
+        "quote_volume": "4679681.28648044",
+        "raw_trade_count": 2976,
+        "taker_buy_base_volume": "59.26538300",
+        "taker_buy_quote_volume": "2578942.24264190"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-02",
+      "open_time_ms": 1612797300000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "43408.96000000",
+        "high_price": "43543.86000000",
+        "low_price": "43345.27000000",
+        "close_price": "43500.00000000",
+        "base_volume": "185.68898000",
+        "quote_volume": "8065944.8175664400000000",
+        "raw_trade_count": 3750,
+        "taker_buy_base_volume": "93.59422900",
+        "taker_buy_quote_volume": "4065853.0435835100000000"
+      },
+      "kline_values": {
+        "open_price": "43408.96000000",
+        "high_price": "43543.86000000",
+        "low_price": "43345.27000000",
+        "close_price": "43504.91000000",
+        "base_volume": "177.88946400",
+        "quote_volume": "7726760.37975543",
+        "raw_trade_count": 3521,
+        "taker_buy_base_volume": "90.84871600",
+        "taker_buy_quote_volume": "3946430.54426212"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1617274200000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "58665.85000000",
+        "high_price": "58665.85000000",
+        "low_price": "58624.10000000",
+        "close_price": "58639.94000000",
+        "base_volume": "35.15510600",
+        "quote_volume": "2061758.8551071000000000",
+        "raw_trade_count": 998,
+        "taker_buy_base_volume": "11.46238700",
+        "taker_buy_quote_volume": "672289.0703861300000000"
+      },
+      "kline_values": {
+        "open_price": "58665.85000000",
+        "high_price": "58665.85000000",
+        "low_price": "58656.14000000",
+        "close_price": "58656.15000000",
+        "base_volume": "10.28254500",
+        "quote_volume": "603163.73040506",
+        "raw_trade_count": 357,
+        "taker_buy_base_volume": "4.90246600",
+        "taker_buy_quote_volume": "287575.16794447"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057340000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "53182.18000000",
+        "high_price": "53189.99000000",
+        "low_price": "52776.02000000",
+        "close_price": "52861.74000000",
+        "base_volume": "935.28237200",
+        "quote_volume": "49522155.8418442600000000",
+        "raw_trade_count": 17840,
+        "taker_buy_base_volume": "302.05581800",
+        "taker_buy_quote_volume": "15983168.5115783800000000"
+      },
+      "kline_values": {
+        "open_price": "53182.18000000",
+        "high_price": "53189.99000000",
+        "low_price": "52776.02000000",
+        "close_price": "52878.14000000",
+        "base_volume": "932.56883100",
+        "quote_volume": "49378695.35728558",
+        "raw_trade_count": 17783,
+        "taker_buy_base_volume": "300.13718600",
+        "taker_buy_quote_volume": "15881730.04296246"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057400000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52861.75000000",
+        "high_price": "52869.78000000",
+        "low_price": "52561.00000000",
+        "close_price": "52572.53000000",
+        "base_volume": "422.63085200",
+        "quote_volume": "22276659.1427544900000000",
+        "raw_trade_count": 8074,
+        "taker_buy_base_volume": "144.03168000",
+        "taker_buy_quote_volume": "7592079.1410154700000000"
+      },
+      "kline_values": {
+        "open_price": "52861.75000000",
+        "high_price": "52869.78000000",
+        "low_price": "52569.44000000",
+        "close_price": "52609.92000000",
+        "base_volume": "398.92207400",
+        "quote_volume": "21029779.93947894",
+        "raw_trade_count": 7514,
+        "taker_buy_base_volume": "132.78438500",
+        "taker_buy_quote_volume": "7000535.43466533"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057460000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52572.52000000",
+        "high_price": "52757.26000000",
+        "low_price": "52569.17000000",
+        "close_price": "52757.25000000",
+        "base_volume": "223.18349400",
+        "quote_volume": "11757984.1671976500000000",
+        "raw_trade_count": 4623,
+        "taker_buy_base_volume": "122.87516500",
+        "taker_buy_quote_volume": "6473342.3621137600000000"
+      },
+      "kline_values": {
+        "open_price": "52572.52000000",
+        "high_price": "52752.16000000",
+        "low_price": "52569.17000000",
+        "close_price": "52731.57000000",
+        "base_volume": "215.64666400",
+        "quote_volume": "11360534.24281871",
+        "raw_trade_count": 4380,
+        "taker_buy_base_volume": "116.87404700",
+        "taker_buy_quote_volume": "6156872.31450394"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057520000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52757.26000000",
+        "high_price": "53053.36000000",
+        "low_price": "52757.25000000",
+        "close_price": "52995.54000000",
+        "base_volume": "279.11694900",
+        "quote_volume": "14774098.9993736700000000",
+        "raw_trade_count": 4950,
+        "taker_buy_base_volume": "177.26444300",
+        "taker_buy_quote_volume": "9382980.9682606300000000"
+      },
+      "kline_values": {
+        "open_price": "52757.26000000",
+        "high_price": "53053.36000000",
+        "low_price": "52757.25000000",
+        "close_price": "53050.99000000",
+        "base_volume": "250.74141400",
+        "quote_volume": "13270403.73543274",
+        "raw_trade_count": 4414,
+        "taker_buy_base_volume": "163.05940200",
+        "taker_buy_quote_volume": "8630237.34903515"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057580000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52990.15000000",
+        "high_price": "53058.87000000",
+        "low_price": "52801.08000000",
+        "close_price": "52821.97000000",
+        "base_volume": "177.10187100",
+        "quote_volume": "9374081.2933459600000000",
+        "raw_trade_count": 3259,
+        "taker_buy_base_volume": "79.57853100",
+        "taker_buy_quote_volume": "4212392.8336908700000000"
+      },
+      "kline_values": {
+        "open_price": "52990.15000000",
+        "high_price": "53058.87000000",
+        "low_price": "52840.70000000",
+        "close_price": "52877.11000000",
+        "base_volume": "157.90524600",
+        "quote_volume": "8359207.78819356",
+        "raw_trade_count": 2739,
+        "taker_buy_base_volume": "72.49966200",
+        "taker_buy_quote_volume": "3838130.35171167"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057640000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52821.97000000",
+        "high_price": "52976.25000000",
+        "low_price": "52729.57000000",
+        "close_price": "52923.10000000",
+        "base_volume": "145.92548500",
+        "quote_volume": "7711191.5299011500000000",
+        "raw_trade_count": 2961,
+        "taker_buy_base_volume": "69.73949200",
+        "taker_buy_quote_volume": "3685773.2131455500000000"
+      },
+      "kline_values": {
+        "open_price": "52821.97000000",
+        "high_price": "52976.25000000",
+        "low_price": "52729.57000000",
+        "close_price": "52965.17000000",
+        "base_volume": "129.46612900",
+        "quote_volume": "6839908.79018855",
+        "raw_trade_count": 2583,
+        "taker_buy_base_volume": "62.62263600",
+        "taker_buy_quote_volume": "3309062.27296295"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057700000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52923.09000000",
+        "high_price": "53135.70000000",
+        "low_price": "52859.40000000",
+        "close_price": "53127.56000000",
+        "base_volume": "137.63305100",
+        "quote_volume": "7298963.1186380500000000",
+        "raw_trade_count": 2944,
+        "taker_buy_base_volume": "88.69454600",
+        "taker_buy_quote_volume": "4704289.8885754100000000"
+      },
+      "kline_values": {
+        "open_price": "52923.09000000",
+        "high_price": "53130.17000000",
+        "low_price": "52859.40000000",
+        "close_price": "53110.54000000",
+        "base_volume": "125.60322700",
+        "quote_volume": "6659923.29936251",
+        "raw_trade_count": 2668,
+        "taker_buy_base_volume": "79.35893800",
+        "taker_buy_quote_volume": "4208378.94090802"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057760000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "53127.56000000",
+        "high_price": "53218.84000000",
+        "low_price": "53000.00000000",
+        "close_price": "53032.28000000",
+        "base_volume": "227.53625500",
+        "quote_volume": "12090626.4581610800000000",
+        "raw_trade_count": 3614,
+        "taker_buy_base_volume": "105.49365000",
+        "taker_buy_quote_volume": "5606170.4521493900000000"
+      },
+      "kline_values": {
+        "open_price": "53127.56000000",
+        "high_price": "53218.84000000",
+        "low_price": "53051.09000000",
+        "close_price": "53059.58000000",
+        "base_volume": "200.57425800",
+        "quote_volume": "10660735.08786246",
+        "raw_trade_count": 3148,
+        "taker_buy_base_volume": "92.43614700",
+        "taker_buy_quote_volume": "4913689.21081845"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057820000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "53032.29000000",
+        "high_price": "53036.10000000",
+        "low_price": "52800.79000000",
+        "close_price": "52848.49000000",
+        "base_volume": "271.09121800",
+        "quote_volume": "14342705.1915088300000000",
+        "raw_trade_count": 4062,
+        "taker_buy_base_volume": "111.88043500",
+        "taker_buy_quote_volume": "5918868.3533251100000000"
+      },
+      "kline_values": {
+        "open_price": "53032.29000000",
+        "high_price": "53036.10000000",
+        "low_price": "52800.79000000",
+        "close_price": "52935.98000000",
+        "base_volume": "226.93348300",
+        "quote_volume": "12006810.93418583",
+        "raw_trade_count": 3268,
+        "taker_buy_base_volume": "94.19651600",
+        "taker_buy_quote_volume": "4983306.16603755"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057880000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52848.50000000",
+        "high_price": "53002.02000000",
+        "low_price": "52711.43000000",
+        "close_price": "52879.68000000",
+        "base_volume": "386.95997900",
+        "quote_volume": "20465750.5104313400000000",
+        "raw_trade_count": 4093,
+        "taker_buy_base_volume": "167.76467600",
+        "taker_buy_quote_volume": "8871448.1616907800000000"
+      },
+      "kline_values": {
+        "open_price": "52848.50000000",
+        "high_price": "53002.02000000",
+        "low_price": "52711.43000000",
+        "close_price": "52962.46000000",
+        "base_volume": "329.23519000",
+        "quote_volume": "17411737.35151948",
+        "raw_trade_count": 3232,
+        "taker_buy_base_volume": "139.05981900",
+        "taker_buy_quote_volume": "7352882.14127752"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619057940000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52879.68000000",
+        "high_price": "53069.54000000",
+        "low_price": "52829.86000000",
+        "close_price": "52842.74000000",
+        "base_volume": "280.01397000",
+        "quote_volume": "14819494.6780713600000000",
+        "raw_trade_count": 3382,
+        "taker_buy_base_volume": "170.03827000",
+        "taker_buy_quote_volume": "8998387.7341658700000000"
+      },
+      "kline_values": {
+        "open_price": "52879.68000000",
+        "high_price": "53069.54000000",
+        "low_price": "52846.08000000",
+        "close_price": "52900.50000000",
+        "base_volume": "225.45724700",
+        "quote_volume": "11933293.01524981",
+        "raw_trade_count": 2478,
+        "taker_buy_base_volume": "144.56091000",
+        "taker_buy_quote_volume": "7650815.12212400"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619058000000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52842.73000000",
+        "high_price": "52880.80000000",
+        "low_price": "52666.00000000",
+        "close_price": "52692.07000000",
+        "base_volume": "202.95603400",
+        "quote_volume": "10706042.2861742100000000",
+        "raw_trade_count": 3526,
+        "taker_buy_base_volume": "105.96804300",
+        "taker_buy_quote_volume": "5589422.7017428900000000"
+      },
+      "kline_values": {
+        "open_price": "52842.73000000",
+        "high_price": "52880.80000000",
+        "low_price": "52675.85000000",
+        "close_price": "52701.18000000",
+        "base_volume": "152.13656700",
+        "quote_volume": "8027790.40914249",
+        "raw_trade_count": 2348,
+        "taker_buy_base_volume": "77.74391600",
+        "taker_buy_quote_volume": "4101870.59512209"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619058060000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52693.33000000",
+        "high_price": "52769.84000000",
+        "low_price": "52633.77000000",
+        "close_price": "52706.98000000",
+        "base_volume": "196.95827300",
+        "quote_volume": "10378473.3584098100000000",
+        "raw_trade_count": 3639,
+        "taker_buy_base_volume": "110.43377000",
+        "taker_buy_quote_volume": "5819079.2271134100000000"
+      },
+      "kline_values": {
+        "open_price": "52693.33000000",
+        "high_price": "52769.84000000",
+        "low_price": "52660.79000000",
+        "close_price": "52690.49000000",
+        "base_volume": "136.43701800",
+        "quote_volume": "7190494.41834606",
+        "raw_trade_count": 2266,
+        "taker_buy_base_volume": "79.58975000",
+        "taker_buy_quote_volume": "4194485.67843832"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619058120000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52706.99000000",
+        "high_price": "52880.35000000",
+        "low_price": "52685.04000000",
+        "close_price": "52825.58000000",
+        "base_volume": "199.31416600",
+        "quote_volume": "10519787.1391219100000000",
+        "raw_trade_count": 3067,
+        "taker_buy_base_volume": "90.42472900",
+        "taker_buy_quote_volume": "4773166.1212138900000000"
+      },
+      "kline_values": {
+        "open_price": "52706.99000000",
+        "high_price": "52880.35000000",
+        "low_price": "52685.04000000",
+        "close_price": "52763.45000000",
+        "base_volume": "164.03555500",
+        "quote_volume": "8657633.78331687",
+        "raw_trade_count": 2358,
+        "taker_buy_base_volume": "68.50141700",
+        "taker_buy_quote_volume": "3615986.91703036"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619058180000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52825.58000000",
+        "high_price": "52845.69000000",
+        "low_price": "52693.20000000",
+        "close_price": "52727.47000000",
+        "base_volume": "105.21424300",
+        "quote_volume": "5551974.9436514100000000",
+        "raw_trade_count": 2275,
+        "taker_buy_base_volume": "40.41122800",
+        "taker_buy_quote_volume": "2131913.8188743100000000"
+      },
+      "kline_values": {
+        "open_price": "52825.58000000",
+        "high_price": "52845.69000000",
+        "low_price": "52696.07000000",
+        "close_price": "52731.32000000",
+        "base_volume": "90.21584600",
+        "quote_volume": "4761298.64666109",
+        "raw_trade_count": 2035,
+        "taker_buy_base_volume": "36.64125600",
+        "taker_buy_quote_volume": "1933166.94866946"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619058240000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "52727.48000000",
+        "high_price": "53045.32000000",
+        "low_price": "52615.20000000",
+        "close_price": "53012.46000000",
+        "base_volume": "241.92808900",
+        "quote_volume": "12771386.8142409600000000",
+        "raw_trade_count": 3766,
+        "taker_buy_base_volume": "156.03612400",
+        "taker_buy_quote_volume": "8236393.5331480100000000"
+      },
+      "kline_values": {
+        "open_price": "52727.48000000",
+        "high_price": "53045.32000000",
+        "low_price": "52615.20000000",
+        "close_price": "52999.55000000",
+        "base_volume": "239.81492600",
+        "quote_volume": "12659379.27584815",
+        "raw_trade_count": 3707,
+        "taker_buy_base_volume": "154.06138700",
+        "taker_buy_quote_volume": "8131724.10640275"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142060000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50658.59000000",
+        "high_price": "50776.28000000",
+        "low_price": "50600.00000000",
+        "close_price": "50646.33000000",
+        "base_volume": "260.73368800",
+        "quote_volume": "13214699.8612485500000000",
+        "raw_trade_count": 6805,
+        "taker_buy_base_volume": "107.59684900",
+        "taker_buy_quote_volume": "5453632.6363934700000000"
+      },
+      "kline_values": {
+        "open_price": "50658.59000000",
+        "high_price": "50776.28000000",
+        "low_price": "50600.00000000",
+        "close_price": "50636.76000000",
+        "base_volume": "256.92493100",
+        "quote_volume": "13021796.68025133",
+        "raw_trade_count": 6705,
+        "taker_buy_base_volume": "105.32887600",
+        "taker_buy_quote_volume": "5338766.06718132"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142120000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50648.37000000",
+        "high_price": "50770.78000000",
+        "low_price": "50600.00000000",
+        "close_price": "50742.80000000",
+        "base_volume": "260.05817100",
+        "quote_volume": "13178808.8531718900000000",
+        "raw_trade_count": 6381,
+        "taker_buy_base_volume": "98.43584100",
+        "taker_buy_quote_volume": "4990820.2022242600000000"
+      },
+      "kline_values": {
+        "open_price": "50648.37000000",
+        "high_price": "50770.78000000",
+        "low_price": "50600.00000000",
+        "close_price": "50740.22000000",
+        "base_volume": "255.95875700",
+        "quote_volume": "12970795.52404611",
+        "raw_trade_count": 6192,
+        "taker_buy_base_volume": "95.29299800",
+        "taker_buy_quote_volume": "4831345.18915382"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142180000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50742.80000000",
+        "high_price": "50918.35000000",
+        "low_price": "50715.75000000",
+        "close_price": "50878.73000000",
+        "base_volume": "173.25265400",
+        "quote_volume": "8807034.3359314000000000",
+        "raw_trade_count": 5205,
+        "taker_buy_base_volume": "90.26715300",
+        "taker_buy_quote_volume": "4589101.1340429800000000"
+      },
+      "kline_values": {
+        "open_price": "50742.80000000",
+        "high_price": "50918.35000000",
+        "low_price": "50715.75000000",
+        "close_price": "50862.70000000",
+        "base_volume": "167.11626000",
+        "quote_volume": "8494906.91245169",
+        "raw_trade_count": 5047,
+        "taker_buy_base_volume": "85.84448700",
+        "taker_buy_quote_volume": "4364144.68230710"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142240000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50878.73000000",
+        "high_price": "50906.08000000",
+        "low_price": "50734.17000000",
+        "close_price": "50742.58000000",
+        "base_volume": "125.15561100",
+        "quote_volume": "6358866.6984523100000000",
+        "raw_trade_count": 4247,
+        "taker_buy_base_volume": "64.01922700",
+        "taker_buy_quote_volume": "3252295.9086417900000000"
+      },
+      "kline_values": {
+        "open_price": "50878.73000000",
+        "high_price": "50906.08000000",
+        "low_price": "50734.17000000",
+        "close_price": "50776.42000000",
+        "base_volume": "111.38238800",
+        "quote_volume": "5659763.36298555",
+        "raw_trade_count": 3874,
+        "taker_buy_base_volume": "57.36279600",
+        "taker_buy_quote_volume": "2914446.71166208"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142300000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50742.42000000",
+        "high_price": "50800.00000000",
+        "low_price": "50507.80000000",
+        "close_price": "50755.04000000",
+        "base_volume": "194.77637300",
+        "quote_volume": "9866939.6233159300000000",
+        "raw_trade_count": 5494,
+        "taker_buy_base_volume": "88.15575100",
+        "taker_buy_quote_volume": "4467063.8945205600000000"
+      },
+      "kline_values": {
+        "open_price": "50742.42000000",
+        "high_price": "50742.42000000",
+        "low_price": "50507.80000000",
+        "close_price": "50700.99000000",
+        "base_volume": "176.49208600",
+        "quote_volume": "8939144.18036983",
+        "raw_trade_count": 4923,
+        "taker_buy_base_volume": "75.61653300",
+        "taker_buy_quote_volume": "3830811.55445039"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142360000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50752.79000000",
+        "high_price": "50929.25000000",
+        "low_price": "50740.78000000",
+        "close_price": "50842.40000000",
+        "base_volume": "180.81523700",
+        "quote_volume": "9193374.3123278900000000",
+        "raw_trade_count": 4327,
+        "taker_buy_base_volume": "113.89801100",
+        "taker_buy_quote_volume": "5790982.7982972100000000"
+      },
+      "kline_values": {
+        "open_price": "50752.79000000",
+        "high_price": "50929.25000000",
+        "low_price": "50740.78000000",
+        "close_price": "50844.81000000",
+        "base_volume": "110.98621800",
+        "quote_volume": "5643303.05280414",
+        "raw_trade_count": 3390,
+        "taker_buy_base_volume": "58.20407900",
+        "taker_buy_quote_volume": "2959530.90940367"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142420000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50842.40000000",
+        "high_price": "50842.40000000",
+        "low_price": "50505.00000000",
+        "close_price": "50577.34000000",
+        "base_volume": "189.15254500",
+        "quote_volume": "9581061.2406116300000000",
+        "raw_trade_count": 4742,
+        "taker_buy_base_volume": "89.49866100",
+        "taker_buy_quote_volume": "4533998.8630293700000000"
+      },
+      "kline_values": {
+        "open_price": "50842.40000000",
+        "high_price": "50842.40000000",
+        "low_price": "50595.30000000",
+        "close_price": "50618.81000000",
+        "base_volume": "127.21675000",
+        "quote_volume": "6449107.78529086",
+        "raw_trade_count": 3197,
+        "taker_buy_base_volume": "65.41044100",
+        "taker_buy_quote_volume": "3315848.10056970"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142480000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50577.41000000",
+        "high_price": "50799.00000000",
+        "low_price": "50437.67000000",
+        "close_price": "50479.55000000",
+        "base_volume": "411.18806400",
+        "quote_volume": "20795963.8053571800000000",
+        "raw_trade_count": 8481,
+        "taker_buy_base_volume": "130.26230600",
+        "taker_buy_quote_volume": "6595314.6830058700000000"
+      },
+      "kline_values": {
+        "open_price": "50577.41000000",
+        "high_price": "50799.00000000",
+        "low_price": "50577.41000000",
+        "close_price": "50622.14000000",
+        "base_volume": "152.58001100",
+        "quote_volume": "7734308.21690723",
+        "raw_trade_count": 3327,
+        "taker_buy_base_volume": "84.13030500",
+        "taker_buy_quote_volume": "4264526.49152292"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142540000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50479.55000000",
+        "high_price": "50486.08000000",
+        "low_price": "50111.00000000",
+        "close_price": "50195.03000000",
+        "base_volume": "703.93420300",
+        "quote_volume": "35369778.8209950000000000",
+        "raw_trade_count": 12064,
+        "taker_buy_base_volume": "209.94273300",
+        "taker_buy_quote_volume": "10546790.1435622900000000"
+      },
+      "kline_values": {
+        "open_price": "50479.55000000",
+        "high_price": "50486.08000000",
+        "low_price": "50200.00000000",
+        "close_price": "50268.60000000",
+        "base_volume": "487.56406300",
+        "quote_volume": "24513392.08504535",
+        "raw_trade_count": 8425,
+        "taker_buy_base_volume": "139.41813000",
+        "taker_buy_quote_volume": "7008191.74687113"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142600000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50184.19000000",
+        "high_price": "50209.16000000",
+        "low_price": "49722.22000000",
+        "close_price": "49740.00000000",
+        "base_volume": "974.97156700",
+        "quote_volume": "48760680.6621991600000000",
+        "raw_trade_count": 19967,
+        "taker_buy_base_volume": "193.39049500",
+        "taker_buy_quote_volume": "9674320.9579039700000000"
+      },
+      "kline_values": {
+        "open_price": "50184.19000000",
+        "high_price": "50209.16000000",
+        "low_price": "50005.00000000",
+        "close_price": "50005.01000000",
+        "base_volume": "472.64823600",
+        "quote_volume": "23666634.64436059",
+        "raw_trade_count": 7226,
+        "taker_buy_base_volume": "131.24559400",
+        "taker_buy_quote_volume": "6572615.13117332"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142660000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49722.22000000",
+        "high_price": "50499.00000000",
+        "low_price": "49722.22000000",
+        "close_price": "50498.99000000",
+        "base_volume": "570.49159600",
+        "quote_volume": "28532719.6156308200000000",
+        "raw_trade_count": 11061,
+        "taker_buy_base_volume": "288.56761100",
+        "taker_buy_quote_volume": "14439874.0476302300000000"
+      },
+      "kline_values": {
+        "open_price": "49722.22000000",
+        "high_price": "50299.99000000",
+        "low_price": "49722.22000000",
+        "close_price": "50284.24000000",
+        "base_volume": "463.98943000",
+        "quote_volume": "23168884.44020097",
+        "raw_trade_count": 8199,
+        "taker_buy_base_volume": "233.68118700",
+        "taker_buy_quote_volume": "11675313.74969465"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142720000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50499.00000000",
+        "high_price": "50660.60000000",
+        "low_price": "50300.00000000",
+        "close_price": "50300.01000000",
+        "base_volume": "344.63753700",
+        "quote_volume": "17395117.1097090800000000",
+        "raw_trade_count": 7002,
+        "taker_buy_base_volume": "166.55502100",
+        "taker_buy_quote_volume": "8407183.5201092000000000"
+      },
+      "kline_values": {
+        "open_price": "50499.00000000",
+        "high_price": "50660.60000000",
+        "low_price": "50376.10000000",
+        "close_price": "50426.57000000",
+        "base_volume": "283.97274600",
+        "quote_volume": "14338953.38297247",
+        "raw_trade_count": 5550,
+        "taker_buy_base_volume": "135.01883500",
+        "taker_buy_quote_volume": "6818322.03873761"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142780000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50300.01000000",
+        "high_price": "50713.28000000",
+        "low_price": "50300.01000000",
+        "close_price": "50612.35000000",
+        "base_volume": "280.16110100",
+        "quote_volume": "14163802.8234937400000000",
+        "raw_trade_count": 6648,
+        "taker_buy_base_volume": "145.08160900",
+        "taker_buy_quote_volume": "7334968.5837161500000000"
+      },
+      "kline_values": {
+        "open_price": "50300.01000000",
+        "high_price": "50713.28000000",
+        "low_price": "50300.01000000",
+        "close_price": "50656.19000000",
+        "base_volume": "205.90017500",
+        "quote_volume": "10404670.19862823",
+        "raw_trade_count": 4562,
+        "taker_buy_base_volume": "110.75449600",
+        "taker_buy_quote_volume": "5597320.29257583"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142840000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50612.35000000",
+        "high_price": "51026.25000000",
+        "low_price": "50612.34000000",
+        "close_price": "50968.83000000",
+        "base_volume": "291.95886900",
+        "quote_volume": "14842403.8776475800000000",
+        "raw_trade_count": 7140,
+        "taker_buy_base_volume": "160.12960100",
+        "taker_buy_quote_volume": "8140671.4840539800000000"
+      },
+      "kline_values": {
+        "open_price": "50612.35000000",
+        "high_price": "50873.33000000",
+        "low_price": "50612.34000000",
+        "close_price": "50821.94000000",
+        "base_volume": "153.45933300",
+        "quote_volume": "7789426.54532059",
+        "raw_trade_count": 3692,
+        "taker_buy_base_volume": "82.02980700",
+        "taker_buy_quote_volume": "4162567.48457843"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142900000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50968.83000000",
+        "high_price": "51178.59000000",
+        "low_price": "50848.71000000",
+        "close_price": "51150.00000000",
+        "base_volume": "277.08590500",
+        "quote_volume": "14137353.6191917200000000",
+        "raw_trade_count": 6244,
+        "taker_buy_base_volume": "144.60094200",
+        "taker_buy_quote_volume": "7378099.0717459200000000"
+      },
+      "kline_values": {
+        "open_price": "50968.83000000",
+        "high_price": "51057.32000000",
+        "low_price": "50848.71000000",
+        "close_price": "51057.32000000",
+        "base_volume": "126.88906900",
+        "quote_volume": "6462954.40131924",
+        "raw_trade_count": 3243,
+        "taker_buy_base_volume": "63.84167200",
+        "taker_buy_quote_volume": "3251705.40297715"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619142960000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51150.00000000",
+        "high_price": "51241.79000000",
+        "low_price": "51071.87000000",
+        "close_price": "51142.33000000",
+        "base_volume": "291.76807600",
+        "quote_volume": "14926074.4836983200000000",
+        "raw_trade_count": 5830,
+        "taker_buy_base_volume": "150.37123300",
+        "taker_buy_quote_volume": "7692206.2093043800000000"
+      },
+      "kline_values": {
+        "open_price": "51150.00000000",
+        "high_price": "51236.00000000",
+        "low_price": "51081.61000000",
+        "close_price": "51129.13000000",
+        "base_volume": "146.00571700",
+        "quote_volume": "7469204.18848505",
+        "raw_trade_count": 3400,
+        "taker_buy_base_volume": "68.61113900",
+        "taker_buy_quote_volume": "3509617.93917682"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143020000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51116.34000000",
+        "high_price": "51164.90000000",
+        "low_price": "50876.29000000",
+        "close_price": "51109.07000000",
+        "base_volume": "264.10405100",
+        "quote_volume": "13473265.7160523600000000",
+        "raw_trade_count": 5089,
+        "taker_buy_base_volume": "119.51884800",
+        "taker_buy_quote_volume": "6097375.4441644300000000"
+      },
+      "kline_values": {
+        "open_price": "51116.34000000",
+        "high_price": "51164.90000000",
+        "low_price": "50963.88000000",
+        "close_price": "51022.58000000",
+        "base_volume": "120.96299800",
+        "quote_volume": "6173904.23283242",
+        "raw_trade_count": 2801,
+        "taker_buy_base_volume": "49.09757000",
+        "taker_buy_quote_volume": "2505511.73705043"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143080000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51111.45000000",
+        "high_price": "51322.39000000",
+        "low_price": "51052.84000000",
+        "close_price": "51057.82000000",
+        "base_volume": "264.05812200",
+        "quote_volume": "13520419.3497889000000000",
+        "raw_trade_count": 5587,
+        "taker_buy_base_volume": "125.24379200",
+        "taker_buy_quote_volume": "6412059.1124539200000000"
+      },
+      "kline_values": {
+        "open_price": "51111.45000000",
+        "high_price": "51319.15000000",
+        "low_price": "51084.65000000",
+        "close_price": "51269.89000000",
+        "base_volume": "159.43601300",
+        "quote_volume": "8166344.69357147",
+        "raw_trade_count": 2869,
+        "taker_buy_base_volume": "75.22722400",
+        "taker_buy_quote_volume": "3852455.10608136"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143140000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51057.82000000",
+        "high_price": "51144.49000000",
+        "low_price": "50967.38000000",
+        "close_price": "51048.59000000",
+        "base_volume": "238.02308800",
+        "quote_volume": "12151126.5854455100000000",
+        "raw_trade_count": 4971,
+        "taker_buy_base_volume": "122.45673800",
+        "taker_buy_quote_volume": "6251137.3558983600000000"
+      },
+      "kline_values": {
+        "open_price": "51057.82000000",
+        "high_price": "51137.65000000",
+        "low_price": "50974.33000000",
+        "close_price": "51080.59000000",
+        "base_volume": "90.40716800",
+        "quote_volume": "4614773.43136383",
+        "raw_trade_count": 1970,
+        "taker_buy_base_volume": "44.75690700",
+        "taker_buy_quote_volume": "2284326.13468122"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143200000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51048.59000000",
+        "high_price": "51150.00000000",
+        "low_price": "50884.41000000",
+        "close_price": "51075.66000000",
+        "base_volume": "266.67122300",
+        "quote_volume": "13598869.9685192000000000",
+        "raw_trade_count": 4503,
+        "taker_buy_base_volume": "119.73241100",
+        "taker_buy_quote_volume": "6105683.9854644000000000"
+      },
+      "kline_values": {
+        "open_price": "51048.59000000",
+        "high_price": "51150.00000000",
+        "low_price": "50970.28000000",
+        "close_price": "51016.53000000",
+        "base_volume": "103.77367700",
+        "quote_volume": "5298315.66436672",
+        "raw_trade_count": 1620,
+        "taker_buy_base_volume": "43.66093500",
+        "taker_buy_quote_volume": "2229218.72894493"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143260000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51075.67000000",
+        "high_price": "51427.93000000",
+        "low_price": "51072.76000000",
+        "close_price": "51271.78000000",
+        "base_volume": "255.42360800",
+        "quote_volume": "13102247.4683471200000000",
+        "raw_trade_count": 5222,
+        "taker_buy_base_volume": "122.66579100",
+        "taker_buy_quote_volume": "6291887.7471596200000000"
+      },
+      "kline_values": {
+        "open_price": "51075.67000000",
+        "high_price": "51289.99000000",
+        "low_price": "51072.76000000",
+        "close_price": "51279.26000000",
+        "base_volume": "55.58295200",
+        "quote_volume": "2844539.56220915",
+        "raw_trade_count": 1660,
+        "taker_buy_base_volume": "29.81425100",
+        "taker_buy_quote_volume": "1525799.44109061"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143320000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51276.05000000",
+        "high_price": "51317.74000000",
+        "low_price": "51081.22000000",
+        "close_price": "51137.49000000",
+        "base_volume": "170.34468300",
+        "quote_volume": "8718932.7784545500000000",
+        "raw_trade_count": 3849,
+        "taker_buy_base_volume": "78.31861300",
+        "taker_buy_quote_volume": "4008476.9825836900000000"
+      },
+      "kline_values": {
+        "open_price": "51276.05000000",
+        "high_price": "51317.74000000",
+        "low_price": "51200.00000000",
+        "close_price": "51200.01000000",
+        "base_volume": "49.81870900",
+        "quote_volume": "2553593.38340540",
+        "raw_trade_count": 1123,
+        "taker_buy_base_volume": "21.78206100",
+        "taker_buy_quote_volume": "1116577.01495729"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143380000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51137.48000000",
+        "high_price": "51247.72000000",
+        "low_price": "51056.76000000",
+        "close_price": "51085.48000000",
+        "base_volume": "143.89018300",
+        "quote_volume": "7361732.2419468000000000",
+        "raw_trade_count": 3190,
+        "taker_buy_base_volume": "64.59741700",
+        "taker_buy_quote_volume": "3304893.5356097500000000"
+      },
+      "kline_values": {
+        "open_price": "51137.48000000",
+        "high_price": "51209.34000000",
+        "low_price": "51127.92000000",
+        "close_price": "51203.01000000",
+        "base_volume": "32.05809300",
+        "quote_volume": "1640204.21185413",
+        "raw_trade_count": 902,
+        "taker_buy_base_volume": "19.08547300",
+        "taker_buy_quote_volume": "976512.01156127"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143440000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51085.48000000",
+        "high_price": "51169.93000000",
+        "low_price": "51025.20000000",
+        "close_price": "51056.56000000",
+        "base_volume": "130.98243100",
+        "quote_volume": "6692251.6987121300000000",
+        "raw_trade_count": 2981,
+        "taker_buy_base_volume": "68.93274500",
+        "taker_buy_quote_volume": "3521784.8103713400000000"
+      },
+      "kline_values": {
+        "open_price": "51085.48000000",
+        "high_price": "51167.07000000",
+        "low_price": "51064.29000000",
+        "close_price": "51068.85000000",
+        "base_volume": "38.61624300",
+        "quote_volume": "1973477.52944902",
+        "raw_trade_count": 877,
+        "taker_buy_base_volume": "20.23606100",
+        "taker_buy_quote_volume": "1034064.68087530"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143500000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51044.37000000",
+        "high_price": "51082.20000000",
+        "low_price": "50932.07000000",
+        "close_price": "50932.08000000",
+        "base_volume": "129.44288700",
+        "quote_volume": "6600320.1199224200000000",
+        "raw_trade_count": 3177,
+        "taker_buy_base_volume": "63.13878400",
+        "taker_buy_quote_volume": "3219650.2759777100000000"
+      },
+      "kline_values": {
+        "open_price": "51044.37000000",
+        "high_price": "51082.20000000",
+        "low_price": "50983.56000000",
+        "close_price": "50988.57000000",
+        "base_volume": "49.85872900",
+        "quote_volume": "2543780.25942341",
+        "raw_trade_count": 1245,
+        "taker_buy_base_volume": "23.57710900",
+        "taker_buy_quote_volume": "1202926.84285164"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143560000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50932.07000000",
+        "high_price": "50995.41000000",
+        "low_price": "50873.83000000",
+        "close_price": "50960.39000000",
+        "base_volume": "159.80013500",
+        "quote_volume": "8139634.4752535700000000",
+        "raw_trade_count": 3434,
+        "taker_buy_base_volume": "75.37726300",
+        "taker_buy_quote_volume": "3839545.4832321200000000"
+      },
+      "kline_values": {
+        "open_price": "50932.07000000",
+        "high_price": "50991.22000000",
+        "low_price": "50873.83000000",
+        "close_price": "50986.78000000",
+        "base_volume": "55.84228100",
+        "quote_volume": "2844513.70153865",
+        "raw_trade_count": 1347,
+        "taker_buy_base_volume": "23.67995500",
+        "taker_buy_quote_volume": "1206363.12071665"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143620000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50960.39000000",
+        "high_price": "50974.47000000",
+        "low_price": "50865.74000000",
+        "close_price": "50921.99000000",
+        "base_volume": "166.82382100",
+        "quote_volume": "8495031.2871397500000000",
+        "raw_trade_count": 3538,
+        "taker_buy_base_volume": "76.46672700",
+        "taker_buy_quote_volume": "3893690.6939212800000000"
+      },
+      "kline_values": {
+        "open_price": "50960.39000000",
+        "high_price": "50973.48000000",
+        "low_price": "50919.82000000",
+        "close_price": "50935.68000000",
+        "base_volume": "53.19745200",
+        "quote_volume": "2710492.18438691",
+        "raw_trade_count": 1051,
+        "taker_buy_base_volume": "20.29757000",
+        "taker_buy_quote_volume": "1034154.83685330"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143680000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50928.30000000",
+        "high_price": "51019.35000000",
+        "low_price": "50714.72000000",
+        "close_price": "50763.97000000",
+        "base_volume": "223.44008600",
+        "quote_volume": "11361462.8263482400000000",
+        "raw_trade_count": 4572,
+        "taker_buy_base_volume": "93.72641400",
+        "taker_buy_quote_volume": "4766363.1745969400000000"
+      },
+      "kline_values": {
+        "open_price": "50928.30000000",
+        "high_price": "51019.35000000",
+        "low_price": "50879.70000000",
+        "close_price": "50925.84000000",
+        "base_volume": "74.90053900",
+        "quote_volume": "3816278.63209001",
+        "raw_trade_count": 1536,
+        "taker_buy_base_volume": "35.88975800",
+        "taker_buy_quote_volume": "1828475.95931420"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143740000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50759.69000000",
+        "high_price": "50809.83000000",
+        "low_price": "50629.25000000",
+        "close_price": "50671.91000000",
+        "base_volume": "205.51419400",
+        "quote_volume": "10422319.0936524400000000",
+        "raw_trade_count": 4058,
+        "taker_buy_base_volume": "88.06213600",
+        "taker_buy_quote_volume": "4465902.8251267600000000"
+      },
+      "kline_values": {
+        "open_price": "50759.69000000",
+        "high_price": "50809.83000000",
+        "low_price": "50650.89000000",
+        "close_price": "50732.29000000",
+        "base_volume": "91.13722300",
+        "quote_volume": "4622714.76068182",
+        "raw_trade_count": 1778,
+        "taker_buy_base_volume": "38.69156400",
+        "taker_buy_quote_volume": "1962526.89888013"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143800000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50669.68000000",
+        "high_price": "50705.16000000",
+        "low_price": "50501.00000000",
+        "close_price": "50544.22000000",
+        "base_volume": "220.15338900",
+        "quote_volume": "11138251.7313267200000000",
+        "raw_trade_count": 4446,
+        "taker_buy_base_volume": "101.55912200",
+        "taker_buy_quote_volume": "5138814.0334346500000000"
+      },
+      "kline_values": {
+        "open_price": "50669.68000000",
+        "high_price": "50705.16000000",
+        "low_price": "50550.99000000",
+        "close_price": "50595.55000000",
+        "base_volume": "96.71682200",
+        "quote_volume": "4896857.53749881",
+        "raw_trade_count": 1779,
+        "taker_buy_base_volume": "49.76857400",
+        "taker_buy_quote_volume": "2519904.96507843"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143860000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50544.23000000",
+        "high_price": "50544.23000000",
+        "low_price": "50315.35000000",
+        "close_price": "50393.91000000",
+        "base_volume": "297.89288100",
+        "quote_volume": "15027123.3535941100000000",
+        "raw_trade_count": 5729,
+        "taker_buy_base_volume": "140.87772800",
+        "taker_buy_quote_volume": "7106572.9139411500000000"
+      },
+      "kline_values": {
+        "open_price": "50544.23000000",
+        "high_price": "50544.23000000",
+        "low_price": "50401.01000000",
+        "close_price": "50474.88000000",
+        "base_volume": "157.82321100",
+        "quote_volume": "7966570.65957234",
+        "raw_trade_count": 2566,
+        "taker_buy_base_volume": "79.11595600",
+        "taker_buy_quote_volume": "3993562.70596871"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143920000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50387.58000000",
+        "high_price": "50585.53000000",
+        "low_price": "50300.00000000",
+        "close_price": "50559.65000000",
+        "base_volume": "272.90545900",
+        "quote_volume": "13757206.3576087700000000",
+        "raw_trade_count": 5221,
+        "taker_buy_base_volume": "163.36772100",
+        "taker_buy_quote_volume": "8235552.9010365300000000"
+      },
+      "kline_values": {
+        "open_price": "50387.58000000",
+        "high_price": "50469.22000000",
+        "low_price": "50300.00000000",
+        "close_price": "50371.35000000",
+        "base_volume": "89.06996700",
+        "quote_volume": "4486976.02085301",
+        "raw_trade_count": 1793,
+        "taker_buy_base_volume": "44.73902600",
+        "taker_buy_quote_volume": "2254095.96458783"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619143980000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50559.65000000",
+        "high_price": "50586.67000000",
+        "low_price": "50300.00000000",
+        "close_price": "50341.88000000",
+        "base_volume": "151.28729600",
+        "quote_volume": "7634126.9794150100000000",
+        "raw_trade_count": 4283,
+        "taker_buy_base_volume": "67.74771000",
+        "taker_buy_quote_volume": "3419208.6792801300000000"
+      },
+      "kline_values": {
+        "open_price": "50559.65000000",
+        "high_price": "50586.67000000",
+        "low_price": "50461.83000000",
+        "close_price": "50545.30000000",
+        "base_volume": "45.25371600",
+        "quote_volume": "2286813.69588323",
+        "raw_trade_count": 1355,
+        "taker_buy_base_volume": "23.34858500",
+        "taker_buy_quote_volume": "1179927.04050265"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144040000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50341.89000000",
+        "high_price": "50415.77000000",
+        "low_price": "50268.00000000",
+        "close_price": "50288.22000000",
+        "base_volume": "156.92675200",
+        "quote_volume": "7897047.5002722200000000",
+        "raw_trade_count": 5379,
+        "taker_buy_base_volume": "81.00361500",
+        "taker_buy_quote_volume": "4076501.7615628400000000"
+      },
+      "kline_values": {
+        "open_price": "50341.89000000",
+        "high_price": "50341.89000000",
+        "low_price": "50268.00000000",
+        "close_price": "50297.65000000",
+        "base_volume": "28.34306600",
+        "quote_volume": "1425691.76050995",
+        "raw_trade_count": 1054,
+        "taker_buy_base_volume": "11.95668700",
+        "taker_buy_quote_volume": "601381.18644193"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144100000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50288.23000000",
+        "high_price": "50593.46000000",
+        "low_price": "50269.34000000",
+        "close_price": "50391.37000000",
+        "base_volume": "166.54911800",
+        "quote_volume": "8402913.0833350700000000",
+        "raw_trade_count": 4988,
+        "taker_buy_base_volume": "86.41850400",
+        "taker_buy_quote_volume": "4360041.3131329400000000"
+      },
+      "kline_values": {
+        "open_price": "50288.23000000",
+        "high_price": "50368.67000000",
+        "low_price": "50269.34000000",
+        "close_price": "50360.02000000",
+        "base_volume": "24.71847900",
+        "quote_volume": "1243793.08153399",
+        "raw_trade_count": 878,
+        "taker_buy_base_volume": "12.49800700",
+        "taker_buy_quote_volume": "628792.72201433"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144160000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50391.37000000",
+        "high_price": "50483.51000000",
+        "low_price": "50250.75000000",
+        "close_price": "50384.01000000",
+        "base_volume": "220.39615500",
+        "quote_volume": "11093805.5657067700000000",
+        "raw_trade_count": 5550,
+        "taker_buy_base_volume": "121.37258500",
+        "taker_buy_quote_volume": "6109821.4478983300000000"
+      },
+      "kline_values": {
+        "open_price": "50391.37000000",
+        "high_price": "50483.51000000",
+        "low_price": "50391.18000000",
+        "close_price": "50471.94000000",
+        "base_volume": "16.59089100",
+        "quote_volume": "836718.01176764",
+        "raw_trade_count": 498,
+        "taker_buy_base_volume": "10.31972200",
+        "taker_buy_quote_volume": "520392.41397703"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144220000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50384.01000000",
+        "high_price": "50500.00000000",
+        "low_price": "50302.93000000",
+        "close_price": "50315.43000000",
+        "base_volume": "144.34445200",
+        "quote_volume": "7274118.8610974600000000",
+        "raw_trade_count": 4081,
+        "taker_buy_base_volume": "79.80832800",
+        "taker_buy_quote_volume": "4021954.5897953000000000"
+      },
+      "kline_values": {
+        "open_price": "50384.01000000",
+        "high_price": "50384.01000000",
+        "low_price": "50362.58000000",
+        "close_price": "50366.65000000",
+        "base_volume": "7.25915700",
+        "quote_volume": "365695.78350832",
+        "raw_trade_count": 200,
+        "taker_buy_base_volume": "2.10073200",
+        "taker_buy_quote_volume": "105821.48770543"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144280000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50315.43000000",
+        "high_price": "50400.00000000",
+        "low_price": "50069.15000000",
+        "close_price": "50069.15000000",
+        "base_volume": "276.29716400",
+        "quote_volume": "13880563.6470369900000000",
+        "raw_trade_count": 4862,
+        "taker_buy_base_volume": "101.96935900",
+        "taker_buy_quote_volume": "5124869.2094259800000000"
+      },
+      "kline_values": {
+        "open_price": "50315.43000000",
+        "high_price": "50340.02000000",
+        "low_price": "50315.43000000",
+        "close_price": "50339.45000000",
+        "base_volume": "3.06076500",
+        "quote_volume": "154047.41104741",
+        "raw_trade_count": 90,
+        "taker_buy_base_volume": "1.71212500",
+        "taker_buy_quote_volume": "86166.16729317"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144340000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50069.14000000",
+        "high_price": "50248.99000000",
+        "low_price": "49896.05000000",
+        "close_price": "49909.80000000",
+        "base_volume": "293.67337200",
+        "quote_volume": "14707060.8243807700000000",
+        "raw_trade_count": 6579,
+        "taker_buy_base_volume": "124.85897000",
+        "taker_buy_quote_volume": "6255483.8129014900000000"
+      },
+      "kline_values": {
+        "open_price": "50069.14000000",
+        "high_price": "50142.94000000",
+        "low_price": "50036.91000000",
+        "close_price": "50118.19000000",
+        "base_volume": "36.08566100",
+        "quote_volume": "1807115.93586473",
+        "raw_trade_count": 755,
+        "taker_buy_base_volume": "17.19297200",
+        "taker_buy_quote_volume": "861244.04993216"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144400000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49909.15000000",
+        "high_price": "50248.19000000",
+        "low_price": "49847.64000000",
+        "close_price": "50002.46000000",
+        "base_volume": "265.27833500",
+        "quote_volume": "13278294.2306970600000000",
+        "raw_trade_count": 6404,
+        "taker_buy_base_volume": "154.11976400",
+        "taker_buy_quote_volume": "7717061.0996436300000000"
+      },
+      "kline_values": {
+        "open_price": "49909.15000000",
+        "high_price": "50118.47000000",
+        "low_price": "49847.64000000",
+        "close_price": "50115.15000000",
+        "base_volume": "122.15398900",
+        "quote_volume": "6102468.95866658",
+        "raw_trade_count": 2354,
+        "taker_buy_base_volume": "70.60580600",
+        "taker_buy_quote_volume": "3528714.80026590"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144460000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50002.45000000",
+        "high_price": "50071.62000000",
+        "low_price": "49300.00000000",
+        "close_price": "49636.85000000",
+        "base_volume": "590.06422600",
+        "quote_volume": "29248905.3981402800000000",
+        "raw_trade_count": 13128,
+        "taker_buy_base_volume": "236.19109500",
+        "taker_buy_quote_volume": "11714092.9370545900000000"
+      },
+      "kline_values": {
+        "open_price": "50002.45000000",
+        "high_price": "50031.40000000",
+        "low_price": "49300.00000000",
+        "close_price": "49336.14000000",
+        "base_volume": "339.97422800",
+        "quote_volume": "16857421.40203553",
+        "raw_trade_count": 8827,
+        "taker_buy_base_volume": "90.29885500",
+        "taker_buy_quote_volume": "4484250.56079112"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144520000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49635.16000000",
+        "high_price": "49898.11000000",
+        "low_price": "48915.00000000",
+        "close_price": "49234.50000000",
+        "base_volume": "647.17149000",
+        "quote_volume": "31858065.1634857400000000",
+        "raw_trade_count": 13028,
+        "taker_buy_base_volume": "224.38055700",
+        "taker_buy_quote_volume": "11065143.0378693900000000"
+      },
+      "kline_values": {
+        "open_price": "49635.16000000",
+        "high_price": "49898.11000000",
+        "low_price": "48915.00000000",
+        "close_price": "49266.92000000",
+        "base_volume": "636.90966800",
+        "quote_volume": "31352921.32577422",
+        "raw_trade_count": 12824,
+        "taker_buy_base_volume": "221.16909600",
+        "taker_buy_quote_volume": "10906925.42882351"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619144880000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49410.51000000",
+        "high_price": "49719.16000000",
+        "low_price": "48555.00000000",
+        "close_price": "49517.34000000",
+        "base_volume": "522.11807500",
+        "quote_volume": "25732902.5899242100000000",
+        "raw_trade_count": 10884,
+        "taker_buy_base_volume": "200.49639600",
+        "taker_buy_quote_volume": "9897182.8653585100000000"
+      },
+      "kline_values": {
+        "open_price": "49410.51000000",
+        "high_price": "49719.16000000",
+        "low_price": "48555.00000000",
+        "close_price": "49488.76000000",
+        "base_volume": "519.93293900",
+        "quote_volume": "25624738.83143418",
+        "raw_trade_count": 10783,
+        "taker_buy_base_volume": "199.08942100",
+        "taker_buy_quote_volume": "9827536.10538931"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619145300000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49481.98000000",
+        "high_price": "49629.97000000",
+        "low_price": "49341.44000000",
+        "close_price": "49465.22000000",
+        "base_volume": "237.91091900",
+        "quote_volume": "11775112.9863758500000000",
+        "raw_trade_count": 5848,
+        "taker_buy_base_volume": "111.39030800",
+        "taker_buy_quote_volume": "5514006.9217325300000000"
+      },
+      "kline_values": {
+        "open_price": "49481.98000000",
+        "high_price": "49629.97000000",
+        "low_price": "49341.44000000",
+        "close_price": "49444.99000000",
+        "base_volume": "228.57482700",
+        "quote_volume": "11313277.84053817",
+        "raw_trade_count": 5666,
+        "taker_buy_base_volume": "107.30965000",
+        "taker_buy_quote_volume": "5312135.51418465"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619145360000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49465.22000000",
+        "high_price": "49500.00000000",
+        "low_price": "49300.00000000",
+        "close_price": "49433.61000000",
+        "base_volume": "292.34265900",
+        "quote_volume": "14452219.6273268700000000",
+        "raw_trade_count": 6142,
+        "taker_buy_base_volume": "150.56559300",
+        "taker_buy_quote_volume": "7443948.4212591500000000"
+      },
+      "kline_values": {
+        "open_price": "49465.22000000",
+        "high_price": "49500.00000000",
+        "low_price": "49300.00000000",
+        "close_price": "49428.74000000",
+        "base_volume": "273.47261400",
+        "quote_volume": "13519444.59240630",
+        "raw_trade_count": 5783,
+        "taker_buy_base_volume": "140.47604700",
+        "taker_buy_quote_volume": "6945161.94306767"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619145420000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49425.49000000",
+        "high_price": "49467.38000000",
+        "low_price": "49100.61000000",
+        "close_price": "49114.26000000",
+        "base_volume": "300.89322900",
+        "quote_volume": "14830925.7614013200000000",
+        "raw_trade_count": 6716,
+        "taker_buy_base_volume": "126.25416200",
+        "taker_buy_quote_volume": "6222868.4361728900000000"
+      },
+      "kline_values": {
+        "open_price": "49425.49000000",
+        "high_price": "49467.38000000",
+        "low_price": "49181.41000000",
+        "close_price": "49205.60000000",
+        "base_volume": "266.27393900",
+        "quote_volume": "13129274.53783786",
+        "raw_trade_count": 5864,
+        "taker_buy_base_volume": "109.54125600",
+        "taker_buy_quote_volume": "5401377.87485272"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619145480000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49114.27000000",
+        "high_price": "49377.26000000",
+        "low_price": "49000.01000000",
+        "close_price": "49351.92000000",
+        "base_volume": "249.14503300",
+        "quote_volume": "12236383.5382830900000000",
+        "raw_trade_count": 6238,
+        "taker_buy_base_volume": "121.04915400",
+        "taker_buy_quote_volume": "5946824.9847720400000000"
+      },
+      "kline_values": {
+        "open_price": "49114.27000000",
+        "high_price": "49272.54000000",
+        "low_price": "49000.01000000",
+        "close_price": "49268.63000000",
+        "base_volume": "231.64781200",
+        "quote_volume": "11373513.11980658",
+        "raw_trade_count": 5746,
+        "taker_buy_base_volume": "107.31996600",
+        "taker_buy_quote_volume": "5269750.97458011"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619145780000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49522.95000000",
+        "high_price": "49575.46000000",
+        "low_price": "49374.35000000",
+        "close_price": "49484.38000000",
+        "base_volume": "196.99069200",
+        "quote_volume": "9745058.1027537200000000",
+        "raw_trade_count": 5448,
+        "taker_buy_base_volume": "85.61370600",
+        "taker_buy_quote_volume": "4234812.3645953100000000"
+      },
+      "kline_values": {
+        "open_price": "49522.95000000",
+        "high_price": "49575.46000000",
+        "low_price": "49374.35000000",
+        "close_price": "49465.81000000",
+        "base_volume": "192.81045400",
+        "quote_volume": "9538249.67954311",
+        "raw_trade_count": 5321,
+        "taker_buy_base_volume": "82.89490600",
+        "taker_buy_quote_volume": "4100302.60161600"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619145840000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49493.64000000",
+        "high_price": "49493.64000000",
+        "low_price": "49300.01000000",
+        "close_price": "49365.41000000",
+        "base_volume": "216.06711600",
+        "quote_volume": "10668591.8774490800000000",
+        "raw_trade_count": 4920,
+        "taker_buy_base_volume": "108.69378500",
+        "taker_buy_quote_volume": "5366841.9360645700000000"
+      },
+      "kline_values": {
+        "open_price": "49493.64000000",
+        "high_price": "49493.64000000",
+        "low_price": "49300.01000000",
+        "close_price": "49397.50000000",
+        "base_volume": "208.35415700",
+        "quote_volume": "10287688.01581867",
+        "raw_trade_count": 4712,
+        "taker_buy_base_volume": "106.86053000",
+        "taker_buy_quote_volume": "5276307.43891810"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619145900000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49364.01000000",
+        "high_price": "49663.01000000",
+        "low_price": "49346.19000000",
+        "close_price": "49619.84000000",
+        "base_volume": "260.38607700",
+        "quote_volume": "12892291.0646795400000000",
+        "raw_trade_count": 6096,
+        "taker_buy_base_volume": "163.23578000",
+        "taker_buy_quote_volume": "8080865.3584325700000000"
+      },
+      "kline_values": {
+        "open_price": "49364.01000000",
+        "high_price": "49663.01000000",
+        "low_price": "49346.19000000",
+        "close_price": "49635.40000000",
+        "base_volume": "245.61016100",
+        "quote_volume": "12158942.14701892",
+        "raw_trade_count": 5578,
+        "taker_buy_base_volume": "155.57403100",
+        "taker_buy_quote_volume": "7700597.72469070"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619145960000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49619.83000000",
+        "high_price": "49706.55000000",
+        "low_price": "49504.26000000",
+        "close_price": "49698.50000000",
+        "base_volume": "213.91537800",
+        "quote_volume": "10619565.3508915300000000",
+        "raw_trade_count": 5975,
+        "taker_buy_base_volume": "106.79902700",
+        "taker_buy_quote_volume": "5301991.4642669400000000"
+      },
+      "kline_values": {
+        "open_price": "49619.83000000",
+        "high_price": "49700.61000000",
+        "low_price": "49504.26000000",
+        "close_price": "49651.83000000",
+        "base_volume": "195.05088400",
+        "quote_volume": "9682260.76627091",
+        "raw_trade_count": 5390,
+        "taker_buy_base_volume": "96.38328800",
+        "taker_buy_quote_volume": "4784481.83394336"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619146020000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49698.50000000",
+        "high_price": "49917.68000000",
+        "low_price": "49679.18000000",
+        "close_price": "49896.25000000",
+        "base_volume": "312.93411900",
+        "quote_volume": "15589960.7021696600000000",
+        "raw_trade_count": 6690,
+        "taker_buy_base_volume": "150.58031900",
+        "taker_buy_quote_volume": "7500533.3432524200000000"
+      },
+      "kline_values": {
+        "open_price": "49698.50000000",
+        "high_price": "49870.98000000",
+        "low_price": "49679.18000000",
+        "close_price": "49870.98000000",
+        "base_volume": "250.43676700",
+        "quote_volume": "12472147.74062405",
+        "raw_trade_count": 5904,
+        "taker_buy_base_volume": "135.92518900",
+        "taker_buy_quote_volume": "6769353.98736947"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619146080000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49896.25000000",
+        "high_price": "49930.26000000",
+        "low_price": "49707.05000000",
+        "close_price": "49820.69000000",
+        "base_volume": "260.24068600",
+        "quote_volume": "12964352.5396940400000000",
+        "raw_trade_count": 6001,
+        "taker_buy_base_volume": "116.50773700",
+        "taker_buy_quote_volume": "5804178.3989512600000000"
+      },
+      "kline_values": {
+        "open_price": "49896.25000000",
+        "high_price": "49930.26000000",
+        "low_price": "49707.05000000",
+        "close_price": "49828.68000000",
+        "base_volume": "247.21281100",
+        "quote_volume": "12315476.03890590",
+        "raw_trade_count": 5562,
+        "taker_buy_base_volume": "109.77709200",
+        "taker_buy_quote_volume": "5468953.78314549"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-04",
+      "open_time_ms": 1619146140000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "49820.69000000",
+        "high_price": "49889.58000000",
+        "low_price": "49767.41000000",
+        "close_price": "49822.10000000",
+        "base_volume": "180.01109200",
+        "quote_volume": "8967669.2993099700000000",
+        "raw_trade_count": 5979,
+        "taker_buy_base_volume": "80.43010100",
+        "taker_buy_quote_volume": "4006757.5001832700000000"
+      },
+      "kline_values": {
+        "open_price": "49820.69000000",
+        "high_price": "49889.58000000",
+        "low_price": "49774.58000000",
+        "close_price": "49789.43000000",
+        "base_volume": "165.09367700",
+        "quote_volume": "8224945.26933734",
+        "raw_trade_count": 5654,
+        "taker_buy_base_volume": "75.51192200",
+        "taker_buy_quote_volume": "3761874.18799065"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-08",
+      "open_time_ms": 1629354060000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "44356.73000000",
+        "high_price": "44393.86000000",
+        "low_price": "44344.59000000",
+        "close_price": "44374.39000000",
+        "base_volume": "18.07343800",
+        "quote_volume": "801849.1792219600000000",
+        "raw_trade_count": 628,
+        "taker_buy_base_volume": "11.03242500",
+        "taker_buy_quote_volume": "489431.1966889700000000"
+      },
+      "kline_values": {
+        "open_price": "44356.73000000",
+        "high_price": "44393.86000000",
+        "low_price": "44344.59000000",
+        "close_price": "44374.39000000",
+        "base_volume": "17.87821900",
+        "quote_volume": "793186.45508271",
+        "raw_trade_count": 618,
+        "taker_buy_base_volume": "11.02264100",
+        "taker_buy_quote_volume": "488997.03755937"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-09",
+      "open_time_ms": 1632229920000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT"
+      ],
+      "aggregate_values": {
+        "open_price": "43050.30000000",
+        "high_price": "43088.43000000",
+        "low_price": "43024.46000000",
+        "close_price": "43032.65000000",
+        "base_volume": "35.46085000",
+        "quote_volume": "1526947.3438417000000000",
+        "raw_trade_count": 716,
+        "taker_buy_base_volume": "15.98428000",
+        "taker_buy_quote_volume": "688314.0169338000000000"
+      },
+      "kline_values": {
+        "open_price": "43050.30000000",
+        "high_price": "43088.43000000",
+        "low_price": "43024.46000000",
+        "close_price": "43032.66000000",
+        "base_volume": "35.39919000",
+        "quote_volume": "1524293.95064270",
+        "raw_trade_count": 714,
+        "taker_buy_base_volume": "15.98428000",
+        "taker_buy_quote_volume": "688314.01693380"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-09",
+      "open_time_ms": 1632361740000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "43451.25000000",
+        "high_price": "43569.31000000",
+        "low_price": "43440.00000000",
+        "close_price": "43517.01000000",
+        "base_volume": "103.78205000",
+        "quote_volume": "4514885.2268379000000000",
+        "raw_trade_count": 1642,
+        "taker_buy_base_volume": "61.92685000",
+        "taker_buy_quote_volume": "2693444.3366302000000000"
+      },
+      "kline_values": {
+        "open_price": "43451.25000000",
+        "high_price": "43569.31000000",
+        "low_price": "43440.00000000",
+        "close_price": "43522.37000000",
+        "base_volume": "103.67583000",
+        "quote_volume": "4510262.65244340",
+        "raw_trade_count": 1631,
+        "taker_buy_base_volume": "61.90972000",
+        "taker_buy_quote_volume": "2692698.88970130"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-10",
+      "open_time_ms": 1634965200000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "61153.52000000",
+        "high_price": "61181.31000000",
+        "low_price": "61150.02000000",
+        "close_price": "61159.47000000",
+        "base_volume": "16.40033000",
+        "quote_volume": "1003127.2453883000000000",
+        "raw_trade_count": 537,
+        "taker_buy_base_volume": "6.58051000",
+        "taker_buy_quote_volume": "402525.1470581000000000"
+      },
+      "kline_values": {
+        "open_price": "61153.52000000",
+        "high_price": "61181.31000000",
+        "low_price": "61150.02000000",
+        "close_price": "61172.17000000",
+        "base_volume": "6.77291000",
+        "quote_volume": "414281.43814920",
+        "raw_trade_count": 279,
+        "taker_buy_base_volume": "3.48864000",
+        "taker_buy_quote_volume": "213404.77858880"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-10",
+      "open_time_ms": 1635578820000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "61664.25000000",
+        "high_price": "61680.38000000",
+        "low_price": "61662.48000000",
+        "close_price": "61668.64000000",
+        "base_volume": "4.76562000",
+        "quote_volume": "293900.0553946000000000",
+        "raw_trade_count": 631,
+        "taker_buy_base_volume": "1.83186000",
+        "taker_buy_quote_volume": "112972.7508273000000000"
+      },
+      "kline_values": {
+        "open_price": "61664.25000000",
+        "high_price": "61680.38000000",
+        "low_price": "61662.48000000",
+        "close_price": "61668.64000000",
+        "base_volume": "4.76332000",
+        "quote_volume": "293758.21751220",
+        "raw_trade_count": 627,
+        "taker_buy_base_volume": "1.83082000",
+        "taker_buy_quote_volume": "112908.61543130"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-12",
+      "open_time_ms": 1640316420000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51127.01000000",
+        "high_price": "51143.74000000",
+        "low_price": "51123.43000000",
+        "close_price": "51136.13000000",
+        "base_volume": "22.10701000",
+        "quote_volume": "1130449.7705415000000000",
+        "raw_trade_count": 638,
+        "taker_buy_base_volume": "7.51297000",
+        "taker_buy_quote_volume": "384156.0505036000000000"
+      },
+      "kline_values": {
+        "open_price": "51127.01000000",
+        "high_price": "51139.52000000",
+        "low_price": "51127.01000000",
+        "close_price": "51138.52000000",
+        "base_volume": "2.12600000",
+        "quote_volume": "108706.49464390",
+        "raw_trade_count": 88,
+        "taker_buy_base_volume": "1.54148000",
+        "taker_buy_quote_volume": "78816.74659820"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-12",
+      "open_time_ms": 1640316480000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "51136.14000000",
+        "high_price": "51136.16000000",
+        "low_price": "51003.64000000",
+        "close_price": "51039.92000000",
+        "base_volume": "25.62942000",
+        "quote_volume": "1308618.1690036000000000",
+        "raw_trade_count": 924,
+        "taker_buy_base_volume": "6.78996000",
+        "taker_buy_quote_volume": "346640.3886870000000000"
+      },
+      "kline_values": {
+        "open_price": "51113.84000000",
+        "high_price": "51113.84000000",
+        "low_price": "51003.64000000",
+        "close_price": "51039.92000000",
+        "base_volume": "22.71720000",
+        "quote_volume": "1159739.86756140",
+        "raw_trade_count": 707,
+        "taker_buy_base_volume": "6.04013000",
+        "taker_buy_quote_volume": "308312.80290200"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-12",
+      "open_time_ms": 1640322000000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT"
+      ],
+      "aggregate_values": {
+        "open_price": "50951.45000000",
+        "high_price": "50951.47000000",
+        "low_price": "50920.62000000",
+        "close_price": "50931.91000000",
+        "base_volume": "7.25110000",
+        "quote_volume": "369361.0854983000000000",
+        "raw_trade_count": 391,
+        "taker_buy_base_volume": "2.56967000",
+        "taker_buy_quote_volume": "130891.8942816000000000"
+      },
+      "kline_values": {
+        "open_price": "50951.41000000",
+        "high_price": "50951.47000000",
+        "low_price": "50920.62000000",
+        "close_price": "50931.91000000",
+        "base_volume": "7.22049000",
+        "quote_volume": "367801.46231580",
+        "raw_trade_count": 389,
+        "taker_buy_base_volume": "2.56967000",
+        "taker_buy_quote_volume": "130891.89428160"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-12",
+      "open_time_ms": 1640590740000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "50793.42000000",
+        "high_price": "50801.64000000",
+        "low_price": "50768.97000000",
+        "close_price": "50788.01000000",
+        "base_volume": "17.95324000",
+        "quote_volume": "911753.3623004000000000",
+        "raw_trade_count": 492,
+        "taker_buy_base_volume": "6.43160000",
+        "taker_buy_quote_volume": "326634.7163471000000000"
+      },
+      "kline_values": {
+        "open_price": "50793.42000000",
+        "high_price": "50793.42000000",
+        "low_price": "50768.97000000",
+        "close_price": "50788.01000000",
+        "base_volume": "5.31970000",
+        "quote_volume": "270129.44244300",
+        "raw_trade_count": 319,
+        "taker_buy_base_volume": "3.24873000",
+        "taker_buy_quote_volume": "164960.44142540"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2021-12",
+      "open_time_ms": 1640908800000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "47120.88000000",
+        "high_price": "47121.30000000",
+        "low_price": "47080.00000000",
+        "close_price": "47092.52000000",
+        "base_volume": "15.90526000",
+        "quote_volume": "749198.6368604000000000",
+        "raw_trade_count": 626,
+        "taker_buy_base_volume": "4.66090000",
+        "taker_buy_quote_volume": "219509.8821406000000000"
+      },
+      "kline_values": {
+        "open_price": "47120.88000000",
+        "high_price": "47121.30000000",
+        "low_price": "47080.00000000",
+        "close_price": "47091.29000000",
+        "base_volume": "14.37694000",
+        "quote_volume": "677226.18253680",
+        "raw_trade_count": 514,
+        "taker_buy_base_volume": "3.85955000",
+        "taker_buy_quote_volume": "181772.37063260"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2022-02",
+      "open_time_ms": 1644040800000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "41525.26000000",
+        "high_price": "41555.04000000",
+        "low_price": "41525.26000000",
+        "close_price": "41550.74000000",
+        "base_volume": "16.17975000",
+        "quote_volume": "672188.4132988000000000",
+        "raw_trade_count": 683,
+        "taker_buy_base_volume": "8.04964000",
+        "taker_buy_quote_volume": "334419.0084654000000000"
+      },
+      "kline_values": {
+        "open_price": "41525.26000000",
+        "high_price": "41555.04000000",
+        "low_price": "41525.26000000",
+        "close_price": "41550.11000000",
+        "base_volume": "14.97761000",
+        "quote_volume": "622238.80131100",
+        "raw_trade_count": 589,
+        "taker_buy_base_volume": "7.58208000",
+        "taker_buy_quote_volume": "314991.71821380"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2022-02",
+      "open_time_ms": 1645596000000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "37976.10000000",
+        "high_price": "38001.87000000",
+        "low_price": "37964.06000000",
+        "close_price": "38000.64000000",
+        "base_volume": "18.46247000",
+        "quote_volume": "701215.5522044000000000",
+        "raw_trade_count": 656,
+        "taker_buy_base_volume": "5.09800000",
+        "taker_buy_quote_volume": "193660.4520218000000000"
+      },
+      "kline_values": {
+        "open_price": "37976.10000000",
+        "high_price": "38001.87000000",
+        "low_price": "37964.06000000",
+        "close_price": "38000.65000000",
+        "base_volume": "15.98933000",
+        "quote_volume": "607235.41285720",
+        "raw_trade_count": 513,
+        "taker_buy_base_volume": "3.66369000",
+        "taker_buy_quote_volume": "139156.56824770"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2022-04",
+      "open_time_ms": 1649829540000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "40162.86000000",
+        "high_price": "40187.90000000",
+        "low_price": "40162.86000000",
+        "close_price": "40187.90000000",
+        "base_volume": "9.31278000",
+        "quote_volume": "374176.0599668000000000",
+        "raw_trade_count": 323,
+        "taker_buy_base_volume": "5.96856000",
+        "taker_buy_quote_volume": "239812.5926732000000000"
+      },
+      "kline_values": {
+        "open_price": "40162.86000000",
+        "high_price": "40187.90000000",
+        "low_price": "40162.86000000",
+        "close_price": "40187.89000000",
+        "base_volume": "8.43201000",
+        "quote_volume": "338779.77111810",
+        "raw_trade_count": 287,
+        "taker_buy_base_volume": "5.87122000",
+        "taker_buy_quote_volume": "235900.70248720"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2022-04",
+      "open_time_ms": 1649829600000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "40187.89000000",
+        "high_price": "40195.98000000",
+        "low_price": "40175.84000000",
+        "close_price": "40193.96000000",
+        "base_volume": "14.53681000",
+        "quote_volume": "584163.5737232000000000",
+        "raw_trade_count": 460,
+        "taker_buy_base_volume": "7.93488000",
+        "taker_buy_quote_volume": "318859.4521572000000000"
+      },
+      "kline_values": {
+        "open_price": "40187.89000000",
+        "high_price": "40189.86000000",
+        "low_price": "40175.84000000",
+        "close_price": "40189.85000000",
+        "base_volume": "13.29845000",
+        "quote_volume": "534392.68336230",
+        "raw_trade_count": 356,
+        "taker_buy_base_volume": "7.00377000",
+        "taker_buy_quote_volume": "281437.24186200"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2022-04",
+      "open_time_ms": 1650877200000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "38418.06000000",
+        "high_price": "38428.59000000",
+        "low_price": "38408.64000000",
+        "close_price": "38410.00000000",
+        "base_volume": "24.42597000",
+        "quote_volume": "938409.2939480000000000",
+        "raw_trade_count": 686,
+        "taker_buy_base_volume": "9.70151000",
+        "taker_buy_quote_volume": "372741.0039958000000000"
+      },
+      "kline_values": {
+        "open_price": "38418.06000000",
+        "high_price": "38428.59000000",
+        "low_price": "38408.64000000",
+        "close_price": "38410.00000000",
+        "base_volume": "24.33455000",
+        "quote_volume": "934897.85155540",
+        "raw_trade_count": 644,
+        "taker_buy_base_volume": "9.68225000",
+        "taker_buy_quote_volume": "372001.22720320"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2022-04",
+      "open_time_ms": 1651109700000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "39417.69000000",
+        "high_price": "39433.03000000",
+        "low_price": "39395.41000000",
+        "close_price": "39395.41000000",
+        "base_volume": "16.34366000",
+        "quote_volume": "644059.1143112000000000",
+        "raw_trade_count": 500,
+        "taker_buy_base_volume": "8.26543000",
+        "taker_buy_quote_volume": "325724.8469009000000000"
+      },
+      "kline_values": {
+        "open_price": "39417.69000000",
+        "high_price": "39433.03000000",
+        "low_price": "39409.30000000",
+        "close_price": "39409.31000000",
+        "base_volume": "7.29735000",
+        "quote_volume": "287641.66153090",
+        "raw_trade_count": 270,
+        "taker_buy_base_volume": "4.37009000",
+        "taker_buy_quote_volume": "172255.47533190"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    },
+    {
+      "month": "2022-05",
+      "open_time_ms": 1651394520000,
+      "mismatch_dimensions": [
+        "BASE_VOLUME",
+        "OHLC",
+        "QUOTE_VOLUME",
+        "RAW_TRADE_COUNT",
+        "TAKER_BUY_BASE_VOLUME",
+        "TAKER_BUY_QUOTE_VOLUME"
+      ],
+      "aggregate_values": {
+        "open_price": "37998.16000000",
+        "high_price": "38006.85000000",
+        "low_price": "37991.50000000",
+        "close_price": "38006.85000000",
+        "base_volume": "7.05232000",
+        "quote_volume": "267956.2662617000000000",
+        "raw_trade_count": 553,
+        "taker_buy_base_volume": "4.43355000",
+        "taker_buy_quote_volume": "168451.7797097000000000"
+      },
+      "kline_values": {
+        "open_price": "37998.16000000",
+        "high_price": "38006.85000000",
+        "low_price": "37991.50000000",
+        "close_price": "38006.84000000",
+        "base_volume": "7.02786000",
+        "quote_volume": "267026.61882680",
+        "raw_trade_count": 527,
+        "taker_buy_base_volume": "4.42070000",
+        "taker_buy_quote_volume": "167963.39168720"
+      },
+      "disposition": "QUARANTINE_MINUTE_RESET_STATE"
+    }
+  ],
+  "kline_missing_minute_count": 4009,
+  "kline_gap_interval_count": 21,
+  "kline_row_defect_count": 8,
+  "cross_family_mismatch_minute_count": 144,
+  "mismatch_dimension_counts": {
+    "BASE_VOLUME": 144,
+    "OHLC": 135,
+    "QUOTE_VOLUME": 144,
+    "RAW_TRADE_COUNT": 144,
+    "TAKER_BUY_BASE_VOLUME": 142,
+    "TAKER_BUY_QUOTE_VOLUME": 142
+  },
+  "quarantined_minute_count": 4161,
+  "quarantined_minute_manifest_hash": "618df63c38ca848e7d34188d20e99f3eac330f76cec5226bb6046d33354c9d27",
+  "issue_manifest_hash": "477bdb334689c83f805dcf123e365692ea70c64bf9965005606198227eb7ae54",
+  "aggregate_primary_source_qualified": true,
+  "official_kline_secondary_qa_qualified": true,
+  "primary_source": "BINANCE_SPOT_MONTHLY_AGGTRADES",
+  "secondary_source": "BINANCE_SPOT_MONTHLY_KLINES_1M_QA_ONLY",
+  "missing_minute_policy": "QUARANTINE_NO_SYNTHETIC_TRADABLE_BAR",
+  "mismatch_policy": "QUARANTINE_MINUTE_RESET_STATE",
+  "duplicate_member_policy": "TOP_LEVEL_CANONICAL_ONLY_WHEN_BYTE_IDENTICAL",
+  "future_state_recovery_policy": "RESET_AT_DEFECT_REQUIRE_MAXIMUM_FEATURE_LOOKBACK_WARMUP",
+  "evidence_partitions": [
+    {
+      "partition_id": "JAM_DEVELOPMENT_2019_2020",
+      "start_month": "2019-01",
+      "end_month": "2020-12",
+      "role": "DEVELOPMENT",
+      "outcome_access_permitted": false
+    },
+    {
+      "partition_id": "JAM_SEALED_VALIDATION_2021",
+      "start_month": "2021-01",
+      "end_month": "2021-12",
+      "role": "SEALED_VALIDATION",
+      "outcome_access_permitted": false
+    },
+    {
+      "partition_id": "JAM_SEALED_HOLDOUT_2022",
+      "start_month": "2022-01",
+      "end_month": "2022-12",
+      "role": "SEALED_HOLDOUT",
+      "outcome_access_permitted": false
+    }
+  ],
+  "contaminated_or_excluded_periods": [
+    "2023-01 through 2025-12 is consumed Jam research evidence and is excluded from successor qualification.",
+    "2026-01 onward remains outside this remediation pool; existing exploratory and forward-lock boundaries remain authoritative."
+  ],
+  "decision": "PASS_AGGTRADES_PRIMARY_SOURCE_POLICY_AWAIT_NO_RETURN_FEATURE_SPECIFICATION",
+  "next_required_authorization": "AUTHORIZE_JAM_SUCCESSOR_FEATURE_SPECIFICATION_NO_RETURNS",
+  "feature_fields_created": [],
+  "parameters_defined": [],
+  "thresholds_defined": [],
+  "return_metrics_calculated": [],
+  "strategy_executions": 0,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_testnet_order_authority": false,
+  "creates_production_authority": false,
+  "creates_live_eligibility": false,
+  "limitations": [
+    "Aggregate trades are primary because the proposed Jam mechanism requires aggressor-side flow unavailable in candles alone.",
+    "All invalid kline rows and cross-family mismatch minutes are quarantined even when aggregate trades become primary.",
+    "All missing kline minutes are observability gaps and are excluded without synthetic tradable bars or zero-flow substitution.",
+    "Any future stateful feature must reset at a quarantined boundary and complete its maximum causal lookback before eligibility.",
+    "No Pine or candle-only parity claim is created; aggressor-flow research remains backend-only.",
+    "No feature, threshold, directional label, return, PnL, ranking, optimization, signal, order, or strategy execution was performed.",
+    "Official one-minute klines remain a secondary quality reference and are not allowed to overwrite aggregate-trade observations.",
+    "The 2019-2020, 2021, and 2022 evidence roles are frozen before feature or outcome access.",
+    "The 2023-2025 period remains contaminated by prior Jam work and cannot be used as clean successor evidence.",
+    "The canonical 2021-12 aggregate member is acceptable only if its bytes exactly match the duplicate member.",
+    "The warm-up duration is deliberately not numeric because feature lookbacks have not been authorized or defined.",
+    "This result assesses source fitness and deterministic quarantine policy only; it does not establish any market edge.",
+    "This result grants no candidate, paper, Testnet strategy-order, production, live, capital, or profit authority."
+  ],
+  "result_evidence_hash": "02a3b8fef4e44995ebc1c0150044f1506e1f805d6c565f86d54bacc227f4f00c"
+}

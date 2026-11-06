@@ -1,0 +1,143 @@
+{
+  "schema_version": "aurex-v3-p01-cross-asset-execution-metadata-feasibility-result-v1",
+  "result_id": "v3-p01-cross-asset-execution-metadata-feasibility-v1",
+  "result_version": "1.0.0",
+  "generated_at": "2026-07-28T17:09:37.115878Z",
+  "status": "COMPLETE_NO_RETURN_FEASIBILITY_REJECTION",
+  "protocol_evidence_hash": "2c0d56b40150dac7fc1d6a6fc4091c99bea2b8a9536ab1c3ec9573d87bf720bb",
+  "runner_contract_hash": "70e8c1dca277d486856aa1d412d54e2395a62062ee1d226762efc02db0ddad43",
+  "cross_asset_foundation_source_hash": "f87bf9ac25e3a9e38ba5d7a21c143d0f50935ce550fc06f8618ae2a97f4a1cb9",
+  "assessments": [
+    {
+      "requirement_id": "CROSS_ASSET_IDENTITY_HEDGE_AND_RESIDUAL_RISK_FOUNDATION",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8",
+        "f87bf9ac25e3a9e38ba5d7a21c143d0f50935ce550fc06f8618ae2a97f4a1cb9"
+      ],
+      "rationale": "The audited V2 engine adds spot and perpetual base quantities to measure delta and targets one base quantity. That is valid only when both legs reference the same asset; it cannot net different assets, apply a cross-asset hedge ratio, or bound residual value risk."
+    },
+    {
+      "requirement_id": "HISTORICAL_ACCOUNT_FEE_TIER",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7"
+      ],
+      "rationale": "The immutable metadata audit found only a current signed account commission surface and no complete historical 2023-2024 account-tier fee series."
+    },
+    {
+      "requirement_id": "HISTORICAL_COLLATERAL_LIQUIDATION_AND_ADL_RULES",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7",
+        "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8"
+      ],
+      "rationale": "Current documentation and synthetic declared rules do not establish the complete point-in-time 2023-2024 collateral, liquidation, fee, and ADL rule history."
+    },
+    {
+      "requirement_id": "HISTORICAL_FUTURES_CONTRACT_LIFECYCLE",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7"
+      ],
+      "rationale": "Archive boundaries and current exchange information do not prove a complete point-in-time listing, suspension, status, and delisting history; the frozen policy requires fail-closed continuity."
+    },
+    {
+      "requirement_id": "HISTORICAL_FUTURES_ORDER_FILTERS",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7"
+      ],
+      "rationale": "Current futures tick, step, notional, and market-order filters cannot prove the rules that governed hypothetical 2023-2024 orders."
+    },
+    {
+      "requirement_id": "HISTORICAL_LEVERAGE_AND_MAINTENANCE_BRACKETS",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7",
+        "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8"
+      ],
+      "rationale": "The signed endpoint exposes current leverage brackets, while the synthetic engine uses invented fixed rates; neither is immutable historical Binance bracket evidence."
+    },
+    {
+      "requirement_id": "HISTORICAL_SETTLED_FUNDING_AND_INTERVALS",
+      "status": "PASS",
+      "evidence_hashes": [
+        "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7"
+      ],
+      "rationale": "The immutable metadata audit qualified settled funding timestamps, interval hours, and rates from official historical archives."
+    },
+    {
+      "requirement_id": "HISTORICAL_SPOT_ORDER_FILTERS",
+      "status": "FAIL",
+      "evidence_hashes": [
+        "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7"
+      ],
+      "rationale": "Current spot exchange information cannot prove the point-in-time tick, lot, notional, and order constraints in 2023-2024."
+    },
+    {
+      "requirement_id": "HISTORICAL_SPOT_PERPETUAL_MARK_INDEX_PREMIUM_SERIES",
+      "status": "PASS",
+      "evidence_hashes": [
+        "87074a1d290b419e3a805aba578f58ee596c66d829f97853aedd44149199e1d7"
+      ],
+      "rationale": "The immutable source census, pilot, and acquisition evidence qualify the required historical spot, perpetual, mark, index, and premium series source families."
+    },
+    {
+      "requirement_id": "SYNCHRONIZED_SOURCE_COVERAGE_25_SYMBOLS",
+      "status": "PASS",
+      "evidence_hashes": [
+        "fe2641037216596f0aeb25cf8f1b04739eb303ce1a133ef76f0faca0e136fb34"
+      ],
+      "rationale": "The frozen timestamp-only V3P01 audit qualified 25 of 31 symbols against all predeclared synchronized coverage gates."
+    },
+    {
+      "requirement_id": "SYNTHETIC_PARTIAL_FILL_ROLLBACK_IDEMPOTENCY_RECONCILIATION",
+      "status": "PASS",
+      "evidence_hashes": [
+        "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8",
+        "f87bf9ac25e3a9e38ba5d7a21c143d0f50935ce550fc06f8618ae2a97f4a1cb9"
+      ],
+      "rationale": "All 14 frozen same-asset synthetic scenarios passed for accounting, partial fills, rollback, idempotency, kill switch, and reconciliation; this pass does not cure the separate cross-asset risk failure."
+    }
+  ],
+  "passed_requirement_count": 4,
+  "failed_requirement_count": 7,
+  "passed_requirement_ids": [
+    "HISTORICAL_SETTLED_FUNDING_AND_INTERVALS",
+    "HISTORICAL_SPOT_PERPETUAL_MARK_INDEX_PREMIUM_SERIES",
+    "SYNCHRONIZED_SOURCE_COVERAGE_25_SYMBOLS",
+    "SYNTHETIC_PARTIAL_FILL_ROLLBACK_IDEMPOTENCY_RECONCILIATION"
+  ],
+  "failed_requirement_ids": [
+    "CROSS_ASSET_IDENTITY_HEDGE_AND_RESIDUAL_RISK_FOUNDATION",
+    "HISTORICAL_ACCOUNT_FEE_TIER",
+    "HISTORICAL_COLLATERAL_LIQUIDATION_AND_ADL_RULES",
+    "HISTORICAL_FUTURES_CONTRACT_LIFECYCLE",
+    "HISTORICAL_FUTURES_ORDER_FILTERS",
+    "HISTORICAL_LEVERAGE_AND_MAINTENANCE_BRACKETS",
+    "HISTORICAL_SPOT_ORDER_FILTERS"
+  ],
+  "decision": "REJECT_V3P01_EXECUTION_AND_METADATA_FEASIBILITY",
+  "selects_primary": false,
+  "creates_candidate": false,
+  "opens_development": false,
+  "opens_validation": false,
+  "opens_holdout": false,
+  "opens_forward": false,
+  "creates_paper_eligibility": false,
+  "creates_live_eligibility": false,
+  "market_numeric_values_inspected": [],
+  "strategy_outcome_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "limitations": [
+    "Four requirements pass and seven fail; the all-required protocol therefore rejects V3P01 before primary selection.",
+    "No market numeric value, parameter, signal, trade, PnL, return, validation, holdout, or forward datum was inspected.",
+    "The 25-symbol timestamp qualification remains valid source evidence but cannot cure historical execution-state gaps.",
+    "The rejection does not claim cointegration is impossible or universally unprofitable; it records that Aurex cannot execute a qualified historical test from the frozen evidence.",
+    "The result selects no primary and grants no candidate, Pine, paper, sandbox, live, or capital permission.",
+    "The same-asset synthetic foundation proves useful lifecycle mechanics but not cross-asset identity, hedge, or residual risk.",
+    "V2 conservative metadata overrides were permitted only for protocol design and are explicitly insufficient for V3 primary selection."
+  ],
+  "result_evidence_hash": "b682aa1149203f14c20ef12732bafb13f617a7f1fc260c5af32d25726d5253a2"
+}

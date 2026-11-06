@@ -1,0 +1,124 @@
+{
+  "schema_version": "aurex-s2-bigquery-payload-protocol-v1",
+  "protocol_id": "s2-bigquery-payload-protocol-v1",
+  "frozen_at": "2026-08-28T12:35:02.987941Z",
+  "status": "FROZEN_BEFORE_S2_NUMERIC_QUERY",
+  "builder_contract_hash": "f8fb9674b4bf7e8a9b0d2d786cea3535c318b7ae2d5da676e5d1c855b9198041",
+  "charter_evidence_hash": "77e61e9f01519d6b7b56aa2ce45d4689356120bb1a338ead9edce35ef18fe9b0",
+  "feasibility_protocol_evidence_hash": "4f9a3d295667eb97e5c7a08631c3c04e4eb16d1e2587e2d7375771258f268b30",
+  "feasibility_protocol_audit_evidence_hash": "ebf0b1a1d1814ec271aa29c0297f087ce2e128b2ddc7c533791fa0a7c54923c4",
+  "feasibility_result_evidence_hash": "54daa95943ab19e10fb540a4cc71a70217cb409a21ff7fb804b60386a98e0690",
+  "feasibility_result_audit_evidence_hash": "054c85503c88f62c27bf8e6f1b1c691a9a07215e59f4c7588576eac3ac7aef66",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s2_bigquery_feasibility_audit_v3.json",
+      "file_sha256": "88f2fd0a4d0fa7ff66463bcbe2707454a9df0318d266f22297a79c2ce6256cd3"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_feasibility_protocol_audit_v3.json",
+      "file_sha256": "73eedb87cf36a4dd7bdaf039c697f31c197746652e1a115e7b9037ed705630ff"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_feasibility_protocol_v3.json",
+      "file_sha256": "5eca2518a3f0bf2b325203eb95758145bb393c0b36c420ae1f72822943fb2114"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_feasibility_result_v3.json",
+      "file_sha256": "14b0c8ea730dc58299d2a41473aeb578a3033fb2bc06022eb8769555fa7cd3e2"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_metadata_v2/blocks_table_metadata.json",
+      "file_sha256": "8a5cf5804dd7fa00a4cff9f02db6518e092231868bda1cee8e933ce9a064b012"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_metadata_v2/dataset_metadata.json",
+      "file_sha256": "b6b727718665a8e6a4b6deca74133c26d3142f8e04aad4fb90dde7dfb7eca05c"
+    },
+    {
+      "path": "data/evidence/s2_bigquery_metadata_v2/transactions_table_metadata.json",
+      "file_sha256": "bd749be59c4b16a36cd39bf3a5615b33747e4335fe696e8efab0046a832b43f9"
+    },
+    {
+      "path": "scripts/run_s2_bigquery_feasibility_v3.py",
+      "file_sha256": "51c446d22ba84c5f731824571d9a08a9139329bd27c2144fbfe1ea4132ccb58d"
+    }
+  ],
+  "query_spec": {
+    "query_id": "S2_DEVELOPMENT_CONFIRMED_WEEKLY_PAYLOAD",
+    "google_sql": "WITH candidate_blocks AS (\n  SELECT\n    b.number AS block_number,\n    DATE_TRUNC(DATE(b.timestamp, 'UTC'), WEEK(SATURDAY)) AS week_start,\n    confirmation.timestamp AS sixth_confirmation_timestamp\n  FROM `bigquery-public-data.crypto_bitcoin.blocks` AS b\n  JOIN `bigquery-public-data.crypto_bitcoin.blocks` AS confirmation\n    ON confirmation.number = b.number + 6\n  WHERE b.timestamp >= TIMESTAMP('2017-08-19T00:00:00Z')\n    AND b.timestamp < TIMESTAMP('2022-12-31T00:00:00Z')\n),\nqualified_blocks AS (\n  SELECT *\n  FROM candidate_blocks\n  WHERE sixth_confirmation_timestamp\n    < TIMESTAMP(DATE_ADD(week_start, INTERVAL 7 DAY), 'UTC')\n)\nSELECT\n  FORMAT_DATE('%F', q.week_start) AS week_start,\n  FORMAT_DATE('%F', DATE_ADD(q.week_start, INTERVAL 7 DAY)) AS decision_cutoff_at,\n  FORMAT_DATE('%F', DATE_ADD(q.week_start, INTERVAL 9 DAY)) AS earliest_execution_at,\n  COUNT(DISTINCT q.block_number) AS confirmed_block_count,\n  COUNTIF(NOT t.is_coinbase) AS confirmed_non_coinbase_transaction_count,\n  SUM(IF(NOT t.is_coinbase, t.fee, 0)) AS confirmed_fee_satoshis,\n  FORMAT_TIMESTAMP(\n    '%Y-%m-%dT%H:%M:%E6SZ',\n    MAX(q.sixth_confirmation_timestamp),\n    'UTC'\n  ) AS latest_sixth_confirmation_at\nFROM qualified_blocks AS q\nJOIN `bigquery-public-data.crypto_bitcoin.transactions` AS t\n  ON t.block_number = q.block_number\nWHERE t.block_timestamp >= TIMESTAMP('2017-08-19T00:00:00Z')\n  AND t.block_timestamp < TIMESTAMP('2022-12-31T00:00:00Z')\nGROUP BY q.week_start\nORDER BY q.week_start\n",
+    "query_sha256": "12333637cb2b8b8e3b4408fe346ffe40b42cc069a01b5ecc5cb998a7fd665618",
+    "expected_field_names": [
+      "week_start",
+      "decision_cutoff_at",
+      "earliest_execution_at",
+      "confirmed_block_count",
+      "confirmed_non_coinbase_transaction_count",
+      "confirmed_fee_satoshis",
+      "latest_sixth_confirmation_at"
+    ],
+    "expected_field_types": [
+      "STRING",
+      "STRING",
+      "STRING",
+      "INTEGER",
+      "INTEGER",
+      "INTEGER",
+      "STRING"
+    ],
+    "first_week_start": "2017-08-19",
+    "last_week_start": "2022-12-24",
+    "expected_row_count": 280,
+    "maximum_bytes_billed": 60000000000
+  },
+  "query_endpoint_template": "https://bigquery.googleapis.com/bigquery/v2/projects/{project}/queries",
+  "query_results_endpoint_template": "https://bigquery.googleapis.com/bigquery/v2/projects/{project}/queries/{job_id}",
+  "source_project": "bigquery-public-data",
+  "source_dataset": "crypto_bitcoin",
+  "processing_location": "US",
+  "required_local_commands": [
+    "gcloud"
+  ],
+  "required_authentication": "GCLOUD_ACTIVE_USER_OAUTH",
+  "required_billing_mode": "BIGQUERY_SANDBOX_WITHOUT_BILLING_ACCOUNT",
+  "one_time_market_data_budget_usd": "0",
+  "maximum_billing_boundary_requests": 1,
+  "maximum_access_token_requests": 1,
+  "maximum_query_submissions": 1,
+  "maximum_query_result_polls": 30,
+  "maximum_query_result_pages": 1,
+  "maximum_response_bytes_each": 2000000,
+  "request_timeout_seconds": 30,
+  "query_timeout_milliseconds": 20000,
+  "poll_interval_seconds": 2,
+  "page_size": 1000,
+  "use_legacy_sql": false,
+  "use_query_cache": false,
+  "raw_response_persistence_permitted": false,
+  "account_identifier_persistence_permitted": false,
+  "project_identifier_persistence_permitted": false,
+  "credential_or_token_persistence_permitted": false,
+  "development_blockchain_payload_permitted": true,
+  "market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "validation_access_permitted": false,
+  "holdout_access_permitted": false,
+  "signals_permitted": false,
+  "orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "payload_path": "data/evidence/s2_development_weekly_payload_v1.json",
+  "decision": "FREEZE_S2_DEVELOPMENT_PAYLOAD_ACQUISITION",
+  "next_authorization": "RUN_S2_DEVELOPMENT_PAYLOAD_ONCE",
+  "limitations": [
+    "A valid payload cannot establish predictive edge.",
+    "All acquired values are development-only and outcome-aware.",
+    "Historical screen, validation, and holdout values remain sealed.",
+    "No account, project, credential, token, job ID, or raw response may enter evidence.",
+    "No market price or return may be read during payload acquisition.",
+    "Only complete Saturday-through-Friday UTC weeks may be accepted.",
+    "The query must fail before processing more than 60,000,000,000 bytes.",
+    "This stage grants no parameter, signal, paper, Testnet, production, or live authority."
+  ],
+  "protocol_evidence_hash": "63d0e0f7c7f456c8ac1015066105cfd2077cdd739ff80afc01f37ebf656868b7"
+}

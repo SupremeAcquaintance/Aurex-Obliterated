@@ -1,0 +1,114 @@
+{
+  "schema_version": "aurex-s2-bigquery-feasibility-result-v2",
+  "result_id": "s2-bigquery-feasibility-result-v2",
+  "generated_at": "2026-08-28T12:02:46.768084Z",
+  "protocol_file_sha256": "bd1833630f456c60013c3a9a3eeec40d7fd0b2e029ec6a64f6cdcbedf3f77655",
+  "protocol_evidence_hash": "0074b2d2594bb5aa5d430e6818218146be244ea57e2386938ebaaf01fc5147a9",
+  "protocol_audit_file_sha256": "bf900697fcba370606bfdf6962e541eadf99682944cb2a619987fd85893b15ac",
+  "protocol_audit_evidence_hash": "1140f679697b1a86757071a4afeb3ceeda120b099fa8e6c374e13e35d009fc19",
+  "prior_result_evidence_hash": "8986a9ed6b41af03e6ba7fe72054138362a04ee3f1eae6b1278656b1b56df9f1",
+  "prior_result_audit_evidence_hash": "1c4bcf38b0484495a069b050a404c3e5135bd1fb748097dced37c3d78aa68b38",
+  "runner_contract_hash": "0581a13f51a819b89943e3bb335bf91dd211543be6390bc80208654d8a0fc787",
+  "gcloud_available": true,
+  "bq_available": true,
+  "active_auth_configured": true,
+  "active_project_configured": true,
+  "billing_boundary_request_count": 1,
+  "sandbox_without_billing_verified": true,
+  "access_token_request_count": 1,
+  "metadata_attempts": [
+    {
+      "target_id": "BLOCKS_TABLE",
+      "requested_at": "2026-08-28T12:02:34.896135Z",
+      "http_status": 200,
+      "response_bytes": 3552,
+      "response_sha256": "8a5cf5804dd7fa00a4cff9f02db6518e092231868bda1cee8e933ce9a064b012",
+      "response_path": "data/evidence/s2_bigquery_metadata_v2/blocks_table_metadata.json",
+      "expected_reference_matched": true,
+      "required_schema_fields_present": [
+        "hash",
+        "number",
+        "timestamp",
+        "transaction_count"
+      ],
+      "error_class": "NONE"
+    },
+    {
+      "target_id": "DATASET",
+      "requested_at": "2026-08-28T12:02:36.218132Z",
+      "http_status": 200,
+      "response_bytes": 1775,
+      "response_sha256": "b6b727718665a8e6a4b6deca74133c26d3142f8e04aad4fb90dde7dfb7eca05c",
+      "response_path": "data/evidence/s2_bigquery_metadata_v2/dataset_metadata.json",
+      "expected_reference_matched": true,
+      "required_schema_fields_present": [],
+      "error_class": "NONE"
+    },
+    {
+      "target_id": "TRANSACTIONS_TABLE",
+      "requested_at": "2026-08-28T12:02:36.966539Z",
+      "http_status": 200,
+      "response_bytes": 8298,
+      "response_sha256": "bd749be59c4b16a36cd39bf3a5615b33747e4335fe696e8efab0046a832b43f9",
+      "response_path": "data/evidence/s2_bigquery_metadata_v2/transactions_table_metadata.json",
+      "expected_reference_matched": true,
+      "required_schema_fields_present": [
+        "block_hash",
+        "block_number",
+        "block_timestamp",
+        "fee",
+        "hash",
+        "is_coinbase"
+      ],
+      "error_class": "NONE"
+    }
+  ],
+  "dry_run_attempts": [
+    {
+      "query_id": "CAUSAL_SIX_CONFIRMATION",
+      "query_sha256": "437c0ee770e66862407edea0ba58f717f55d3f49634a65d189a29386f05f94b6",
+      "requested_at": "2026-08-28T12:02:37.637796Z",
+      "succeeded": false,
+      "total_bytes_processed": null,
+      "result_rows_returned": 0,
+      "query_executed": false,
+      "error_class": "API_ERROR"
+    }
+  ],
+  "metadata_request_count": 3,
+  "dry_run_request_count": 1,
+  "account_identifier_persisted": false,
+  "project_identifier_persisted": false,
+  "credentials_or_tokens_persisted": false,
+  "query_execution_count": 0,
+  "query_result_rows_returned": 0,
+  "blockchain_row_values_read": 0,
+  "market_values_read": 0,
+  "payload_bytes_acquired": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "orders_submitted": 0,
+  "blockers": [
+    "dry_run_causal_six_confirmation_api_error"
+  ],
+  "decision": "BLOCK_S2_BIGQUERY_V2_DRY_RUN_FAILED",
+  "next_authorization": "NONE_UNTIL_S2_BIGQUERY_FEASIBILITY_V2_PASSES",
+  "authorizes_numeric_query": false,
+  "authorizes_payload_acquisition": false,
+  "authorizes_returns": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "limitations": [
+    "Account and project identifiers were used only in memory.",
+    "Credentials and access tokens were not persisted.",
+    "Dry-runs returned estimates but no query result rows.",
+    "No blockchain table row was requested or returned.",
+    "The preflight does not establish a profitable strategy.",
+    "The preflight grants no numeric-query or trading authority."
+  ],
+  "result_evidence_hash": "089ee28f60c72d83004377994e46cfaabcba099f9ef153bb2de90c3f8af08ee4"
+}

@@ -1,0 +1,212 @@
+{
+  "schema_version": "aurex-r3-mechanism-study-protocol-v1",
+  "study_id": "r3-cross-sectional-momentum-spot-v1",
+  "study_version": "1.0.0",
+  "registered_at": "2026-07-22T17:39:46.561714Z",
+  "status": "FROZEN_PRE_OUTCOME",
+  "mechanism_family": "CROSS_SECTIONAL_MOMENTUM",
+  "hypothesis": "Among mechanically selected liquid Binance USDT spot markets, positive intermediate-horizon relative strength will persist long enough for a diversified long-only rotation portfolio to retain positive net returns after conservative two-sided trading costs and shared-capital limits.",
+  "falsification_claim": "The mechanism is not supported if the fixed 84-day primary loses after costs, depends on one market or one quarter, fails double-cost stress, or has no same-sign support at either the predeclared faster or slower horizon.",
+  "universe_manifest_evidence_hash": "dacc57f649846f716b8134aa0abba5accc78b0f1607d653addb0df3d9e132a74",
+  "development_dataset_bundle_evidence_hash": "fba63b8e237220c760daf902f2c999e9b01121357a4cc583c9fa5cb50b83d341",
+  "contamination_ledger_hash": "9f7face6a22a51b2a0b20d653561396fb6415f532ad0fecd883b3c6e6c132207",
+  "builder_contract_hash": "d6a27ef93cb4fd6b11cbc183b18abb0a903af12b0a11c868d10affa80c256712",
+  "venue": "BINANCE",
+  "market_type": "SPOT",
+  "quote_asset": "USDT",
+  "timeframe": "4h",
+  "development_data_start": "2023-01-01T00:00:00Z",
+  "development_data_end": "2025-01-01T00:00:00Z",
+  "evaluation_start": "2023-07-01T00:00:00Z",
+  "evaluation_end": "2025-01-01T00:00:00Z",
+  "decision_symbols": [
+    "AAVEUSDT",
+    "ADAUSDT",
+    "APEUSDT",
+    "APTUSDT",
+    "ATOMUSDT",
+    "AVAXUSDT",
+    "BCHUSDT",
+    "BNBUSDT",
+    "CFXUSDT",
+    "CRVUSDT",
+    "DOGEUSDT",
+    "DOTUSDT",
+    "DYDXUSDT",
+    "ETCUSDT",
+    "FETUSDT",
+    "FILUSDT",
+    "FTMUSDT",
+    "GALAUSDT",
+    "GRTUSDT",
+    "ICPUSDT",
+    "INJUSDT",
+    "LDOUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "LUNCUSDT",
+    "MKRUSDT",
+    "NEARUSDT",
+    "OPUSDT",
+    "RUNEUSDT",
+    "SANDUSDT",
+    "SHIBUSDT",
+    "STXUSDT",
+    "TRXUSDT",
+    "UNIUSDT",
+    "XRPUSDT"
+  ],
+  "diagnostic_only_symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "forbidden_partitions": [
+    "FORWARD",
+    "HOLDOUT",
+    "VALIDATION"
+  ],
+  "variants": [
+    {
+      "variant_id": "xsmom_168d_28d_falsification_slow",
+      "role": "FALSIFICATION",
+      "lookback_bars": 1008,
+      "rebalance_bars": 168,
+      "volatility_lookback_bars": 168,
+      "atr_lookback_bars": 84,
+      "catastrophe_stop_atr_multiple": "3",
+      "selected_fraction": "0.20",
+      "require_positive_absolute_momentum": true
+    },
+    {
+      "variant_id": "xsmom_28d_7d_falsification_fast",
+      "role": "FALSIFICATION",
+      "lookback_bars": 168,
+      "rebalance_bars": 42,
+      "volatility_lookback_bars": 168,
+      "atr_lookback_bars": 84,
+      "catastrophe_stop_atr_multiple": "3",
+      "selected_fraction": "0.20",
+      "require_positive_absolute_momentum": true
+    },
+    {
+      "variant_id": "xsmom_84d_14d_primary",
+      "role": "PRIMARY",
+      "lookback_bars": 504,
+      "rebalance_bars": 84,
+      "volatility_lookback_bars": 168,
+      "atr_lookback_bars": 84,
+      "catastrophe_stop_atr_multiple": "3",
+      "selected_fraction": "0.20",
+      "require_positive_absolute_momentum": true
+    }
+  ],
+  "folds": [
+    {
+      "fold_id": "fold-01-2023q3",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2023-10-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-02-2023q4",
+      "evaluation_start": "2023-10-01T00:00:00Z",
+      "evaluation_end": "2024-01-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-03-2024q1",
+      "evaluation_start": "2024-01-01T00:00:00Z",
+      "evaluation_end": "2024-04-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-04-2024q2",
+      "evaluation_start": "2024-04-01T00:00:00Z",
+      "evaluation_end": "2024-07-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-05-2024q3",
+      "evaluation_start": "2024-07-01T00:00:00Z",
+      "evaluation_end": "2024-10-01T00:00:00Z"
+    },
+    {
+      "fold_id": "fold-06-2024q4",
+      "evaluation_start": "2024-10-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "portfolio": {
+    "direction": "LONG_SPOT_ONLY",
+    "initial_capital": "1000",
+    "ranking_metric": "LOOKBACK_TOTAL_RETURN",
+    "weighting_method": "ATR_RISK_WITH_EXPOSURE_CAPS",
+    "risk_per_position_percent": "0.50",
+    "max_symbol_exposure_percent": "20",
+    "max_gross_exposure_percent": "100",
+    "max_open_positions": 7,
+    "minimum_ranked_positions": 3,
+    "cash_when_insufficient_positive_markets": true,
+    "rebalance_semantics": "FULL_ROTATION",
+    "signal_semantics": "CLOSED_4H_BAR",
+    "entry_semantics": "NEXT_4H_OPEN",
+    "exit_semantics": "NEXT_REBALANCE_OR_FIXED_ATR_STOP",
+    "stop_gap_semantics": "BAR_OPEN_IF_BELOW_STOP_ELSE_STOP",
+    "same_bar_semantics": "NO_ENTRY_AND_STOP_ON_SAME_BAR",
+    "no_leverage": true,
+    "no_shorting": true,
+    "no_pyramiding": true,
+    "quantity_increment_assumption": "1E-8",
+    "price_increment_assumption": "1E-8"
+  },
+  "costs": {
+    "commission_percent_per_side": "0.10",
+    "adverse_slippage_percent_per_side": "0.05",
+    "funding_percent": "0",
+    "borrow_percent": "0",
+    "stress_multipliers": [
+      "1",
+      "1.5",
+      "2"
+    ]
+  },
+  "gates": {
+    "primary_net_pl_strictly_positive": true,
+    "minimum_primary_profit_factor": "1.10",
+    "maximum_primary_drawdown_percent": "20",
+    "minimum_primary_completed_trades": 100,
+    "minimum_positive_quarterly_folds": 4,
+    "total_quarterly_folds": 6,
+    "double_cost_net_pl_strictly_positive": true,
+    "minimum_leave_one_market_out_positive_fraction": "0.80",
+    "maximum_single_symbol_gross_profit_fraction": "0.30",
+    "maximum_top_five_gross_profit_fraction": "0.65",
+    "minimum_supportive_falsification_variants": 1,
+    "supportive_variant_minimum_positive_folds": 3,
+    "primary_is_never_replaced_by_best_variant": true,
+    "all_gates_required": true
+  },
+  "required_diagnostics": [
+    "accepted_and_rejected_opportunities",
+    "active_days",
+    "cost_decomposition",
+    "cost_stress",
+    "exposure_over_time",
+    "gross_and_net_profit_factor",
+    "leave_one_market_out",
+    "maximum_drawdown",
+    "monthly_net_returns",
+    "quarterly_fold_results",
+    "symbol_gross_profit_concentration",
+    "top_five_gross_profit_concentration",
+    "turnover"
+  ],
+  "source_references": [
+    "docs/11_STRATEGY_RESEARCH_DOCTRINE.md",
+    "docs/16_STRATEGY_RESEARCH_RESET.md",
+    "https://w4.stern.nyu.edu/facdir/lpederse/papers/TimeSeriesMomentum.pdf",
+    "https://www.nber.org/papers/w24877",
+    "https://www.nber.org/papers/w25882"
+  ],
+  "preexisting_result_artifacts": [],
+  "outcome_fields_inspected": [],
+  "decision_rule": "ADVANCE_PRIMARY_TO_R4_ONLY_IF_ALL_GATES_PASS_ELSE_NO_CANDIDATE",
+  "protocol_evidence_hash": "8af37e15ca08bcbbdd82c457927d5a4b5039e70f173ff735c16c91a3bed4f893"
+}

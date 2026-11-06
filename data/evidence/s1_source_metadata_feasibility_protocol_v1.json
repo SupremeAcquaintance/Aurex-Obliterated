@@ -1,0 +1,65 @@
+{
+  "schema_version": "aurex-s1-source-metadata-feasibility-protocol-v1",
+  "protocol_id": "s1-source-metadata-feasibility-protocol-v1",
+  "frozen_at": "2026-08-26T18:31:08.685742Z",
+  "builder_contract_hash": "cc38072166a0b3a721d1676bafa51a92896cdb71dd457758a4591c962aeb9a5e",
+  "charter_path": "data/evidence/s1_macro_financial_conditions_charter_v1.json",
+  "charter_file_sha256": "6c95657699dfe30dc4d89c20dbc7a85d378977f53d9b61be79212561753240a8",
+  "charter_evidence_hash": "f5f0aa9980df16c4964abe1a41512abeccce2f009a2743492e2f0e1ce86d0c7d",
+  "requests": [
+    {
+      "request_id": "01-alfred-nfci-series",
+      "method": "HEAD",
+      "url": "https://alfred.stlouisfed.org/series?seid=NFCI",
+      "expected_final_host": "alfred.stlouisfed.org",
+      "role": "ALFRED_SERIES_PAGE"
+    },
+    {
+      "request_id": "02-nfci-vintage-2020",
+      "method": "HEAD",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI&vintage_date=2020-01-01",
+      "expected_final_host": "fred.stlouisfed.org",
+      "role": "NO_KEY_VINTAGE_CSV"
+    },
+    {
+      "request_id": "03-nfci-vintage-2021",
+      "method": "HEAD",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI&vintage_date=2021-01-01",
+      "expected_final_host": "fred.stlouisfed.org",
+      "role": "NO_KEY_VINTAGE_CSV"
+    },
+    {
+      "request_id": "04-structured-api-no-key",
+      "method": "HEAD",
+      "url": "https://api.stlouisfed.org/fred/series/observations?series_id=NFCI&file_type=json&realtime_start=2020-01-01&realtime_end=2020-01-01",
+      "expected_final_host": "api.stlouisfed.org",
+      "role": "STRUCTURED_API_AUTH_CLASSIFICATION"
+    }
+  ],
+  "request_budget": 4,
+  "response_body_byte_budget": 0,
+  "maximum_redirects_per_request": 5,
+  "connect_timeout_seconds": 15,
+  "feasibility_gates": [
+    "EXACTLY_FOUR_HEAD_REQUESTS_AND_ZERO_RESPONSE_BODY_BYTES",
+    "ALFRED_NFCI_SERIES_ENDPOINT_REACHABLE",
+    "BOTH_NO_KEY_VINTAGE_CSV_ENDPOINTS_REACHABLE",
+    "VINTAGE_ENDPOINTS_RETURN_DOWNLOADABLE_CONTENT_TYPES",
+    "ALL_FINAL_HOSTS_MATCH_THE_FROZEN_OFFICIAL_HOSTS",
+    "STRUCTURED_API_AUTH_REQUIREMENT_CLASSIFIED_WITHOUT_CREDENTIALS",
+    "ZERO_MARKET_VALUES_PARAMETERS_RETURNS_CANDIDATES_AND_ORDERS"
+  ],
+  "market_numeric_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "authorizes_head_requests_only": true,
+  "authorizes_response_body_read": false,
+  "authorizes_payload_acquisition": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_return_testing": false,
+  "authorizes_candidate": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "protocol_evidence_hash": "b36cc55362af6e027aaaf16355576b7f5d478e0600fce080a442ec994ec6f4c9"
+}

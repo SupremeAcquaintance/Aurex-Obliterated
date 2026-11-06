@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-periodic-perpetual-flow-spot-charter-audit-v1",
+  "audit_id": "periodic-perpetual-flow-to-spot-charter-audit-v1",
+  "audited_at": "2026-08-06T10:52:17.426424Z",
+  "charter_path": "data/evidence/periodic_flow_spot_charter_v1.json",
+  "charter_file_sha256": "dd6baa815e3a0dab897d5b76ed26e748f1f8480125a32bcfe762851636833881",
+  "charter_evidence_hash": "17e9a73193a0c159aa6d3a15fea2412285e3cd12a5a4e0e52e3e27bcf4fa195b",
+  "builder_contract_hash": "b2297ff5ba5573d93806f873b6bbae5fd9cf54e8dcf9aa3125f17ee5d4444840",
+  "auditor_contract_hash": "544adc31bc752d3c06a12351d040af61d83960631547a69fbff861b0c0e075b3",
+  "reconstructed_exactly": true,
+  "predecessor_binding_count": 11,
+  "research_source_count": 4,
+  "partition_count": 5,
+  "market_numeric_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_Q1_CHARTER_RECONSTRUCTED_NO_AUTHORITY",
+  "next_authorization": "AUTHORIZE_Q1_METADATA_ONLY_BTCUSDT_ARCHIVE_CENSUS",
+  "audit_evidence_hash": "ad6a76574af1f3ff5dbf91f0ed42f6c1c066ff8746b7202bf0fc1c2e0373096a"
+}

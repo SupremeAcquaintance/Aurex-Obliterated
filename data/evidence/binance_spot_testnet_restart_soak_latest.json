@@ -1,0 +1,172 @@
+{
+  "account_fingerprint": "3b21bc484855d9cf86b74e6945ed9d1712d9f5773b81637bd37ef7aaf05295a6",
+  "adapter_sandbox_qualified": true,
+  "blocked_client_order_id": "aurex-kill-proof-ca2c2b4a5b5cfc71",
+  "blocked_entry_count": 1,
+  "campaign_id": "binance-spot-testnet-restart-soak-v1",
+  "cancel_client_order_id": "aurex-restart-x-ca2c2b4a5b5cfc71",
+  "cancelled_order": {
+    "client_order_id": "aurex-restart-x-ca2c2b4a5b5cfc71",
+    "cumulative_quote_quantity": "0E-8",
+    "executed_quantity": "0E-8",
+    "external_order_id": 22377060,
+    "original_client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+    "original_quantity": "0.00009000",
+    "original_quote_order_quantity": "0E-8",
+    "price": "57294.00000000",
+    "side": "BUY",
+    "status": "CANCELED",
+    "symbol": "BTCUSDT",
+    "transact_time_ms": 1785501773221,
+    "type": "LIMIT"
+  },
+  "check_status": "PASS",
+  "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+  "completed_at": "2026-07-31T12:53:05.882571+00:00",
+  "contract_sha256": "5e5f1f22a014fa087c44a13341f862fe6d64ea441db280fabae677bf2af820d8",
+  "credentials_stored": false,
+  "environment": "BINANCE_SPOT_TESTNET",
+  "exchange_reset_detected": false,
+  "failed_gates": [],
+  "final_account": {
+    "account_type": "SPOT",
+    "balances": {
+      "BTC": {
+        "free": "1.00000000",
+        "locked": "0E-8",
+        "total": "1.00000000"
+      },
+      "USDT": {
+        "free": "9999.99999900",
+        "locked": "0E-8",
+        "total": "9999.99999900"
+      }
+    },
+    "can_trade": true,
+    "maker_commission": "0E-8",
+    "permissions": [
+      "SPOT"
+    ],
+    "taker_commission": "0E-8"
+  },
+  "final_open_orders": [],
+  "final_order": {
+    "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+    "cumulative_quote_quantity": "0E-8",
+    "executed_quantity": "0E-8",
+    "external_order_id": 22377060,
+    "original_client_order_id": null,
+    "original_quantity": "0.00009000",
+    "original_quote_order_quantity": "0E-8",
+    "price": "57294.00000000",
+    "side": "BUY",
+    "status": "CANCELED",
+    "symbol": "BTCUSDT",
+    "transact_time_ms": null,
+    "type": "LIMIT"
+  },
+  "idempotent_resolution_count": 1,
+  "initial_account": {
+    "account_type": "SPOT",
+    "balances": {
+      "BTC": {
+        "free": "1.00000000",
+        "locked": "0E-8",
+        "total": "1.00000000"
+      },
+      "USDT": {
+        "free": "9999.99999900",
+        "locked": "0E-8",
+        "total": "9999.99999900"
+      }
+    },
+    "can_trade": true,
+    "maker_commission": "0E-8",
+    "permissions": [
+      "SPOT"
+    ],
+    "taker_commission": "0E-8"
+  },
+  "initial_open_orders": [],
+  "kill_stop_enabled": true,
+  "kill_stop_enabled_at": "2026-07-31T12:42:52.534086+00:00",
+  "kill_stop_reason": "restart recovery",
+  "live_authority": false,
+  "phase_2d_qualified": true,
+  "placed_order": {
+    "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+    "cumulative_quote_quantity": "0E-8",
+    "executed_quantity": "0E-8",
+    "external_order_id": 22377060,
+    "original_client_order_id": null,
+    "original_quantity": "0.00009000",
+    "original_quote_order_quantity": "0E-8",
+    "price": "57294.00000000",
+    "side": "BUY",
+    "status": "NEW",
+    "symbol": "BTCUSDT",
+    "transact_time_ms": 1785501765181,
+    "type": "LIMIT"
+  },
+  "placement_request_count": 1,
+  "process_ids": [
+    656,
+    48024,
+    57776
+  ],
+  "product": "SPOT",
+  "production_authority": false,
+  "real_capital": false,
+  "reconciliation_check_count": 21,
+  "rest_heartbeat_count": 120,
+  "rest_url": "https://testnet.binance.vision",
+  "restart_open_orders": [
+    {
+      "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+      "cumulative_quote_quantity": "0E-8",
+      "executed_quantity": "0E-8",
+      "external_order_id": 22377060,
+      "original_client_order_id": null,
+      "original_quantity": "0.00009000",
+      "original_quote_order_quantity": "0E-8",
+      "price": "57294.00000000",
+      "side": "BUY",
+      "status": "NEW",
+      "symbol": "BTCUSDT",
+      "transact_time_ms": null,
+      "type": "LIMIT"
+    }
+  ],
+  "restart_resolved_order": {
+    "client_order_id": "aurex-restart-ca2c2b4a5b5cfc71",
+    "cumulative_quote_quantity": "0E-8",
+    "executed_quantity": "0E-8",
+    "external_order_id": 22377060,
+    "original_client_order_id": null,
+    "original_quantity": "0.00009000",
+    "original_quote_order_quantity": "0E-8",
+    "price": "57294.00000000",
+    "side": "BUY",
+    "status": "NEW",
+    "symbol": "BTCUSDT",
+    "transact_time_ms": null,
+    "type": "LIMIT"
+  },
+  "run_id": "aurex-run-ca2c2b4a5b5cfc71",
+  "sandbox_qualified": true,
+  "schema_version": 1,
+  "soak_completed_at": "2026-07-31T12:53:05.882571+00:00",
+  "soak_elapsed_seconds": 602.765999999945,
+  "soak_started_at": "2026-07-31T12:43:02.089684+00:00",
+  "state_invalidated": false,
+  "strategy_eligible": false,
+  "symbol": "BTCUSDT",
+  "trades": [],
+  "websocket_reconnect_count": 2,
+  "websocket_subscription_ids": [
+    0,
+    0,
+    0
+  ],
+  "websocket_url": "wss://ws-api.testnet.binance.vision/ws-api/v3"
+}

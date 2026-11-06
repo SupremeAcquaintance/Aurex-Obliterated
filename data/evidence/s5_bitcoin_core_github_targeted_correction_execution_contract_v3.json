@@ -1,0 +1,65 @@
+{
+  "schema_version": "aurex-s5-targeted-correction-v3-execution-contract-v1",
+  "contract_id": "s5-targeted-correction-v3-execution-contract-v1",
+  "frozen_at": "2026-09-04T15:44:16.287845Z",
+  "status": "FROZEN_V3_EXECUTION_CONTRACT_ZERO_REQUESTS",
+  "builder_contract_hash": "0c65d0bdef47cd277080435dbb720d7991aeaf3c081da80034d18815cc69ab2d",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_audit_v3.json",
+      "file_sha256": "da92e6a210009d3c50c8d057dbd3bea0f58d9ec20e57541a36c9c655b76af81a"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_v1.json",
+      "file_sha256": "fc2fd558ecadd1264bc345be739869a3ecc2f277a776b9cb268da5a9733da0e6"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_targeted_correction_protocol_v3.json",
+      "file_sha256": "f3ff28178911d721b434b41f95e28a3c31ae475a2cc0fa60f15612bac8263741"
+    },
+    {
+      "path": "data/evidence/s5_github_targeted_pull_responses_v2/failure_pull_000010.json",
+      "file_sha256": "258246403c54d1b65d70f8875e57413718b0122bbf2aa033509ca3605e518f19"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "bb3577f6271d630117e80816bed35d4f60521ff73c86f98f40ef14fac3d12a09",
+  "implementation_bindings": [
+    {
+      "path": "scripts/freeze_s5_bitcoin_core_github_targeted_correction_v3_execution.py",
+      "file_sha256": "a9c0493dd142eb346f9708ded4c018a83241e33beec63081e393c40f3ef5471f"
+    },
+    {
+      "path": "scripts/run_s5_bitcoin_core_github_targeted_correction_v2.py",
+      "file_sha256": "b3717dbafbcf2677cda66d657e152551f309de88f693d89c9358f8b92b0c2d12"
+    },
+    {
+      "path": "scripts/run_s5_bitcoin_core_github_targeted_correction_v3.py",
+      "file_sha256": "8635192082688d0b41c9e74328a3e0ebadc6e892edb365e136fda3e78a3c8870"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_github_targeted_correction_v3_execution.py",
+      "file_sha256": "1926c7d18ed8332242ef36b1b3b72bb528be066265dbba2317405a5871b1ea3b"
+    }
+  ],
+  "implementation_binding_manifest_evidence_hash": "0c65d0bdef47cd277080435dbb720d7991aeaf3c081da80034d18815cc69ab2d",
+  "target_protocol_evidence_hash": "c3861c112d41d233ac28f7751eab5fae347b075c9984d41792ee54495ce0df8f",
+  "v3_protocol_file_sha256": "f3ff28178911d721b434b41f95e28a3c31ae475a2cc0fa60f15612bac8263741",
+  "v3_protocol_evidence_hash": "369338e2b8ae0ffdcd2d4fa8e0378d9b86b089f35ab595c0a5fb26c61a9cad7b",
+  "v3_protocol_audit_file_sha256": "da92e6a210009d3c50c8d057dbd3bea0f58d9ec20e57541a36c9c655b76af81a",
+  "v3_protocol_audit_evidence_hash": "07afa67d603592ab5eb43893a8775df4134fc5affe7d3c3c8ee1aebf624e1618",
+  "adopted_response_file_sha256": "258246403c54d1b65d70f8875e57413718b0122bbf2aa033509ca3605e518f19",
+  "adopted_response_body_sha256": "89ca07af933aee8906371fdf0345b3c636eb441f28f5d2f6b13080f3b407b327",
+  "target_manifest_evidence_hash": "05c335cafec64026bf2ef7a086eb069ad3cdce6782489309536d9934a71b1ea7",
+  "runner_contract_hash": "38cd573542c302340a7fac4f9493604160869d2323899fd387f6b9ef485d6755",
+  "adopted_response_count": 1,
+  "pull_10_v3_request_permitted": false,
+  "maximum_v3_request_count": 193,
+  "maximum_cumulative_possible_request_count": 195,
+  "empty_merge_commit_sha_preserved_as_missing": true,
+  "credentials_permitted": false,
+  "mapping_rule_change_permitted": false,
+  "market_values_permitted": false,
+  "orders_permitted": false,
+  "result_path": "data/evidence/s5_bitcoin_core_github_targeted_correction_result_v3.json",
+  "contract_evidence_hash": "a7f76b1a98652f68c1415d80fbd74c269b7b532d947b862f3aa84b674cc3610f"
+}

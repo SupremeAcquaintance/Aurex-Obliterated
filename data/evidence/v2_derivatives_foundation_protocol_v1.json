@@ -1,0 +1,260 @@
+{
+  "schema_version": "aurex-v2-synthetic-derivatives-foundation-protocol-v1",
+  "protocol_id": "v2-synthetic-derivatives-foundation-v1",
+  "protocol_version": "1.0.0",
+  "frozen_at": "2026-07-28T07:04:25.549822Z",
+  "status": "FROZEN_PRE_SYNTHETIC_EXECUTION",
+  "capability_audit_evidence_hash": "3726b944529990be7160604942f4e580cd8d198efe79f8e074dc72b760638e42",
+  "source_census_result_evidence_hash": "ce5d60e3338903bcb8a3783bd4b41fa63bec518c3041b213c9529bd6458d652e",
+  "acquisition_protocol_evidence_hash": "aa88b2ff6add0637b889da27b784cd1a26b1addc4590832c9c51e973e2aaebc5",
+  "pilot_result_evidence_hash": "95e9aaaf1b05b01372ddcdc3f19fff6612f6a7f5ae4e1ca4b99b0eb6e7947874",
+  "contamination_ledger_evidence_hash": "9f7face6a22a51b2a0b20d653561396fb6415f532ad0fecd883b3c6e6c132207",
+  "builder_contract_hash": "de35b326d74a67ec4fba54b16c0c79a848b7dacb6874379aa597a5462ec9e993",
+  "synthetic_only": true,
+  "accounting": {
+    "decimal_precision_digits": 28,
+    "money_quantum": "0.00000001",
+    "quantity_quantum": "0.00000001",
+    "fee_formula": "ABS_FILL_QUANTITY_TIMES_PRICE_TIMES_FEE_RATE",
+    "spot_cash_formula": "NEGATIVE_SIGNED_SPOT_QUANTITY_TIMES_PRICE_MINUS_FEE",
+    "perp_open_notional_cash_exchange": false,
+    "perp_unrealized_pl_formula": "SIGNED_PERP_QUANTITY_TIMES_MARK_MINUS_AVERAGE_ENTRY",
+    "perp_realized_pl_formula": "CLOSED_ABSOLUTE_QUANTITY_TIMES_EXIT_MINUS_ENTRY_TIMES_POSITION_SIGN",
+    "funding_cashflow_formula": "NEGATIVE_SIGNED_PERP_QUANTITY_TIMES_MARK_PRICE_TIMES_FUNDING_RATE",
+    "equity_formula": "CASH_PLUS_SPOT_QUANTITY_TIMES_SPOT_MARK_PLUS_PERP_UNREALIZED_PL",
+    "collateral_formula": "CASH_PLUS_SPOT_VALUE_TIMES_HAIRCUT_PLUS_PERP_UNREALIZED_PL",
+    "every_fill_fee_and_funding_event_ledgered": true,
+    "event_hash_chain_required": true,
+    "duplicate_event_mutation_allowed": false
+  },
+  "paired_execution": {
+    "pair_direction": "LONG_SPOT_SHORT_USD_M_PERPETUAL",
+    "lifecycle": [
+      "FLAT",
+      "OPENING",
+      "HEDGED",
+      "CLOSING",
+      "ROLLBACK",
+      "LIQUIDATED",
+      "KILLED"
+    ],
+    "target_base_quantity": "1",
+    "hedge_tolerance_base_quantity": "0.001",
+    "maximum_open_seconds": 5,
+    "leg_submission_order": "SPOT_THEN_PERPETUAL",
+    "both_legs_acknowledged_before_hedged": true,
+    "partial_fills_supported": true,
+    "outstanding_orders_cancelled_before_rollback": true,
+    "rollback_is_reduce_only": true,
+    "rollback_fills_include_fees": true,
+    "rollback_failure_enables_kill_switch": true,
+    "opening_while_killed_allowed": false,
+    "reduce_only_while_killed_allowed": true,
+    "pyramiding_allowed": false
+  },
+  "risk": {
+    "synthetic_initial_cash": "10000",
+    "synthetic_reference_price": "100",
+    "taker_fee_rate": "0.0005",
+    "spot_collateral_haircut": "0.95",
+    "initial_margin_rate": "0.10",
+    "maintenance_margin_rate": "0.05",
+    "liquidation_fee_rate": "0.005",
+    "minimum_initial_margin_buffer_ratio": "1.25",
+    "liquidation_rule": "COLLATERAL_LESS_THAN_OR_EQUAL_TO_MAINTENANCE_PLUS_LIQUIDATION_FEE_BUFFER",
+    "liquidation_closes_perpetual_and_spot": true,
+    "adl_reduction_is_external_perp_fill": true,
+    "adl_delta_breach_enables_kill_switch": true,
+    "stale_mark_blocks_risk_evaluation": true,
+    "negative_collateral_blocks_new_open": true,
+    "pretrade_margin_gate_required": true,
+    "kill_switch_cancels_open_orders": true
+  },
+  "reconciliation": {
+    "quantity_tolerance": "0.00000001",
+    "money_tolerance": "0.00000001",
+    "required_fields": [
+      "cash",
+      "cumulative_fees",
+      "cumulative_funding",
+      "perp_average_entry",
+      "perp_quantity",
+      "perp_realized_pl",
+      "spot_quantity"
+    ],
+    "any_discrepancy_status": "FAIL",
+    "discrepancy_enables_kill_switch": true,
+    "matched_snapshot_required_after_each_scenario": true,
+    "internal_ledger_is_not_exchange_truth": true
+  },
+  "scenarios": [
+    {
+      "scenario_id": "S01_FULL_OPEN_FUNDING_CLOSE_RECONCILE",
+      "purpose": "Open both legs fully, credit positive funding to the short, close both legs, and reconcile every cash-flow component.",
+      "required_assertions": [
+        "final_state_flat",
+        "funding_positive",
+        "reconciliation_matched"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S02_FIRST_LEG_PARTIAL_SECOND_REJECT_ROLLBACK",
+      "purpose": "Partially fill spot, reject the perpetual leg, cancel remainder, and flatten the exposed spot through fee-bearing rollback.",
+      "required_assertions": [
+        "final_state_flat",
+        "rollback_fees_ledgered",
+        "zero_residual_delta"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S03_DUPLICATE_FILL_IDEMPOTENCY",
+      "purpose": "Deliver the same venue fill twice and prove the second delivery cannot change quantity, cash, fees, or the event chain.",
+      "required_assertions": [
+        "duplicate_rejected",
+        "ledger_state_unchanged"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S04_DUPLICATE_FUNDING_IDEMPOTENCY",
+      "purpose": "Deliver one funding settlement twice and prove the event key prevents a duplicated credit or debit.",
+      "required_assertions": [
+        "duplicate_rejected",
+        "funding_applied_once"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S05_OPEN_TIMEOUT_CANCEL_AND_ROLLBACK",
+      "purpose": "Expire an incompletely hedged opening, cancel outstanding orders, and flatten all filled exposure before accepting another open.",
+      "required_assertions": [
+        "orders_cancelled",
+        "rollback_completed",
+        "zero_residual_delta"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S06_INITIAL_MARGIN_PREFLIGHT_REJECTION",
+      "purpose": "Request a pair larger than available collateral and reject it before either synthetic venue order can exist.",
+      "required_assertions": [
+        "no_orders_created",
+        "pretrade_margin_rejected"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S07_MAINTENANCE_BREACH_LIQUIDATION",
+      "purpose": "Apply an adverse mark that breaches maintenance plus liquidation buffer, force-close both legs, charge liquidation fees, and kill new openings.",
+      "required_assertions": [
+        "final_state_liquidated",
+        "kill_switch_on",
+        "liquidation_fee_ledgered"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S08_ADL_REDUCTION_KILL_AND_FLATTEN",
+      "purpose": "Apply an external ADL reduction to the short leg, detect the resulting delta breach, enable the kill switch, and flatten the residual pair.",
+      "required_assertions": [
+        "adl_ledgered",
+        "kill_switch_on",
+        "zero_residual_delta"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S09_POSITION_RECONCILIATION_DRIFT",
+      "purpose": "Compare an external snapshot with a different spot or perpetual quantity, fail reconciliation, and enable the kill switch.",
+      "required_assertions": [
+        "position_discrepancy_recorded",
+        "reconciliation_failed"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S10_FEE_RECONCILIATION_DRIFT",
+      "purpose": "Compare an external cumulative-fee value with the internal ledger, fail reconciliation, and preserve the exact discrepancy.",
+      "required_assertions": [
+        "fee_discrepancy_recorded",
+        "reconciliation_failed"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S11_KILL_SWITCH_REJECTS_OPEN_ALLOWS_REDUCE_ONLY",
+      "purpose": "Enable the kill switch, reject a new opening request, but permit the reduce-only operation required to flatten existing risk.",
+      "required_assertions": [
+        "new_open_rejected",
+        "reduce_only_allowed"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S12_ASYMMETRIC_PARTIAL_FILLS_REACH_HEDGE",
+      "purpose": "Apply asynchronous partial fills on both legs and enter HEDGED only after the net base delta falls inside the frozen tolerance.",
+      "required_assertions": [
+        "hedged_inside_tolerance",
+        "not_hedged_while_outside_tolerance"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S13_NEGATIVE_FUNDING_SHORT_PAYS",
+      "purpose": "Settle a negative funding rate against the short perpetual and prove the cash flow is a debit with the frozen signed formula.",
+      "required_assertions": [
+        "funding_negative",
+        "signed_formula_reconciles"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    },
+    {
+      "scenario_id": "S14_PARTIAL_CLOSE_COMPLETES_WITHOUT_RESIDUAL",
+      "purpose": "Close both legs through multiple partial fills and prove final cash, fees, realized P/L, quantities, and reconciliation contain no residue.",
+      "required_assertions": [
+        "final_state_flat",
+        "partial_close_reconciles",
+        "zero_residual_delta"
+      ],
+      "uses_real_market_data": false,
+      "calculates_strategy_return": false
+    }
+  ],
+  "all_scenarios_must_pass": true,
+  "failure_decision": "STOP_V2_DERIVATIVES_FOUNDATION_AND_REPAIR_WITHOUT_STRATEGY_TEST",
+  "pass_decision": "PERMIT_SEPARATE_V2_NO_RETURN_DISCOVERY_CHARTER",
+  "pass_creates_strategy_candidate": false,
+  "authorizes_real_market_data_import": false,
+  "authorizes_strategy_return_calculation": false,
+  "authorizes_mechanism_selection": false,
+  "creates_strategy_eligibility": false,
+  "creates_paper_eligibility": false,
+  "creates_live_eligibility": false,
+  "validation_data_loaded": false,
+  "holdout_data_loaded": false,
+  "forward_data_loaded": false,
+  "strategy_outcome_fields_inspected": [],
+  "limitations": [
+    "A pass permits only a separate no-return discovery charter and creates no backtest, paper, sandbox, micro-live, or live eligibility.",
+    "No network, real market data, strategy return, signal, or candidate is permitted in this foundation campaign.",
+    "Passing scenarios prove deterministic internal invariants only; exchange sandbox qualification and statement reconciliation remain.",
+    "Synthetic arithmetic cannot establish exchange-specific margin, liquidation, ADL, fee, order, or collateral behavior.",
+    "The protocol uses one fixed linear USD-M accounting model and does not cover inverse contracts, options, portfolio margin, or borrowing."
+  ],
+  "protocol_evidence_hash": "b7709efb8555611b9041afc0cb030259c2355c1c82a76c8e22cd6b26a6767c4b"
+}

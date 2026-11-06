@@ -1,0 +1,297 @@
+//@version=6
+// Aurex strategy version: 1.3.0
+strategy(
+     "Aurex trend_pullback_v1",
+     overlay = true,
+     pyramiding = 0,
+     initial_capital = 1000,
+     currency = currency.USD,
+     commission_type = strategy.commission.percent,
+     commission_value = 0.05,
+     slippage = 2,
+     calc_on_every_tick = false,
+     process_orders_on_close = true
+)
+
+backtestStart = input.time(timestamp("1 Jan 2024 00:00 +0000"), "Backtest start")
+backtestEnd = input.time(timestamp("31 Dec 2026 23:59 +0000"), "Backtest end")
+higherTimeframe = input.timeframe("60", "Higher timeframe")
+emaPullbackFastLength = input.int(20, "Pullback EMA fast", minval = 1)
+emaPullbackSlowLength = input.int(50, "Pullback EMA slow", minval = 1)
+emaTrendLength = input.int(200, "Current timeframe trend EMA", minval = 1)
+htfEmaFastLength = input.int(50, "Higher timeframe EMA fast", minval = 1)
+htfEmaSlowLength = input.int(200, "Higher timeframe EMA slow", minval = 1)
+rsiLength = input.int(14, "RSI length", minval = 1)
+atrLength = input.int(14, "ATR length", minval = 1)
+atrMultiplier = input.float(1.5, "ATR stop multiplier", minval = 0.1, step = 0.1)
+rewardRiskRatio = input.float(2.0, "Reward:risk ratio", minval = 1.0, step = 0.1)
+swingLookback = input.int(5, "Swing lookback", minval = 2)
+pullbackAtrTolerance = input.float(0.25, "Pullback ATR tolerance", minval = 0.0, step = 0.05)
+stopMode = input.string("Wider", "Stop mode", options = ["ATR", "Swing", "Wider"])
+riskPerTradePercent = input.float(0.5, "Risk per trade (%)", minval = 0.1, maxval = 2.0, step = 0.1)
+maxPositionValuePercent = input.float(95.0, "Max position value (%)", minval = 1.0, maxval = 100.0, step = 1.0)
+enableLong = input.bool(true, "Enable long")
+enableShort = input.bool(true, "Enable short")
+showDiagnostics = input.bool(true, "Show diagnostic table", group = "Diagnostics")
+strategyVersion = "1.3.0"
+
+if barstate.isfirst and timeframe.in_seconds(higherTimeframe) <= timeframe.in_seconds()
+    runtime.error("Higher timeframe must be greater than the chart timeframe.")
+
+emaPullbackFast = ta.ema(close, emaPullbackFastLength)
+emaPullbackSlow = ta.ema(close, emaPullbackSlowLength)
+emaTrend = ta.ema(close, emaTrendLength)
+rsiValue = ta.rsi(close, rsiLength)
+atrValue = ta.atr(atrLength)
+
+htfEmaFast = request.security(
+     syminfo.tickerid,
+     higherTimeframe,
+     ta.ema(close, htfEmaFastLength)[1],
+     gaps = barmerge.gaps_off,
+     lookahead = barmerge.lookahead_on
+)
+htfEmaSlow = request.security(
+     syminfo.tickerid,
+     higherTimeframe,
+     ta.ema(close, htfEmaSlowLength)[1],
+     gaps = barmerge.gaps_off,
+     lookahead = barmerge.lookahead_on
+)
+
+pullbackTolerance = atrValue * pullbackAtrTolerance
+nearFastEma = low <= emaPullbackFast + pullbackTolerance and high >= emaPullbackFast - pullbackTolerance
+nearSlowEma = low <= emaPullbackSlow + pullbackTolerance and high >= emaPullbackSlow - pullbackTolerance
+nearPullbackZone = nearFastEma or nearSlowEma
+
+bullishConfirmation = close > open and close > high[1]
+bearishConfirmation = close < open and close < low[1]
+
+recentSwingLow = ta.lowest(low, swingLookback)
+recentSwingHigh = ta.highest(high, swingLookback)
+longAtrStop = close - (atrValue * atrMultiplier)
+shortAtrStop = close + (atrValue * atrMultiplier)
+longStop = stopMode == "ATR" ? longAtrStop : stopMode == "Swing" ? recentSwingLow : math.min(longAtrStop, recentSwingLow)
+shortStop = stopMode == "ATR" ? shortAtrStop : stopMode == "Swing" ? recentSwingHigh : math.max(shortAtrStop, recentSwingHigh)
+
+configuredSlippagePrice = 2 * syminfo.mintick
+expectedLongEntry = close + configuredSlippagePrice
+expectedShortEntry = close - configuredSlippagePrice
+longRisk = expectedLongEntry - longStop
+shortRisk = shortStop - expectedShortEntry
+longTakeProfit = expectedLongEntry + (longRisk * rewardRiskRatio)
+shortTakeProfit = expectedShortEntry - (shortRisk * rewardRiskRatio)
+
+longTrend = htfEmaFast > htfEmaSlow and close > emaTrend
+shortTrend = htfEmaFast < htfEmaSlow and close < emaTrend
+longRsiReset = rsiValue > 40 and rsiValue < 65
+shortRsiReset = rsiValue < 60 and rsiValue > 35
+flatPosition = strategy.position_size == 0
+inBacktestWindow = time >= backtestStart and time < backtestEnd
+entryWindow = inBacktestWindow and time_close < backtestEnd
+backtestExitBar = time < backtestEnd and time_close >= backtestEnd
+riskCapital = math.max(strategy.equity, 0) * (riskPerTradePercent / 100)
+contractPointValue = math.max(syminfo.pointvalue, syminfo.mintick)
+minimumContract = math.max(syminfo.mincontract, 0.00000001)
+longMaxPositionQuantity = expectedLongEntry > 0 ? (strategy.equity * (maxPositionValuePercent / 100)) / (expectedLongEntry * contractPointValue) : 0
+shortMaxPositionQuantity = expectedShortEntry > 0 ? (strategy.equity * (maxPositionValuePercent / 100)) / (expectedShortEntry * contractPointValue) : 0
+longRiskQuantity = longRisk > syminfo.mintick ? riskCapital / (longRisk * contractPointValue) : 0
+shortRiskQuantity = shortRisk > syminfo.mintick ? riskCapital / (shortRisk * contractPointValue) : 0
+longQuantityRaw = math.min(longRiskQuantity, longMaxPositionQuantity)
+shortQuantityRaw = math.min(shortRiskQuantity, shortMaxPositionQuantity)
+longQuantity = math.floor(longQuantityRaw / minimumContract) * minimumContract
+shortQuantity = math.floor(shortQuantityRaw / minimumContract) * minimumContract
+longRiskOk = longRisk > syminfo.mintick
+shortRiskOk = shortRisk > syminfo.mintick
+longQuantityOk = longQuantity > 0
+shortQuantityOk = shortQuantity > 0
+
+longSetup = enableLong and flatPosition and entryWindow and barstate.isconfirmed and longTrend and nearPullbackZone and longRsiReset and bullishConfirmation and longRiskOk and longQuantityOk
+shortSetup = enableShort and flatPosition and entryWindow and barstate.isconfirmed and shortTrend and nearPullbackZone and shortRsiReset and bearishConfirmation and shortRiskOk and shortQuantityOk
+
+longBlocker = not enableLong ? "long disabled" : not entryWindow ? "outside entry window" : not barstate.isconfirmed ? "waiting close" : not flatPosition ? "position open" : not longTrend ? "trend filter" : not nearPullbackZone ? "pullback zone" : not longRsiReset ? "RSI reset" : not bullishConfirmation ? "confirmation" : not longRiskOk ? "risk <= tick" : not longQuantityOk ? "quantity < min contract" : "ready"
+shortBlocker = not enableShort ? "short disabled" : not entryWindow ? "outside entry window" : not barstate.isconfirmed ? "waiting close" : not flatPosition ? "position open" : not shortTrend ? "trend filter" : not nearPullbackZone ? "pullback zone" : not shortRsiReset ? "RSI reset" : not bearishConfirmation ? "confirmation" : not shortRiskOk ? "risk <= tick" : not shortQuantityOk ? "quantity < min contract" : "ready"
+
+var int diagnosticBars = 0
+var int flatPassCount = 0
+var int longTrendPassCount = 0
+var int shortTrendPassCount = 0
+var int pullbackPassCount = 0
+var int longRsiPassCount = 0
+var int shortRsiPassCount = 0
+var int longConfirmationPassCount = 0
+var int shortConfirmationPassCount = 0
+var int longRiskPassCount = 0
+var int shortRiskPassCount = 0
+var int longQuantityPassCount = 0
+var int shortQuantityPassCount = 0
+var int longSetupCount = 0
+var int shortSetupCount = 0
+var int longOrderCount = 0
+var int shortOrderCount = 0
+
+diagnosticSample = barstate.isconfirmed and inBacktestWindow
+if diagnosticSample
+    diagnosticBars += 1
+    if flatPosition
+        flatPassCount += 1
+    if longTrend
+        longTrendPassCount += 1
+    if shortTrend
+        shortTrendPassCount += 1
+    if nearPullbackZone
+        pullbackPassCount += 1
+    if longRsiReset
+        longRsiPassCount += 1
+    if shortRsiReset
+        shortRsiPassCount += 1
+    if bullishConfirmation
+        longConfirmationPassCount += 1
+    if bearishConfirmation
+        shortConfirmationPassCount += 1
+    if longRiskOk
+        longRiskPassCount += 1
+    if shortRiskOk
+        shortRiskPassCount += 1
+    if longQuantityOk
+        longQuantityPassCount += 1
+    if shortQuantityOk
+        shortQuantityPassCount += 1
+    if longSetup
+        longSetupCount += 1
+    if shortSetup
+        shortSetupCount += 1
+
+formatPrice(price) =>
+    str.tostring(price, format.mintick)
+
+formatSetting(value) =>
+    str.tostring(value)
+
+formatBoolSetting(value) =>
+    value ? "true" : "false"
+
+formatTimestampSetting(value) =>
+    str.format_time(value, "yyyy-MM-dd'T'HH:mm:ss'Z'", "UTC")
+
+timestampIso() =>
+    str.format_time(time, "yyyy-MM-dd'T'HH:mm:ss'Z'", "UTC")
+
+formatDiagnosticCount(count, total) =>
+    str.tostring(count) + "/" + str.tostring(total)
+
+settingsFingerprint() =>
+    "trend_pullback_v1" +
+     "|initial_capital=1000" +
+     "|backtest_start=" + formatTimestampSetting(backtestStart) +
+     "|backtest_end=" + formatTimestampSetting(backtestEnd) +
+     "|higher_timeframe=" + higherTimeframe +
+     "|pullback_ema_fast=" + str.tostring(emaPullbackFastLength) +
+     "|pullback_ema_slow=" + str.tostring(emaPullbackSlowLength) +
+     "|trend_ema=" + str.tostring(emaTrendLength) +
+     "|htf_ema_fast=" + str.tostring(htfEmaFastLength) +
+     "|htf_ema_slow=" + str.tostring(htfEmaSlowLength) +
+     "|rsi_length=" + str.tostring(rsiLength) +
+     "|atr_length=" + str.tostring(atrLength) +
+     "|atr_multiplier=" + formatSetting(atrMultiplier) +
+     "|reward_risk=" + formatSetting(rewardRiskRatio) +
+     "|swing_lookback=" + str.tostring(swingLookback) +
+     "|pullback_atr_tolerance=" + formatSetting(pullbackAtrTolerance) +
+     "|stop_mode=" + stopMode +
+     "|risk_per_trade_percent=" + formatSetting(riskPerTradePercent) +
+     "|max_position_value_percent=" + formatSetting(maxPositionValuePercent) +
+     "|enable_long=" + formatBoolSetting(enableLong) +
+     "|enable_short=" + formatBoolSetting(enableShort)
+
+signalMessage(direction, entryPrice, stopLoss, takeProfit, marketRegime) =>
+    "{" +
+     "\"source\":\"tradingview\"," +
+     "\"strategy\":\"trend_pullback_v1\"," +
+     "\"strategy_version\":\"" + strategyVersion + "\"," +
+     "\"settings_fingerprint\":\"" + settingsFingerprint() + "\"," +
+     "\"symbol\":\"" + syminfo.ticker + "\"," +
+     "\"timeframe\":\"" + timeframe.period + "\"," +
+     "\"direction\":\"" + direction + "\"," +
+     "\"entry_price\":" + formatPrice(entryPrice) + "," +
+     "\"stop_loss\":" + formatPrice(stopLoss) + "," +
+     "\"take_profit\":" + formatPrice(takeProfit) + "," +
+     "\"market_regime\":\"" + marketRegime + "\"," +
+     "\"timestamp\":\"" + timestampIso() + "\"" +
+     "}"
+
+longMessage = signalMessage("LONG", expectedLongEntry, longStop, longTakeProfit, "TRENDING_UP")
+shortMessage = signalMessage("SHORT", expectedShortEntry, shortStop, shortTakeProfit, "TRENDING_DOWN")
+
+if longSetup
+    longOrderCount += 1
+    strategy.entry("AUREX-LONG-TRENDING_UP", strategy.long, qty = longQuantity, alert_message = longMessage)
+    strategy.exit("AUREX-LONG-EXIT", from_entry = "AUREX-LONG-TRENDING_UP", stop = longStop, limit = longTakeProfit)
+    alert(longMessage, alert.freq_once_per_bar_close)
+
+if shortSetup
+    shortOrderCount += 1
+    strategy.entry("AUREX-SHORT-TRENDING_DOWN", strategy.short, qty = shortQuantity, alert_message = shortMessage)
+    strategy.exit("AUREX-SHORT-EXIT", from_entry = "AUREX-SHORT-TRENDING_DOWN", stop = shortStop, limit = shortTakeProfit)
+    alert(shortMessage, alert.freq_once_per_bar_close)
+
+if backtestExitBar and strategy.position_size != 0
+    strategy.close_all(comment = "Backtest window end")
+
+var table diagnosticTable = table.new(position.top_right, 3, 15, border_width = 1)
+diagnosticHeaderColor = color.new(color.rgb(10, 20, 32), 0)
+diagnosticLabelColor = color.new(color.rgb(17, 24, 39), 0)
+diagnosticLongColor = longSetup ? color.new(color.lime, 70) : color.new(color.gray, 84)
+diagnosticShortColor = shortSetup ? color.new(color.red, 70) : color.new(color.gray, 84)
+
+if showDiagnostics and barstate.islast
+    table.cell(diagnosticTable, 0, 0, "Aurex diagnostics", text_color = color.white, bgcolor = diagnosticHeaderColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 0, "Long", text_color = color.white, bgcolor = diagnosticHeaderColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 0, "Short", text_color = color.white, bgcolor = diagnosticHeaderColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 1, "Bars checked", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 1, str.tostring(diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 1, str.tostring(diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 2, "Flat position", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 2, formatDiagnosticCount(flatPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 2, formatDiagnosticCount(flatPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 3, "Trend filter", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 3, formatDiagnosticCount(longTrendPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 3, formatDiagnosticCount(shortTrendPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 4, "Pullback zone", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 4, formatDiagnosticCount(pullbackPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 4, formatDiagnosticCount(pullbackPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 5, "RSI reset", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 5, formatDiagnosticCount(longRsiPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 5, formatDiagnosticCount(shortRsiPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 6, "Confirmation", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 6, formatDiagnosticCount(longConfirmationPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 6, formatDiagnosticCount(shortConfirmationPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 7, "Risk > tick", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 7, formatDiagnosticCount(longRiskPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 7, formatDiagnosticCount(shortRiskPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 8, "Quantity > 0", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 8, formatDiagnosticCount(longQuantityPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 8, formatDiagnosticCount(shortQuantityPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 9, "Setups", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 9, str.tostring(longSetupCount), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 9, str.tostring(shortSetupCount), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 10, "Orders submitted", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 10, str.tostring(longOrderCount), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 10, str.tostring(shortOrderCount), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 11, "Filled entries", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 11, str.tostring(strategy.closedtrades + strategy.opentrades), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 11, str.tostring(strategy.closedtrades + strategy.opentrades), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 12, "Open trades", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 12, str.tostring(strategy.opentrades), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 12, str.tostring(strategy.opentrades), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 13, "Closed trades", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 13, str.tostring(strategy.closedtrades), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 13, str.tostring(strategy.closedtrades), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 14, "Latest blocker", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 14, longBlocker, text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 14, shortBlocker, text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+
+plot(emaPullbackFast, "EMA pullback fast", color = color.new(color.teal, 0))
+plot(emaPullbackSlow, "EMA pullback slow", color = color.new(color.orange, 0))
+plot(emaTrend, "EMA trend", color = color.new(color.gray, 0))
+plotshape(longSetup, title = "Aurex long signal", style = shape.triangleup, color = color.lime, location = location.belowbar, size = size.tiny)
+plotshape(shortSetup, title = "Aurex short signal", style = shape.triangledown, color = color.red, location = location.abovebar, size = size.tiny)

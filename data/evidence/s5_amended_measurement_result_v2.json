@@ -1,0 +1,74 @@
+{
+  "annotated_count": 104,
+  "authority": {
+    "live": false,
+    "market_values": false,
+    "network": false,
+    "paper": false,
+    "production": false,
+    "returns": false,
+    "signals": false,
+    "testnet_strategy_orders": false
+  },
+  "completed_at": "2026-09-25T22:22:13.976310+00:00",
+  "contract_hash": "9e8386c26f43e4b28709eeba0123b0b11108d7bce119d5a2fcb08df490156ade",
+  "decision": "PASS_S5_AMENDED_MEASUREMENT_PENDING_INDEPENDENT_AUDIT",
+  "evidence_hash": "69d42d1c9e8754d8fa43a0b4ea1aa5cd52904f150c1475e25a572cba34e39c71",
+  "excluded_events": {
+    "all_accepted": 6,
+    "canonical": 4,
+    "primary": 4
+  },
+  "excluded_release_count": 0,
+  "historical_qualification_permitted": false,
+  "included_release_count": 132,
+  "inventory_count": 132,
+  "lightweight_count": 28,
+  "next_action": "AUDIT_S5_AMENDED_MEASUREMENT_RESULT",
+  "non_release_fields_match_v1": true,
+  "output_sha256": "ee98f762806770d3c1b17f26a14fc718db9dab75318c734d20e69d6cec23a6f1",
+  "process_count": 3,
+  "protocol_hash": "e680dbe872d667636b0568b3cd99363a06c9f04049f03f62e4390fcc9873e578",
+  "row_count": 212,
+  "schema": "aurex-s5-amended-measurement-result-v2",
+  "started_at": "2026-09-25T22:22:01.739422+00:00",
+  "tags_sha256": "d5f393456b7dd291aec5e0d3b20b5aa6f7490e239fd63bfcbba96878329464fe",
+  "transcript_bindings": [
+    {
+      "path": "data/evidence/s5_amended_measurement_responses_v2/01.json",
+      "sha256": "bf24992aec24a122b0be44cc69e955ab7b8bbe4421cb4ca2649cf25dade1dd03"
+    },
+    {
+      "path": "data/evidence/s5_amended_measurement_responses_v2/01.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/evidence/s5_amended_measurement_responses_v2/01.stdout",
+      "sha256": "e058a52cd2cb5e632ebf7d4adf2bae93618c0b254094e5d9f525e179c476bf4f"
+    },
+    {
+      "path": "data/evidence/s5_amended_measurement_responses_v2/02.json",
+      "sha256": "2802f804315b979f7d4b58d83b69eae1404ffbec71d4447c9212d43195509f98"
+    },
+    {
+      "path": "data/evidence/s5_amended_measurement_responses_v2/02.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/evidence/s5_amended_measurement_responses_v2/02.stdout",
+      "sha256": "d087ddc2158d2e89ba0f92f65400688120394e2af42ad1e323e0adf762b1b44c"
+    },
+    {
+      "path": "data/evidence/s5_amended_measurement_responses_v2/03.json",
+      "sha256": "f13f50a818799a145caac3403cc0bc795341b3261428e4838b90196dbfc5c478"
+    },
+    {
+      "path": "data/evidence/s5_amended_measurement_responses_v2/03.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/evidence/s5_amended_measurement_responses_v2/03.stdout",
+      "sha256": "3819be544f7ac78c0dd17c6e36b5b2a50bf856c1a2b874b588dc147aed6f66fe"
+    }
+  ]
+}

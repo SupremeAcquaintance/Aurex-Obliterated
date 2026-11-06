@@ -1,0 +1,168 @@
+//@version=6
+// Aurex strategy version: 1.0.0
+strategy(
+     "Aurex slow_breakout_spot_v1",
+     overlay = true,
+     pyramiding = 0,
+     initial_capital = 1000,
+     currency = currency.USD,
+     commission_type = strategy.commission.percent,
+     commission_value = 0.05,
+     slippage = 2,
+     calc_on_every_tick = false,
+     process_orders_on_close = true
+)
+
+backtestStart = input.time(timestamp("1 Feb 2023 00:00 +0000"), "Backtest start")
+backtestEnd = input.time(timestamp("1 Jul 2026 00:00 +0000"), "Backtest end")
+entryChannelLength = input.int(55, "Entry channel length", minval = 2)
+exitChannelLength = input.int(20, "Exit channel length", minval = 1)
+atrLength = input.int(20, "ATR length", minval = 1)
+atrStopMultiplier = input.float(3.0, "ATR stop multiplier", minval = 0.1, step = 0.1)
+riskPerTradePercent = input.float(0.25, "Risk per trade (%)", minval = 0.1, maxval = 2.0, step = 0.05)
+maxPositionValuePercent = input.float(50.0, "Max position value (%)", minval = 1.0, maxval = 100.0, step = 1.0)
+enableLong = input.bool(true, "Enable long")
+showDiagnostics = input.bool(true, "Show diagnostic table", group = "Diagnostics")
+strategyVersion = "1.0.0"
+
+if barstate.isfirst and timeframe.in_seconds() != 4 * 60 * 60
+    runtime.error("slow_breakout_spot_v1 requires the 4-hour chart timeframe.")
+
+if barstate.isfirst and entryChannelLength <= exitChannelLength
+    runtime.error("Entry channel length must exceed exit channel length.")
+
+atrValue = ta.atr(atrLength)
+entryChannelHigh = ta.highest(high, entryChannelLength)[1]
+exitChannelLow = ta.lowest(low, exitChannelLength)[1]
+inBacktestWindow = time >= backtestStart and time < backtestEnd
+entryWindow = inBacktestWindow and time_close < backtestEnd
+backtestExitBar = time < backtestEnd and time_close >= backtestEnd
+flatPosition = strategy.position_size == 0
+longPosition = strategy.position_size > 0
+longBreakout = close > entryChannelHigh
+configuredSlippagePrice = 2 * syminfo.mintick
+expectedLongEntry = close + configuredSlippagePrice
+longStop = close - atrValue * atrStopMultiplier
+longRisk = expectedLongEntry - longStop
+
+riskCapital = math.max(strategy.equity, 0) * (riskPerTradePercent / 100)
+contractPointValue = math.max(syminfo.pointvalue, syminfo.mintick)
+minimumContract = math.max(syminfo.mincontract, 0.00000001)
+maxPositionQuantity = expectedLongEntry > 0 ? (math.max(strategy.equity, 0) * (maxPositionValuePercent / 100)) / (expectedLongEntry * contractPointValue) : 0
+riskQuantity = longRisk > syminfo.mintick ? riskCapital / (longRisk * contractPointValue) : 0
+longQuantityRaw = math.min(riskQuantity, maxPositionQuantity)
+longQuantity = math.floor(longQuantityRaw / minimumContract) * minimumContract
+longRiskOk = longStop > syminfo.mintick and longRisk > syminfo.mintick and longQuantity > 0
+longSetup = enableLong and flatPosition and entryWindow and barstate.isconfirmed and longBreakout and longRiskOk
+channelExit = longPosition and inBacktestWindow and barstate.isconfirmed and close < exitChannelLow
+
+formatPrice(price) =>
+    str.tostring(price, format.mintick)
+
+formatSetting(value) =>
+    str.tostring(value)
+
+formatBoolSetting(value) =>
+    value ? "true" : "false"
+
+formatTimestampSetting(value) =>
+    str.format_time(value, "yyyy-MM-dd'T'HH:mm:ss'Z'", "UTC")
+
+timestampIso() =>
+    str.format_time(time, "yyyy-MM-dd'T'HH:mm:ss'Z'", "UTC")
+
+settingsFingerprint() =>
+    "slow_breakout_spot_v1" +
+     "|initial_capital=1000" +
+     "|backtest_start=" + formatTimestampSetting(backtestStart) +
+     "|backtest_end=" + formatTimestampSetting(backtestEnd) +
+     "|entry_channel_length=" + str.tostring(entryChannelLength) +
+     "|exit_channel_length=" + str.tostring(exitChannelLength) +
+     "|atr_length=" + str.tostring(atrLength) +
+     "|atr_stop_multiplier=" + formatSetting(atrStopMultiplier) +
+     "|risk_per_trade_percent=" + formatSetting(riskPerTradePercent) +
+     "|max_position_value_percent=" + formatSetting(maxPositionValuePercent) +
+     "|enable_long=" + formatBoolSetting(enableLong)
+
+signalMessage(entryPrice, stopLoss) =>
+    "{" +
+     "\"source\":\"tradingview\"," +
+     "\"strategy\":\"slow_breakout_spot_v1\"," +
+     "\"strategy_version\":\"" + strategyVersion + "\"," +
+     "\"settings_fingerprint\":\"" + settingsFingerprint() + "\"," +
+     "\"symbol\":\"" + syminfo.ticker + "\"," +
+     "\"timeframe\":\"" + timeframe.period + "\"," +
+     "\"direction\":\"LONG\"," +
+     "\"entry_price\":" + formatPrice(entryPrice) + "," +
+     "\"stop_loss\":" + formatPrice(stopLoss) + "," +
+     "\"take_profit\":null," +
+     "\"market_regime\":\"TRENDING_UP\"," +
+     "\"timestamp\":\"" + timestampIso() + "\"" +
+     "}"
+
+longMessage = signalMessage(expectedLongEntry, longStop)
+var float activeStop = na
+
+if longSetup
+    activeStop := longStop
+    strategy.entry(
+         "AUREX-SLOW-SPOT-LONG",
+         strategy.long,
+         qty = longQuantity,
+         alert_message = longMessage
+    )
+    alert(longMessage, alert.freq_once_per_bar_close)
+
+if longPosition and not na(activeStop)
+    strategy.exit(
+         "AUREX-SLOW-SPOT-STOP",
+         from_entry = "AUREX-SLOW-SPOT-LONG",
+         stop = activeStop
+    )
+
+if channelExit
+    strategy.close("AUREX-SLOW-SPOT-LONG", comment = "Channel exit")
+else if backtestExitBar and longPosition
+    strategy.close("AUREX-SLOW-SPOT-LONG", comment = "Backtest window end")
+
+if flatPosition and strategy.position_size[1] > 0
+    activeStop := na
+
+var int diagnosticBars = 0
+var int breakoutPass = 0
+var int longSetupCount = 0
+var int channelExitCount = 0
+
+if barstate.isconfirmed and inBacktestWindow
+    diagnosticBars += 1
+    if longBreakout
+        breakoutPass += 1
+    if longSetup
+        longSetupCount += 1
+    if channelExit
+        channelExitCount += 1
+
+formatDiagnosticCount(count) =>
+    str.tostring(count) + "/" + str.tostring(diagnosticBars)
+
+var table diagnosticTable = table.new(position.top_right, 2, 5, border_width = 1)
+headerColor = color.new(color.rgb(10, 20, 32), 0)
+labelColor = color.new(color.rgb(17, 24, 39), 0)
+
+if showDiagnostics and barstate.islast
+    table.cell(diagnosticTable, 0, 0, "Aurex slow spot", text_color = color.white, bgcolor = headerColor)
+    table.cell(diagnosticTable, 1, 0, "Long", text_color = color.white, bgcolor = headerColor)
+    table.cell(diagnosticTable, 0, 1, "Bars", text_color = color.white, bgcolor = labelColor)
+    table.cell(diagnosticTable, 1, 1, str.tostring(diagnosticBars), text_color = color.white)
+    table.cell(diagnosticTable, 0, 2, "Breakout", text_color = color.white, bgcolor = labelColor)
+    table.cell(diagnosticTable, 1, 2, formatDiagnosticCount(breakoutPass), text_color = color.white)
+    table.cell(diagnosticTable, 0, 3, "Entries", text_color = color.white, bgcolor = labelColor)
+    table.cell(diagnosticTable, 1, 3, str.tostring(longSetupCount), text_color = color.white)
+    table.cell(diagnosticTable, 0, 4, "Channel exits", text_color = color.white, bgcolor = labelColor)
+    table.cell(diagnosticTable, 1, 4, str.tostring(channelExitCount), text_color = color.white)
+
+plot(entryChannelHigh, "Prior entry channel high", color = color.new(color.aqua, 15))
+plot(exitChannelLow, "Prior exit channel low", color = color.new(color.orange, 15))
+plot(activeStop, "Initial catastrophe stop", color = color.new(color.red, 10), style = plot.style_linebr)
+plotshape(longSetup, title = "Aurex slow breakout long", style = shape.triangleup, color = color.lime, location = location.belowbar, size = size.tiny)
+plotshape(channelExit, title = "Aurex slow channel exit", style = shape.triangledown, color = color.orange, location = location.abovebar, size = size.tiny)

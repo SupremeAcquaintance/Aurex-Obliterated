@@ -1,0 +1,105 @@
+{
+  "schema_version": "aurex-s3-cftc-source-feasibility-protocol-v1",
+  "protocol_id": "s3-cftc-source-feasibility-protocol-v1",
+  "frozen_at": "2026-08-30T20:54:31.809966Z",
+  "status": "FROZEN_BEFORE_CFTC_METADATA_REQUESTS",
+  "builder_contract_hash": "bea1a359af1523395a803962298fc57b2f8eada856c7e6679ba2517012b95186",
+  "charter_evidence_hash": "2cf73ead1b04999c3b5f9f818bb60d18ad96d2041fae2d65d77084aa88e4802a",
+  "source_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_audit_v24.json",
+      "file_sha256": "20158dcd5ad3fe094a8722c597d47bbcf32b1f93f80b5c5837d731536c7dc3dc"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_result_v24.json",
+      "file_sha256": "008b9590a4078fdc904a3d54c5ddab884661e51fe23bcb55b6b075e1c71ea329"
+    },
+    {
+      "path": "data/evidence/s3_cftc_positioning_charter_audit_v1.json",
+      "file_sha256": "c981002e57521fba7b04554c9d17586d23af1247b0a71617d318d7107ba60e9a"
+    },
+    {
+      "path": "data/evidence/s3_cftc_positioning_charter_v1.json",
+      "file_sha256": "f28766dc4ca19aeaff70b8b3126cbff445a198dbdbfff63889f269c3c2f6f1bf"
+    }
+  ],
+  "metadata_endpoints": [
+    {
+      "endpoint_id": "COT_FAQ",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm",
+      "required_text_tokens": [
+        "Is there a list of historical release dates?",
+        "There is not a list of historical release dates",
+        "only available release dates are for the 13 months"
+      ],
+      "permits_target_position_rows": false
+    },
+    {
+      "endpoint_id": "HISTORICAL_SPECIAL_ANNOUNCEMENTS",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalSpecialAnnouncements/index.htm",
+      "required_text_tokens": [
+        "Historical Special Announcements",
+        "New Publish Date",
+        "Original Publish Date"
+      ],
+      "permits_target_position_rows": false
+    },
+    {
+      "endpoint_id": "HISTORICAL_VIEWABLE_INDEX",
+      "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalViewable/index.htm",
+      "required_text_tokens": [
+        "Dates indicate the report date and not the release date",
+        "Historical Viewable"
+      ],
+      "permits_target_position_rows": false
+    }
+  ],
+  "development_release_coverage_start": "2022-01-01T00:00:00Z",
+  "development_release_coverage_end_exclusive": "2025-01-01T00:00:00Z",
+  "maximum_metadata_requests": 3,
+  "maximum_response_bytes_each": 4000000,
+  "request_timeout_seconds": 30,
+  "required_gate_ids": [
+    "METADATA_ENDPOINTS_AVAILABLE",
+    "OFFICIAL_CFTC_AUTHORITY",
+    "REPORT_DATE_DISTINCT_FROM_RELEASE_DATE",
+    "HISTORICAL_RELEASE_DATE_COVERAGE_2022_2024",
+    "PER_REPORT_ACTUAL_RELEASE_TIMESTAMP_AVAILABLE",
+    "DELAY_AND_BACKLOG_METADATA_AVAILABLE",
+    "REVISION_IDENTITY_LEDGER_COMPLETE",
+    "ZERO_DOLLAR_PUBLIC_METADATA_ACCESS",
+    "REUSE_RIGHTS_EXPLICIT",
+    "ZERO_TARGET_POSITION_OR_MARKET_VALUES_ACCESSED"
+  ],
+  "actual_release_timestamp_required": true,
+  "scheduled_release_date_is_sufficient": false,
+  "report_as_of_date_is_sufficient": false,
+  "partial_historical_coverage_is_sufficient": false,
+  "metadata_html_permitted": true,
+  "target_position_rows_permitted": false,
+  "target_position_values_permitted": false,
+  "btc_market_values_permitted": false,
+  "payload_acquisition_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "historical_screen_permitted": false,
+  "validation_permitted": false,
+  "holdout_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "decision": "FREEZE_S3_CFTC_POINT_IN_TIME_SOURCE_FEASIBILITY_PROTOCOL",
+  "next_authorization": "RUN_S3_CFTC_POINT_IN_TIME_SOURCE_FEASIBILITY_ONCE",
+  "limitations": [
+    "A successful HTTP request does not prove point-in-time coverage.",
+    "Actual publication timing must be proven for every development report.",
+    "Historical report dates and scheduled dates are not release timestamps.",
+    "Metadata may prove the source infeasible and retire S3 before values.",
+    "No BTC price, parameter, return, candidate, signal, or order is authorized.",
+    "No CFTC target position row or value may be parsed by this protocol.",
+    "Published study outcomes cannot substitute for source reconstruction.",
+    "Reuse rights and zero-dollar access must be explicit rather than assumed."
+  ],
+  "protocol_evidence_hash": "1d9e2b672b754c3e6d7296fc3c75fd8d7ab4f49e445b06383ec4e1722271c15a"
+}

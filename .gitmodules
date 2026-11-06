@@ -1,0 +1,6 @@
+[submodule "My-Krypt-Trader"]
+	path = My-Krypt-Trader
+	url = https://github.com/scripflipped/Krypt-Trader.git
+[submodule "tradingview-mcp-jackson"]
+	path = tradingview-mcp-jackson
+	url = https://github.com/LewisWJackson/tradingview-mcp-jackson.git

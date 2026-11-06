@@ -1,0 +1,18 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-successor-acquisition-protocol-audit-v1",
+  "audited_at": "2026-08-10T17:43:49.420082Z",
+  "protocol_file_sha256": "e8cbcef746ea4a01c5c43942f17e2169b559029632c46693fbf0d126bf3c2f96",
+  "protocol_evidence_hash": "a8ae24f8939aa88d3ea14aee5eb7b867b82bd50f9620183cb57a77c8466fca51",
+  "parent_census_result_evidence_hash": "c16baa6c994644c14f99e3966ba069fa1ec891519e887216d60c1e6965c3f826",
+  "auditor_contract_hash": "a25cc2076dac6dbee7bf958b6920789db60a3e977afe79f4679d33d694976184",
+  "target_manifest_hash": "fd336f95c4c9fc9c395941c19750f5aa91976dd7e469065ec7b56f6fb9cf8378",
+  "target_count": 74,
+  "reuse_candidate_count": 26,
+  "maximum_network_target_count": 48,
+  "excluded_month_count": 11,
+  "lineage_and_manifest_reconstructed": true,
+  "network_requests_made": 0,
+  "outcomes_accessed": 0,
+  "orders_submitted": 0,
+  "audit_evidence_hash": "2730659403ee305d787dda58f3f5e850025fe6ba78c17d2750052736319dbd50"
+}

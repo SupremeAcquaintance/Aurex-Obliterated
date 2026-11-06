@@ -1,0 +1,349 @@
+{
+  "schema_version": "aurex-v2-synthetic-derivatives-foundation-result-v1",
+  "result_id": "v2-synthetic-derivatives-foundation-result-v1",
+  "result_version": "1.0.0",
+  "generated_at": "2026-07-28T07:14:17.794881Z",
+  "status": "COMPLETE",
+  "foundation_protocol_evidence_hash": "b7709efb8555611b9041afc0cb030259c2355c1c82a76c8e22cd6b26a6767c4b",
+  "pilot_result_evidence_hash": "95e9aaaf1b05b01372ddcdc3f19fff6612f6a7f5ae4e1ca4b99b0eb6e7947874",
+  "runner_contract_hash": "200c5fdf0447c84c79e08a69ca93f5e7748c71da3c4942b34b837efe04825318",
+  "scenario_results": [
+    {
+      "scenario_id": "S01_FULL_OPEN_FUNDING_CLOSE_RECONCILE",
+      "passed": true,
+      "assertions": {
+        "final_state_flat": true,
+        "funding_positive": true,
+        "reconciliation_matched": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "FLAT",
+      "kill_switch_enabled": false,
+      "final_snapshot": {
+        "cash": "10000.8085",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "-1",
+        "cumulative_fees": "0.2015",
+        "cumulative_funding": "0.01"
+      },
+      "ledger_event_count": 10,
+      "ledger_head_hash": "a1ccb38a52455c72687d41480993f213e95ad2a4076b310ca92b1eb5bd0bd5b5"
+    },
+    {
+      "scenario_id": "S02_FIRST_LEG_PARTIAL_SECOND_REJECT_ROLLBACK",
+      "passed": true,
+      "assertions": {
+        "final_state_flat": true,
+        "rollback_fees_ledgered": true,
+        "zero_residual_delta": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "FLAT",
+      "kill_switch_enabled": false,
+      "final_snapshot": {
+        "cash": "9999.5602",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0",
+        "cumulative_fees": "0.0398",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 8,
+      "ledger_head_hash": "8bdba28d0ce043d5126412440c2db2ada9a1153f7ff70c99c18fef5e1980d379"
+    },
+    {
+      "scenario_id": "S03_DUPLICATE_FILL_IDEMPOTENCY",
+      "passed": true,
+      "assertions": {
+        "duplicate_rejected": true,
+        "ledger_state_unchanged": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "FLAT",
+      "kill_switch_enabled": false,
+      "final_snapshot": {
+        "cash": "9999.8",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0",
+        "cumulative_fees": "0.2",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 10,
+      "ledger_head_hash": "a14bf989f1d7b6a5c0e621a0de695161b8040123ed568783338254cf116c8502"
+    },
+    {
+      "scenario_id": "S04_DUPLICATE_FUNDING_IDEMPOTENCY",
+      "passed": true,
+      "assertions": {
+        "duplicate_rejected": true,
+        "funding_applied_once": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "FLAT",
+      "kill_switch_enabled": false,
+      "final_snapshot": {
+        "cash": "9999.81",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0",
+        "cumulative_fees": "0.2",
+        "cumulative_funding": "0.01"
+      },
+      "ledger_event_count": 10,
+      "ledger_head_hash": "b9d5ee7934a8f91ce1a834eb1572c17d2b119c20984cc0f952d03fd02742a451"
+    },
+    {
+      "scenario_id": "S05_OPEN_TIMEOUT_CANCEL_AND_ROLLBACK",
+      "passed": true,
+      "assertions": {
+        "orders_cancelled": true,
+        "rollback_completed": true,
+        "zero_residual_delta": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "FLAT",
+      "kill_switch_enabled": false,
+      "final_snapshot": {
+        "cash": "9999.66985",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "-0.3",
+        "cumulative_fees": "0.03015",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 8,
+      "ledger_head_hash": "24c6166a7552c964ff94b2d49e548783362552e126ff3337c9ce8a26ae103fd9"
+    },
+    {
+      "scenario_id": "S06_INITIAL_MARGIN_PREFLIGHT_REJECTION",
+      "passed": true,
+      "assertions": {
+        "no_orders_created": true,
+        "pretrade_margin_rejected": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "FLAT",
+      "kill_switch_enabled": false,
+      "final_snapshot": {
+        "cash": "5",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0",
+        "cumulative_fees": "0",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 2,
+      "ledger_head_hash": "bb4aa7a83c3042e418fc8a35f2d450d838d696310e828f0d78302000835448d6"
+    },
+    {
+      "scenario_id": "S07_MAINTENANCE_BREACH_LIQUIDATION",
+      "passed": true,
+      "assertions": {
+        "final_state_liquidated": true,
+        "kill_switch_on": true,
+        "liquidation_fee_ledgered": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "LIQUIDATED",
+      "kill_switch_enabled": true,
+      "final_snapshot": {
+        "cash": "-955.15",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "-10900",
+        "cumulative_fees": "55.15",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 6,
+      "ledger_head_hash": "e03c854f8c149dffec65dbcc51016930750c15feadc84baf50a72e42db6d07b1"
+    },
+    {
+      "scenario_id": "S08_ADL_REDUCTION_KILL_AND_FLATTEN",
+      "passed": true,
+      "assertions": {
+        "adl_ledgered": true,
+        "kill_switch_on": true,
+        "zero_residual_delta": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "KILLED",
+      "kill_switch_enabled": true,
+      "final_snapshot": {
+        "cash": "10002.325",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "2.5",
+        "cumulative_fees": "0.175",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 11,
+      "ledger_head_hash": "f4d9cb1ed69d890a4bc7d4ffbb416f8ef3869709b7412ffa0e98b2d84a850168"
+    },
+    {
+      "scenario_id": "S09_POSITION_RECONCILIATION_DRIFT",
+      "passed": true,
+      "assertions": {
+        "position_discrepancy_recorded": true,
+        "reconciliation_failed": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "KILLED",
+      "kill_switch_enabled": true,
+      "final_snapshot": {
+        "cash": "9999.8",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0",
+        "cumulative_fees": "0.2",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 11,
+      "ledger_head_hash": "9cdb5cf47bae77ee7297be8af27206588f232679abdf7c399cf80bc3fbe3cbc5"
+    },
+    {
+      "scenario_id": "S10_FEE_RECONCILIATION_DRIFT",
+      "passed": true,
+      "assertions": {
+        "fee_discrepancy_recorded": true,
+        "reconciliation_failed": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "KILLED",
+      "kill_switch_enabled": true,
+      "final_snapshot": {
+        "cash": "9999.8",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0",
+        "cumulative_fees": "0.2",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 11,
+      "ledger_head_hash": "5682ce5d958d82e7a829caf476365a2bb076798628beb11c078874a01fdf7c60"
+    },
+    {
+      "scenario_id": "S11_KILL_SWITCH_REJECTS_OPEN_ALLOWS_REDUCE_ONLY",
+      "passed": true,
+      "assertions": {
+        "new_open_rejected": true,
+        "reduce_only_allowed": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "KILLED",
+      "kill_switch_enabled": true,
+      "final_snapshot": {
+        "cash": "9999.8",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0",
+        "cumulative_fees": "0.2",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 10,
+      "ledger_head_hash": "73ce8111d002a6d9a714d5d4de72c9b83699d0a992fcdc36aa31ca61a171cfd4"
+    },
+    {
+      "scenario_id": "S12_ASYMMETRIC_PARTIAL_FILLS_REACH_HEDGE",
+      "passed": true,
+      "assertions": {
+        "hedged_inside_tolerance": true,
+        "not_hedged_while_outside_tolerance": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "FLAT",
+      "kill_switch_enabled": false,
+      "final_snapshot": {
+        "cash": "9999.8",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0",
+        "cumulative_fees": "0.2",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 12,
+      "ledger_head_hash": "159e257bc3cd50f8077b181dec7df66ee1c7b67ec248dc194af1caa169aaaa67"
+    },
+    {
+      "scenario_id": "S13_NEGATIVE_FUNDING_SHORT_PAYS",
+      "passed": true,
+      "assertions": {
+        "funding_negative": true,
+        "signed_formula_reconciles": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "FLAT",
+      "kill_switch_enabled": false,
+      "final_snapshot": {
+        "cash": "9999.78",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0",
+        "cumulative_fees": "0.2",
+        "cumulative_funding": "-0.02"
+      },
+      "ledger_event_count": 10,
+      "ledger_head_hash": "08b46ae55125db610adaf1730a9a076d02fdccc07494bd4b6edcf2d746a5ec35"
+    },
+    {
+      "scenario_id": "S14_PARTIAL_CLOSE_COMPLETES_WITHOUT_RESIDUAL",
+      "passed": true,
+      "assertions": {
+        "final_state_flat": true,
+        "partial_close_reconciles": true,
+        "zero_residual_delta": true
+      },
+      "final_reconciliation_status": "MATCHED",
+      "final_state": "FLAT",
+      "kill_switch_enabled": false,
+      "final_snapshot": {
+        "cash": "10001.7994",
+        "spot_quantity": "0",
+        "perp_quantity": "0",
+        "perp_average_entry": "0",
+        "perp_realized_pl": "0.4",
+        "cumulative_fees": "0.2006",
+        "cumulative_funding": "0"
+      },
+      "ledger_event_count": 11,
+      "ledger_head_hash": "f6e59da30312679b851de4d8ab8c565eebb4c6b4817fabc98fdfc0d5a1d09bac"
+    }
+  ],
+  "passed_scenario_count": 14,
+  "failed_scenario_count": 0,
+  "decision": "PERMIT_SEPARATE_V2_NO_RETURN_DISCOVERY_CHARTER",
+  "pass_creates_strategy_candidate": false,
+  "authorizes_full_archive_payload_download": false,
+  "authorizes_real_market_data_import": false,
+  "authorizes_strategy_return_calculation": false,
+  "authorizes_mechanism_selection": false,
+  "creates_strategy_eligibility": false,
+  "creates_paper_eligibility": false,
+  "creates_live_eligibility": false,
+  "validation_data_loaded": false,
+  "holdout_data_loaded": false,
+  "forward_data_loaded": false,
+  "strategy_outcome_fields_inspected": [],
+  "limitations": [
+    "A pass permits only a separate no-return discovery charter and creates no backtest, paper, sandbox, micro-live, or live eligibility.",
+    "Historical contract metadata, dated fees, collateral policy, and exchange sandbox behavior remain separate evidence requirements.",
+    "Synthetic pass results do not prove venue acknowledgements, queue priority, spread, market impact, downtime, liquidation, or ADL.",
+    "The engine is a deterministic synthetic linear USD-M model and is not an exchange emulator or production execution adapter.",
+    "The scenarios use fixed invented prices and calculate no strategy return, edge, expected profit, or candidate outcome."
+  ],
+  "result_evidence_hash": "8cf54efc7989b1370db4be80267b47a763637285a1e66d503093f9fe15a49fe8"
+}

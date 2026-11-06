@@ -1,0 +1,211 @@
+{
+  "schema_version": "aurex-u1-mechanism-theory-screen-v1",
+  "screen_id": "u1-unrelated-mechanism-theory-screen-v1",
+  "screen_version": "1.0.0",
+  "frozen_at": "2026-07-27T11:25:44.122878Z",
+  "status": "FROZEN_NO_RETURN_METRICS",
+  "discovery_charter_evidence_hash": "642f67fdc55fc041c010e1e7c90732e102a2214bc76c46df15d864c2d269fbcf",
+  "proposals": [
+    {
+      "proposal_id": "P01_VOLATILITY_MANAGED_BROAD_SPOT_BETA",
+      "mechanism_name": "Volatility-managed broad spot market beta",
+      "economic_premise": "A broad, survivorship-aware cryptocurrency spot basket may earn a market risk premium, while realized risk changes faster than expected return. Holding less cash-funded spot exposure after high measured volatility may improve geometric compounding and drawdown without forecasting which coin has the strongest price path.",
+      "expected_payoff_source": "Compensation for broad cryptocurrency market risk combined with lower exposure during high-variance states; this is not an arbitrage claim.",
+      "ex_ante_directional_prediction": "A fixed, unlevered inverse-variance exposure rule should retain positive cost-net returns while improving drawdown or risk-adjusted performance versus a preregistered static broad-spot benchmark.",
+      "primary_sources": [
+        {
+          "source_id": "MOREIRA_MUIR_2017",
+          "title": "Volatility-Managed Portfolios",
+          "authors": [
+            "Alan Moreira",
+            "Tyler Muir"
+          ],
+          "publication_date": "2017-08-01",
+          "source_kind": "PEER_REVIEWED_ARTICLE",
+          "url": "https://www.nber.org/papers/w22208",
+          "relevance": "Establishes the ex-ante premise that scaling market exposure down when volatility rises can improve risk-adjusted compounding.",
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "LIU_TSYVINSKI_WU_2022",
+          "title": "Common Risk Factors in Cryptocurrency",
+          "authors": [
+            "Yukun Liu",
+            "Aleh Tsyvinski",
+            "Xi Wu"
+          ],
+          "publication_date": "2022-04-01",
+          "source_kind": "PEER_REVIEWED_ARTICLE",
+          "url": "https://www.nber.org/papers/w25882",
+          "relevance": "Supports treating broad cryptocurrency market exposure as a distinct priced factor without validating any Aurex implementation.",
+          "aurex_return_metrics_used": []
+        }
+      ],
+      "current_required_fields": [
+        "close",
+        "high",
+        "low",
+        "open",
+        "timestamp",
+        "volume"
+      ],
+      "additional_required_fields": [],
+      "current_data_reproducible": true,
+      "current_long_only_spot_execution_supported": true,
+      "requires_shorting_or_leverage": false,
+      "expected_turnover": "LOW",
+      "model_complexity": "LOW",
+      "independent_of_retired_lineages": true,
+      "uses_post_r4_outcome_rules": false,
+      "strategy_outcome_fields_inspected": [],
+      "return_metrics_calculated": [],
+      "blocking_reasons": [],
+      "disposition": "SELECT_FOR_PRIMARY_PROTOCOL_DESIGN",
+      "decision_rationale": "It is the only proposal with two supporting primary sources, complete current point-in-time data, current long-only spot expressibility, no leverage requirement, low expected turnover, and no dependency on a retired Aurex signal or R4 outcome bucket."
+    },
+    {
+      "proposal_id": "P02_SIGNED_JUMP_RISK_PREMIUM",
+      "mechanism_name": "Cross-sectional signed-jump risk premium",
+      "economic_premise": "Asymmetric realized jump variation may proxy investor attention and priced jump risk. Coins with different ex-ante signed-jump exposure may therefore have different subsequent expected returns independently of endpoint momentum or path-quality ranking.",
+      "expected_payoff_source": "Compensation or mispricing associated with asymmetric jump risk and attention to unusually discontinuous price moves.",
+      "ex_ante_directional_prediction": "A preregistered cross-sectional sort on signed-jump variation should produce a stable cost-net return difference in the direction declared by the primary crypto study.",
+      "primary_sources": [
+        {
+          "source_id": "PATTON_SHEPPARD_2015",
+          "title": "Good Volatility, Bad Volatility: Signed Jumps and the Persistence of Volatility",
+          "authors": [
+            "Andrew J. Patton",
+            "Kevin Sheppard"
+          ],
+          "publication_date": "2015-07-01",
+          "source_kind": "PEER_REVIEWED_ARTICLE",
+          "url": "https://doi.org/10.1162/REST_a_00503",
+          "relevance": "Defines the high-frequency signed-jump and realized-semivariance foundation required to test the proposed jump-risk mechanism.",
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "ZHANG_ZHAO_2023",
+          "title": "Good Volatility, Bad Volatility, and the Cross Section of Cryptocurrency Returns",
+          "authors": [
+            "Zehua Zhang",
+            "Ran Zhao"
+          ],
+          "publication_date": "2023-10-01",
+          "source_kind": "PEER_REVIEWED_ARTICLE",
+          "url": "https://doi.org/10.1016/j.irfa.2023.102712",
+          "relevance": "Provides a crypto-specific premise that realized signed jump variation may contain cross-sectional return information.",
+          "aurex_return_metrics_used": []
+        }
+      ],
+      "current_required_fields": [
+        "timestamp"
+      ],
+      "additional_required_fields": [
+        "point_in_time_high_frequency_prices_at_5m_or_finer"
+      ],
+      "current_data_reproducible": false,
+      "current_long_only_spot_execution_supported": true,
+      "requires_shorting_or_leverage": false,
+      "expected_turnover": "MEDIUM",
+      "model_complexity": "MEDIUM",
+      "independent_of_retired_lineages": true,
+      "uses_post_r4_outcome_rules": false,
+      "strategy_outcome_fields_inspected": [],
+      "return_metrics_calculated": [],
+      "blocking_reasons": [
+        "CURRENT_4H_BARS_CANNOT_REPRODUCE_HIGH_FREQUENCY_SIGNED_JUMP_MEASURES"
+      ],
+      "disposition": "DEFER_UNTIL_DATA_FOUNDATION_EXISTS",
+      "decision_rationale": "The mechanism is distinct and research-supported, but approximating its defining high-frequency statistic from four-hour candles would change the mechanism before it is tested."
+    },
+    {
+      "proposal_id": "P03_DELTA_NEUTRAL_FUNDING_CARRY",
+      "mechanism_name": "Delta-neutral spot-perpetual funding carry",
+      "economic_premise": "Persistent futures basis and perpetual funding can compensate a hedged trader for supplying balance sheet and convergence capital. The payoff is structurally different from forecasting spot-price direction, but remains exposed to basis, collateral, venue, and liquidation risk.",
+      "expected_payoff_source": "Funding and basis paid by directional or leverage-constrained perpetual-futures demand to a spot-perpetual hedged position.",
+      "ex_ante_directional_prediction": "A fully costed and collateralized spot-long/perpetual-short position should earn positive net carry only when prospective funding exceeds fees, basis slippage, financing, and tail-risk reserves.",
+      "primary_sources": [
+        {
+          "source_id": "CHRISTIN_ET_AL_2022",
+          "title": "The Crypto Carry Trade",
+          "authors": [
+            "Nicolas Christin",
+            "Bryan Routledge",
+            "Kyle Soska",
+            "Ariel Zetlin-Jones"
+          ],
+          "publication_date": "2022-01-01",
+          "source_kind": "INSTITUTIONAL_WORKING_PAPER",
+          "url": "https://www.andrew.cmu.edu/user/azj/files/CarryTrade.v1.0.pdf",
+          "relevance": "Documents the economic basis for hedged spot-futures carry while leaving venue, collateral, basis, and liquidation risk unresolved.",
+          "aurex_return_metrics_used": []
+        },
+        {
+          "source_id": "HE_ET_AL_2023",
+          "title": "Fundamentals of Perpetual Futures",
+          "authors": [
+            "Songrun He",
+            "Asaf Manela",
+            "Omri Ross",
+            "Victor von Wachter"
+          ],
+          "publication_date": "2023-01-01",
+          "source_kind": "INSTITUTIONAL_WORKING_PAPER",
+          "url": "https://arxiv.org/abs/2212.06888",
+          "relevance": "Provides the perpetual-futures pricing and funding mechanics needed to define carry, hedge slippage, and basis risk.",
+          "aurex_return_metrics_used": []
+        }
+      ],
+      "current_required_fields": [
+        "spot_ohlcv"
+      ],
+      "additional_required_fields": [
+        "collateral_and_liquidation_state",
+        "historical_fee_schedule",
+        "perpetual_funding_payments",
+        "perpetual_mark_and_index_prices",
+        "point_in_time_spot_perpetual_basis"
+      ],
+      "current_data_reproducible": false,
+      "current_long_only_spot_execution_supported": false,
+      "requires_shorting_or_leverage": true,
+      "expected_turnover": "LOW",
+      "model_complexity": "HIGH",
+      "independent_of_retired_lineages": true,
+      "uses_post_r4_outcome_rules": false,
+      "strategy_outcome_fields_inspected": [],
+      "return_metrics_calculated": [],
+      "blocking_reasons": [
+        "AUREX_HAS_NO_QUALIFIED_DERIVATIVES_EXECUTION_OR_RECONCILIATION_PATH",
+        "CURRENT_EVIDENCE_HAS_NO_POINT_IN_TIME_FUNDING_BASIS_OR_COLLATERAL_DATA"
+      ],
+      "disposition": "DEFER_UNTIL_EXECUTION_FOUNDATION_EXISTS",
+      "decision_rationale": "The premise is economically distinct, but selecting it now would require unqualified derivatives execution, leverage, liquidation modeling, and historical datasets that Aurex has not frozen."
+    }
+  ],
+  "selection_rules": [
+    "PREFER_FEWER_NEW_DATA_AND_EXECUTION_DEPENDENCIES",
+    "PREFER_LOWER_EXPECTED_TURNOVER_AND_MODEL_COMPLEXITY",
+    "REJECT_IF_CURRENT_POINT_IN_TIME_DATA_CANNOT_REPRODUCE_THE_MECHANISM",
+    "REJECT_IF_CURRENT_SPOT_EXECUTION_CANNOT_EXPRESS_THE_MECHANISM",
+    "REJECT_IF_DERIVED_FROM_A_RETIRED_OR_QUARANTINED_LINEAGE",
+    "REJECT_IF_FEWER_THAN_TWO_PRIMARY_RESEARCH_SOURCES",
+    "REJECT_IF_SELECTED_USING_AUREX_RETURN_OUTCOMES",
+    "TIE_BREAK_BY_PROPOSAL_ID"
+  ],
+  "selected_proposal_id": "P01_VOLATILITY_MANAGED_BROAD_SPOT_BETA",
+  "next_decision": "FREEZE_ONE_PRIMARY_MECHANISM_FOR_DEVELOPMENT",
+  "theory_proposals_considered": 3,
+  "return_tested_mechanisms": 0,
+  "strategy_outcome_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "creates_candidate": false,
+  "opens_validation": false,
+  "opens_holdout_or_forward": false,
+  "permits_pine_parity": false,
+  "creates_paper_eligibility": false,
+  "creates_live_eligibility": false,
+  "preexisting_primary_artifacts": [],
+  "builder_contract_hash": "486df38d541209733b9e0e2f2aa88f6797e8a61f89165fd0c80c66156ab92bfd",
+  "screen_evidence_hash": "0d32405ea4eea989ee93b74b2f393d5e988cf9eadb63cbde78cc652996eab745"
+}

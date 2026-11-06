@@ -1,0 +1,18 @@
+{
+  "execution_authority": false,
+  "forward_qualifying": false,
+  "database_opened": false,
+  "status": "BLOCKED",
+  "reason": "public_server_clock_skew",
+  "http_status": null,
+  "retry_after_seconds": null,
+  "clock_observation": {
+    "url": "https://data-api.binance.vision/api/v3/time",
+    "requested_at": "2026-10-06T11:56:09.002316Z",
+    "received_at": "2026-10-06T11:56:10.883442Z",
+    "elapsed_seconds": 1.8910000000032596,
+    "body": "{\"serverTime\":1791287778630}",
+    "body_sha256": "c3bb3393467f9f16aeb6f99f02b2b69d7c820c12779bf09a6ced561fc7a90951"
+  },
+  "clock_tolerance_seconds": 2
+}

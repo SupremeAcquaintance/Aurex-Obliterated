@@ -1,0 +1,250 @@
+{
+  "schema_version": "aurex-v4-p02-source-census-terminal-result-v1",
+  "terminal_kind": "TRANSPORT_STOP",
+  "terminal_timestamp": "2026-07-29T08:08:31.824263Z",
+  "builder_and_contract_hashes": {
+    "contract_builder_hash": "ba2a5ec469576a9c5530a8f4de19a182df3126c534077e1189b5d4f9daeeef04",
+    "contract_evidence_hash": "a3c4bf0aeda588c63b02dee8f75c06efd22aa59c967bee104531f604432faf17",
+    "discovery_charter_evidence_hash": "2230f042c676f97988129bf752aff889c83404627ff782c5462bd984e13cbd81",
+    "proposal_evidence_hash": "594d8a938df12176853f3b6fe87bd8ae1a5cf021c3d55e5650a7c03ba339dc8b",
+    "proposal_register_evidence_hash": "a4fb8e0739cdd07f8a9a810cf395aa5fed3216000cb8b37c01f232eb5ec8973a",
+    "runner_contract_hash": "f2b4b5969f881694a7a9e1e6b32af56a51e721d64bd61e014f4f027634820c7c"
+  },
+  "completed_and_failed_request_ids": {
+    "completed": [],
+    "failed": [
+      "V4P02_META_DERIBIT_EXCHANGE_DETAILS"
+    ]
+  },
+  "decision": "STOP_V4P02_TRANSPORT_NO_RETRY",
+  "execution_gate_results": [
+    {
+      "gate_id": "ACCOUNT_JURISDICTION_AND_DERIVATIVES_ACCESS",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "ARCHIVE_CALENDAR_INCIDENT_AND_EXPORT_COVERAGE",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "COLLATERAL_CASH_FLOW_AND_BALANCE_RECONCILIATION",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "CROSS_SOURCE_CLOCK_AND_INSTRUMENT_BINDING",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "DATASET_IDENTITY_AND_GROUPED_OPTION_SCOPE",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "DELTA_GREEK_AND_DISCRETE_HEDGE_STATE_MACHINE",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "DETERMINISTIC_MULTI_LEG_ORDER_LIFECYCLE",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "DISCONNECT_SEQUENCE_AND_SOURCE_REVISION_INTEGRITY",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "HEDGE_BBO_TRADE_AND_DERIVATIVE_TICKER_FOUNDATION",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "OPTION_BBO_QUANTITY_AND_BOOK_SNAPSHOT_FOUNDATION",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "OPTION_CHAIN_INSTRUMENT_LIFECYCLE_FOUNDATION",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "OPTION_TRADE_AND_LIQUIDATION_FOUNDATION",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "POINT_IN_TIME_CONTRACT_EXPIRY_AND_SETTLEMENT_RULES",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "POINT_IN_TIME_FEES_CAPS_AND_DELIVERY_FEES",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "POINT_IN_TIME_MARGIN_LIQUIDATION_AND_ACCOUNT_MODE",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "TAIL_LOSS_CAPACITY_CONCENTRATION_AND_KILL_SWITCHES",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    },
+    {
+      "gate_id": "TRANSPORT_STORAGE_COMMERCIAL_AND_RESOURCE_FEASIBILITY",
+      "status": "UNRESOLVED",
+      "evidence_hashes": [],
+      "reason": "This hard gate has not been evidenced by the bounded V4P02 metadata and dataset-header census.",
+      "conservative_override_used": false
+    }
+  ],
+  "metadata_observation_hashes": [],
+  "header_observation_hashes": [],
+  "metadata_gate_hash": null,
+  "parsed_and_prohibited_field_manifest": {
+    "permitted_observation_fields": [
+      "attempt_count",
+      "available_channel_identity",
+      "available_since_and_to",
+      "content_encoding",
+      "content_length",
+      "content_type",
+      "dataset_exported_until",
+      "dataset_identity",
+      "dataset_projected_storage_bytes",
+      "dataset_symbol_identity",
+      "elapsed_milliseconds",
+      "etag_or_last_modified_identity",
+      "exchange_id",
+      "http_status",
+      "incident_identity_and_time_boundary",
+      "request_identity",
+      "response_header_subset",
+      "source_revision_identity",
+      "symbol_available_since_and_to"
+    ],
+    "prohibited_parsed_fields": [
+      "ask_amount_value",
+      "ask_iv_value",
+      "ask_price_value",
+      "bid_amount_value",
+      "bid_iv_value",
+      "bid_price_value",
+      "collateral_amount_value",
+      "delta_value",
+      "fee_amount_value",
+      "gamma_value",
+      "implied_volatility_value",
+      "margin_amount_value",
+      "mark_price_value",
+      "option_price_value",
+      "profit_or_loss",
+      "return_metric",
+      "signal",
+      "strike_price_value",
+      "trade_amount_value",
+      "trade_price_value",
+      "underlying_price_value",
+      "vega_value"
+    ]
+  },
+  "request_journal_hash": "d847f5a1d9cd9832f1527aaba2dec7074a6accbff1d0a7dc5d0d275b3c2b8985",
+  "storage_projection": null,
+  "resource_totals": {
+    "attempts_used": 1,
+    "responses_completed": 0,
+    "failures_recorded": 1,
+    "http_hops_used": 1,
+    "response_body_bytes": 0,
+    "active_elapsed_milliseconds": 4063,
+    "durable_storage_bytes": 2239
+  },
+  "selection_and_permission_boundary": {
+    "selects_primary": false,
+    "authorizes_dataset_payload_gets": false,
+    "authorizes_raw_replay_requests": false,
+    "authorizes_deribit_api_requests": false,
+    "authorizes_returns": false,
+    "creates_candidate": false,
+    "opens_validation": false,
+    "opens_holdout": false,
+    "opens_forward": false,
+    "creates_paper_eligibility": false,
+    "creates_sandbox_eligibility": false,
+    "creates_live_eligibility": false
+  },
+  "failed_request_id_and_attempt": {
+    "request_id": "V4P02_META_DERIBIT_EXCHANGE_DETAILS",
+    "attempt": 1
+  },
+  "failure_class_and_message": {
+    "failure_class": "ValueError",
+    "failure_message": "V4P02 metadata body budget exceeded"
+  },
+  "partial_byte_count_and_sha256": {
+    "byte_count": 0,
+    "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "request_intent_record_hash": "96256220ee72e5159d2aaf769f10454591ff852f84c1ba7240fdfe45682969ae",
+  "response_headers_if_received": {
+    "date": "Wed, 29 Jul 2026 08:08:31 GMT",
+    "content-type": "application/json",
+    "content-length": "203310405",
+    "cache-control": "public, max-age=60"
+  },
+  "redirect_chain_if_received": [],
+  "unconsumed_request_hop_and_byte_budgets": {
+    "logical_requests": 27,
+    "http_hops": 108,
+    "response_body_bytes": 8388608
+  },
+  "unreconciled_intent_status": "CLOSED_BY_DURABLE_FAILURE_NO_RETRY_PERMITTED",
+  "selects_primary": false,
+  "authorizes_dataset_payload_gets": false,
+  "authorizes_returns": false,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "result_evidence_hash": "d917c43f814e0b1ca27fff6ad7b5a5d57409e694d2c0efc2886a00508f12cd07"
+}

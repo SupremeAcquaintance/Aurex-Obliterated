@@ -1,0 +1,19 @@
+{
+  "schema_version": "aurex-s3-cftc-metadata-transport-amendment-audit-v2",
+  "audit_id": "s3-cftc-metadata-transport-amendment-audit-v2",
+  "audited_at": "2026-08-31T11:19:38.471885Z",
+  "amendment_file_sha256": "aaaf003466448e643266634ec5592b164d58e402f405b5fd3e65d360b94e0391",
+  "amendment_evidence_hash": "dc3b2acdf29878250a28edb5f951b04b09e78e5f96110798f28f187fe8a2dda9",
+  "protocol_evidence_hash": "1d9e2b672b754c3e6d7296fc3c75fd8d7ab4f49e445b06383ec4e1722271c15a",
+  "prior_result_evidence_hash": "75700f67e97577d7680b97b6bedf28539c9815eb1bf424764d30094b73fe53d8",
+  "failure_audit_evidence_hash": "704373d76fc38d794ef43b96b6ad9d13b3839ec65b11a2394e584ceceb34cef5",
+  "builder_contract_hash": "ce4e9250fe56eb75bbb0d5b353db03f35589760ebf6e3a1a59ccab33f2185cef",
+  "auditor_contract_hash": "77f74f4d84f884940a0f8b5fa7d9598b04d62a6e478381d9863457e555a617ab",
+  "reconstructed_exactly": true,
+  "additional_network_requests_observed": 0,
+  "cftc_target_position_values_read": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S3_CFTC_METADATA_TRANSPORT_AMENDMENT_V2_AUDIT",
+  "next_authorization": "RUN_S3_CFTC_METADATA_TRANSPORT_V2_ONCE",
+  "audit_evidence_hash": "dcd641b6febf4d93546f79f8113a8d5c3409d0b5984c6faf150f86913e30ffc6"
+}

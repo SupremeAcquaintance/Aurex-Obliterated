@@ -1,0 +1,16 @@
+{
+  "schema_version": "aurex-s2-development-measurement-execution-audit-v1",
+  "audit_id": "s2-development-measurement-execution-audit-v1",
+  "audited_at": "2026-08-30T14:29:11.386116Z",
+  "addendum_file_sha256": "593318350b911c0da6c34081f7cb91e0f1c0208df2c96a2447e684ce662be9da",
+  "addendum_evidence_hash": "2f7522cb652d888d8494a2552a01f2b6b20412e442544e978f429b070218b0d7",
+  "protocol_evidence_hash": "dedb2d9a0fb23d6a943d290c36333107adf3ef873754d2b8572ac3692377a17b",
+  "runner_contract_hash": "546fb1a10c7c3256920bf0d92babf22d8e97210f5a6152f2544eb991f141bd59",
+  "auditor_contract_hash": "6cd70e0d1fd81cf7ec702742160817240c6fc07857ef5e7f14e27f4bc67ccb54",
+  "payload_value_rows_parsed": 0,
+  "measurement_rows_calculated": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S2_DEVELOPMENT_MEASUREMENT_EXECUTION_AUDIT",
+  "next_authorization": "AUTHORIZE_S2_DEVELOPMENT_MEASUREMENT_RUN_ONCE",
+  "audit_evidence_hash": "9176539c110987c109c709d8d9b59c97b1472f5ec5ba8a274262deccfe6b544b"
+}

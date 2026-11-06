@@ -1,0 +1,77 @@
+# Rebuild dependencies on the destination machine.
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Local tests, tools, browser profiles and deployment state.
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tmp/
+.coverage
+.coverage.*
+htmlcov/
+coverage/
+playwright-report/
+test-results/
+/.codex/
+.wrangler/
+.vercel/
+.aurex-demo-userdata/
+*.log
+*.stdout
+*.stderr
+*.pid
+.DS_Store
+Thumbs.db
+
+# Never publish credentials. Keep only explicit configuration examples.
+.env
+.env.*
+!.env.example
+!.env.*.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.pem
+*.key
+*.p12
+*.pfx
+# Local launch notes are not the canonical runbook and may contain credentials.
+/Aurex TradingView launch.txt
+
+# Operator state and recovery packages travel separately, not through GitHub.
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.native-runner.lock
+/data/backups/
+
+# Keep top-level research contracts, audit reports and decision ledgers.
+# Nested payload/result/snapshot directories contain many GB of local artifacts.
+# A clone preserves research progress, NOT the complete replay/operating evidence.
+# See docs/50_GIT_MACHINE_MIGRATION.md before retiring the original machine.
+/data/evidence/*
+!/data/evidence/*.json
+!/data/evidence/*.jsonl
+!/data/evidence/*.md
+
+# Large downloads/derived datasets elsewhere under data are local-only too.
+/data/**/*.zip
+/data/**/*.part
+/data/**/*.parquet
+/data/**/*.csv
+/data/**/*.gz
+/data/**/*.7z
+/data/**/*.tar
+/data/**/*.git/

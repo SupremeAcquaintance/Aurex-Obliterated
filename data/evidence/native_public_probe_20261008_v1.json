@@ -1,0 +1,30 @@
+{
+  "schema_version": "native_public_candles_v1",
+  "feed_id": "binance_spot_public",
+  "symbol": "BTCUSDT",
+  "timeframe": "15m",
+  "transport": "public_https",
+  "first_open": "2026-10-08T11:00:00Z",
+  "bar_count": 1,
+  "candles_sha256": "42af425a5a4395e87ef8e55d903d2be793eee136f9a8d0ed9a25b493588ae103",
+  "clock": {
+    "url": "https://data-api.binance.vision/api/v3/time",
+    "requested_at": "2026-10-08T11:26:39.783102Z",
+    "received_at": "2026-10-08T11:26:42.212949Z",
+    "elapsed_seconds": 2.422000000020489,
+    "body": "{\"serverTime\":1791458798199}",
+    "body_sha256": "b17afb78f8161018cfeaf398ab33b0ea0ffa390ea854be58fdad89a43ee07d73"
+  },
+  "pages": [
+    {
+      "url": "https://data-api.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=15m&timeZone=0&startTime=1791457200000&endTime=1791458099999&limit=1",
+      "requested_at": "2026-10-08T11:26:42.213952Z",
+      "received_at": "2026-10-08T11:26:43.895326Z",
+      "elapsed_seconds": 1.6880000000237487,
+      "body": "[[1791457200000,\"82734.00000000\",\"82734.00000000\",\"82318.00000000\",\"82472.77000000\",\"331.53383000\",1791458099999,\"27348083.82894670\",58474,\"155.34551000\",\"12813362.12075310\",\"0\"]]",
+      "body_sha256": "737e234122b91511324db0a5b9e4ab9381264790a7da4a0f56fb586644ade7af"
+    }
+  ],
+  "execution_authority": false,
+  "forward_qualifying": false
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": "aurex-s5-release-tag-source-remediation-protocol-v1",
+  "protocol_id": "s5-release-tag-source-remediation-protocol-v1",
+  "frozen_at": "2026-09-08T20:50:30.588151Z",
+  "status": "FROZEN_BEFORE_RELEASE_TAG_DISCOVERY_COPY_FETCH_OR_MARKET_ACCESS",
+  "builder_contract_hash": "8da3e4f02a929558229caf89ff7cfd9a7683e666f7753785695124950cc0ac81",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_execution_contract_audit_v1.json",
+      "file_sha256": "218cdd91196377f52f384a2de90c61a9ccff3ee32485999fbc40e78b11e5c906"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_execution_contract_v1.json",
+      "file_sha256": "44c99459b12a8e8311463ec4c588f24ac89a2f13b378fecc5825169bc66b5f67"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_protocol_audit_v1.json",
+      "file_sha256": "ff271ecfc84c79365dd5a37414c8255fde9d2860483860318bbad54ab8a6d6e1"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_protocol_v1.json",
+      "file_sha256": "4556e84ddc6174d3e9ab08c233147767b735eb63d46c9320f08c1727c231b7f6"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_result_audit_v1.json",
+      "file_sha256": "fedd56fe7686126748facfee1be1a63f78bc20fe18e528b3f132c973cd4579a1"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_measurement_result_v1.json",
+      "file_sha256": "902360a4437e8f2b87e3a040182e47fe705ec6625071b8d1945341286105c59c"
+    },
+    {
+      "path": "data/evidence/s5_accepted_development_monthly_measurements_v1.jsonl",
+      "file_sha256": "56a54bee72f77102e21c03975eb7a32e95b8eb2ff68882dd32fbe8a01f8bddd8"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_audit_v2.json",
+      "file_sha256": "07cbe45b2d8c4792e435d759ea5c011753849d6343f40bef73d81834731b8792"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_result_v2.json",
+      "file_sha256": "b96a57ea99c0b1bb1aef3fcf7b534afe9821e9687583813ab4a64b5f849323d9"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_v1.git/config",
+      "file_sha256": "dc99f2347ba64eef129a758985813ecdca7837943e1863e71e4edfaabd347b24"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_history_payload_v1.git/packed-refs",
+      "file_sha256": "7416b3a349caf84d1743243503047043b6bfb84adda9d9a51df299c3cc69f2ca"
+    }
+  ],
+  "source_binding_manifest_evidence_hash": "e1adbea3b99569ef6cb42755887217802da517a098f887093497b91552f8e7f5",
+  "rejected_measurement_result_evidence_hash": "6d0d3efc7da6dc5d909bea7bca0e892e8ea45c8ab9541c521109d644b85d7c3c",
+  "rejection_audit_evidence_hash": "e8b8970a7af07f2298f4b1cf9e53d656c6dc0bcd7396838968ffda915ea5afdd",
+  "rejection_decision": "REJECT_S5_MEASUREMENT_PASS_RELEASE_TAG_SOURCE_ABSENT",
+  "original_history_dataset_path": "data/evidence/s5_bitcoin_core_history_payload_v1.git",
+  "original_history_dataset_directory_sha256": "02a3ca331a09dd2d94732968edf554ccdf927ed0042e56cf229d3a3a015c0a90",
+  "original_repository_config_file_sha256": "dc99f2347ba64eef129a758985813ecdca7837943e1863e71e4edfaabd347b24",
+  "original_repository_packed_refs_file_sha256": "7416b3a349caf84d1743243503047043b6bfb84adda9d9a51df299c3cc69f2ca",
+  "original_tag_opt_no_tags_observed": true,
+  "original_tag_ref_count": 0,
+  "source_cutoff_commit": "dc0395c5858a1d55239b82a834e5075cf2069219",
+  "official_remote_url": "https://github.com/bitcoin/bitcoin.git",
+  "stable_release_tag_regex": "^refs/tags/v(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)(?:\\.(?:0|[1-9][0-9]*))?$",
+  "destination_history_dataset_path": "data/evidence/s5_bitcoin_core_release_tags_v1.git",
+  "destination_copy_policy": "COPY_ORIGINAL_DIRECTORY_EXACTLY_THEN_VERIFY_PRE_FETCH_DIRECTORY_HASH",
+  "destination_overwrite_permitted": false,
+  "discovery_command": [
+    "git",
+    "ls-remote",
+    "--tags",
+    "--sort=refname",
+    "https://github.com/bitcoin/bitcoin.git"
+  ],
+  "reachable_commit_command": [
+    "git",
+    "-C",
+    "{original_history_dataset_path}",
+    "rev-list",
+    "--topo-order",
+    "{source_cutoff_commit}"
+  ],
+  "fetch_command_prefix": [
+    "git",
+    "-C",
+    "{destination_history_dataset_path}",
+    "fetch",
+    "--no-tags",
+    "--no-write-fetch-head",
+    "--filter=blob:none",
+    "https://github.com/bitcoin/bitcoin.git"
+  ],
+  "fetch_refspec_policy": "PLUS_REMOTE_STABLE_REF_COLON_IDENTICAL_LOCAL_REF_SORTED_BY_REF_NAME",
+  "verification_command": [
+    "git",
+    "-C",
+    "{destination_history_dataset_path}",
+    "for-each-ref",
+    "--format=%(refname)%00%(objecttype)%00%(objectname)%00%(*objectname)%00%1e",
+    "refs/tags"
+  ],
+  "annotated_tag_discovery_policy": "BASE_REF_OBJECT_AND_EXACT_CARET_BRACE_PEELED_COMMIT_REQUIRED",
+  "lightweight_tag_discovery_policy": "SINGLE_BASE_REF_OBJECT_MUST_BE_REACHABLE_COMMIT",
+  "remote_ref_drift_policy": "REJECT_RUN_AND_PRESERVE_TRANSCRIPTS",
+  "maximum_selected_stable_tag_refs": 500,
+  "expected_local_git_process_count": 2,
+  "expected_network_git_process_count": 2,
+  "maximum_total_git_process_count": 4,
+  "maximum_process_seconds": 600,
+  "maximum_total_seconds": 1800,
+  "maximum_single_stdout_bytes": 16777216,
+  "maximum_destination_growth_bytes": 536870912,
+  "environment_proxy_use_permitted": false,
+  "credential_helper_use_permitted": false,
+  "token_environment_access_permitted": false,
+  "transcript_directory": "data/evidence/s5_release_tag_source_responses_v1",
+  "discovery_transcript_path": "data/evidence/s5_release_tag_source_responses_v1/01_ls_remote_tags.json",
+  "reachability_transcript_path": "data/evidence/s5_release_tag_source_responses_v1/02_reachable_commits.json",
+  "fetch_transcript_path": "data/evidence/s5_release_tag_source_responses_v1/03_fetch_tags.json",
+  "verification_transcript_path": "data/evidence/s5_release_tag_source_responses_v1/04_verify_tags.json",
+  "result_path": "data/evidence/s5_release_tag_source_remediation_result_v1.json",
+  "required_gate_ids": [
+    "ALL_ELEVEN_SOURCE_BINDINGS_MATCH",
+    "MEASUREMENT_RESULT_REJECTION_AUDIT_IS_VALID_AND_TERMINAL",
+    "ORIGINAL_NO_TAGS_REPOSITORY_HASH_CONFIG_AND_PACKED_REFS_MATCH",
+    "ORIGINAL_EVIDENCE_REPOSITORY_IS_NEVER_MUTATED",
+    "DESTINATION_REPOSITORY_AND_TRANSCRIPT_PATHS_ARE_NEW",
+    "OFFICIAL_BITCOIN_CORE_HTTPS_REMOTE_IS_EXACT",
+    "REMOTE_TAG_DISCOVERY_IS_CREDENTIAL_FREE_AND_BYTE_BOUNDED",
+    "ONLY_EXACT_STABLE_TAG_NAMES_ARE_ELIGIBLE",
+    "ANNOTATED_AND_LIGHTWEIGHT_TAG_IDENTITIES_ARE_UNAMBIGUOUS",
+    "PEELED_RELEASE_COMMIT_MUST_BE_REACHABLE_FROM_FROZEN_CUTOFF",
+    "AT_MOST_500_EXACT_TAG_REFS_CAN_BE_FETCHED",
+    "FETCHED_TAG_OBJECT_IDS_MUST_MATCH_DISCOVERY_EXACTLY",
+    "ALL_NETWORK_AND_GIT_TRANSCRIPTS_ARE_HASH_PRESERVED",
+    "ANY_REF_DRIFT_SCHEMA_LIMIT_TIMEOUT_OR_COPY_MISMATCH_STOPS_THE_RUN",
+    "ZERO_MARKET_VALUES_RETURNS_PARAMETERS_CANDIDATES_SIGNALS_OR_ORDERS",
+    "PASS_AUTHORIZES_AMENDED_MEASUREMENT_PROTOCOL_ONLY"
+  ],
+  "discovery_processes_executed_during_freeze": 0,
+  "repository_copies_executed_during_freeze": 0,
+  "fetch_processes_executed_during_freeze": 0,
+  "network_requests_executed_during_freeze": 0,
+  "market_values_read_during_freeze": 0,
+  "returns_calculated_during_freeze": 0,
+  "parameters_defined": [],
+  "strategy_rules_defined": [],
+  "authorizes_runner_implementation": true,
+  "authorizes_tag_discovery_now": false,
+  "authorizes_repository_copy_now": false,
+  "authorizes_tag_fetch_now": false,
+  "authorizes_original_repository_mutation": false,
+  "authorizes_market_value_access": false,
+  "authorizes_return_testing": false,
+  "authorizes_strategy_candidate": false,
+  "authorizes_signal_generation": false,
+  "authorizes_pine": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "decision": "FREEZE_S5_RELEASE_TAG_SOURCE_REMEDIATION_PROTOCOL",
+  "next_authorization": "AUTHORIZE_S5_RELEASE_TAG_SOURCE_REMEDIATION_RUNNER_IMPLEMENTATION_ONLY",
+  "limitations": [
+    "A successful run authorizes only an amended measurement protocol.",
+    "Git tag presence does not prove signer identity or signature validity.",
+    "Network availability and remote stability are not guaranteed.",
+    "No BTC value or return may be read during remediation.",
+    "No threshold, strategy rule, candidate, or signal may be created.",
+    "Only stable-name tags reachable from the frozen cutoff are eligible.",
+    "Production, live trading, and real capital remain prohibited.",
+    "Qualified strategies and real net profit remain zero.",
+    "Tag acquisition can repair missing release metadata but cannot prove edge.",
+    "The copied repository is a remediation dataset, not a replacement source.",
+    "The official remote may change after discovery; any drift stops the run.",
+    "The original no-tags repository and rejected measurement remain immutable."
+  ],
+  "protocol_evidence_hash": "150f4a354b26125f47bbb425be53492943ec8eca1e276adf01f17cf3043389c9"
+}

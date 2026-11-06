@@ -1,0 +1,21 @@
+{
+  "schema_version": "aurex-s2-bigquery-feasibility-protocol-audit-v2",
+  "audit_id": "s2-bigquery-feasibility-protocol-audit-v2",
+  "audited_at": "2026-08-28T05:40:47.008030Z",
+  "protocol_path": "data/evidence/s2_bigquery_feasibility_protocol_v2.json",
+  "protocol_file_sha256": "bd1833630f456c60013c3a9a3eeec40d7fd0b2e029ec6a64f6cdcbedf3f77655",
+  "protocol_evidence_hash": "0074b2d2594bb5aa5d430e6818218146be244ea57e2386938ebaaf01fc5147a9",
+  "charter_evidence_hash": "77e61e9f01519d6b7b56aa2ce45d4689356120bb1a338ead9edce35ef18fe9b0",
+  "prior_result_evidence_hash": "8986a9ed6b41af03e6ba7fe72054138362a04ee3f1eae6b1278656b1b56df9f1",
+  "builder_contract_hash": "27705eeb946b9bc0aeb95de9428750902a9e03e8addcc666e65a8858c676fd72",
+  "auditor_contract_hash": "9f4bb45d2f8460b2adc7b89f3d70acfba3ffc6fda5e9edb9368801f38ebd031e",
+  "reconstructed_exactly": true,
+  "network_requests_observed": 0,
+  "identifiers_observed": 0,
+  "blockchain_row_values_observed": 0,
+  "query_results_observed": 0,
+  "orders_observed": 0,
+  "decision": "PASS_S2_BIGQUERY_FEASIBILITY_PROTOCOL_V2_AUDIT",
+  "next_authorization": "RUN_S2_BIGQUERY_FEASIBILITY_V2_ONCE",
+  "audit_evidence_hash": "1140f679697b1a86757071a4afeb3ceeda120b099fa8e6c374e13e35d009fc19"
+}

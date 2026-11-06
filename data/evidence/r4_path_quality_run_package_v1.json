@@ -1,0 +1,623 @@
+{
+  "schema_version": "aurex-r4-validation-run-package-v1",
+  "package_id": "r4-path-quality-validation-run-package-v1",
+  "package_version": "1.0.0",
+  "frozen_at": "2026-07-23T12:55:11.354929Z",
+  "status": "FROZEN_PRE_R4_OUTCOME",
+  "engine_version": "r4-path-quality-validation-engine-v1.0.0",
+  "python_version": "3.12.13",
+  "pydantic_version": "2.13.4",
+  "decimal_precision": 50,
+  "decimal_rounding": "ROUND_HALF_EVEN",
+  "universe_manifest_evidence_hash": "dacc57f649846f716b8134aa0abba5accc78b0f1607d653addb0df3d9e132a74",
+  "development_dataset_bundle_evidence_hash": "fba63b8e237220c760daf902f2c999e9b01121357a4cc583c9fa5cb50b83d341",
+  "validation_dataset_bundle_evidence_hash": "0cacd38e3fbef83d4603d1df3b287c32102b5e9d6989bf6d26d59ff420cce95e",
+  "market_data_evidence_hash": "49011e05e0abc55b3a0c924ae08926053a784187502bf26aa1eaf42909c4bbe5",
+  "candidate_protocol_evidence_hash": "24dd0e81b1aa441ec81e37366a88ee8a4cc65e25818dc6455dc1eb3d7dd4cdd5",
+  "execution_specification_evidence_hash": "825391d45fde09c185186e103c963bf94776ce6de773500def5dcccbdf898cc0",
+  "source_file_sha256": {
+    "scripts/freeze_r4_run_package.py": "7af53b48fb21eb8b0f96aa54ef3917c65fc783d01fe0863bc92e067113383898",
+    "scripts/run_r4_validation.py": "a94ba80c5b51ed6b08a61401bd15b4ceee6a31d30c13ba2a1a49bbfccdd6c2bb",
+    "src/aurex/backtest_engine/binance_vision.py": "9336417419ecb144070cff193bd9b632d5ab992069c45e792099f390588dac44",
+    "src/aurex/backtest_engine/development_bundle.py": "f29e178483df15902fcdedc071cb38d32238e1ee588dc75d244c94b76461e4db",
+    "src/aurex/backtest_engine/research_engine.py": "b78e30276489bda7fe240f37264d21bc48ccde2291dd6aa305cfee8d38ba5f73",
+    "src/aurex/backtest_engine/research_r31_engine.py": "1875e7e2f43c48c57acb83c1d4f3d8db0f9351bc0cbb7473fa116a199c01b07a",
+    "src/aurex/backtest_engine/research_r4_engine.py": "2be7422140b1bc5beeed35a88dd152e45542b7bfabc090c514bf131c7ab7de3d",
+    "src/aurex/backtest_engine/research_r4_execution_spec.py": "2efb4d985ff2e02ad86d948d66a6b716f4a0674a1662ef7677a4c1409e5983b5",
+    "src/aurex/backtest_engine/research_r4_protocol.py": "a90db9dc9a0c45e1da36c12883a62bb7df95e74675c09cecdf4a833bcd1045fb",
+    "src/aurex/backtest_engine/research_r4_result.py": "49add2a3ac22b974956cee8742daf73c133d86fce8876b17995c75c830a33b4c",
+    "src/aurex/backtest_engine/research_r4_run_package.py": "91349d512d2d8d689fd54cf42719a95cab613c7183b1c37addfbd09b687cd331",
+    "src/aurex/backtest_engine/research_r4_study_runner.py": "a442c9e3f93cd304b44a637aeb2d308b2a4711f62dc59d42cfb39fd08a712da7",
+    "src/aurex/backtest_engine/research_study_runner.py": "58f7f1f796bc766560db13ffcaf7db2f95d2c50d4f6b8748625ddc3a356f4834",
+    "src/aurex/backtest_engine/universe.py": "85a7bb14342f67b94a13d686fa8c92228ab6b6bcf12136c78564cd4769c0b35d",
+    "src/aurex/backtest_engine/validation_bundle.py": "239e9ba08b7b4effda309f8ebb2a11ceab571b301ca75ae80592400679a46ebe"
+  },
+  "planned_replays": [
+    {
+      "run_id": "fold--path_quality_spot_v1--validation-fold-01-2025q1",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2025-04-01T00:00:00Z",
+      "fold_id": "validation-fold-01-2025q1",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--path_quality_spot_v1--validation-fold-02-2025q2",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-04-01T00:00:00Z",
+      "evaluation_end": "2025-07-01T00:00:00Z",
+      "fold_id": "validation-fold-02-2025q2",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--path_quality_spot_v1--validation-fold-03-2025q3",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-07-01T00:00:00Z",
+      "evaluation_end": "2025-10-01T00:00:00Z",
+      "fold_id": "validation-fold-03-2025q3",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--path_quality_spot_v1--validation-fold-04-2025q4",
+      "category": "QUARTERLY_FOLD",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-10-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": "validation-fold-04-2025q4",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-AAVEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "AAVEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-ADAUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ADAUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-APEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "APEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-APTUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "APTUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-ATOMUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ATOMUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-AVAXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "AVAXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-BCHUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "BCHUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-BNBUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "BNBUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-CFXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "CFXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-CRVUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "CRVUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-DOGEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "DOGEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-DOTUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "DOTUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-DYDXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "DYDXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-ETCUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ETCUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-FETUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "FETUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-FILUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "FILUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-FTMUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "FTMUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-GALAUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "GALAUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-GRTUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "GRTUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-ICPUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ICPUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-INJUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "INJUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-LDOUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LDOUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-LINKUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LINKUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-LTCUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LTCUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-LUNCUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LUNCUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-MKRUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "MKRUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-NEARUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "NEARUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-OPUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "OPUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-RUNEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "RUNEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-SANDUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "SANDUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-SHIBUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "SHIBUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-STXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "STXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-TRXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "TRXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-UNIUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "UNIUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--path_quality_spot_v1--without-XRPUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "XRPUSDT"
+      ]
+    },
+    {
+      "run_id": "overall--path_quality_spot_v1--cost-1",
+      "category": "OVERALL",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--path_quality_spot_v1--cost-1p5",
+      "category": "OVERALL",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1.5",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--path_quality_spot_v1--cost-2",
+      "category": "OVERALL",
+      "variant_id": "path_quality_spot_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "2",
+      "evaluation_start": "2025-01-01T00:00:00Z",
+      "evaluation_end": "2026-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    }
+  ],
+  "expected_replay_count": 42,
+  "result_ledger_relative_path": "r4_path_quality_result_v1.json",
+  "replay_artifact_directory_relative_path": "r4_path_quality_results_v1",
+  "known_data_regression_status": "PASS",
+  "known_data_regression_source_result_evidence_hash": "17505d872c93583b35370c6793cd67fb8d674edc2ba680cb99bc0dcabff547ab",
+  "known_data_regression_trade_count": 230,
+  "known_data_regression_opportunity_count": 1400,
+  "known_data_regression_equity_point_count": 3300,
+  "preexisting_result_artifacts": [],
+  "outcome_fields_inspected": [],
+  "builder_contract_hash": "d3a2ec9e9c6569e2f616500833f78fc79a7a6aeaf587b20f83645e869c68de48",
+  "package_evidence_hash": "d7c734bd3f786da68c0567a2edfd8020b4ac477878e0f6f4e37fb13217bed240"
+}

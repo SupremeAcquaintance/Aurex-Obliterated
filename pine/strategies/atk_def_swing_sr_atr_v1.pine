@@ -1,0 +1,669 @@
+//@version=6
+// Aurex strategy version: 1.5.0
+strategy(
+     "Aurex atk_def_swing_sr_atr_v1",
+     overlay = true,
+     pyramiding = 0,
+     initial_capital = 1000,
+     currency = currency.USD,
+     commission_type = strategy.commission.percent,
+     commission_value = 0.05,
+     slippage = 2,
+     calc_on_every_tick = false,
+     process_orders_on_close = true
+)
+
+backtestStart = input.time(timestamp("1 Jan 2024 00:00 +0000"), "Backtest start")
+backtestEnd = input.time(timestamp("31 Dec 2026 23:59 +0000"), "Backtest end")
+entryMode = input.string("Sweep reclaim", "Entry mode", options = ["Sweep reclaim", "Retest", "Breakout", "Breakout retest", "Both"])
+leftBars = input.int(5, "Left bars", minval = 1)
+rightBars = input.int(5, "Right bars", minval = 1)
+levelActiveBars = input.int(50, "Level active bars", minval = 5, maxval = 500)
+atrLength = input.int(14, "ATR length", minval = 1)
+levelAtrTolerance = input.float(0.15, "Retest ATR tolerance", minval = 0.0, step = 0.05)
+sweepAtrBuffer = input.float(0.05, "Sweep ATR buffer", minval = 0.0, step = 0.05)
+breakoutAtrBuffer = input.float(0.20, "Breakout ATR buffer", minval = 0.0, step = 0.05)
+atrStopMultiplier = input.float(1.3, "ATR stop multiplier", minval = 0.1, step = 0.1)
+rewardRiskRatio = input.float(2.5, "Reward:risk ratio", minval = 1.0, step = 0.1)
+higherTimeframe = input.timeframe("60", "Higher timeframe")
+htfEmaFastLength = input.int(50, "Higher timeframe EMA fast", minval = 1)
+htfEmaSlowLength = input.int(200, "Higher timeframe EMA slow", minval = 1)
+useHigherTimeframeBias = input.bool(true, "Use higher timeframe bias")
+trendEmaLength = input.int(200, "Current timeframe trend EMA", minval = 1)
+useTrendEmaFilter = input.bool(true, "Use current timeframe trend EMA")
+adxLength = input.int(14, "ADX length", minval = 1, group = "Regime filter")
+adxSmoothing = input.int(14, "ADX smoothing", minval = 1, group = "Regime filter")
+useAdxFilter = input.bool(true, "Use ADX regime filter", group = "Regime filter")
+useAdxFilterForSweeps = input.bool(false, "Use ADX filter for sweeps", group = "Regime filter")
+maxRetestAdx = input.float(22.0, "Max retest ADX", minval = 1.0, step = 0.5, group = "Regime filter")
+minBreakoutAdx = input.float(20.0, "Min breakout ADX", minval = 1.0, step = 0.5, group = "Regime filter")
+requireLevelRange = input.bool(true, "Require level range", group = "Quality filters")
+minLevelRangeAtr = input.float(1.0, "Min S/R range in ATR", minval = 0.0, step = 0.1, group = "Quality filters")
+maxRetestDistanceAtr = input.float(0.65, "Max retest close distance in ATR", minval = 0.1, step = 0.05, group = "Quality filters")
+maxSweepCloseDistanceAtr = input.float(1.00, "Max sweep close distance in ATR", minval = 0.1, step = 0.05, group = "Quality filters")
+maxBreakoutExtensionAtr = input.float(0.65, "Max breakout extension in ATR", minval = 0.1, step = 0.05, group = "Quality filters")
+breakoutRetestBars = input.int(8, "Breakout retest window bars", minval = 1, maxval = 100, group = "Quality filters")
+sweepEntryStyle = input.string("Immediate", "Sweep entry style", options = ["Immediate", "Confirmed"], group = "Quality filters")
+sweepConfirmBars = input.int(3, "Sweep confirm window bars", minval = 1, maxval = 20, group = "Quality filters")
+sweepConfirmAtrBuffer = input.float(0.03, "Sweep confirm ATR buffer", minval = 0.0, step = 0.01, group = "Quality filters")
+minBreakoutBodyRatio = input.float(0.45, "Min breakout body ratio", minval = 0.1, maxval = 1.0, step = 0.05, group = "Quality filters")
+minBreakoutClosePosition = input.float(0.70, "Min breakout close position", minval = 0.5, maxval = 1.0, step = 0.05, group = "Quality filters")
+retestWickBodyMultiplier = input.float(1.0, "Retest wick/body multiplier", minval = 0.0, step = 0.1, group = "Quality filters")
+sweepWickBodyMultiplier = input.float(0.8, "Sweep wick/body multiplier", minval = 0.0, step = 0.1, group = "Quality filters")
+minRetestClosePosition = input.float(0.55, "Min retest close position", minval = 0.5, maxval = 1.0, step = 0.05, group = "Quality filters")
+minSweepClosePosition = input.float(0.55, "Min sweep close position", minval = 0.5, maxval = 1.0, step = 0.05, group = "Quality filters")
+minSweepConfirmBodyRatio = input.float(0.25, "Min sweep confirm body ratio", minval = 0.0, maxval = 1.0, step = 0.05, group = "Quality filters")
+useTrendFiltersForSweeps = input.bool(false, "Use trend filters for sweeps", group = "Quality filters")
+blockTrendLegSweepFades = input.bool(true, "Block trend-leg sweep fades", group = "Quality filters")
+trendLegFadeMinAdx = input.float(18.0, "Trend-leg fade min ADX", minval = 1.0, step = 0.5, group = "Quality filters")
+tradeCooldownBars = input.int(8, "Trade cooldown bars", minval = 0, maxval = 200, group = "Quality filters")
+volumeLength = input.int(20, "Volume average length", minval = 1, group = "Quality filters")
+useVolumeFilter = input.bool(true, "Use breakout volume filter", group = "Quality filters")
+volumeExpansion = input.float(1.05, "Breakout volume expansion", minval = 1.0, step = 0.05, group = "Quality filters")
+riskPerTradePercent = input.float(0.5, "Risk per trade (%)", minval = 0.1, maxval = 2.0, step = 0.1)
+maxPositionValuePercent = input.float(95.0, "Max position value (%)", minval = 1.0, maxval = 100.0, step = 1.0)
+useSweepLevelFailureExit = input.bool(true, "Exit sweep on level failure", group = "Risk controls")
+sweepLevelFailureAtrBuffer = input.float(0.05, "Sweep level failure ATR buffer", minval = 0.0, step = 0.01, group = "Risk controls")
+enableLong = input.bool(true, "Enable long")
+enableShort = input.bool(true, "Enable short")
+showLevels = input.bool(true, "Show active levels", group = "Visuals")
+showAtrLevels = input.bool(true, "Show ATR levels", group = "Visuals")
+showPivotMarkers = input.bool(true, "Show pivot markers", group = "Visuals")
+showDiagnostics = input.bool(true, "Show diagnostic table", group = "Diagnostics")
+strategyVersion = "1.5.0"
+
+atrValue = ta.atr(atrLength)
+[dmiPlus, dmiMinus, adxValue] = ta.dmi(adxLength, adxSmoothing)
+trendEma = ta.ema(close, trendEmaLength)
+volumeAverage = ta.sma(volume, volumeLength)
+atrUpper = close + (atrValue * atrStopMultiplier)
+atrLower = close - (atrValue * atrStopMultiplier)
+
+htfEmaFast = request.security(
+     syminfo.tickerid,
+     higherTimeframe,
+     ta.ema(close, htfEmaFastLength),
+     gaps = barmerge.gaps_off,
+     lookahead = barmerge.lookahead_off
+)
+htfEmaSlow = request.security(
+     syminfo.tickerid,
+     higherTimeframe,
+     ta.ema(close, htfEmaSlowLength),
+     gaps = barmerge.gaps_off,
+     lookahead = barmerge.lookahead_off
+)
+
+swingHigh = ta.pivothigh(high, leftBars, rightBars)
+swingLow = ta.pivotlow(low, leftBars, rightBars)
+
+var float latestResistance = na
+var int latestResistanceIndex = na
+var float latestSupport = na
+var int latestSupportIndex = na
+var int lastEntryBar = na
+var int pendingBreakoutDirection = 0
+var float pendingBreakoutLevel = na
+var int pendingBreakoutIndex = na
+var int pendingSweepDirection = 0
+var float pendingSweepLevel = na
+var float pendingSweepStop = na
+var float pendingSweepTrigger = na
+var int pendingSweepIndex = na
+var int activeSweepDirection = 0
+var float activeSweepLevel = na
+
+if not na(swingHigh)
+    latestResistance := swingHigh
+    latestResistanceIndex := bar_index - rightBars
+
+if not na(swingLow)
+    latestSupport := swingLow
+    latestSupportIndex := bar_index - rightBars
+
+hasResistance = not na(latestResistance) and not na(latestResistanceIndex)
+hasSupport = not na(latestSupport) and not na(latestSupportIndex)
+resistanceActive = hasResistance and bar_index - latestResistanceIndex <= levelActiveBars
+supportActive = hasSupport and bar_index - latestSupportIndex <= levelActiveBars
+allowSweepReclaim = entryMode == "Sweep reclaim" or entryMode == "Both"
+allowRetest = entryMode == "Retest" or entryMode == "Both"
+allowImmediateBreakout = entryMode == "Breakout"
+allowBreakoutRetest = entryMode == "Breakout retest" or entryMode == "Both"
+inBacktestWindow = time >= backtestStart and time <= backtestEnd
+flatPosition = strategy.position_size == 0
+barConfirmed = barstate.isconfirmed
+cooldownOk = tradeCooldownBars == 0 or na(lastEntryBar) or bar_index - lastEntryBar >= tradeCooldownBars
+
+levelTolerance = atrValue * levelAtrTolerance
+sweepBuffer = atrValue * sweepAtrBuffer
+breakoutBuffer = atrValue * breakoutAtrBuffer
+candleRange = math.max(high - low, syminfo.mintick)
+bodySize = math.abs(close - open)
+bodyRatio = bodySize / candleRange
+closePosition = (close - low) / candleRange
+lowerWick = math.min(open, close) - low
+upperWick = high - math.max(open, close)
+levelsOrdered = supportActive and resistanceActive and latestResistance > latestSupport
+levelRange = levelsOrdered ? latestResistance - latestSupport : na
+levelRangeOk = not requireLevelRange or (not na(levelRange) and levelRange >= atrValue * minLevelRangeAtr)
+breakoutVolumeOk = not useVolumeFilter or (volumeAverage > 0 and volume >= volumeAverage * volumeExpansion)
+supportProbe = supportActive and low <= latestSupport + levelTolerance and high >= latestSupport - levelTolerance
+resistanceProbe = resistanceActive and high >= latestResistance - levelTolerance and low <= latestResistance + levelTolerance
+longSweepProbe = supportActive and low < latestSupport - sweepBuffer and close > latestSupport
+shortSweepProbe = resistanceActive and high > latestResistance + sweepBuffer and close < latestResistance
+longSweepCandle = close > open and lowerWick >= bodySize * sweepWickBodyMultiplier and closePosition >= minSweepClosePosition
+shortSweepCandle = close < open and upperWick >= bodySize * sweepWickBodyMultiplier and closePosition <= 1.0 - minSweepClosePosition
+longSweepDistanceOk = supportActive and close - latestSupport <= atrValue * maxSweepCloseDistanceAtr
+shortSweepDistanceOk = resistanceActive and latestResistance - close <= atrValue * maxSweepCloseDistanceAtr
+longSweepSignal = allowSweepReclaim and longSweepProbe and longSweepCandle and longSweepDistanceOk
+shortSweepSignal = allowSweepReclaim and shortSweepProbe and shortSweepCandle and shortSweepDistanceOk
+allowImmediateSweep = allowSweepReclaim and sweepEntryStyle == "Immediate"
+allowConfirmedSweep = allowSweepReclaim and sweepEntryStyle == "Confirmed"
+pendingLongSweep = pendingSweepDirection == 1 and not na(pendingSweepIndex) and bar_index > pendingSweepIndex and bar_index - pendingSweepIndex <= sweepConfirmBars
+pendingShortSweep = pendingSweepDirection == -1 and not na(pendingSweepIndex) and bar_index > pendingSweepIndex and bar_index - pendingSweepIndex <= sweepConfirmBars
+sweepConfirmBuffer = atrValue * sweepConfirmAtrBuffer
+longSweepConfirmCandidate = allowConfirmedSweep and pendingLongSweep and not na(pendingSweepTrigger) and close > pendingSweepTrigger + sweepConfirmBuffer and close > open and bodyRatio >= minSweepConfirmBodyRatio
+shortSweepConfirmCandidate = allowConfirmedSweep and pendingShortSweep and not na(pendingSweepTrigger) and close < pendingSweepTrigger - sweepConfirmBuffer and close < open and bodyRatio >= minSweepConfirmBodyRatio
+longSweepCandidate = (allowImmediateSweep and longSweepSignal) or longSweepConfirmCandidate
+shortSweepCandidate = (allowImmediateSweep and shortSweepSignal) or shortSweepConfirmCandidate
+longRetestCandle = close > latestSupport and lowerWick >= bodySize * retestWickBodyMultiplier and closePosition >= minRetestClosePosition
+shortRetestCandle = close < latestResistance and upperWick >= bodySize * retestWickBodyMultiplier and closePosition <= 1.0 - minRetestClosePosition
+longBreakoutCandle = close > open and bodyRatio >= minBreakoutBodyRatio and closePosition >= minBreakoutClosePosition
+shortBreakoutCandle = close < open and bodyRatio >= minBreakoutBodyRatio and closePosition <= 1.0 - minBreakoutClosePosition
+longRetestDistanceOk = supportActive and close - latestSupport <= atrValue * maxRetestDistanceAtr
+shortRetestDistanceOk = resistanceActive and latestResistance - close <= atrValue * maxRetestDistanceAtr
+longBreakoutExtensionOk = resistanceActive and close - latestResistance <= atrValue * maxBreakoutExtensionAtr
+shortBreakoutExtensionOk = supportActive and latestSupport - close <= atrValue * maxBreakoutExtensionAtr
+longRetestCandidate = allowRetest and supportProbe and longRetestCandle and longRetestDistanceOk
+shortRetestCandidate = allowRetest and resistanceProbe and shortRetestCandle and shortRetestDistanceOk
+longInitialBreakoutCandidate = resistanceActive and close > latestResistance + breakoutBuffer and close[1] <= latestResistance and longBreakoutCandle and longBreakoutExtensionOk
+shortInitialBreakoutCandidate = supportActive and close < latestSupport - breakoutBuffer and close[1] >= latestSupport and shortBreakoutCandle and shortBreakoutExtensionOk
+pendingLongBreakout = pendingBreakoutDirection == 1 and not na(pendingBreakoutLevel) and not na(pendingBreakoutIndex) and bar_index > pendingBreakoutIndex and bar_index - pendingBreakoutIndex <= breakoutRetestBars
+pendingShortBreakout = pendingBreakoutDirection == -1 and not na(pendingBreakoutLevel) and not na(pendingBreakoutIndex) and bar_index > pendingBreakoutIndex and bar_index - pendingBreakoutIndex <= breakoutRetestBars
+longBreakoutRetestProbe = pendingLongBreakout and low <= pendingBreakoutLevel + levelTolerance and high >= pendingBreakoutLevel - levelTolerance
+shortBreakoutRetestProbe = pendingShortBreakout and high >= pendingBreakoutLevel - levelTolerance and low <= pendingBreakoutLevel + levelTolerance
+longBreakoutRetestCandle = pendingLongBreakout and close > pendingBreakoutLevel and close > open and lowerWick >= bodySize * retestWickBodyMultiplier and closePosition >= minRetestClosePosition
+shortBreakoutRetestCandle = pendingShortBreakout and close < pendingBreakoutLevel and close < open and upperWick >= bodySize * retestWickBodyMultiplier and closePosition <= 1.0 - minRetestClosePosition
+longBreakoutRetestDistanceOk = pendingLongBreakout and close - pendingBreakoutLevel <= atrValue * maxRetestDistanceAtr
+shortBreakoutRetestDistanceOk = pendingShortBreakout and pendingBreakoutLevel - close <= atrValue * maxRetestDistanceAtr
+longBreakoutRetestCandidate = allowBreakoutRetest and longBreakoutRetestProbe and longBreakoutRetestCandle and longBreakoutRetestDistanceOk
+shortBreakoutRetestCandidate = allowBreakoutRetest and shortBreakoutRetestProbe and shortBreakoutRetestCandle and shortBreakoutRetestDistanceOk
+longBreakoutCandidate = (allowImmediateBreakout and longInitialBreakoutCandidate) or longBreakoutRetestCandidate
+shortBreakoutCandidate = (allowImmediateBreakout and shortInitialBreakoutCandidate) or shortBreakoutRetestCandidate
+signalConflict = (longSweepCandidate or longRetestCandidate or longBreakoutCandidate) and (shortSweepCandidate or shortRetestCandidate or shortBreakoutCandidate)
+retestAdxOk = not useAdxFilter or adxValue <= maxRetestAdx
+sweepAdxOk = not useAdxFilterForSweeps or adxValue <= maxRetestAdx
+breakoutAdxOk = not useAdxFilter or adxValue >= minBreakoutAdx
+longHtfBiasOk = not useHigherTimeframeBias or htfEmaFast >= htfEmaSlow
+shortHtfBiasOk = not useHigherTimeframeBias or htfEmaFast <= htfEmaSlow
+longTrendOk = not useTrendEmaFilter or close >= trendEma
+shortTrendOk = not useTrendEmaFilter or close <= trendEma
+longBiasOk = longHtfBiasOk and longTrendOk
+shortBiasOk = shortHtfBiasOk and shortTrendOk
+longSweepTrendLegBlocked = blockTrendLegSweepFades and close < trendEma and htfEmaFast < htfEmaSlow and dmiMinus > dmiPlus and adxValue >= trendLegFadeMinAdx
+shortSweepTrendLegBlocked = blockTrendLegSweepFades and close > trendEma and htfEmaFast > htfEmaSlow and dmiPlus > dmiMinus and adxValue >= trendLegFadeMinAdx
+longSweepBiasOk = (not useTrendFiltersForSweeps or longBiasOk) and not longSweepTrendLegBlocked
+shortSweepBiasOk = (not useTrendFiltersForSweeps or shortBiasOk) and not shortSweepTrendLegBlocked
+
+riskCapital = math.max(strategy.equity, 0) * (riskPerTradePercent / 100)
+maxPositionQuantity = close > 0 ? (math.max(strategy.equity, 0) * (maxPositionValuePercent / 100)) / close : 0
+
+longSweepStop = longSweepConfirmCandidate ? pendingSweepStop : supportActive ? math.min(latestSupport, low) - (atrValue * atrStopMultiplier) : na
+longSweepRisk = not na(longSweepStop) ? close - longSweepStop : na
+longSweepRiskOk = not na(longSweepRisk) and longSweepRisk > syminfo.mintick
+longSweepTakeProfit = longSweepRiskOk ? close + (longSweepRisk * rewardRiskRatio) : na
+longSweepRiskQuantity = longSweepRiskOk ? riskCapital / longSweepRisk : 0
+longSweepQuantity = math.min(longSweepRiskQuantity, maxPositionQuantity)
+longSweepQuantityOk = longSweepQuantity > 0
+
+longRetestStop = supportActive ? math.min(latestSupport, low) - (atrValue * atrStopMultiplier) : na
+longRetestRisk = not na(longRetestStop) ? close - longRetestStop : na
+longRetestRiskOk = not na(longRetestRisk) and longRetestRisk > syminfo.mintick
+longRetestTakeProfit = longRetestRiskOk ? close + (longRetestRisk * rewardRiskRatio) : na
+longRetestRiskQuantity = longRetestRiskOk ? riskCapital / longRetestRisk : 0
+longRetestQuantity = math.min(longRetestRiskQuantity, maxPositionQuantity)
+longRetestQuantityOk = longRetestQuantity > 0
+
+longBreakoutLevel = longBreakoutRetestCandidate ? pendingBreakoutLevel : latestResistance
+longBreakoutStop = not na(longBreakoutLevel) ? longBreakoutLevel - (atrValue * atrStopMultiplier) : na
+longBreakoutRisk = not na(longBreakoutStop) ? close - longBreakoutStop : na
+longBreakoutRiskOk = not na(longBreakoutRisk) and longBreakoutRisk > syminfo.mintick
+longBreakoutTakeProfit = longBreakoutRiskOk ? close + (longBreakoutRisk * rewardRiskRatio) : na
+longBreakoutRiskQuantity = longBreakoutRiskOk ? riskCapital / longBreakoutRisk : 0
+longBreakoutQuantity = math.min(longBreakoutRiskQuantity, maxPositionQuantity)
+longBreakoutQuantityOk = longBreakoutQuantity > 0
+
+shortRetestStop = resistanceActive ? math.max(latestResistance, high) + (atrValue * atrStopMultiplier) : na
+shortRetestRisk = not na(shortRetestStop) ? shortRetestStop - close : na
+shortRetestRiskOk = not na(shortRetestRisk) and shortRetestRisk > syminfo.mintick
+shortRetestTakeProfit = shortRetestRiskOk ? close - (shortRetestRisk * rewardRiskRatio) : na
+shortRetestRiskQuantity = shortRetestRiskOk ? riskCapital / shortRetestRisk : 0
+shortRetestQuantity = math.min(shortRetestRiskQuantity, maxPositionQuantity)
+shortRetestQuantityOk = shortRetestQuantity > 0
+
+shortSweepStop = shortSweepConfirmCandidate ? pendingSweepStop : resistanceActive ? math.max(latestResistance, high) + (atrValue * atrStopMultiplier) : na
+shortSweepRisk = not na(shortSweepStop) ? shortSweepStop - close : na
+shortSweepRiskOk = not na(shortSweepRisk) and shortSweepRisk > syminfo.mintick
+shortSweepTakeProfit = shortSweepRiskOk ? close - (shortSweepRisk * rewardRiskRatio) : na
+shortSweepRiskQuantity = shortSweepRiskOk ? riskCapital / shortSweepRisk : 0
+shortSweepQuantity = math.min(shortSweepRiskQuantity, maxPositionQuantity)
+shortSweepQuantityOk = shortSweepQuantity > 0
+
+shortBreakoutLevel = shortBreakoutRetestCandidate ? pendingBreakoutLevel : latestSupport
+shortBreakoutStop = not na(shortBreakoutLevel) ? shortBreakoutLevel + (atrValue * atrStopMultiplier) : na
+shortBreakoutRisk = not na(shortBreakoutStop) ? shortBreakoutStop - close : na
+shortBreakoutRiskOk = not na(shortBreakoutRisk) and shortBreakoutRisk > syminfo.mintick
+shortBreakoutTakeProfit = shortBreakoutRiskOk ? close - (shortBreakoutRisk * rewardRiskRatio) : na
+shortBreakoutRiskQuantity = shortBreakoutRiskOk ? riskCapital / shortBreakoutRisk : 0
+shortBreakoutQuantity = math.min(shortBreakoutRiskQuantity, maxPositionQuantity)
+shortBreakoutQuantityOk = shortBreakoutQuantity > 0
+
+longSweepSetup = enableLong and flatPosition and inBacktestWindow and barConfirmed and cooldownOk and levelRangeOk and not signalConflict and longSweepCandidate and sweepAdxOk and longSweepBiasOk and longSweepRiskOk and longSweepQuantityOk
+longBreakoutSetup = enableLong and flatPosition and inBacktestWindow and barConfirmed and cooldownOk and levelRangeOk and not signalConflict and not longSweepSetup and longBreakoutCandidate and breakoutAdxOk and breakoutVolumeOk and longBiasOk and longBreakoutRiskOk and longBreakoutQuantityOk
+longRetestSetup = enableLong and flatPosition and inBacktestWindow and barConfirmed and cooldownOk and levelRangeOk and not signalConflict and not longSweepSetup and not longBreakoutSetup and longRetestCandidate and retestAdxOk and longBiasOk and longRetestRiskOk and longRetestQuantityOk
+shortSweepSetup = enableShort and flatPosition and inBacktestWindow and barConfirmed and cooldownOk and levelRangeOk and not signalConflict and shortSweepCandidate and sweepAdxOk and shortSweepBiasOk and shortSweepRiskOk and shortSweepQuantityOk
+shortBreakoutSetup = enableShort and flatPosition and inBacktestWindow and barConfirmed and cooldownOk and levelRangeOk and not signalConflict and not shortSweepSetup and shortBreakoutCandidate and breakoutAdxOk and breakoutVolumeOk and shortBiasOk and shortBreakoutRiskOk and shortBreakoutQuantityOk
+shortRetestSetup = enableShort and flatPosition and inBacktestWindow and barConfirmed and cooldownOk and levelRangeOk and not signalConflict and not shortSweepSetup and not shortBreakoutSetup and shortRetestCandidate and retestAdxOk and shortBiasOk and shortRetestRiskOk and shortRetestQuantityOk
+longSetup = longSweepSetup or longBreakoutSetup or longRetestSetup
+shortSetup = shortSweepSetup or shortBreakoutSetup or shortRetestSetup
+
+longRawSignal = longSweepCandidate or longRetestCandidate or longBreakoutCandidate
+shortRawSignal = shortSweepCandidate or shortRetestCandidate or shortBreakoutCandidate
+longSignalAfterRegime = (longSweepCandidate and sweepAdxOk) or (longRetestCandidate and retestAdxOk) or (longBreakoutCandidate and breakoutAdxOk and breakoutVolumeOk)
+shortSignalAfterRegime = (shortSweepCandidate and sweepAdxOk) or (shortRetestCandidate and retestAdxOk) or (shortBreakoutCandidate and breakoutAdxOk and breakoutVolumeOk)
+longSignalAfterBias = (longSweepCandidate and longSweepBiasOk) or ((longRetestCandidate or longBreakoutCandidate) and longBiasOk)
+shortSignalAfterBias = (shortSweepCandidate and shortSweepBiasOk) or ((shortRetestCandidate or shortBreakoutCandidate) and shortBiasOk)
+longRiskOk = (longSweepCandidate and longSweepRiskOk) or (longRetestCandidate and longRetestRiskOk) or (longBreakoutCandidate and longBreakoutRiskOk)
+shortRiskOk = (shortSweepCandidate and shortSweepRiskOk) or (shortRetestCandidate and shortRetestRiskOk) or (shortBreakoutCandidate and shortBreakoutRiskOk)
+longQuantityOk = (longSweepCandidate and longSweepQuantityOk) or (longRetestCandidate and longRetestQuantityOk) or (longBreakoutCandidate and longBreakoutQuantityOk)
+shortQuantityOk = (shortSweepCandidate and shortSweepQuantityOk) or (shortRetestCandidate and shortRetestQuantityOk) or (shortBreakoutCandidate and shortBreakoutQuantityOk)
+longNoSignalReason = pendingSweepDirection == 1 ? "pending sweep" : "level quality"
+shortNoSignalReason = pendingSweepDirection == -1 ? "pending sweep" : "level quality"
+longBlocker = not enableLong ? "long disabled" : not inBacktestWindow ? "outside window" : not barConfirmed ? "waiting close" : not flatPosition ? "position open" : not cooldownOk ? "cooldown" : not levelRangeOk ? "level range" : signalConflict ? "signal conflict" : not longRawSignal ? longNoSignalReason : not longSignalAfterRegime ? "ADX/volume" : not longSignalAfterBias ? "trend/bias" : not longRiskOk ? "risk <= tick" : not longQuantityOk ? "quantity <= 0" : "ready"
+shortBlocker = not enableShort ? "short disabled" : not inBacktestWindow ? "outside window" : not barConfirmed ? "waiting close" : not flatPosition ? "position open" : not cooldownOk ? "cooldown" : not levelRangeOk ? "level range" : signalConflict ? "signal conflict" : not shortRawSignal ? shortNoSignalReason : not shortSignalAfterRegime ? "ADX/volume" : not shortSignalAfterBias ? "trend/bias" : not shortRiskOk ? "risk <= tick" : not shortQuantityOk ? "quantity <= 0" : "ready"
+
+var int diagnosticBars = 0
+var int flatPassCount = 0
+var int supportActiveCount = 0
+var int resistanceActiveCount = 0
+var int longBiasPassCount = 0
+var int shortBiasPassCount = 0
+var int longSweepSignalCount = 0
+var int shortSweepSignalCount = 0
+var int longRetestSignalCount = 0
+var int shortRetestSignalCount = 0
+var int longBreakoutSignalCount = 0
+var int shortBreakoutSignalCount = 0
+var int longRiskPassCount = 0
+var int shortRiskPassCount = 0
+var int longQuantityPassCount = 0
+var int shortQuantityPassCount = 0
+var int longSetupCount = 0
+var int shortSetupCount = 0
+
+diagnosticSample = barConfirmed and inBacktestWindow
+if diagnosticSample
+    diagnosticBars += 1
+    if flatPosition
+        flatPassCount += 1
+    if supportActive
+        supportActiveCount += 1
+    if resistanceActive
+        resistanceActiveCount += 1
+    if longBiasOk
+        longBiasPassCount += 1
+    if shortBiasOk
+        shortBiasPassCount += 1
+    if longSweepSignal
+        longSweepSignalCount += 1
+    if shortSweepSignal
+        shortSweepSignalCount += 1
+    if longRetestCandidate
+        longRetestSignalCount += 1
+    if shortRetestCandidate
+        shortRetestSignalCount += 1
+    if longBreakoutCandidate
+        longBreakoutSignalCount += 1
+    if shortBreakoutCandidate
+        shortBreakoutSignalCount += 1
+    if longRiskOk
+        longRiskPassCount += 1
+    if shortRiskOk
+        shortRiskPassCount += 1
+    if longQuantityOk
+        longQuantityPassCount += 1
+    if shortQuantityOk
+        shortQuantityPassCount += 1
+    if longSetup
+        longSetupCount += 1
+    if shortSetup
+        shortSetupCount += 1
+
+formatPrice(price) =>
+    str.tostring(price, format.mintick)
+
+formatSetting(value) =>
+    str.tostring(value)
+
+formatBoolSetting(value) =>
+    value ? "true" : "false"
+
+formatTimestampSetting(value) =>
+    str.format_time(value, "yyyy-MM-dd'T'HH:mm:ss'Z'", "UTC")
+
+timestampIso() =>
+    str.format_time(time, "yyyy-MM-dd'T'HH:mm:ss'Z'", "UTC")
+
+formatDiagnosticCount(count, total) =>
+    str.tostring(count) + "/" + str.tostring(total)
+
+settingsFingerprint() =>
+    "atk_def_swing_sr_atr_v1" +
+     "|initial_capital=1000" +
+     "|backtest_start=" + formatTimestampSetting(backtestStart) +
+     "|backtest_end=" + formatTimestampSetting(backtestEnd) +
+     "|entry_mode=" + entryMode +
+     "|left_bars=" + str.tostring(leftBars) +
+     "|right_bars=" + str.tostring(rightBars) +
+     "|level_active_bars=" + str.tostring(levelActiveBars) +
+     "|atr_length=" + str.tostring(atrLength) +
+     "|level_atr_tolerance=" + formatSetting(levelAtrTolerance) +
+     "|sweep_atr_buffer=" + formatSetting(sweepAtrBuffer) +
+     "|breakout_atr_buffer=" + formatSetting(breakoutAtrBuffer) +
+     "|atr_stop_multiplier=" + formatSetting(atrStopMultiplier) +
+     "|reward_risk=" + formatSetting(rewardRiskRatio) +
+     "|higher_timeframe=" + higherTimeframe +
+     "|htf_ema_fast=" + str.tostring(htfEmaFastLength) +
+     "|htf_ema_slow=" + str.tostring(htfEmaSlowLength) +
+     "|use_higher_timeframe_bias=" + formatBoolSetting(useHigherTimeframeBias) +
+     "|trend_ema=" + str.tostring(trendEmaLength) +
+     "|use_trend_ema_filter=" + formatBoolSetting(useTrendEmaFilter) +
+     "|adx_length=" + str.tostring(adxLength) +
+     "|adx_smoothing=" + str.tostring(adxSmoothing) +
+     "|use_adx_filter=" + formatBoolSetting(useAdxFilter) +
+     "|use_adx_filter_for_sweeps=" + formatBoolSetting(useAdxFilterForSweeps) +
+     "|max_retest_adx=" + formatSetting(maxRetestAdx) +
+     "|min_breakout_adx=" + formatSetting(minBreakoutAdx) +
+     "|require_level_range=" + formatBoolSetting(requireLevelRange) +
+     "|min_level_range_atr=" + formatSetting(minLevelRangeAtr) +
+     "|max_retest_distance_atr=" + formatSetting(maxRetestDistanceAtr) +
+     "|max_sweep_close_distance_atr=" + formatSetting(maxSweepCloseDistanceAtr) +
+     "|max_breakout_extension_atr=" + formatSetting(maxBreakoutExtensionAtr) +
+     "|breakout_retest_bars=" + str.tostring(breakoutRetestBars) +
+     "|sweep_entry_style=" + sweepEntryStyle +
+     "|sweep_confirm_bars=" + str.tostring(sweepConfirmBars) +
+     "|sweep_confirm_atr_buffer=" + formatSetting(sweepConfirmAtrBuffer) +
+     "|min_breakout_body_ratio=" + formatSetting(minBreakoutBodyRatio) +
+     "|min_breakout_close_position=" + formatSetting(minBreakoutClosePosition) +
+     "|retest_wick_body_multiplier=" + formatSetting(retestWickBodyMultiplier) +
+     "|sweep_wick_body_multiplier=" + formatSetting(sweepWickBodyMultiplier) +
+     "|min_retest_close_position=" + formatSetting(minRetestClosePosition) +
+     "|min_sweep_close_position=" + formatSetting(minSweepClosePosition) +
+     "|min_sweep_confirm_body_ratio=" + formatSetting(minSweepConfirmBodyRatio) +
+     "|use_trend_filters_for_sweeps=" + formatBoolSetting(useTrendFiltersForSweeps) +
+     "|block_trend_leg_sweep_fades=" + formatBoolSetting(blockTrendLegSweepFades) +
+     "|trend_leg_fade_min_adx=" + formatSetting(trendLegFadeMinAdx) +
+     "|trade_cooldown_bars=" + str.tostring(tradeCooldownBars) +
+     "|volume_length=" + str.tostring(volumeLength) +
+     "|use_volume_filter=" + formatBoolSetting(useVolumeFilter) +
+     "|volume_expansion=" + formatSetting(volumeExpansion) +
+     "|risk_per_trade_percent=" + formatSetting(riskPerTradePercent) +
+     "|max_position_value_percent=" + formatSetting(maxPositionValuePercent) +
+     "|use_sweep_level_failure_exit=" + formatBoolSetting(useSweepLevelFailureExit) +
+     "|sweep_level_failure_atr_buffer=" + formatSetting(sweepLevelFailureAtrBuffer) +
+     "|enable_long=" + formatBoolSetting(enableLong) +
+     "|enable_short=" + formatBoolSetting(enableShort)
+
+signalMessage(direction, entryPrice, stopLoss, takeProfit, marketRegime) =>
+    "{" +
+     "\"source\":\"tradingview\"," +
+     "\"strategy\":\"atk_def_swing_sr_atr_v1\"," +
+     "\"strategy_version\":\"" + strategyVersion + "\"," +
+     "\"settings_fingerprint\":\"" + settingsFingerprint() + "\"," +
+     "\"symbol\":\"" + syminfo.ticker + "\"," +
+     "\"timeframe\":\"" + timeframe.period + "\"," +
+     "\"direction\":\"" + direction + "\"," +
+     "\"entry_price\":" + formatPrice(entryPrice) + "," +
+     "\"stop_loss\":" + formatPrice(stopLoss) + "," +
+     "\"take_profit\":" + formatPrice(takeProfit) + "," +
+     "\"market_regime\":\"" + marketRegime + "\"," +
+     "\"timestamp\":\"" + timestampIso() + "\"" +
+     "}"
+
+longSweepMessage = signalMessage("LONG", close, longSweepStop, longSweepTakeProfit, "RANGING")
+shortSweepMessage = signalMessage("SHORT", close, shortSweepStop, shortSweepTakeProfit, "RANGING")
+longRetestMessage = signalMessage("LONG", close, longRetestStop, longRetestTakeProfit, "RANGING")
+shortRetestMessage = signalMessage("SHORT", close, shortRetestStop, shortRetestTakeProfit, "RANGING")
+longBreakoutMessage = signalMessage("LONG", close, longBreakoutStop, longBreakoutTakeProfit, "BREAKOUT_EXPANSION")
+shortBreakoutMessage = signalMessage("SHORT", close, shortBreakoutStop, shortBreakoutTakeProfit, "BREAKOUT_EXPANSION")
+
+if longSweepSetup
+    strategy.entry("AUREX-LONG-RANGING_SWEEP", strategy.long, qty = longSweepQuantity, alert_message = longSweepMessage)
+    strategy.exit("AUREX-LONG-SWEEP-EXIT", from_entry = "AUREX-LONG-RANGING_SWEEP", stop = longSweepStop, limit = longSweepTakeProfit)
+    lastEntryBar := bar_index
+    activeSweepDirection := 1
+    activeSweepLevel := longSweepConfirmCandidate ? pendingSweepLevel : latestSupport
+    pendingSweepDirection := 0
+    pendingSweepLevel := na
+    pendingSweepStop := na
+    pendingSweepTrigger := na
+    pendingSweepIndex := na
+    pendingBreakoutDirection := 0
+    pendingBreakoutLevel := na
+    pendingBreakoutIndex := na
+    alert(longSweepMessage, alert.freq_once_per_bar_close)
+
+if longBreakoutSetup
+    strategy.entry("AUREX-LONG-BREAKOUT_EXPANSION", strategy.long, qty = longBreakoutQuantity, alert_message = longBreakoutMessage)
+    strategy.exit("AUREX-LONG-BREAKOUT-EXIT", from_entry = "AUREX-LONG-BREAKOUT_EXPANSION", stop = longBreakoutStop, limit = longBreakoutTakeProfit)
+    lastEntryBar := bar_index
+    activeSweepDirection := 0
+    activeSweepLevel := na
+    pendingBreakoutDirection := 0
+    pendingBreakoutLevel := na
+    pendingBreakoutIndex := na
+    pendingSweepDirection := 0
+    pendingSweepLevel := na
+    pendingSweepStop := na
+    pendingSweepTrigger := na
+    pendingSweepIndex := na
+    alert(longBreakoutMessage, alert.freq_once_per_bar_close)
+
+if longRetestSetup
+    strategy.entry("AUREX-LONG-RANGING", strategy.long, qty = longRetestQuantity, alert_message = longRetestMessage)
+    strategy.exit("AUREX-LONG-RANGE-EXIT", from_entry = "AUREX-LONG-RANGING", stop = longRetestStop, limit = longRetestTakeProfit)
+    lastEntryBar := bar_index
+    activeSweepDirection := 0
+    activeSweepLevel := na
+    pendingSweepDirection := 0
+    pendingSweepLevel := na
+    pendingSweepStop := na
+    pendingSweepTrigger := na
+    pendingSweepIndex := na
+    pendingBreakoutDirection := 0
+    pendingBreakoutLevel := na
+    pendingBreakoutIndex := na
+    alert(longRetestMessage, alert.freq_once_per_bar_close)
+
+if shortSweepSetup
+    strategy.entry("AUREX-SHORT-RANGING_SWEEP", strategy.short, qty = shortSweepQuantity, alert_message = shortSweepMessage)
+    strategy.exit("AUREX-SHORT-SWEEP-EXIT", from_entry = "AUREX-SHORT-RANGING_SWEEP", stop = shortSweepStop, limit = shortSweepTakeProfit)
+    lastEntryBar := bar_index
+    activeSweepDirection := -1
+    activeSweepLevel := shortSweepConfirmCandidate ? pendingSweepLevel : latestResistance
+    pendingSweepDirection := 0
+    pendingSweepLevel := na
+    pendingSweepStop := na
+    pendingSweepTrigger := na
+    pendingSweepIndex := na
+    pendingBreakoutDirection := 0
+    pendingBreakoutLevel := na
+    pendingBreakoutIndex := na
+    alert(shortSweepMessage, alert.freq_once_per_bar_close)
+
+if shortBreakoutSetup
+    strategy.entry("AUREX-SHORT-BREAKOUT_EXPANSION", strategy.short, qty = shortBreakoutQuantity, alert_message = shortBreakoutMessage)
+    strategy.exit("AUREX-SHORT-BREAKOUT-EXIT", from_entry = "AUREX-SHORT-BREAKOUT_EXPANSION", stop = shortBreakoutStop, limit = shortBreakoutTakeProfit)
+    lastEntryBar := bar_index
+    activeSweepDirection := 0
+    activeSweepLevel := na
+    pendingBreakoutDirection := 0
+    pendingBreakoutLevel := na
+    pendingBreakoutIndex := na
+    pendingSweepDirection := 0
+    pendingSweepLevel := na
+    pendingSweepStop := na
+    pendingSweepTrigger := na
+    pendingSweepIndex := na
+    alert(shortBreakoutMessage, alert.freq_once_per_bar_close)
+
+if shortRetestSetup
+    strategy.entry("AUREX-SHORT-RANGING", strategy.short, qty = shortRetestQuantity, alert_message = shortRetestMessage)
+    strategy.exit("AUREX-SHORT-RANGE-EXIT", from_entry = "AUREX-SHORT-RANGING", stop = shortRetestStop, limit = shortRetestTakeProfit)
+    lastEntryBar := bar_index
+    activeSweepDirection := 0
+    activeSweepLevel := na
+    pendingSweepDirection := 0
+    pendingSweepLevel := na
+    pendingSweepStop := na
+    pendingSweepTrigger := na
+    pendingSweepIndex := na
+    pendingBreakoutDirection := 0
+    pendingBreakoutLevel := na
+    pendingBreakoutIndex := na
+    alert(shortRetestMessage, alert.freq_once_per_bar_close)
+
+sweepFailureBuffer = atrValue * sweepLevelFailureAtrBuffer
+longSweepLevelFailed = useSweepLevelFailureExit and activeSweepDirection == 1 and strategy.position_size > 0 and not na(activeSweepLevel) and barConfirmed and close < activeSweepLevel - sweepFailureBuffer
+shortSweepLevelFailed = useSweepLevelFailureExit and activeSweepDirection == -1 and strategy.position_size < 0 and not na(activeSweepLevel) and barConfirmed and close > activeSweepLevel + sweepFailureBuffer
+if longSweepLevelFailed
+    strategy.close("AUREX-LONG-RANGING_SWEEP", comment = "AUREX-LONG-SWEEP-LEVEL-FAIL")
+    activeSweepDirection := 0
+    activeSweepLevel := na
+
+if shortSweepLevelFailed
+    strategy.close("AUREX-SHORT-RANGING_SWEEP", comment = "AUREX-SHORT-SWEEP-LEVEL-FAIL")
+    activeSweepDirection := 0
+    activeSweepLevel := na
+
+if strategy.position_size == 0 and activeSweepDirection != 0 and (na(lastEntryBar) or bar_index > lastEntryBar)
+    activeSweepDirection := 0
+    activeSweepLevel := na
+
+pendingSweepExpired = pendingSweepDirection != 0 and not na(pendingSweepIndex) and bar_index - pendingSweepIndex > sweepConfirmBars
+pendingLongSweepFailed = pendingSweepDirection == 1 and not na(pendingSweepLevel) and close < pendingSweepLevel - sweepBuffer
+pendingShortSweepFailed = pendingSweepDirection == -1 and not na(pendingSweepLevel) and close > pendingSweepLevel + sweepBuffer
+if barConfirmed and (pendingSweepExpired or pendingLongSweepFailed or pendingShortSweepFailed)
+    pendingSweepDirection := 0
+    pendingSweepLevel := na
+    pendingSweepStop := na
+    pendingSweepTrigger := na
+    pendingSweepIndex := na
+
+sweepArmingConflict = longSweepSignal and shortSweepSignal
+sweepArmingOk = allowConfirmedSweep and pendingSweepDirection == 0 and flatPosition and inBacktestWindow and barConfirmed and cooldownOk and levelRangeOk and not sweepArmingConflict and not longSetup and not shortSetup
+if sweepArmingOk and enableLong and longSweepSignal and sweepAdxOk and longSweepBiasOk
+    pendingSweepDirection := 1
+    pendingSweepLevel := latestSupport
+    pendingSweepStop := math.min(latestSupport, low) - (atrValue * atrStopMultiplier)
+    pendingSweepTrigger := high
+    pendingSweepIndex := bar_index
+
+if sweepArmingOk and enableShort and shortSweepSignal and sweepAdxOk and shortSweepBiasOk
+    pendingSweepDirection := -1
+    pendingSweepLevel := latestResistance
+    pendingSweepStop := math.max(latestResistance, high) + (atrValue * atrStopMultiplier)
+    pendingSweepTrigger := low
+    pendingSweepIndex := bar_index
+
+pendingExpired = pendingBreakoutDirection != 0 and not na(pendingBreakoutIndex) and bar_index - pendingBreakoutIndex > breakoutRetestBars
+pendingLongFailed = pendingBreakoutDirection == 1 and not na(pendingBreakoutLevel) and close < pendingBreakoutLevel - breakoutBuffer
+pendingShortFailed = pendingBreakoutDirection == -1 and not na(pendingBreakoutLevel) and close > pendingBreakoutLevel + breakoutBuffer
+if barConfirmed and (pendingExpired or pendingLongFailed or pendingShortFailed)
+    pendingBreakoutDirection := 0
+    pendingBreakoutLevel := na
+    pendingBreakoutIndex := na
+
+initialBreakoutConflict = longInitialBreakoutCandidate and shortInitialBreakoutCandidate
+breakoutArmingOk = allowBreakoutRetest and flatPosition and inBacktestWindow and barConfirmed and cooldownOk and levelRangeOk and not initialBreakoutConflict and not longSetup and not shortSetup
+if breakoutArmingOk and longInitialBreakoutCandidate and breakoutAdxOk and breakoutVolumeOk and longBiasOk
+    pendingBreakoutDirection := 1
+    pendingBreakoutLevel := latestResistance
+    pendingBreakoutIndex := bar_index
+
+if breakoutArmingOk and shortInitialBreakoutCandidate and breakoutAdxOk and breakoutVolumeOk and shortBiasOk
+    pendingBreakoutDirection := -1
+    pendingBreakoutLevel := latestSupport
+    pendingBreakoutIndex := bar_index
+
+if time > backtestEnd and strategy.position_size != 0
+    strategy.close_all(comment = "Backtest window end")
+
+var table diagnosticTable = table.new(position.top_right, 3, 15, border_width = 1)
+diagnosticHeaderColor = color.new(color.rgb(10, 20, 32), 0)
+diagnosticLabelColor = color.new(color.rgb(17, 24, 39), 0)
+diagnosticLongColor = longSetup ? color.new(color.lime, 70) : color.new(color.gray, 84)
+diagnosticShortColor = shortSetup ? color.new(color.red, 70) : color.new(color.gray, 84)
+
+if showDiagnostics and barstate.islast
+    table.cell(diagnosticTable, 0, 0, "Aurex diagnostics", text_color = color.white, bgcolor = diagnosticHeaderColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 0, "Long", text_color = color.white, bgcolor = diagnosticHeaderColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 0, "Short", text_color = color.white, bgcolor = diagnosticHeaderColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 1, "Bars checked", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 1, str.tostring(diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 1, str.tostring(diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 2, "Flat position", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 2, formatDiagnosticCount(flatPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 2, formatDiagnosticCount(flatPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 3, "Active level", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 3, formatDiagnosticCount(supportActiveCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 3, formatDiagnosticCount(resistanceActiveCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 4, "HTF bias", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 4, formatDiagnosticCount(longBiasPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 4, formatDiagnosticCount(shortBiasPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 5, "Sweep signal", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 5, formatDiagnosticCount(longSweepSignalCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 5, formatDiagnosticCount(shortSweepSignalCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 6, "Retest signal", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 6, formatDiagnosticCount(longRetestSignalCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 6, formatDiagnosticCount(shortRetestSignalCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 7, "Breakout signal", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 7, formatDiagnosticCount(longBreakoutSignalCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 7, formatDiagnosticCount(shortBreakoutSignalCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 8, "Risk > tick", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 8, formatDiagnosticCount(longRiskPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 8, formatDiagnosticCount(shortRiskPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 9, "Quantity > 0", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 9, formatDiagnosticCount(longQuantityPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 9, formatDiagnosticCount(shortQuantityPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 10, "Setups", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 10, str.tostring(longSetupCount), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 10, str.tostring(shortSetupCount), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 11, "Open trades", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 11, str.tostring(strategy.opentrades), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 11, str.tostring(strategy.opentrades), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 12, "Closed trades", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 12, str.tostring(strategy.closedtrades), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 12, str.tostring(strategy.closedtrades), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 13, "Latest blocker", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 13, longBlocker, text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 13, shortBlocker, text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 14, "Mode/style", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 14, entryMode + " / " + sweepEntryStyle, text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 14, entryMode + " / " + sweepEntryStyle, text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+
+plot(showLevels and resistanceActive ? latestResistance : na, "Active swing resistance", color = color.new(color.red, 0), linewidth = 2, style = plot.style_linebr)
+plot(showLevels and supportActive ? latestSupport : na, "Active swing support", color = color.new(color.lime, 0), linewidth = 2, style = plot.style_linebr)
+plot(showLevels and pendingBreakoutDirection != 0 ? pendingBreakoutLevel : na, "Pending breakout retest", color = color.new(color.aqua, 0), linewidth = 2, style = plot.style_linebr)
+plot(showLevels and pendingSweepDirection != 0 ? pendingSweepLevel : na, "Pending sweep confirm", color = color.new(color.fuchsia, 0), linewidth = 2, style = plot.style_linebr)
+plot(useTrendEmaFilter ? trendEma : na, "Trend EMA", color = color.new(color.gray, 0))
+plot(showAtrLevels ? atrUpper : na, "ATR upper", color = color.new(color.red, 70), style = plot.style_line)
+plot(showAtrLevels ? atrLower : na, "ATR lower", color = color.new(color.green, 70), style = plot.style_line)
+plotshape(showPivotMarkers and not na(swingHigh), title = "Swing high", style = shape.labeldown, text = "SH", color = color.new(color.red, 15), textcolor = color.white, location = location.abovebar, offset = -rightBars, size = size.tiny)
+plotshape(showPivotMarkers and not na(swingLow), title = "Swing low", style = shape.labelup, text = "SL", color = color.new(color.green, 15), textcolor = color.white, location = location.belowbar, offset = -rightBars, size = size.tiny)
+plotshape(longSweepSetup, title = "Aurex long sweep reclaim", style = shape.triangleup, color = color.new(color.lime, 0), location = location.belowbar, size = size.tiny)
+plotshape(shortSweepSetup, title = "Aurex short sweep reclaim", style = shape.triangledown, color = color.new(color.red, 0), location = location.abovebar, size = size.tiny)
+plotshape(longRetestSetup, title = "Aurex long range retest", style = shape.triangleup, color = color.lime, location = location.belowbar, size = size.tiny)
+plotshape(shortRetestSetup, title = "Aurex short range retest", style = shape.triangledown, color = color.red, location = location.abovebar, size = size.tiny)
+plotshape(longBreakoutSetup, title = "Aurex long breakout", style = shape.triangleup, color = color.aqua, location = location.belowbar, size = size.tiny)
+plotshape(shortBreakoutSetup, title = "Aurex short breakout", style = shape.triangledown, color = color.orange, location = location.abovebar, size = size.tiny)

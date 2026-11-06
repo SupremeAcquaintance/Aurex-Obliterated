@@ -1,0 +1,111 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-paired-payload-pilot-protocol-v1",
+  "protocol_id": "q1-periodic-flow-paired-payload-pilot-v1",
+  "frozen_at": "2026-08-07T08:20:00.427851Z",
+  "status": "FROZEN_PRE_PAIRED_PAYLOAD_ACCESS",
+  "census_contract_file_sha256": "6305dc04a026a4fd947688f827981bb6b366fdc2730e1e7fbb623e4edaf7ac1e",
+  "census_contract_evidence_hash": "841caf8e7dc20d21722247759f9804f5f896ac5936c40d8000467a96a03acb90",
+  "census_result_file_sha256": "64e28b44520ff3291a19b0b8a813ac84828ef3c8f35fa468e5306b2bc478d247",
+  "census_result_evidence_hash": "54dbfba6642b9057172f32405d7ed983bb66488acd0ab31d6e26358926d41a17",
+  "census_audit_file_sha256": "0aeda203f78c51acad6dc17edd026c9a6ef1f8bccf48502dc4c8eb1eeb8df350",
+  "census_audit_evidence_hash": "b9d62a43c6ac1af25f70d67f4ff8929e78c5b31b1c2e5017d9481ecacc12b18f",
+  "builder_contract_hash": "c288cb4ea83fddfc1856cb479bf7a4543a2aa8e83dbfd838b6aa53066a3445a5",
+  "targets": [
+    {
+      "product": "SPOT",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-01.zip",
+      "published_archive_sha256": "ea2f0aa850fb08b5c8124d2f8080c03689c30cdadf797363fc74b506b92a8d8b",
+      "expected_columns": [
+        "aggregate_trade_id",
+        "price",
+        "quantity",
+        "first_trade_id",
+        "last_trade_id",
+        "timestamp",
+        "buyer_was_maker",
+        "best_price_match"
+      ],
+      "expected_column_count": 8
+    },
+    {
+      "product": "USD_M_PERPETUAL",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "partition_role": "DEVELOPMENT",
+      "expected_timestamp_unit": "MILLISECONDS",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2020-01.zip",
+      "published_archive_sha256": "d93f4201d012c74648d65727be0e17b2f7e38d2f6f9d8cb6817e8486b7ffe435",
+      "expected_columns": [
+        "aggregate_trade_id",
+        "price",
+        "quantity",
+        "first_trade_id",
+        "last_trade_id",
+        "timestamp",
+        "buyer_was_maker"
+      ],
+      "expected_column_count": 7
+    }
+  ],
+  "target_manifest_hash": "c5fa5a34e8636f2668d486d5761131da96eefed3050c53afa22e3abe351e4888",
+  "permitted_methods": [
+    "GET"
+  ],
+  "maximum_unique_archive_urls": 2,
+  "maximum_attempts_per_archive": 3,
+  "maximum_payload_get_attempts": 6,
+  "request_timeout_seconds": 120,
+  "retry_backoff_seconds": [
+    1,
+    3
+  ],
+  "redirects_permitted": false,
+  "range_requests_permitted": false,
+  "maximum_archive_bytes_each": 1000000000,
+  "maximum_total_archive_bytes": 2000000000,
+  "maximum_member_uncompressed_bytes_each": 10000000000,
+  "maximum_total_member_uncompressed_bytes": 20000000000,
+  "maximum_zip_expansion_ratio": 100,
+  "minimum_free_disk_bytes_after_download": 5000000000,
+  "minimum_rows_each": 100000,
+  "minimum_minute_coverage_fraction": "0.99",
+  "minimum_paired_minute_coverage_fraction": "0.99",
+  "maximum_event_gap_minutes": 15,
+  "maximum_aggregate_trade_id_gap_count": 0,
+  "maximum_raw_trade_id_gap_count": 0,
+  "expected_month_minute_count": 44640,
+  "header_policy": "EXACT_DOCUMENTED_OR_HEADERLESS",
+  "excluded_numeric_columns": [
+    "price",
+    "quantity"
+  ],
+  "price_or_quantity_parsing_permitted": false,
+  "feature_calculation_permitted": false,
+  "parameter_definition_permitted": false,
+  "return_calculation_permitted": false,
+  "validation_outcomes_permitted": false,
+  "holdout_access_permitted": false,
+  "strategy_execution_permitted": false,
+  "candidate_creation_permitted": false,
+  "pine_deployment_permitted": false,
+  "paper_operation_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "limitations": [
+    "A pass authorizes only a separate full-development payload acquisition protocol.",
+    "No feature, parameter, signal, candidate, trade, PnL, or return may be calculated.",
+    "Only checksum-pinned BTCUSDT Spot and USD-M January 2020 archives may be requested.",
+    "Pine, paper, testnet strategy-order, production, and live authority remain false.",
+    "Price and quantity are excluded from parsing, persistence, and analysis.",
+    "The pilot measures structural integrity and paired clock coverage only.",
+    "This feasibility result cannot establish edge, reliability, or profitability.",
+    "USD-M perpetual data is research input and grants no futures order authority.",
+    "Validation, future holdout, and forward outcomes remain inaccessible."
+  ],
+  "protocol_evidence_hash": "f2a6df06336a96050421c449e48a9c8c06aef871b97e73c280a3309c90ca43cc"
+}

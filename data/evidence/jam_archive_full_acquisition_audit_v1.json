@@ -1,0 +1,15 @@
+{
+  "schema_version": "aurex-jam-archive-full-acquisition-audit-v1",
+  "audited_at": "2026-08-01T19:08:54.121362Z",
+  "result_path": "data/evidence/jam_archive_full_acquisition_result_v1.json",
+  "result_file_sha256": "d33559a1696c1e4db45b410ef25e2b72d61854a9d10c2b5403521bac12a136a6",
+  "result_evidence_hash": "ffe45a45bc9340e3323aac9ddd4257a19597bcee260961f787b50c8b1dee121b",
+  "protocol_evidence_hash": "b27197c3b9c7e4366b3e72442206562e1ae2967931ec3fa383e59c9133bcaf74",
+  "raw_manifest_hash": "362633896615d1ce287f71563b5e63c97b87a47dec4a5a8a5af5524fbbfe017d",
+  "raw_archive_count": 96,
+  "checksum_verified_count": 96,
+  "reconstructed_month_count": 48,
+  "return_metrics_calculated": false,
+  "decision": "STOP_JAM_SUCCESSOR_FULL_ARCHIVE_QUALITY_FAILED",
+  "audit_evidence_hash": "d0f1d8bc4a2fe8745bf678aacdeeaeb3ef547fed49b9956dc54d36311c96e961"
+}

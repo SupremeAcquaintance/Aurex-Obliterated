@@ -1,0 +1,2333 @@
+{
+  "schema_version": "aurex-jam-successor-development-event-prevalence-result-v1",
+  "result_id": "jam-successor-development-event-prevalence-result-v1",
+  "generated_at": "2026-08-05T08:08:45.187027Z",
+  "status": "COMPLETE_DEVELOPMENT_EVENT_PREVALENCE_NO_OUTCOMES",
+  "protocol_evidence_hash": "e43339f5186b5702c6db0d316b236415c5bb02f0bc2cb18d9188f5122adbe0cd",
+  "runner_contract_hash": "d03c402e8247b9f385151f36ffc3fd19390016a52116a4014edd1fcafc3d4387",
+  "parent_event_protocol_evidence_hash": "33323ff5864c9dfdeed1b5ddd5dc237ac5a7b7d23d1a1ac484abf75e02ded8db",
+  "feature_rows_file_sha256": "fbb6ee42fca63ea6fe38db093c6c5c5484d2c6997d658d616f09f6fd4c2a0dfa",
+  "feature_rows_schema_hash": "15995c028cfb437bea77990389eee4e036f9493b106270476ad1ce07cfcc037b",
+  "event_ledger_path": "data/evidence/jam_successor_development_event_ledger_v1.jsonl",
+  "event_ledger_file_sha256": "b6fe0c49bbbb8b61ac268b4716d2a50ab5fa08479ccbf254ef532b15a3b7d909",
+  "event_ledger_bytes": 932457,
+  "event_ledger_record_count": 1430,
+  "calendar_row_count": 1052640,
+  "ready_row_count": 1046202,
+  "raw_event_count": 1430,
+  "accepted_event_count": 991,
+  "suppressed_event_count": 439,
+  "accepted_non_ready_event_count": 0,
+  "raw_event_rate_per_ready_row": "0.001366848849457370565148986525",
+  "accepted_event_rate_per_ready_row": "0.0009472358110575204406032487034",
+  "suppression_rate_per_raw_event": "0.3069930069930069930069930070",
+  "monthly_counts": [
+    {
+      "bucket": "2019-01",
+      "accepted_event_count": 33
+    },
+    {
+      "bucket": "2019-02",
+      "accepted_event_count": 32
+    },
+    {
+      "bucket": "2019-03",
+      "accepted_event_count": 24
+    },
+    {
+      "bucket": "2019-04",
+      "accepted_event_count": 39
+    },
+    {
+      "bucket": "2019-05",
+      "accepted_event_count": 48
+    },
+    {
+      "bucket": "2019-06",
+      "accepted_event_count": 49
+    },
+    {
+      "bucket": "2019-07",
+      "accepted_event_count": 70
+    },
+    {
+      "bucket": "2019-08",
+      "accepted_event_count": 82
+    },
+    {
+      "bucket": "2019-09",
+      "accepted_event_count": 60
+    },
+    {
+      "bucket": "2019-10",
+      "accepted_event_count": 46
+    },
+    {
+      "bucket": "2019-11",
+      "accepted_event_count": 37
+    },
+    {
+      "bucket": "2019-12",
+      "accepted_event_count": 45
+    },
+    {
+      "bucket": "2020-01",
+      "accepted_event_count": 47
+    },
+    {
+      "bucket": "2020-02",
+      "accepted_event_count": 60
+    },
+    {
+      "bucket": "2020-03",
+      "accepted_event_count": 44
+    },
+    {
+      "bucket": "2020-04",
+      "accepted_event_count": 44
+    },
+    {
+      "bucket": "2020-05",
+      "accepted_event_count": 46
+    },
+    {
+      "bucket": "2020-06",
+      "accepted_event_count": 45
+    },
+    {
+      "bucket": "2020-07",
+      "accepted_event_count": 20
+    },
+    {
+      "bucket": "2020-08",
+      "accepted_event_count": 26
+    },
+    {
+      "bucket": "2020-09",
+      "accepted_event_count": 24
+    },
+    {
+      "bucket": "2020-10",
+      "accepted_event_count": 14
+    },
+    {
+      "bucket": "2020-11",
+      "accepted_event_count": 34
+    },
+    {
+      "bucket": "2020-12",
+      "accepted_event_count": 22
+    }
+  ],
+  "quarterly_counts": [
+    {
+      "bucket": "2019-Q1",
+      "accepted_event_count": 89
+    },
+    {
+      "bucket": "2019-Q2",
+      "accepted_event_count": 136
+    },
+    {
+      "bucket": "2019-Q3",
+      "accepted_event_count": 212
+    },
+    {
+      "bucket": "2019-Q4",
+      "accepted_event_count": 128
+    },
+    {
+      "bucket": "2020-Q1",
+      "accepted_event_count": 151
+    },
+    {
+      "bucket": "2020-Q2",
+      "accepted_event_count": 135
+    },
+    {
+      "bucket": "2020-Q3",
+      "accepted_event_count": 70
+    },
+    {
+      "bucket": "2020-Q4",
+      "accepted_event_count": 70
+    }
+  ],
+  "daily_counts": [
+    {
+      "bucket": "2019-01-02",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-03",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-01-07",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-01-08",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-10",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-12",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-15",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-01-16",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-01-17",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-20",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-22",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-01-23",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-01-27",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-01-28",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-01-29",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-01-30",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-02",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-03",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-02-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-05",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-06",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-07",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-08",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-02-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-10",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-11",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-02-13",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-02-14",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-02-17",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-20",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-21",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-02-22",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-02-24",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-02-25",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-02-28",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-03-02",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-03",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-03-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-06",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-03-07",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-08",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-09",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-03-10",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-03-11",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-14",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-16",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-24",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-25",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-03-26",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-03-30",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-04-02",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-05",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-06",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-07",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-04-09",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-04-10",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-11",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-12",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-04-13",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-04-14",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-15",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-04-17",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-18",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-22",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-04-23",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-04-24",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-25",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-04-26",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-28",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-04-30",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-05-01",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-05-02",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-03",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-05-04",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-05-05",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-05-06",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-07",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-05-08",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-10",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-12",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-13",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-05-14",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-05-15",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-16",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-05-17",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-05-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-20",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-05-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-22",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-05-23",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-26",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-05-27",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-28",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-05-30",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-05-31",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-01",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-06-03",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2019-06-04",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-06-05",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-06-06",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-06-07",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-10",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-06-12",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-13",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-06-14",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-06-15",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-06-17",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-18",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-06-19",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-06-20",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-21",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-06-22",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-06-24",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-25",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-26",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-27",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-28",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-06-30",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-07-01",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-07-02",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-07-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-07-05",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-07-06",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-07-07",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-07-08",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-07-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-07-10",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-07-11",
+      "accepted_event_count": 6
+    },
+    {
+      "bucket": "2019-07-12",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-07-13",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-07-14",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-07-15",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-07-16",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-07-17",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-07-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-07-20",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-07-21",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-07-22",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-07-23",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-07-24",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-07-25",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-07-26",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-07-27",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-07-28",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-07-29",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-07-30",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-08-04",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-08-05",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-08-06",
+      "accepted_event_count": 6
+    },
+    {
+      "bucket": "2019-08-07",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-08-08",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-08-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-08-10",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-08-11",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-08-12",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-08-13",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-08-14",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-08-15",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-08-16",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-08-17",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-08-18",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-08-19",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-08-20",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-08-21",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2019-08-22",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-08-24",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-08-25",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-08-26",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-08-27",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-08-28",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2019-08-29",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-08-30",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-08-31",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-09-01",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-09-02",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-03",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-05",
+      "accepted_event_count": 6
+    },
+    {
+      "bucket": "2019-09-06",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-07",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-09-08",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-09-09",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-09-10",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2019-09-11",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-09-12",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-13",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-15",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-16",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-17",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-18",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-09-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-20",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-09-21",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-09-22",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-23",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-09-24",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-09-25",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-09-26",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-09-27",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-09-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-09-30",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-10-01",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-02",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-10-03",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-10-04",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-10-05",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-06",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2019-10-07",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-10-10",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-12",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-13",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-10-14",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-10-15",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-16",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-18",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-10-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-10-23",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-10-25",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-10-26",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-27",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-28",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-10-29",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-10-30",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-10-31",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-11-01",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-11-03",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-11-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-11-07",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-11-08",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-11-11",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-11-12",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-11-14",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-11-15",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-11-18",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-11-19",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-11-20",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-11-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-11-22",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-11-23",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-11-24",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-11-26",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-11-27",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-11-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-11-30",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-12-01",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-12-02",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2019-12-04",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-12-06",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-12-07",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-12-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-12-10",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-12-11",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-12-12",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-12-13",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-12-14",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-12-15",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-12-16",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-12-17",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-12-18",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2019-12-20",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-12-22",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-12-23",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-12-25",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-12-26",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-12-28",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-12-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2019-12-30",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2019-12-31",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-03",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-01-05",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-06",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-07",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-01-08",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-09",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2020-01-10",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-11",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-14",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-01-15",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-01-16",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-17",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-18",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-01-19",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-20",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-01-22",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-23",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-01-25",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-01-26",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-01-28",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-01-30",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2020-01-31",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-02",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-03",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2020-02-04",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-05",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-02-06",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-02-07",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-08",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2020-02-09",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-02-10",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-02-11",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-02-13",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-14",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-02-15",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-02-16",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2020-02-17",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-18",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-19",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-02-20",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-02-22",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-02-23",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-24",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-25",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-02-26",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-02-27",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-02-29",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-03-01",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-03-02",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-03-06",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-03-07",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-03-08",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2020-03-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-03-10",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-03-11",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-03-12",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2020-03-15",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-03-16",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-03-18",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-03-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-03-20",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-03-22",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-03-23",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-03-26",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-03-27",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-03-28",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-03-29",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-03-31",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-04-01",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2020-04-05",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-06",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-04-08",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-10",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2020-04-11",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-13",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2020-04-15",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-04-16",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-04-18",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-04-20",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-04-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-22",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-23",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-25",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2020-04-26",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-27",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-04-28",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-04-30",
+      "accepted_event_count": 4
+    },
+    {
+      "bucket": "2020-05-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-06",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-07",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-05-08",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-05-09",
+      "accepted_event_count": 5
+    },
+    {
+      "bucket": "2020-05-10",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-05-11",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-13",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-14",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-15",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-05-16",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-05-17",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-05-18",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-19",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-05-20",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-05-21",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-05-22",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-23",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-24",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-05-26",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-27",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-05-28",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-05-29",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-05-30",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-05-31",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-01",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-03",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-05",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-06-07",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-06-08",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-06-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-10",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-11",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-06-12",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-06-13",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-14",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-06-15",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-06-16",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-17",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-18",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-06-19",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-06-20",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-22",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-23",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-24",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-06-25",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-26",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-06-27",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-28",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-06-30",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-01",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-02",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-07-07",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-08",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-11",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-12",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-13",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-14",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-22",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-23",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-25",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-26",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-28",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-07-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-07-30",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-08-01",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-08-02",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-08-03",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-08-04",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-08-05",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-08-06",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-08-07",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-08-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-08-10",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-08-11",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-08-13",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-08-16",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-08-17",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-08-18",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-08-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-08-21",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-09-01",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-09-03",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-09-04",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-09-05",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-09-06",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-09-08",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-09-13",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-09-17",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-09-20",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-09-21",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-09-22",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-09-24",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-09-25",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-09-27",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-10-06",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-08",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-10-12",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-13",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-15",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-16",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-17",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-23",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-28",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-29",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-30",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-10-31",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-11-01",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-11-02",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-11-03",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-11-05",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-11-07",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-11-09",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-11-13",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-11-14",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-11-16",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-11-18",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-11-21",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-11-22",
+      "accepted_event_count": 6
+    },
+    {
+      "bucket": "2020-11-24",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-11-25",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-11-26",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-12-01",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-03",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-04",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-12-08",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-09",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-10",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-11",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-15",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-16",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-18",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-19",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-20",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-12-22",
+      "accepted_event_count": 2
+    },
+    {
+      "bucket": "2020-12-23",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-25",
+      "accepted_event_count": 1
+    },
+    {
+      "bucket": "2020-12-29",
+      "accepted_event_count": 3
+    },
+    {
+      "bucket": "2020-12-30",
+      "accepted_event_count": 1
+    }
+  ],
+  "months_with_at_least_five_events": 24,
+  "minimum_quarter_event_count": 70,
+  "largest_month": "2019-08",
+  "largest_month_event_count": 82,
+  "largest_month_event_share": "0.08274470232088799192734611504",
+  "largest_day": "2020-11-22",
+  "largest_day_event_count": 6,
+  "largest_day_event_share": "0.006054490413723511604439959637",
+  "gates": [
+    {
+      "gate_id": "RAW_EVENT_COUNT_AT_LEAST_1000",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "1000",
+      "units": "COUNT",
+      "observed": "1430",
+      "passed": true
+    },
+    {
+      "gate_id": "NONOVERLAPPING_EVENT_COUNT_AT_LEAST_240",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "240",
+      "units": "COUNT",
+      "observed": "991",
+      "passed": true
+    },
+    {
+      "gate_id": "AT_LEAST_20_MONTHS_HAVE_5_EVENTS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "20",
+      "units": "MONTH_COUNT",
+      "observed": "24",
+      "passed": true
+    },
+    {
+      "gate_id": "EVERY_QUARTER_HAS_AT_LEAST_15_EVENTS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "15",
+      "units": "COUNT_PER_QUARTER",
+      "observed": "70",
+      "passed": true
+    },
+    {
+      "gate_id": "LARGEST_MONTH_EVENT_SHARE_AT_MOST_0_10",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "threshold": "0.10",
+      "units": "RATIO",
+      "observed": "0.08274470232088799192734611504",
+      "passed": true
+    },
+    {
+      "gate_id": "LARGEST_DAY_EVENT_SHARE_AT_MOST_0_02",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "threshold": "0.02",
+      "units": "RATIO",
+      "observed": "0.006054490413723511604439959637",
+      "passed": true
+    },
+    {
+      "gate_id": "ALL_ACCEPTED_EVENTS_HAVE_READY_FEATURES",
+      "comparison": "EQUAL",
+      "threshold": "0",
+      "units": "INVALID_EVENT_COUNT",
+      "observed": "0",
+      "passed": true
+    }
+  ],
+  "passed_gate_count": 7,
+  "failed_gate_count": 0,
+  "decision": "PASS_DEVELOPMENT_EVENT_PREVALENCE_AWAIT_OUTCOME_AUTHORIZATION",
+  "next_required_authorization": "AUTHORIZE_JAM_SUCCESSOR_DEVELOPMENT_OUTCOME_CALCULATION",
+  "real_market_periods_opened": [
+    "2019-01_THROUGH_2020-12_DEVELOPMENT_FEATURES_ONLY"
+  ],
+  "sealed_market_periods_opened": [],
+  "future_price_rows_accessed": 0,
+  "future_labels_calculated": [],
+  "return_metrics_calculated": [],
+  "matched_controls_constructed": 0,
+  "backtests_executed": 0,
+  "strategy_executions": 0,
+  "creates_strategy": false,
+  "creates_signal": false,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_testnet_order_authority": false,
+  "creates_production_authority": false,
+  "creates_live_eligibility": false,
+  "limitations": [
+    "A prevalence failure retires this event definition without threshold relaxation.",
+    "A prevalence pass establishes sample availability only and does not establish predictive or economic edge.",
+    "Every prevalence gate is conjunctive and no failed gate may be waived.",
+    "Exact Pine parity remains unavailable because the event uses aggregate-trade aggressor identity.",
+    "No aggregate-trade row or price after an event was opened.",
+    "No future label, return, path statistic, fee, slippage, control outcome, or backtest was calculated.",
+    "Only frozen causal feature rows from 2019-2020 development were read.",
+    "Outcome calculation requires separate explicit authorization.",
+    "Production, live, real capital, and real profit remain disabled and zero.",
+    "The 2021 validation and 2022 holdout partitions remained sealed.",
+    "The immutable ledger contains all raw matches and their accepted or suppressed status.",
+    "The result measures only event frequency, chronological suppression, calendar distribution, and concentration.",
+    "This result creates no strategy, signal, candidate, paper eligibility, or order authority."
+  ],
+  "result_evidence_hash": "444fe28b86c6283181f3e99cfe55258fd4e9136cbca1c92b978cbdfae9ea77ea"
+}

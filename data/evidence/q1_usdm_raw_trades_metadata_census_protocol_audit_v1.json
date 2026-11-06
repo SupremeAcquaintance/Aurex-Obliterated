@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-q1-usdm-raw-trades-metadata-protocol-audit-v1",
+  "audit_id": "q1-usdm-raw-trades-metadata-protocol-audit-v1",
+  "audited_at": "2026-08-07T09:51:17.533450Z",
+  "protocol_file_sha256": "1d413d8e7442d3c0b0e31d2f09efcc766759ccd9ab34bec86d2d5c44a4d31b51",
+  "protocol_evidence_hash": "08ca0b4fce3790b398f3535511d19915b3a8b80e6e8c5c1326c6caf9198e9e6e",
+  "builder_contract_hash": "de8e83d9fc3bce7c1cfda5865fbc2d720a4a939c1b81b666b5f04c44a834ca32",
+  "auditor_contract_hash": "cc17cc37834196bb7d8b434927c9016d7b9cf55a527944595d672505c49eb671",
+  "reconstructed_exactly": true,
+  "target_count": 72,
+  "unique_checksum_url_count": 72,
+  "development_target_count": 48,
+  "validation_metadata_target_count": 24,
+  "network_requests_made": 0,
+  "archive_payload_requests_made": 0,
+  "market_numeric_field_count": 0,
+  "authorizes_checksum_census": true,
+  "authorizes_payload": false,
+  "authorizes_outcomes": false,
+  "authorizes_trading": false,
+  "audit_evidence_hash": "10d1c474780cfa3e4903022c44170fd0a3b2beaa8072f9c5c362ea07f3a9fb67"
+}

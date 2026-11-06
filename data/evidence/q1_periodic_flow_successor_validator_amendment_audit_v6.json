@@ -1,0 +1,16 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-successor-validator-amendment-audit-v6",
+  "audited_at": "2026-08-13T10:45:02.930215Z",
+  "amendment_file_sha256": "2622dc2a1467c77bb781ae36c1302ff407208c2a86e09759296284936a727adb",
+  "amendment_evidence_hash": "984a4b047efe256c8a92f23cf38129f833ad58ff3c4cdd0294b9b18ca580e742",
+  "terminal_v5_audit_evidence_hash": "005ad8282750a97781faa1822d9519d12abb6f2dfb3bb48aa9852a96523df2ed",
+  "auditor_contract_hash": "2f5a6e86b88feaf42f73213e615a0d53369e0c89e74851da0096b046ca7fef36",
+  "validator_domain_narrowing_verified": true,
+  "no_source_mutation_verified": true,
+  "inherited_gates_verified": true,
+  "no_outcome_boundary_verified": true,
+  "network_requests_made": 0,
+  "outcomes_accessed": 0,
+  "orders_submitted": 0,
+  "audit_evidence_hash": "1b874d76fe6f4e1bac1b728f27e75af164c75cb9d904ebf3e9676f1996cb4838"
+}

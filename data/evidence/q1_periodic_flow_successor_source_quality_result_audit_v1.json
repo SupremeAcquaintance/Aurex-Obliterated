@@ -1,0 +1,16 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-successor-source-quality-result-audit-v1",
+  "audited_at": "2026-08-10T17:40:00.291815Z",
+  "result_file_sha256": "eb39c67013add5fba68bd5a6a8d8064e4e105b251442d619802100d54e5839f5",
+  "result_evidence_hash": "c16baa6c994644c14f99e3966ba069fa1ec891519e887216d60c1e6965c3f826",
+  "protocol_evidence_hash": "12d7399a423449fd4788b5e216035ea6ed2d6d992a164b041cd07cf542aba1e1",
+  "auditor_contract_hash": "963d76466a898fd5b1f754c99c0fc992fec41a9229f96930b164407dc28d44ce",
+  "disposition_count_reconstructed": 36,
+  "known_eligible_month_count": 25,
+  "known_ineligible_month_count": 11,
+  "network_requests_made": 0,
+  "outcomes_accessed": 0,
+  "orders_submitted": 0,
+  "decision": "PERMIT_Q1_SUCCESSOR_ACQUISITION_PROTOCOL_DESIGN",
+  "audit_evidence_hash": "fd272715423f5aab0bf11121772a07c2674e14194c8b67102922cbb8aaa2aef9"
+}

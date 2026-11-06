@@ -1,0 +1,143 @@
+{
+  "schema_version": "aurex-s5-bitcoin-core-source-feasibility-protocol-v1",
+  "protocol_id": "s5-bitcoin-core-source-feasibility-protocol-v1",
+  "frozen_at": "2026-09-01T13:46:34.987737Z",
+  "status": "FROZEN_PROTOCOL_ONLY_ZERO_NETWORK_REQUESTS",
+  "builder_contract_hash": "d564a27f7f0f5b9824d54f4a70e47d4b08fd072749eff7c3bfd30609ce8ef81d",
+  "charter_evidence_hash": "9e06088399d772ff9136456d01c76f44e1c13a3efbac0f5e0fbf3c218c5e8da0",
+  "source_bindings": [
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_audit_v27.json",
+      "file_sha256": "f0615e83e2e0e5606c38d4da835cdee6f5f09e995d1bf3c2f062fff17773d141"
+    },
+    {
+      "path": "data/evidence/aurex_strategy_factory_readiness_current_result_v27.json",
+      "file_sha256": "16b360a145b950a140c8ef5769ec9e8e6549dbe09bb6df0e8672aea8f1980fc8"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_development_charter_audit_v1.json",
+      "file_sha256": "d1668de55365924bc07b7bfe62146e64d2f3c2418db98554e21e555062611be1"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_development_charter_v1.json",
+      "file_sha256": "44521e79750685fa0d6d71988c105cc3813535910c8a72e02baa1e0b2338e43b"
+    }
+  ],
+  "repository_endpoint": {
+    "endpoint_id": "GITHUB_CANONICAL_REPOSITORY_METADATA",
+    "method": "GET",
+    "url": "https://api.github.com/repos/bitcoin/bitcoin",
+    "permitted_response_keys": [
+      "archived",
+      "clone_url",
+      "default_branch",
+      "disabled",
+      "full_name",
+      "license.spdx_id",
+      "private",
+      "visibility"
+    ],
+    "response_headers_to_preserve": [
+      "content-type",
+      "etag",
+      "last-modified",
+      "x-github-api-version-selected",
+      "x-ratelimit-limit",
+      "x-ratelimit-remaining",
+      "x-ratelimit-reset",
+      "x-ratelimit-resource"
+    ],
+    "public_resource_only": true,
+    "authentication_permitted": false,
+    "maximum_response_bytes": 1048576
+  },
+  "git_probe": {
+    "probe_id": "BITCOIN_CORE_CANONICAL_REF_DISCOVERY",
+    "remote_url": "https://github.com/bitcoin/bitcoin.git",
+    "refs": [
+      "HEAD",
+      "refs/heads/master",
+      "refs/tags/v30.0"
+    ],
+    "credentials_permitted": false,
+    "history_fetch_permitted": false,
+    "clone_permitted": false,
+    "maximum_stdout_bytes": 4096
+  },
+  "required_gate_ids": [
+    "ALL_TWELVE_PREDECESSOR_FAMILIES_BOUND_AND_NONREUSABLE",
+    "CANONICAL_REPOSITORY_IDENTITY_AND_MASTER_BRANCH_DOCUMENTED",
+    "PUBLIC_GIT_SMART_HTTP_REF_DISCOVERY_REACHABLE_WITHOUT_CREDENTIALS",
+    "MIT_REUSE_RIGHTS_DOCUMENTED",
+    "AUTHOR_DATE_OVERRIDE_RISK_DOCUMENTED",
+    "BITCOIN_CORE_PULL_REQUEST_REBASE_AND_SIGNED_MERGE_WORKFLOW_DOCUMENTED",
+    "PUBLIC_GITHUB_COMMIT_METADATA_ENDPOINT_DOCUMENTED",
+    "PUBLIC_GITHUB_PULL_REQUEST_MERGED_AT_ENDPOINT_DOCUMENTED",
+    "ZERO_DOLLAR_GITHUB_RATE_LIMIT_AND_REQUEST_BUDGET_PATH_DOCUMENTED",
+    "EXACT_REF_HASH_PERSISTENCE_AND_RECHECK_IS_IMPLEMENTABLE",
+    "POINT_IN_TIME_AVAILABILITY_FIELDS_EXIST_WITHOUT_HISTORY_PAYLOAD_ACCESS",
+    "METADATA_PROTOCOL_PASS_CONDITION_IS_REACHABLE_BY_ALLOWED_SOURCES",
+    "ONE_SELECTABLE_MECHANISM_AND_ZERO_CHARTER_STAGE_PARAMETERS",
+    "FAILURE_OF_ANY_GATE_STOPS_S5_BEFORE_REPOSITORY_HISTORY_OR_BTC_VALUES"
+  ],
+  "maximum_http_requests": 1,
+  "maximum_git_transport_requests": 1,
+  "maximum_total_attempts": 2,
+  "request_timeout_seconds": 20,
+  "maximum_run_count": 1,
+  "github_user_agent": "Aurex-S5-Source-Feasibility/1.0",
+  "github_accept_header": "application/vnd.github+json",
+  "github_api_version": "2022-11-28",
+  "result_artifact_required_on_every_exit": true,
+  "attempt_record_required_for_every_planned_attempt": true,
+  "raw_response_artifact_required_for_every_completed_attempt": true,
+  "partial_response_artifacts_must_be_preserved": true,
+  "all_or_nothing_response_persistence_forbidden": true,
+  "unknown_attempt_or_success_counts_forbidden": true,
+  "rerun_after_result_forbidden": true,
+  "protocol_pass_condition_reachable_by_allowed_sources": true,
+  "public_repository_metadata_permitted": true,
+  "public_git_ref_discovery_permitted": true,
+  "authentication_permitted": false,
+  "repository_clone_permitted": false,
+  "repository_history_permitted": false,
+  "github_commit_history_permitted": false,
+  "github_pull_request_history_permitted": false,
+  "market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "historical_screen_permitted": false,
+  "validation_permitted": false,
+  "holdout_permitted": false,
+  "pine_permitted": false,
+  "paper_permitted": false,
+  "testnet_strategy_orders_permitted": false,
+  "production_permitted": false,
+  "live_permitted": false,
+  "repository_endpoint_may_return_incidental_aggregate_numeric_context": true,
+  "incidental_context_is_outcome_aware_nonqualifying": true,
+  "network_requests_executed": 0,
+  "repository_history_records_parsed": 0,
+  "btc_market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "orders_submitted": 0,
+  "decision": "FREEZE_S5_BITCOIN_CORE_SOURCE_METADATA_FEASIBILITY_PROTOCOL",
+  "next_authorization": "RUN_S5_BITCOIN_CORE_SOURCE_METADATA_FEASIBILITY_ONCE",
+  "limitations": [
+    "A machine-level termination can still interrupt persistence despite atomic writes.",
+    "A successful metadata result authorizes only a separately frozen history-payload protocol.",
+    "Any failed mandatory gate retires S5 within this frozen protocol.",
+    "Current ref identities can change after the run and do not prove historical availability.",
+    "No authentication header, token, cookie, API key, or stored credential is permitted.",
+    "No clone, fetch, commit history, pull-request history, release history, or market data is permitted.",
+    "No repository activity value, BTC market value, parameter, return, candidate, signal, order, real capital, or profit is authorized.",
+    "Only one repository GET and one git ls-remote attempt are permitted.",
+    "Partial responses and every planned attempt record must survive all normal exits.",
+    "The API version header is transport metadata and can be rejected by GitHub without authorizing an amendment or rerun.",
+    "The GitHub repository response can contain incidental current aggregate statistics; the raw response is evidence but those fields are nonqualifying.",
+    "This protocol tests metadata transport and identity only, not predictive edge."
+  ],
+  "protocol_evidence_hash": "62af43c11658ea6f8c887e6a376524cb4b0df3bab3f55f6bb61a589b0ca01fa8"
+}

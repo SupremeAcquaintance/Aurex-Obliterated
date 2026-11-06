@@ -1,0 +1,175 @@
+{
+  "schema_version": "aurex-v3-independent-mechanism-discovery-charter-v1",
+  "charter_id": "v3-independent-mechanism-discovery-v1",
+  "charter_version": "1.0.0",
+  "registered_at": "2026-07-28T11:52:49.722901Z",
+  "status": "FROZEN_PRE_V3_PROPOSAL_SCREEN",
+  "v2_discovery_charter_evidence_hash": "af4dd3e28e20f9a5e99c47e98d567587ef11697c38dd976074ddcb80255db07f",
+  "v2_theory_screen_evidence_hash": "ec03d31db661a36b1def820711b20134d416ec2d390a49cdbafaf19f27758dea",
+  "p01_protocol_evidence_hash": "c6a66a622b80c33490af6baed6c4bcace0f31bbba57d9e760485825bf0ae6829",
+  "p01_acquisition_result_evidence_hash": "0c712f47c69b9b44da5ff2810bb366a7b60b819edc2a2b845b7819cbfd9f1bc5",
+  "contamination_ledger_evidence_hash": "9f7face6a22a51b2a0b20d653561396fb6415f532ad0fecd883b3c6e6c132207",
+  "builder_contract_hash": "38547795ff0dcfea30842317d3ca83481f2e3b4859ad6da2426fb6a29c3c8ffd",
+  "p01_final_decision": "STOP_P01_INSUFFICIENT_QUALIFIED_HISTORICAL_DATA",
+  "p01_qualified_symbol_count": 0,
+  "p01_return_metrics_calculated": [],
+  "research_scope": "INDEPENDENT_DATA_FEASIBLE_MECHANISM_DISCOVERY",
+  "partition_boundaries": [
+    {
+      "partition": "DEVELOPMENT",
+      "start": "2023-01-01T00:00:00Z",
+      "end": "2025-01-01T00:00:00Z",
+      "role": "SOURCE_FEASIBILITY_ONLY_NO_STRATEGY_OUTCOMES",
+      "access": "TIMESTAMP_SCHEMA_COVERAGE_ONLY"
+    },
+    {
+      "partition": "VALIDATION",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z",
+      "role": "FUTURE_INTERNAL_VALIDATION_NOT_ELIGIBILITY",
+      "access": "SEALED_FOR_INDEPENDENT_MECHANISM"
+    },
+    {
+      "partition": "HOLDOUT",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-07-01T00:00:00Z",
+      "role": "FINAL_ELIGIBILITY_HOLDOUT",
+      "access": "SEALED_AND_NOT_IMPORTED"
+    },
+    {
+      "partition": "FORWARD",
+      "start": "2026-07-01T00:00:00Z",
+      "end": null,
+      "role": "LOCKED_FORWARD_EVIDENCE",
+      "access": "LOCKED"
+    }
+  ],
+  "required_theory_and_feasibility_evidence": [
+    "AT_LEAST_TWO_PRIMARY_OR_PEER_REVIEWED_SOURCES",
+    "ECONOMIC_PREMISE_INDEPENDENT_OF_AUREX_OUTCOMES",
+    "EXACT_PAYLOAD_LEVEL_TIMESTAMP_COVERAGE_AUDIT",
+    "EXACT_POINT_IN_TIME_FIELDS_AND_TEMPORAL_AVAILABILITY",
+    "EXPLICIT_MISSING_ROW_SKIP_STOP_AND_NO_FILL_POLICY",
+    "HISTORICAL_EXECUTION_FINANCING_AND_METADATA_DEPENDENCIES",
+    "MECHANISM_SPECIFIC_COST_CAPACITY_AND_FAILURE_PATH",
+    "SPECIFIC_PRE_RETURN_FALSIFICATION_CONDITION",
+    "UNTOUCHED_VALIDATION_HOLDOUT_AND_FORWARD_PATH"
+  ],
+  "theory_source_policy": [
+    "ALLOW_OFFICIAL_EXCHANGE_DATA_AND_RISK_DOCUMENTATION",
+    "ALLOW_PEER_REVIEWED_RESEARCH",
+    "ALLOW_REPUTABLE_INSTITUTIONAL_WORKING_PAPERS",
+    "REJECT_ANONYMOUS_SIGNALS_SOCIAL_POSTS_AND_MARKETING_CLAIMS",
+    "REJECT_SOURCES_SELECTED_BECAUSE_THEY_MATCH_AUREX_OUTCOMES"
+  ],
+  "payload_feasibility_policy": [
+    "AUDIT_ONLY_REQUIRED_TIMESTAMPS_SCHEMA_ROW_COUNTS_AND_SOURCE_IDENTITY",
+    "CLASSIFY_COMMON_SOURCE_OUTAGE_LISTING_GAP_AND_SYMBOL_SPECIFIC_GAP",
+    "DEFINE_SYNCHRONIZED_DECISION_EVENT_COVERAGE_PER_PROPOSAL",
+    "FORBID_FORWARD_FILL_BACKFILL_INTERPOLATION_AND_SYNTHETIC_ROWS",
+    "FREEZE_SKIP_EXCLUSION_AND_STOP_RULES_BEFORE_PRIMARY_SELECTION",
+    "REQUIRE_MINIMUM_EVENT_AND_TEMPORAL_BREADTH_BEFORE_SELECTION",
+    "REQUIRE_POINT_IN_TIME_EXECUTION_DEPENDENCIES_BEFORE_SELECTION"
+  ],
+  "forbidden_derivations": [
+    "DO_NOT_CREATE_PINE_PAPER_SANDBOX_LIVE_OR_CAPITAL_PERMISSION",
+    "DO_NOT_DEFINE_PARAMETERS_DURING_THEORY_OR_FEASIBILITY_SCREEN",
+    "DO_NOT_INSPECT_PRICE_VALUES_SIGNALS_TRADES_PNL_OR_RETURNS",
+    "DO_NOT_OPEN_2025_2026_OR_FORWARD_DATA",
+    "DO_NOT_PROMOTE_P02_PREMIUM_CONVERGENCE_AS_A_P01_RESCUE",
+    "DO_NOT_PROMOTE_P03_WITHOUT_POINT_IN_TIME_BORROW_AND_EXECUTION",
+    "DO_NOT_REEXPRESS_RETIRED_TREND_BREAKOUT_PATH_BETA_OR_CARRY_FAMILIES",
+    "DO_NOT_RELAX_OR_REINTERPRET_P01_CONTINUITY_AFTER_FAILURE",
+    "DO_NOT_SELECT_SYMBOLS_MONTHS_OR_PROPOSALS_BY_RETURN",
+    "DO_NOT_USE_R3_R31_R4_U1_OR_P01_OUTCOME_BUCKETS_AS_RULES"
+  ],
+  "known_blocked_or_retired_lineages": [
+    "JAM_REVERSAL_V1_QUARANTINED",
+    "P01_POSITIVE_FUNDING_SPOT_PERP_CARRY_RETIRED_PRE_RETURN",
+    "P02_PREMIUM_CONVERGENCE_SPOT_PERP_BASIS_NONSELECTABLE_RELATED",
+    "P03_NEGATIVE_FUNDING_REVERSE_CARRY_BORROW_BLOCKED",
+    "R31_R4_PATH_QUALITY_RETIRED",
+    "R3_CROSS_SECTIONAL_MOMENTUM_NO_CANDIDATE",
+    "SLOW_BREAKOUT_SPOT_V1_RETIRED",
+    "TREND_PULLBACK_V1_RETIRED",
+    "U1_VOLATILITY_MANAGED_BROAD_SPOT_BETA_RETIRED",
+    "VOLATILITY_BREAKOUT_V1_RETIRED"
+  ],
+  "required_successor_bindings": [
+    "CANDIDATE_SOURCE_BYTES_RUNTIME_AND_VERSION",
+    "CONTAMINATION_AND_PROJECT_WIDE_MULTIPLICITY_ACCOUNTING",
+    "DATA_PARTITIONS_TRANSFORMATIONS_AND_COVERAGE_HASHES",
+    "DECISION_GATES_AND_AUTOMATIC_STOP_RULE",
+    "EXACT_SIGNAL_POSITION_SIZING_AND_EXIT_ARITHMETIC",
+    "EXECUTION_FEES_SLIPPAGE_CAPACITY_AND_FAILURE_SEMANTICS",
+    "MECHANISM_SPECIFIC_POINT_IN_TIME_METADATA_POLICY",
+    "ONE_SELECTABLE_PARAMETER_SET",
+    "RUN_MATRIX_TEMPORAL_FOLDS_AND_CONCENTRATION_DIAGNOSTICS",
+    "UNTOUCHED_VALIDATION_HOLDOUT_FORWARD_AND_PROMOTION_PATH"
+  ],
+  "discovery_stages": [
+    "01_FREEZE_CHARTER_AND_P01_STOP_LINEAGE",
+    "02_PROPOSE_AT_MOST_THREE_INDEPENDENT_THEORIES_NO_OUTCOMES",
+    "03_FREEZE_AND_RUN_PROPOSAL_SOURCE_EXECUTION_FEASIBILITY_NO_RETURNS",
+    "04_SELECT_ZERO_OR_ONE_PRIMARY_WITHOUT_PARAMETERS",
+    "05_FREEZE_SOURCE_ACQUISITION_AND_ONE_SHOT_DEVELOPMENT_PROTOCOL",
+    "06_DEVELOPMENT_FALSIFICATION_2023_2024",
+    "07_INTERNAL_VALIDATION_2025_ONLY_IF_DEVELOPMENT_PASSES",
+    "08_FINAL_HOLDOUT_2026_H1_ONLY_IF_VALIDATION_PASSES",
+    "09_FORWARD_PAPER_ONLY_IF_FINAL_HOLDOUT_PASSES"
+  ],
+  "stop_conditions": [
+    "ANY_BOUND_PREDECESSOR_HASH_OR_AUDIT_FAILS",
+    "MISSING_ROW_POLICY_IS_DEFINED_AFTER_PRIMARY_SELECTION",
+    "PAYLOAD_COVERAGE_IS_BELOW_A_PREDECLARED_PROPOSAL_MINIMUM",
+    "POINT_IN_TIME_SOURCE_EXECUTION_OR_FINANCING_IS_NOT_FEASIBLE",
+    "PRIMARY_OR_PARAMETER_IS_SELECTED_USING_MARKET_OUTCOMES",
+    "PROPOSAL_IS_NOT_INDEPENDENT_OF_A_RETIRED_OR_BLOCKED_LINEAGE",
+    "PROPOSAL_OR_MULTIPLICITY_BUDGET_IS_BREACHED"
+  ],
+  "allowed_next_decisions": [
+    "FREEZE_ONE_INDEPENDENT_PRIMARY_FOR_SOURCE_AND_PROTOCOL_DESIGN",
+    "NO_FEASIBLE_INDEPENDENT_MECHANISM_STOP_RESEARCH"
+  ],
+  "permitted_timestamp_coverage_fields": [
+    "archive_identity_and_checksum",
+    "boundary_completeness",
+    "continuity_gap_count",
+    "duplicate_timestamp_count",
+    "first_timestamp",
+    "last_timestamp",
+    "missing_timestamp_count",
+    "row_count",
+    "schema_identity"
+  ],
+  "maximum_theory_proposals": 3,
+  "maximum_selected_primary_mechanisms": 1,
+  "maximum_return_tested_mechanisms_under_charter": 0,
+  "maximum_parameter_sets_under_charter": 0,
+  "successor_maximum_selectable_parameter_sets": 1,
+  "may_reuse_p01_payload_for_coverage_only": true,
+  "may_inspect_market_numeric_values": false,
+  "may_calculate_signals_trades_or_returns": false,
+  "selection_creates_candidate": false,
+  "development_outcomes_open": false,
+  "validation_data_open": false,
+  "holdout_data_open": false,
+  "forward_data_open": false,
+  "permits_pine_parity": false,
+  "creates_paper_eligibility": false,
+  "creates_sandbox_eligibility": false,
+  "creates_live_eligibility": false,
+  "strategy_outcome_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "preexisting_v3_successor_artifacts": [],
+  "limitations": [
+    "2025 validation, 2026 H1 holdout, forward evidence, Pine, paper, sandbox, live trading, and capital remain closed.",
+    "Any proposal requiring unavailable point-in-time execution, financing, borrow, or market-state history must stop before selection.",
+    "P01 is final negative pre-return evidence and cannot be rescued by changing continuity, symbols, thresholds, or related premise.",
+    "Selecting a primary permits only separate source and protocol design and does not create a candidate or open development outcomes.",
+    "The V3 proposal screen may inspect no price value, signal, trade, P/L, return, or strategy outcome.",
+    "The acquired P01 payload may support only source identity, schema, timestamp, row-count, and synchronized-coverage feasibility.",
+    "V3 searches honestly for a durable edge but cannot promise that one exists in the available evidence or future market."
+  ],
+  "charter_evidence_hash": "10912cefdbd875b202fcc6903e5ffdf82652a97eddde7e9dc073a79308ed9b32"
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-successor-transport-amendment-audit-v5",
+  "audited_at": "2026-08-13T05:42:18.205320Z",
+  "amendment_file_sha256": "3946462c4af2037a2c819648ba136dc833303c827fc8589d92e7257312818255",
+  "amendment_evidence_hash": "016f7244edd0198a7ce85bc4d76c1e8818fbbe6b37c4a94abead1f30b6023167",
+  "terminal_v4_audit_evidence_hash": "7fcb7711d831dd45831b23faf021467c7341d302bd08604691b4875bb7745524",
+  "auditor_contract_hash": "2443a51e8d528c28849006f6b40deb8d283643b8ce4a63a8d4efa265b095996c",
+  "checkpoint_only_scope_verified": true,
+  "dns_resilience_scope_verified": true,
+  "inherited_gates_verified": true,
+  "no_outcome_boundary_verified": true,
+  "network_requests_made": 0,
+  "outcomes_accessed": 0,
+  "orders_submitted": 0,
+  "audit_evidence_hash": "13a9c2d7361b68a86a249ea8d17002c74e5b8c5c930d40ed6a23b52dde94b6fb"
+}

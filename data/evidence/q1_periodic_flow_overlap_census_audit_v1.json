@@ -1,0 +1,32 @@
+{
+  "schema_version": "aurex-q1-usdm-overlap-daily-source-census-audit-v1",
+  "audit_id": "q1-usdm-overlap-daily-source-census-audit-v1",
+  "audited_at": "2026-08-07T08:55:37.240150Z",
+  "result_file_sha256": "6c1f24cb0781c2b529618496c13801fb7624eaba291ce74ee76820aa1d69b654",
+  "result_evidence_hash": "488041793701639de79d7528aaae2f05b975668542f8a59b566e1cb025c6b727",
+  "protocol_evidence_hash": "188a4d2eb16d40d478518b0abd7f86d19e234428ec68cd4047c50920e8cf7b2b",
+  "overlap_event": {
+    "preceding_aggregate_trade_id": 22154875,
+    "current_aggregate_trade_id": 22154876,
+    "preceding_first_raw_trade_id": 30414701,
+    "preceding_last_raw_trade_id": 30414701,
+    "current_first_raw_trade_id": 30414701,
+    "current_last_raw_trade_id": 30414701,
+    "preceding_timestamp_ms": 1579076873303,
+    "current_timestamp_ms": 1579076873303,
+    "overlap_raw_trade_id_count": 1,
+    "first_overlapped_raw_trade_id": 30414701,
+    "last_overlapped_raw_trade_id": 30414701,
+    "utc_day": "2020-01-15"
+  },
+  "checksum_archive_sha256": {
+    "aggTrades": "db33bbd493ae7b9cb63458def8bb411d54cf93080e5fa1ce0a19e6b3f36ff1de",
+    "trades": "2de17c79495e43ff4c4435f271c2ead39978bd90678f94330aa5a096583822fd"
+  },
+  "localized_exactly": true,
+  "checksum_text_reparsed": true,
+  "archive_payload_requests_made": 0,
+  "price_or_quantity_values_parsed": [],
+  "decision": "PERMIT_Q1_USDM_DAILY_CROSS_SOURCE_PAYLOAD_PROTOCOL",
+  "audit_evidence_hash": "c9e6170819e16f73b5eb77ae72c780c3bb2acfb188db5a8cf65ac5d59f1cc89a"
+}

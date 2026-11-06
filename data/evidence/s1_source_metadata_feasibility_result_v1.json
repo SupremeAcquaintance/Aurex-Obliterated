@@ -1,0 +1,128 @@
+{
+  "schema_version": "aurex-s1-source-metadata-feasibility-result-v1",
+  "result_id": "s1-source-metadata-feasibility-result-v1",
+  "completed_at": "2026-08-26T18:32:14.752549Z",
+  "protocol_path": "data/evidence/s1_source_metadata_feasibility_protocol_v1.json",
+  "protocol_file_sha256": "3ded3f020e82f81dbdec70266a2e5757093c3a85005630deaab151543309a050",
+  "protocol_evidence_hash": "b36cc55362af6e027aaaf16355576b7f5d478e0600fce080a442ec994ec6f4c9",
+  "runner_source_sha256": "6f71e9425f78598016908f7839e80d4a1f8425a7eda587a0052bee55682f7eb1",
+  "responses": [
+    {
+      "request_id": "01-alfred-nfci-series",
+      "attempted_at": "2026-08-26T18:31:21.725482Z",
+      "status_code": null,
+      "final_url": null,
+      "final_host": null,
+      "content_type": null,
+      "content_length": null,
+      "etag": null,
+      "last_modified": null,
+      "body_bytes_read": 0,
+      "outcome": "TRANSPORT_ERROR",
+      "error_type": "TimeoutError",
+      "error_message": "The read operation timed out",
+      "response_evidence_hash": "5b7f555057490d02d546dc23ad4b9639f23207f0156e6bdb77a794f807cb086b"
+    },
+    {
+      "request_id": "02-nfci-vintage-2020",
+      "attempted_at": "2026-08-26T18:31:37.639603Z",
+      "status_code": null,
+      "final_url": null,
+      "final_host": null,
+      "content_type": null,
+      "content_length": null,
+      "etag": null,
+      "last_modified": null,
+      "body_bytes_read": 0,
+      "outcome": "TRANSPORT_ERROR",
+      "error_type": "TimeoutError",
+      "error_message": "The read operation timed out",
+      "response_evidence_hash": "24124404ab3af0da356fe6595812f03ee0339340f066c98eca7fc2553e1f0d23"
+    },
+    {
+      "request_id": "03-nfci-vintage-2021",
+      "attempted_at": "2026-08-26T18:31:52.782614Z",
+      "status_code": null,
+      "final_url": null,
+      "final_host": null,
+      "content_type": null,
+      "content_length": null,
+      "etag": null,
+      "last_modified": null,
+      "body_bytes_read": 0,
+      "outcome": "TRANSPORT_ERROR",
+      "error_type": "TimeoutError",
+      "error_message": "The read operation timed out",
+      "response_evidence_hash": "60ae131fa11e5e162e32f9f29184a7f4ffcab08cbfb9f0110a75c059a8d265c0"
+    },
+    {
+      "request_id": "04-structured-api-no-key",
+      "attempted_at": "2026-08-26T18:32:08.112814Z",
+      "status_code": 400,
+      "final_url": "https://api.stlouisfed.org/fred/series/observations?series_id=NFCI&file_type=json&realtime_start=2020-01-01&realtime_end=2020-01-01",
+      "final_host": "api.stlouisfed.org",
+      "content_type": "application/json; charset=UTF-8",
+      "content_length": 0,
+      "etag": null,
+      "last_modified": null,
+      "body_bytes_read": 0,
+      "outcome": "HTTP_RESPONSE",
+      "error_type": "HTTPError",
+      "error_message": "Bad Request",
+      "response_evidence_hash": "767aa0c51267c3651b5e065701274aaa98bdf2eb5ad64ab6b51272d1c1b39e61"
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "ALFRED_SERIES_REACHABLE",
+      "status": "FAIL",
+      "reason": "The official ALFRED NFCI series HEAD endpoint must return HTTP 200."
+    },
+    {
+      "gate_id": "EXACT_REQUEST_AND_ZERO_BODY_BUDGET",
+      "status": "PASS",
+      "reason": "Four frozen HEAD responses were recorded with zero body bytes."
+    },
+    {
+      "gate_id": "NO_KEY_VINTAGE_ENDPOINTS_REACHABLE",
+      "status": "FAIL",
+      "reason": "Both frozen no-key vintage CSV HEAD endpoints must return HTTP 200."
+    },
+    {
+      "gate_id": "OFFICIAL_FINAL_HOSTS_MATCH",
+      "status": "FAIL",
+      "reason": "Every final host must equal its frozen official St. Louis Fed host."
+    },
+    {
+      "gate_id": "STRUCTURED_API_AUTH_CLASSIFIED",
+      "status": "PASS",
+      "reason": "The no-key structured API returned a classifiable HTTP response; no credential was supplied."
+    },
+    {
+      "gate_id": "VINTAGE_CONTENT_TYPES_DOWNLOADABLE",
+      "status": "FAIL",
+      "reason": "Both vintage endpoints must advertise a downloadable content type."
+    },
+    {
+      "gate_id": "ZERO_OUTCOME_AND_TRADING_AUTHORITY",
+      "status": "PASS",
+      "reason": "No body, market value, parameter, return, candidate, or order was opened."
+    }
+  ],
+  "request_count": 4,
+  "response_body_bytes_read": 0,
+  "market_numeric_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "decision": "STOP_S1_POINT_IN_TIME_VINTAGE_TRANSPORT_UNAVAILABLE",
+  "next_authorization": "NONE_SOURCE_TRANSPORT_UNAVAILABLE",
+  "authorizes_payload_acquisition": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_return_testing": false,
+  "authorizes_candidate": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "real_net_profit_usd": "0",
+  "result_evidence_hash": "e81cbfed69cb4886d756b390b7f3110b63df87669f4c4b13b0e2d5b3ed12d502"
+}

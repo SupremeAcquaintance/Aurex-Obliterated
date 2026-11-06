@@ -1,0 +1,19 @@
+{
+  "completed_month_count": 35,
+  "creates_candidate": false,
+  "creates_live_eligibility": false,
+  "creates_testnet_order_authority": false,
+  "market_values_inspected": false,
+  "migrated_at": "2026-08-01T10:26:16.841655+00:00",
+  "migration_evidence_hash": "bb971b20617fd54fb97b190d7bea68832f4a092d78b74585f698e850996ac4d0",
+  "new_checkpoint_evidence_hash": "873fa0e9fa69d393ed2131abdd7ae5737f76f6fde5873534b806442b3aa15315",
+  "new_runner_contract_hash": "32b2e4297468c5ebe66222e6c58bbf870d76cc48d6f3fe9d21324245f488dcd7",
+  "old_checkpoint_evidence_hash": "eaffe3d3c44737167f3a509f287fdaf13a3115dbffbf45aaf81089d840cfc691",
+  "old_runner_contract_hash": "c575d96c2ab0f2e86208e31aee1596c1cb12089232a21430369217d2f127d692",
+  "protocol_evidence_hash": "b27197c3b9c7e4366b3e72442206562e1ae2967931ec3fa383e59c9133bcaf74",
+  "reason": "Permit the final runner to record a later official ZIP with a duplicate nested member without reparsing unchanged prior months.",
+  "return_metrics_calculated": false,
+  "schema_version": "aurex-jam-full-checkpoint-migration-v1",
+  "verification": "PUBLISHED_SHA256_AND_EXACT_SINGLE_EXPECTED_MEMBER_FOR_ALL_70_COMPLETED_ARCHIVES",
+  "verified_archive_count": 70
+}

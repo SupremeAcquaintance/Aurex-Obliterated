@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-jam-archive-payload-pilot-audit-v1",
+  "audited_at": "2026-08-01T07:07:42.658479Z",
+  "result_path": "data/evidence/jam_archive_payload_pilot_result_v1.json",
+  "result_file_sha256": "ce63c4a89e1281bbf7e95b16e3412b9e7142a09d005bb59ad5191ae4f8420f7f",
+  "result_evidence_hash": "f205b1042681bd5bcab901773a4b04c496e6cfab3946913bc6d91940550fc974",
+  "protocol_evidence_hash": "1e9a6ef48ac06353f933d21cb193bf0b1489f03f79e6a4562062a0ddddbba24e",
+  "archive_file_sha256": {
+    "aggTrades": "588bff60b17e906ad4b654d0f615d838a2b2ec36b7790e5db40c6d2a03556355",
+    "klines_1m": "08dd2f7306258d1b9fd0b9fc00ee807c1c96e9803c74c78c00a0072bfc826728"
+  },
+  "archive_file_bytes": {
+    "aggTrades": 93204261,
+    "klines_1m": 2120781
+  },
+  "archive_count": 2,
+  "checksum_verified_count": 2,
+  "reconciliation_rebuilt": true,
+  "return_metrics_calculated": false,
+  "decision": "PASS_ONE_MONTH_DATA_CAPABILITY_AWAIT_FULL_ACQUISITION_AUTHORIZATION",
+  "audit_evidence_hash": "bc8880252f50215be1fbb46803e1325d5e40c2b34101ad02bad0d4284ad710bf"
+}

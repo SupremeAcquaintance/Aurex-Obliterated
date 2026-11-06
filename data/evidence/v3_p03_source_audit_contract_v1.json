@@ -1,0 +1,92 @@
+{
+  "schema_version": "aurex-v3-p03-historical-microstructure-source-audit-contract-v1",
+  "contract_id": "v3-p03-historical-microstructure-source-audit-v1",
+  "contract_version": "1.0.0",
+  "frozen_at": "2026-07-28T13:06:21.150057Z",
+  "status": "FROZEN_PRE_FORMAL_SOURCE_OBSERVATION",
+  "discovery_charter_evidence_hash": "10912cefdbd875b202fcc6903e5ffdf82652a97eddde7e9dc073a79308ed9b32",
+  "proposal_register_evidence_hash": "1f0bc727d673f6daac6a6d6cad306f6e3007e1f718a67a96f249d586507ff321",
+  "v3p02_census_result_evidence_hash": "b69fb4d2f1c04df7a12020d47f2a6263442db60980ef65cd73de08062b3a36b2",
+  "builder_contract_hash": "12a0512c7d01902cdd9a0850d07909211d77bfc5cba8f746c6f2f56ada58b679",
+  "proposal_id": "V3P03_PASSIVE_LIMIT_ORDER_LIQUIDITY_PROVISION",
+  "development_period": "2023-01-01_2024-12-31",
+  "requirement_ids": [
+    "AGGREGATE_TRADES_2023_2024",
+    "DATED_MAKER_TAKER_FEES_AND_REBATES_2023_2024",
+    "HISTORICAL_MATCHING_QUEUE_STP_RULES_2023_2024",
+    "HISTORICAL_TICK_LOT_NOTIONAL_ORDER_LIMITS_2023_2024",
+    "MEASURED_ACK_CANCEL_LATENCY_AND_CLOCK_SYNC",
+    "OWN_ORDER_EQUIVALENT_ACK_FILL_CANCEL_REJECT",
+    "QUEUE_RECONSTRUCTION_PRICE_TIME_PRIORITY",
+    "SEQUENCE_COMPLETE_SUBSECOND_L2_2023_2024"
+  ],
+  "required_l2_columns": [
+    "event_time",
+    "final_update_id",
+    "first_update_id",
+    "previous_final_update_id",
+    "price",
+    "quantity",
+    "side"
+  ],
+  "source_targets": [
+    {
+      "source_id": "BINANCE_PUBLIC_DATA_README",
+      "source_kind": "DOCUMENT",
+      "url": "https://raw.githubusercontent.com/binance/binance-public-data/master/README.md",
+      "maximum_response_bytes": 1000000
+    },
+    {
+      "source_id": "BINANCE_USDM_ACCOUNT_REST_SCHEMA",
+      "source_kind": "DOCUMENT",
+      "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/1.0.0/schema.yaml",
+      "maximum_response_bytes": 6000000
+    },
+    {
+      "source_id": "BINANCE_USDM_LOCAL_ORDER_BOOK_DOC",
+      "source_kind": "DOCUMENT",
+      "url": "https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/How-to-manage-a-local-order-book-correctly",
+      "maximum_response_bytes": 2000000
+    },
+    {
+      "source_id": "BINANCE_VISION_BTCUSDT_BOOKDEPTH_2023_01_01_CHECKSUM",
+      "source_kind": "CHECKSUM",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookDepth/BTCUSDT/BTCUSDT-bookDepth-2023-01-01.zip.CHECKSUM",
+      "maximum_response_bytes": 4096
+    },
+    {
+      "source_id": "BINANCE_VISION_BTCUSDT_BOOKDEPTH_2023_01_01_ARCHIVE",
+      "source_kind": "ARCHIVE",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookDepth/BTCUSDT/BTCUSDT-bookDepth-2023-01-01.zip",
+      "maximum_response_bytes": 20000000
+    }
+  ],
+  "target_manifest_hash": "b68efa3c36e5a64e84213f699f86ddb756ea5d80c9771300a97776fdcdc07705",
+  "maximum_http_requests": 5,
+  "maximum_archive_payload_requests": 1,
+  "request_timeout_seconds": 60,
+  "maximum_concurrency": 2,
+  "qualification_rule": "ALL_EIGHT_REQUIREMENTS_MUST_BE_QUALIFIED_IMMUTABLE_2023_2024",
+  "absence_or_insufficiency_action": "REJECT_PROPOSAL_BEFORE_PRIMARY_SELECTION",
+  "document_and_schema_inspection_permitted": true,
+  "first_column_timestamp_inspection_permitted": true,
+  "market_numeric_value_inspection_permitted": false,
+  "strategy_outcome_inspection_permitted": false,
+  "credentialed_requests_permitted": false,
+  "source_substitution_after_observation_permitted": false,
+  "selection_permitted": false,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_live_eligibility": false,
+  "limitations": [
+    "A hypothetical passive order cannot inherit historical account events from orders that were never submitted.",
+    "All eight historical microstructure requirements must independently qualify; one absence or insufficiency rejects V3P03 before selection.",
+    "Current or live-only documentation cannot substitute for immutable 2023-2024 source bytes, dated rules, or measured latency.",
+    "Even a passing source audit would permit only feasibility consideration and would create no candidate or trading eligibility.",
+    "No credentialed endpoint, user account, price, quantity, depth, notional, signal, trade outcome, PnL, or return may be inspected.",
+    "Only official documentation, API schema, checksum text, ZIP identity, CSV header, member names, and row count may be inspected.",
+    "The formal audit captures five exact public source targets and permits no target substitution after observation.",
+    "The single bookDepth archive is a schema probe, not a coverage sample and not evidence of sequence-complete L2 availability."
+  ],
+  "contract_evidence_hash": "f52a3169b60d404033a7a41c24ef8df556d614e8975002035744153134040f7e"
+}

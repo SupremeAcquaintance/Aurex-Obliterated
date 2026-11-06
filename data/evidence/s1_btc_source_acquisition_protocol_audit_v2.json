@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-s1-btc-source-acquisition-protocol-audit-v2",
+  "audit_id": "s1-btc-source-acquisition-protocol-audit-v2",
+  "audited_at": "2026-08-27T05:52:42.257228Z",
+  "protocol_file_sha256": "411d4e401b1729c9a1149d4acc545037b81c01baf5507fdb2a6123e5e53f4948",
+  "protocol_evidence_hash": "f6cbee32ed45a14388e116d3e9038a9b32afe9fc5b3ddc0132746e431413f419",
+  "builder_contract_hash": "ede17a34fe8406a779fe050c3da9d07352b263bd1d36392f69eccc1d4e1b5f10",
+  "timing_amendment_evidence_hash": "972e49bc1e732bfe567417db63a0b81b26f093517ec7f2532af67b06d7737ada",
+  "timing_amendment_audit_evidence_hash": "cd53258a7cd8987b4dac63a8aadd6648cd59d37b6cd94525959b3c56fd24e3fe",
+  "prior_result_evidence_hash": "f444378a3b89b49812615b8b9313147e32e2ecb646348675054893bea99a57fd",
+  "auditor_source_sha256": "7b84cc4bfcfb999caff90b3c915a7d6b7c69b8b165e7c77c6500760b63279c14",
+  "reuse_target_count": 22,
+  "network_target_count": 255,
+  "target_count": 277,
+  "prior_materialized_execution_price_count_declared": 21,
+  "btc_market_values_read": 0,
+  "returns_calculated": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_1_BTC_SOURCE_PROTOCOL_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_1_BTC_SOURCE_ACQUISITION_RUNNER_IMPLEMENTATION_ONLY",
+  "audit_evidence_hash": "ceb7fffa67ece3a06fec4e9ec0cdb46e03d9b8254a82691508732758a7fbff05"
+}

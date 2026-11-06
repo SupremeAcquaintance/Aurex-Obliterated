@@ -1,0 +1,122 @@
+diff --git a/electron/main.ts b/electron/main.ts
+index abac499c2075c7406f9eb1577dc92f3d40065577..69ddbdd7e7b2921de98c62bf4547a960285ecaae 100644
+--- a/electron/main.ts
++++ b/electron/main.ts
+@@ -18,6 +18,11 @@ if (process.platform === 'win32') {
+   app.setAppUserModelId('cc.krypt.trader');
+ }
+ 
++const scopedUserData = process.env.KRYPT_TRADER_USERDATA?.trim();
++if (scopedUserData) {
++  app.setPath('userData', scopedUserData);
++}
++
+ let mainWindow: BrowserWindow | null = null;
+ 
+ function iconPath(): string {
+diff --git a/package-lock.json b/package-lock.json
+index 31eb532ba9c4ad729d1f8b1a7870840fc213f030..dd9a2ded7430fd57f70c7c20f3e40b3979e1c470 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -18,7 +18,7 @@
+         "@types/react-dom": "^18.2.24",
+         "@vitejs/plugin-react": "^4.2.1",
+         "autoprefixer": "^10.4.19",
+-        "electron": "^30.0.1",
++        "electron": "^30.5.1",
+         "electron-builder": "^24.13.3",
+         "lucide-react": "^0.368.0",
+         "postcss": "^8.4.38",
+diff --git a/package.json b/package.json
+index 4e8659b0463e0a458e63372aca52303ecd718bc1..5119eec75e524c00f2857b7219cdbee47dfc5653 100644
+--- a/package.json
++++ b/package.json
+@@ -41,7 +41,7 @@
+     "@types/react-dom": "^18.2.24",
+     "@vitejs/plugin-react": "^4.2.1",
+     "autoprefixer": "^10.4.19",
+-    "electron": "^30.0.1",
++    "electron": "^30.5.1",
+     "electron-builder": "^24.13.3",
+     "lucide-react": "^0.368.0",
+     "postcss": "^8.4.38",
+diff --git a/scripts/python-utils.mjs b/scripts/python-utils.mjs
+index 89c17c2083c961e5e4b06272936f9d3ac479e69e..be0b15e38a6db3dee3b7c61e63c01b68b0b0a375 100644
+--- a/scripts/python-utils.mjs
++++ b/scripts/python-utils.mjs
+@@ -1,5 +1,5 @@
+ import { spawnSync } from 'node:child_process';
+-import { existsSync } from 'node:fs';
++import { existsSync, rmSync } from 'node:fs';
+ import { join, dirname } from 'node:path';
+ import { fileURLToPath } from 'node:url';
+ 
+@@ -46,6 +46,14 @@ export function tryCmd(cmd, args) {
+ let _systemPy = null;
+ export function findSystemPython() {
+   if (_systemPy) return _systemPy;
++  const configured = process.env.KRYPT_TRADER_PYTHON || process.env.PYTHON;
++  if (configured) {
++    if (tryCmd(configured, ['--version'])) {
++      _systemPy = configured;
++      return _systemPy;
++    }
++    throw new Error(`Configured Python interpreter is not runnable: ${configured}`);
++  }
+   const candidates = isWin
+     ? [
+         { cmd: 'py', args: ['-3', '--version'], spawnAs: 'py' },
+@@ -71,14 +79,26 @@ export function systemPyPrefix() {
+   return findSystemPython() === 'py' ? ['-3'] : [];
+ }
+ 
++export function venvInterpreterUsable() {
++  return existsSync(VENV_PY) && tryCmd(VENV_PY, ['-c', 'import sys']);
++}
++
+ export function ensureVenv({ force = false } = {}) {
+-  if (!existsSync(VENV) || force) {
++  const hasVenv = existsSync(VENV);
++  if (force && hasVenv) {
++    console.log('>> Recreating Python venv at python/.venv');
++    rmSync(VENV, { recursive: true, force: true });
++  } else if (hasVenv && !venvInterpreterUsable()) {
++    console.log('>> Existing Python venv is not usable; recreating python/.venv');
++    rmSync(VENV, { recursive: true, force: true });
++  }
++  if (!existsSync(VENV)) {
+     const sys = findSystemPython();
+     console.log('>> Creating Python venv at python/.venv');
+     run(sys, [...systemPyPrefix(), '-m', 'venv', '.venv']);
+   }
+-  if (!existsSync(VENV_PY)) {
+-    throw new Error(`venv created but no interpreter at ${VENV_PY}`);
++  if (!venvInterpreterUsable()) {
++    throw new Error(`venv interpreter is not usable at ${VENV_PY}`);
+   }
+   if (!force && tryCmd(VENV_PY, ['-c', 'import httpx, cryptography'])) {
+     return;
+diff --git a/scripts/setup-python.mjs b/scripts/setup-python.mjs
+index 9433bfcb222d5e85991fec63a909d4198c821c27..9b11e3f8b7a36dfa9b3562d57d82f66a4a7519b4 100644
+--- a/scripts/setup-python.mjs
++++ b/scripts/setup-python.mjs
+@@ -1,7 +1,11 @@
+ import { ensureVenv } from './python-utils.mjs';
+ 
++const args = new Set(process.argv.slice(2));
++const force = args.has('--force');
++const strict = args.has('--strict');
++
+ try {
+-  ensureVenv();
++  ensureVenv({ force });
+   console.log('>> Python backend ready.');
+ } catch (e) {
+   console.error('!! Python setup failed:', e.message);
+@@ -9,5 +13,5 @@ try {
+     'You can still run the app in renderer-only mode; the trading backend\n' +
+     '   will not start until Python is available.',
+   );
+-  process.exit(0);
++  process.exit(strict ? 1 : 0);
+ }

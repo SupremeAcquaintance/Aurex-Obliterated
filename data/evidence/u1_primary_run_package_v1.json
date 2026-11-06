@@ -1,0 +1,682 @@
+{
+  "schema_version": "aurex-u1-volatility-managed-broad-spot-beta-run-package-v1",
+  "package_id": "u1-primary-mechanism-run-package-v1",
+  "package_version": "1.0.0",
+  "frozen_at": "2026-07-27T12:29:31.162099Z",
+  "status": "FROZEN_PRE_DEVELOPMENT_OUTCOME",
+  "engine_version": "u1-volatility-managed-broad-spot-engine-v1.0.0",
+  "python_version": "3.12.13",
+  "pydantic_version": "2.13.4",
+  "decimal_precision": 50,
+  "decimal_rounding": "ROUND_HALF_EVEN",
+  "discovery_charter_evidence_hash": "642f67fdc55fc041c010e1e7c90732e102a2214bc76c46df15d864c2d269fbcf",
+  "theory_screen_evidence_hash": "0d32405ea4eea989ee93b74b2f393d5e988cf9eadb63cbde78cc652996eab745",
+  "universe_manifest_evidence_hash": "dacc57f649846f716b8134aa0abba5accc78b0f1607d653addb0df3d9e132a74",
+  "development_dataset_bundle_evidence_hash": "fba63b8e237220c760daf902f2c999e9b01121357a4cc583c9fa5cb50b83d341",
+  "contamination_ledger_evidence_hash": "9f7face6a22a51b2a0b20d653561396fb6415f532ad0fecd883b3c6e6c132207",
+  "primary_protocol_evidence_hash": "3d8b335cfcee93be9e104e7bc029ea09f08e77cd39861afa8743548c245bb229",
+  "execution_specification_evidence_hash": "220e9eca631e554833b9c063cdf960fd7b209a70b545324ca40554e2dcf460d0",
+  "market_data_evidence_hash": "4a41ccae12a88ad81f3f6aa45f6d5feb19947ef5f7f211443c00c1e010c02f00",
+  "source_file_sha256": {
+    "scripts/freeze_u1_run_package.py": "cc9592e21039f37c6d6f088cc627acf0e7de0517b9b92ddc7ee022f668c1ecfd",
+    "scripts/run_u1_primary_mechanism.py": "bed2f849dedce3298bf8347bbc6cf255ad02fe662fb561309441e6d79e176643",
+    "src/aurex/backtest_engine/binance_vision.py": "9336417419ecb144070cff193bd9b632d5ab992069c45e792099f390588dac44",
+    "src/aurex/backtest_engine/development_bundle.py": "f29e178483df15902fcdedc071cb38d32238e1ee588dc75d244c94b76461e4db",
+    "src/aurex/backtest_engine/research_engine.py": "b78e30276489bda7fe240f37264d21bc48ccde2291dd6aa305cfee8d38ba5f73",
+    "src/aurex/backtest_engine/research_study_runner.py": "58f7f1f796bc766560db13ffcaf7db2f95d2c50d4f6b8748625ddc3a356f4834",
+    "src/aurex/backtest_engine/research_u1_engine.py": "04b18707ff968f51e0487b9b874e40dd06e15e26f8f8ad9f19361b7bcd5a4895",
+    "src/aurex/backtest_engine/research_u1_execution_spec.py": "780830b2583d2cb868f94416832d28b1a1c83506b30f5fd81751da9319addcae",
+    "src/aurex/backtest_engine/research_u1_primary_protocol.py": "24a366125e66f2154f711ab44222fcb211072b59c385e9333ba21139a66ad460",
+    "src/aurex/backtest_engine/research_u1_result.py": "0bd85c3ef8613a513b29a351ffbbcd66ddaf9ba0486fedac5479fe8035b39c0e",
+    "src/aurex/backtest_engine/research_u1_run_package.py": "7f494e7f3383400e5520fadf5cdb0c39726c3620fcdfe98780b8746ba8774ebc",
+    "src/aurex/backtest_engine/research_u1_study_runner.py": "6efefc33d85d86c981b0d56acf87c70e5a74c9444a310993224af3cd8a7d55b2",
+    "src/aurex/backtest_engine/universe.py": "85a7bb14342f67b94a13d686fa8c92228ab6b6bcf12136c78564cd4769c0b35d"
+  },
+  "planned_replays": [
+    {
+      "run_id": "benchmark--static_broad_spot_equal_weight_v1--cost-1",
+      "category": "BENCHMARK",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "BENCHMARK",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--volatility_managed_broad_spot_beta_v1--fold-01-2023-partial-q1",
+      "category": "TEMPORAL_FOLD",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2023-04-01T00:00:00Z",
+      "fold_id": "fold-01-2023-partial-q1",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--volatility_managed_broad_spot_beta_v1--fold-02-2023q2",
+      "category": "TEMPORAL_FOLD",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-04-01T00:00:00Z",
+      "evaluation_end": "2023-07-01T00:00:00Z",
+      "fold_id": "fold-02-2023q2",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--volatility_managed_broad_spot_beta_v1--fold-03-2023q3",
+      "category": "TEMPORAL_FOLD",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-07-01T00:00:00Z",
+      "evaluation_end": "2023-10-01T00:00:00Z",
+      "fold_id": "fold-03-2023q3",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--volatility_managed_broad_spot_beta_v1--fold-04-2023q4",
+      "category": "TEMPORAL_FOLD",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-10-01T00:00:00Z",
+      "evaluation_end": "2024-01-01T00:00:00Z",
+      "fold_id": "fold-04-2023q4",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--volatility_managed_broad_spot_beta_v1--fold-05-2024q1",
+      "category": "TEMPORAL_FOLD",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-01-01T00:00:00Z",
+      "evaluation_end": "2024-04-01T00:00:00Z",
+      "fold_id": "fold-05-2024q1",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--volatility_managed_broad_spot_beta_v1--fold-06-2024q2",
+      "category": "TEMPORAL_FOLD",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-04-01T00:00:00Z",
+      "evaluation_end": "2024-07-01T00:00:00Z",
+      "fold_id": "fold-06-2024q2",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--volatility_managed_broad_spot_beta_v1--fold-07-2024q3",
+      "category": "TEMPORAL_FOLD",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-07-01T00:00:00Z",
+      "evaluation_end": "2024-10-01T00:00:00Z",
+      "fold_id": "fold-07-2024q3",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "fold--volatility_managed_broad_spot_beta_v1--fold-08-2024q4",
+      "category": "TEMPORAL_FOLD",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2024-10-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": "fold-08-2024q4",
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-AAVEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "AAVEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-ADAUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ADAUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-APEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "APEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-APTUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "APTUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-ATOMUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ATOMUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-AVAXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "AVAXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-BCHUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "BCHUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-BNBUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "BNBUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-CFXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "CFXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-CRVUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "CRVUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-DOGEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "DOGEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-DOTUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "DOTUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-DYDXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "DYDXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-ETCUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ETCUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-FETUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "FETUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-FILUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "FILUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-FTMUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "FTMUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-GALAUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "GALAUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-GRTUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "GRTUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-ICPUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "ICPUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-INJUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "INJUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-LDOUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LDOUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-LINKUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LINKUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-LTCUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LTCUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-LUNCUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "LUNCUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-MKRUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "MKRUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-NEARUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "NEARUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-OPUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "OPUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-RUNEUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "RUNEUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-SANDUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "SANDUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-SHIBUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "SHIBUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-STXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "STXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-TRXUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "TRXUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-UNIUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "UNIUSDT"
+      ]
+    },
+    {
+      "run_id": "lomo--volatility_managed_broad_spot_beta_v1--without-XRPUSDT",
+      "category": "LEAVE_ONE_MARKET_OUT",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": [
+        "XRPUSDT"
+      ]
+    },
+    {
+      "run_id": "overall--volatility_managed_broad_spot_beta_v1--cost-1",
+      "category": "OVERALL",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--volatility_managed_broad_spot_beta_v1--cost-1p5",
+      "category": "OVERALL",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "1.5",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    },
+    {
+      "run_id": "overall--volatility_managed_broad_spot_beta_v1--cost-2",
+      "category": "OVERALL",
+      "variant_id": "volatility_managed_broad_spot_beta_v1",
+      "variant_version": "1.0.0",
+      "variant_role": "PRIMARY",
+      "cost_multiplier": "2",
+      "evaluation_start": "2023-02-01T00:00:00Z",
+      "evaluation_end": "2025-01-01T00:00:00Z",
+      "fold_id": null,
+      "omitted_symbols": []
+    }
+  ],
+  "expected_replay_count": 47,
+  "result_ledger_relative_path": "u1_primary_mechanism_result_v1.json",
+  "replay_artifact_directory_relative_path": "u1_primary_mechanism_results_v1",
+  "deterministic_replay_required": true,
+  "validation_data_loaded": false,
+  "holdout_data_loaded": false,
+  "forward_data_loaded": false,
+  "preexisting_result_artifacts": [],
+  "outcome_fields_inspected": [],
+  "builder_contract_hash": "06fb6bb49e70ae886ca0f15b68c11f0a4f79c35e95c9bd62ae161778c3f8c34d",
+  "package_evidence_hash": "fd6a1bd0a4faf4b8a65a650e41d69050f7d870d33dfcc29d9ce89d170bcd78b2"
+}

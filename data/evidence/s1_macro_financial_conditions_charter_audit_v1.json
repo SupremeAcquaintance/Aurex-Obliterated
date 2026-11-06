@@ -1,0 +1,19 @@
+{
+  "schema_version": "aurex-s1-macro-financial-conditions-charter-audit-v1",
+  "audit_id": "s1-macro-financial-conditions-charter-audit-v1",
+  "audited_at": "2026-08-26T18:24:38.136036Z",
+  "charter_path": "data/evidence/s1_macro_financial_conditions_charter_v1.json",
+  "charter_file_sha256": "6c95657699dfe30dc4d89c20dbc7a85d378977f53d9b61be79212561753240a8",
+  "charter_evidence_hash": "f5f0aa9980df16c4964abe1a41512abeccce2f009a2743492e2f0e1ce86d0c7d",
+  "builder_contract_hash": "6b49d03bfa1842b3948314738a38637faf8515f09b0dc545b132c9fb0c76b631",
+  "auditor_contract_hash": "47d50acfc566baec5ce0307dd3aec1e92cdfc920d67326a3a4c2509b2922b754",
+  "reconstructed_exactly": true,
+  "predecessor_binding_count": 5,
+  "research_source_count": 5,
+  "partition_count": 5,
+  "market_numeric_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "decision": "PASS_S1_CHARTER_RECONSTRUCTED_NO_OUTCOMES",
+  "next_authorization": "AUTHORIZE_S1_METADATA_ONLY_NFCI_VINTAGE_FEASIBILITY",
+  "audit_evidence_hash": "79cc6e3fda4f1104c2c1df967e34c537695564f2bb29b7c7634863df57ab7239"
+}

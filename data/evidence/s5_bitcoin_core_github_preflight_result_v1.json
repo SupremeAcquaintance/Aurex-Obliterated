@@ -1,0 +1,154 @@
+{
+  "authorization_header_used": false,
+  "authorizes_bulk_acquisition_protocol_design": false,
+  "authorizes_bulk_metadata_acquisition_now": false,
+  "authorizes_live": false,
+  "authorizes_market_values": false,
+  "authorizes_paper": false,
+  "authorizes_parameters": false,
+  "authorizes_production": false,
+  "authorizes_returns": false,
+  "authorizes_testnet_strategy_orders": false,
+  "btc_market_values_read": 0,
+  "bulk_request_page_count_at_100": null,
+  "bulk_unauthenticated_hours_lower_bound": null,
+  "candidates_created": 0,
+  "completed_at": "2026-09-02T15:39:56.425626Z",
+  "content_type": "application/json; charset=utf-8",
+  "decision": "STOP_S5_GITHUB_METADATA_PREFLIGHT_FAILED_RETIRE_S5",
+  "elapsed_seconds": 1.25,
+  "environment_proxy_used": false,
+  "etag_header": "W/\"b77eb2437dad0f3598af34c1e08c8e50887fc3a59aa7500c149731f00b70063f\"",
+  "executed_at": "2026-09-02T15:39:56.455466Z",
+  "failed_gate_count": 5,
+  "failure_message": "Failed gates: JSON_CONTENT_TYPE_AND_PAYLOAD_PARSE_PASS, TERMINAL_LINK_PAGE_PARSED_WITH_FROZEN_QUERY_SCOPE, EXACTLY_ONE_CLOSED_MASTER_PULL_RECORD_SCHEMA_VALID, EXACT_BULK_PAGE_AND_RATE_WINDOW_BUDGET_CALCULATED, PASS_AUTHORIZES_BULK_ACQUISITION_PROTOCOL_ONLY",
+  "failure_type": "PreflightGateFailure",
+  "final_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls?state=closed&base=master&sort=created&direction=asc&per_page=1&page=1",
+  "first_pull_base_ref": null,
+  "first_pull_base_sha": null,
+  "first_pull_created_at": null,
+  "first_pull_merge_commit_sha": null,
+  "first_pull_merged_at": null,
+  "first_pull_number": null,
+  "first_pull_state": null,
+  "gate_results": [
+    {
+      "evidence": "The transport decision and readiness-v31 result/audit artifacts remain hash-bound.",
+      "gate_id": "TRANSPORT_DECISION_AND_READINESS_V31_LINEAGE_BOUND",
+      "status": "PASS"
+    },
+    {
+      "evidence": "The exact page-one GET and three explicit nonauthorization headers match protocol.",
+      "gate_id": "EXACT_UNAUTHENTICATED_PAGE_ONE_REQUEST_BOUND",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Exactly one request attempt was executed; retry is structurally unavailable.",
+      "gate_id": "ONE_AND_ONLY_ONE_REQUEST_ATTEMPT_EXECUTED",
+      "status": "PASS"
+    },
+    {
+      "evidence": "The response must be HTTP 200 at the exact URL with zero redirect and bounded time.",
+      "gate_id": "HTTP_200_WITHOUT_REDIRECT",
+      "status": "PASS"
+    },
+    {
+      "evidence": "The nonempty response body is byte-bounded, SHA-256 hashed, and transcript-preserved.",
+      "gate_id": "RESPONSE_BODY_BOUNDED_AND_EXACTLY_PRESERVED",
+      "status": "PASS"
+    },
+    {
+      "evidence": "The response content type and one-record JSON payload both validate.",
+      "gate_id": "JSON_CONTENT_TYPE_AND_PAYLOAD_PARSE_PASS",
+      "status": "FAIL"
+    },
+    {
+      "evidence": "Unauthenticated core rate-limit limit, remaining, reset, and resource headers validate.",
+      "gate_id": "UNAUTHENTICATED_RATE_LIMIT_HEADERS_VALID",
+      "status": "PASS"
+    },
+    {
+      "evidence": "The terminal Link page retains every frozen query parameter and yields record count.",
+      "gate_id": "TERMINAL_LINK_PAGE_PARSED_WITH_FROZEN_QUERY_SCOPE",
+      "status": "FAIL"
+    },
+    {
+      "evidence": "Exactly one closed master pull record exposes required timestamps and object IDs.",
+      "gate_id": "EXACTLY_ONE_CLOSED_MASTER_PULL_RECORD_SCHEMA_VALID",
+      "status": "FAIL"
+    },
+    {
+      "evidence": "The record count yields exact 100-record page and 60-request-hour lower bounds.",
+      "gate_id": "EXACT_BULK_PAGE_AND_RATE_WINDOW_BUDGET_CALCULATED",
+      "status": "FAIL"
+    },
+    {
+      "evidence": "No Authorization header, token value, or environment proxy was used.",
+      "gate_id": "NO_TOKEN_VALUE_OR_AUTHORIZATION_HEADER_USED",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Zero BTC values, parameters, returns, candidates, strategy executions, or orders ran.",
+      "gate_id": "ZERO_BTC_VALUES_PARAMETERS_RETURNS_CANDIDATES_OR_ORDERS",
+      "status": "PASS"
+    },
+    {
+      "evidence": "Source completeness and predictive edge remain explicitly unadjudicated.",
+      "gate_id": "SOURCE_COMPLETENESS_AND_PREDICTIVE_EDGE_NOT_ADJUDICATED",
+      "status": "PASS"
+    },
+    {
+      "evidence": "A PASS can authorize only a separately frozen bulk-acquisition protocol.",
+      "gate_id": "PASS_AUTHORIZES_BULK_ACQUISITION_PROTOCOL_ONLY",
+      "status": "FAIL"
+    }
+  ],
+  "github_api_requests_executed": 1,
+  "github_metadata_records_parsed": 0,
+  "http_status": 200,
+  "limitations": [
+    "A passing preflight authorizes only bulk-acquisition protocol design.",
+    "Bulk acquisition must be separately rate-limited, resumable, and audited.",
+    "Closed pull records include both merged and unmerged proposals.",
+    "Current platform metadata cannot guarantee preservation of deleted records.",
+    "No BTC market value, parameter, return, candidate, signal, or order was created.",
+    "No paper, Testnet strategy, production, live, real-capital, or profit authority was created.",
+    "No token, Authorization header, environment proxy, redirect, or retry was used.",
+    "Source completeness and predictive edge remain unadjudicated.",
+    "The first record is used only for schema validation and cannot qualify a signal.",
+    "The preflight validates one current GitHub response, not historical completeness.",
+    "The terminal record count can change after this response snapshot."
+  ],
+  "link_header": "<https://api.github.com/repositories/1181927/pulls?state=closed&base=master&sort=created&direction=asc&per_page=1&page=2>; rel=\"next\", <https://api.github.com/repositories/1181927/pulls?state=closed&base=master&sort=created&direction=asc&per_page=1&page=24012>; rel=\"last\"",
+  "next_authorization": "NONE_S5_GITHUB_METADATA_PREFLIGHT_FAILED_RETIRE_S5",
+  "orders_submitted": 0,
+  "parameters_defined": 0,
+  "parsed_pull_record_count": 0,
+  "passed_gate_count": 9,
+  "predictive_edge_conclusion": "NOT_EVALUATED",
+  "protocol_evidence_hash": "b711d7010c0a549bd699712a1b6605b8b77a4836516f66a98a5b077d7293e41d",
+  "real_net_profit_usd": "0",
+  "redirect_count": 0,
+  "request_attempt_count": 1,
+  "request_method": "GET",
+  "request_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls?state=closed&base=master&sort=created&direction=asc&per_page=1&page=1",
+  "response_body_sha256": "48e21e42f34f768826c4ec91679ac0e727a9be9c1ed21a1ee08798770ba22620",
+  "response_byte_count": 15733,
+  "result_evidence_hash": "08984a1bd4f5c01fb1d062a5b5bb6b0cea4a3829b27d06dfab216314b53035e3",
+  "result_id": "s5-github-preflight-result-v1",
+  "returns_calculated": 0,
+  "runner_contract_hash": "bdf5a47c8cb77eb0ff354943c4b515d04e5f4f24fca0f4d5d92c27726ae9f627",
+  "schema_version": "aurex-s5-github-preflight-result-v1",
+  "source_completeness_conclusion": "NOT_YET_ADJUDICATED",
+  "started_at": "2026-09-02T15:39:55.181554Z",
+  "strategy_executions": 0,
+  "terminal_record_count": null,
+  "token_value_accessed": false,
+  "transcript_byte_count": 22852,
+  "transcript_file_sha256": "abf49c61202d1c44f6bc7f8c9a34003792a6af8e152651ad8648eb491ac497ab",
+  "transcript_path": "data/evidence/s5_github_pull_metadata_preflight_transcript_v1.json",
+  "x_ratelimit_limit": 60,
+  "x_ratelimit_remaining": 59,
+  "x_ratelimit_reset": 1788367195,
+  "x_ratelimit_resource": "core"
+}

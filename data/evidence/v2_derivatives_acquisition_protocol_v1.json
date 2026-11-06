@@ -1,0 +1,616 @@
+{
+  "schema_version": "aurex-v2-derivatives-pilot-acquisition-protocol-v1",
+  "protocol_id": "v2-derivatives-pilot-acquisition-v1",
+  "protocol_version": "1.0.0",
+  "frozen_at": "2026-07-28T06:36:50.158309Z",
+  "status": "FROZEN_PRE_PAYLOAD",
+  "source_census_contract_evidence_hash": "7502a7eb6a54089d90bfc40889390f8c6ac18bbe55d18ef4122421e7fa18e0dc",
+  "source_census_result_evidence_hash": "ce5d60e3338903bcb8a3783bd4b41fa63bec518c3041b213c9529bd6458d652e",
+  "capability_audit_evidence_hash": "3726b944529990be7160604942f4e580cd8d198efe79f8e074dc72b760638e42",
+  "universe_manifest_evidence_hash": "dacc57f649846f716b8134aa0abba5accc78b0f1607d653addb0df3d9e132a74",
+  "contamination_ledger_evidence_hash": "9f7face6a22a51b2a0b20d653561396fb6415f532ad0fecd883b3c6e6c132207",
+  "builder_contract_hash": "445f72b6499def6ceaa1678a3224acf1ef600a6a6e4ea557c2e281a513a131e2",
+  "predecessor_census_decision": "PERMIT_SEPARATE_V2_DATA_ACQUISITION_PROTOCOL",
+  "official_documentation_urls": [
+    "https://data.binance.vision/",
+    "https://developers.binance.com/en/docs/catalog",
+    "https://github.com/binance/binance-public-data/blob/master/README.md"
+  ],
+  "complete_source_symbols": [
+    "AAVEUSDT",
+    "ADAUSDT",
+    "APEUSDT",
+    "APTUSDT",
+    "ATOMUSDT",
+    "AVAXUSDT",
+    "BCHUSDT",
+    "BNBUSDT",
+    "CRVUSDT",
+    "DOGEUSDT",
+    "DOTUSDT",
+    "DYDXUSDT",
+    "ETCUSDT",
+    "FETUSDT",
+    "FILUSDT",
+    "FTMUSDT",
+    "GALAUSDT",
+    "GRTUSDT",
+    "ICPUSDT",
+    "INJUSDT",
+    "LDOUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "MKRUSDT",
+    "NEARUSDT",
+    "OPUSDT",
+    "RUNEUSDT",
+    "SANDUSDT",
+    "TRXUSDT",
+    "UNIUSDT",
+    "XRPUSDT"
+  ],
+  "excluded_incomplete_symbols": [
+    "CFXUSDT",
+    "LUNCUSDT",
+    "SHIBUSDT",
+    "STXUSDT"
+  ],
+  "incomplete_symbol_action": "EXCLUDE_WITHOUT_SUBSTITUTION_OR_BACKFILL",
+  "pilot_selection_rule": "FIRST_MEDIAN_LAST_SORTED_COMPLETE_SYMBOLS",
+  "pilot_month_selection_rule": "FIRST_MIDDLE_LAST_FROZEN_CENSUS_MONTHS",
+  "pilot_symbols": [
+    "AAVEUSDT",
+    "FTMUSDT",
+    "XRPUSDT"
+  ],
+  "pilot_months": [
+    "2023-01",
+    "2024-01",
+    "2024-12"
+  ],
+  "family_ids": [
+    "spot_klines_1m",
+    "um_contract_klines_1m",
+    "um_funding_rate_events",
+    "um_index_price_klines_1m",
+    "um_mark_price_klines_1m",
+    "um_premium_index_klines_1m"
+  ],
+  "pilot_target_count": 54,
+  "targets": [
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2023-01",
+      "family_id": "spot_klines_1m",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "42ae760259ca0794a8cc8ab6bbe345334501a0b45de84c366e7f0425b447ccb8"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2023-01",
+      "family_id": "um_contract_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "9e869b5b80c61f7bae6c2c12796332b6a0b19e4f6ab4f12307d798cfa54947c7"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2023-01",
+      "family_id": "um_funding_rate_events",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AAVEUSDT/AAVEUSDT-fundingRate-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AAVEUSDT/AAVEUSDT-fundingRate-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "8ccde0024bc83011b46667ea672b76e64a90923937f372faf4caa8c85d256703"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2023-01",
+      "family_id": "um_index_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "d59a9dd61446dbc9e45e7b1c380d7d7936c83ea55faa523e4867a7efae9c6997"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2023-01",
+      "family_id": "um_mark_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "31cb99b7252f1cb4ec81b2b0e1c5aece0b32b98cb41b6087a2a30fdb56943acd"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2023-01",
+      "family_id": "um_premium_index_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/AAVEUSDT/1m/AAVEUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "e666404ee69268dafeadb10d2d9c1102a83c8d117f07f7c19f75d1ffc4acc287"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-01",
+      "family_id": "spot_klines_1m",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "6cb51b57ff25f068a8e5b65de21a3ec9cd1806939142acfe52a60fa453fd0197"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-01",
+      "family_id": "um_contract_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "6d239daa8c27dce7a77a60180c33fdd73e953444ef1c2207a9ee74e7af63127f"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-01",
+      "family_id": "um_funding_rate_events",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AAVEUSDT/AAVEUSDT-fundingRate-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AAVEUSDT/AAVEUSDT-fundingRate-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "b20a6dc4d00fdc42b486da6b8be052713c09af230cdbc85bd4a5d42014ce8e70"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-01",
+      "family_id": "um_index_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "cf8fbac6f47408a0932f03f5c084f4740db40d186166fa6853dd17b32199e779"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-01",
+      "family_id": "um_mark_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "12379771957a23f118807cf96e5f1c8fe68b241ec64024e472630f0ab2f8f102"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-01",
+      "family_id": "um_premium_index_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "6c8579ee0e10121a98ce9bf4b1b4bb6b0d7713214c407e0ca06d60c5ba63df83"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-12",
+      "family_id": "spot_klines_1m",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "a0e9e3df832450a8c73d16ffff7ee36961916bdc5e77274b9f39f869fc0ad8d7"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-12",
+      "family_id": "um_contract_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "58235bd8647df2cac401aeb0d092554e8a2bc3b108ac59781edd3d5e41fbe1cd"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-12",
+      "family_id": "um_funding_rate_events",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AAVEUSDT/AAVEUSDT-fundingRate-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AAVEUSDT/AAVEUSDT-fundingRate-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "f9c4a5c8af9e9caba6ddaafc392cedbeae767ed5217d0cb0c8b0273e3941b844"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-12",
+      "family_id": "um_index_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "a786601b8c26e9e490f8b9f0d58b455bdb3a919323bc8bd094918f4c74780b02"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-12",
+      "family_id": "um_mark_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "09d737a16cc543577918ba1a3bfbd090ee7eecbf17c473d741077f38f351c4ba"
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "month": "2024-12",
+      "family_id": "um_premium_index_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/AAVEUSDT/1m/AAVEUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "45e9e9ce655e5ae4e1e22e6f5ae46a6722a0de5e2905e31c3d4ada5602a536ed"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2023-01",
+      "family_id": "spot_klines_1m",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "a4ff1968c62a1260a4473859f243fee482b39f7d4bb514c2c776ac39bf80e0fb"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2023-01",
+      "family_id": "um_contract_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "864b22ac1d32d1c311b897a5c1a515c73ae18966197e0157c359597427a8c1f2"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2023-01",
+      "family_id": "um_funding_rate_events",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FTMUSDT/FTMUSDT-fundingRate-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FTMUSDT/FTMUSDT-fundingRate-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "d29590d3ef551bfc673af1c3ab3a4a843c3f4953f9aa859b91fad124736e71b1"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2023-01",
+      "family_id": "um_index_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "bd00d985baf7381438838d7045aa20b348b38ca61d82a90435d4df257dfdebe9"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2023-01",
+      "family_id": "um_mark_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "1745548dbb070fe6a0b9f2caa4dc088229898b4727861b836e58b7ee53be280e"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2023-01",
+      "family_id": "um_premium_index_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/FTMUSDT/1m/FTMUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "55bc130b8b00f5186f73fa5529c35b40359149d1832df5d88f9a65e1d67bd7c9"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-01",
+      "family_id": "spot_klines_1m",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "d336441c597051c639300b5455bd93d9fc93492b9ff6b82ae840242e3a99417b"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-01",
+      "family_id": "um_contract_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "057bd465154fcf70eb32bf4b91cbfa597e5e571135e7629b4ecd85820f2a34f4"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-01",
+      "family_id": "um_funding_rate_events",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FTMUSDT/FTMUSDT-fundingRate-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FTMUSDT/FTMUSDT-fundingRate-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "d9e358dbd1a4e349df9f58c5a179b9ef9627aeaaff054f5ca2ea941647eaba4d"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-01",
+      "family_id": "um_index_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "5ae77eba57be963a232d8442b880b125acdb66924aff7b9f716023911f6c616e"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-01",
+      "family_id": "um_mark_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "d30a2bc5c44c9620347c9d064f91098e4e7f33acf6adb5da188d1ce35e26a929"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-01",
+      "family_id": "um_premium_index_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/FTMUSDT/1m/FTMUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "8a9bdf84857978706841e1ae769e216599737cae0ac2f0614c28f3b79241f910"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-12",
+      "family_id": "spot_klines_1m",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "135e40fc9790480a2baabf95b7adfc2d8835c7413b6ecd596e8993b62d0eca56"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-12",
+      "family_id": "um_contract_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "a2a8e5d1fde3fada56996ca900ce7a22cd0c5b2035cd87f8c1ce575563e2d156"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-12",
+      "family_id": "um_funding_rate_events",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FTMUSDT/FTMUSDT-fundingRate-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FTMUSDT/FTMUSDT-fundingRate-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "a9f24f520cc9a8f7457ca5db4a10c69b1d1f03528a023a92523d3e756ea337de"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-12",
+      "family_id": "um_index_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "2104f76ed8e746c4faddbb94a22a3c1aa86b59bb0ecbf518c63e0bfc10885bd1"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-12",
+      "family_id": "um_mark_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "f3fb13fedb6374213caf0ffdbfe47ae4832c2701773efa48a39cf7240440707c"
+    },
+    {
+      "symbol": "FTMUSDT",
+      "month": "2024-12",
+      "family_id": "um_premium_index_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/FTMUSDT/1m/FTMUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "2f0b5f40dff7403efd5eac65ff2a39e9f6c502970046405bd343a4e6c7b37c47"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2023-01",
+      "family_id": "spot_klines_1m",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "1fcd000025f1e7ba233de4b38463cb23017530813ea8db412ea81a878f0567aa"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2023-01",
+      "family_id": "um_contract_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "079b1913e16c5db49e6806cb5427014a4cb76897bad01a1cec5db41b0034c210"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2023-01",
+      "family_id": "um_funding_rate_events",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XRPUSDT/XRPUSDT-fundingRate-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XRPUSDT/XRPUSDT-fundingRate-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "d5a60c79d144e9157ccd211c4230fb64fdd210dd34cb22e7660e41531f66a5e9"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2023-01",
+      "family_id": "um_index_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "b8d4632b8291b916146a1085fb111f2c78539c7ce2f616f8aef5c5d5a738dfd4"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2023-01",
+      "family_id": "um_mark_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "88e9f7d483730d0366067a5a7b68c4df4dddeab31f335ad6970da948f8a2dcc0"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2023-01",
+      "family_id": "um_premium_index_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/XRPUSDT/1m/XRPUSDT-1m-2023-01.zip.CHECKSUM",
+      "census_checksum_sha256": "303916da270993b7f6bd77cd198d5b7d0e000c7e7d97af420adccda98d9f7fd8"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-01",
+      "family_id": "spot_klines_1m",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "7307c945202ff1ca4c7253cafd0eb32c7fb386f6affc626b05085dcca8bc6ab1"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-01",
+      "family_id": "um_contract_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "9d0623c5b5d6e13e8dc5698383b317af8f46a3fe9d587fc9d01236a309f7993f"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-01",
+      "family_id": "um_funding_rate_events",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XRPUSDT/XRPUSDT-fundingRate-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XRPUSDT/XRPUSDT-fundingRate-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "fac75e242671739980886a0f39159562dde076d49244e6f2803c407dc0112570"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-01",
+      "family_id": "um_index_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "769bffc66701ef1b60c141e6cae43e1ed27675e865af92ab3062b3f2c4a39dfa"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-01",
+      "family_id": "um_mark_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "61201c1c65589c45173caf3a8b279778a7a28974f24b98d47ab4b10579ae780b"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-01",
+      "family_id": "um_premium_index_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/XRPUSDT/1m/XRPUSDT-1m-2024-01.zip.CHECKSUM",
+      "census_checksum_sha256": "aea0ccda9b3f01ad889d32e8680aeaf9604213dbc73002447fff2f76115c62b2"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-12",
+      "family_id": "spot_klines_1m",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "1772d2484aade02a23777136c98ac3dad2373cc3418a356f6d9fe70d88bfb83e"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-12",
+      "family_id": "um_contract_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "659add47d41b25189bfed69ae3052253df648443e2aa0376537ccece6a39d6ee"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-12",
+      "family_id": "um_funding_rate_events",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XRPUSDT/XRPUSDT-fundingRate-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XRPUSDT/XRPUSDT-fundingRate-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "be526ba15c6c4c3ae8cddda1411a13f665f635be444c992efd2f66e6bbfa37d8"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-12",
+      "family_id": "um_index_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/indexPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "25a3b9b1b2c2d8cb9fc5291687d459dbe2ef2732b302cb937eb88bd744036cc8"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-12",
+      "family_id": "um_mark_price_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "6515ec39d81bebd9c8803e4297a549a45fc7f2ec178653ef027b177c8119f4fb"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "month": "2024-12",
+      "family_id": "um_premium_index_klines_1m",
+      "archive_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip",
+      "checksum_url": "https://data.binance.vision/data/futures/um/monthly/premiumIndexKlines/XRPUSDT/1m/XRPUSDT-1m-2024-12.zip.CHECKSUM",
+      "census_checksum_sha256": "d3119a6e8c6f559df13f3471cd694ab257b1f24fff2b8682268746715688a79d"
+    }
+  ],
+  "storage_root_relative_path": "v2_derivatives_pilot_bundle_v1",
+  "resource_limits": {
+    "maximum_concurrency": 4,
+    "request_timeout_seconds": 60,
+    "maximum_retries": 2,
+    "retry_backoff_seconds": [
+      2,
+      5
+    ],
+    "required_content_length_before_download": true,
+    "maximum_single_archive_compressed_bytes": 268435456,
+    "maximum_pilot_compressed_bytes": 4294967296,
+    "maximum_single_archive_uncompressed_bytes": 1073741824,
+    "maximum_pilot_uncompressed_bytes": 17179869184,
+    "maximum_zip_expansion_ratio": 100,
+    "minimum_free_disk_bytes_before_download": 21474836480,
+    "minimum_free_disk_bytes_after_processing": 5368709120,
+    "resource_limit_breach_action": "STOP_WITHOUT_PARTIAL_AUTHORITATIVE_RESULT"
+  },
+  "integrity": {
+    "checksum_algorithm": "SHA256",
+    "checksum_refresh_before_archive_get": true,
+    "refreshed_checksum_must_equal_census_checksum": true,
+    "checksum_revision_action": "BLOCK_AND_FREEZE_SOURCE_REVISION_DIVERGENCE",
+    "archive_hash_must_equal_refreshed_checksum": true,
+    "write_download_to_part_file": true,
+    "rename_only_after_checksum_pass": true,
+    "exactly_one_csv_member_required": true,
+    "encrypted_zip_members_allowed": false,
+    "nested_archive_members_allowed": false,
+    "path_traversal_members_allowed": false,
+    "symlink_members_allowed": false,
+    "duplicate_archive_targets_allowed": false,
+    "symbol_or_month_substitution_allowed": false,
+    "preserve_raw_archive_and_checksum": true,
+    "upstream_archives_may_be_revised": true
+  },
+  "inspection": {
+    "purpose": "RESOURCE_SCHEMA_AND_TIMESTAMP_QUALIFICATION_ONLY",
+    "allowed_inspection_fields": [
+      "archive_content_length",
+      "archive_sha256",
+      "checksum_file_sha256",
+      "csv_column_count",
+      "csv_header",
+      "csv_member_name",
+      "duplicate_timestamp_count",
+      "first_timestamp",
+      "last_timestamp",
+      "non_finite_numeric_count",
+      "out_of_month_row_count",
+      "row_count",
+      "timestamp_unit",
+      "unexpected_column_count",
+      "zip_compressed_bytes",
+      "zip_uncompressed_bytes"
+    ],
+    "kline_expected_column_count": 12,
+    "funding_schema_must_be_classified_before_normalization": true,
+    "timestamp_unit_must_be_explicit": true,
+    "timestamps_must_be_utc": true,
+    "rows_must_belong_to_target_month": true,
+    "duplicate_timestamps_allowed": false,
+    "non_finite_numeric_values_allowed": false,
+    "unknown_schema_action": "STOP_AND_FREEZE_SCHEMA_DIVERGENCE_WITHOUT_PARSER_TUNING",
+    "return_or_signal_fields_allowed": false,
+    "strategy_outcome_fields_allowed": false
+  },
+  "decision_rule": {
+    "required_target_count": 54,
+    "required_checksum_matches": 54,
+    "required_verified_archives": 54,
+    "required_classified_schemas": 6,
+    "all_integrity_and_resource_gates_required": true,
+    "pass_decision": "PERMIT_SEPARATE_FULL_V2_ARCHIVE_ACQUISITION_PROTOCOL",
+    "fail_decision": "STOP_OR_REDESIGN_V2_ARCHIVE_ACQUISITION",
+    "pass_authorizes_full_download_automatically": false
+  },
+  "authorizes_archive_metadata_requests": true,
+  "authorizes_archive_payload_download": true,
+  "authorized_payload_scope": "EXACT_54_PILOT_TARGETS_ONLY",
+  "authorizes_full_archive_payload_download": false,
+  "authorizes_market_data_import": false,
+  "authorizes_strategy_return_calculation": false,
+  "authorizes_mechanism_selection": false,
+  "creates_candidate": false,
+  "creates_strategy_eligibility": false,
+  "creates_paper_eligibility": false,
+  "creates_live_eligibility": false,
+  "validation_data_loaded": false,
+  "holdout_data_loaded": false,
+  "forward_data_loaded": false,
+  "strategy_outcome_fields_inspected": [],
+  "limitations": [
+    "A passing pilot permits only a separate full-acquisition protocol; it does not automatically authorize the remaining 4,410 archives.",
+    "CFXUSDT, LUNCUSDT, SHIBUSDT, and STXUSDT remain excluded because their 2023-2024 six-family archive coverage is incomplete.",
+    "Checksum equality establishes byte integrity, not economic correctness, executable liquidity, or future archive availability.",
+    "No result from this protocol creates backtest, paper, sandbox, micro-live, or live eligibility.",
+    "The pilot is a deterministic first/median/last source sample and does not estimate strategy performance.",
+    "The pilot may inspect schemas and timestamps but may not calculate returns, signals, trades, gates, or strategy outcomes."
+  ],
+  "protocol_evidence_hash": "aa88b2ff6add0637b889da27b784cd1a26b1addc4590832c9c51e973e2aaebc5"
+}

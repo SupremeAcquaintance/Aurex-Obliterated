@@ -1,0 +1,102 @@
+{
+  "authority_scope": "FUTURE_STRATEGY_RESEARCH_ONLY",
+  "contract_evidence_hash": "8676ffc5caea7782607ad7e9072e71ab8e09fbd93fe115f47c8860833f33f50e",
+  "contract_id": "aurex-strategy-factory-contract-v1",
+  "default_acceptance_criteria": {
+    "cost_stress_multipliers": [
+      "1.5",
+      "2.0"
+    ],
+    "max_drawdown": null,
+    "max_multiple_testing_profit_factor_penalty": "0.25",
+    "max_single_day_trade_share": "0.25",
+    "max_tested_variants": 12,
+    "min_active_trading_days": 15,
+    "min_cost_stress_profit_factor": "1.0",
+    "min_holdout_profit_factor": "1.15",
+    "min_holdout_trades": 30,
+    "min_out_of_sample_profit_factor": "1.15",
+    "min_out_of_sample_trades": 30,
+    "min_profit_factor": "1.15",
+    "min_trades": 100,
+    "min_uncertainty_expectancy_lower_bound": "0",
+    "min_walk_forward_pass_rate": "0.66",
+    "min_walk_forward_trades_per_window": 10,
+    "min_walk_forward_windows": 3,
+    "multiple_testing_profit_factor_step": "0.02",
+    "require_cost_model": true,
+    "require_cost_stress": true,
+    "require_cost_stress_positive_expectancy": true,
+    "require_holdout_decision": true,
+    "require_holdout_positive_expectancy": true,
+    "require_market_regime_breakdown": true,
+    "require_multiple_testing_control": true,
+    "require_out_of_sample_metrics": true,
+    "require_out_of_sample_positive_expectancy": true,
+    "require_positive_expectancy": true,
+    "require_risk_snapshot": true,
+    "require_sample_windows": true,
+    "require_slippage_model": true,
+    "require_trade_dates": true,
+    "require_uncertainty_bound": true,
+    "require_walk_forward_validation": true,
+    "uncertainty_bootstrap_samples": 2000,
+    "uncertainty_confidence": "0.95"
+  },
+  "frozen_at": "2026-08-06T08:46:19.304905Z",
+  "holdout_may_be_opened_once": true,
+  "limitations": [
+    "This contract evaluates future candidates; it does not create a strategy.",
+    "Passing historical gates cannot establish future profitability.",
+    "Paper, sandbox-strategy, production, and live authority remain separate gates."
+  ],
+  "live_authority_granted": false,
+  "orders_submitted": 0,
+  "paper_authority_granted": false,
+  "partial_requirement_activation_allowed": false,
+  "production_authority_granted": false,
+  "real_market_values_opened": 0,
+  "real_net_profit_usd": "0",
+  "require_cost_stress": true,
+  "require_holdout_decision": true,
+  "require_multiple_testing_control": true,
+  "require_uncertainty_bound": true,
+  "required_partition_order": [
+    "DEVELOPMENT",
+    "VALIDATION",
+    "HOLDOUT"
+  ],
+  "sandbox_strategy_authority_granted": false,
+  "schema_version": "aurex-strategy-factory-contract-v1",
+  "source_evidence": [
+    {
+      "byte_count": 30231,
+      "file_sha256": "8b2370edd1b69e9bf04369cd3a1b77611e787cf6d122e4c16cbb4109bd87d52d",
+      "path": "src/aurex/backtest_engine/schemas.py"
+    },
+    {
+      "byte_count": 128995,
+      "file_sha256": "3512a99320a8b48d6c639b292c1a108ed6b28246fb9ff026b30e381fb01cfc23",
+      "path": "src/aurex/backtest_engine/service.py"
+    },
+    {
+      "byte_count": 5408,
+      "file_sha256": "26479c1e16f7c2e1dc1f93edafe18e89779b9f7eaf1993e693bc147b3c3671f4",
+      "path": "src/aurex/backtest_engine/strategy_factory_contract.py"
+    },
+    {
+      "byte_count": 8503,
+      "file_sha256": "28047c7d918279efd8cac3213c4324fde55a62409e18981e7c128b1e8a2e6164",
+      "path": "src/aurex/strategy_engine/registry.py"
+    },
+    {
+      "byte_count": 4907,
+      "file_sha256": "c8a0c4318cb12ccbf1809c4bb5647fa2abb1277a724aa2d2d100aff56ed6c8b0",
+      "path": "tests/unit/test_universal_strategy_acceptance.py"
+    }
+  ],
+  "status": "FROZEN_PRE_CANDIDATE",
+  "strategy_candidates_created": 0,
+  "strategy_executions": 0,
+  "validation_must_pass_before_holdout_open": true
+}

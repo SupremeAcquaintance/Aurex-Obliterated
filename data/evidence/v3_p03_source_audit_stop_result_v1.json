@@ -1,0 +1,88 @@
+{
+  "schema_version": "aurex-v3-p03-historical-microstructure-source-audit-stop-result-v1",
+  "result_id": "v3-p03-historical-microstructure-source-audit-stop-v1",
+  "result_version": "1.0.0",
+  "generated_at": "2026-07-28T16:54:04.130546Z",
+  "status": "FINAL_STOP_NO_RETURN_AUDIT_INCOMPLETE",
+  "source_audit_contract_evidence_hash": "f52a3169b60d404033a7a41c24ef8df556d614e8975002035744153134040f7e",
+  "transport_amendment_evidence_hash": "e94f7576ce132fd3389311d467af605ce9e0ec438e61b151ab08e844b386c6ec",
+  "source_runner_contract_hash": "14dad8c2586ef5432b16912679d67fcb0827fc7545aab0705e56b9536dadf345",
+  "finalizer_contract_hash": "81229781f475a6ab97db2d0906b0fb295435bfc46a73ed318c3dcfd012bebee3",
+  "attempts": [
+    {
+      "attempt_id": "INITIAL_HTTP_202",
+      "manifest_path": "data/evidence/source_snapshots/v3_p03_source_audit_v1_failed_http_202_attempt/attempt_manifest.json",
+      "manifest_sha256": "b16260b46cf7e5c38369706dd9394d57bbb5b7dbf5c214fd96ea048689d019a2",
+      "started_at": "2026-07-28T16:41:12.965657Z",
+      "status": "ABORTED_WITHOUT_AUTHORITATIVE_RESULT",
+      "completed_source_count": 1,
+      "http_request_attempt_count": 2,
+      "trigger_source_id": "BINANCE_USDM_ACCOUNT_REST_SCHEMA",
+      "trigger_http_statuses": [
+        202
+      ],
+      "pending_poll_budget_exhausted": false,
+      "authoritative_result_created": false,
+      "market_values_inspected": [],
+      "strategy_outcomes_inspected": [],
+      "return_metrics_calculated": []
+    },
+    {
+      "attempt_id": "AMENDED_HTTP_202_EXHAUSTED",
+      "manifest_path": "data/evidence/source_snapshots/v3_p03_source_audit_v1_failed_http_202_exhausted_attempt/attempt_manifest.json",
+      "manifest_sha256": "447ae4df957af2b309b1e491ed4b9374a3d5b41f7e8a6b1b915656c8b04f67a0",
+      "started_at": "2026-07-28T16:47:02.842675Z",
+      "status": "ABORTED_WITHOUT_AUTHORITATIVE_RESULT",
+      "completed_source_count": 1,
+      "http_request_attempt_count": 5,
+      "trigger_source_id": "BINANCE_USDM_ACCOUNT_REST_SCHEMA",
+      "trigger_http_statuses": [
+        202,
+        202,
+        202,
+        202
+      ],
+      "pending_poll_budget_exhausted": true,
+      "authoritative_result_created": false,
+      "market_values_inspected": [],
+      "strategy_outcomes_inspected": [],
+      "return_metrics_calculated": []
+    }
+  ],
+  "attempted_run_count": 2,
+  "total_http_request_attempt_count": 7,
+  "completed_source_count_per_attempt": 1,
+  "unresolved_source_ids": [
+    "BINANCE_USDM_ACCOUNT_REST_SCHEMA",
+    "BINANCE_USDM_LOCAL_ORDER_BOOK_DOC",
+    "BINANCE_VISION_BTCUSDT_BOOKDEPTH_2023_01_01_ARCHIVE",
+    "BINANCE_VISION_BTCUSDT_BOOKDEPTH_2023_01_01_CHECKSUM"
+  ],
+  "evaluated_requirement_ids": [],
+  "qualified_requirement_ids": [],
+  "reason_codes": [
+    "FORMAL_SOURCE_AUDIT_INCOMPLETE",
+    "TRIGGER_SOURCE_HTTP_202_POLL_BUDGET_EXHAUSTED"
+  ],
+  "decision": "REJECT_V3P03_REQUIRED_HISTORICAL_MICROSTRUCTURE_EVIDENCE_UNAVAILABLE",
+  "selects_primary": false,
+  "creates_candidate": false,
+  "opens_validation": false,
+  "opens_holdout": false,
+  "opens_forward": false,
+  "creates_paper_eligibility": false,
+  "creates_live_eligibility": false,
+  "market_numeric_values_inspected": [],
+  "strategy_outcome_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "limitations": [
+    "Both bounded runs stopped at the same official schema target after HTTP 202; neither produced a partial authoritative result.",
+    "No price, quantity, depth, notional, signal, fill, trade outcome, PnL, or return value was inspected.",
+    "The formal V3P03 audit did not complete and therefore evaluated zero of eight source requirements.",
+    "The transport amendment changed no source target, qualification threshold, decision rule, or market-value permission.",
+    "This stop result makes no claim that passive liquidity provision is universally unprofitable; it records that Aurex cannot qualify it from the frozen source path in this discovery round.",
+    "Unresolved source evidence cannot be assumed available and cannot support primary selection under the frozen all-or-nothing rule.",
+    "V3P03 is rejected before primary selection and creates no candidate, validation, holdout, forward, Pine, paper, sandbox, live, or capital permission."
+  ],
+  "result_evidence_hash": "733556d1d95f30b1c5b012df66299cecb87234a3fe01577b2441b9504b6fb31d"
+}

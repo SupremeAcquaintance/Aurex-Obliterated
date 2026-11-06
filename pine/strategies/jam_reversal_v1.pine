@@ -1,0 +1,701 @@
+//@version=6
+// Aurex strategy version: 1.14.0
+strategy(
+     "Aurex jam_reversal_v1",
+     overlay = true,
+     pyramiding = 0,
+     initial_capital = 1000,
+     currency = currency.USD,
+     commission_type = strategy.commission.percent,
+     commission_value = 0.05,
+     slippage = 2,
+     calc_on_every_tick = false,
+     process_orders_on_close = true
+)
+
+backtestStart = input.time(timestamp("1 Jan 2024 00:00 +0000"), "Backtest start")
+backtestEnd = input.time(timestamp("31 Dec 2026 23:59 +0000"), "Backtest end")
+directionMode = input.string("Both", "Direction mode", options = ["Both", "Long only", "Short only"])
+higherTimeframe = input.timeframe("60", "Higher timeframe")
+htfEmaFastLength = input.int(50, "Higher timeframe EMA fast", minval = 1)
+htfEmaSlowLength = input.int(200, "Higher timeframe EMA slow", minval = 1)
+trendEmaLength = input.int(200, "Current timeframe trend EMA", minval = 1)
+pullbackEmaLength = input.int(20, "Pullback EMA", minval = 1)
+useHigherTimeframeBias = input.bool(true, "Use higher timeframe bias", group = "Context filters")
+useCurrentTrendFilter = input.bool(false, "Use current trend EMA filter", group = "Context filters")
+contextMode = input.string("Hybrid", "Context mode", options = ["Hybrid", "HTF trend", "Local reversal", "None"], group = "Context filters")
+impulseLookback = input.int(6, "Local reversal lookback", minval = 2, maxval = 50, group = "Context filters")
+blockStrongCounterTrend = input.bool(true, "Block strong counter-trend Jam", group = "Context filters")
+counterTrendAdx = input.float(22.0, "Counter-trend ADX block", minval = 1.0, step = 0.5, group = "Context filters")
+atrLength = input.int(14, "ATR length", minval = 1, group = "Pattern filters")
+adxLength = input.int(14, "ADX length", minval = 1, group = "Pattern filters")
+adxSmoothing = input.int(14, "ADX smoothing", minval = 1, group = "Pattern filters")
+reclaimMode = input.string("Body", "Jam reclaim mode", options = ["Body", "Wick"], group = "Pattern filters")
+requireSweep = input.bool(true, "Require prior range sweep", group = "Pattern filters")
+entryStyle = input.string("Breakout confirm", "Entry style", options = ["Breakout confirm", "Immediate"], group = "Pattern filters")
+confirmWindowBars = input.int(8, "Confirmation window bars", minval = 1, maxval = 20, group = "Pattern filters")
+confirmAtrBuffer = input.float(0.02, "Confirmation ATR buffer", minval = 0.0, step = 0.01, group = "Pattern filters")
+maxConfirmDistanceAtr = input.float(1.10, "Max confirmation distance ATR", minval = 0.05, step = 0.05, group = "Pattern filters")
+maxConfirmRangeAtr = input.float(2.20, "Max confirmation candle range ATR", minval = 0.5, step = 0.05, group = "Pattern filters")
+minConfirmClosePosition = input.float(0.95, "Min confirmation close position", minval = 0.50, maxval = 0.95, step = 0.05, group = "Pattern filters")
+cancelPendingOnMidpointFailure = input.bool(true, "Cancel pending on midpoint failure", group = "Pattern filters")
+sweepAtrBuffer = input.float(0.00, "Sweep ATR buffer", minval = 0.0, step = 0.01, group = "Pattern filters")
+reclaimAtrBuffer = input.float(0.02, "Reclaim ATR buffer", minval = 0.0, step = 0.01, group = "Pattern filters")
+minSeedBodyRatio = input.float(0.45, "Min first candle body ratio", minval = 0.1, maxval = 1.0, step = 0.05, group = "Pattern filters")
+minJamBodyRatio = input.float(0.50, "Min Jam candle body ratio", minval = 0.1, maxval = 1.0, step = 0.05, group = "Pattern filters")
+minJamBodyExpansion = input.float(1.05, "Min Jam body expansion", minval = 0.1, step = 0.05, group = "Pattern filters")
+minSeedRangeAtr = input.float(0.25, "Min first candle range ATR", minval = 0.0, step = 0.05, group = "Pattern filters")
+minJamRangeAtr = input.float(0.45, "Min Jam candle range ATR", minval = 0.0, step = 0.05, group = "Pattern filters")
+maxJamRangeAtr = input.float(2.80, "Max Jam candle range ATR", minval = 0.5, step = 0.05, group = "Pattern filters")
+useVolumeFilter = input.bool(true, "Use volume expansion", group = "Pattern filters")
+volumeLength = input.int(20, "Volume average length", minval = 1, group = "Pattern filters")
+volumeExpansion = input.float(1.20, "Volume expansion", minval = 1.0, step = 0.05, group = "Pattern filters")
+useTimeframeAdaptiveConfirmation = input.bool(true, "Use timeframe-adaptive confirmation", group = "Pattern filters")
+stopMode = input.string("Tighter", "Stop mode", options = ["Pattern", "ATR", "Wider", "Tighter"], group = "Risk controls")
+stopAtrBuffer = input.float(0.15, "Pattern stop ATR buffer", minval = 0.0, step = 0.05, group = "Risk controls")
+atrStopMultiplier = input.float(1.4, "ATR stop multiplier", minval = 0.1, step = 0.1, group = "Risk controls")
+targetMode = input.string("ATR capped R", "Target mode", options = ["ATR capped R", "Fixed R"], group = "Risk controls")
+rewardRiskRatio = input.float(2.20, "Reward:risk ratio", minval = 0.5, step = 0.05, group = "Risk controls")
+maxTargetAtr = input.float(2.50, "Max target ATR", minval = 0.20, step = 0.05, group = "Risk controls")
+useCostAwareFilter = input.bool(true, "Use cost-aware edge filter", group = "Risk controls")
+estimatedCommissionPercent = input.float(0.05, "Estimated commission per side (%)", minval = 0.0, step = 0.01, group = "Risk controls")
+minTargetDistanceAtr = input.float(0.65, "Min target distance ATR", minval = 0.10, step = 0.05, group = "Risk controls")
+minNetRewardRisk = input.float(0.80, "Min net reward:risk", minval = 0.10, step = 0.05, group = "Risk controls")
+useBreakevenStop = input.bool(true, "Move stop to breakeven", group = "Risk controls")
+breakevenAtR = input.float(0.90, "Breakeven after R", minval = 0.10, step = 0.05, group = "Risk controls")
+breakevenOffsetTicks = input.int(2, "Breakeven offset ticks", minval = 0, maxval = 100, group = "Risk controls")
+useAtrTrail = input.bool(true, "Use ATR trailing stop", group = "Risk controls")
+trailStartR = input.float(1.20, "Trail after R", minval = 0.10, step = 0.05, group = "Risk controls")
+trailAtrMultiplier = input.float(1.10, "Trail ATR multiplier", minval = 0.10, step = 0.05, group = "Risk controls")
+useMidpointFailureExit = input.bool(true, "Exit on Jam midpoint failure", group = "Risk controls")
+pullbackFailureMode = input.string("On", "Pullback EMA failure mode", options = ["Off", "On"], group = "Risk controls")
+usePullbackFailureExit = pullbackFailureMode == "On"
+maxBarsInTrade = input.int(80, "Max bars in trade", minval = 1, maxval = 500, group = "Risk controls")
+riskPerTradePercent = input.float(0.5, "Risk per trade (%)", minval = 0.1, maxval = 2.0, step = 0.1, group = "Risk controls")
+maxPositionValuePercent = input.float(95.0, "Max position value (%)", minval = 1.0, maxval = 100.0, step = 1.0, group = "Risk controls")
+tradeCooldownBars = input.int(6, "Trade cooldown bars", minval = 0, maxval = 200, group = "Risk controls")
+allowedSymbolMode = input.string("BTCUSDT only", "Allowed symbol", options = ["BTCUSDT only", "Any"], group = "Risk controls")
+allowedTimeframeMode = input.string("15m/30m only", "Allowed chart timeframe", options = ["15m/30m only", "5m/15m/30m", "Any"], group = "Risk controls")
+enableLong = input.bool(true, "Enable long")
+enableShort = input.bool(true, "Enable short")
+showDiagnostics = input.bool(true, "Show diagnostic table", group = "Diagnostics")
+showPatternMarkers = input.bool(true, "Show Jam markers", group = "Visuals")
+showContextLines = input.bool(true, "Show context EMAs", group = "Visuals")
+strategyVersion = "1.14.0"
+
+var int lastEntryBar = na
+var int activeDirection = 0
+var int activeEntryBar = na
+var float activeFailureLevel = na
+var float activeEntryPrice = na
+var float activeStop = na
+var float activeTakeProfit = na
+var float activeRisk = na
+var float activeBestPrice = na
+var int pendingDirection = 0
+var int pendingIndex = na
+var float pendingTrigger = na
+var float pendingStop = na
+var float pendingFailureLevel = na
+
+atrValue = ta.atr(atrLength)
+[dmiPlus, dmiMinus, adxValue] = ta.dmi(adxLength, adxSmoothing)
+trendEma = ta.ema(close, trendEmaLength)
+pullbackEma = ta.ema(close, pullbackEmaLength)
+volumeAverage = ta.sma(volume, volumeLength)
+htfFallbackFast = ta.ema(close, htfEmaFastLength)
+htfFallbackSlow = ta.ema(close, htfEmaSlowLength)
+chartTimeframeSeconds = timeframe.in_seconds()
+higherTimeframeSeconds = timeframe.in_seconds(higherTimeframe)
+higherTimeframeValid = not na(chartTimeframeSeconds) and not na(higherTimeframeSeconds) and higherTimeframeSeconds > chartTimeframeSeconds
+isFifteenMinuteChart = timeframe.period == "15"
+adaptiveConfirmWindowBars = useTimeframeAdaptiveConfirmation and isFifteenMinuteChart ? 10 : confirmWindowBars
+adaptiveMaxConfirmDistanceAtr = useTimeframeAdaptiveConfirmation and isFifteenMinuteChart ? 1.25 : maxConfirmDistanceAtr
+adaptiveMinConfirmClosePosition = useTimeframeAdaptiveConfirmation and isFifteenMinuteChart ? 0.85 : minConfirmClosePosition
+adaptiveVolumeExpansion = useTimeframeAdaptiveConfirmation and isFifteenMinuteChart ? 1.15 : volumeExpansion
+
+htfEmaFastRequested = request.security(
+     syminfo.tickerid,
+     higherTimeframe,
+     ta.ema(close, htfEmaFastLength),
+     gaps = barmerge.gaps_off,
+     lookahead = barmerge.lookahead_off
+)
+htfEmaSlowRequested = request.security(
+     syminfo.tickerid,
+     higherTimeframe,
+     ta.ema(close, htfEmaSlowLength),
+     gaps = barmerge.gaps_off,
+     lookahead = barmerge.lookahead_off
+)
+htfEmaFast = higherTimeframeValid ? htfEmaFastRequested : htfFallbackFast
+htfEmaSlow = higherTimeframeValid ? htfEmaSlowRequested : htfFallbackSlow
+htfStatus = higherTimeframeValid ? "HTF ok" : "HTF fallback"
+
+allowLongDirection = directionMode == "Both" or directionMode == "Long only"
+allowShortDirection = directionMode == "Both" or directionMode == "Short only"
+symbolAllowed = allowedSymbolMode == "Any" or str.contains(str.upper(syminfo.tickerid), "BTCUSDT")
+chartTimeframeAllowed = allowedTimeframeMode == "Any" ? true : allowedTimeframeMode == "5m/15m/30m" ? timeframe.period == "5" or timeframe.period == "15" or timeframe.period == "30" : timeframe.period == "15" or timeframe.period == "30"
+entryWindow = symbolAllowed and chartTimeframeAllowed and time >= backtestStart and time < backtestEnd and time_close < backtestEnd
+backtestExitBar = time < backtestEnd and time_close >= backtestEnd
+flatPosition = strategy.position_size == 0
+barConfirmed = barstate.isconfirmed
+
+seedRange = math.max(high[1] - low[1], syminfo.mintick)
+seedBody = math.abs(close[1] - open[1])
+seedBodyRatio = seedBody / seedRange
+jamRange = math.max(high - low, syminfo.mintick)
+jamBody = math.abs(close - open)
+jamBodyRatio = jamBody / jamRange
+patternHigh = math.max(high, high[1])
+patternLow = math.min(low, low[1])
+patternMid = (patternHigh + patternLow) / 2.0
+reclaimBuffer = atrValue * reclaimAtrBuffer
+sweepBuffer = atrValue * sweepAtrBuffer
+
+seedBear = close[1] < open[1]
+seedBull = close[1] > open[1]
+seedQuality = seedBodyRatio >= minSeedBodyRatio and seedRange >= atrValue[1] * minSeedRangeAtr
+jamRangeQuality = jamRange >= atrValue * minJamRangeAtr and jamRange <= atrValue * maxJamRangeAtr
+jamBodyExpansionOk = jamBody >= seedBody * minJamBodyExpansion
+bullJamCandle = close > open and jamBodyRatio >= minJamBodyRatio and jamRangeQuality and jamBodyExpansionOk
+bearJamCandle = close < open and jamBodyRatio >= minJamBodyRatio and jamRangeQuality and jamBodyExpansionOk
+longReclaimLevel = reclaimMode == "Wick" ? high[1] : open[1]
+shortReclaimLevel = reclaimMode == "Wick" ? low[1] : open[1]
+longReclaim = close > longReclaimLevel + reclaimBuffer
+shortReclaim = close < shortReclaimLevel - reclaimBuffer
+longSweep = not requireSweep or low <= low[1] - sweepBuffer
+shortSweep = not requireSweep or high >= high[1] + sweepBuffer
+longPattern = seedBear and seedQuality and bullJamCandle and longReclaim and longSweep
+shortPattern = seedBull and seedQuality and bearJamCandle and shortReclaim and shortSweep
+
+longHtfBias = not useHigherTimeframeBias or htfEmaFast >= htfEmaSlow
+shortHtfBias = not useHigherTimeframeBias or htfEmaFast <= htfEmaSlow
+longTrendBias = not useCurrentTrendFilter or close >= trendEma
+shortTrendBias = not useCurrentTrendFilter or close <= trendEma
+lowestImpulseClose = ta.lowest(close, impulseLookback)
+lowestImpulseLow = ta.lowest(low, impulseLookback)
+highestImpulseClose = ta.highest(close, impulseLookback)
+highestImpulseHigh = ta.highest(high, impulseLookback)
+longLocalReversal = close[1] <= lowestImpulseClose[1] or low[1] <= lowestImpulseLow[1]
+shortLocalReversal = close[1] >= highestImpulseClose[1] or high[1] >= highestImpulseHigh[1]
+longPullbackContext = close[1] <= pullbackEma[1] or low <= pullbackEma
+shortPullbackContext = close[1] >= pullbackEma[1] or high >= pullbackEma
+longContextBase = contextMode == "None" ? true : contextMode == "HTF trend" ? longHtfBias and longPullbackContext : contextMode == "Local reversal" ? longLocalReversal : (longHtfBias and longPullbackContext) or longLocalReversal
+shortContextBase = contextMode == "None" ? true : contextMode == "HTF trend" ? shortHtfBias and shortPullbackContext : contextMode == "Local reversal" ? shortLocalReversal : (shortHtfBias and shortPullbackContext) or shortLocalReversal
+longStrongCounterTrend = blockStrongCounterTrend and close < trendEma and htfEmaFast < htfEmaSlow and dmiMinus > dmiPlus and adxValue >= counterTrendAdx
+shortStrongCounterTrend = blockStrongCounterTrend and close > trendEma and htfEmaFast > htfEmaSlow and dmiPlus > dmiMinus and adxValue >= counterTrendAdx
+longContextOk = longContextBase and longTrendBias and not longStrongCounterTrend
+shortContextOk = shortContextBase and shortTrendBias and not shortStrongCounterTrend
+volumeOk = not useVolumeFilter or (volumeAverage > 0 and volume >= volumeAverage * adaptiveVolumeExpansion)
+cooldownOk = tradeCooldownBars == 0 or na(lastEntryBar) or bar_index - lastEntryBar >= tradeCooldownBars
+
+pendingExpired = pendingDirection != 0 and not na(pendingIndex) and bar_index - pendingIndex > adaptiveConfirmWindowBars
+pendingLongMidpointFailed = cancelPendingOnMidpointFailure and pendingDirection == 1 and not na(pendingFailureLevel) and close < pendingFailureLevel
+pendingShortMidpointFailed = cancelPendingOnMidpointFailure and pendingDirection == -1 and not na(pendingFailureLevel) and close > pendingFailureLevel
+pendingCanceled = barConfirmed and (pendingExpired or pendingLongMidpointFailed or pendingShortMidpointFailed or not entryWindow or not flatPosition)
+
+if pendingCanceled
+    pendingDirection := 0
+    pendingIndex := na
+    pendingTrigger := na
+    pendingStop := na
+    pendingFailureLevel := na
+
+configuredSlippagePrice = 2 * syminfo.mintick
+expectedLongEntry = close + configuredSlippagePrice
+expectedShortEntry = close - configuredSlippagePrice
+longPatternStop = patternLow - (atrValue * stopAtrBuffer)
+shortPatternStop = patternHigh + (atrValue * stopAtrBuffer)
+longAtrStop = expectedLongEntry - (atrValue * atrStopMultiplier)
+shortAtrStop = expectedShortEntry + (atrValue * atrStopMultiplier)
+longStop = stopMode == "Pattern" ? longPatternStop : stopMode == "ATR" ? longAtrStop : stopMode == "Wider" ? math.min(longPatternStop, longAtrStop) : math.max(longPatternStop, longAtrStop)
+shortStop = stopMode == "Pattern" ? shortPatternStop : stopMode == "ATR" ? shortAtrStop : stopMode == "Wider" ? math.max(shortPatternStop, shortAtrStop) : math.min(shortPatternStop, shortAtrStop)
+
+pendingLongActive = entryStyle == "Breakout confirm" and pendingDirection == 1 and flatPosition and not na(pendingIndex) and bar_index > pendingIndex and bar_index - pendingIndex <= adaptiveConfirmWindowBars
+pendingShortActive = entryStyle == "Breakout confirm" and pendingDirection == -1 and flatPosition and not na(pendingIndex) and bar_index > pendingIndex and bar_index - pendingIndex <= adaptiveConfirmWindowBars
+confirmBuffer = atrValue * confirmAtrBuffer
+maxConfirmDistance = atrValue * adaptiveMaxConfirmDistanceAtr
+confirmRange = math.max(high - low, syminfo.mintick)
+confirmRangeOk = confirmRange <= atrValue * maxConfirmRangeAtr
+longConfirmClosePositionOk = (close - low) / confirmRange >= adaptiveMinConfirmClosePosition
+shortConfirmClosePositionOk = (high - close) / confirmRange >= adaptiveMinConfirmClosePosition
+longConfirmDistanceOk = not na(pendingTrigger) and close <= pendingTrigger + maxConfirmDistance
+shortConfirmDistanceOk = not na(pendingTrigger) and close >= pendingTrigger - maxConfirmDistance
+longConfirmSignal = pendingLongActive and not na(pendingTrigger) and not na(pendingStop) and close > pendingTrigger + confirmBuffer and close > open and longConfirmDistanceOk and confirmRangeOk and longConfirmClosePositionOk
+shortConfirmSignal = pendingShortActive and not na(pendingTrigger) and not na(pendingStop) and close < pendingTrigger - confirmBuffer and close < open and shortConfirmDistanceOk and confirmRangeOk and shortConfirmClosePositionOk
+longImmediateSignal = entryStyle == "Immediate" and longPattern
+shortImmediateSignal = entryStyle == "Immediate" and shortPattern
+longSignal = longImmediateSignal or longConfirmSignal
+shortSignal = shortImmediateSignal or shortConfirmSignal
+longTradeStop = longConfirmSignal and not na(pendingStop) ? pendingStop : longStop
+shortTradeStop = shortConfirmSignal and not na(pendingStop) ? pendingStop : shortStop
+longTradeFailureLevel = longConfirmSignal and not na(pendingFailureLevel) ? pendingFailureLevel : patternMid
+shortTradeFailureLevel = shortConfirmSignal and not na(pendingFailureLevel) ? pendingFailureLevel : patternMid
+longRisk = expectedLongEntry - longTradeStop
+shortRisk = shortTradeStop - expectedShortEntry
+longFixedTakeProfit = expectedLongEntry + (longRisk * rewardRiskRatio)
+shortFixedTakeProfit = expectedShortEntry - (shortRisk * rewardRiskRatio)
+longAtrCappedTakeProfit = expectedLongEntry + (atrValue * maxTargetAtr)
+shortAtrCappedTakeProfit = expectedShortEntry - (atrValue * maxTargetAtr)
+longTakeProfit = targetMode == "Fixed R" ? longFixedTakeProfit : math.min(longFixedTakeProfit, longAtrCappedTakeProfit)
+shortTakeProfit = targetMode == "Fixed R" ? shortFixedTakeProfit : math.max(shortFixedTakeProfit, shortAtrCappedTakeProfit)
+longTargetDistance = longTakeProfit - expectedLongEntry
+shortTargetDistance = expectedShortEntry - shortTakeProfit
+roundTripSlippagePrice = syminfo.mintick * 4
+longEstimatedCostDistance = expectedLongEntry * ((estimatedCommissionPercent * 2.0) / 100.0) + roundTripSlippagePrice
+shortEstimatedCostDistance = expectedShortEntry * ((estimatedCommissionPercent * 2.0) / 100.0) + roundTripSlippagePrice
+longNetReward = longTargetDistance - longEstimatedCostDistance
+shortNetReward = shortTargetDistance - shortEstimatedCostDistance
+longNetRisk = longRisk + longEstimatedCostDistance
+shortNetRisk = shortRisk + shortEstimatedCostDistance
+longNetRewardRisk = longNetRisk > syminfo.mintick ? longNetReward / longNetRisk : 0.0
+shortNetRewardRisk = shortNetRisk > syminfo.mintick ? shortNetReward / shortNetRisk : 0.0
+longTargetDistanceOk = not useCostAwareFilter or (longTargetDistance >= atrValue * minTargetDistanceAtr and longNetRewardRisk >= minNetRewardRisk)
+shortTargetDistanceOk = not useCostAwareFilter or (shortTargetDistance >= atrValue * minTargetDistanceAtr and shortNetRewardRisk >= minNetRewardRisk)
+riskCapital = math.max(strategy.equity, 0) * (riskPerTradePercent / 100)
+contractPointValue = math.max(syminfo.pointvalue, syminfo.mintick)
+minimumContract = math.max(syminfo.mincontract, 0.00000001)
+longMaxPositionQuantity = expectedLongEntry > 0 ? (strategy.equity * (maxPositionValuePercent / 100)) / (expectedLongEntry * contractPointValue) : 0
+shortMaxPositionQuantity = expectedShortEntry > 0 ? (strategy.equity * (maxPositionValuePercent / 100)) / (expectedShortEntry * contractPointValue) : 0
+longRiskQuantity = longRisk > syminfo.mintick ? riskCapital / (longRisk * contractPointValue) : 0
+shortRiskQuantity = shortRisk > syminfo.mintick ? riskCapital / (shortRisk * contractPointValue) : 0
+longQuantityRaw = math.min(longRiskQuantity, longMaxPositionQuantity)
+shortQuantityRaw = math.min(shortRiskQuantity, shortMaxPositionQuantity)
+longQuantity = math.floor(longQuantityRaw / minimumContract) * minimumContract
+shortQuantity = math.floor(shortQuantityRaw / minimumContract) * minimumContract
+longRiskOk = longRisk > syminfo.mintick and longTakeProfit > expectedLongEntry and longTargetDistanceOk
+shortRiskOk = shortRisk > syminfo.mintick and shortTakeProfit < expectedShortEntry and shortTargetDistanceOk
+longQuantityOk = longQuantity > 0
+shortQuantityOk = shortQuantity > 0
+longQualifiedJam = longPattern and longContextOk and volumeOk and longRiskOk and longQuantityOk
+shortQualifiedJam = shortPattern and shortContextOk and volumeOk and shortRiskOk and shortQuantityOk
+
+longSetupContextOk = entryStyle == "Breakout confirm" ? true : longContextOk
+shortSetupContextOk = entryStyle == "Breakout confirm" ? true : shortContextOk
+longSetupVolumeOk = entryStyle == "Breakout confirm" ? true : volumeOk
+shortSetupVolumeOk = entryStyle == "Breakout confirm" ? true : volumeOk
+longSetup = enableLong and allowLongDirection and flatPosition and entryWindow and barConfirmed and cooldownOk and longSignal and longSetupContextOk and longSetupVolumeOk and longRiskOk and longQuantityOk
+shortSetup = enableShort and allowShortDirection and flatPosition and entryWindow and barConfirmed and cooldownOk and shortSignal and shortSetupContextOk and shortSetupVolumeOk and shortRiskOk and shortQuantityOk
+
+longSignalBlocker = entryStyle == "Breakout confirm" and pendingDirection == 1 ? "pending breakout" : "Jam pattern"
+shortSignalBlocker = entryStyle == "Breakout confirm" and pendingDirection == -1 ? "pending breakdown" : "Jam pattern"
+longRiskBlocker = not longTargetDistanceOk ? "net edge" : "risk <= tick"
+shortRiskBlocker = not shortTargetDistanceOk ? "net edge" : "risk <= tick"
+longBlocker = not enableLong ? "long disabled" : not allowLongDirection ? "direction mode" : not symbolAllowed ? "symbol blocked" : not chartTimeframeAllowed ? "timeframe blocked" : not entryWindow ? "outside entry window" : not barConfirmed ? "waiting close" : not flatPosition ? "position open" : not cooldownOk ? "cooldown" : not longSignal ? longSignalBlocker : not longSetupContextOk ? longStrongCounterTrend ? "strong downtrend" : "context" : not longSetupVolumeOk ? "volume" : not longRiskOk ? longRiskBlocker : not longQuantityOk ? "quantity < min contract" : "ready"
+shortBlocker = not enableShort ? "short disabled" : not allowShortDirection ? "direction mode" : not symbolAllowed ? "symbol blocked" : not chartTimeframeAllowed ? "timeframe blocked" : not entryWindow ? "outside entry window" : not barConfirmed ? "waiting close" : not flatPosition ? "position open" : not cooldownOk ? "cooldown" : not shortSignal ? shortSignalBlocker : not shortSetupContextOk ? shortStrongCounterTrend ? "strong uptrend" : "context" : not shortSetupVolumeOk ? "volume" : not shortRiskOk ? shortRiskBlocker : not shortQuantityOk ? "quantity < min contract" : "ready"
+
+var int diagnosticBars = 0
+var int flatPassCount = 0
+var int longPatternCount = 0
+var int shortPatternCount = 0
+var int longContextCount = 0
+var int shortContextCount = 0
+var int volumePassCount = 0
+var int longRiskPassCount = 0
+var int shortRiskPassCount = 0
+var int longQuantityPassCount = 0
+var int shortQuantityPassCount = 0
+var int longQualifiedJamCount = 0
+var int shortQualifiedJamCount = 0
+var int longConfirmSignalCount = 0
+var int shortConfirmSignalCount = 0
+var int longSetupCount = 0
+var int shortSetupCount = 0
+var int longArmedCount = 0
+var int shortArmedCount = 0
+var int longOrderCount = 0
+var int shortOrderCount = 0
+
+diagnosticSample = barConfirmed and time >= backtestStart and time <= backtestEnd
+if diagnosticSample
+    diagnosticBars += 1
+    if flatPosition
+        flatPassCount += 1
+    if longPattern
+        longPatternCount += 1
+    if shortPattern
+        shortPatternCount += 1
+    if longContextOk
+        longContextCount += 1
+    if shortContextOk
+        shortContextCount += 1
+    if volumeOk
+        volumePassCount += 1
+    if longRiskOk
+        longRiskPassCount += 1
+    if shortRiskOk
+        shortRiskPassCount += 1
+    if longQuantityOk
+        longQuantityPassCount += 1
+    if shortQuantityOk
+        shortQuantityPassCount += 1
+    if longQualifiedJam
+        longQualifiedJamCount += 1
+    if shortQualifiedJam
+        shortQualifiedJamCount += 1
+    if longConfirmSignal
+        longConfirmSignalCount += 1
+    if shortConfirmSignal
+        shortConfirmSignalCount += 1
+    if longSetup
+        longSetupCount += 1
+    if shortSetup
+        shortSetupCount += 1
+
+formatPrice(price) =>
+    str.tostring(price, format.mintick)
+
+formatSetting(value) =>
+    str.tostring(value)
+
+formatBoolSetting(value) =>
+    value ? "true" : "false"
+
+formatTimestampSetting(value) =>
+    str.format_time(value, "yyyy-MM-dd'T'HH:mm:ss'Z'", "UTC")
+
+timestampIso() =>
+    str.format_time(time, "yyyy-MM-dd'T'HH:mm:ss'Z'", "UTC")
+
+formatDiagnosticCount(count, total) =>
+    str.tostring(count) + "/" + str.tostring(total)
+
+formatRatio(value) =>
+    str.tostring(value, "#.##")
+
+settingsFingerprint() =>
+    "jam_reversal_v1" +
+     "|initial_capital=1000" +
+     "|backtest_start=" + formatTimestampSetting(backtestStart) +
+     "|backtest_end=" + formatTimestampSetting(backtestEnd) +
+     "|direction_mode=" + directionMode +
+     "|higher_timeframe=" + higherTimeframe +
+     "|higher_timeframe_valid=" + formatBoolSetting(higherTimeframeValid) +
+     "|htf_ema_fast=" + str.tostring(htfEmaFastLength) +
+     "|htf_ema_slow=" + str.tostring(htfEmaSlowLength) +
+     "|trend_ema=" + str.tostring(trendEmaLength) +
+     "|pullback_ema=" + str.tostring(pullbackEmaLength) +
+     "|use_higher_timeframe_bias=" + formatBoolSetting(useHigherTimeframeBias) +
+     "|use_current_trend_filter=" + formatBoolSetting(useCurrentTrendFilter) +
+     "|context_mode=" + contextMode +
+     "|impulse_lookback=" + str.tostring(impulseLookback) +
+     "|block_strong_counter_trend=" + formatBoolSetting(blockStrongCounterTrend) +
+     "|counter_trend_adx=" + formatSetting(counterTrendAdx) +
+     "|atr_length=" + str.tostring(atrLength) +
+     "|adx_length=" + str.tostring(adxLength) +
+     "|adx_smoothing=" + str.tostring(adxSmoothing) +
+     "|reclaim_mode=" + reclaimMode +
+     "|require_sweep=" + formatBoolSetting(requireSweep) +
+     "|entry_style=" + entryStyle +
+     "|confirm_window_bars=" + str.tostring(confirmWindowBars) +
+     "|confirm_atr_buffer=" + formatSetting(confirmAtrBuffer) +
+     "|max_confirm_distance_atr=" + formatSetting(maxConfirmDistanceAtr) +
+     "|max_confirm_range_atr=" + formatSetting(maxConfirmRangeAtr) +
+     "|min_confirm_close_position=" + formatSetting(minConfirmClosePosition) +
+     "|cancel_pending_on_midpoint_failure=" + formatBoolSetting(cancelPendingOnMidpointFailure) +
+     "|sweep_atr_buffer=" + formatSetting(sweepAtrBuffer) +
+     "|reclaim_atr_buffer=" + formatSetting(reclaimAtrBuffer) +
+     "|min_seed_body_ratio=" + formatSetting(minSeedBodyRatio) +
+     "|min_jam_body_ratio=" + formatSetting(minJamBodyRatio) +
+     "|min_jam_body_expansion=" + formatSetting(minJamBodyExpansion) +
+     "|min_seed_range_atr=" + formatSetting(minSeedRangeAtr) +
+     "|min_jam_range_atr=" + formatSetting(minJamRangeAtr) +
+     "|max_jam_range_atr=" + formatSetting(maxJamRangeAtr) +
+     "|use_volume_filter=" + formatBoolSetting(useVolumeFilter) +
+     "|volume_length=" + str.tostring(volumeLength) +
+     "|volume_expansion=" + formatSetting(volumeExpansion) +
+     "|use_timeframe_adaptive_confirmation=" + formatBoolSetting(useTimeframeAdaptiveConfirmation) +
+     "|stop_mode=" + stopMode +
+     "|stop_atr_buffer=" + formatSetting(stopAtrBuffer) +
+     "|atr_stop_multiplier=" + formatSetting(atrStopMultiplier) +
+     "|target_mode=" + targetMode +
+     "|reward_risk=" + formatSetting(rewardRiskRatio) +
+     "|max_target_atr=" + formatSetting(maxTargetAtr) +
+     "|use_cost_aware_filter=" + formatBoolSetting(useCostAwareFilter) +
+     "|estimated_commission_percent=" + formatSetting(estimatedCommissionPercent) +
+     "|min_target_distance_atr=" + formatSetting(minTargetDistanceAtr) +
+     "|min_net_reward_risk=" + formatSetting(minNetRewardRisk) +
+     "|use_breakeven_stop=" + formatBoolSetting(useBreakevenStop) +
+     "|breakeven_at_r=" + formatSetting(breakevenAtR) +
+     "|breakeven_offset_ticks=" + str.tostring(breakevenOffsetTicks) +
+     "|use_atr_trail=" + formatBoolSetting(useAtrTrail) +
+     "|trail_start_r=" + formatSetting(trailStartR) +
+     "|trail_atr_multiplier=" + formatSetting(trailAtrMultiplier) +
+     "|use_midpoint_failure_exit=" + formatBoolSetting(useMidpointFailureExit) +
+     "|use_pullback_failure_exit=" + formatBoolSetting(usePullbackFailureExit) +
+     "|max_bars_in_trade=" + str.tostring(maxBarsInTrade) +
+     "|risk_per_trade_percent=" + formatSetting(riskPerTradePercent) +
+     "|max_position_value_percent=" + formatSetting(maxPositionValuePercent) +
+     "|trade_cooldown_bars=" + str.tostring(tradeCooldownBars) +
+     "|allowed_symbol_mode=" + allowedSymbolMode +
+     "|allowed_timeframe_mode=" + allowedTimeframeMode +
+     "|enable_long=" + formatBoolSetting(enableLong) +
+     "|enable_short=" + formatBoolSetting(enableShort)
+
+signalMessage(direction, entryPrice, stopLoss, takeProfit) =>
+    "{" +
+     "\"source\":\"tradingview\"," +
+     "\"strategy\":\"jam_reversal_v1\"," +
+     "\"strategy_version\":\"" + strategyVersion + "\"," +
+     "\"settings_fingerprint\":\"" + settingsFingerprint() + "\"," +
+     "\"symbol\":\"" + syminfo.ticker + "\"," +
+     "\"timeframe\":\"" + timeframe.period + "\"," +
+     "\"direction\":\"" + direction + "\"," +
+     "\"entry_price\":" + formatPrice(entryPrice) + "," +
+     "\"stop_loss\":" + formatPrice(stopLoss) + "," +
+     "\"take_profit\":" + formatPrice(takeProfit) + "," +
+     "\"market_regime\":\"BREAKOUT_EXPANSION\"," +
+     "\"timestamp\":\"" + timestampIso() + "\"" +
+     "}"
+
+longMessage = signalMessage("LONG", expectedLongEntry, longTradeStop, longTakeProfit)
+shortMessage = signalMessage("SHORT", expectedShortEntry, shortTradeStop, shortTakeProfit)
+
+if longSetup
+    strategy.entry("AUREX-LONG-BREAKOUT_EXPANSION_JAM", strategy.long, qty = longQuantity, alert_message = longMessage)
+    strategy.exit("AUREX-LONG-JAM-EXIT", from_entry = "AUREX-LONG-BREAKOUT_EXPANSION_JAM", stop = longTradeStop, limit = longTakeProfit)
+    lastEntryBar := bar_index
+    activeDirection := 1
+    activeEntryBar := bar_index
+    activeFailureLevel := longTradeFailureLevel
+    activeEntryPrice := expectedLongEntry
+    activeStop := longTradeStop
+    activeTakeProfit := longTakeProfit
+    activeRisk := longRisk
+    activeBestPrice := high
+    pendingDirection := 0
+    pendingIndex := na
+    pendingTrigger := na
+    pendingStop := na
+    pendingFailureLevel := na
+    longOrderCount += 1
+    alert(longMessage, alert.freq_once_per_bar_close)
+
+if shortSetup
+    strategy.entry("AUREX-SHORT-BREAKOUT_EXPANSION_JAM", strategy.short, qty = shortQuantity, alert_message = shortMessage)
+    strategy.exit("AUREX-SHORT-JAM-EXIT", from_entry = "AUREX-SHORT-BREAKOUT_EXPANSION_JAM", stop = shortTradeStop, limit = shortTakeProfit)
+    lastEntryBar := bar_index
+    activeDirection := -1
+    activeEntryBar := bar_index
+    activeFailureLevel := shortTradeFailureLevel
+    activeEntryPrice := expectedShortEntry
+    activeStop := shortTradeStop
+    activeTakeProfit := shortTakeProfit
+    activeRisk := shortRisk
+    activeBestPrice := low
+    pendingDirection := 0
+    pendingIndex := na
+    pendingTrigger := na
+    pendingStop := na
+    pendingFailureLevel := na
+    shortOrderCount += 1
+    alert(shortMessage, alert.freq_once_per_bar_close)
+
+canArmJam = entryStyle == "Breakout confirm" and flatPosition and entryWindow and barConfirmed and cooldownOk and pendingDirection == 0 and not longSetup and not shortSetup
+
+if canArmJam and enableLong and allowLongDirection and longQualifiedJam
+    pendingDirection := 1
+    pendingIndex := bar_index
+    pendingTrigger := patternHigh
+    pendingStop := longStop
+    pendingFailureLevel := patternMid
+    longArmedCount += 1
+else if canArmJam and enableShort and allowShortDirection and shortQualifiedJam
+    pendingDirection := -1
+    pendingIndex := bar_index
+    pendingTrigger := patternLow
+    pendingStop := shortStop
+    pendingFailureLevel := patternMid
+    shortArmedCount += 1
+
+if activeDirection == 1 and strategy.position_size > 0 and not na(activeRisk) and activeRisk > syminfo.mintick
+    activeEntryPrice := na(activeEntryPrice) ? strategy.position_avg_price : activeEntryPrice
+    activeBestPrice := na(activeBestPrice) ? high : math.max(activeBestPrice, high)
+    longBreakEvenStop = activeEntryPrice + (syminfo.mintick * breakevenOffsetTicks)
+    longTrailStop = activeBestPrice - (atrValue * trailAtrMultiplier)
+    longManagedStop = activeStop
+    if useBreakevenStop and activeBestPrice >= activeEntryPrice + (activeRisk * breakevenAtR)
+        longManagedStop := math.max(longManagedStop, longBreakEvenStop)
+    if useAtrTrail and activeBestPrice >= activeEntryPrice + (activeRisk * trailStartR)
+        longManagedStop := math.max(longManagedStop, longTrailStop)
+    activeStop := longManagedStop
+    strategy.exit("AUREX-LONG-JAM-EXIT", from_entry = "AUREX-LONG-BREAKOUT_EXPANSION_JAM", stop = activeStop, limit = activeTakeProfit)
+
+if activeDirection == -1 and strategy.position_size < 0 and not na(activeRisk) and activeRisk > syminfo.mintick
+    activeEntryPrice := na(activeEntryPrice) ? strategy.position_avg_price : activeEntryPrice
+    activeBestPrice := na(activeBestPrice) ? low : math.min(activeBestPrice, low)
+    shortBreakEvenStop = activeEntryPrice - (syminfo.mintick * breakevenOffsetTicks)
+    shortTrailStop = activeBestPrice + (atrValue * trailAtrMultiplier)
+    shortManagedStop = activeStop
+    if useBreakevenStop and activeBestPrice <= activeEntryPrice - (activeRisk * breakevenAtR)
+        shortManagedStop := math.min(shortManagedStop, shortBreakEvenStop)
+    if useAtrTrail and activeBestPrice <= activeEntryPrice - (activeRisk * trailStartR)
+        shortManagedStop := math.min(shortManagedStop, shortTrailStop)
+    activeStop := shortManagedStop
+    strategy.exit("AUREX-SHORT-JAM-EXIT", from_entry = "AUREX-SHORT-BREAKOUT_EXPANSION_JAM", stop = activeStop, limit = activeTakeProfit)
+
+longMidpointFailed = useMidpointFailureExit and activeDirection == 1 and strategy.position_size > 0 and not na(activeFailureLevel) and barConfirmed and close < activeFailureLevel
+shortMidpointFailed = useMidpointFailureExit and activeDirection == -1 and strategy.position_size < 0 and not na(activeFailureLevel) and barConfirmed and close > activeFailureLevel
+longPullbackFailed = not longMidpointFailed and usePullbackFailureExit and activeDirection == 1 and strategy.position_size > 0 and not na(activeEntryPrice) and barConfirmed and close < pullbackEma and close < activeEntryPrice
+shortPullbackFailed = not shortMidpointFailed and usePullbackFailureExit and activeDirection == -1 and strategy.position_size < 0 and not na(activeEntryPrice) and barConfirmed and close > pullbackEma and close > activeEntryPrice
+tradeTimedOut = activeDirection != 0 and not na(activeEntryBar) and strategy.position_size != 0 and bar_index - activeEntryBar >= maxBarsInTrade
+
+if longMidpointFailed
+    strategy.close("AUREX-LONG-BREAKOUT_EXPANSION_JAM", comment = "AUREX-LONG-JAM-MID-FAIL")
+    activeDirection := 0
+    activeEntryBar := na
+    activeFailureLevel := na
+    activeEntryPrice := na
+    activeStop := na
+    activeTakeProfit := na
+    activeRisk := na
+    activeBestPrice := na
+
+if shortMidpointFailed
+    strategy.close("AUREX-SHORT-BREAKOUT_EXPANSION_JAM", comment = "AUREX-SHORT-JAM-MID-FAIL")
+    activeDirection := 0
+    activeEntryBar := na
+    activeFailureLevel := na
+    activeEntryPrice := na
+    activeStop := na
+    activeTakeProfit := na
+    activeRisk := na
+    activeBestPrice := na
+
+if longPullbackFailed
+    strategy.close("AUREX-LONG-BREAKOUT_EXPANSION_JAM", comment = "AUREX-LONG-JAM-PULLBACK-FAIL")
+    activeDirection := 0
+    activeEntryBar := na
+    activeFailureLevel := na
+    activeEntryPrice := na
+    activeStop := na
+    activeTakeProfit := na
+    activeRisk := na
+    activeBestPrice := na
+
+if shortPullbackFailed
+    strategy.close("AUREX-SHORT-BREAKOUT_EXPANSION_JAM", comment = "AUREX-SHORT-JAM-PULLBACK-FAIL")
+    activeDirection := 0
+    activeEntryBar := na
+    activeFailureLevel := na
+    activeEntryPrice := na
+    activeStop := na
+    activeTakeProfit := na
+    activeRisk := na
+    activeBestPrice := na
+
+if tradeTimedOut
+    strategy.close_all(comment = "AUREX-JAM-TIME-EXIT")
+    activeDirection := 0
+    activeEntryBar := na
+    activeFailureLevel := na
+    activeEntryPrice := na
+    activeStop := na
+    activeTakeProfit := na
+    activeRisk := na
+    activeBestPrice := na
+
+if strategy.position_size == 0 and activeDirection != 0 and (na(lastEntryBar) or bar_index > lastEntryBar)
+    activeDirection := 0
+    activeEntryBar := na
+    activeFailureLevel := na
+    activeEntryPrice := na
+    activeStop := na
+    activeTakeProfit := na
+    activeRisk := na
+    activeBestPrice := na
+
+if backtestExitBar and strategy.position_size != 0
+    strategy.close_all(comment = "Backtest window end")
+    activeDirection := 0
+    activeEntryBar := na
+    activeFailureLevel := na
+    activeEntryPrice := na
+    activeStop := na
+    activeTakeProfit := na
+    activeRisk := na
+    activeBestPrice := na
+
+pendingStatus = pendingDirection == 1 ? "long " + formatPrice(pendingTrigger) : pendingDirection == -1 ? "short " + formatPrice(pendingTrigger) : "none"
+
+var table diagnosticTable = table.new(position.top_right, 3, 20, border_width = 1)
+diagnosticHeaderColor = color.new(color.rgb(10, 20, 32), 0)
+diagnosticLabelColor = color.new(color.rgb(17, 24, 39), 0)
+diagnosticLongColor = longSetup ? color.new(color.lime, 70) : color.new(color.gray, 84)
+diagnosticShortColor = shortSetup ? color.new(color.red, 70) : color.new(color.gray, 84)
+
+if showDiagnostics and barstate.isconfirmed
+    table.cell(diagnosticTable, 0, 0, "Aurex diagnostics", text_color = color.white, bgcolor = diagnosticHeaderColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 0, "Long", text_color = color.white, bgcolor = diagnosticHeaderColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 0, "Short", text_color = color.white, bgcolor = diagnosticHeaderColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 1, "Bars checked", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 1, str.tostring(diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 1, str.tostring(diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 2, "Flat position", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 2, formatDiagnosticCount(flatPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 2, formatDiagnosticCount(flatPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 3, "Jam pattern", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 3, formatDiagnosticCount(longPatternCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 3, formatDiagnosticCount(shortPatternCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 4, "Context", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 4, formatDiagnosticCount(longContextCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 4, formatDiagnosticCount(shortContextCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 5, "Volume", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 5, formatDiagnosticCount(volumePassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 5, formatDiagnosticCount(volumePassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 6, "Risk > tick", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 6, formatDiagnosticCount(longRiskPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 6, formatDiagnosticCount(shortRiskPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 7, "Quantity > 0", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 7, formatDiagnosticCount(longQuantityPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 7, formatDiagnosticCount(shortQuantityPassCount, diagnosticBars), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 8, "Setups", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 8, str.tostring(longSetupCount), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 8, str.tostring(shortSetupCount), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 9, "Qualified Jam", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 9, str.tostring(longQualifiedJamCount), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 9, str.tostring(shortQualifiedJamCount), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 10, "Armed", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 10, str.tostring(longArmedCount), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 10, str.tostring(shortArmedCount), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 11, "Confirm signal", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 11, str.tostring(longConfirmSignalCount), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 11, str.tostring(shortConfirmSignalCount), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 12, "Orders submitted", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 12, str.tostring(longOrderCount), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 12, str.tostring(shortOrderCount), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 13, "Open trades", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 13, str.tostring(strategy.opentrades), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 13, str.tostring(strategy.opentrades), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 14, "Closed trades", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 14, str.tostring(strategy.closedtrades), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 14, str.tostring(strategy.closedtrades), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 15, "Latest blocker", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 15, longBlocker, text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 15, shortBlocker, text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 16, "HTF / context", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 16, htfStatus + " / " + contextMode, text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 16, htfStatus + " / " + contextMode, text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 17, "Pending", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 17, pendingStatus, text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 17, pendingStatus, text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 18, "Net RR", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 18, formatRatio(longNetRewardRisk), text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 18, formatRatio(shortNetRewardRisk), text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+    table.cell(diagnosticTable, 0, 19, "Reclaim mode", text_color = color.white, bgcolor = diagnosticLabelColor, text_size = size.small)
+    table.cell(diagnosticTable, 1, 19, reclaimMode, text_color = color.white, bgcolor = diagnosticLongColor, text_size = size.small)
+    table.cell(diagnosticTable, 2, 19, reclaimMode, text_color = color.white, bgcolor = diagnosticShortColor, text_size = size.small)
+
+plot(showContextLines ? trendEma : na, "Trend EMA", color = color.new(color.gray, 0))
+plot(showContextLines ? pullbackEma : na, "Pullback EMA", color = color.new(color.blue, 0))
+plot(showPatternMarkers and longPattern ? patternHigh : na, "Long Jam high", color = color.new(color.lime, 0), linewidth = 2, style = plot.style_linebr)
+plot(showPatternMarkers and longPattern ? patternLow : na, "Long Jam low", color = color.new(color.lime, 40), linewidth = 2, style = plot.style_linebr)
+plot(showPatternMarkers and shortPattern ? patternHigh : na, "Short Jam high", color = color.new(color.red, 40), linewidth = 2, style = plot.style_linebr)
+plot(showPatternMarkers and shortPattern ? patternLow : na, "Short Jam low", color = color.new(color.red, 0), linewidth = 2, style = plot.style_linebr)
+plot(showPatternMarkers and pendingDirection != 0 ? pendingTrigger : na, "Pending Jam trigger", color = color.new(color.yellow, 0), linewidth = 2, style = plot.style_linebr)
+plot(showPatternMarkers and strategy.position_size != 0 ? activeStop : na, "Active Jam stop", color = color.new(color.orange, 0), linewidth = 2, style = plot.style_linebr)
+plot(showPatternMarkers and strategy.position_size != 0 ? activeTakeProfit : na, "Active Jam target", color = color.new(color.aqua, 0), linewidth = 2, style = plot.style_linebr)
+plotshape(showPatternMarkers and longSetup, title = "Aurex long Jam", style = shape.triangleup, color = color.new(color.lime, 0), location = location.belowbar, size = size.tiny)
+plotshape(showPatternMarkers and shortSetup, title = "Aurex short Jam", style = shape.triangledown, color = color.new(color.red, 0), location = location.abovebar, size = size.tiny)
+// TV saved schema refresh: 1.14.0

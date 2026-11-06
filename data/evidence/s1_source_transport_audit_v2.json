@@ -1,0 +1,17 @@
+{
+  "schema_version": "aurex-s1-source-transport-audit-v2",
+  "audit_id": "s1-source-transport-audit-v2",
+  "audited_at": "2026-08-26T18:38:05.178063Z",
+  "amendment_file_sha256": "af3e638691b06412e14ae5f845252b264387da3e147eda47d32ed145c437ca5b",
+  "amendment_evidence_hash": "0bef139fb71fec027b1a985f6e1170ab150bbd12ca5c5530d187ad2596ee1f82",
+  "result_file_sha256": "47ca254bcd8b5348d05a84fa94f40bf079972f9606403850731cb8c4775ae7db",
+  "result_evidence_hash": "14b097c72afef189cdbccc9493618c5773e736a35b867615e60685dfa86b9532",
+  "runner_source_sha256": "c023405ad937accea301307499df929babda0642a3866c1ed53d43532160dbfa",
+  "auditor_source_sha256": "245b7ae18c50c4388af8947281d0f22bb18cdf6a67f810061f05a6b61dcd9f59",
+  "response_count": 4,
+  "application_body_bytes_read": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S1_V2_RESULT_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_RAW_NFCI_TWO_VINTAGE_PILOT_PROTOCOL_ONLY",
+  "audit_evidence_hash": "18bebaca422d07f42b2cbda77ab5a6433c53740982c388743d081eb600318877"
+}

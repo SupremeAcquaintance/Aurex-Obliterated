@@ -1,0 +1,234 @@
+{
+  "schema_version": "aurex-r4-validation-execution-specification-v1",
+  "specification_id": "r4-path-quality-validation-execution-v1",
+  "specification_version": "1.0.0",
+  "registered_at": "2026-07-23T12:17:05.668877Z",
+  "status": "FROZEN_PRE_R4_OUTCOME",
+  "r4_candidate_protocol_evidence_hash": "24dd0e81b1aa441ec81e37366a88ee8a4cc65e25818dc6455dc1eb3d7dd4cdd5",
+  "parent_r31_execution_specification_evidence_hash": "76a0403f61f7d684761a05765c9d48d3310e56c8433779abb164d14e209773f1",
+  "validation_dataset_bundle_evidence_hash": "0cacd38e3fbef83d4603d1df3b287c32102b5e9d6989bf6d26d59ff420cce95e",
+  "universe_manifest_evidence_hash": "dacc57f649846f716b8134aa0abba5accc78b0f1607d653addb0df3d9e132a74",
+  "development_dataset_bundle_evidence_hash": "fba63b8e237220c760daf902f2c999e9b01121357a4cc583c9fa5cb50b83d341",
+  "builder_contract_hash": "1ebfd70afdd152478a0683096592a8c49589fd04825c9293b5d49d42eba5fbe5",
+  "permitted_semantic_delta": "PROSPECTIVE_TERMINAL_MARKET_UNAVAILABILITY_ONLY",
+  "arithmetic": {
+    "decimal_precision": 50,
+    "decimal_rounding": "ROUND_HALF_EVEN",
+    "logarithm_method": "DECIMAL_LN_IN_PINNED_CONTEXT",
+    "intermediate_rounding": "NONE",
+    "persisted_decimal_format": "CANONICAL_DECIMAL_STRING"
+  },
+  "inputs": {
+    "global_timeline": "FROZEN_DEVELOPMENT_WARMUP_PLUS_EXACT_2025_4H_GRID",
+    "baseline_symbol_count": 35,
+    "warmup_close_count": 505,
+    "warmup_source": "FROZEN_DEVELOPMENT_BUNDLE",
+    "validation_source": "FROZEN_VALIDATION_BUNDLE",
+    "full_continuous_symbol_count": 33,
+    "terminal_symbol_count": 2,
+    "terminal_symbols": [
+      {
+        "symbol": "FTMUSDT",
+        "last_available_bar": "2025-01-13T00:00:00Z",
+        "first_missing_bar": "2025-01-13T04:00:00Z",
+        "missing_candle_count": 2117,
+        "unavailable_archive_months": [
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06",
+          "2025-07",
+          "2025-08",
+          "2025-09",
+          "2025-10",
+          "2025-11",
+          "2025-12"
+        ]
+      },
+      {
+        "symbol": "MKRUSDT",
+        "last_available_bar": "2025-09-15T00:00:00Z",
+        "first_missing_bar": "2025-09-15T04:00:00Z",
+        "missing_candle_count": 647,
+        "unavailable_archive_months": [
+          "2025-10",
+          "2025-11",
+          "2025-12"
+        ]
+      }
+    ],
+    "allowed_validation_shapes": [
+      "CONTIGUOUS_TERMINAL_SUFFIX_MISSING",
+      "FULL_CONTINUOUS"
+    ],
+    "leading_or_internal_gap_policy": "BLOCK_BEFORE_REPLAY",
+    "resumed_after_missing_policy": "BLOCK_BEFORE_REPLAY",
+    "duplicate_policy": "BLOCK_BEFORE_REPLAY",
+    "synthetic_candle_policy": "FORBIDDEN",
+    "replacement_symbol_policy": "FORBIDDEN",
+    "omitted_symbol_policy": "LEAVE_ONE_OUT_ONLY_FROM_FIXED_BASELINE"
+  },
+  "signals": {
+    "rebalance_anchor": "EVALUATION_START_00_UTC",
+    "signal_bar_index": "ENTRY_INDEX_MINUS_ONE",
+    "lookback_start_index": "SIGNAL_INDEX_MINUS_504",
+    "close_observation_indices": "INCLUSIVE_LOOKBACK_START_THROUGH_SIGNAL_INDEX",
+    "close_observation_count": 505,
+    "lookback_interval_count": 504,
+    "regression_x_values": "EXACT_INTEGERS_0_THROUGH_504",
+    "regression_x_mean": "252",
+    "regression_sxx": "10732260",
+    "regression_y_values": "NATURAL_LOG_OF_EACH_CLOSE",
+    "regression_y_mean": "ARITHMETIC_MEAN_OF_505_LOG_CLOSES",
+    "slope_formula": "SUM_X_DEVIATION_TIMES_Y_DEVIATION_DIVIDED_BY_SXX",
+    "intercept_formula": "Y_MEAN_MINUS_SLOPE_TIMES_X_MEAN",
+    "sst_formula": "SUM_SQUARED_Y_DEVIATIONS",
+    "sse_formula": "SUM_SQUARED_OLS_RESIDUALS",
+    "r_squared_formula": "CLAMP_ZERO_ONE_OF_ONE_MINUS_SSE_DIVIDED_BY_SST",
+    "score_formula": "SLOPE_TIMES_R_SQUARED",
+    "nonpositive_close_policy": "BLOCK_REPLAY",
+    "zero_sst_policy": "ZERO_SCORE_AND_REJECT",
+    "positive_trend_test": "SLOPE_STRICTLY_GREATER_THAN_ZERO",
+    "ranking_order": "SCORE_DESCENDING_THEN_SYMBOL_ASCENDING",
+    "selected_count_formula": "CEILING_FRACTION_TIMES_BASELINE_DECISION_COUNT",
+    "selected_count_is_fixed_in_leave_one_out": true,
+    "fixed_selected_count": 7,
+    "minimum_positive_markets_source": "PROTOCOL_MINIMUM_RANKED_POSITIONS",
+    "eligible_count_formula": "MIN_FIXED_SELECTED_COUNT_AND_POSITIVE_SLOPE_MARKET_COUNT",
+    "insufficient_positive_markets_action": "HOLD_CASH",
+    "recorded_signal_fields": [
+      "INTERCEPT",
+      "R_SQUARED",
+      "SCORE",
+      "SLOPE"
+    ]
+  },
+  "indicators": {
+    "true_range_formula": "MAX_HIGH_LOW_ABS_HIGH_PREV_CLOSE_ABS_LOW_PREV_CLOSE",
+    "atr_method": "WILDER_RMA_SEEDED_WITH_SMA",
+    "first_candle_true_range": "HIGH_MINUS_LOW",
+    "atr_signal_cutoff": "INCLUSIVE_OF_SIGNAL_BAR",
+    "stop_distance_formula": "VARIANT_ATR_MULTIPLE_TIMES_SIGNAL_ATR",
+    "volatility_method": "SAMPLE_STDDEV_OF_LOG_RETURNS",
+    "volatility_role": "DIAGNOSTIC_ONLY",
+    "indicator_rounding": "FULL_DECIMAL_PRECISION"
+  },
+  "orders": {
+    "rebalance_event_order": [
+      "EXIT_EXISTING_AT_OPEN",
+      "RANK_FROM_PRIOR_CLOSE",
+      "ALLOCATE_NEW_AT_OPEN",
+      "DISABLE_NEW_POSITION_SAME_BAR_STOP",
+      "MARK_ALL_POSITIONS_AT_CLOSE"
+    ],
+    "non_rebalance_event_order": [
+      "CHECK_FIXED_STOP",
+      "MARK_ALL_POSITIONS_AT_CLOSE"
+    ],
+    "entry_raw_price": "ENTRY_BAR_OPEN",
+    "entry_fill_formula": "RAW_PRICE_TIMES_ONE_PLUS_SLIPPAGE_RATE",
+    "rebalance_exit_raw_price": "REBALANCE_BAR_OPEN",
+    "stop_raw_price": "BAR_OPEN_IF_AT_OR_BELOW_STOP_ELSE_STOP",
+    "exit_fill_formula": "RAW_PRICE_TIMES_ONE_MINUS_SLIPPAGE_RATE",
+    "commission_formula": "FILL_NOTIONAL_TIMES_COMMISSION_RATE",
+    "stop_price_formula": "ENTRY_RAW_PRICE_MINUS_STOP_DISTANCE_ROUNDED_DOWN_TO_PRICE_INCREMENT",
+    "stop_trigger": "BAR_LOW_LESS_THAN_OR_EQUAL_TO_STOP_PRICE",
+    "stop_is_fixed_after_entry": true,
+    "stop_checked_on_entry_bar": false,
+    "rebalance_exit_precedes_stop_check": true,
+    "same_symbol_reentry_on_rebalance": true,
+    "end_of_window_liquidation": "LAST_AVAILABLE_CLOSE_BEFORE_EXCLUSIVE_END",
+    "end_liquidation_costs_applied": true,
+    "final_bar_processing": "PROCESS_NORMAL_EVENTS_THEN_LIQUIDATE_SURVIVORS_AT_CLOSE"
+  },
+  "allocation": {
+    "equity_basis": "CASH_PLUS_OPEN_POSITIONS_MARKED_AT_CURRENT_OPEN",
+    "risk_budget_formula": "EQUITY_TIMES_RISK_PERCENT",
+    "desired_quantity_formula": "RISK_BUDGET_DIVIDED_BY_RAW_STOP_DISTANCE",
+    "symbol_cap_formula": "EQUITY_TIMES_SYMBOL_CAP_DIVIDED_BY_ENTRY_FILL",
+    "candidate_quantity_order": [
+      "COMPUTE_RISK_QUANTITY",
+      "APPLY_SYMBOL_CAP",
+      "APPLY_MAX_POSITION_COUNT",
+      "APPLY_PROPORTIONAL_CAPACITY_SCALE",
+      "ROUND_DOWN_TO_QUANTITY_INCREMENT",
+      "REJECT_ZERO_QUANTITY"
+    ],
+    "entry_capacity_formula": "MIN_CASH_AND_EQUITY_TIMES_MAX_GROSS_DIVIDED_BY_ONE_PLUS_COMMISSION_RATE",
+    "capacity_scaling": "PROPORTIONAL_ACROSS_SAME_REBALANCE_CANDIDATES",
+    "capacity_includes_entry_fees": true,
+    "quantity_rounding": "ROUND_DOWN_TO_DECLARED_INCREMENT",
+    "zero_quantity_action": "REJECT_WITH_EVIDENCE",
+    "gross_exposure_basis": "ENTRY_FILL_NOTIONAL_DIVIDED_BY_EQUITY"
+  },
+  "lifecycle": {
+    "symbol_is_entry_eligible": "ENTRY_BAR_EXISTS_AND_PRIOR_505_CLOSES_ARE_CONSECUTIVE_AND_SLOPE_POSITIVE",
+    "atr_and_volatility_history": "REQUIRE_CONSECUTIVE_ACTUAL_CANDLES_WITHOUT_SYNTHESIS",
+    "terminated_unheld_symbol": "PERMANENTLY_EXCLUDE_FROM_FIRST_MISSING_BAR",
+    "terminated_held_symbol": "CLOSE_AT_ZERO_ON_FIRST_MISSING_BAR",
+    "termination_exit_reason": "MARKET_TERMINATION_WRITE_OFF",
+    "termination_raw_exit_price": "0",
+    "termination_exit_fill_price": "0",
+    "termination_exit_commission": "0",
+    "termination_exit_slippage_cost": "0",
+    "termination_event_timestamp": "FIRST_MISSING_BAR_OPEN_TIME",
+    "termination_event_order": [
+      "WRITE_OFF_TERMINATED_OPEN_POSITIONS",
+      "PROCESS_REBALANCE_OR_STOPS_FOR_AVAILABLE_MARKETS",
+      "MARK_AVAILABLE_OPEN_POSITIONS_AT_CLOSE"
+    ],
+    "terminated_symbol_reactivation": false,
+    "insufficient_active_markets_action": "HOLD_CASH",
+    "availability_events_recorded": true,
+    "writeoff_metrics_recorded": true
+  },
+  "folds": {
+    "parent_fold_semantics": {
+      "overall_replay": "ONE_CONTINUOUS_EVALUATION_REPLAY",
+      "fold_replay": "INDEPENDENT_CAPITAL_RESET_WITH_PRIOR_WARMUP",
+      "fold_initial_capital_matches_protocol": true,
+      "fold_positions_open_before_start": false,
+      "fold_first_entry_may_occur_at_start": true,
+      "fold_rebalance_anchor": "EACH_FOLD_EVALUATION_START",
+      "fold_end_liquidation": "LAST_CLOSE_BEFORE_FOLD_END",
+      "trade_fold_attribution": "EXIT_TIMESTAMP"
+    },
+    "fold_count": 4,
+    "fold_boundaries": "2025_CALENDAR_QUARTERS_HALF_OPEN",
+    "fold_capital_reset": true,
+    "availability_state_at_fold_start": "APPLY_TERMINATIONS_STRICTLY_BEFORE_FOLD_START_WITH_NO_SYNTHETIC_WRITEOFF",
+    "termination_on_fold_start": "FIRST_MISSING_BAR_BELONGS_TO_FOLD_AND_WRITES_OFF_ONLY_A_FOLD_OPEN_POSITION",
+    "fold_warmup": "USE_PRIOR_ACTUAL_CANDLES_ACROSS_DEVELOPMENT_AND_EARLIER_VALIDATION"
+  },
+  "metrics": {
+    "parent_metrics": {
+      "net_pl": "FINAL_EQUITY_MINUS_INITIAL_CAPITAL",
+      "trade_net_pl": "RAW_PRICE_PL_MINUS_ENTRY_EXIT_SLIPPAGE_AND_COMMISSIONS",
+      "profit_factor": "SUM_POSITIVE_TRADE_NET_PL_DIVIDED_BY_ABS_NEGATIVE",
+      "profit_factor_zero_loss_policy": "NULL_AND_GATE_FAIL",
+      "completed_trade_unit": "ONE_CLOSED_SYMBOL_POSITION",
+      "mark_to_market_equity": "CASH_PLUS_QUANTITY_TIMES_RAW_CLOSE_WITHOUT_HYPOTHETICAL_EXIT_COST",
+      "drawdown_initial_peak_included": true,
+      "drawdown": "PEAK_MINUS_MARK_TO_MARKET_CLOSE_EQUITY",
+      "drawdown_percent": "DRAWDOWN_DIVIDED_BY_PEAK_EQUITY_TIMES_100",
+      "turnover": "SUM_ABSOLUTE_FILL_NOTIONAL_DIVIDED_BY_INITIAL_CAPITAL",
+      "gross_profit_concentration": "POSITIVE_RAW_PRICE_TRADE_PL_BY_SYMBOL_DIVIDED_BY_TOTAL_POSITIVE_RAW_PL",
+      "gross_profit_zero_denominator_policy": "NULL_AND_GATE_FAIL",
+      "leave_one_market_out": "FULL_PRIMARY_REPLAY_EXCLUDING_ONE_DECISION_SYMBOL_EACH_RUN",
+      "leave_one_market_out_positive_test": "NET_PL_STRICTLY_GREATER_THAN_ZERO",
+      "positive_fold_test": "NET_PL_STRICTLY_GREATER_THAN_ZERO",
+      "cost_stress": "MULTIPLY_COMMISSION_AND_SLIPPAGE_TOGETHER",
+      "cost_stress_replay_scope": "FULL_REPLAY_INCLUDING_FILLS_FEES_SIZING_AND_CAPACITY"
+    },
+    "termination_writeoff_count": "COUNT_CLOSED_POSITIONS_WITH_MARKET_TERMINATION_WRITEOFF_REASON",
+    "termination_writeoff_net_pl": "SUM_NET_PL_OF_MARKET_TERMINATION_WRITEOFF_TRADES",
+    "active_symbol_count": "COUNT_BASELINE_NONOMITTED_SYMBOLS_WITH_ENTRY_BAR_AND_CONSECUTIVE_SIGNAL_HISTORY",
+    "quarterly_positive_test": "FOLD_NET_PL_STRICTLY_GREATER_THAN_ZERO",
+    "validation_pass_rule": "ALL_NINE_GATES_REQUIRED",
+    "validation_pass_action": "PERMIT_PINE_PARITY_REVIEW_ONLY"
+  },
+  "preexisting_result_artifacts": [],
+  "outcome_fields_inspected": [],
+  "specification_evidence_hash": "825391d45fde09c185186e103c963bf94776ce6de773500def5dcccbdf898cc0"
+}

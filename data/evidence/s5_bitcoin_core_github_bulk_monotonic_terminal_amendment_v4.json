@@ -1,0 +1,78 @@
+{
+  "schema_version": "aurex-s5-github-bulk-monotonic-terminal-amendment-v4",
+  "amendment_id": "s5-github-bulk-monotonic-terminal-amendment-v4",
+  "frozen_at": "2026-09-03T14:15:16.231382Z",
+  "status": "FROZEN_MONOTONIC_TERMINAL_AMENDMENT_ZERO_NETWORK",
+  "builder_contract_hash": "ef90d579900168c8f4c202b1592a82e1efb65da3681feeecfc6737204ee0a3a4",
+  "terminal_drift_audit_evidence_hash": "6ad04a3458c8fe972a0f13d89c3b75c4e546b5b95e3edb260faf75dd1012391d",
+  "prior_result_evidence_hash": "6354ab5cdb329a3246a32b02b0cf34cbc5d63ff89aaeee5ef6c2fca277d8a4c5",
+  "protocol_evidence_hash": "ee1564712af978eddd0081fe7ede7fb19dd275fc2f04e7a19306160f8b3174f5",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_acquisition_protocol_v1.json",
+      "file_sha256": "2a3c084d57223628228e895f584bc4cb0f7bdf85e52155c4257b9c6a22e79330"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v3.json",
+      "file_sha256": "7be4d2c213e977a244d326b576ef5bb25c37e40b89917397e88cce8eec19f81a"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_terminal_drift_failure_audit_v3.json",
+      "file_sha256": "fedb186baa707d99d2173acb5fe7f3d925aaa91f1b02d0bbbc96aca32af415bc"
+    },
+    {
+      "path": "data/evidence/s5_github_pull_metadata_bulk_v1/failure_v3_page_0118.json",
+      "file_sha256": "bd2277e62b801f9f3ba3c013a8799561686a3f5ea8cb8d9eab1a8291d31d76bf"
+    }
+  ],
+  "locally_promoted_page": 118,
+  "promoted_page_source_schema": "aurex-s5-github-bulk-failure-page-v3",
+  "promoted_page_target_schema": "aurex-s5-github-bulk-page-v1",
+  "promoted_response_body_unchanged": true,
+  "promoted_response_headers_unchanged": true,
+  "promoted_page_additional_request_count": 0,
+  "preserved_page_first": 1,
+  "preserved_page_last_after_promotion": 118,
+  "resume_page": 119,
+  "observed_terminal_page": 245,
+  "maximum_terminal_page": 300,
+  "terminal_policy": "ALLOW_NONDECREASING_TERMINAL_PAGE_NOT_ABOVE_PROTOCOL_MAXIMUM",
+  "final_canonical_page_count_controls_manifest": true,
+  "cohort_created_at_cutoff_unchanged": true,
+  "post_cutoff_records_excluded_from_cohort": true,
+  "previous_total_request_attempts": 119,
+  "maximum_total_request_attempts": 300,
+  "maximum_v4_request_attempts": 181,
+  "maximum_completable_terminal_page": 299,
+  "minimum_requests_required_at_freeze": 127,
+  "endpoint_query_headers_unchanged": true,
+  "response_and_page_byte_limits_unchanged": true,
+  "one_attempt_per_new_page_unchanged": true,
+  "credential_access_permitted": false,
+  "market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "candidates_permitted": false,
+  "orders_permitted": false,
+  "decision": "PROMOTE_PRESERVED_PAGE_118_AND_ALLOW_BOUNDED_NONDECREASING_TERMINAL_PAGE",
+  "next_authorization": "RUN_S5_GITHUB_METADATA_BULK_ACQUISITION_V4_ONCE_RESUMABLE",
+  "limitations": [
+    "An observed terminal page 300 requires a STOP before budget overrun.",
+    "Final ordering, uniqueness, cutoff, and byte gates remain mandatory.",
+    "No BTC value, parameter, return, candidate, signal, or order is permitted.",
+    "No credential, token, proxy, redirect, or concurrency is authorized.",
+    "No paper, Testnet strategy, production, live, or capital authority exists.",
+    "Only contiguous acquisition beginning at page 119 is authorized.",
+    "Page 118 is promoted locally from its preserved HTTP 200 response.",
+    "Pages 1 through 118 must reverify before any new request.",
+    "Promotion changes only the envelope schema, never response headers or body.",
+    "Promotion consumes zero additional network requests.",
+    "Source completeness, predictive edge, and profit remain unestablished.",
+    "Terminal pages may stay flat or grow, but must never regress or exceed 300.",
+    "The collection is not a transactionally isolated GitHub snapshot.",
+    "The endpoint, headers, limits, serial access, and no-retry rule are unchanged.",
+    "The original all-state query and creation cutoff remain unchanged.",
+    "The remaining request budget can complete at most terminal page 299."
+  ],
+  "amendment_evidence_hash": "db23014df1fedcc4562e2ef927da4a77ee08402830c6461f60d3ce004825e187"
+}

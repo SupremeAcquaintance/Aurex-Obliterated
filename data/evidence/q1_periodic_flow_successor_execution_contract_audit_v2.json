@@ -1,0 +1,22 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-successor-execution-contract-audit-v2",
+  "audited_at": "2026-08-10T19:29:16.471912Z",
+  "contract_file_sha256": "01575800e211f47c38ff37f04392fb62b6f251de01b59ca1909f23b4cc7e61a2",
+  "contract_evidence_hash": "8f1fb17d2a1b24314dd1b99b1302d05ff1fc601ad4386c63391a5533b2ee4e98",
+  "parent_protocol_evidence_hash": "a8ae24f8939aa88d3ea14aee5eb7b867b82bd50f9620183cb57a77c8466fca51",
+  "runner_source_hash": "c3ee4ab0b09b549999ffce5bbb79e9136db482e1d032c126d023b22ee409d0ea",
+  "auditor_contract_hash": "5f4d6997e29aa709412870bf8410829c559d056ed6712cedaa2c54e38b0897d4",
+  "inherited_transport_lineage_verified": true,
+  "no_outcome_boundary_verified": true,
+  "network_requests_made": 0,
+  "outcomes_accessed": 0,
+  "orders_submitted": 0,
+  "audit_evidence_hash": "3201aa92ce45502466354e9496ea4696836080c6b51744ddd4abfcbf6c689b6f",
+  "parent_v1_contract_evidence_hash": "8f9a2c0689b0c81a02a8d09e1582aa77f7bb41a12861aa9bafe29b1c03e6d9f7",
+  "stalled_request_marker_file_sha256": "3bd2f3a8e81804b8647bb64df9a01c5f166331f6e807e577fcb031298e30ffa0",
+  "stalled_partial_file_sha256": "51c5191a59188ebfd92c691bd169704f3becab0933142f8ebe9f313a84195153",
+  "stalled_partial_bytes": 42991616,
+  "interrupted_buffered_read_reconstructed": true,
+  "fresh_root_isolation_verified": true,
+  "wall_clock_bounds_verified": true
+}

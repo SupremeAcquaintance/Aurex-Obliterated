@@ -1,0 +1,19 @@
+{
+  "schema_version": "aurex-s5-github-normalization-execution-contract-audit-v1",
+  "audit_id": "s5-github-normalization-execution-contract-audit-v1",
+  "audited_at": "2026-09-03T16:16:07.064098Z",
+  "contract_path": "data/evidence/s5_bitcoin_core_github_normalization_execution_contract_v1.json",
+  "contract_file_sha256": "2dc4910b7c2aecd3ff1e9b4d8902e33b2e2ee68db377e966a780cc9e9791c0e9",
+  "contract_evidence_hash": "e08683548312d70eb3070bfe17b6e3550781e2014af0882c1c9f700231500875",
+  "protocol_evidence_hash": "2e634950d959e05bc3e5baf98bbc2f6dd3ead779a7c4406150d267a7d3099dfb",
+  "protocol_audit_evidence_hash": "7149bfb6d20948c1bd4b765ca4268e2ebcc0c4e0446e8a6ce2e9454b2745db9f",
+  "runner_contract_hash": "e5142c46f96a353df636917bcae76bab0d85ec80f6a8bbefbf07e3752f402f7d",
+  "auditor_source_sha256": "64c7a6f72e0938daf29a13f6211cc5e7eb7c1f7e8550eac8449166645091827b",
+  "source_page_files_opened": 0,
+  "response_bodies_decoded": 0,
+  "local_git_processes_executed": 0,
+  "reconstructed_exactly": true,
+  "decision": "PASS_S5_GITHUB_NORMALIZATION_EXECUTION_CONTRACT_AUDIT",
+  "next_authorization": "RUN_S5_GITHUB_NORMALIZATION_AND_COMPLETENESS_ONCE",
+  "audit_evidence_hash": "d833a1c6fba4bf9e399edc8ac67184822f53da087e4a99722b651216784913d8"
+}

@@ -1,0 +1,136 @@
+{
+  "schema_version": "aurex-s1-post-failure-analysis-result-v1",
+  "result_id": "s1-post-failure-analysis-result-v1",
+  "completed_at": "2026-08-27T06:57:24.528036Z",
+  "protocol_file_sha256": "2ca6ab7caf7fe38da4cc83b32a1d9effeca0ad39e1ba0af4bdd2e6fee0f8c773",
+  "protocol_evidence_hash": "f4b7ebd92fd1a149d784cce1840c08180d8c942ff2e54b6047313f91ba359c9b",
+  "execution_contract_file_sha256": "b63f91f3dabdda31767af7eea4026d91f0b68706ee1cf812459f6a5756a40540",
+  "execution_contract_evidence_hash": "84a4d09a653ca932e837adaa515faa47301a4a38cea5915839fd8ded22209064",
+  "runner_contract_hash": "ef79c9f59508c717bcd36fcd1d54c7fdcc2a09588e5bb930a2855fc48d737a87",
+  "outcome_result_file_sha256": "db84eeeb70417e6062118437787fbd11ee14b70595ea46a475ab575a1ce21477",
+  "outcome_result_evidence_hash": "8d900beb2dcbfcb0d11fed1f8ee0a99ecfa812e03900dae21a886973f86cc317",
+  "outcome_ledger_file_sha256": "9828f806677c2b4e77a835de7fa66b40621a798762c84eb4db00b496e49e0926",
+  "existing_development_interval_rows_read": 1104,
+  "primary_interval_rows_analyzed": 276,
+  "analysis_ids": [
+    "PRIMARY_COST_DRAG",
+    "BASE_DRAWDOWN_CHRONOLOGY",
+    "STRESS_DRAWDOWN_CHRONOLOGY",
+    "PRIMARY_EXPOSURE_EPISODES",
+    "PRIMARY_STRESS_TAIL_CONCENTRATION",
+    "PRIMARY_ANNUAL_INSTABILITY",
+    "DIAGNOSTIC_POSITION_VECTOR_DUPLICATION"
+  ],
+  "primary_failed_gate_ids": [
+    "BASE_PROFIT_FACTOR",
+    "BASE_MAXIMUM_DRAWDOWN",
+    "STRESS_MAXIMUM_DRAWDOWN",
+    "POSITIVE_FULL_CALENDAR_YEARS",
+    "STRESS_BOOTSTRAP_95PCT_LOWER_MEAN_WEEKLY_RETURN"
+  ],
+  "cost_decomposition": {
+    "charged_fill_count": 88,
+    "gross_final_equity_usd": "122.90478536916779269525499495090058730626543898040671141917816508177680229379674",
+    "gross_total_return": "0.2290478536916779269525499495090058730626543898040671141917816508177680229379674",
+    "base_final_equity_usd": "107.695828820645849360490108587610589455394410935217072100856",
+    "base_total_return": "0.07695828820645849360490108587610589455394410935217072100856",
+    "base_cost_drag_usd": "15.20895654852194333476488636328999785087102804518963931832216508177680229379674",
+    "base_cost_drag_return_points": "0.1520895654852194333476488636328999785087102804518963931832216508177680229379674",
+    "stress_final_equity_usd": "100.804890187023937464370255809489262193398815737690473479951",
+    "stress_total_return": "0.00804890187023937464370255809489262193398815737690473479951",
+    "stress_cost_drag_usd": "22.09989518214385523088473914141132511286662324271623793922716508177680229379674",
+    "stress_cost_drag_return_points": "0.2209989518214385523088473914141132511286662324271623793922716508177680229379674",
+    "base_to_stress_incremental_drag_usd": "6.890938633621911896119852778121327261995595197526598620905",
+    "stress_to_base_positive_return_retention_ratio": "0.10458784957178783358246278662411625303562965717377897031124780998102422421836073"
+  },
+  "base_drawdown": {
+    "basis": "BASE",
+    "maximum_drawdown": "0.6630087414266331605284213686",
+    "peak_equity_usd": "308.455099600070999980127693491166371767730806218840719289263",
+    "peak_date": "2021-04-16",
+    "trough_equity_usd": "103.946672227601148749204913611409174897284314779231773978847",
+    "trough_date": "2022-11-25",
+    "recovery_date": null,
+    "recovered_before_development_end": false,
+    "terminal_equity_usd": "107.695828820645849360490108587610589455394410935217072100856",
+    "terminal_drawdown_from_peak": "0.6508541147146556690950776448"
+  },
+  "stress_drawdown": {
+    "basis": "STRESS",
+    "maximum_drawdown": "0.6690315092239152119079239150",
+    "peak_equity_usd": "294.193444690014018368989143997150962903867041229882108411513",
+    "peak_date": "2021-04-16",
+    "trough_equity_usd": "97.3687603852715149187440355602858088109916608168205390126418",
+    "trough_date": "2022-11-25",
+    "recovery_date": null,
+    "recovered_before_development_end": false,
+    "terminal_equity_usd": "100.804890187023937464370255809489262193398815737690473479951",
+    "terminal_drawdown_from_peak": "0.6573516779300092361491769322"
+  },
+  "exposure_episodes": {
+    "long_interval_count": 87,
+    "long_episode_count": 44,
+    "shortest_episode_intervals": 1,
+    "longest_episode_intervals": 5,
+    "mean_episode_intervals": "1.977272727272727272727272727",
+    "positive_long_interval_count": 45,
+    "negative_long_interval_count": 42,
+    "zero_long_interval_count": 0,
+    "nonzero_long_interval_hit_rate": "0.5172413793103448275862068966"
+  },
+  "stress_tail_concentration": {
+    "basis": "STRESS",
+    "top_observation_count": 5,
+    "bottom_observation_count": 5,
+    "total_positive_pnl_usd": "539.0520757858121304960495229",
+    "total_negative_pnl_abs_usd": "538.2471855987881930316792671",
+    "top_five_positive_pnl_share": "0.4013601672863257245733130800",
+    "bottom_five_negative_pnl_share": "0.3798053283889090087188554101",
+    "top_interval_sequences": [
+      12,
+      170,
+      81,
+      177,
+      99
+    ],
+    "bottom_interval_sequences": [
+      248,
+      188,
+      20,
+      191,
+      180
+    ]
+  },
+  "primary_annual_base_returns": {
+    "2018": "-0.387724548828801871551695732922114114445114016329834127606831",
+    "2019": "0.09575316722005550713901627915480419543732909008985686733811",
+    "2020": "0.74602267977328751233314902858824487466581974517754894287721",
+    "2021": "-0.144721922255720768541608809010686420188305360055447784259964",
+    "2022": "-0.508135437067207258692683431323808351542878847182659061820990"
+  },
+  "diagnostic_unique_position_vector_count": 2,
+  "diagnostic_duplicate_pairs": [
+    "S1-D2-FOUR-VINTAGE-EASING==S1-D3-LOOSE-AND-FOUR-VINTAGE-EASING"
+  ],
+  "primary_diagnostic_position_agreement": {
+    "S1-D1-ONE-VINTAGE-EASING": "0.8478260869565217391304347826",
+    "S1-D2-FOUR-VINTAGE-EASING": "0.8043478260869565217391304348",
+    "S1-D3-LOOSE-AND-FOUR-VINTAGE-EASING": "0.8043478260869565217391304348"
+  },
+  "empirical_findings": [
+    "ECONOMIC_EDGE_NOT_DEMONSTRATED",
+    "DRAWDOWN_RISK_UNACCEPTABLE",
+    "TEMPORAL_ROBUSTNESS_FAILED",
+    "DIAGNOSTIC_VARIANTS_NONPROMOTABLE"
+  ],
+  "new_market_data_values_read": 0,
+  "new_candidate_definitions_created": 0,
+  "parameter_variants_evaluated": 0,
+  "validation_values_read": 0,
+  "holdout_values_read": 0,
+  "diagnostic_promotion_count": 0,
+  "orders_submitted": 0,
+  "decision": "RETIRE_S1_MACRO_FINANCIAL_CONDITIONS_NO_RESCUE",
+  "next_authorization": "AUTHORIZE_S2_DISTINCT_MECHANISM_CHARTER_ONLY",
+  "result_evidence_hash": "0db0fd10424b5bcc07a7f10c42c88d3a3843c0dddbcdc6a29c6665529c192988"
+}

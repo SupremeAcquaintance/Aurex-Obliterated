@@ -1,0 +1,426 @@
+{
+  "schema_version": "aurex-jam-successor-event-outcome-protocol-v1",
+  "protocol_id": "jam-successor-event-outcome-protocol-v1",
+  "frozen_at": "2026-08-05T06:06:06.604097Z",
+  "status": "FROZEN_PRE_EVENT_PRE_OUTCOME_NO_RETURNS",
+  "authorization_record": "USER_INSTRUCTED_PROCEED_WITH_EXACT_NEXT_EVENT_AND_OUTCOME_PROTOCOL_STAGE",
+  "authorization_scope": "AUTHORIZE_JAM_SUCCESSOR_EVENT_AND_OUTCOME_PROTOCOL_NO_RETURNS",
+  "distribution_protocol_path": "data/evidence/jam_successor_development_distribution_protocol_v1.json",
+  "distribution_protocol_file_sha256": "f56eff43ca8868786b55b047041ce3d453ec5cb60ac3754ba1c76dfea03cc6d1",
+  "distribution_protocol_evidence_hash": "8451a456171524092390ce3ef9536032d3d6e3dea1eee4eedc8e70cd014b8551",
+  "distribution_result_path": "data/evidence/jam_successor_development_distribution_result_v1.json",
+  "distribution_result_file_sha256": "be5e863b6a12b8d37646a6899cab3ee1b4808d429dac6ceaf53a693926ff8cc8",
+  "distribution_result_evidence_hash": "d79092c225bb5cd4ecda603a45f1114f6e7f669c1413e3e36057cdcac72b9eef",
+  "distribution_audit_path": "data/evidence/jam_successor_development_distribution_audit_v1.json",
+  "distribution_audit_file_sha256": "477782c388c8e43adf5da397c640577e3f37b647e4513909c6d68478e7d28840",
+  "distribution_audit_evidence_hash": "7ede08a05049a8f2bb82c4b660488b5803449b6536aaf17628630eb113a1bc9b",
+  "feature_rows_path": "data/evidence/jam_successor_development_feature_rows_v1.parquet",
+  "feature_rows_file_sha256": "fbb6ee42fca63ea6fe38db093c6c5c5484d2c6997d658d616f09f6fd4c2a0dfa",
+  "feature_rows_schema_hash": "15995c028cfb437bea77990389eee4e036f9493b106270476ad1ce07cfcc037b",
+  "feature_rows_bytes": 129887758,
+  "feature_specification_evidence_hash": "8c69103a5e65c73ff248e365a5c25362c0f4f7fffc1452ca197bf57e04d53701",
+  "builder_contract_hash": "9a4835b95eb6a8c1c91a71e3543ed45f1b9f4da6d96d3e7ae696e968f97bacd8",
+  "event_definition": {
+    "event_id": "J2-P01-SELL-FLOW-EXHAUSTION-RECLAIM-EVENT-V1",
+    "evaluation_time": "AFTER_EVALUATION_MINUTE_CLOSE",
+    "direction": "LONG_ONLY",
+    "conditions": [
+      {
+        "condition_id": "EXTREME_AGGRESSIVE_SELL_FLOW",
+        "feature_id": "shock_sell_flow_robust_z_5m",
+        "comparison": "GREATER_THAN_OR_EQUAL",
+        "source_quantile": "0.95",
+        "frozen_threshold": "4.625575808694040576",
+        "mechanism_role": "Require an unusually intense taker-sell shock relative to its causal baseline."
+      },
+      {
+        "condition_id": "SELL_SIDE_DOMINANCE",
+        "feature_id": "shock_sell_share_5m",
+        "comparison": "GREATER_THAN_OR_EQUAL",
+        "source_quantile": "0.5",
+        "frozen_threshold": "0.495418809496035904",
+        "mechanism_role": "Require taker sellers to contribute at least the frozen median share of shock quote flow."
+      },
+      {
+        "condition_id": "NEGATIVE_SHOCK_PRICE_IMPACT",
+        "feature_id": "shock_price_impact_bps_5m",
+        "comparison": "LESS_THAN_OR_EQUAL",
+        "source_quantile": "0.25",
+        "frozen_threshold": "-8.269710038582845440",
+        "mechanism_role": "Require the shock to have produced negative causal price impact."
+      },
+      {
+        "condition_id": "CONFIRMATION_FLOW_DECAY",
+        "feature_id": "sell_flow_decay_ratio_3m_vs_5m",
+        "comparison": "LESS_THAN_OR_EQUAL",
+        "source_quantile": "0.5",
+        "frozen_threshold": "0.938264464494273536",
+        "mechanism_role": "Require confirmation sell flow to decay relative to shock flow."
+      },
+      {
+        "condition_id": "CAUSAL_PRICE_RECLAIM",
+        "feature_id": "reclaim_bps_vs_pre_shock_vwap",
+        "comparison": "GREATER_THAN_OR_EQUAL",
+        "source_quantile": "0.5",
+        "frozen_threshold": "0.389389126850270272",
+        "mechanism_role": "Require the confirmation close to reclaim the pre-shock VWAP."
+      }
+    ],
+    "boolean_rule": "ALL_FIVE_CONDITIONS_TRUE",
+    "threshold_variants_permitted": false,
+    "learned_model_permitted": false,
+    "ranking_or_score_permitted": false,
+    "missing_feature_policy": "NOT_AN_EVENT"
+  },
+  "event_suppression": {
+    "raw_event_identity": "EVALUATION_OPEN_TIME_MS",
+    "ordering": "ASCENDING_EVALUATION_OPEN_TIME_MS",
+    "accepted_event_rule": "FIRST_RAW_EVENT_THEN_FIRST_WITH_AT_LEAST_60_MINUTES_SEPARATION",
+    "minimum_separation_minutes": 60,
+    "suppressed_events_retained_for_audit": true,
+    "suppressed_events_create_outcomes": false,
+    "reset_at_evidence_partition": true
+  },
+  "prevalence_gates": [
+    {
+      "gate_id": "RAW_EVENT_COUNT_AT_LEAST_1000",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "1000",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "NONOVERLAPPING_EVENT_COUNT_AT_LEAST_240",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "240",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "AT_LEAST_20_MONTHS_HAVE_5_EVENTS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "20",
+      "units": "MONTH_COUNT"
+    },
+    {
+      "gate_id": "EVERY_QUARTER_HAS_AT_LEAST_15_EVENTS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "15",
+      "units": "COUNT_PER_QUARTER"
+    },
+    {
+      "gate_id": "LARGEST_MONTH_EVENT_SHARE_AT_MOST_0_10",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "threshold": "0.10",
+      "units": "RATIO"
+    },
+    {
+      "gate_id": "LARGEST_DAY_EVENT_SHARE_AT_MOST_0_02",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "threshold": "0.02",
+      "units": "RATIO"
+    },
+    {
+      "gate_id": "ALL_ACCEPTED_EVENTS_HAVE_READY_FEATURES",
+      "comparison": "EQUAL",
+      "threshold": "0",
+      "units": "INVALID_EVENT_COUNT"
+    }
+  ],
+  "outcome_pricing": {
+    "symbol": "BTCUSDT",
+    "venue_product": "BINANCE_SPOT",
+    "direction": "LONG_ONLY",
+    "tick_size_quote": "0.01",
+    "base_commission_rate_per_side": "0.0010",
+    "stress_commission_rate_per_side": "0.0015",
+    "base_adverse_ticks_per_fill": 2,
+    "stress_adverse_ticks_per_fill": 10,
+    "entry_fill_formula": "ENTRY_REFERENCE_PLUS_ADVERSE_TICKS_MULTIPLIED_BY_TICK_SIZE",
+    "exit_fill_formula": "EXIT_REFERENCE_MINUS_ADVERSE_TICKS_MULTIPLIED_BY_TICK_SIZE",
+    "net_return_bps_formula": "10000_MULTIPLIED_BY_((EXIT_FILL_MULTIPLIED_BY_(1-EXIT_FEE))_DIVIDED_BY_(ENTRY_FILL_MULTIPLIED_BY_(1+ENTRY_FEE))_-_1)",
+    "maximum_favorable_excursion_formula": "10000_MULTIPLIED_BY_(MAXIMUM_HIGH_MINUTES_1_TO_HORIZON_DIVIDED_BY_ENTRY_FILL_-_1)",
+    "maximum_adverse_excursion_formula": "10000_MULTIPLIED_BY_(MINIMUM_LOW_MINUTES_1_TO_HORIZON_DIVIDED_BY_ENTRY_FILL_-_1)",
+    "all_path_minutes_required": true,
+    "quarantine_or_absence_policy": "OUTCOME_UNAVAILABLE_NO_SYNTHESIS",
+    "cross_partition_outcome_permitted": false,
+    "horizons": [
+      {
+        "horizon_minutes": 15,
+        "role": "NONSELECTABLE_DIAGNOSTIC",
+        "entry_minute_offset": 1,
+        "exit_minute_offset": 15,
+        "entry_reference": "FIRST_AGGREGATE_TRADE_PRICE",
+        "exit_reference": "LAST_AGGREGATE_TRADE_PRICE"
+      },
+      {
+        "horizon_minutes": 30,
+        "role": "PRIMARY",
+        "entry_minute_offset": 1,
+        "exit_minute_offset": 30,
+        "entry_reference": "FIRST_AGGREGATE_TRADE_PRICE",
+        "exit_reference": "LAST_AGGREGATE_TRADE_PRICE"
+      },
+      {
+        "horizon_minutes": 60,
+        "role": "NONSELECTABLE_DIAGNOSTIC",
+        "entry_minute_offset": 1,
+        "exit_minute_offset": 60,
+        "entry_reference": "FIRST_AGGREGATE_TRADE_PRICE",
+        "exit_reference": "LAST_AGGREGATE_TRADE_PRICE"
+      }
+    ]
+  },
+  "matched_control": {
+    "purpose": "ESTIMATE_EVENT_EXCESS_RETURN_VERSUS_TEMPORAL_ACTIVITY_MATCH",
+    "control_source": "READY_NON_EVENT_DEVELOPMENT_ROWS",
+    "exact_match_fields": [
+      "CALENDAR_MONTH",
+      "UTC_HOUR_OF_DAY",
+      "BASELINE_SELL_QUOTE_MEDIAN_QUARTILE"
+    ],
+    "activity_feature": "baseline_sell_quote_median_120m",
+    "activity_bins": "DEVELOPMENT_Q25_Q50_Q75_QUARTILES",
+    "event_exclusion_radius_minutes": 1440,
+    "one_to_one_without_replacement": true,
+    "control_minimum_separation_minutes": 60,
+    "selection_order": "ASCENDING_EVENT_TIME",
+    "candidate_choice": "MINIMUM_ABSOLUTE_TIME_DISTANCE_THEN_EARLIER_TIMESTAMP",
+    "future_outcome_used_for_matching": false,
+    "unmatched_event_policy": "RETAIN_EVENT_EXCLUDE_FROM_MATCHED_CONTRAST"
+  },
+  "statistical_plan": {
+    "primary_horizon_minutes": 30,
+    "primary_direction": "LONG",
+    "primary_event_definition_count": 1,
+    "selectable_horizon_count": 1,
+    "alpha": "0.05",
+    "multiplicity_correction": "NOT_REQUIRED_ONE_PRIMARY_EVENT_ONE_PRIMARY_HORIZON",
+    "bootstrap_method": "CALENDAR_MONTH_CLUSTER_BOOTSTRAP_WITH_REPLACEMENT",
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20260805,
+    "confidence_interval": "ONE_SIDED_95_PERCENTILE_LOWER_BOUND",
+    "diagnostic_horizons_may_rescue_primary": false,
+    "path_diagnostics_may_rescue_primary": false,
+    "failed_gate_may_be_waived": false,
+    "post_outcome_threshold_change_permitted": false
+  },
+  "development_outcome_gates": [
+    {
+      "gate_id": "OUTCOME_QUALIFIED_EVENTS_AT_LEAST_200",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "200",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "MATCHED_CONTROL_PAIRS_AT_LEAST_180",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "180",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "BASE_NET_MEAN_30M_AT_LEAST_5_BPS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "5",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "BASE_NET_PROFIT_FACTOR_AT_LEAST_1_20",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "1.20",
+      "units": "RATIO"
+    },
+    {
+      "gate_id": "STRESS_NET_MEAN_30M_POSITIVE",
+      "comparison": "GREATER_THAN",
+      "threshold": "0",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "MATCHED_EXCESS_MEAN_30M_AT_LEAST_5_BPS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "5",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "CLUSTER_BOOTSTRAP_LOWER_95_BASE_NET_POSITIVE",
+      "comparison": "GREATER_THAN",
+      "threshold": "0",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "CLUSTER_BOOTSTRAP_LOWER_95_MATCHED_EXCESS_POSITIVE",
+      "comparison": "GREATER_THAN",
+      "threshold": "0",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "BOTH_CALENDAR_YEARS_BASE_NET_POSITIVE",
+      "comparison": "EQUAL",
+      "threshold": "2",
+      "units": "POSITIVE_YEAR_COUNT"
+    },
+    {
+      "gate_id": "AT_LEAST_6_OF_8_QUARTERS_BASE_NET_POSITIVE",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "6",
+      "units": "POSITIVE_QUARTER_COUNT"
+    },
+    {
+      "gate_id": "LARGEST_MONTH_ABSOLUTE_RETURN_CONTRIBUTION_AT_MOST_0_20",
+      "comparison": "LESS_THAN_OR_EQUAL",
+      "threshold": "0.20",
+      "units": "RATIO"
+    }
+  ],
+  "sealed_validation_gates": [
+    {
+      "gate_id": "VALIDATION_OUTCOME_QUALIFIED_EVENTS_AT_LEAST_80",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "80",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "VALIDATION_MATCHED_CONTROL_PAIRS_AT_LEAST_60",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "60",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "VALIDATION_BASE_NET_MEAN_30M_AT_LEAST_5_BPS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "5",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "VALIDATION_BASE_NET_PROFIT_FACTOR_AT_LEAST_1_15",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "1.15",
+      "units": "RATIO"
+    },
+    {
+      "gate_id": "VALIDATION_STRESS_NET_MEAN_30M_POSITIVE",
+      "comparison": "GREATER_THAN",
+      "threshold": "0",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "VALIDATION_MATCHED_EXCESS_MEAN_30M_AT_LEAST_5_BPS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "5",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "VALIDATION_AT_LEAST_3_OF_4_QUARTERS_BASE_NET_POSITIVE",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "3",
+      "units": "POSITIVE_QUARTER_COUNT"
+    }
+  ],
+  "sealed_holdout_gates": [
+    {
+      "gate_id": "HOLDOUT_OUTCOME_QUALIFIED_EVENTS_AT_LEAST_80",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "80",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "HOLDOUT_MATCHED_CONTROL_PAIRS_AT_LEAST_60",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "60",
+      "units": "COUNT"
+    },
+    {
+      "gate_id": "HOLDOUT_BASE_NET_MEAN_30M_AT_LEAST_5_BPS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "5",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "HOLDOUT_BASE_NET_PROFIT_FACTOR_AT_LEAST_1_15",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "1.15",
+      "units": "RATIO"
+    },
+    {
+      "gate_id": "HOLDOUT_STRESS_NET_MEAN_30M_POSITIVE",
+      "comparison": "GREATER_THAN",
+      "threshold": "0",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "HOLDOUT_MATCHED_EXCESS_MEAN_30M_AT_LEAST_5_BPS",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "5",
+      "units": "BASIS_POINTS"
+    },
+    {
+      "gate_id": "HOLDOUT_AT_LEAST_3_OF_4_QUARTERS_BASE_NET_POSITIVE",
+      "comparison": "GREATER_THAN_OR_EQUAL",
+      "threshold": "3",
+      "units": "POSITIVE_QUARTER_COUNT"
+    }
+  ],
+  "evidence_partitions": {
+    "development": "2019-01_THROUGH_2020-12",
+    "sealed_validation": "2021-01_THROUGH_2021-12",
+    "sealed_holdout": "2022-01_THROUGH_2022-12",
+    "consumed_periods": [
+      "2023-01_THROUGH_2025-12_JAM_FAMILY_DECISION_EVIDENCE",
+      "2026_JAM_EXPLORATORY_AND_FORWARD_PERIODS"
+    ],
+    "development_outcomes_must_pass_before_validation": true,
+    "validation_requires_new_explicit_authorization": true,
+    "validation_must_pass_before_holdout": true,
+    "holdout_requires_new_explicit_authorization": true,
+    "threshold_reestimation_after_development": false,
+    "threshold_reestimation_after_validation": false
+  },
+  "distribution_statistics_accessed": [
+    "reclaim_bps_vs_pre_shock_vwap|0.5|0.389389126850270272",
+    "sell_flow_decay_ratio_3m_vs_5m|0.5|0.938264464494273536",
+    "shock_price_impact_bps_5m|0.25|-8.269710038582845440",
+    "shock_sell_flow_robust_z_5m|0.95|4.625575808694040576",
+    "shock_sell_share_5m|0.5|0.495418809496035904"
+  ],
+  "new_real_market_rows_inspected": 0,
+  "event_flags_calculated": 0,
+  "accepted_events_calculated": 0,
+  "future_labels_calculated": [],
+  "return_metrics_calculated": [],
+  "strategy_executions": 0,
+  "creates_strategy": false,
+  "creates_signal": false,
+  "creates_candidate": false,
+  "creates_paper_eligibility": false,
+  "creates_testnet_order_authority": false,
+  "creates_production_authority": false,
+  "creates_live_eligibility": false,
+  "decision": "PASS_EVENT_AND_OUTCOME_PROTOCOL_AWAIT_DEVELOPMENT_EVENT_PREVALENCE_AUTHORIZATION",
+  "next_required_authorization": "AUTHORIZE_JAM_SUCCESSOR_DEVELOPMENT_EVENT_PREVALENCE_NO_OUTCOMES",
+  "prevalence_pass_next_authorization": "AUTHORIZE_JAM_SUCCESSOR_DEVELOPMENT_OUTCOME_CALCULATION",
+  "limitations": [
+    "A failed development, validation, or holdout decision retires this event definition rather than allowing in-place redesign.",
+    "A prevalence failure stops the mechanism; thresholds may not be relaxed to manufacture sample size.",
+    "Accepted events are chronological and separated by sixty minutes so primary and diagnostic outcome windows cannot overlap.",
+    "All five event conditions are conjunctive; no score, rank, learned model, or threshold variant is permitted.",
+    "Base costs use 0.10 percent commission per side and two adverse ticks per fill.",
+    "Development event prevalence must pass every frozen gate before future outcome calculation may be authorized.",
+    "Development gates are conjunctive; no manual waiver, weighted score, or diagnostic rescue is permitted.",
+    "Development must pass before 2021 validation can be requested, and 2021 must pass before 2022 holdout can be requested.",
+    "Event thresholds are fixed numeric values from the accepted 2019-2020 marginal quantiles and may never be re-estimated.",
+    "Exact Pine parity is unavailable because the mechanism depends on aggregate-trade aggressor identity.",
+    "Matched controls use feature/time strata only and may not use future outcomes for selection.",
+    "Missing, quarantined, or cross-partition path minutes make an outcome unavailable; no price or minute may be synthesized.",
+    "No production, live, real-capital, or profit authority is created; real net profit remains zero.",
+    "Only one long event predicate and one primary thirty-minute horizon are selectable.",
+    "Opening validation or holdout requires a new explicit authorization and an unchanged protocol hash.",
+    "Stress costs use 0.15 percent commission per side and ten adverse ticks per fill.",
+    "Testnet zero commissions are not evidence for historical or future economic viability.",
+    "The consumed 2023-2025 Jam decision period and 2026 exploratory periods cannot support this mechanism's promotion.",
+    "The fifteen- and sixty-minute horizons are diagnostics and cannot replace or rescue the primary.",
+    "The one-sided confidence bounds use a frozen month-cluster bootstrap with 10,000 repetitions and fixed seed 20260805.",
+    "This protocol creates no strategy, signal, candidate, sizing, entry order, exit order, stop, target, or paper eligibility.",
+    "This protocol is frozen after marginal development feature distributions but before calculating any event flag or outcome.",
+    "Unmatched events remain in event evidence but cannot enter the matched-control contrast."
+  ],
+  "protocol_evidence_hash": "33323ff5864c9dfdeed1b5ddd5dc237ac5a7b7d23d1a1ac484abf75e02ded8db"
+}

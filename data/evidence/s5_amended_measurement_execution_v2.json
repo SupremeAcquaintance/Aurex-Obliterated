@@ -1,0 +1,86 @@
+{
+  "authority": {
+    "live": false,
+    "market_values": false,
+    "network": false,
+    "paper": false,
+    "production": false,
+    "returns": false,
+    "signals": false,
+    "testnet_strategy_orders": false
+  },
+  "disable_lazy_fetch_and_all_network_protocols": true,
+  "evidence_hash": "9e8386c26f43e4b28709eeba0123b0b11108d7bce119d5a2fcb08df490156ade",
+  "failure_consumes_attempt": true,
+  "frozen_at": "2026-09-25T22:21:39.664870+00:00",
+  "implementation_bindings": [
+    {
+      "path": "scripts/audit_s5_amended_measurement.py",
+      "sha256": "4ec23f2e9dd8275abbba23b59f37a038d1cf3e3b3ebf8aea7c0561cee70568fa"
+    },
+    {
+      "path": "scripts/audit_s5_complete_release_tag_source_remediation_result.py",
+      "sha256": "382a9f419eb2d772451eb6d708280f0d82262668450dd17acac807cc2d3c8878"
+    },
+    {
+      "path": "scripts/run_s5_accepted_development_measurements.py",
+      "sha256": "9ac3387143c0e8fc04574c2d3460915fac0cd177d75181a97fcc84b1d54936ff"
+    },
+    {
+      "path": "scripts/run_s5_complete_release_tag_source_remediation.py",
+      "sha256": "0f3c9af6ce6a2ab62e2aaf8d7030c41c7355b7b8103b71b6c55608ac6618af0b"
+    },
+    {
+      "path": "scripts/s5_amended_measurement.py",
+      "sha256": "2efe009cd0f912b77ae9313b597b4d554bdc688dc248b52e1c8601f25cb17d6c"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_accepted_development_measurement_execution.py",
+      "sha256": "cc0c8ed74c2696b4947ce15ecbc8fb2ed8db115d3930f40447b8fcc52823a1f0"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_accepted_development_measurement_protocol.py",
+      "sha256": "c6ec6ab458e74640beabb8df128237e3c33233e93e273d81693975735a200baa"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_github_corrected_normalization_execution.py",
+      "sha256": "40b2c3d60f808c952de0696089624d0763e19ab22d23857ac152b73a291edb93"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_github_normalization_execution.py",
+      "sha256": "9cf9ce9c9b5d9fa52f7f85afb61f9a699ce5a09a8f2be02d842ff48a792dc47f"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_history_payload.py",
+      "sha256": "1922a1b7ab992c29ee6ba52286a245ec8f75bd1c24f110c3e4d4919bedfe3ee4"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_complete_release_tag_source_remediation.py",
+      "sha256": "ec2b370ebfd2104944ddacf8836001e746500b99dd9abaa1fd458b30e71bd81a"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_complete_release_tag_source_remediation_execution.py",
+      "sha256": "d37e026cd78d9dd0442a4b9b0ad63641d92233e112fd2b908cceeba77fcf3b0f"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_complete_release_tag_source_remediation_result_audit.py",
+      "sha256": "c4b58de0df337ca0e4fad8c02b32d7ba894b9198fd777eafd6b3aed234ea3dad"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_release_tag_source_remediation_execution.py",
+      "sha256": "a0da56f9d8f413fc62558d911dbff8708ffa422cba37e077ca15831a5c85f730"
+    },
+    {
+      "path": "src/aurex/backtest_engine/universe.py",
+      "sha256": "85a7bb14342f67b94a13d686fa8c92228ab6b6bcf12136c78564cd4769c0b35d"
+    }
+  ],
+  "next_action": "RUN_S5_AMENDED_MEASUREMENT_ONCE",
+  "persist_raw_outputs": true,
+  "process_count": 3,
+  "protocol_audit_hash": "fb2b64c16b3c8e7dcf824002e1dd51ba6be7d5a18c68f58f0ae04cb64c1ad9dd",
+  "protocol_hash": "e680dbe872d667636b0568b3cd99363a06c9f04049f03f62e4390fcc9873e578",
+  "reserve_attempt_before_processes": true,
+  "schema": "aurex-s5-amended-measurement-execution-v2",
+  "single_run": true
+}

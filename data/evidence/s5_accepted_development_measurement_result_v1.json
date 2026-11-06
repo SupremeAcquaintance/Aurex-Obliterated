@@ -1,0 +1,178 @@
+{
+  "schema_version": "aurex-s5-accepted-development-measurement-result-v1",
+  "result_id": "s5-accepted-development-measurement-result-v1",
+  "started_at": "2026-09-08T20:26:58.611949Z",
+  "completed_at": "2026-09-08T20:27:05.861745Z",
+  "elapsed_seconds": 7.249796,
+  "protocol_evidence_hash": "0d4f9dbc73675a0e625971a9a53181bcd4a2b707ebe02f01a28edfc4c65478d0",
+  "protocol_audit_evidence_hash": "0b6ad1358d206822ab530447bc184dfb98ecd12d209e8cd8c2f3675f17c70064",
+  "execution_contract_evidence_hash": "da08133f957e4129421e5e708b93c87212d4273b3da8bdc1daed5b62e86a0154",
+  "execution_contract_audit_evidence_hash": "68a683dc72b1292131929af5ce1f23ef960bd672d7525bd09afbbaef69ca7c71",
+  "runner_contract_hash": "cafc4eb11f7ff7b7c91d77cdb4d798599350734764c5e11d90768f7da0d37e5c",
+  "input_file_sha256s": [
+    "1075bcd84b27a8408c26d9beab481b7b6df762a922267e57bae05a1725ee5888",
+    "e13d5aba80bcb688abf004fc8813dfd81a3083c1bc295859267b9baac001e564",
+    "6e11c4183adfde890d3188a6ae20bdce1700faf3651e76f2b0975051a0968bd2",
+    "5975b299d2b6e291ac1961038e067150372846d4d54e11a84ca5405781b3627c",
+    "992c21f70d99e1243296d851b836119ff7825cd54574ac98ef32f65bf0a66de8"
+  ],
+  "input_row_manifest_evidence_hashes": [
+    "8322a392190b090d656e5bca6a07b07712aff650cf0630336893eebda2dc27bb",
+    "f2258f31f962eca23a0954f5b6fd3f91605d884af2697a8818ad52ac6ef737f7",
+    "c7ec6e975596d509d633a8b1f1a6ac4baac731a3d2b73d2fbdcf5f7b125b5b93",
+    "cc4733623e3d000495af0e9c2c767e76fca353eba9d367399a023b64beb98d8b",
+    "0aefeb2063b45c2fbd852ca76c4460e0ac88562fb454b2de3ada7f196fd082ab"
+  ],
+  "input_row_count": 57592,
+  "git_process_count": 3,
+  "first_parent_diff_stdout_sha256": "e058a52cd2cb5e632ebf7d4adf2bae93618c0b254094e5d9f525e179c476bf4f",
+  "reachable_commit_stdout_sha256": "d087ddc2158d2e89ba0f92f65400688120394e2af42ad1e323e0adf762b1b44c",
+  "tag_inventory_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "reachable_commit_count": 50395,
+  "stable_release_tag_inventory_count": 0,
+  "primary_events_in_complete_months": 16267,
+  "primary_events_excluded_after_complete_months": 4,
+  "all_accepted_events_in_complete_months": 16273,
+  "all_accepted_events_excluded_after_complete_months": 6,
+  "canonical_events_in_complete_months": 16238,
+  "canonical_events_excluded_after_complete_months": 4,
+  "unresolved_merges_in_complete_months": 479,
+  "unresolved_merges_excluded_after_complete_months": 0,
+  "output_path": "data/evidence/s5_accepted_development_monthly_measurements_v1.jsonl",
+  "output_file_sha256": "56a54bee72f77102e21c03975eb7a32e95b8eb2ff68882dd32fbe8a01f8bddd8",
+  "output_byte_count": 271959,
+  "output_row_count": 212,
+  "output_row_manifest_evidence_hash": "81665425505a5d756273bec822d7062971aa825900cb6d1b8a5f3eacce91f2a3",
+  "gate_results": [
+    {
+      "gate_id": "ALL_TWENTY_FIVE_SOURCE_BINDINGS_MATCH",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "CORRECTED_NORMALIZATION_RESULT_AND_INDEPENDENT_AUDIT_PASS",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "ALL_FIVE_INPUT_FILE_AND_ROW_MANIFEST_HASHES_MATCH",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "PRIMARY_SOURCE_VERIFIED_ACCEPTED_UNIVERSE_IS_EXACTLY_16271",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "ALL_ACCEPTED_SENSITIVITY_UNIVERSE_IS_EXACTLY_16279_WITH_EIGHT_UNVERIFIED",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "CANONICAL_FIRST_PARENT_UNIVERSE_IS_EXACTLY_16242",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "EVENT_UNIVERSES_REMAIN_SEPARATE_AND_MANY_TO_ONE_LINKS_REMAIN_VISIBLE",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "ONLY_COMPLETE_UTC_MONTHS_THROUGH_2026_08_ARE_EMITTED",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "SEVEN_DAY_POST_MONTH_AVAILABILITY_LAG_IS_APPLIED",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "AUTHOR_AND_UPDATED_TIMESTAMPS_ARE_FORBIDDEN_AS_EVENT_TIME",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "ACTOR_IDENTITY_USES_ACCOUNT_ID_WITH_EXPLICIT_UNKNOWN_BOUNDS",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "OUTPUT_CONTAINS_COUNTS_AND_HASHED_MANIFESTS_NOT_ACTOR_IDENTIFIERS",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "COMPONENT_KEYS_USE_FIRST_PARENT_DIFFS_AND_FROZEN_PATH_RULES",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "STABLE_RELEASE_TAG_SHAPE_REACHABILITY_TYPE_AND_SIGNATURE_STATE_ARE_PRESERVED",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "UNVERIFIED_RELEASE_AND_REVIEW_CONTINUITY_CANNOT_BECOME_CANDIDATE_FEATURES",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "INTEGER_COUNTS_AND_SECONDS_ONLY_WITH_NO_FLOAT_ARITHMETIC",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "JSONL_ROWS_ARE_ORDERED_UNIQUE_AND_BYTE_REPRODUCIBLE",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "ANY_INPUT_SCHEMA_HASH_COUNT_TIME_OR_GIT_MISMATCH_STOPS_THE_RUN",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    },
+    {
+      "gate_id": "ZERO_NETWORK_MARKET_VALUES_RETURNS_CANDIDATES_SIGNALS_OR_ORDERS",
+      "status": "PASS",
+      "evidence": "All frozen measurement construction gates passed."
+    }
+  ],
+  "passed_gate_count": 19,
+  "failed_gate_count": 0,
+  "network_requests_executed": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "parameters_defined": 0,
+  "candidates_created": 0,
+  "signals_created": 0,
+  "orders_submitted": 0,
+  "decision": "PASS_S5_ACCEPTED_DEVELOPMENT_MEASUREMENT_CONSTRUCTION",
+  "next_authorization": "AUTHORIZE_S5_ACCEPTED_DEVELOPMENT_MEASUREMENT_RESULT_AUDIT_ONLY",
+  "authorizes_result_audit": true,
+  "authorizes_market_values": false,
+  "authorizes_returns": false,
+  "authorizes_strategy_candidate": false,
+  "authorizes_signals": false,
+  "authorizes_paper": false,
+  "authorizes_testnet_strategy_orders": false,
+  "authorizes_production": false,
+  "authorizes_live": false,
+  "failure_type": null,
+  "failure_message": null,
+  "limitations": [
+    "Accepted development activity can reflect workflow changes rather than demand.",
+    "All emitted historical measurements are outcome-aware and nonqualifying.",
+    "Component breadth measures touched path groups, not code quality or impact.",
+    "GitHub historical metadata is a current snapshot, not a revision-time archive.",
+    "No market value, return, threshold, strategy rule, or signal was created.",
+    "Release signature presence was recorded but not cryptographically verified.",
+    "Review continuity remains unavailable because review events were not acquired.",
+    "The 479 unresolved merges remain an explicit sensitivity limitation.",
+    "The eight source-unverified accepted pulls remain sensitivity-only.",
+    "Trading authority and real net profit remain zero."
+  ],
+  "result_evidence_hash": "6d0d3efc7da6dc5d909bea7bca0e892e8ea45c8ab9541c521109d644b85d7c3c"
+}

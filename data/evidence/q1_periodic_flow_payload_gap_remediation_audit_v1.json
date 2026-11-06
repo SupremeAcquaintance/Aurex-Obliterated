@@ -1,0 +1,18 @@
+{
+  "schema_version": "aurex-q1-periodic-flow-usdm-gap-remediation-audit-v1",
+  "audit_id": "q1-periodic-flow-usdm-gap-remediation-audit-v1",
+  "audited_at": "2026-08-07T08:46:34.046850Z",
+  "result_file_sha256": "e4411199d07b3e83a8ec148299c3648eac86efab44a22749b05178f612036c8f",
+  "result_evidence_hash": "dea09a8f545b8c1885ac1e1c8f5a6d370ab719559c801b16fb12c4f5d49685a3",
+  "protocol_evidence_hash": "3c69bde0263a3582cba8b3165c515837e0de979819c0537196d1301db1a324ad",
+  "archive_sha256": "d93f4201d012c74648d65727be0e17b2f7e38d2f6f9d8cb6817e8486b7ffe435",
+  "gap_manifest_hash": "5ba50a98f66bfb1f0e557d7b4e91ba5355329b1acad59b0eb61f2202e40ff568",
+  "gap_event_count": 504,
+  "total_skipped_raw_trade_ids": 1374,
+  "reconstructed_exactly": true,
+  "network_requests_made": 0,
+  "price_or_quantity_values_parsed": [],
+  "return_metrics_calculated": [],
+  "decision": "STOP_Q1_USDM_SOURCE_SEMANTICS_UNRESOLVED",
+  "audit_evidence_hash": "d4b555735662dfed6ced975c32e1ed3aaf7313c6b93dc95211bbe5f7b4ccfa6f"
+}

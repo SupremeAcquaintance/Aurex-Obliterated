@@ -1,0 +1,43 @@
+{
+  "schema_version": "aurex-s5-github-corrected-normalization-result-audit-v2",
+  "audit_id": "s5-github-corrected-normalization-result-audit-v2",
+  "audited_at": "2026-09-08T19:06:35.522516Z",
+  "result_file_sha256": "d66f10b0cada90d8f20238d9286429c89289a17550fed713be68d9243bd54e5a",
+  "result_evidence_hash": "a205e0759b235fae0810ae9203afa4dd81087f52ce782cd4e8c00c670fdd45a5",
+  "protocol_evidence_hash": "d8a6c5bf331c75a127e47f63c3e2f14c6d3a1292f9015666009da3a1b106bc95",
+  "protocol_audit_evidence_hash": "b664ae816c730550f7876aaba41c7090797b848bfdfeaf9c2c0fa420d36fff8c",
+  "execution_contract_evidence_hash": "9a374dc928e74d3708e587ed5e9eec436225dc560f35d62b036c277a69779477",
+  "execution_contract_audit_evidence_hash": "bec0bd3756616fe3161b74f18318111dc0d9a4bd55365c9af65114f552f8ced6",
+  "runner_contract_hash": "fa8f692ffe1f5f88b5d34b1bd50264b698a55c6b574d9bd5e07a8267d5f32c4c",
+  "auditor_implementation_bindings": [
+    {
+      "path": "scripts/audit_s5_bitcoin_core_github_corrected_normalization_result.py",
+      "file_sha256": "77c10fe7443c31fb7bcc44dc9803889c409ed4050ae88d9228e0723070dfa65a"
+    },
+    {
+      "path": "src/aurex/backtest_engine/s5_bitcoin_core_github_corrected_normalization_result_audit.py",
+      "file_sha256": "0fca574f07aeb04312a3e856ca145099fcc6a53c52e0601b2db89c88bdf18070"
+    }
+  ],
+  "auditor_contract_hash": "edac0a03a4e83497f94531602b79d093556e058ed79132fe460e554dbbdefe28",
+  "output_file_manifest_evidence_hash": "052ffc0274531d14a0e96abdce6a23d7f531087bf2345cd21ca2e8f59a149b9a",
+  "output_row_manifest_evidence_hash": "c5653d77644eb40c50317506bf573b2e1545f93ef7dee894e1555cd1985414d6",
+  "normalized_pull_count": 24398,
+  "canonical_mapping_count": 16242,
+  "target_resolution_count": 194,
+  "accepted_coverage_count": 16279,
+  "unresolved_merge_count": 479,
+  "accepted_source_linked_count": 16271,
+  "accepted_source_unverified_count": 8,
+  "local_git_processes_executed": 2,
+  "github_requests_executed": 0,
+  "market_values_read": 0,
+  "parameters_defined": 0,
+  "returns_calculated": 0,
+  "candidates_created": 0,
+  "orders_submitted": 0,
+  "result_reconstructed_exactly": true,
+  "decision": "PASS_S5_GITHUB_CORRECTED_NORMALIZATION_RESULT_AUDIT",
+  "next_authorization": "FREEZE_S5_ACCEPTED_DEVELOPMENT_MEASUREMENT_PROTOCOL_ONLY",
+  "audit_evidence_hash": "d0d66d194c6136164999341f5e044bf60d8f2e7b585531a863ba599d54254648"
+}

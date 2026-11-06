@@ -1,0 +1,216 @@
+{
+  "authorizes_candidate": false,
+  "authorizes_forward_paper": false,
+  "authorizes_live": false,
+  "authorizes_market_data_import": false,
+  "authorizes_parameter_definition": false,
+  "authorizes_production": false,
+  "authorizes_return_testing": false,
+  "authorizes_testnet_strategy_orders": false,
+  "charter_evidence_hash": "426e1f6eceb62f24e6c30d23d5848cc92f05260fa0b56cd65c8c737775642019",
+  "charter_id": "jam-successor-hypothesis-charter-v1",
+  "contamination_ledger_evidence_hash": "f24cc36011e9f9ddc40e277197bd3fa03310cac12b6848b30714aae26cdb37bd",
+  "contamination_ledger_path": "data/evidence/strategy_contamination_ledger_v2.json",
+  "creates_strategy_version": false,
+  "evidence_partitions": [
+    {
+      "end": "2026-01-01T00:00:00Z",
+      "outcome_access_permitted": false,
+      "partition_id": "JAM-V1-CONSUMED-2023-2025",
+      "purpose": "Retired v1.0.1 decision period; never use to rescue a successor.",
+      "source_types": [
+        "BINANCE_SPOT_15M_KLINES"
+      ],
+      "start": "2023-02-01T00:00:00Z",
+      "state": "CONSUMED"
+    },
+    {
+      "end": "2026-07-21T00:00:00Z",
+      "outcome_access_permitted": false,
+      "partition_id": "JAM-V1-EXPLORATORY-2026",
+      "purpose": "Outcome-conditioned v1.14 neighborhood probes; not a holdout.",
+      "source_types": [
+        "TRADINGVIEW_CANDLE_OUTCOMES"
+      ],
+      "start": "2026-05-01T00:00:00Z",
+      "state": "EXPLORATORY_CONTAMINATED"
+    },
+    {
+      "end": "2023-01-01T00:00:00Z",
+      "outcome_access_permitted": false,
+      "partition_id": "JAM-PROVISIONAL-HISTORICAL-POOL-2019-2022",
+      "purpose": "Potential successor research pool. Archive availability and prior access must be proven before any partition role is assigned.",
+      "source_types": [
+        "BINANCE_SPOT_AGGTRADES",
+        "BINANCE_SPOT_1M_KLINES"
+      ],
+      "start": "2019-01-01T00:00:00Z",
+      "state": "PROVISIONAL_UNOPENED_UNVERIFIED"
+    },
+    {
+      "end": null,
+      "outcome_access_permitted": false,
+      "partition_id": "JAM-LOCKED-FORWARD-2026-08-01",
+      "purpose": "Future-only evidence. It remains inaccessible until historical qualification and a separate forward protocol exist.",
+      "source_types": [
+        "FUTURE_BINANCE_SPOT_AGGTRADES",
+        "FUTURE_BINANCE_SPOT_KLINES"
+      ],
+      "start": "2026-08-01T00:00:00Z",
+      "state": "LOCKED_FORWARD"
+    }
+  ],
+  "evidence_sources": [
+    {
+      "bounded_use": "Commission is account, symbol, side, and maker/taker dependent; future execution must query exact rates and cannot assume a discount.",
+      "reference": "https://github.com/binance/binance-spot-api-docs/blob/master/faqs/commission_faq.md",
+      "source_id": "BINANCE-COMMISSION-FAQ",
+      "source_type": "OFFICIAL_EXCHANGE_DOCUMENTATION"
+    },
+    {
+      "bounded_use": "Official spot aggTrades expose price, quantity, timestamp, and buyer-maker identity; official klines and checksums are available.",
+      "reference": "https://github.com/binance/binance-public-data/blob/master/README.md",
+      "source_id": "BINANCE-PUBLIC-DATA",
+      "source_type": "OFFICIAL_EXCHANGE_DOCUMENTATION"
+    },
+    {
+      "bounded_use": "Short-term crypto reversal is treated as liquidity provision and was stronger in lower-activity pairs; this cautions against assuming a strong BTC-only reversal premium.",
+      "reference": "https://doi.org/10.1016/j.jbankfin.2022.106547",
+      "source_id": "BIANCHI-DICKERSON-BABIAK-2022",
+      "source_type": "PEER_REVIEWED_RESEARCH"
+    },
+    {
+      "bounded_use": "BTCUSDT signed-flow pressure and post-shock resiliency are measurable within one venue, motivating an event-conditioned flow hypothesis.",
+      "reference": "https://doi.org/10.3390/jrfm19050372",
+      "source_id": "BTC-LIQUIDITY-RESILIENCY-2026",
+      "source_type": "PEER_REVIEWED_RESEARCH"
+    },
+    {
+      "bounded_use": "BTC liquidity and efficiency have matured and shock persistence has weakened; any residual reversal claim requires conservative evidence.",
+      "reference": "https://doi.org/10.1016/j.bir.2026.100869",
+      "source_id": "BTC-MARKET-EFFICIENCY-2026",
+      "source_type": "PEER_REVIEWED_RESEARCH"
+    }
+  ],
+  "exact_pine_signal_supported": false,
+  "feasibility_gates": [
+    "OFFICIAL_ARCHIVE_METADATA_AND_CHECKSUM_COVERAGE_VERIFIED",
+    "AGGTRADE_MILLISECOND_AND_MICROSECOND_TIMESTAMPS_NORMALIZED",
+    "AGGRESSOR_SIDE_MAPPING_PROVEN_WITH_SYNTHETIC_AND_ARCHIVE_FIXTURES",
+    "AGGTRADE_OHLCV_RECONCILES_TO_OFFICIAL_KLINES",
+    "NO_ORDER_BOOK_DEPTH_QUEUE_OR_LIQUIDATION_CLAIM_INFERRED",
+    "NO_MAKER_FILL_OR_FEE_DISCOUNT_ASSUMED",
+    "FEATURE_AND_THRESHOLD_PROTOCOL_FROZEN_BEFORE_DEVELOPMENT_RETURNS",
+    "CONSUMED_AND_FORWARD_PARTITIONS_REMAIN_CLOSED"
+  ],
+  "frozen_at": "2026-08-01T05:28:38.171106Z",
+  "new_outcome_fields_inspected": [],
+  "next_required_authorization": "AUTHORIZE_METADATA_ONLY_BINANCE_ARCHIVE_CENSUS",
+  "operator_scope": {
+    "cost_policy": "Use conservative full taker costs until exact account and symbol commission evidence is frozen; never assume a discount.",
+    "environment": "BINANCE_SPOT_TESTNET",
+    "maximum_daily_loss_usd": "1.00",
+    "maximum_effective_leverage": "1",
+    "maximum_per_trade_loss_usd": "0.50",
+    "maximum_total_loss_usd": "10.00",
+    "paid_data_budget_usd": "0",
+    "product": "SPOT_ONLY",
+    "simulated_equity_usd": "100",
+    "symbols": [
+      "BTCUSDT"
+    ]
+  },
+  "parent_failure_analysis_evidence_hash": "7507c5cdf5fb1ac1a564c6c583423e316c5f06b9f284f16a3d710858c69d2ed4",
+  "parent_failure_analysis_path": "data/evidence/jam_reversal_spot_v1_1.0.1_failure_analysis.json",
+  "parent_findings_used": [
+    "SAMPLE_TOO_SPARSE_FOR_RELIABILITY",
+    "BASE_COSTS_EXCEED_GROSS_PRICE_EDGE",
+    "OUT_OF_SAMPLE_EDGE_IS_NEGATIVE",
+    "WALK_FORWARD_STABILITY_IS_ABSENT"
+  ],
+  "phase2_audit_evidence_hash": "0a9a62be2946516be924ffbbe7d1221363de30f648044c363e6c6224b06cfc29",
+  "phase2_audit_file_sha256": "d23ff2ba31ab39a2a61b2d164f86f527044a4d8d9aafc60cf91f04dbbfab6487",
+  "phase2_source_file_sha256": "8481e2da91fd8810f41ebeffdb9dca65f6b6da2e2e678bae0ef92e05e3036e50",
+  "pine_role": "OPTIONAL_VISUALIZATION_ONLY_NOT_SIGNAL_SOURCE",
+  "proposals": [
+    {
+      "btcusdt_spot_scope_compatible": true,
+      "decision": "SELECT_FOR_FUTURE_CAPABILITY_REVIEW_ONLY",
+      "exact_pine_compatible": false,
+      "falsifiable_predictions": [
+        "Event-conditioned forward returns exceed time-matched unconditional BTCUSDT returns after conservative full taker costs.",
+        "The effect remains positive across separately frozen calendar and volatility segments rather than one shock cluster.",
+        "Price-only wick events without signed-flow exhaustion do not receive the same hypothesis status.",
+        "The mechanism is rejected if official trade-flow data cannot support stable event identity or sufficient independent observations."
+      ],
+      "historical_fill_identifiable": true,
+      "mechanism_hypothesis": "A sharp BTCUSDT sell-flow shock can create temporary price impact. A long opportunity may exist only when aggressive sell imbalance decays and price reclaims a pre-shock reference, indicating liquidity resiliency rather than an unconditioned candle reversal.",
+      "name": "Aggressive sell-flow exhaustion and reclaim",
+      "proposal_id": "J2-P01-AGGRESSIVE-SELL-FLOW-EXHAUSTION-RECLAIM",
+      "reason": "This is the only proposal with a causal microstructure claim, free official input candidates, conservative taker execution semantics, and compatibility with the frozen BTCUSDT spot scope.",
+      "required_inputs": [
+        "BINANCE_SPOT_AGGTRADES",
+        "BINANCE_SPOT_1M_KLINES_FOR_RECONCILIATION"
+      ]
+    },
+    {
+      "btcusdt_spot_scope_compatible": true,
+      "decision": "REJECT",
+      "exact_pine_compatible": true,
+      "falsifiable_predictions": [
+        "A changed parameter set would outperform v1.0.1."
+      ],
+      "historical_fill_identifiable": true,
+      "mechanism_hypothesis": "More permissive candle thresholds might increase trade count or alter realized payoff.",
+      "name": "Loosen or retune the existing candle Jam",
+      "proposal_id": "J2-P02-CANDLE-PARAMETER-RESCUE",
+      "reason": "This is outcome-conditioned parameter rescue on a consumed Jam window, not a new economic mechanism.",
+      "required_inputs": [
+        "BINANCE_SPOT_15M_KLINES"
+      ]
+    },
+    {
+      "btcusdt_spot_scope_compatible": true,
+      "decision": "REJECT",
+      "exact_pine_compatible": false,
+      "falsifiable_predictions": [
+        "Queue-realistic maker fills retain positive expectancy after adverse-selection and missed-fill costs."
+      ],
+      "historical_fill_identifiable": false,
+      "mechanism_hypothesis": "A resting retest order could improve entry cost after a reclaim.",
+      "name": "Passive maker entry after a reclaim",
+      "proposal_id": "J2-P03-PASSIVE-MAKER-RETEST",
+      "reason": "The zero-dollar official history does not identify queue position or maker fills. Assuming a touch fill would manufacture edge.",
+      "required_inputs": [
+        "HISTORICAL_L2_ORDER_BOOK",
+        "ORDER_QUEUE_POSITION",
+        "BINANCE_SPOT_TRADES"
+      ]
+    },
+    {
+      "btcusdt_spot_scope_compatible": false,
+      "decision": "DEFER",
+      "exact_pine_compatible": false,
+      "falsifiable_predictions": [
+        "A preregistered liquid-enough cross-section earns a cost-net reversal premium without concentration in untradeable assets."
+      ],
+      "historical_fill_identifiable": true,
+      "mechanism_hypothesis": "Liquidity-provision reversal may be stronger in smaller and lower-activity crypto pairs.",
+      "name": "Cross-asset reversal in lower-activity spot pairs",
+      "proposal_id": "J2-P04-LOW-ACTIVITY-CROSS-ASSET-REVERSAL",
+      "reason": "The literature is relevant, but the frozen operator profile permits BTCUSDT only. This cannot become an Aurex executable candidate now.",
+      "required_inputs": [
+        "MULTI_SYMBOL_SPOT_TRADES",
+        "MULTI_SYMBOL_LIQUIDITY_AND_LISTING_HISTORY"
+      ]
+    }
+  ],
+  "proposed_signal_authority": "AUREX_BACKEND_ONLY_IF_A_LATER_PROTOCOL_QUALIFIES",
+  "research_boundary": "NO_NEW_MARKET_DATA_NO_NEW_RETURNS_NO_PARAMETER_DEFINITION",
+  "sandbox_profile_evidence_hash": "adc95174c169f2f1b76ac2d53770ee13b5049850f1bcabb2cbc7d4a461e55b69",
+  "sandbox_profile_path": "data/evidence/binance_spot_testnet_sandbox_profile_v1.json",
+  "schema_version": "aurex-jam-successor-hypothesis-charter-v1",
+  "selected_proposal_id": "J2-P01-AGGRESSIVE-SELL-FLOW-EXHAUSTION-RECLAIM",
+  "selection_decision": "SELECT_P01_FOR_FUTURE_CAPABILITY_REVIEW_ONLY",
+  "status": "FROZEN_DESIGN_ONLY_NOT_AUTHORIZED_TO_RUN"
+}

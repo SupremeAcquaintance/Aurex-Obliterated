@@ -1,0 +1,63 @@
+{
+  "schema_version": "aurex-s5-github-bulk-response-amendment-v2",
+  "amendment_id": "s5-github-bulk-response-amendment-v2",
+  "frozen_at": "2026-09-02T21:58:37.889369Z",
+  "status": "FROZEN_RESPONSE_HANDLING_AMENDMENT_ZERO_NETWORK",
+  "builder_contract_hash": "70fae46e2e51ef3fc44986a26f3e5ade81b2e19835b425dd833a1a05cb2efaf2",
+  "failure_audit_evidence_hash": "7b81b91b39d1960f444764574cc62a4ba159deb65bcf8f394f9d526aa9540738",
+  "prior_result_evidence_hash": "a3443b57f5cb805cf37daa79cbe561d317a4ede3ca552cccf0675bec97f131f8",
+  "protocol_evidence_hash": "ee1564712af978eddd0081fe7ede7fb19dd275fc2f04e7a19306160f8b3174f5",
+  "source_bindings": [
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_failure_audit_v1.json",
+      "file_sha256": "635a64687f7ae74097cd0ab01c79c73beb74f0fa1a9e8195ace8d4c2a71da95f"
+    },
+    {
+      "path": "data/evidence/s5_bitcoin_core_github_bulk_result_v1.json",
+      "file_sha256": "7f7164bcc8c9b2e8ea5f431e20cd0ff7a81b4f40c9e2ccd5dca809d5981be8f7"
+    },
+    {
+      "path": "data/evidence/s5_github_pull_metadata_bulk_v1/failure_page_0001.json",
+      "file_sha256": "06dff5507e434732d0202a3e09c4d385f95e9e1e82adca98875dec751476c38e"
+    }
+  ],
+  "prior_response_handling": "WITH_CLIENT_SEND_RESPONSE_AS_CONTEXT_MANAGER",
+  "corrected_response_handling": "WITH_HTTPX_CLIENT_STREAM_CONTEXT_MANAGER",
+  "request_method_unchanged": true,
+  "endpoint_unchanged": true,
+  "query_scope_unchanged": true,
+  "headers_unchanged": true,
+  "authentication_policy_unchanged": true,
+  "timeout_and_byte_limits_unchanged": true,
+  "pagination_and_rate_policy_unchanged": true,
+  "raw_page_schema_unchanged": true,
+  "gate_ids_unchanged": true,
+  "page_one_maximum_total_attempts_after_replay": 2,
+  "every_other_page_maximum_attempts": 1,
+  "maximum_total_request_attempts_including_prior_failure": 300,
+  "maximum_corrected_run_attempts": 299,
+  "corrected_run_count": 1,
+  "credential_access_permitted": false,
+  "market_values_permitted": false,
+  "parameters_permitted": false,
+  "returns_permitted": false,
+  "candidates_permitted": false,
+  "orders_permitted": false,
+  "decision": "REPLACE_RESPONSE_CONTEXT_MANAGER_WITH_CLIENT_STREAM_AND_REPLAY_PAGE_ONE_ONCE",
+  "next_authorization": "RUN_S5_GITHUB_METADATA_BULK_ACQUISITION_V2_ONCE_RESUMABLE",
+  "limitations": [
+    "A corrected transport pass cannot establish strategy reliability or profit.",
+    "Every other page remains limited to one request attempt.",
+    "No BTC value, parameter, return, candidate, signal, or order is permitted.",
+    "No automatic HTTP retry is introduced.",
+    "No credential, token, proxy, redirect, or concurrency is permitted.",
+    "No paper, Testnet strategy, production, live, or real-capital authority exists.",
+    "Only page one may receive a second lifetime request attempt.",
+    "Source completeness and predictive edge remain unadjudicated.",
+    "The corrected run can make at most 299 additional requests.",
+    "The endpoint, all-state query, cutoff, headers, and limits are unchanged.",
+    "The original bulk STOP and empty response artifact remain immutable.",
+    "The prior request counts toward the original 300-attempt ceiling."
+  ],
+  "amendment_evidence_hash": "b5788d7ff5c2aa582a228625dd9dcd8dbc2a20a263e598f7b146ae8a683c7499"
+}

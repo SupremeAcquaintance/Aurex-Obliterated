@@ -1,0 +1,28 @@
+{
+  "schema_version": "aurex-s4-spot-bitcoin-etp-charter-audit-v1",
+  "audit_id": "s4-spot-bitcoin-etp-charter-audit-v1",
+  "audited_at": "2026-08-31T18:09:49.378522Z",
+  "charter_path": "data/evidence/s4_spot_bitcoin_etp_charter_v1.json",
+  "charter_file_sha256": "7225b89f37d054df69bc3515424807792222226468fde44fc908707f4f3567a9",
+  "charter_evidence_hash": "8827763c7b1d71255ceff1859c0e69835403c7653ead6ad6f233edae5b9c08b4",
+  "builder_contract_hash": "a09c368bc66f859d5e35535889c0ddbfda347d4af4c224b378e5c993694cacd7",
+  "auditor_contract_hash": "26ea521d8f34813c8b9b5c9db3ec03ebf9809ae286767c78cf61e917994c91a8",
+  "reconstructed_exactly": true,
+  "predecessor_binding_count": 20,
+  "research_source_count": 8,
+  "partition_count": 6,
+  "incidental_source_numeric_fields_observed": [
+    "BITCOIN_QUANTITY_HELD",
+    "NET_ASSET_VALUE",
+    "SHARES_CREATED_OR_REDEEMED_ANNUAL_TOTAL",
+    "SHARES_OUTSTANDING"
+  ],
+  "etp_time_series_rows_parsed": 0,
+  "etp_numeric_payloads_acquired": 0,
+  "btc_market_numeric_fields_inspected": [],
+  "return_metrics_calculated": [],
+  "orders_submitted": 0,
+  "decision": "PASS_S4_CHARTER_RECONSTRUCTED_NO_VALUES_OR_OUTCOMES",
+  "next_authorization": "AUTHORIZE_S4_ETP_SOURCE_METADATA_AND_POINT_IN_TIME_FEASIBILITY_PROTOCOL_ONLY",
+  "audit_evidence_hash": "1e083ef726bfb46cb1d37f15b5c9c16b00562a3c2923a8b0907749ebd7bffbc7"
+}

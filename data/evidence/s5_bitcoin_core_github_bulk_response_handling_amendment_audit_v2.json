@@ -1,0 +1,20 @@
+{
+  "schema_version": "aurex-s5-github-bulk-response-amendment-audit-v2",
+  "audit_id": "s5-github-bulk-response-amendment-audit-v2",
+  "audited_at": "2026-09-02T21:58:40.233123Z",
+  "amendment_path": "data/evidence/s5_bitcoin_core_github_bulk_response_handling_amendment_v2.json",
+  "amendment_file_sha256": "c2783c27a986cf360a9f7bd0e66f0c185c868ac0ec2c362ed0cd965c5c22ef45",
+  "amendment_evidence_hash": "b5788d7ff5c2aa582a228625dd9dcd8dbc2a20a263e598f7b146ae8a683c7499",
+  "failure_audit_evidence_hash": "7b81b91b39d1960f444764574cc62a4ba159deb65bcf8f394f9d526aa9540738",
+  "builder_contract_hash": "70fae46e2e51ef3fc44986a26f3e5ade81b2e19835b425dd833a1a05cb2efaf2",
+  "auditor_contract_hash": "458a03f4cdd325d650c2b7b417399c44fd64bda67fd8fc37c51e035240f2a601",
+  "reconstructed_exactly": true,
+  "additional_network_requests_observed": 0,
+  "metadata_records_newly_acquired": 0,
+  "market_values_read": 0,
+  "returns_calculated": 0,
+  "orders_submitted": 0,
+  "next_authorization": "RUN_S5_GITHUB_METADATA_BULK_ACQUISITION_V2_ONCE_RESUMABLE",
+  "decision": "PASS_S5_GITHUB_BULK_RESPONSE_AMENDMENT_AUDIT_V2",
+  "audit_evidence_hash": "06d9be9468a63ca72c1c5d3afc82615806405df3ccd57287708738bfd5e4e5fe"
+}

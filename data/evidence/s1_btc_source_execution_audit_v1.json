@@ -1,0 +1,33 @@
+{
+  "schema_version": "aurex-s1-btc-source-execution-audit-v1",
+  "audit_id": "s1-btc-source-execution-audit-v1",
+  "audited_at": "2026-08-27T05:40:21.793693Z",
+  "contract_file_sha256": "88b74f73e8059685a5938d6472c66b8856f6d72ec956d2a3b8562d51d75afdc8",
+  "contract_evidence_hash": "6f521177bc363094d434067e83394317a85ba3736a95b64724537ddc240f7b28",
+  "protocol_evidence_hash": "bed364619aa4a141d339e405948e6a0a4113afb5c0ee1dedf5c288346255ffe2",
+  "runner_contract_hash": "602ef9021bb9117d511bc617b1f5d836879a46383583e1fac3e56285dc41e63a",
+  "auditor_source_sha256": "2f37b288cce1f1e79f4452404d953014c02ed20784adcdc5e3e28862b3165c01",
+  "synthetic_test_ids": [
+    "frozen-target-allowlist",
+    "checksum-filename-binding",
+    "official-shaped-archive-open-extraction",
+    "published-checksum-mismatch-rejection",
+    "unsafe-zip-member-rejection",
+    "multiple-zip-member-rejection",
+    "twelve-column-kline-enforcement",
+    "open-time-chronology-and-date-enforcement",
+    "positive-finite-target-price-enforcement",
+    "atomic-resource-marker-write",
+    "aggregate-network-byte-budget-enforcement",
+    "interrupted-partial-byte-rejection",
+    "execution-authority-isolation"
+  ],
+  "reconstructed_exactly": true,
+  "network_requests_observed": 0,
+  "payload_bytes_observed": 0,
+  "btc_market_values_read": 0,
+  "returns_calculated": 0,
+  "decision": "PASS_S1_BTC_SOURCE_EXECUTION_CONTRACT_RECONSTRUCTED",
+  "next_authorization": "AUTHORIZE_S1_BTCUSDT_DAILY_1H_SOURCE_ACQUISITION",
+  "audit_evidence_hash": "3a08711647a12b8f173ce49fcfc8286e3831a20cf4c4d26ba3722f9c9d642113"
+}
